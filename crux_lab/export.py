@@ -152,9 +152,11 @@ def main() -> dict:
     (out / "briefs.json").write_text(json.dumps(briefs, ensure_ascii=False, indent=1))
 
     # claims + edges for the atlas (embeddings dropped)
+    from crux_lab.corpus.dedup import work_of
     claims = [c.model_dump(exclude={"embedding"}) for c in store.all(Claim)]
     for c in claims:
         needed.add(c["paper_id"])
+        c["work"] = work_of(c["paper_id"])   # same paper listed twice in OpenAlex -> same work
     args = [a.model_dump() for a in store.all(Argument)]
     edges = [e.model_dump() for e in store.edges()]
     (out / "claims.json").write_text(json.dumps({"claims": claims, "arguments": args, "edges": edges},

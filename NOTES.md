@@ -1,5 +1,10 @@
 # NOTES — newest entry first
 
+## 2026-10-04 06:35 — "Has this move been made?" returns distinct works (Claude)
+- 563 of 2940 exported claims come from duplicate records of a paper. claims.json now carries `work`
+  (canonical id); /atlas local BM25, the live API (/api/prior-art) and its UI show at most one hit per
+  work. Verified with smoke, a11y and live tests.
+
 ## 2026-10-04 06:25 — briefs' nearest matches deduplicated by work (Claude)
 - 7/14 briefs (and 27/55 objection novelty panels) listed the same work twice among their 3 nearest
   matches (claim + abstract of one paper, or two version records). Nearest is now the 3 nearest

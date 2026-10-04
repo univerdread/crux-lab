@@ -11,6 +11,7 @@ export interface Claim {
   text: string;
   quote: string;
   level: "fulltext" | "abstract" | "generated";
+  work?: string; // canonical id of the work (duplicate OpenAlex records of one paper share it)
 }
 
 export interface Argument {

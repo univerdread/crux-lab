@@ -109,10 +109,17 @@ function MoveSearch({ claims, records }: { claims: Claim[]; records?: Record<str
       }
       return;
     }
-    const hits = index.search(query, 10).map((h) => {
+    // One hit per work: OpenAlex lists some papers more than once, and those copies share `work`.
+    const seen = new Set<string>();
+    const hits: Hit[] = [];
+    for (const h of index.search(query, 60)) {
       const c = claims[h.index];
-      return { id: c.id, text: c.text, score: h.score, paperId: c.paper_id, claim: c };
-    });
+      const w = c.work ?? c.paper_id;
+      if (seen.has(w)) continue;
+      seen.add(w);
+      hits.push({ id: c.id, text: c.text, score: h.score, paperId: c.paper_id, claim: c });
+      if (hits.length === 10) break;
+    }
     setRes({ q: query, hits, searched: index.size, mode: "BM25 over exported claims" });
   };
 

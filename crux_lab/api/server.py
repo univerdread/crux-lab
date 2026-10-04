@@ -36,8 +36,19 @@ def health() -> dict:
 
 @app.get("/api/prior-art")
 def prior_art(q: str = Query(..., min_length=3, max_length=2000), k: int = 10) -> dict:
+    from crux_lab.corpus.dedup import work_of
+
     ix = claims_index()
-    hits = ix.search(q, k=min(k, 30))
+    k = min(k, 30)
+    hits, seen = [], set()
+    for h in ix.search(q, k=k * 4):        # collapse duplicate records of one work
+        w = work_of(h.meta.get("paper_id", h.id))
+        if w in seen:
+            continue
+        seen.add(w)
+        hits.append(h)
+        if len(hits) == k:
+            break
     return {"query": q, "records_searched": len(ix),
             "hits": [{"claim_id": h.id, "text": h.text, "score": round(h.score, 4), **h.meta} for h in hits]}
 
