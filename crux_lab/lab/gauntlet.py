@@ -138,10 +138,19 @@ async def run_trial(client: LLMClient, store: Store, objection: Objection, argum
         per = {}
         all_verified: list[str] = []
         own = own_prefix(objection)
+        from crux_lab.corpus.dedup import work_of
+        own_work = work_of("oa:" + own.rstrip("."))
+
+        def is_own(cid: str) -> bool:
+            if cid.startswith(own):
+                return True
+            c = store.get(Claim, cid)       # another record of the same work is still the argument's own paper
+            return bool(c) and work_of(c.paper_id) == own_work
+
         for s, turns in zip(specs, ex):
             verified, struck = verify_citations(turns, allowed, store, own)
             all_verified += verified
-            literature = [c for c in verified if not c.startswith(own)]   # only these can make a known_answer
+            literature = [c for c in verified if not is_own(c)]   # only these can make a known_answer
             lab = await label(client, referee, argument_text, objection, turns, literature, struck)
             trial.rounds += turns
             if lab:
