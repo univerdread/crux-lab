@@ -47,7 +47,7 @@ def main() -> None:
         f"for keyword search (n={e1.get('n')}); the Referee caught {e2.get('misreading', {}).get('caught')}/"
         f"{e2.get('misreading', {}).get('n')} deliberate misreadings; a defender cited the published reply in "
         f"{e2.get('known_answer', {}).get('gold_reply_cited_by_a_defender')}/{e2.get('known_answer', {}).get('n')} known-answer cases "
-        f"(but labelled it known_answer only {e2.get('known_answer', {}).get('labelled_known_answer')}/{e2.get('known_answer', {}).get('n')}); "
+        f"(the Referee still labelled only {e2.get('known_answer', {}).get('labelled_known_answer')}/{e2.get('known_answer', {}).get('n')} as known_answer); "
         f"diversity ablation — {e3rows}.", "",
         "## Example output",
         f"Top research direction: *{top.get('research_question', '')}* — {top.get('outcome', '')}, novelty {top.get('novelty', 0):.2f}, "
