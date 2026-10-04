@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-10-04T01:03:17.793922+00:00",
+  "targets": [
+    {
+      "target": "oa-W7203761940",
+      "claims": 41,
+      "arguments": 1,
+      "premises": [
+        6
+      ],
+      "valid": [
+        false
+      ],
+      "missing_premise": [
+        true
+      ]
+    },
+    {
+      "target": "oa-W7203485685",
+      "claims": 53,
+      "arguments": 1,
+      "premises": [
+        4
+      ],
+      "valid": [
+        false
+      ],
+      "missing_premise": [
+        true
+      ]
+    },
+    {
+      "target": "oa-W7212186029",
+      "claims": 54,
+      "arguments": 1,
+      "premises": [
+        5
+      ],
+      "valid": [
+        false
+      ],
+      "missing_premise": [
+        true
+      ]
+    },
+    {
+      "target": "oa-W2072673546",
+      "claims": 95,
+      "arguments": 1,
+      "premises": [
+        3
+      ],
+      "valid": [
+        false
+      ],
+      "missing_premise": [
+        true
+      ]
+    },
+    {
+      "target": "oa-W2575351351",
+      "claims": 60,
+      "arguments": 1,
+      "premises": [
+        4
+      ],
+      "valid": [
+        false
+      ],
+      "missing_premise": [
+        true
+      ]
+    }
+  ],
+  "fulltext_claims": {
+    "proposed": 319,
+    "kept": 303,
+    "drop_rate": 0.05
+  },
+  "abstract_claims": {
+    "proposed": 0,
+    "kept": 0,
+    "drop_rate": 0.0
+  },
+  "dropped_examples": [
+    {
+      "paper_id": "oa:W7203761940",
+      "quote": "But given these explanations, they are still not solid proof to debunk faith healing because God works in mysterious ways. Sometimes miracles cannot immediately be noticed. They take time.",
+      "reason": "quote > 2 sentences"
+    },
+    {
+      "paper_id": "oa:W7203485685",
+      "quote": "(1) Volitional contrast: God actualises one world rather than relevant alternatives.\n(3) Contrastive responsibility: divine agency must explain why one outcome obtains rather than another.",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W7212186029",
+      "quote": "It might be thought that constitution involves mutual parthood, such that when a statue is made from a lump of clay, the statue and clay are parts of each other, but the two nevertheless remain distin",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W7212186029",
+      "quote": "Insofar as parthood behaves antisymmetrically, the identity formulation of DDS is not ruled out by the symmetry formulation, and is in fact equivalent to it.",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W7212186029",
+      "quote": "one property (collection) is part of another just in case whatever becomes more similar to the first also thereby becomes more similar to the second.",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W2575351351",
+      "quote": "In order to show that the MGR fails, critics must demonstrate that it is not plausible to think that the total value of all the proposed goods is sufficient to outweigh the value lost by nonresistant ",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W2575351351",
+      "quote": "If there is a good which can be acquired both in W and in W′, and its value is the same in both worlds, then it does not count in favour of either world. However, even if the particular good in questi",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W2575351351",
+      "quote": "If the total value of worlds cannot be compared in the manner I have been suggesting, then, as pointed out by Klaas J. Kraay (2011), this ‘threaten[s] the rationality of God’s choice of a world’. If G",
+      "reason": "quote > 2 sentences"
+    },
+    {
+      "paper_id": "oa:W2575351351",
+      "quote": "Schellenberg (2007) argues that this good can be accommodated for within a relationship with God. He expresses doubt that having evidence sufficient for belief would really inhibit a person’s ability ",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W2575351351",
+      "quote": "Only in this case could there be the benefits for the individual. Furthermore, it seems intuitive that a story which is factual has more power than a fictional story, and so the benefits to the commun",
+      "reason": "quote not found"
+    },
+    {
+      "paper_id": "oa:W2072673546",
+      "quote": "Positive meaningfulness is not synonymous with (mere) reciprocity, for, if it were, Schellenberg’s substitution of the latter by the former would be superﬂuous. Nor is it the same as explicitness, sin",
+      "reason": "quote > 2 sentences"
+    },
+    {
+      "paper_id": "oa:W2072673546",
+      "quote": "This is false. It rests on a confusion of (a) hearing God and (b) hearing God as (interpreted as) God. We have no reason whatever to think that (a) requires (b).",
+      "reason": "quote > 2 sentences"
+    },
+    {
+      "paper_id": "oa:W2072673546",
+      "quote": "If this particular premise is incorporated into variants of the hiddenness argument, it still needs to be corroborated by good reasons for thinking that a perfectly loving God would want to relate to ",
+      "reason": "quote not found"
+    }
+  ],
+  "claims_indexed": 303,
+  "abstracts_indexed": 1212,
+  "embedder": "bge-small-en-v1.5 (local)",
+  "llm": {
+    "calls": 54,
+    "cache_hits": 0,
+    "json_failures": 0,
+    "errors": 0
+  },
+  "budget": {
+    "spent_usd": 0.0,
+    "limit_usd": 20.0,
+    "cli_calls": 148,
+    "cli_limit": 4000,
+    "notional_cli_usd": 1.2309
+  }
+}

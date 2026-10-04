@@ -37,10 +37,11 @@ def estimate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
 
 class Budget:
     def __init__(self, limit_usd: float | None = None, cli_limit: int | None = None,
-                 ledger: Path | None = None):
+                 ledger: Path | None | bool = None):
+        """ledger: None = default cache/spend.jsonl, False = in-memory only (tests)."""
         self.limit_usd = settings.budget_usd if limit_usd is None else limit_usd
         self.cli_limit = settings.cli_call_budget if cli_limit is None else cli_limit
-        self.ledger = ledger if ledger is not None else CACHE / "spend.jsonl"
+        self.ledger = None if ledger is False else (ledger or CACHE / "spend.jsonl")
         self._lock = threading.Lock()
         self.spent_usd = 0.0
         self.notional_usd = 0.0

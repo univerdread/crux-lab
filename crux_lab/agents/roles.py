@@ -11,7 +11,9 @@ from crux_lab.config import PROMPTS
 
 @lru_cache(maxsize=None)
 def _load(name: str) -> str:
-    return (PROMPTS / f"{name}.md").read_text("utf-8")
+    text = (PROMPTS / f"{name}.md").read_text("utf-8")
+    # Origin headers of adapted prompts are for humans, not for the model.
+    return "\n".join(l for l in text.splitlines() if not l.startswith("# Adapted from Crux"))
 
 
 def render(name: str, **kw) -> tuple[str, str]:

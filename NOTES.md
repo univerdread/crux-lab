@@ -1,5 +1,14 @@
 # NOTES — newest entry first
 
+## 2026-10-04 03:06 — product direction from the human (awake at kickoff)
+- "The tool is made for philosophers or philosophy students who want help with their research and
+  to find some novelty in academia — finding what they should research and write about next."
+- Usability consequences (apply to every page): lead with *research directions* (the brief's
+  research question + "A paper here would argue…"), ranked by survival × novelty; plain-language
+  summaries before agent transcripts; every claim traceable to a quote and a corpus record;
+  printable / Markdown-exportable briefs; honest uncertainty ("Further human review required",
+  records searched, nearest matches) so a student knows how far to trust a lead.
+
 ## 2026-10-04 03:04 — P1 corpus + targets (Claude)
 - Human logged `claude -p` back in at ~02:58 → `make providers` now finds **2 families**
   (anthropic: sonnet/opus/haiku via claude_cli; openai: gpt-5.6-terra/sol/luna via codex_cli).

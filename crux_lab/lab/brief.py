@@ -1,0 +1,114 @@
+"""Research brief: JSON + Markdown. References are rendered from corpus records, never model text."""
+from __future__ import annotations
+
+from pydantic import BaseModel, Field
+
+from crux_lab.agents.roles import render
+from crux_lab.config import BRIEFS
+from crux_lab.graph.schema import Argument, Brief, Claim, NearestMatch, Objection, Trial
+from crux_lab.lab.debate import render_transcript
+from crux_lab.llm.client import LLMClient
+
+
+class Response(BaseModel):
+    defender: str
+    response: str
+    why_it_failed: str
+
+
+class BriefOut(BaseModel):
+    research_question: str
+    strongest_responses: list[Response] = Field(default_factory=list)
+    open_questions: list[str]
+    paper_direction: str
+
+
+def record_ref(paper: dict | None, record_id: str) -> dict:
+    if not paper:
+        return {"record_id": record_id}
+    return {"record_id": record_id, "paper_id": paper["id"], "title": paper.get("title", ""),
+            "authors": paper.get("authors", [])[:4], "year": paper.get("year"), "url": paper.get("url", "")}
+
+
+async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], objection: Objection,
+                      trial: Trial, novelty: dict, paper: dict, papers: dict[str, dict],
+                      revised: dict[str, str]) -> Brief:
+    target_text = own[objection.target_premise_id].text if objection.target_premise_id in own \
+        else revised.get(objection.target_premise_id, "")
+    premises = "\n".join(f"{p}: {own[p].text}" for p in arg.premise_ids)
+    if arg.missing_premise_id and arg.missing_premise_id in own:
+        premises += f"\n{arg.missing_premise_id} (unstated): {own[arg.missing_premise_id].text}"
+    argument_text = f"{premises}\nTherefore {arg.conclusion_id}: {own[arg.conclusion_id].text}"
+    transcripts = render_transcript([t for t in trial.rounds if t.speaker != "referee"])
+    nearest_txt = "\n".join(f"- [{m['verdict']}, {m['similarity']}] {m.get('title', '')}: {m.get('quote', '')}"
+                            for m in novelty.get("nearest", [])) or "(none)"
+    system, user = render("brief", paper_title=paper.get("title", ""), argument=argument_text,
+                          target_id=objection.target_premise_id, target_text=target_text,
+                          agent=objection.agent, family=objection.family, objection=objection.text,
+                          outcome=trial.outcome or "failed", rationale=trial.rationale,
+                          transcripts=transcripts[:12000], nearest=nearest_txt)
+    out, _ = await client.json("brief", user, BriefOut, system, max_tokens=3000)
+    if not out:
+        out = BriefOut(research_question=f"Does the objection to {objection.target_premise_id} hold?",
+                       open_questions=[], paper_direction="(brief generation failed validation; see the trial)")
+    nearest = [NearestMatch(**m) for m in novelty.get("nearest", [])]
+    closest = []
+    for m in nearest:
+        closest.append({**record_ref(papers.get(m.paper_id), m.record_id), "verdict": m.verdict,
+                        "similarity": m.similarity, "quote": m.quote})
+    for cid in trial.cited_claim_ids:
+        pid = cid.rsplit(".", 1)[0]
+        p = next((pp for k, pp in papers.items() if k.endswith(":" + pid) or k == pid), None)
+        if p and not any(c.get("record_id") == cid for c in closest):
+            closest.append({**record_ref(p, cid), "verdict": "cited_in_trial"})
+    return Brief(
+        id=f"brief-{objection.id}", objection_id=objection.id, research_question=out.research_question,
+        argument={"id": arg.id, "title": arg.title, "paper_id": arg.paper_id, "paper_title": paper.get("title", ""),
+                  "premises": [{"id": p, "text": own[p].text, "quote": own[p].quote} for p in arg.premise_ids],
+                  "missing_premise": ({"id": arg.missing_premise_id, "text": own[arg.missing_premise_id].text}
+                                      if arg.missing_premise_id in own else None),
+                  "conclusion": {"id": arg.conclusion_id, "text": own[arg.conclusion_id].text},
+                  "skeleton": arg.skeleton, "valid": arg.valid},
+        challenged_premise={"id": objection.target_premise_id, "text": target_text},
+        objection=objection.text,
+        strongest_responses=[r.model_dump() for r in out.strongest_responses],
+        closest_literature=closest, novelty=round(novelty.get("novelty", 0.0), 3),
+        records_searched=novelty.get("records_searched", 0), nearest=nearest,
+        open_questions=out.open_questions, paper_direction=out.paper_direction, outcome=trial.outcome or "")
+
+
+def to_markdown(b: Brief, objection: Objection | None = None) -> str:
+    a = b.argument
+    L = [f"# Research brief: {b.research_question}", "",
+         f"*Outcome in the gauntlet:* **{b.outcome}** · *novelty score:* {b.novelty:.2f} · "
+         f"*records searched:* {b.records_searched}", "",
+         f"## Argument — {a.get('title', '')}", f"From: {a.get('paper_title', '')} (`{a.get('paper_id', '')}`)", ""]
+    for p in a["premises"]:
+        L.append(f"- **{p['id']}**: {p['text']}")
+    if a.get("missing_premise"):
+        L.append(f"- **{a['missing_premise']['id']}** *(unstated, found by the Formalizer)*: {a['missing_premise']['text']}")
+    L += [f"- **Therefore {a['conclusion']['id']}**: {a['conclusion']['text']}", "",
+          f"Skeleton: `{a.get('skeleton', '')}` ({'valid' if a.get('valid') else 'invalid as stated'})", "",
+          f"## Challenged premise", f"**{b.challenged_premise['id']}**: {b.challenged_premise['text']}", "",
+          "## Objection"]
+    if objection:
+        L.append(f"*{objection.agent} · {objection.family}:{objection.model}*")
+    L += ["", b.objection, "", "## Strongest responses and why they failed"]
+    for r in b.strongest_responses:
+        L.append(f"- **{r['defender']}**: {r['response']} — *{r['why_it_failed']}*")
+    L += ["", "## Closest literature (from corpus records)"]
+    for c in b.closest_literature:
+        auth = ", ".join(c.get("authors", [])[:3])
+        L.append(f"- `{c['record_id']}` — {c.get('title', '')} ({auth}{', ' + str(c['year']) if c.get('year') else ''}) "
+                 f"[{c.get('verdict', '')}{', sim ' + str(c['similarity']) if 'similarity' in c else ''}] {c.get('url', '')}")
+        if c.get("quote"):
+            L.append(f"  > {c['quote']}")
+    L += ["", "## Open questions"] + [f"- {q}" for q in b.open_questions]
+    L += ["", "## Paper direction", b.paper_direction, "", f"**{b.disclaimer}**", ""]
+    return "\n".join(L)
+
+
+def save(b: Brief, objection: Objection | None = None) -> None:
+    BRIEFS.mkdir(parents=True, exist_ok=True)
+    (BRIEFS / f"{b.id}.json").write_text(b.model_dump_json(indent=2))
+    (BRIEFS / f"{b.id}.md").write_text(to_markdown(b, objection))

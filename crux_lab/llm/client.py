@@ -4,6 +4,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
 import time
 from dataclasses import asdict, dataclass
 from typing import Callable, TypeVar
@@ -68,7 +69,7 @@ class LLMClient:
         resolved = {"roles": roles, "families": list(families), "models": []}
         return cls(resolved, providers={"fake": prov},
                    cache=tmp_cache or DiskCache(enabled=False),
-                   budget=Budget(limit_usd=1e9, cli_limit=10**9, ledger=None))
+                   budget=Budget(limit_usd=1e9, cli_limit=10**9, ledger=False))
 
     def provider(self, name: str) -> Provider:
         if name not in self.providers:
@@ -186,6 +187,8 @@ def _compact_schema(schema: type[BaseModel]) -> dict:
 
 
 def _log_jsonl(name: str, row: dict) -> None:
+    if os.environ.get("CRUX_LAB_TEST_LOGS") == "0":
+        return
     try:
         LOGS.mkdir(exist_ok=True)
         with (LOGS / name).open("a", encoding="utf-8") as f:
