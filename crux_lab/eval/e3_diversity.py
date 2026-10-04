@@ -1,8 +1,7 @@
 """E3 diversity ablation: objections to the same 5 target arguments under three conditions:
 plain prompt / one model; constrained roles / one model; constrained roles / mixed families.
 Metrics: distinct premises targeted, mean pairwise embedding distance, share passing the
-Referee's misreading pre-screen, share with novelty > 0.5. Full-trial survival is not run here
-(cost), so share_surviving is null and the limits say so."""
+Referee's misreading pre-screen, share surviving a full gauntlet trial, share with novelty > 0.5."""
 from __future__ import annotations
 
 import asyncio
@@ -17,11 +16,12 @@ from crux_lab.graph.index import INDEX_DIR, HybridIndex
 from crux_lab.graph.schema import Argument, Claim, Objection
 from crux_lab.graph.store import Store
 from crux_lab.lab import generators, novelty
-from crux_lab.lab.gauntlet import PrescreenOut
+from crux_lab.lab.gauntlet import PrescreenOut, run_trial
 from crux_lab.lab.run import argument_text
 from crux_lab.llm.client import LLMClient, ModelSpec
 
 PER_ARG = 4
+SURVIVING = ("revision_required", "standing")   # survival S >= 0.8
 
 
 class Plain(BaseModel):
@@ -76,6 +76,12 @@ async def run(client: LLMClient | None = None) -> dict:
         "constrained roles, mixed families": lambda a, own: constrained(client, a, own, gens),
     }
     referee = client.spec_for("referee")
+    trial_sem = asyncio.Semaphore(6)
+    by_model = {g.model: g for g in gens}
+
+    def attacker_for(o: Objection) -> ModelSpec:
+        return by_model.get(o.model, gens[0])
+
     out_rows = []
     per_obj = []
     for name, fn in conds.items():
@@ -83,7 +89,7 @@ async def run(client: LLMClient | None = None) -> dict:
         for a in args:
             own = {c.id: c for c in store.all(Claim, parent=a.paper_id)}
             objs_by_arg[a.id] = (await fn(a, own), own, a)
-        distinct, dists, pass_pre, novel, n = [], [], 0, 0, 0
+        distinct, dists, pass_pre, novel, n, surv, outcomes = [], [], 0, 0, 0, 0, {}
         for aid, (objs, own, a) in objs_by_arg.items():
             if not objs:
                 continue
@@ -98,19 +104,25 @@ async def run(client: LLMClient | None = None) -> dict:
                 nv = await novelty.check(client, o.id, o.text, atext, o.target_premise_id,
                                          own[o.target_premise_id].text if o.target_premise_id in own else "",
                                          claims_ix, abstracts_ix, use_live=False, exclude_paper=a.paper_id)
-                return o, pre, nv
-            for o, pre, nv in await asyncio.gather(*[assess(o) for o in objs]):
+                async with trial_sem:
+                    t = await run_trial(client, store, o, atext, claims_ix, nv.to_dict(), f"trial-{o.id}",
+                                        attacker_for(o))
+                return o, pre, nv, t
+            for o, pre, nv, t in await asyncio.gather(*[assess(o) for o in objs]):
                 n += 1
                 ok_pre = bool(pre and not pre.misreading)
                 pass_pre += ok_pre
                 novel += nv.novelty > 0.5
+                surv += t.outcome in SURVIVING
+                outcomes[t.outcome or "failed"] = outcomes.get(t.outcome or "failed", 0) + 1
                 per_obj.append({"condition": name, "objection_id": o.id, "argument_id": aid, "target": o.target_premise_id,
                                 "family": o.family, "model": o.model, "passes_prescreen": ok_pre,
+                                "outcome": t.outcome, "trial_status": t.status,
                                 "novelty": round(nv.novelty, 3), "text": o.text})
         out_rows.append({"name": name, "n": n,
                          "distinct_premises": round(float(np.mean(distinct)), 2) if distinct else 0,
                          "mean_pairwise_distance": round(float(np.mean(dists)), 3) if dists else 0,
-                         "share_surviving": None,
+                         "share_surviving": round(surv / max(1, n), 3), "outcomes": outcomes,
                          "share_passing_prescreen": round(pass_pre / max(1, n), 3),
                          "share_novelty_gt_05": round(novel / max(1, n), 3)})
     data = {
@@ -122,8 +134,9 @@ async def run(client: LLMClient | None = None) -> dict:
         "models": model_ids(client, ["referee", "reranker"]) | {"one_model": one.label},
         "timestamp": stamp(),
         "limits": ("Only 2 model families were available (anthropic, openai), so 'mixed families' means 2 families. "
-                   "share_surviving would need full trials for all 60 objections and was not run (cost); "
-                   "share_passing_prescreen (the Referee's misreading check) is reported instead. "
+                   "share_surviving = share of objections whose full gauntlet trial (pre-screen, two defenders, Referee) "
+                   "ended in revision_required or standing (S >= 0.8); trials use the lab's gauntlet without updating "
+                   "the argument between trials. "
                    "CLI providers ignore temperature, so 'plain' variation comes from the 'objection k of n' prompt. "
                    "5 arguments x 4 objections per condition."),
     }

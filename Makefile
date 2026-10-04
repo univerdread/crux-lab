@@ -52,6 +52,7 @@ docs: export
 	$(PY) scripts/make_demo_md.py
 	$(PY) scripts/readme_results.py
 	PYTHONPATH=. $(PY) scripts/audit.py
+	$(PY) scripts/make_submission_md.py
 
 databricks:
 	$(PY) -m crux_lab.databricks_sync
