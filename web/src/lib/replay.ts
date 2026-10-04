@@ -1,4 +1,5 @@
 import type { NearestMatch, Objection, Outcome, QueueRow, Run, RunEvent, Turn } from "../types";
+import { assessedNovelty, NOT_ASSESSED, notAssessedReason, trialFailure } from "./assessment";
 import { agentLabel, PHASE_LABEL, shortId, speakerLabel } from "./format";
 
 export interface TrialState {
@@ -7,13 +8,24 @@ export interface TrialState {
   turns: Turn[];
   outcome: Outcome | null;
   status: string | null;
+  error?: string | null;
+  missing_labels?: string[];
   ended: boolean;
+}
+
+/** One objection's prior-art check as the replay knows it; novelty null = not assessed. */
+export interface NoveltyState {
+  novelty: number | null;
+  status?: string;
+  reason?: string;
+  records_searched: number;
+  nearest: NearestMatch[];
 }
 
 export interface ReplayState {
   cursor: number;
   objections: Objection[];
-  novelty: Record<string, { novelty: number; records_searched: number; nearest: NearestMatch[] }>;
+  novelty: Record<string, NoveltyState>;
   queue: { step: number; queue: QueueRow[]; picked: string[] } | null;
   pickedEver: Set<string>;
   trials: TrialState[];
@@ -109,7 +121,13 @@ export function replay(
         s.naive.push({ question: ev.question, sharpened: ev.sharpened });
         break;
       case "novelty":
-        s.novelty[ev.objection_id] = { novelty: ev.novelty, records_searched: ev.records_searched, nearest: ev.nearest ?? [] };
+        s.novelty[ev.objection_id] = {
+          novelty: assessedNovelty(ev),
+          status: ev.status,
+          reason: ev.reason,
+          records_searched: ev.records_searched,
+          nearest: ev.nearest ?? [],
+        };
         break;
       case "queue":
         s.queue = { step: ev.step, queue: ev.queue ?? [], picked: ev.picked ?? [] };
@@ -138,9 +156,12 @@ export function replay(
       case "trial_end": {
         const tr = ensureTrial(ev.trial_id, ev.objection_id);
         tr.ended = true;
-        tr.outcome = ev.outcome ?? null;
+        const failed = ev.status === "failed";
+        tr.outcome = failed ? null : ev.outcome ?? null;     // a failed trial has no outcome, whatever it carries
         tr.status = ev.status ?? null;
-        s.outcomes[ev.objection_id] = ev.outcome ?? "failed";
+        tr.error = ev.error ?? null;
+        tr.missing_labels = ev.missing_labels ?? [];
+        s.outcomes[ev.objection_id] = failed ? "failed" : ev.outcome ?? "failed";
         s.active.delete(ev.objection_id);
         s.lastTrialId = ev.trial_id;
         break;
@@ -197,7 +218,12 @@ export function describeEvent(ev: LooseEvent | null | undefined, premiseLabel?: 
     case "naive_question":
       return `The Naive Questioner asked a question${ev.sharpened ? "; another agent sharpened it into an objection" : "; it was not sharpened into an objection"}.`;
     case "novelty":
-      return `Prior-art check on ${shortId(ev.objection_id)}: novelty ${ev.novelty.toFixed(2)} across ${ev.records_searched} records searched.`;
+      {
+        const n = assessedNovelty(ev);
+        return n === null
+          ? `Prior-art check on ${shortId(ev.objection_id)}: ${NOT_ASSESSED.toLowerCase()}. ${notAssessedReason(ev)}`
+          : `Prior-art check on ${shortId(ev.objection_id)}: novelty ${n.toFixed(2)} across ${ev.records_searched} records searched.`;
+      }
     case "queue":
       return `Director step ${ev.step}: ranked ${ev.queue.length} untried objection${ev.queue.length === 1 ? "" : "s"}, picked ${ev.picked.length} for trial.`;
     case "trial_start":
@@ -205,7 +231,9 @@ export function describeEvent(ev: LooseEvent | null | undefined, premiseLabel?: 
     case "turn":
       return `${speakerLabel(ev.turn.speaker)}, ${PHASE_LABEL[ev.turn.phase] ?? ev.turn.phase} (${ev.turn.family} · ${ev.turn.model}).`;
     case "trial_end":
-      return ev.status === "failed" ? `Trial ${shortId(ev.objection_id)} failed.` : `Trial ${shortId(ev.objection_id)} closed: ${ev.outcome ?? "no outcome"}.`;
+      return ev.status === "failed"
+        ? `${shortId(ev.objection_id)}: ${trialFailure(ev)}`
+        : `Trial ${shortId(ev.objection_id)} closed: ${ev.outcome ?? "no outcome"}.`;
     case "revised_premise":
       return `Revised premise ${shortId(ev.id)} adopted; the Director may now attack it.`;
     case "brief":

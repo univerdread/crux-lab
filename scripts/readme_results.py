@@ -102,7 +102,8 @@ def main() -> None:
                 "| Condition | n | distinct premises / argument | mean pairwise distance | passes pre-screen | novelty > 0.5 |",
                 "| --- | --- | --- | --- | --- | --- |"]
         out += [f"| {x['name']} | {x['n']} | {x['distinct_premises']} | {x['mean_pairwise_distance']} | "
-                f"{x.get('share_passing_prescreen', 0):.0%} | {x['share_novelty_gt_05']:.0%} |" for x in e3["conditions"]]
+                f"{x.get('share_passing_prescreen', 0):.0%} | "
+                f"{'n/a' if x['share_novelty_gt_05'] is None else format(x['share_novelty_gt_05'], '.0%')} |" for x in e3["conditions"]]
         out.append("")
     if not (e1 or e2 or e3):
         out.append("No evaluation results yet.")

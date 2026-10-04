@@ -163,17 +163,22 @@ async def run_trial(client: LLMClient, store: Store, objection: Objection, argum
                 trial.rounds.append(lt)
                 await emit({"type": "turn", "turn": lt.model_dump()})
         trial.per_defender = per
-        if not per:
-            trial.status, trial.error = "failed", "referee produced no valid label"
+        trial.cited_claim_ids = list(dict.fromkeys(all_verified))     # evidence kept even if incomplete
+        missing = [s for s in specs if s not in per]
+        if missing:
+            # the outcome must survive *both* defenders: with a label missing there is no combined outcome
+            trial.missing_labels = missing
+            trial.status = "failed"
+            trial.error = f"incomplete defender assessment: missing {', '.join(missing)}"
             return trial
         best = min(per.values(), key=lambda d: OUTCOME_ORDER.index(d["outcome"]))
         trial.outcome = best["outcome"]
         trial.rationale, trial.deciding_quote = best["rationale"], best["deciding_quote"]
         trial.revised_premise = best["revised_premise"] if best["outcome"] == "revision_required" else None
-        trial.cited_claim_ids = list(dict.fromkeys(all_verified))
     except Exception as e:  # noqa: BLE001 - a failed trial is recorded and shown as failed
         log.exception("trial %s failed", trial_id)
         trial.status, trial.error = "failed", repr(e)[:300]
     finally:
-        await emit({"type": "trial_end", "outcome": trial.outcome, "status": trial.status})
+        await emit({"type": "trial_end", "outcome": trial.outcome if trial.status == "ok" else None,
+                    "status": trial.status, "error": trial.error, "missing_labels": trial.missing_labels})
     return trial

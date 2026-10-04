@@ -1,5 +1,32 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:27 — Repair: failure states made explicit (Claude; bug report from the human's friend, by Codex)
+- Report (~/Downloads/AGENT-REPAIR-BRIEF.md) claimed two failure-handling bugs. Both confirmed in the code:
+  A) novelty.check returned 1.0 when retrieval left no candidates, and 1 - 0 = 1.0 when the reranker gave no
+  valid judgment after retries: a missing assessment became the maximal novelty score (feeds the Director and
+  the lead score). B) gauntlet accepted a trial with a Referee label for only one defender as ok, with a
+  combined outcome, although the outcome must survive *both* defenders.
+- Fix A: NoveltyResult.novelty is nullable with status assessed | no_candidates | rerank_failed |
+  retrieval_failed and a reason; local retrieval errors are caught (budget errors still propagate); live
+  OpenAlex being unavailable does not invalidate a local assessment; all-"different" stays a valid score.
+  Director: novelty None = not eligible (never the 0.5 default); run stop reason names left-out objections.
+  Briefs only from complete trials with assessed novelty; brief Markdown says "not assessed"; E3 counts
+  novelty_assessed / novelty_unavailable and uses completed checks as the denominator (None if none).
+- Fix B: both defender_a and defender_b need a label; otherwise status failed, outcome and revised premise
+  unset, `missing_labels`, error "incomplete defender assessment: missing defender_b"; rounds, labels and
+  verified citations kept; trial_end event says failed. Pre-screen misreading exits unchanged.
+  `schema.trial_complete()` is the one test; run.py (outcomes, revision spawning), E2 (trials_completed per
+  set), E3 and export counters use it.
+- Legacy records: export now runs `normalize_run` on every stored run (records + replay events): a stored
+  1.0 with nothing reranked or no judgments becomes not assessed (number kept as legacy_novelty); a trial
+  saved ok without both labels becomes failed (legacy_outcome kept). Briefs from such items are not ranked
+  and are listed in About's method notes. Divine hiddenness export: 55/55 checks assessed, 30/30 trials
+  complete, ranking unchanged (matches the report's own audit). The decision-theory runs in progress use
+  the old code; their export goes through the same screen.
+- Site: "Not assessed" + reason (no bar, no 0.00/1.00/NaN); trial pages say "Trial incomplete: the referee
+  assessment for Defender B is unavailable" and still show the discussion; replay never keeps an outcome for
+  a failed trial. Tests: tests/test_failure_states.py (18), replay.test.ts (+3). make check, build, smoke, a11y pass.
+
 ## 2026-10-04 12:07 — Ranking by lead score; strongest lead featured (Claude, human's request)
 - Human: the de se / contrastive-responsibility direction "clearly has the best play-off between academic
   quality and novelty" and should lead; "make sure the best research directions get the most light".

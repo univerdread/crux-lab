@@ -15,6 +15,7 @@ from crux_lab.eval.common import model_ids, stamp, write
 from crux_lab.graph.index import INDEX_DIR, HybridIndex
 from crux_lab.graph.schema import Argument, Claim, Objection
 from crux_lab.graph.store import Store
+from crux_lab.graph.schema import trial_complete
 from crux_lab.lab import generators, novelty
 from crux_lab.lab.gauntlet import PrescreenOut, run_trial
 from crux_lab.lab.run import argument_text
@@ -91,6 +92,7 @@ async def run(client: LLMClient | None = None) -> dict:
             own = {c.id: c for c in store.all(Claim, parent=a.paper_id)}
             objs_by_arg[a.id] = (await fn(a, own), own, a)
         distinct, dists, pass_pre, novel, n, surv, outcomes, n_ok = [], [], 0, 0, 0, 0, {}, 0
+        n_nov = 0          # novelty checks that completed: the denominator for share_novelty_gt_05
         for aid, (objs, own, a) in objs_by_arg.items():
             if not objs:
                 continue
@@ -113,14 +115,19 @@ async def run(client: LLMClient | None = None) -> dict:
                 n += 1
                 ok_pre = bool(pre and not pre.misreading)
                 pass_pre += ok_pre
-                novel += nv.novelty > 0.5
-                surv += t.outcome in SURVIVING
-                n_ok += t.status == "ok"
-                outcomes[t.outcome or "failed"] = outcomes.get(t.outcome or "failed", 0) + 1
+                done = trial_complete(t.model_dump())
+                if nv.novelty is not None:
+                    n_nov += 1
+                    novel += nv.novelty > 0.5
+                surv += done and t.outcome in SURVIVING
+                n_ok += done
+                k_out = t.outcome if done else "failed"
+                outcomes[k_out] = outcomes.get(k_out, 0) + 1
                 per_obj.append({"condition": name, "objection_id": o.id, "argument_id": aid, "target": o.target_premise_id,
                                 "family": o.family, "model": o.model, "passes_prescreen": ok_pre,
                                 "outcome": t.outcome, "trial_status": t.status,
-                                "novelty": round(nv.novelty, 3), "text": o.text})
+                                "novelty": round(nv.novelty, 3) if nv.novelty is not None else None,
+                                "novelty_status": nv.status, "text": o.text})
         out_rows.append({"name": name, "n": n,
                          "distinct_premises": round(float(np.mean(distinct)), 2) if distinct else 0,
                          "mean_pairwise_distance": round(float(np.mean(dists)), 3) if dists else 0,
@@ -128,7 +135,9 @@ async def run(client: LLMClient | None = None) -> dict:
                                              if n and n_ok / n >= MIN_TRIALS_OK else None),
                          "trials_completed": n_ok, "outcomes": outcomes,
                          "share_passing_prescreen": round(pass_pre / max(1, n), 3),
-                         "share_novelty_gt_05": round(novel / max(1, n), 3)})
+                         "novelty_assessed": n_nov, "novelty_unavailable": n - n_nov,
+                         # denominator: completed novelty checks only; None when none completed
+                         "share_novelty_gt_05": round(novel / n_nov, 3) if n_nov else None})
     incomplete = [r["name"] for r in out_rows if r["share_surviving"] is None]
     counts = "; ".join("%s: %d/%d" % (r["name"], r["trials_completed"], r["n"]) for r in out_rows)
     trial_note = ("" if not incomplete else
@@ -141,7 +150,9 @@ async def run(client: LLMClient | None = None) -> dict:
         "settings": {"arguments": [a.id for a in args], "objections_per_argument": PER_ARG,
                      "one_model": one.label, "mixed": [g.label for g in gens],
                      "distinct_premises": "mean per argument of distinct premise ids targeted (out of 4 objections)",
-                     "embedder": claims_ix.embedder.name, "novelty": "lab novelty check without live OpenAlex"},
+                     "embedder": claims_ix.embedder.name, "novelty": "lab novelty check without live OpenAlex",
+                     "share_novelty_gt_05": "share of completed novelty checks scoring above 0.5 "
+                                            "(checks that could not be assessed are counted in novelty_unavailable)"},
         "models": model_ids(client, ["referee", "reranker"]) | {"one_model": one.label},
         "timestamp": stamp(),
         "limits": ("Only 2 model families were available (anthropic, openai), so 'mixed families' means 2 families. "

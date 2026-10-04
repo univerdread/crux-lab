@@ -78,7 +78,8 @@ async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], o
         challenged_premise={"id": objection.target_premise_id, "text": target_text},
         objection=objection.text,
         strongest_responses=[r.model_dump() for r in out.strongest_responses],
-        closest_literature=closest, novelty=round(novelty.get("novelty", 0.0), 3),
+        closest_literature=closest,
+        novelty=round(novelty["novelty"], 3) if novelty.get("novelty") is not None else None,
         records_searched=novelty.get("records_searched", 0), nearest=nearest,
         open_questions=out.open_questions, paper_direction=out.paper_direction, outcome=trial.outcome or "")
 
@@ -86,7 +87,8 @@ async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], o
 def to_markdown(b: Brief, objection: Objection | None = None) -> str:
     a = b.argument
     L = [f"# Research brief: {b.research_question}", "",
-         f"*Outcome in the gauntlet:* **{b.outcome}** · *novelty score:* {b.novelty:.2f} · "
+         f"*Outcome in the gauntlet:* **{b.outcome}** · *novelty score:* "
+         f"{f'{b.novelty:.2f}' if b.novelty is not None else 'not assessed'} · "
          f"*records searched:* {b.records_searched}", "",
          f"## Argument — {a.get('title', '')}", f"From: {a.get('paper_title', '')} (`{a.get('paper_id', '')}`)", ""]
     for p in a["premises"]:

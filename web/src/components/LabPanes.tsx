@@ -1,3 +1,4 @@
+import { NOT_ASSESSED, notAssessedReason } from "../lib/assessment";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import type { Claim, Objection, Outcome, Run } from "../types";
@@ -168,7 +169,14 @@ function ObjectionRow({ o, n, run, state }: { o: Objection; n: number; run: Run;
         </span>
         {nov ? (
           <span className="inline-flex items-center gap-2">
-            novelty <Meter value={nov.novelty} label="novelty" />
+            novelty{" "}
+            {nov.novelty === null ? (
+              <span className="font-mono text-[0.72rem]" title={notAssessedReason(nov)}>
+                {NOT_ASSESSED.toLowerCase()}: {notAssessedReason(nov)}
+              </span>
+            ) : (
+              <Meter value={nov.novelty} label="novelty" />
+            )}
             <span className="font-mono text-[0.7rem]">{nov.records_searched} searched</span>
           </span>
         ) : (

@@ -8,6 +8,15 @@ ROOT = Path(__file__).resolve().parent.parent
 D = ROOT / "web" / "public" / "data"
 
 
+
+def fmt_nov(n: dict) -> str:
+    """A novelty number, or 'not assessed' for a check that could not be completed."""
+    return f"{n['novelty']:.2f}" if n.get("novelty") is not None else "not assessed"
+
+
+def fmt_pct(x) -> str:
+    return f"{x:.0%}" if x is not None else "n/a"
+
 def load(name):
     p = D / name
     return json.loads(p.read_text()) if p.exists() else None
@@ -69,7 +78,7 @@ def main() -> None:
     if best and obj:
         L += [f"## 1:10 — One trial (`/trial/{best['id']}`)",
               f"- Objection by **{obj['agent']}** ({obj['family']}:{obj['model']}) against `{obj['target_premise_id']}`.",
-              f"- Novelty {nov.get('novelty', 0):.2f}; nearest: " + "; ".join(
+              f"- Novelty {fmt_nov(nov)}; nearest: " + "; ".join(
                   f"{m['verdict']} — {m['title'][:60]}" for m in nov.get("nearest", [])[:2]) + ".",
               "- Show Defender A (firm) and Defender B (concessive, other family), the objector's rejoinder, "
               f"and the Referee's label: **{best['outcome']}** — \"{best['deciding_quote'][:160]}\"", ""]
@@ -82,7 +91,7 @@ def main() -> None:
                  f"{e2['known_answer'].get('gold_reply_cited_by_a_defender', '?')}/{e2['known_answer']['n']} (the Referee is conservative); "
                  f"{e2['misreading']['caught']}/{e2['misreading']['n']} deliberate misreadings caught.")
     if e3:
-        L.append("- E3 diversity: " + "; ".join(f"{c['name']}: {c['distinct_premises']} distinct premises, novelty>0.5 share {c['share_novelty_gt_05']:.0%}" for c in e3["conditions"]) + ".")
+        L.append("- E3 diversity: " + "; ".join(f"{c['name']}: {c['distinct_premises']} distinct premises, novelty>0.5 share {fmt_pct(c['share_novelty_gt_05'])}" for c in e3["conditions"]) + ".")
     L += ["- Read the limits line aloud: the numbers are small and the lab says so.", "",
           "## 1:45 — Any topic (`/topics`, `/start`)",
           "- Topics lists what has been run (divine hiddenness) and what is set up (the fine-tuning argument); "

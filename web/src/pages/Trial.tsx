@@ -1,3 +1,4 @@
+import { trialFailure } from "../lib/assessment";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import { NoveltyPanel } from "../components/NoveltyPanel";
@@ -96,17 +97,18 @@ function TrialView({ run, trial }: { run: Run; trial: Trial }) {
           <span className="font-mono text-[0.72rem] text-ink-soft">{trial.id}</span>
         </div>
         {failed ? (
-          <p className="border border-dashed border-ink px-3 py-2 font-mono text-[0.85rem]">
-            This trial failed and is reported as failed{trial.error ? `: ${trial.error}` : "."}
+          <p className="border border-dashed border-ink px-3 py-2 font-mono text-[0.85rem]" role="status">
+            {trialFailure(trial)} It has no combined outcome and does not count as a result; the discussion it did
+            produce is below{trial.error && trial.missing_labels?.length ? ` (${trial.error})` : ""}.
           </p>
         ) : null}
-        {trial.rationale ? (
+        {!failed && trial.rationale ? (
           <p className="measure text-[1.12rem] leading-relaxed">
             <span className="smallcaps mr-1 text-ink-soft">in plain words</span>
             {trial.rationale}
           </p>
         ) : null}
-        {trial.deciding_quote ? (
+        {!failed && trial.deciding_quote ? (
           <blockquote className="measure border-l-2 border-ink pl-4 italic">
             <span className="smallcaps not-italic mr-1 text-ink-soft">deciding sentence</span>“{trial.deciding_quote}”
           </blockquote>

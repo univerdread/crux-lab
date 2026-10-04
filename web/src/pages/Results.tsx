@@ -329,7 +329,16 @@ function E3Section({ e }: { e: E3 | null }) {
                     <td className="num">{num(c.mean_pairwise_distance, 3)}</td>
                     <td className="num">{c.share_passing_prescreen === undefined ? "—" : pct(c.share_passing_prescreen)}</td>
                     <td className="num">{c.share_surviving === null ? <span title="Not available: see the limits below">n/a*</span> : pct(c.share_surviving)}</td>
-                    <td className="num">{pct(c.share_novelty_gt_05)}</td>
+                    <td
+                      className="num"
+                      title={
+                        c.novelty_assessed !== undefined
+                          ? `over ${c.novelty_assessed} completed novelty checks; ${c.novelty_unavailable ?? 0} could not be assessed`
+                          : undefined
+                      }
+                    >
+                      {c.share_novelty_gt_05 === null ? "n/a" : pct(c.share_novelty_gt_05)}
+                    </td>
                   </tr>
                 ))}
               </tbody>

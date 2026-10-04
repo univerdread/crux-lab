@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import type { Run, Turn } from "../../types";
-import { attributeTurns, replay } from "../replay";
+import { attributeTurns, describeEvent, replay } from "../replay";
+import { assessedNovelty, trialFailure } from "../assessment";
 
 const turn = (speaker: Turn["speaker"], phase: Turn["phase"], exchange: number, content: string): Turn => ({
   exchange, speaker, phase, content, model: "m", family: "f", cited_claim_ids: [], struck_claim_ids: [],
@@ -39,10 +40,41 @@ describe.skipIf(!files.length)("exported runs replay faithfully", () => {
         if (ev.type === "turn") expect(attribution[i], `turn event ${i} unattributed`).not.toBeNull();
       });
       const s = replay(run.events, run.events.length, attribution);
-      for (const t of run.trials) expect(s.outcomes[t.objection_id]).toBe(t.outcome ?? "failed");
+      for (const t of run.trials)
+        expect(s.outcomes[t.objection_id]).toBe(t.status === "failed" ? "failed" : t.outcome ?? "failed");
       expect(s.briefs.map((b) => b.brief_id).sort()).toEqual([...run.briefs].sort());
       expect(s.ended).toBe(run.stop_reason);
       expect(replay(run.events, 0, attribution).trials).toEqual([]);
     });
   }
+});
+
+describe("failure states", () => {
+  const ev = (e: object) => e as unknown as Run["events"][number];
+
+  it("an unassessed novelty check stays null and is described in words", () => {
+    const n = ev({ t: 1, type: "novelty", objection_id: "o1", novelty: null, status: "rerank_failed",
+      reason: "The literature assessment could not be completed. Retry the check.", records_searched: 900, nearest: [] });
+    const s = replay([n], 1);
+    expect(s.novelty.o1.novelty).toBeNull();
+    const text = describeEvent(n);
+    expect(text).toContain("not assessed");
+    expect(text).not.toMatch(/NaN|1\.00|0\.00/);
+  });
+
+  it("a number with a failure status is not a score", () => {
+    expect(assessedNovelty({ novelty: 1, status: "no_candidates" })).toBeNull();
+    expect(assessedNovelty({ novelty: 0.42, status: "assessed" })).toBe(0.42);
+    expect(assessedNovelty({ novelty: 0.42 })).toBe(0.42); // old exports: screened when exported
+  });
+
+  it("a failed trial never keeps an outcome, even a stale one", () => {
+    const end = ev({ t: 2, type: "trial_end", trial_id: "trial-o1", objection_id: "o1", outcome: "standing",
+      status: "failed", error: "incomplete defender assessment: missing defender_b", missing_labels: ["defender_b"] });
+    const s = replay([end], 1);
+    expect(s.outcomes.o1).toBe("failed");
+    expect(s.trials[0].outcome).toBeNull();
+    expect(describeEvent(end)).toContain("the referee assessment for Defender B is unavailable");
+    expect(trialFailure({ missing_labels: ["defender_a", "defender_b"] })).toContain("assessments for Defender A and Defender B are");
+  });
 });

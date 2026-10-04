@@ -1,3 +1,4 @@
+import { NOT_ASSESSED } from "../lib/assessment";
 import { QualityPanel, QualityStrip, RevisionPanel } from "../components/Quality";
 import { useState } from "react";
 import { Link, useParams } from "react-router";
@@ -132,7 +133,7 @@ function BriefView({
           </span>
           <span>
             <span className="smallcaps mr-1 text-ink-soft">novelty score</span>
-            <span className="font-mono">{num(b.novelty)}</span>
+            <span className="font-mono">{b.novelty === null || b.novelty === undefined ? NOT_ASSESSED : num(b.novelty)}</span>
           </span>
           <span>
             <span className="smallcaps mr-1 text-ink-soft">records searched</span>

@@ -1,3 +1,4 @@
+import { assessedNovelty, NOT_ASSESSED, notAssessedReason } from "../lib/assessment";
 import type { CSSProperties } from "react";
 import type { NearestMatch, Novelty } from "../types";
 import { num } from "../lib/format";
@@ -22,9 +23,15 @@ export function VerdictTag({ verdict }: { verdict?: string }) {
   );
 }
 
-/** A 0–1 bar, for novelty scores. */
+/** A 0–1 bar, for novelty scores. A missing value is said in words, never drawn as a bar. */
 export function Meter({ value, label }: { value: number | null | undefined; label: string }) {
   const v = value === null || value === undefined || Number.isNaN(value) ? null : Math.max(0, Math.min(1, value));
+  if (v === null)
+    return (
+      <span className="font-mono text-[0.72rem] text-ink-soft" aria-label={`${label}: ${NOT_ASSESSED.toLowerCase()}`}>
+        {NOT_ASSESSED.toLowerCase()}
+      </span>
+    );
   return (
     <div className="flex items-center gap-2" role="img" aria-label={`${label}: ${v === null ? "not available" : num(v)}`}>
       <div className="h-1.5 w-20 overflow-hidden rounded-full bg-paper-edge">
@@ -69,12 +76,18 @@ export function NoveltyPanel({
   showDisclaimer?: boolean;
 }) {
   const restatements = Object.entries(data.restatements ?? {}).filter(([, v]) => v);
+  const score = assessedNovelty(data);
   return (
     <div className="space-y-4">
+      {score === null ? (
+        <p className="border-l-2 border-ink pl-3 text-[0.95rem]" role="status">
+          <span className="font-medium">{NOT_ASSESSED}.</span> {notAssessedReason(data)}
+        </p>
+      ) : null}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div>
           <Label>novelty score</Label>
-          <div className="font-serif text-[1.9rem] leading-tight">{num(data.novelty)}</div>
+          <div className="font-serif text-[1.9rem] leading-tight">{score === null ? NOT_ASSESSED : num(score)}</div>
         </div>
         <div>
           <Label>records searched</Label>

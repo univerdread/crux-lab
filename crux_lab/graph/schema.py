@@ -94,6 +94,21 @@ class Trial(BaseModel):
     per_defender: dict[str, dict] = Field(default_factory=dict)
     status: Literal["ok", "failed"] = "ok"
     error: str | None = None
+    missing_labels: list[str] = Field(default_factory=list)   # defenders the Referee could not label
+
+
+DEFENDERS = ("defender_a", "defender_b")
+
+
+def trial_complete(t: dict) -> bool:
+    """A trial that counts: status ok, and either a pre-screen misreading exit or a Referee label for both
+    defenders. Checked on stored records too, so an older partial trial saved as 'ok' never counts."""
+    if t.get("status", "ok") != "ok" or not t.get("outcome"):
+        return False
+    per = t.get("per_defender") or {}
+    if not per:
+        return t["outcome"] == "misreading"      # the pre-screen exit runs no defenders
+    return all(per.get(d, {}).get("outcome") for d in DEFENDERS)
 
 
 class NearestMatch(BaseModel):
@@ -114,7 +129,7 @@ class Brief(BaseModel):
     objection: str
     strongest_responses: list[dict]
     closest_literature: list[dict]
-    novelty: float
+    novelty: float | None                 # None only for a diagnostic brief whose novelty was not assessed
     records_searched: int
     nearest: list[NearestMatch]
     open_questions: list[str]

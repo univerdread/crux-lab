@@ -97,13 +97,59 @@ def latest_assessment(b: dict) -> dict | None:
     return (b.get("revision") or {}).get("assessment") or b.get("assessment")
 
 
+def normalize_run(run: dict) -> dict:
+    """Export-time check of a stored run, so records written before the failure states existed cannot pass as
+    results (fixed 2026-10-04): every novelty record gets an explicit status (a legacy failure path that stored
+    1.0 becomes not assessed), and a trial saved as 'ok' without a Referee label for both defenders becomes
+    failed, its stored outcome kept only as `legacy_outcome`. Model text and evidence are never changed."""
+    from crux_lab.graph.schema import DEFENDERS, trial_complete
+    from crux_lab.lab.novelty import normalize
+    run["novelty"] = {k: normalize(v) for k, v in (run.get("novelty") or {}).items()}
+    for t in run.get("trials", []):
+        if t.get("status", "ok") == "ok" and not trial_complete(t):
+            per = t.get("per_defender") or {}
+            missing = [d for d in DEFENDERS if not per.get(d, {}).get("outcome")]
+            t.update(status="failed", legacy_outcome=t.get("outcome"), outcome=None, revised_premise=None,
+                     missing_labels=missing, normalized_at_export=True,
+                     error=f"incomplete defender assessment: missing {', '.join(missing) or 'outcome'} "
+                           "(found when exporting)")
+    # the replayed event stream must say the same as the records
+    trials = {t["id"]: t for t in run.get("trials", [])}
+    for ev in run.get("events") or []:
+        if ev.get("type") == "novelty" and ev.get("objection_id") in run["novelty"]:
+            n = run["novelty"][ev["objection_id"]]
+            ev.update(novelty=n.get("novelty"), status=n.get("status"), reason=n.get("reason", ""))
+        elif ev.get("type") == "trial_end" and ev.get("trial_id") in trials:
+            t = trials[ev["trial_id"]]
+            if t.get("status") == "failed":
+                ev.update(status="failed", outcome=None, error=t.get("error"),
+                          missing_labels=t.get("missing_labels", []))
+    return run
+
+
+def brief_eligibility(runs: list[dict]) -> dict[str, str]:
+    """objection id -> "" if its brief may be ranked, else why not."""
+    from crux_lab.graph.schema import trial_complete
+    from crux_lab.lab.novelty import is_assessed
+    why: dict[str, str] = {}
+    for run in runs:
+        trials = {t["objection_id"]: t for t in run.get("trials", [])}
+        for oid in set(trials) | set(run.get("novelty") or {}):
+            t, n = trials.get(oid), (run.get("novelty") or {}).get(oid)
+            why[oid] = ("trial incomplete" if not t or not trial_complete(t)
+                        else "novelty not assessed" if not is_assessed(n) else "")
+    return why
+
+
 def rank_directions(briefs: list[dict]) -> list[dict]:
     """Lead score = survival × novelty × quality, best first.
 
     survival: how the objection fared against both defenders; novelty: 1 - closest prior art found; quality: the
     Assessor's latest overall score / 5 (after revision if any). One product, so a direction that is both new and
     sound leads, and a sound but already-published one or a new but incoherent one does not. `tier` is the
-    direction's rank within its own paper (0 = that paper's best)."""
+    direction's rank within its own paper (0 = that paper's best). A direction without an assessed novelty has
+    no lead score and is left out of the ranking."""
+    briefs = [b for b in briefs if b.get("novelty") is not None]
     for b in briefs:
         a = latest_assessment(b)
         b["quality"] = round(a["overall"] / 5, 3) if a and a.get("overall") is not None else None
@@ -169,8 +215,10 @@ def main() -> dict:
     needed: set[str] = set()
 
     runs_summary = []
+    runs_all: list[dict] = []
     for f in sorted(RUNS.glob("run-*.json")):
-        run = json.loads(f.read_text())
+        run = normalize_run(json.loads(f.read_text()))
+        runs_all.append(run)
         needed.add(run["target"]["paper_id"])
         for n in run.get("novelty", {}).values():
             for m in n.get("matches", []):
@@ -182,7 +230,7 @@ def main() -> dict:
         (out / "runs" / f.name).write_text(json.dumps(run, ensure_ascii=False))
         outcomes: dict[str, int] = {}
         for t in run.get("trials", []):
-            k = t.get("outcome") or "failed"
+            k = t.get("outcome") if t.get("status", "ok") == "ok" and t.get("outcome") else "failed"
             outcomes[k] = outcomes.get(k, 0) + 1
         runs_summary.append({
             "run_id": run["run_id"], "target_id": run["target"]["id"], "kind": run["target"].get("kind"),
@@ -193,6 +241,8 @@ def main() -> dict:
             "finished_at": run.get("finished_at")})
 
     briefs = []
+    eligibility = brief_eligibility(runs_all)
+    held_back: list[dict] = []
     for f in sorted(BRIEFS.glob("brief-*.json")):
         b = json.loads(f.read_text())
         (out / "briefs" / f.name).write_text(json.dumps(b, ensure_ascii=False))
@@ -203,6 +253,10 @@ def main() -> dict:
             if c.get("paper_id"):
                 needed.add(c["paper_id"])
         run_id = next((r["run_id"] for r in runs_summary if b["id"] in r["briefs"]), None)
+        not_ok = eligibility.get(b.get("objection_id"), "no trial record")
+        if not_ok:      # the brief file stays readable; it gets no lead score and is not listed
+            held_back.append({"id": b["id"], "why": not_ok})
+            continue
         briefs.append({"id": b["id"], "run_id": run_id, "research_question": b["research_question"],
                        "outcome": b.get("outcome"), "novelty": b["novelty"],
                        "records_searched": b["records_searched"],
@@ -274,7 +328,9 @@ def main() -> dict:
     dup_note = (f"OpenAlex lists some papers more than once (versions, preprint + article): the {len(corpus)} corpus "
                 f"records are {n_works} distinct works. 'Records searched' counts records; nearest matches, the "
                 "prior-art search box and E1 are scored per distinct work.")
-    about["method_notes"] = METHOD_NOTES + ([skew] if tot else []) + [dup_note]
+    about["method_notes"] = METHOD_NOTES + ([skew] if tot else []) + [dup_note] + (
+        [f"{len(held_back)} brief(s) are not ranked because their trial is incomplete or their novelty was not "
+         "assessed: " + "; ".join(f"{h['id']} ({h['why']})" for h in held_back)] if held_back else [])
     about["tracing"] = tracing_summary()
     (out / "about.json").write_text(json.dumps(about, ensure_ascii=False, indent=1))
     index = {"generated_at": datetime.now(timezone.utc).isoformat(), "runs": runs_summary,

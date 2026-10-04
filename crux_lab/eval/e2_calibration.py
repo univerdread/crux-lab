@@ -10,6 +10,7 @@ import random
 
 from pydantic import BaseModel
 
+from crux_lab.graph.schema import trial_complete
 from crux_lab.agents.roles import render
 from crux_lab.corpus.build import load_corpus
 from crux_lab.eval.common import canonical_argument, canonical_text, model_ids, stamp, write
@@ -117,31 +118,36 @@ async def run(client: LLMClient | None = None) -> dict:
     res_k = await asyncio.gather(*[guarded(i, it, "known") for i, it in enumerate(known)])
     res_m = await asyncio.gather(*[guarded(i, it, "misread") for i, it in enumerate(mis)])
     items = []
-    k_label = k_correct = k_gold_cited = 0
+    k_label = k_correct = k_gold_cited = k_done = 0
     from crux_lab.corpus.dedup import work_of
     for it, t in res_k:
         gold_works = {work_of(p) for p in it["reply_papers"]}       # any record of a gold reply paper counts
         cited_works = {work_of(c.paper_id) for cid in t.cited_claim_ids if (c := store.get(Claim, cid))}
         cited_right = bool(gold_works & cited_works)
         k_gold_cited += cited_right
-        k_label += t.outcome == "known_answer"
-        k_correct += t.outcome == "known_answer" and cited_right
+        done = trial_complete(t.model_dump())          # an incomplete trial is attempted, never a success
+        k_done += done
+        k_label += done and t.outcome == "known_answer"
+        k_correct += done and t.outcome == "known_answer" and cited_right
         items.append({"kind": "known_answer", "source_paper": ", ".join(it["reply_papers"]),
                       "objection_paper": it["objection_paper"], "reply_claims": it["reply_claims"],
                       "objection": it["objection"],
                       "target": it["target"], "outcome": t.outcome, "cited": t.cited_claim_ids,
-                      "correct": t.outcome == "known_answer" and cited_right, "status": t.status})
-    caught = 0
+                      "correct": done and t.outcome == "known_answer" and cited_right, "status": t.status,
+                      "complete": done})
+    caught = m_done = 0
     for it, t in res_m:
-        caught += t.outcome == "misreading"
+        done = trial_complete(t.model_dump())
+        m_done += done
+        caught += done and t.outcome == "misreading"
         items.append({"kind": "misreading", "source_paper": "", "objection": it["objection"], "target": it["target"],
                       "distorted_claim": it["distorted_claim"], "outcome": t.outcome,
-                      "correct": t.outcome == "misreading", "status": t.status})
+                      "correct": done and t.outcome == "misreading", "status": t.status, "complete": done})
     data = {
         "experiment": "E2 gauntlet calibration", "n": len(items),
-        "known_answer": {"n": len(res_k), "labelled_known_answer": k_label, "correct_reply_cited": k_correct,
-                         "gold_reply_cited_by_a_defender": k_gold_cited},
-        "misreading": {"n": len(res_m), "caught": caught},
+        "known_answer": {"n": len(res_k), "trials_completed": k_done, "labelled_known_answer": k_label,
+                         "correct_reply_cited": k_correct, "gold_reply_cited_by_a_defender": k_gold_cited},
+        "misreading": {"n": len(res_m), "trials_completed": m_done, "caught": caught},
         "items": items,
         "settings": {"argument": fx["title"], "fixture_note": fx["note"],
                      "known_items": ("objection: an LLM restates a corpus claim (paper A) as an objection to one premise; reply: "

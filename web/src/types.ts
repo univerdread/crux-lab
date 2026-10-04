@@ -56,10 +56,16 @@ export interface NearestMatch {
   title: string;
 }
 
+/** "assessed", or why the check could not be completed (crux_lab/lab/novelty.py). Absent on old exports. */
+export type NoveltyStatus = "assessed" | "no_candidates" | "rerank_failed" | "retrieval_failed";
+
 export interface Novelty {
   objection_id: string;
   restatements: { paper_vocabulary?: string; plain_english?: string; neighboring_tradition?: string };
-  novelty: number;
+  novelty: number | null; // null = not assessed: never a score
+  status?: NoveltyStatus;
+  reason?: string;
+  legacy_novelty?: number; // a stored number the export found to come from a failure path; never shown as a score
   records_searched: number;
   reranked: number;
   live_openalex: string;
@@ -103,6 +109,9 @@ export interface Trial {
   per_defender: Record<string, PerDefender>;
   status: "ok" | "failed";
   error: string | null;
+  missing_labels?: string[]; // defenders the Referee could not label: the trial is incomplete
+  legacy_outcome?: Outcome | null; // an outcome stored before the completeness check; not a result
+  normalized_at_export?: boolean;
 }
 
 export interface QueueRow {
@@ -129,11 +138,29 @@ export type RunEvent =
   | { t: number; type: "run_start"; run_id: string; target: string; argument_id: string }
   | { t: number; type: "objection"; objection: Objection }
   | { t: number; type: "naive_question"; question: string; sharpened: boolean }
-  | { t: number; type: "novelty"; objection_id: string; novelty: number; records_searched: number; nearest: NearestMatch[] }
+  | {
+      t: number;
+      type: "novelty";
+      objection_id: string;
+      novelty: number | null;
+      status?: NoveltyStatus;
+      reason?: string;
+      records_searched: number;
+      nearest: NearestMatch[];
+    }
   | { t: number; type: "queue"; step: number; queue: QueueRow[]; picked: string[] }
   | { t: number; type: "trial_start"; trial_id: string; objection_id: string }
   | { t: number; type: "turn"; turn: Turn; trial_id?: string; objection_id?: string }
-  | { t: number; type: "trial_end"; trial_id: string; objection_id: string; outcome: Outcome | null; status: string }
+  | {
+      t: number;
+      type: "trial_end";
+      trial_id: string;
+      objection_id: string;
+      outcome: Outcome | null;
+      status: string;
+      error?: string | null;
+      missing_labels?: string[];
+    }
   | { t: number; type: "revised_premise"; id: string; text: string; from_trial: string }
   | { t: number; type: "brief"; brief_id: string; objection_id: string }
   | { t: number; type: "run_end"; stop_reason: string };
@@ -257,7 +284,7 @@ export interface Brief {
   objection: string;
   strongest_responses: { defender: string; response: string; why_it_failed: string }[];
   closest_literature: LiteratureRef[];
-  novelty: number;
+  novelty: number | null; // null only for a diagnostic brief whose novelty was not assessed
   records_searched: number;
   nearest: NearestMatch[];
   open_questions: string[];
@@ -371,7 +398,9 @@ export interface E3 {
     mean_pairwise_distance: number;
     share_surviving: number | null;
     share_passing_prescreen?: number | null;
-    share_novelty_gt_05: number;
+    share_novelty_gt_05: number | null; // over completed novelty checks; null if none completed
+    novelty_assessed?: number;
+    novelty_unavailable?: number;
   }[];
   settings: Record<string, unknown>;
   models: Record<string, string>;

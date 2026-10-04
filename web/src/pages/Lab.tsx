@@ -1,3 +1,4 @@
+import { assessedNovelty } from "../lib/assessment";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router";
 import { DirectorPane, MapPane, objectionNumbers, TrialsPane } from "../components/LabPanes";
@@ -337,6 +338,13 @@ function replayFinal(run: Run) {
   s.objections = run.objections ?? [];
   for (const t of run.trials ?? []) s.outcomes[t.objection_id] = t.status === "failed" ? "failed" : t.outcome ?? "failed";
   for (const [id, text] of Object.entries(run.revised_premises ?? {})) s.revised.push({ id, text, from_trial: "" });
-  for (const [id, n] of Object.entries(run.novelty ?? {})) s.novelty[id] = { novelty: n.novelty, records_searched: n.records_searched, nearest: n.nearest };
+  for (const [id, n] of Object.entries(run.novelty ?? {}))
+    s.novelty[id] = {
+      novelty: assessedNovelty(n),
+      status: n.status,
+      reason: n.reason,
+      records_searched: n.records_searched,
+      nearest: n.nearest,
+    };
   return s;
 }

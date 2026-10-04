@@ -130,6 +130,7 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
         for o, r in zip(new, res):
             nov[o.id] = r.to_dict()
             await emit({"type": "novelty", "objection_id": o.id, "novelty": nov[o.id]["novelty"],
+                        "status": nov[o.id]["status"], "reason": nov[o.id]["reason"],
                         "records_searched": nov[o.id]["records_searched"],
                         "nearest": nov[o.id]["nearest"]})
 
@@ -152,8 +153,11 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
         while len(trials) < director.MAX_TRIALS:
             rows = director.rank(objections, {k: v["novelty"] for k, v in nov.items()}, C, tried_keys, outcomes)
             if not rows:
+                blocked = [o.id for o in objections if o.id not in outcomes and nov.get(o.id, {}).get("novelty") is None]
+                why = (f"; {len(blocked)} untested objection(s) left out because their novelty could not be assessed"
+                       if blocked else "")
                 if len(objections) >= director.MAX_OBJECTIONS:
-                    stop_reason = "objection budget used up"
+                    stop_reason = "objection budget used up" + why
                     break
                 taken = [o.target_premise_id for o in objections]
                 more = await asyncio.gather(*[generators.blind(client, arg, own, s, taken=taken, revised=revised)
@@ -164,7 +168,7 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
                     extra_waves += 1
                     await assess(more)
                 if len(objections) == before:
-                    stop_reason = "generators produced no further new objections"
+                    stop_reason = "generators produced no further new objections" + why
                     break
                 continue
             k = min(TRIALS_PER_STEP, director.MAX_TRIALS - len(trials), len(rows))
@@ -180,10 +184,11 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
             for t in done:
                 o = by_id[t.objection_id]
                 trials[o.id] = t
-                outcomes[o.id] = t.outcome or "failed"
+                outcomes[o.id] = t.outcome if t.status == "ok" and t.outcome else "failed"
                 tried_keys.add(director.explore_key(o))
                 store.put(t)
-                if t.outcome == "revision_required" and t.revised_premise and o.depth < director.MAX_DEPTH \
+                if t.status == "ok" and t.outcome == "revision_required" and t.revised_premise \
+                        and o.depth < director.MAX_DEPTH \
                         and len(objections) < director.MAX_OBJECTIONS:
                     rid = f"{arg.id}.r{len(revised) + 1}"
                     revised[rid] = t.revised_premise
@@ -207,9 +212,11 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
         stop_reason = f"budget exceeded: {e}"
         log.warning(stop_reason)
 
-    # briefs: surviving objections first (standing, revision_required), else the best rebutted
-    ranked = sorted(trials.values(), key=lambda t: (-SURVIVAL.get(t.outcome or "misreading", 0),
-                                                    -nov.get(t.objection_id, {}).get("novelty", 0)))
+    # briefs: surviving objections first (standing, revision_required), else the best rebutted; only complete
+    # trials whose novelty was assessed can become a scored brief
+    eligible = [t for t in trials.values() if t.status == "ok" and novelty.is_assessed(nov.get(t.objection_id))]
+    ranked = sorted(eligible, key=lambda t: (-SURVIVAL.get(t.outcome or "misreading", 0),
+                                             -nov[t.objection_id]["novelty"]))
     chosen = [t for t in ranked if t.outcome in ("standing", "revision_required")][:MAX_BRIEFS] or \
         [t for t in ranked if t.outcome == "rebutted"][:1]
     briefs = []

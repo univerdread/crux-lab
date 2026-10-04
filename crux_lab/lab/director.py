@@ -36,14 +36,19 @@ def explore_key(o: Objection) -> str:
     return f"{o.agent}|{o.family}"
 
 
-def rank(objections: list[Objection], novelty: dict[str, float], dependence: dict[str, float],
+def rank(objections: list[Objection], novelty: dict[str, float | None], dependence: dict[str, float],
          tried_keys: set[str], outcomes: dict[str, str] | None = None) -> list[QueueRow]:
-    """Rows for untried objections, highest priority first. Ties: shallower depth, then id."""
+    """Rows for untried objections, highest priority first. Ties: shallower depth, then id.
+
+    Eligibility: an objection whose novelty check could not be completed (novelty None) is not ranked at
+    all; it never borrows a default score. An objection with no entry yet keeps the prior 0.5."""
     outcomes = outcomes or {}
     rows = []
     for o in objections:
         if o.id in outcomes:
             continue
+        if o.id in novelty and novelty[o.id] is None:
+            continue                     # not assessed: not eligible for a scored trial
         S = PRIOR_SURVIVAL
         N = novelty.get(o.id, 0.5)
         C = dependence.get(o.target_premise_id, 0.0)
