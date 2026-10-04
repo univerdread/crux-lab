@@ -39,6 +39,25 @@ def revision_sentence(graded: list[dict]) -> str:
             f" A revision round rewrote each direction to answer its strongest objection; none moved up a grade.")
 
 
+def topics_lines() -> list[str]:
+    """One line per configured topic, from topics.json: what was run, on which model families."""
+    try:
+        topics = load("topics.json")["topics"]
+    except (OSError, KeyError):
+        return []
+    out = ["## Topics",
+           "The lab is topic-configurable (`config/topics/<slug>.yaml`); the site switches between topics on `/topics`."]
+    for x in topics:
+        if x.get("status") == "ready" and x.get("counts"):
+            k = x["counts"]
+            fam = x.get("families") or []
+            out.append(f"- **{x['name']}**: {k['papers']} papers, {k['objections']} objections, {k['trials']} trials, "
+                       f"{k['briefs']} research directions" + (f"; {len(fam)} model families ({', '.join(fam)})" if fam else ""))
+        else:
+            out.append(f"- **{x['name']}**: configured, not run (the site shows the commands to run it).")
+    return out + [""]
+
+
 def main() -> None:
     idx, briefs, res, about = load("index.json"), load("briefs.json"), load("results.json"), load("about.json")
     e1, e2, e3 = res.get("e1") or {}, res.get("e2") or {}, res.get("e3") or {}
@@ -79,8 +98,11 @@ def main() -> None:
         "## Quality control",
         assessor_line(briefs), "",
         "## Example output",
-        f"Top research direction: *{top.get('research_question', '')}* — {top.get('outcome', '')}, novelty {top.get('novelty', 0):.2f}, "
-        f"{top.get('records_searched', 0)} records searched.", "",
+        f"Top research direction (highest lead score = survival × novelty × Assessor quality): "
+        f"*{top.get('research_question', '')}* — {top.get('outcome', '')}, novelty {top.get('novelty', 0):.2f}, "
+        f"{top.get('records_searched', 0)} records searched"
+        + (f", lead score {top['score']:.3f}" if top.get("score") is not None else "") + ".", "",
+        *topics_lines(),
         "## Databricks",
         "Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call "
         f"({about.get('tracing', {}).get('traces')} traced in this build, locally because no workspace token was available); "

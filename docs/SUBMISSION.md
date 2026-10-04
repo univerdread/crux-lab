@@ -19,7 +19,13 @@ In philosophy the debate is the experiment. Crux Lab runs it: it reads recent pa
 An Assessor agent (a different model family from the brief writer) reads every research direction like a journal referee and grades coherence, robustness, significance and specificity; the grade is computed in code. Result: 14 not yet defensible of 14. The lab shows each direction's strongest objection and what a paper would need, rather than overselling its leads. A revision round then rewrote each direction to answer its strongest objection and re-graded it in a fresh read: 2 of 14 moved up a grade (to needs work) and the rest stayed not yet defensible, each with the next objection it must meet.
 
 ## Example output
-Top research direction: *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched.
+Top research direction (highest lead score = survival × novelty × Assessor quality): *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched, lead score 0.422.
+
+## Topics
+The lab is topic-configurable (`config/topics/<slug>.yaml`); the site switches between topics on `/topics`.
+- **Decision theory in philosophy of religion**: configured, not run (the site shows the commands to run it).
+- **Divine hiddenness**: 5 papers, 55 objections, 30 trials, 14 research directions
+- **The fine-tuning argument**: configured, not run (the site shows the commands to run it).
 
 ## Databricks
 Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1632 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
