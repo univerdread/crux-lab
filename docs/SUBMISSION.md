@@ -25,10 +25,11 @@ Top research direction (highest lead score = survival × novelty × Assessor qua
 The lab is topic-configurable (`config/topics/<slug>.yaml`); the site switches between topics on `/topics`.
 - **Divine hiddenness**: 5 papers, 55 objections, 30 trials, 14 research directions; 2 model families (anthropic, openai)
 - **Decision theory in philosophy of religion**: 6 papers, 72 objections, 36 trials, 18 research directions; 8 model families (anthropic, kimi, glm, mistral, qwen, llama, gpt-oss, gemma)
+- **Divine simplicity**: configured, not run (the site shows the commands to run it).
 - **The fine-tuning argument**: configured, not run (the site shows the commands to run it).
 
 ## Databricks
-Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (2347 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
+Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (3140 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
 
 ## Honest limits
 Model diversity: Divine hiddenness ran on 2 model families; Decision theory in philosophy of religion ran on 8 model families; PhilArchive's OAI API was unavailable; evals are small and have no human labels; outcome labels are model judgements about the state of a debate, never verdicts on truth.

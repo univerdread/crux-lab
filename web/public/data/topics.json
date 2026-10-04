@@ -123,12 +123,12 @@
     "gemma"
    ],
    "lead": {
-    "id": "brief-W4394980009.arg1.o6ef874",
-    "question": "What kind of certainty and hope must a version of Pascal's wager provide to be suitable for apologetic use, and does the postmodern rendition lack the determinacy of object that apologetics requires, once procedural certainty and immanent hope are granted?",
-    "score": 0.52,
+    "id": "brief-W2995194683.arg1.o43f39a",
+    "question": "Does diachronic psychological coherence, read as evidence-responsive, disposition-level coherence rather than persistence of every intention, license the backtracking counterfactuals in c004 that tie a token choice in Newcomb's Problem to the predictor's prediction, and if so, does this support one-boxing as the rational choice?",
+    "score": 0.3608,
     "outcome": "revision_required",
-    "novelty": 1.0,
-    "quality": 0.65
+    "novelty": 0.82,
+    "quality": 0.55
    },
    "searches": [
     "Newcomb's problem",
@@ -195,6 +195,80 @@
     "make revise TOPIC=decision-theory",
     "make eval TOPIC=decision-theory",
     "make export TOPIC=decision-theory"
+   ]
+  },
+  {
+   "slug": "divine-simplicity",
+   "name": "Divine simplicity",
+   "description": "The classical doctrine that God has no parts, properties or composition distinct from God, and the current debate over it: the modal collapse argument, the problem of God's contingent knowledge and free choice, whether God can be identical to a property, truthmaker and constituent-ontology reconstructions, and recent attempts to restate simplicity in new metaphysical terms.",
+   "area": "philosophy of religion and analytic metaphysics",
+   "default": false,
+   "status": "not_run",
+   "data": "topics/divine-simplicity/",
+   "counts": null,
+   "families": null,
+   "lead": null,
+   "searches": [
+    "divine simplicity",
+    "modal collapse",
+    "God and properties",
+    "aseity",
+    "Aquinas on simplicity",
+    "constituent ontology"
+   ],
+   "config": {
+    "slug": "divine-simplicity",
+    "name": "Divine simplicity",
+    "description": "The classical doctrine that God has no parts, properties or composition distinct from God, and the current debate over it: the modal collapse argument, the problem of God's contingent knowledge and free choice, whether God can be identical to a property, truthmaker and constituent-ontology reconstructions, and recent attempts to restate simplicity in new metaphysical terms.",
+    "area": "philosophy of religion and analytic metaphysics",
+    "queries": {
+     "divine simplicity": "\"divine simplicity\"",
+     "modal collapse": "\"modal collapse\"",
+     "God and properties": "\"divine attributes\" AND (identity OR identical OR simplicity)",
+     "aseity": "aseity AND God",
+     "Aquinas on simplicity": "Aquinas AND simplicity AND God",
+     "constituent ontology": "\"constituent ontology\" OR (\"truthmaker\" AND God)"
+    },
+    "fresh_from": "2026-08-01",
+    "fresh_queries": [
+     "\"divine simplicity\"",
+     "\"modal collapse\" OR aseity OR \"divine attributes\"",
+     "\"philosophy of religion\""
+    ],
+    "relevant": "simplicit|simple|modal collapse|aseity|divine (attribute|nature|propert|essence|knowledge|freedom)|constituent|truthmaker|aquinas|anselm|god\\b|theis",
+    "relevance_levels": [
+     "none",
+     "touches philosophy of religion or the metaphysics of properties",
+     "concerns the divine attributes, aseity or God's nature",
+     "directly about divine simplicity (its formulations, the modal collapse and other objections, defences)"
+    ],
+    "schools": [
+     "Thomist classical theism",
+     "theistic personalism",
+     "truthmaker theory",
+     "Eastern Orthodox essence–energies theology",
+     "open theism",
+     "Platonism about properties"
+    ]
+   },
+   "schools": [
+    "Thomist classical theism",
+    "theistic personalism",
+    "truthmaker theory",
+    "Eastern Orthodox essence–energies theology",
+    "open theism",
+    "Platonism about properties"
+   ],
+   "config_path": "config/topics/divine-simplicity.yaml",
+   "commands": [
+    "make corpus TOPIC=divine-simplicity",
+    "make targets TOPIC=divine-simplicity",
+    "make map TOPIC=divine-simplicity",
+    "make runs TOPIC=divine-simplicity",
+    "make assess TOPIC=divine-simplicity",
+    "make revise TOPIC=divine-simplicity",
+    "make eval TOPIC=divine-simplicity",
+    "make export TOPIC=divine-simplicity"
    ]
   },
   {

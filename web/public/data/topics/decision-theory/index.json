@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T10:33:30.175840+00:00",
+ "generated_at": "2026-10-04T11:22:08.734062+00:00",
  "runs": [
   {
    "run_id": "run-oa-W1784340735",
@@ -11,12 +11,13 @@
    "objections": 12,
    "trials": 6,
    "outcomes": {
-    "revision_required": 6
+    "revision_required": 5,
+    "misreading": 1
    },
    "briefs": [
-    "brief-W1784340735.arg1.o182c86",
     "brief-W1784340735.arg1.o9562c1",
-    "brief-W1784340735.arg1.od393fb"
+    "brief-W1784340735.arg1.o8ee18f",
+    "brief-W1784340735.arg1.o38f866"
    ],
    "families": [
     "anthropic",
@@ -29,7 +30,7 @@
     "qwen"
    ],
    "stop_reason": "trial budget per target reached (6)",
-   "finished_at": "2026-10-04T10:19:46.143317+00:00"
+   "finished_at": "2026-10-04T11:08:45.669709+00:00"
   },
   {
    "run_id": "run-oa-W2124966002",
@@ -41,13 +42,13 @@
    "objections": 12,
    "trials": 6,
    "outcomes": {
-    "misreading": 2,
-    "revision_required": 4
+    "revision_required": 4,
+    "misreading": 2
    },
    "briefs": [
-    "brief-W2124966002.arg1.o9b4a93",
+    "brief-W2124966002.arg1.oe8467f",
     "brief-W2124966002.arg1.o11fa20",
-    "brief-W2124966002.arg1.o897c06"
+    "brief-W2124966002.arg1.o0fdac0"
    ],
    "families": [
     "anthropic",
@@ -60,7 +61,7 @@
     "qwen"
    ],
    "stop_reason": "trial budget per target reached (6)",
-   "finished_at": "2026-10-04T10:22:22.804042+00:00"
+   "finished_at": "2026-10-04T11:15:46.612574+00:00"
   },
   {
    "run_id": "run-oa-W2995194683",
@@ -72,13 +73,13 @@
    "objections": 12,
    "trials": 6,
    "outcomes": {
-    "misreading": 1,
-    "revision_required": 5
+    "revision_required": 5,
+    "misreading": 1
    },
    "briefs": [
     "brief-W2995194683.arg1.o43f39a",
     "brief-W2995194683.arg1.o773262",
-    "brief-W2995194683.arg1.o1562b0"
+    "brief-W2995194683.arg1.o25a81e"
    ],
    "families": [
     "anthropic",
@@ -90,7 +91,7 @@
     "qwen"
    ],
    "stop_reason": "trial budget per target reached (6)",
-   "finished_at": "2026-10-04T10:22:46.647987+00:00"
+   "finished_at": "2026-10-04T11:12:03.389045+00:00"
   },
   {
    "run_id": "run-oa-W3208436359",
@@ -102,13 +103,14 @@
    "objections": 12,
    "trials": 6,
    "outcomes": {
-    "revision_required": 4,
-    "misreading": 2
+    "misreading": 2,
+    "revision_required": 3,
+    "rebutted": 1
    },
    "briefs": [
+    "brief-W3208436359.arg1.o825cfe",
     "brief-W3208436359.arg1.oc06a4d",
-    "brief-W3208436359.arg1.o061cdb",
-    "brief-W3208436359.arg1.o96113c"
+    "brief-W3208436359.arg1.o39f2d5"
    ],
    "families": [
     "anthropic",
@@ -121,7 +123,7 @@
     "qwen"
    ],
    "stop_reason": "trial budget per target reached (6)",
-   "finished_at": "2026-10-04T10:28:15.835354+00:00"
+   "finished_at": "2026-10-04T11:17:09.098444+00:00"
   },
   {
    "run_id": "run-oa-W4220703499",
@@ -133,13 +135,13 @@
    "objections": 12,
    "trials": 6,
    "outcomes": {
-    "misreading": 2,
-    "revision_required": 4
+    "revision_required": 3,
+    "misreading": 3
    },
    "briefs": [
     "brief-W4220703499.arg1.o58586e",
-    "brief-W4220703499.arg1.o546eda",
-    "brief-W4220703499.arg1.o8e15e0"
+    "brief-W4220703499.arg1.o3aeab4",
+    "brief-W4220703499.arg1.ocfad31"
    ],
    "families": [
     "anthropic",
@@ -152,7 +154,7 @@
     "qwen"
    ],
    "stop_reason": "trial budget per target reached (6)",
-   "finished_at": "2026-10-04T10:23:40.939832+00:00"
+   "finished_at": "2026-10-04T11:12:30.651785+00:00"
   },
   {
    "run_id": "run-oa-W4394980009",
@@ -169,8 +171,8 @@
    },
    "briefs": [
     "brief-W4394980009.arg1.o3c8ac1",
-    "brief-W4394980009.arg1.o6ef874",
-    "brief-W4394980009.arg1.oecf926"
+    "brief-W4394980009.arg1.oa493de",
+    "brief-W4394980009.arg1.od4914e"
    ],
    "families": [
     "anthropic",
@@ -183,7 +185,7 @@
     "qwen"
    ],
    "stop_reason": "trial budget per target reached (6)",
-   "finished_at": "2026-10-04T10:20:12.639103+00:00"
+   "finished_at": "2026-10-04T11:11:35.219207+00:00"
   }
  ],
  "targets": [
@@ -335,7 +337,7 @@
  "headline": [
   {
    "label": "objections still standing or forcing a revision after both defenders",
-   "value": "27/36",
+   "value": "24/36",
    "source": "data/runs"
   },
   {

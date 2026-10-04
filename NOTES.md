@@ -1,5 +1,14 @@
 # NOTES — newest entry first
 
+## 2026-10-04 13:25 — Decision theory v2 (stricter judging) exported (Claude)
+- Same 72 objections (generators replayed from cache), new prior-art checks (Claude Sonnet), new trials and
+  briefs (Kimi-K2.6), Assessor (Claude Opus) + revision round. v1 archived in data/topics/decision-theory/archive.
+- v1 → v2: novelty checks at 1.0 13 → 0 (median 0.45 → 0.55, all 72 assessed); outcomes 27 revision_required /
+  9 misreading → 24 / 11 / 1 rebutted (first rebutted on this topic); Assessor first grade mean 2.08 → 2.26;
+  after revision 2.65 → 2.69; needs work 2 → 0 (robustness 2 on all 18 after revision). Strongest lead now a
+  Newcomb direction (Hoefer et al., diachronic psychological coherence and one-boxing), lead score 0.36 (v1's
+  top was 0.52 on a saturated 1.0). Audit 0 problems; smoke + a11y 26/26; replay tests 18/18.
+
 ## 2026-10-04 12:58 — Stricter novelty checks and briefs; decision theory re-run; divine simplicity started (Claude)
 - Human: decision-theory directions look weaker; who does the novelty checks? make it stricter like hiddenness;
   then run a topic on divine simplicity (forefront of the literature, its objections).

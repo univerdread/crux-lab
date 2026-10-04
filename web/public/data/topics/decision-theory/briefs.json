@@ -1,18 +1,18 @@
 [
  {
-  "id": "brief-W4394980009.arg1.o6ef874",
-  "run_id": "run-oa-W4394980009",
-  "research_question": "What kind of certainty and hope must a version of Pascal's wager provide to be suitable for apologetic use, and how should the premise that the postmodern rendition lacks certainty and hope be properly qualified?",
+  "id": "brief-W2995194683.arg1.o43f39a",
+  "run_id": "run-oa-W2995194683",
+  "research_question": "What non-trivial form of diachronic psychological coherence, if any, can both accommodate rational revision of particular intentions and sustain the argument that one-boxing is the rational choice in Newcomb's Problem?",
   "outcome": "revision_required",
-  "novelty": 1.0,
+  "novelty": 0.82,
   "records_searched": 2330,
   "survival": 0.8,
-  "paper_title": "Pascal’s Wager and Its Postmodern Counterpart",
+  "paper_title": "The philosopher’s paradox: How to make a coherent decision in the Newcomb Problem",
   "challenged_premise": {
-   "id": "W4394980009.c058",
-   "text": "The postmodern rendition does not give the seeker any certainty and hope."
+   "id": "W2995194683.c001",
+   "text": "A rational person's intentional states are psychologically coherent across time, and rational decisions are made against this coherent backdrop."
   },
-  "paper_direction": "A paper here would argue that the debate hinges on an ambiguous use of the term 'certainty' in the original premise, and that a defensible apologetic deployment of the postmodern rendition requires a precise qualification of what kind of certainty and hope are relevant. It would reconstruct the argument by distinguishing procedural certainty (knowledge of concrete actions) from object‑directed metaphysical certainty (confidence in the existence of a divine object), and would defend the claim that apologetics demands the latter. Anticipating Defender B’s strongest reply, the paper would need to show that procedural certainty cannot fulfill the epistemic role required for persuasive apologetics, perhaps by analyzing the function of belief in theodicy and afterlife promises. The paper would then propose a revised premise that limits c058 to object‑directed certainty and hope, and assess whether this amendment sustains the original conclusion that Pascal’s wager remains the preferable apologetic tool.",
+  "paper_direction": "A paper here would argue that diachronic coherence-based defenses of one-boxing in Newcomb's Problem cannot rely on an unrestricted premise that all intentional states cohere across time, because rational agents routinely revise particular intentions in light of new evidence without irrationality. The case would develop the Alice-style counterexample to show that the original premise overstates the stability of rational psychology, then examine whether a narrowed stability condition—framed in terms of underlying rational dispositions or evidence-responsive revision norms—can both survive the counterexample and still underwrite the argument's claim that the decision is an extended process bound to the predictor's forecast. The strongest reply to anticipate is that the argument never needed strict persistence of every intention, but only a stable rational backdrop that predictors can exploit. The paper would need to show that such a narrowed condition is non-trivial, principled, and robust enough to preserve the link between coherence, the extended-process model of decision, and the predictor's nomic success without collapsing into a vacuous or causally reductive reading of rational agency.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.25,
@@ -22,99 +22,11 @@
     "significance": 2,
     "specificity": 3
    },
-   "summary": "As framed, this is a terminological tidy-up that, carried through, would undermine the very comparative conclusion it aims to defend; it is worth pursuing only if recast around the determinacy-versus-existence-certainty distinction."
+   "summary": "As framed, this would be dismissed as attacking a strawman reading of diachronic coherence. The salvageable project is a paper on whether disposition-level coherence can underwrite the backtracking counterfactuals in c004, and the Alice case should be dropped as the centrepiece."
   },
   "revision": {
-   "research_question": "What kind of certainty and hope must a version of Pascal's wager provide to be suitable for apologetic use, and does the postmodern rendition lack the determinacy of object that apologetics requires, once procedural certainty and immanent hope are granted?",
-   "paper_direction": "A paper here would argue that the premise c058, read as 'the postmodern rendition gives the seeker no certainty and no hope', is false and should be withdrawn, because the Kael case shows procedural certainty about daily action and immanent hope in a forward arc. The defensible premise is narrower: the postmodern rendition does not give the seeker certainty about the determinate object of the wager, and it does not give hope directed at that object. The paper distinguishes two things the referee's objection runs together. The first is determinacy, certainty about what the wager is on (which good is promised, which commitments are being staked, what the stake is). The second is existence, certainty that the object is real. Pascal's wager is explicitly a decision under uncertainty about existence, so it does not supply existence-certainty, and the paper does not require it. c054 and c060 concern determinacy, and Pascal supplies determinacy in the remainder of the Pensees. The paper then argues that apologetics needs determinacy, because apologetic persuasion must direct the hearer toward a specified object whose identity can be assented to, worshipped, and tested against the hearer's life, not merely toward a course of action. Procedural certainty cannot supply this, for a structural reason: Kael's certainty about tomorrow is invariant under the truth or falsity of the narrative. If the language-of-care story were false, his visit to the widow would still be the same act with the same procedural clarity, so the certainty does not discriminate among candidate objects and cannot function as a reason to assent to one. Immanent hope has the same limit. It is hope in the continuation of his own project, conditional on his acts, whereas the hope apologetics offers is hope in a good whose reality is the wager's stake, as in the afterlife and theodicy promises. The paper therefore argues that Pascal's wager remains the preferable apologetic tool because it supplies determinacy about the object while leaving existence open, and that the postmodern rendition, though it yields real procedural certainty and hope, does not supply the determinacy that apologetic use needs.",
-   "assessment": {
-    "grade": "needs work",
-    "overall": 3.25,
-    "scores": {
-     "coherence": 4,
-     "robustness": 3,
-     "significance": 2,
-     "specificity": 4
-    },
-    "summary": "A competent, writable repair of an overstated premise with one genuinely useful argument (invariance), but its central claim about what apologetics requires is stipulated and risks begging the question against the postmodern view, so it needs real argument and textual grounding before it is more than a minor refinement."
-   }
-  },
-  "quality": 0.65,
-  "score": 0.52,
-  "tier": 0
- },
- {
-  "id": "brief-W4220703499.arg1.o546eda",
-  "run_id": "run-oa-W4220703499",
-  "research_question": "Can the eternal presence of a temporal act to God be given an independent, non‑circular account that makes it an object‑fixing acquaintance relation rather than merely a co‑occurring or representational disposition?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2330,
-  "survival": 0.8,
-  "paper_title": "Saving Eternity (and Divine Foreknowledge and Free Will): A Reply to Hasker",
-  "challenged_premise": {
-   "id": "W4220703499.arg1.r2",
-   "text": "God's knowing of a temporal act is knowledge of that act, rather than a correlated disposition, because the act is eternally present to God, so that presence itself is the answerability relation between knowing and object."
-  },
-  "paper_direction": "A paper here would argue that the reconciliation of divine foreknowledge and libertarian freedom hinges on providing a robust, non‑circular account of eternal presence as an object‑fixing acquaintance relation. It would reconstruct the original argument, isolate premise r2, and critically assess the mirror‑case objection, which reveals that mere co‑presence does not guarantee answerability. Anticipating the strongest defender reply—that an independent characterization of presence is required—the paper would develop a metaphysical analysis of presence in an eternalist ontology, drawing on contemporary theories of relational ontology and divine cognition to show how presence can serve as a direct epistemic relation rather than a representational conduit. The paper would need to demonstrate that this account avoids the circularity charge, aligns with the grounding principle for creaturely agents, and sustains the compatibility of divine foreknowledge with libertarian free will.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.0,
-   "scores": {
-    "coherence": 2,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 2
-   },
-   "summary": "As framed the counterexample changes the subject and the positive project is unspecified, so this would not survive a first competent reader without a sharper target and an actual account of acquaintance."
-  },
-  "revision": {
-   "research_question": "Under what determinate, non-circular condition is God's eternal presence to a temporal act a presence-to relation that makes divine knowledge answerable to the act itself rather than to a surrogate?",
-   "paper_direction": "A paper here would argue that the mirror case refutes the claim that eternal co-presence alone makes divine knowledge answerable to a temporal act, and the paper concedes this narrower point. Premise r2 is narrowed accordingly: co-presence of act and knower is necessary but not sufficient for knowledge of the act itself. What is sufficient is presence-to, understood as unmediated acquaintance in which the content of God's cognitive state is fixed by the act and by nothing intervening. The paper gives this a determinate criterion, a counterfactual dependence condition: had the act not occurred, the cognitive state would not register that act. The mirror case fails this condition because its registration persists when the act is absent through a glitch, so it is a case of mediation rather than presence-to. The paper then argues that the Grounding Principle for creaturely agents is satisfied under this criterion, since the truth of the free choice and God's knowledge of it both depend on the actual choice, and that an internal necessity of the form If X then X does not undermine that dependence. It engages Hasker's challenge by testing it against the presence-to criterion rather than against bare co-presence. It states how its criterion differs from the ET-simultaneity and Anselmian positions: it makes explicit a test for telling mediated from unmediated cases, and applies that test to the mirror case instead of assuming unmediated acquaintance as a premise. The reconciliation thesis holds only if this condition is met, so the paper's contribution is the condition and its application.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 3.0,
-    "scores": {
-     "coherence": 3,
-     "robustness": 2,
-     "significance": 3,
-     "specificity": 4
-    },
-    "summary": "The question is the right one and the plan is clear, but the proposed criterion is a sensitivity condition that reliable mirrors pass and divine infallibility trivializes, so as it stands the first competent referee would reject it."
-   }
-  },
-  "quality": 0.6,
-  "score": 0.48,
-  "tier": 0
- },
- {
-  "id": "brief-W3208436359.arg1.oc06a4d",
-  "run_id": "run-oa-W3208436359",
-  "research_question": "Under what precise formal conditions can a decision theory based on Conway's surreal numbers be shown to be a conservative extension of finitist expected utility theory, especially when decision problems involve infinitesimal probabilities or transfinite utilities?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2330,
-  "survival": 0.8,
-  "paper_title": "Surreal decisions",
-  "challenged_premise": {
-   "id": "W3208436359.c010",
-   "text": "A decision theory framed entirely in Conway’s surreal numbers serves as a conservative extension of finitist EU theory."
-  },
-  "paper_direction": "A paper here would argue that a surreal‑number decision theory can serve as a mathematically controlled foundation for the fragment of decision problems that involve finite payoffs but may include infinitesimal probabilities, provided the conservativity claim is precisely limited to statements expressible in the finitist EU language. It would first formalize the shared domain (finite lotteries with real probabilities) and prove that surreal expectations coincide with finitist expectations there, thereby defending the revised premise. Anticipating Defender A's strongest reply, the paper would need to show that this domain restriction does not trivialize the theory's ambition to handle genuinely transfinite cases, perhaps by developing a separate extension theorem for non‑Archimedean probabilities. Finally, the paper would demonstrate that, together with suitable continuity and independence axioms, the surreal framework yields a coherent and robust decision theory that genuinely extends beyond the finitist fragment while respecting the conservativity constraints.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.0,
-   "scores": {
-    "coherence": 2,
-    "robustness": 1,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "As framed, this defends an uncontested, nearly definitional claim on the back of a misfiring counterexample; the real paper would be the non-Archimedean representation or countable-lottery problem it only mentions in passing."
-  },
-  "revision": {
-   "research_question": "Under what axioms does a representation theorem hold for decision theory with surreal-valued probabilities and utilities, and which countable or limit-based lotteries (such as St Petersburg-type gambles and Pascalian mixtures) receive a surreal expectation, so that the claim of a firm foundation for transfinite decision theory can be assessed?",
-   "paper_direction": "A paper here would argue that the substantive question for a surreal-number decision theory is representation, not conservativity. It would take as its object of study the class of finite-support lotteries whose probabilities and payoffs are surreal, and would state a small set of preference axioms over such lotteries, including completeness, transitivity, a surreal-valued independence condition, and a dominance condition. It would then ask for a representation theorem: under which of these axioms is there a surreal-valued probability and utility assignment whose expectation represents the preference, and is that assignment unique up to the admissible transformations. The paper would compare this construction with the lexicographic and non-Archimedean utility representations of Hausner and Fishburn, with the treatment of infinitesimal probabilities in Hajek and Pruss, and with the relative-utility proposal of Bartha, showing where the surreal approach gives a representation those accounts lack and where it gives none. It would then test the claimed foundation at its boundary. Countable lotteries such as St Petersburg-type gambles have no expectation in the surreals if that requires a supremum or limit, since surreals admit no general limit operation of that kind. The paper would characterise exactly which countable and Pascalian mixtures receive a surreal expectation, which do not, and what is lost when they do not, and it would draw the conclusion that a firm foundation holds for finite and suitably bounded transfinite lotteries but not, without further axioms, for the full class of countable gambles. The paper would not present conservativity over finitist expected utility theory as a contribution.",
+   "research_question": "Does diachronic psychological coherence, read as evidence-responsive, disposition-level coherence rather than persistence of every intention, license the backtracking counterfactuals in c004 that tie a token choice in Newcomb's Problem to the predictor's prediction, and if so, does this support one-boxing as the rational choice?",
+   "paper_direction": "A paper here would argue that the Alice counterexample does not refute the premise c001 as stated, because revising an intention in response to genuinely new evidence is itself a form of diachronic coherence on standard accounts of reconsideration norms. The paper therefore drops the claim that c001 overstates the stability of rational psychology. Its target moves to the inferential step from c001 to c004. The paper would argue that evidence-responsive coherence at the level of rational dispositions does not by itself yield backtracking counterfactuals linking the token choice to the prediction. Newcomb's Problem stipulates that no relevant new evidence arrives between prediction and choice, so reconsideration norms are silent there, and coherence cannot be invoked to explain why the token choice must match the disposition the predictor reads. The paper would then assess whether an additional premise, that the predictor's success is nomic and that the prediction is counterfactually sensitive to the disposition (as c009 and c011 suggest), can close the gap. It would test whether that premise is principled and non-trivial, or whether it simply assumes the backtracking conclusion it is meant to establish.",
    "assessment": {
     "grade": "not yet defensible",
     "overall": 2.75,
@@ -124,203 +36,27 @@
      "significance": 2,
      "specificity": 4
     },
-    "summary": "A clear and well-organised plan, but it mostly reproduces what the target paper already proves and concedes, so it needs a genuinely new result on infinite-support lotteries before it is a paper."
+    "summary": "A clearly structured relocation of the dispute, but its pivotal claim rests on a misreading of reconsideration norms that a first competent reader would flag. As it stands it is not a defensible paper without substantial rethinking."
    }
   },
   "quality": 0.55,
-  "score": 0.44,
+  "score": 0.3608,
   "tier": 0
  },
  {
-  "id": "brief-W4394980009.arg1.o3c8ac1",
-  "run_id": "run-oa-W4394980009",
-  "research_question": "What should be taken as the proper aim of apologetics—providing seekers with certainty and hope or fostering open dialogue—and how does this aim determine whether Pascal’s wager or its postmodern rendition is the more appropriate apologetic tool?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2330,
-  "survival": 0.8,
-  "paper_title": "Pascal’s Wager and Its Postmodern Counterpart",
-  "challenged_premise": {
-   "id": "W4394980009.arg1.mp",
-   "text": "If the postmodern rendition is ambivalent, fails to give the seeker certainty and hope, and Pascal provides certainty about the object of the wager, then Pascal's wager should be used in apologetics instead of the postmodern rendition."
-  },
-  "paper_direction": "A paper here would argue that the central dispute hinges on the implicit premise about the goal of apologetics, which the original argument leaves unarticulated. It would first reconstruct the argument for preferring Pascal’s wager, making explicit the premise that apologetics aims to give seekers certainty and hope about the object of faith. Then it would engage the strongest defender replies, especially the claim that the argument only holds under a narrow, certainty‑oriented conception of apologetics. Anticipating this, the paper would develop a normative account of apologetic aims, drawing on theories of religious epistemic authority and dialogical ethics, to assess whether certainty is indeed a necessary or sufficient aim. Finally, it would show that without a defended aim‑premise, the preference for Pascal’s wager is not warranted, and it would explore whether a revised apologetic model can reconcile the motivational strengths of Pascal’s wager with the dialogical virtues of the postmodern rendition.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.25,
-   "scores": {
-    "coherence": 3,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 2
-   },
-   "summary": "As framed this is a fair seminar observation that apologetic recommendations depend on apologetic aims, not yet a paper, because its main conclusion is near-trivial and the substantive work it promises is left unspecified."
-  },
-  "revision": {
-   "research_question": "Given that Pascal's wager is typically read as aiming at certainty and hope about its object, is that certainty-and-hope aim a defensible aim for apologetics, and if so, does it favour Pascal's wager over its postmodern rendition, while the dialogical aim is treated as a separate case?",
-   "paper_direction": "A paper here would argue that the inference from the wager's ambivalence and lack of certainty to Pascal's wager is valid only given an aim premise: that apologetics should give the seeker certainty and hope about the object of faith. The paper's thesis is narrower than the original. It defends that aim premise as the aim internal to Pascal's own conception of the wager, and then shows that, under this aim, Pascal's rendition is comparatively better than the postmodern rendition. The argument proceeds in three steps. First, it reconstructs Pascal's account of the wager and shows that Pascal does not leave the object of the wager indeterminate: his later Pensées specify the object, so the certainty the wager offers is certainty about where a seeker's certainty should lie, not certainty about every disputed proposition. Second, it distinguishes this object-directed certainty from dogmatic imposition, which concerns settling contested claims by fiat; the wager's certainty is a conclusion reached through the seeker's own weighing of outcomes, so the charge of dogmatism does not follow from the aim. Third, it compares the two renditions under the certainty-and-hope aim: the postmodern rendition, by its own ambivalence, cannot supply the object-specification that the aim requires, so it fails the aim rather than merely lacking a virtue. The paper concedes that the dialogical aim is a legitimate rival and that the instrumental 'should' is relative to ends. It does not claim that Pascal's wager is better for dialogue, since historically it has provoked questioning as much as ambiguous versions. Instead it claims only that, for an apologist who adopts the certainty-and-hope aim, the choice is settled by the object-specification that Pascal supplies and the postmodern rendition lacks, and it leaves the decision-theoretic and epistemic assessment of the wager's soundness out of scope.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.75,
-    "scores": {
-     "coherence": 3,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 4
-    },
-    "summary": "A well-organised but essentially tautological project: as framed it would be dismissed as circular unless it finds an independent argument for why apologetics should aim at certainty and engages the standard objection that the wager itself does not fix its object."
-   }
-  },
-  "quality": 0.55,
-  "score": 0.44,
-  "tier": 1
- },
- {
-  "id": "brief-W4394980009.arg1.oecf926",
-  "run_id": "run-oa-W4394980009",
-  "research_question": "How can apologetics justify privileging Pascal's wager as the primary apologetic tool while accommodating seekers who value the ambiguity of postmodern renditions?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2330,
-  "survival": 0.8,
-  "paper_title": "Pascal’s Wager and Its Postmodern Counterpart",
-  "challenged_premise": {
-   "id": "W4394980009.arg1.mp",
-   "text": "If the postmodern rendition is ambivalent, fails to give the seeker certainty and hope, and Pascal provides certainty about the object of the wager, then Pascal's wager should be used in apologetics instead of the postmodern rendition."
-  },
-  "paper_direction": "A paper here would argue that apologetics should adopt Pascal's wager as its primary methodological framework while allowing the postmodern rendition as a supplementary pathway for seekers who prioritize intellectual honesty and ambiguity. The case would begin by reconstructing the original argument and the objection centered on Emma, then critically assess the defenders' replies, especially the distinction between provisional and permanent ambivalence. Anticipating Defender B's strongest reply, the paper would need to demonstrate whether the provisional/ permanent ambivalence split can be justified and whether permanent ambivalence indeed precludes hope. The thesis would maintain that a tiered apologetic model—primary certainty through Pascalian reasoning, with optional ambiguous engagement—best respects both the traditional aim of providing hope and the contemporary demand for authenticity.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 1.75,
-   "scores": {
-    "coherence": 2,
-    "robustness": 1,
-    "significance": 2,
-    "specificity": 2
-   },
-   "summary": "As framed, this is a pastoral compromise built on a mischaracterization of the wager and an appeal to individual taste, and it would not survive a first competent reader without a fundamental reconception."
-  },
-  "revision": {
-   "research_question": "Under what non-preference-based criterion is ambiguity an apologetic defect, such that Pascal's wager should be preferred to a postmodern rendition of it, given that the wager itself already reasons under uncertainty about God's existence?",
-   "paper_direction": "A paper here would argue that the conditional premise (if the postmodern rendition is ambivalent, fails to give the seeker certainty and hope, and Pascal fixes the object of the wager, then Pascal's wager should be used in apologetics) is valid only with an unstated bridge: that apologetics is answerable to the epistemic and practical ends the wager sets, not to the seeker's temperament. The paper would first identify the postmodern rendition from its textual sources, such as the works of Caputo, Vattimo and Kearney the referee names, and state precisely which claims about it are being attributed. It would then separate two things the original argument runs together: the epistemic status of the wager's premises (whether the probability of God's existence is known) and the psychological certainty or hope the argument is meant to produce in a seeker. Pascal's wager already accepts uncertainty about whether God exists, so ambiguity about existence cannot by itself be the defect. The criterion the paper defends is an object-level one. Ambiguity is an apologetic defect when it leaves the outcome matrix undefined, that is, when the seeker cannot say what is being wagered on, because the dominance comparison that makes the wager action-guiding requires a determinate object. Ambiguity about probability is compatible with the wager's reasoning; ambiguity about the object is not. On this criterion the postmodern rendition is defective only if its ambivalence reaches the object, and the paper would test that claim against the texts rather than against Emma's preference. The thesis is therefore narrowed: it does not claim that Pascal's wager should replace the postmodern rendition for seekers who value honesty, but that Pascal's wager is preferable for apologetics only where the postmodern rendition's ambiguity is shown to be object-level, and that uncertainty about existence is no objection to the wager at all.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.75,
-    "scores": {
-     "coherence": 3,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 4
-    },
-    "summary": "The epistemic/psychological and probability/object distinctions are a sensible start, but as planned the paper applies a decision-theoretic standard to texts that disclaim it and ignores the many-gods problem facing Pascal's own object, so it needs substantial rethinking before it is a defensible paper."
-   }
-  },
-  "quality": 0.55,
-  "score": 0.44,
-  "tier": 2
- },
- {
-  "id": "brief-W1784340735.arg1.o182c86",
+  "id": "brief-W1784340735.arg1.o9562c1",
   "run_id": "run-oa-W1784340735",
-  "research_question": "Does the best‑possible‑world hypothesis furnish a stronger abductive explanation for the existence of an omniscient, omnipotent, omnibenevolent God than for a non‑divine creator such as advanced simulators?",
+  "research_question": "Can a theistic best-possible-world argument consistently claim that mathematical elegance adds to a world's intrinsic value while defining total goodness as the net pleasure of conscious experiences, or must the value of elegance be reconceived as relational to divine appreciation?",
   "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2340,
+  "novelty": 0.7,
+  "records_searched": 2330,
   "survival": 0.8,
   "paper_title": "A Theological Argument for an Everett Multiverse",
   "challenged_premise": {
-   "id": "W1784340735.arg1.mp",
-   "text": "If the actual world is the best possible world, then an omniscient, omnipotent, omnibenevolent God exists who creates and values a mathematically elegant universe."
+   "id": "W1784340735.c010",
+   "text": "The universe’s high mathematical elegance adds to its intrinsic value."
   },
-  "paper_direction": "A paper here would argue that the best‑possible‑world hypothesis, when treated as an abductive inference to the best explanation, does not uniquely support theism because advanced non‑divine simulators can plausibly generate a world with maximal intrinsic value and mathematical elegance. The case would reconstruct the original argument’s comparative‑explanatory premise, assess competing explanatory criteria (unity, simplicity, explanatory scope), and anticipate Defender A’s move to downgrade the claim to a weaker comparative one. The paper would need to demonstrate that the theistic explanation fails to outrank the non‑divine simulation alternative on these criteria, thereby showing that the argument does not succeed as a decisive proof of God’s existence.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.0,
-   "scores": {
-    "coherence": 2,
-    "robustness": 1,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "Not yet a paper: the simulator scenario mistakes an excellent made universe for the best possible world, and until the proposal shows a contingent non-divine agent can explain global modal optimality, the first competent referee will dismiss it."
-  },
-  "revision": {
-   "research_question": "Does a strict best-possible-world premise, which requires the whole of actuality to be optimal across all possible worlds, support an abductive case for a necessary, omniscient, omnipotent, omnibenevolent God over the rival hypothesis that this modal-global optimality is brute and unexplained, and does the simulator scenario bear on that comparison at all?",
-   "paper_direction": "A paper here would argue that the simulator scenario does not counterexample the conditional in the best-possible-world argument, because it establishes only a local claim: a non-divine creator can produce an excellent universe. It does not establish that the actual world is best among all possible worlds, which is the explanandum the premise is about. The paper would therefore drop the claim that advanced simulators can explain maximal intrinsic value and elegance, and would re-define the comparison class. The live rivals are theism and brute modal optimality, not simulation. The paper would assess the referee's two theist replies directly. The first, that actual optimality without a necessarily existing, world-selecting good agent is a brute fluke, requires a principle that global modal facts of this kind demand explanation, and the paper would test that principle on its own terms. The second, that a world containing a perfect being outranks any godless world, is a substantive claim that God's existence adds value, and the paper would ask whether it is independently supported or presupposes the conclusion. The regress point, that contingent explainers only relocate the coincidence, is the central test: the paper would argue that the theist's advantage depends on the explainer being necessary, and it would examine Leibnizian and Rowe/Kraay-style best-world theism to see whether that necessity can be secured without circularity. The paper's contribution is narrower than the original thesis: it moves the debate from a comparison with simulators to the question of whether modal-global optimality calls for a necessary explainer, and it states the conditions under which the abductive comparison favors theism.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.5,
-    "scores": {
-     "coherence": 3,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 3
-    },
-    "summary": "A sensible diagnosis of why the simulator objection misfires, but the proposed pivot gives up on the challenged premise and lands on well-trodden ground without a thesis of its own, so it is not yet a paper."
-   }
-  },
-  "quality": 0.5,
-  "score": 0.4,
-  "tier": 0
- },
- {
-  "id": "brief-W2124966002.arg1.o9b4a93",
-  "run_id": "run-oa-W2124966002",
-  "research_question": "Can the Jamesian doxastic‑venture model consistently account for cases where a believer’s later, evidence‑independent certitude seems to eliminate the phenomenological sense of risk without thereby terminating the original venture?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2330,
-  "survival": 0.8,
-  "paper_title": "Faith as doxastic venture",
-  "challenged_premise": {
-   "id": "W2124966002.arg1.r1",
-   "text": "Faith on the Jamesian model can be assurance-bearing while remaining a venture, because the risk is borne in the act of committing before proof and the felt certitude is a subsequent state of the committed believer, not a bracketing of the contingency that constituted the venture."
-  },
-  "paper_direction": "A paper here would argue that the Jamesian doxastic‑venture model must be refined to include a structural account of the original risk that survives independently of later phenomenology, while also providing a clear, testable criterion for when a later assurance merely obscures versus when it dissolves that risk. It would begin by reconstructing the original argument and the objector’s case study of Marta, then critically assess Defender A’s counterfactual and answerability revisions and Defender B’s claim that risk can be merely hidden. Anticipating the strongest reply—that risk is constitutive and persists regardless of introspective access—the paper would need to demonstrate that such a claim either entails an implicit revisability condition or fails to explain the believer’s epistemic self‑understanding, and would propose a revised premise that ties the venture’s persistence to an external, perhaps normative, standard rather than to internal phenomenology alone.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.25,
-   "scores": {
-    "coherence": 2,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "As framed, this would be dismissed for confusing felt risk with evidential risk; there is a better paper nearby on whether the model's structural notion of venture leaves it any phenomenological advantage at all."
-  },
-  "revision": {
-   "research_question": "On Bishop's Jamesian model, does a doxastic venture survive a believer's later evidence-independent certitude when the believer no longer feels any risk, and if it does, can the venture component contribute to the phenomenological superiority claimed in c047?",
-   "paper_direction": "A paper here would argue that, on Bishop's Jamesian model, whether a belief is a doxastic venture is fixed by a standing relation between the belief and total evidence, not by the believer's felt sense of risk. So Marta's loss of the sense of wagering does not by itself end the venture. The paper would isolate the threatening reading that the original proposal missed: Marta's deathbed experiences either are evidence that closes the evidential gap on p, in which case her belief ceases to be a venture and becomes an experience-based belief, or they are not evidence bearing on p, in which case the venture persists but its riskiness is inaccessible to her and so cannot explain her assurance. The paper defends the second horn as the thesis: a venture wholly inaccessible to the believer cannot do the phenomenological work that the superiority conclusion requires, so the Jamesian account cannot be preferred on phenomenological grounds. It drops both the demand for an introspective criterion and the appeal to an external normative standard. It tests the dilemma against Bishop's Believing by Faith and the faith-and-risk literature on Buchak, Howard-Snyder and McKaughan. Its central claim is that the venture's persistence is a fact about evidential relations, while any phenomenological advantage must come from something the believer can register.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.5,
-    "scores": {
-     "coherence": 2,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 4
-    },
-    "summary": "A well-organised proposal built on a misreading: conceding that the venture persists inaccessibly gives Bishop what he needs, so as framed the paper would not survive a first competent referee."
-   }
-  },
-  "quality": 0.5,
-  "score": 0.4,
-  "tier": 0
- },
- {
-  "id": "brief-W4220703499.arg1.o58586e",
-  "run_id": "run-oa-W4220703499",
-  "research_question": "Can the Grounding Principle be reformulated so that it grounds only the truth of contingent propositions (and knowledge‑of‑those propositions) without grounding any intrinsic aspect of God’s knowledge, thereby preserving divine simplicity while still enabling a reconciliation of divine foreknowledge with libertarian free will?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2330,
-  "survival": 0.8,
-  "paper_title": "Saving Eternity (and Divine Foreknowledge and Free Will): A Reply to Hasker",
-  "challenged_premise": {
-   "id": "W4220703499.c007",
-   "text": "The truth about, and knowledge of, a free choice depends upon that actual choice (Grounding Principle)."
-  },
-  "paper_direction": "A paper here would argue that a successful reconciliation of divine foreknowledge with libertarian free will requires a reformulated Grounding Principle that explicitly limits grounding to the truth‑makers of contingent propositions and to the knowledge‑of‑those propositions, while stipulating that God’s intrinsic cognitive act remains simple and ungrounded. The case would begin by reconstructing the original argument and the objector’s challenge concerning divine aseity, then evaluate the defenders’ replies that invoke an intrinsic/extrinsic split. Anticipating the strongest reply—that relational truths can vary without altering God’s essence—the paper would develop a rigorous metaphysical account of extrinsic predication within an eternalist framework, showing how such predication can be compatible with divine simplicity. Finally, the paper would need to demonstrate that the added premise is not ad hoc but follows from a defensible theory of divine knowledge, thereby preserving both the grounding mechanism for free choices and the immutability of God’s essence.",
+  "paper_direction": "A paper here would argue that a theistic best-possible-world argument for an Everett multiverse must explicitly adopt a relational theory of aesthetic value on which mathematical elegance contributes to a world's goodness only through the conscious appreciation of a transcendent Being, because the original premise that elegance adds to intrinsic value is indefensible under the argument's own experientialist axiology. The case would develop the objection that if total goodness is defined as the net pleasure of conscious experiences, then unappreciated abstract properties have no axiological weight, and it would show that both available defenses concede this tension while rescuing the argument only by revising the elegance premise to make its value mind-dependent. The strongest reply to anticipate is that the argument already embedded divine appreciation in c011, so the revision is merely clarificatory rather than concessive. To succeed, the paper would need to show that this relational move does not collapse the argument into circularity by presupposing the very divine consciousness it seeks to prove, and that the revised axiology still supports the inference from mathematical elegance to the existence of an omniscient, omnipotent, omnibenevolent God who creates an Everett multiverse.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.5,
@@ -330,165 +66,77 @@
     "significance": 2,
     "specificity": 3
    },
-   "summary": "This is a familiar and under-specified repackaging of the extrinsic-predication defence of simplicity, aimed at a commitment the argument does not clearly make; it is not yet a defensible paper without a worked answer to the extrinsic-knowledge dilemma and serious engagement with the existing literature."
+   "summary": "As framed, this is a clarificatory point a competent reader would answer in one line by reading c010 with c011; the paper is worth writing only if it is refocused on the question-begging or value-swamping problem that the relational reading creates."
   },
   "revision": {
-   "research_question": "Does reconciling divine foreknowledge with libertarian freedom require restricting the Grounding Principle, or can the eternalist premise carry the reconciliation alone? If the Grounding Principle stands unrestricted, does creature-dependence of divine knowledge-content threaten divine simplicity or aseity?",
-   "paper_direction": "A paper here would argue that the reconciliation of divine foreknowledge with libertarian freedom rests on the eternalist premise (God is eternal, with all time present to Him, and this respects both foreknowledge and libertarian freedom), not on any restriction of the Grounding Principle. The paper would first show that the challenge to c007 works only by importing strong divine simplicity, which is not among the argument's premises, and that the challenge's move from contingent knowledge to contingent existence is a separate, unargued step. It would then distinguish the intrinsic identity of God's cognitive act from the relational profile of what that act is of. On this account the act is one, eternal and not grounded in any creature, while its object-directed content is fixed by how the eternally present choice actually occurs. The paper would argue that this profile yields genuine knowledge rather than a relabelled correspondence fact, because the knowing relation is real and is not merely a predicate imposed from outside. It would address the referee's dilemma directly: the first horn is answered by the claim that extrinsic-looking predication can be knowledge when the relation is grounded in the act's intrinsic direction toward its object, and the second horn is answered by denying that a difference in relational profile entails a difference in the intrinsic act. The paper would engage the extrinsic-model and modal-collapse literature, including Rogers' acceptance of creature-caused divine knowledge, and would state explicitly that the argument does not require Rogers' causal commitment. If the dilemma cannot be met, the paper would conclude that the reconciliation survives on the eternalist premise and that simplicity must be defended as a separate thesis.",
+   "research_question": "If total goodness is the net pleasure minus suffering of conscious experiences, can mathematical elegance contribute to a world's goodness only by being the object of a divine appreciator's experience, and does that relational contribution still constrain the best-possible-world comparison or swamp it?",
+   "paper_direction": "A paper here would argue that the elegance premise (c010) cannot be read as claiming intrinsic value under the axiology the argument itself adopts (c008). Read with c011, elegance contributes to total goodness only as the object of a divine appreciator's conscious experience, so its contribution is relational, not intrinsic. The paper would grant the referee's point that this reading is already signalled by c011 and that God's appreciation is itself a conscious experience, so the revision is not a rejection of the argument. It would then show that the relational reading leaves a substantive problem: because the divine appreciation must be included in the c008 tally, and because the argument credits an omniscient, omnipotent, omnibenevolent appreciator, that term is unbounded in a way creaturely pleasure and suffering are not. Adding it makes the comparison between worlds trivially settled by elegance, so the observation in c009 that our world's suffering makes its intrinsic happiness non-maximal does no work. The paper would therefore test the swamping horn: does any non-trivial best-world comparison remain once divine experience is counted? It would also state what the argument may presuppose. If the inference to God relies on the divine appreciator already in c011, the argument is circular, which is the second horn. The paper's claim is that the argument must choose between a relational axiology that swamps its own best-world comparison and an independent specification of the appreciator, and it would argue that neither choice leaves the original inference intact. The paper would not rely on any externally imported framework, and it would not argue for any further cosmological conclusion beyond what the premises in the reconstruction support.",
    "assessment": {
     "grade": "not yet defensible",
-    "overall": 2.5,
+    "overall": 3.0,
     "scores": {
      "coherence": 3,
      "robustness": 2,
-     "significance": 2,
-     "specificity": 3
+     "significance": 3,
+     "specificity": 4
     },
-    "summary": "The cheap point (simplicity is not among the argument's premises) is correct but too thin for a paper, and the substantive part repackages the extrinsic-denomination model without meeting its known dilemma, so a competent referee would send it back."
+    "summary": "Drop the Molinist framing, which you have rightly done, but the swamping dilemma as stated rests on an unargued additive, unbounded divine term and treats as a defect what the argument intends. Rework it before it goes to a referee."
    }
   },
-  "quality": 0.5,
-  "score": 0.4,
-  "tier": 1
+  "quality": 0.6,
+  "score": 0.336,
+  "tier": 0
  },
  {
-  "id": "brief-W4220703499.arg1.o8e15e0",
-  "run_id": "run-oa-W4220703499",
-  "research_question": "Does an eternally present divine knowledge of a temporally situated free act constitute genuine knowledge, or is it merely a dispositional state that co‑extensively tracks the act?",
+  "id": "brief-W4394980009.arg1.oa493de",
+  "run_id": "run-oa-W4394980009",
+  "research_question": "Is ambivalence a defect in religious argumentation as such, or only a failure relative to an apologetic aim that presupposes determinate certainty?",
   "outcome": "revision_required",
-  "novelty": 0.9,
+  "novelty": 0.7,
   "records_searched": 2330,
   "survival": 0.8,
-  "paper_title": "Saving Eternity (and Divine Foreknowledge and Free Will): A Reply to Hasker",
+  "paper_title": "Pascal’s Wager and Its Postmodern Counterpart",
   "challenged_premise": {
-   "id": "W4220703499.arg1.r1",
-   "text": "God's knowing is ungrounded in creaturely acts while its objects are grounded in them."
+   "id": "W4394980009.c057",
+   "text": "The postmodern rendition of the wager is far too ambivalent."
   },
-  "paper_direction": "A paper here would argue that the reconciliation of divine foreknowledge with libertarian free will hinges on a novel account of atemporal answerability: eternal presence must be shown to instantiate a non‑causal, yet intentional, relation that secures genuine knowledge of temporal acts. The case would begin by reconstructing the Anselmian thesis and the grounding principle, then critically assess the objector’s dispositional charge. Anticipating Defender A’s strongest reply, the paper would defend the claim that sensitivity of content is insufficient for answerability and would develop a metaphysical account—perhaps drawing on divine simplicity or timeless vision—that makes eternal presence itself the grounding of answerability. The paper would need to demonstrate that this account avoids the need for an extra upstream‑determination premise while preserving both foreknowledge and libertarian freedom.",
+  "paper_direction": "A paper here would argue that the defense of Pascal's wager against its postmodern counterpart succeeds only by restricting the argument's scope to apologetic seekers who already presuppose that determinate certainty is the goal, thereby begging the question against the postmodern challenge. The case would trace the objector's counterexample of a seeker who finds ambiguity liberating, note the defenders' shared concession that the original premise c057 must be narrowed, and argue that this narrowing merely relocates the dispute rather than resolving it. The strongest reply to anticipate is that apologetics is definitionally oriented toward supplying grounds and hope to questioners, so excluding seekers who embrace ambiguity is not question-begging but a clarification of the practice's internal norms. What the paper would need to show is either that these internal norms are themselves contested by postmodern theologians who practice apologetics without prioritizing determinate certainty, or that Pascal's text, particularly when read through the lens of negative theology and the sublime, does not in fact provide the determinate object of certainty that the restricted argument claims to recover.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.25,
    "scores": {
     "coherence": 2,
     "robustness": 2,
-    "significance": 3,
-    "specificity": 2
+    "significance": 2,
+    "specificity": 3
    },
-   "summary": "The underlying issue of whether eternal knowledge of free acts must be passive is real but well trodden, and this proposal frames it through a confused objection and an unspecified positive account, so it needs a fundamental rethink before it could become a paper."
+   "summary": "As framed, this mistakes the argument's built-in apologetic scope for a question-begging retreat. A publishable paper would have to become either a study of postmodern apologetic norms or a reading of Pascal's hidden God, and each of those is a different project from the one proposed."
   },
   "revision": {
-   "research_question": "Given that God's eternal knowing is not causally or passively dependent on creaturely acts, can it still be factive knowledge of a temporally located free act, with content fixed by that act, rather than a dispositional state that merely co-varies with it?",
-   "paper_direction": "A paper here would argue that the dispositional charge against eternal divine knowledge equivocates on 'grounded', and that once the two senses are separated, eternal knowledge of a noon free act is factive knowledge that satisfies a non-causal answerability condition, without any novel metaphysics of eternity. The paper would proceed in four steps. First, it fixes the operative sense of 'grounded' in the Anselmian aseity framework: dependence that is causal or passive and bears on divine aseity. Second, it states the objection in atemporal terms. The challenged premise (W4220703499.arg1.r1) holds that God's knowing is ungrounded in creaturely acts in this sense while its objects are grounded in them. The paper drops the 'at dawn' formulation, since on the eternalist view God knows the noon choice by being atemporally present to it. Third, it concedes the content-dependence the objector relies on. The Grounding Principle (W4220703499.c007) already says that the truth and knowledge of a free choice depend on the actual choice, so the objection's asymmetry is coherent only as a contrast between content-dependence and causal or passive dependence. The claim that content varies while the knowing does not is withdrawn, because it is incoherent if mental states are individuated by content. Fourth, the paper gives a criterion that does not presuppose the answer. A state S is knowledge of p, rather than a mere co-extensive disposition, when (a) S's correctness conditions are fixed by whether p obtains, and (b) S would be assessed as incorrect were p otherwise, so that the difference in content marks a different state. Counterfactual covariation of this kind is the sensitivity profile of ordinary factive knowledge. The paper argues that eternal presence meets (a) and (b) with respect to Maren's noon act, and that the knowing does so without causal or passive dependence on that act. The remaining aseity–passivity question is then the separate question the literature on eternalist reconciliations already debates, and the paper positions itself against that literature rather than against Molinist sources. The libertarian open-options condition (W4220703499.c006) is kept as a separate requirement on the created agent, not used to ground divine knowledge. The paper does not claim that eternal presence itself grounds answerability through a new relation, and it does not rely on divine simplicity or timeless vision to do so.",
+   "research_question": "Is ambivalence a defect in religious argumentation as such, or only a failure relative to a specific function (here, apologetic grounding and hope) that the argument assigns to it? If the latter, does the postmodern rendition of the wager fail that function, or only fail it for seekers who want determinate certainty?",
+   "paper_direction": "A paper here would argue that the premise c057 ('the postmodern rendition of the wager is far too ambivalent') is correctly scoped to apologetics, since c058 and c071 fix the function against which 'too ambivalent' is measured, so the comfortable-ambiguity seeker is not a counterexample to the premise as stated. The paper therefore drops the question-begging charge and does not claim that the scope restriction is a concession. Its positive claim is narrower: the premise's apologetic standard is itself contested within the practice. The paper would show, from the work of practising postmodern apologists (for example Caputo, Kearney's anatheism, and Westphal), that apologetics can legitimately aim at grounds and hope without determinate certainty as its end, so that the postmodern rendition's ambivalence does not by itself disqualify it even relative to apologetic ends. If that holds, the inference from c057 and c058 to c071 loses its support, because the premise no longer shows that the postmodern rendition fails the apologetic task. The paper will then assess whether the remaining premises, particularly c054 and c060 (Pascal's provision of certainty about the object of the wager), can carry the conclusion without c057 doing the work. It will not rely on a negative-theology reading of the Pensées to rescue c057; if the paper addresses the hidden God, it will do so openly as a retargeting of c054 and c060, and will test whether Pascal's text supplies the determinate object the argument needs.",
    "assessment": {
     "grade": "not yet defensible",
-    "overall": 2.75,
+    "overall": 3.0,
     "scores": {
-     "coherence": 3,
+     "coherence": 4,
      "robustness": 2,
      "significance": 2,
      "specificity": 4
     },
-    "summary": "A tidy disambiguation of 'grounded', but its knowledge criterion either fails to separate knowledge from co-variation or concedes the dependence the premise denies, so it needs a real answerability argument before it is a paper."
+    "summary": "A clearer and better-aimed proposal than the original seeker objection, but as planned it substitutes 'this standard is disputed' for an argument that the standard is wrong, and leans on authors who are not doing apologetics, so it needs a substantive account of apologetic aims before it is worth writing."
    }
   },
-  "quality": 0.55,
-  "score": 0.396,
-  "tier": 2
- },
- {
-  "id": "brief-W1784340735.arg1.o9562c1",
-  "run_id": "run-oa-W1784340735",
-  "research_question": "Can a value theory that defines total goodness solely as the net of conscious pleasure and suffering consistently accommodate a claim that mathematical elegance contributes intrinsic value, and if so, what role must a valuing being play in that account?",
-  "outcome": "revision_required",
-  "novelty": 1.0,
-  "records_searched": 2337,
-  "survival": 0.8,
-  "paper_title": "A Theological Argument for an Everett Multiverse",
-  "challenged_premise": {
-   "id": "W1784340735.c010",
-   "text": "The universe’s high mathematical elegance adds to its intrinsic value."
-  },
-  "paper_direction": "A paper here would argue that the theological Everett‑multiverse argument fails to reconcile its premise that mathematical elegance adds to intrinsic value with its own definition of total goodness as purely experiential. It would first reconstruct the value theory to make explicit whether elegance’s contribution is relational (requiring a valuing being) or intrinsic. Anticipating Defender A’s reply, the paper would show that a relational account either presupposes the very God the argument seeks to prove or demands a revision of c008 to include non‑experiential value. The thesis would then propose a revised premise that ties elegance’s worth to a justified, non‑circular account of divine appreciation, and demonstrate whether such a premise can sustain the inference to a best‑possible‑world and the existence of an omniscient, omnipotent, omnibenevolent God.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.25,
-   "scores": {
-    "coherence": 2,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "As framed, a competent reader would dismiss this: it rests on a misdescription of Molinism, and Defender B's reply already disposes of the c008/c010 'inconsistency' by counting divine appreciation as conscious experience, so the paper only becomes viable if it shifts its target to the abductive step."
-  },
-  "revision": {
-   "research_question": "Can a value theory that defines total goodness solely as the net of conscious pleasure and suffering consistently accommodate the claim that mathematical elegance adds to a world's intrinsic value, and if it can only do so derivatively, through the appreciation of a valuing being, does this derivative contribution give the theological argument for an Everett multiverse a non-ad-hoc route to its conclusion?",
-   "paper_direction": "A paper here would argue that the premise c010, that the universe's mathematical elegance adds to its intrinsic value, can be made consistent with c008's experiential metric only by reading elegance's contribution as derivative, mediated by the conscious appreciation of a valuing being, and that this reading exposes a real problem in the abductive step from c010 to the theistic conclusion c012. The paper would drop the Molinist framing, since Molinism carries no commitment to hedonism, and would not rely on the sentience-free world as a counterexample to c010 as applied to an actual world. It would first reconstruct c008 and c010 precisely, distinguishing intrinsic from derivative value, and would concede that the defensible version of c010 counts elegance through God's appreciation, which c008 does count as experiential. It would then argue that the abductive support is undercut in two ways. First, elegance-appreciation raises the probability of theism only on a value theory selected to make elegance worth appreciating, so the confirmation is ad hoc: the theory that gives elegance value is the theory that was adopted to fit the conclusion. Second, the derivative reading cannot help the Everett-multiverse conclusion that the original argument targets, because the appreciation that grounds elegance's value is supplied by a theistic appreciator whose existence is what the argument was meant to establish, so the derivative account gives no independent reason to prefer a multiverse over a single universe. The paper would test both points against the strongest version of the abductive inference and report where the theistic inference survives and where it does not.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.25,
-    "scores": {
-     "coherence": 2,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 3
-    },
-    "summary": "The proposal correctly identifies c010's sloppy use of 'intrinsic,' but both of its substantive charges either repeat the circularity objection it has already conceded or attack an inferential role c010 does not play, so a first competent reader would send it back."
-   }
-  },
-  "quality": 0.45,
-  "score": 0.36,
-  "tier": 1
- },
- {
-  "id": "brief-W2995194683.arg1.o43f39a",
-  "run_id": "run-oa-W2995194683",
-  "research_question": "What precise diachronic coherence condition can be imposed on a rational agent's intentional states so that the Newcomb argument's link between psychological coherence and the rational choice to one-box is preserved without rendering the premise vacuous?",
-  "outcome": "revision_required",
-  "novelty": 0.9,
-  "records_searched": 2338,
-  "survival": 0.8,
-  "paper_title": "The philosopher’s paradox: How to make a coherent decision in the Newcomb Problem",
-  "challenged_premise": {
-   "id": "W2995194683.c001",
-   "text": "A rational person's intentional states are psychologically coherent across time, and rational decisions are made against this coherent backdrop."
-  },
-  "paper_direction": "A paper here would argue that the Newcomb argument requires a refined diachronic coherence principle that is neither the overly strict persistence of all prior intentions nor the vacuous responsiveness to any new evidence. It would develop a formal criterion—e.g., coherence as rational updating according to a specified evidential closure condition—and show how this criterion preserves the link between an agent's stable rational dispositions and the predictor's forecast. The paper would anticipate Defender B's appeal to a stable underlying psychological makeup and demonstrate that such a notion can be captured by a well‑defined dispositional profile (e.g., a set of credence‑updating functions) that remains invariant across time. Finally, it would prove that with this refined premise the back‑tracking counterfactuals in c004–c012 are secured, thereby reinstating the one‑box recommendation without rendering the coherence premise trivial.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.25,
-   "scores": {
-    "coherence": 2,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "Not yet a paper: the objection misreads c001, and the proposed repair assumes, without argument, that diachronic coherence settles which counterfactuals matter in Newcomb, which is exactly what a two-boxer denies."
-  },
-  "revision": {
-   "research_question": "Given a predictor whose success is nomic (c009), does a diachronic coherence condition on the agent's intentional states, read as coherence across an extended decision process (c002), make the backtracking counterfactuals rather than the causal ones the rationally relevant ones at the time of choice, and so favour one-boxing over two-boxing in Newcomb's Problem?",
-   "paper_direction": "A paper here would argue that the one-boxing conclusion of the Newcomb argument is licensed only by a narrower claim than the one originally proposed. Coherence across time cannot, by itself, settle whether dominance or causal expected utility should guide choice, so the paper drops the claim that coherence alone secures one-boxing. The coherence premise (c001) is restated without strict persistence of prior intentions: a rational agent's intentional states must form a process in which earlier stages (intentions, dispositions, deliberative commitments) are not evidentially or practically severed from the act that terminates them. The Alice case is reassigned to its proper role. It shows that a coherent agent may revise an intention when evidence arrives, but Newcomb contains no such evidence, so the paper treats Alice only as a contrast case and not as the source of the premise. The central thesis is conditional. If the choice is the terminal stage of an extended process (c002) and the predictor's success is nomic (c009), then a coherent agent who treats her own deliberation as part of the process that the predictor foresees (c011) must evaluate options with the counterfactuals that track that process, which are backtracking, not the causal counterfactuals that hold the box contents fixed. The paper engages the causal and evidential decision theory literature (Joyce, Ahmed, Spohn, Arntzenius) and the intention-stability literature (Bratman, Gauthier) to show exactly where this conditional departs from them. The formal criterion is specified as follows: a choice is coherent with prior intentions just in case the counterfactual supported by the process, not by the fixed-state dominance argument, is the one the agent must use to assess her options. The paper then proves that, under nomic prediction, this criterion makes the backtracking counterfactuals in c004 through c012 the decision-relevant ones. The paper does not claim to refute causal decision theory. It claims that the two-boxer must deny that the choice is the terminus of the same process whose coherence the premise describes, and it argues that this denial is costly.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.5,
-    "scores": {
-     "coherence": 3,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 3
-    },
-    "summary": "A familiar one-boxing line dressed in coherence vocabulary, whose central criterion assumes what it must prove; not publishable until it gives an independent account of coherence and engages the common-cause reply."
-   }
-  },
-  "quality": 0.5,
-  "score": 0.36,
+  "quality": 0.6,
+  "score": 0.336,
   "tier": 0
  },
  {
   "id": "brief-W2995194683.arg1.o773262",
   "run_id": "run-oa-W2995194683",
-  "research_question": "How can the coherence condition for rational agents' cross‑temporal intentional states be formulated so as to accommodate both evidence‑driven revisions and unexplained preference shifts without circularity, and what consequences does this have for the Newcomb‑Problem argument that relies on psychological coherence?",
+  "research_question": "Can the coherence condition required for the psychological-coherence argument for one-boxing in Newcomb's Problem be specified in a way that permits rational, non-evidential revision of intention while excluding unexplained drift, without collapsing into circularity?",
   "outcome": "revision_required",
-  "novelty": 0.9,
+  "novelty": 0.8,
   "records_searched": 2330,
   "survival": 0.8,
   "paper_title": "The philosopher’s paradox: How to make a coherent decision in the Newcomb Problem",
@@ -496,7 +144,7 @@
    "id": "W2995194683.arg1.r1",
    "text": "A rational agent's later intentional states need only be coherent with her earlier ones in the sense that any conflict is explained by evidence acquired since the earlier state was formed, so that apparent cross-time conflicts are defeasible revisions rather than incoherence."
   },
-  "paper_direction": "A paper here would argue that the central obstacle to the Newcomb‑Problem argument is the lack of a precise, non‑circular coherence condition for rational agents' cross‑temporal intentional states. It would first reconstruct the original coherence premise and the objections concerning unexplained drift, then develop a formal distinction between integrated revisions—changes that are assimilated into an overall plan—and mere drift, drawing on theories of plan revision and intention coherence. Anticipating Defender A’s reply, the paper would show how to articulate the integration clause without circularity by grounding it in a hierarchy of intentions and plan‑maintenance mechanisms. It would also address Defender B’s broader premise by specifying the class of rational pressures that count as legitimate explanations, perhaps via a normative account of preference stability and evidential updating. Finally, the paper would demonstrate that the refined coherence condition still supports the causal‑psychological link to the predictor required for the Newcomb conclusion, thereby preserving the original argument while resolving the identified gap.",
+  "paper_direction": "A paper here would argue that the psychological-coherence defense of one-boxing in Newcomb's Problem stands or falls on whether a non-evidentialist, non-circular coherence condition can be formulated that permits rational cross-time revision of intention while excluding unexplained drift. The paper would use the Dana case to show that an evidentialist restriction is too narrow, and would develop a positive account—perhaps grounded in planning norms or dynamic rationality—of how revisions can be integrated into an agent's overall psychological backdrop without being evidence-based. The strongest reply to anticipate is that broadening the coherence condition beyond evidentialism severs the link between an agent's earlier intentional states and the predictor's foresight, since unmoored preference shifts would make the psychological trajectory unstable and unpredictable. To succeed, the paper would need to show that its proposed integration condition is independently motivated, does not covertly presuppose the notion of coherence it is meant to explicate, and is still restrictive enough to support the backtracking counterfactuals the original argument requires.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.25,
@@ -506,11 +154,11 @@
     "significance": 2,
     "specificity": 3
    },
-   "summary": "A tidy-up of a peripheral premise wrongly billed as the crux of the Newcomb argument; unless it connects coherence to the backtracking counterfactuals, a competent referee would dismiss it as missing the real issue."
+   "summary": "This is a recognisable but largely misdirected project: it reopens a familiar problem about when revising an intention is rational, attaches it to the Newcomb argument at a point where the one-boxer loses nothing, and needs both a sharper case and a real engagement with the planning-agency literature before it could become a paper."
   },
   "revision": {
-   "research_question": "Which reconsideration norm separates legitimate change in an agent's intentions over time from unexplained drift, and does a coherence condition built on that norm entail the backtracking counterfactuals the Newcomb argument needs, or does the link to one-boxing fail even when coherence is granted?",
-   "paper_direction": "A paper here would argue that the premise that a rational agent's later intentional states must cohere with her earlier ones is best stated as a norm on reconsideration. A later conflict is permissible when it is a reasons-responsive revision, grounded in evidence or in a practical consideration the agent can cite and actually weighs. It is impermissible when it is unexplained drift. The paper would first show that the original premise, whose explanation clause admits only evidence, cannot classify value-based reconsideration correctly. The Dana case exposes this: the operative dividing line is between reasons-responsive change and change with no reason-bearing basis, not between evidence-driven and evidence-free change. The paper would then state this norm precisely enough to be tested. It would treat the Newcomb link as a separate, explicit claim rather than a consequence of the norm. It would argue that cross-temporal coherence bears on Newcomb only if the condition constrains the relation between the choice and the prediction, and it would test whether any formulation of the norm entails the backtracking counterfactuals in the argument. It would concede that a causal decision theorist can accept the coherence norm while rejecting those counterfactuals, and it would identify the exact premise a two-boxer must reject for the bridge to fail. If no formulation of the norm forces the backtracking counterfactuals, the paper's conclusion is that the Newcomb argument's coherence step is not secured by the reconsideration norm. The paper would then stand as a self-contained account of reconsideration norms, with the Newcomb application reported as a conditional result.",
+   "research_question": "Does the psychological-coherence argument for one-boxing require a permissive coherence condition that allows rational non-evidential revision of intention, or can it rest on a stricter, non-circular condition that excludes unexplained drift, and does the choice between these conditions bear on whether the backtracking counterfactuals are decision-relevant?",
+   "paper_direction": "A paper here would argue that the psychological-coherence defense of one-boxing does not stand or fall on permitting non-evidential revision of intention. The evidentialist premise already classifies Dana's unexplained drift as incoherence, so the Dana case does not refute it. The real question is whether the argument needs a permissive condition at all. The paper would show that the choice-prediction link needs only a condition on which later states are coherent with earlier intentions, and that a stricter condition serves the backtracking counterfactuals better. It would then identify the cost of strictness. If the condition is so strict that it classifies reasonable reconsideration as incoherence, then premise c001 excludes agents whose reconsideration is rational, and the conclusion in c012 is restricted to a narrow class of agents. The paper would therefore test candidate conditions against two constraints: they must be strict enough to support the backtracking counterfactuals in c004 and c011, and they must be permissive enough that c001 still describes rational agents. The paper would engage the literature on reconsideration of intention, including Bratman on reasonable non-reconsideration, Holton on resolutions, and McClennen and Gauthier on resolute choice, to distinguish reasonable reconsideration from drift without relying on the premise's evidential classification. It would also assess whether the dispute with two-boxers turns on dominance and on whether backtracking counterfactuals are decision-relevant, rather than on the classification of revision.",
    "assessment": {
     "grade": "not yet defensible",
     "overall": 2.5,
@@ -520,27 +168,27 @@
      "significance": 2,
      "specificity": 3
     },
-    "summary": "The objection identifies a real wording defect in the premise, but the proposed paper either rehearses existing work on intention reconsideration or reaches the obvious conclusion that coherence does not force one-boxing, so as framed it would not survive a competent referee."
+    "summary": "Drop the Dana case. The live question is whether cross-time coherence does any work beyond predictor reliability without begging the question against dominance reasoning, and until the proposal answers that, this is a framing exercise rather than a paper."
    }
   },
   "quality": 0.5,
-  "score": 0.36,
+  "score": 0.32,
   "tier": 1
  },
  {
-  "id": "brief-W2995194683.arg1.o1562b0",
-  "run_id": "run-oa-W2995194683",
-  "research_question": "What conditions on a rational agent's belief about a predictor's infallibility are sufficient to entail the backtracking counterfactual that her choice would have differed had the predictor's scan differed, thereby securing psychological coherence in Newcomb's Problem?",
+  "id": "brief-W2124966002.arg1.oe8467f",
+  "run_id": "run-oa-W2124966002",
+  "research_question": "What conditions must a passional tendency to believe satisfy in order to stabilize into the settled practical commitment that yields the phenomenological assurance the Jamesian doxastic-venture model claims to capture?",
   "outcome": "revision_required",
-  "novelty": 0.9,
+  "novelty": 0.65,
   "records_searched": 2330,
   "survival": 0.8,
-  "paper_title": "The philosopher’s paradox: How to make a coherent decision in the Newcomb Problem",
+  "paper_title": "Faith as doxastic venture",
   "challenged_premise": {
-   "id": "W2995194683.arg1.r3",
-   "text": "A rational agent's intentional states include standing counterfactual dispositions toward the predictor's model of her, so that a belief in the predictor's infallibility for her own choices requires the backtracking counterfactual that her choice would have differed had the scan differed."
+   "id": "W2124966002.c031",
+   "text": "The Jamesian doxastic‑venture model supplies what is needed by treating faith as a passionally based tendency to believe and as believingly accepting an unestablished claim."
   },
-  "paper_direction": "A paper here would argue that the coherence‑based solution to Newcomb's Problem must be reformulated to distinguish between agents whose belief in a predictor's infallibility is grounded in a causal model of their own psychology and those whose belief rests solely on statistical evidence. It would reconstruct the original argument, isolate the point at which the backtracking counterfactual is invoked, and anticipate Defender A's and Defender B's revised premises as the strongest replies. The paper would then show that without a principled account of how such a causal representation is generated—perhaps via a normative requirement of evidential integration—the revised premises remain insufficient to guarantee the necessary counterfactual link, leaving the coherence argument incomplete.",
+  "paper_direction": "A paper here would argue that the Jamesian doxastic-venture model cannot substantiate its claim to phenomenological superiority over sub-doxastic rivals unless it provides a non-circular account of how a volitional act of believing acceptance produces a settled disposition rather than merely coexisting with psychological oscillation. The thesis would be developed by examining whether the stability required for assurance is a constitutive feature of the venture itself or an independent psychological achievement, drawing on cases where agents sincerely attempt acceptance yet remain doxastically unsettled. The strongest reply to anticipate is that the model distinguishes successful ventures from incomplete pre-venturesome states, so that oscillation simply marks the absence of genuine faith. The paper would need to show that this reply renders the account either empirically unfalsifiable—since any instability is dismissed as not-yet-venturesome—or incomplete, because it leaves the transition from tendency to stable assurance unexplained and therefore fails to demonstrate that the Jamesian model uniquely captures the phenomenology of Christian faith.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.25,
@@ -550,11 +198,143 @@
     "significance": 2,
     "specificity": 3
    },
-   "summary": "Not publishable as framed: the counterexample trades on reading the backtracking counterfactual as an intervention, so the first competent referee would dismiss it unless the paper is rebuilt around a genuine dispute about whether statistical evidence of infallibility licenses backtracking."
+   "summary": "As framed this would be dismissed quickly, because it attacks a causal-mechanism claim the model does not make; there may be a modest paper in the narrower question of whether doxastic venture actually secures certitude better than its sub-doxastic rivals."
   },
   "revision": {
-   "research_question": "Does a rational agent's belief in a predictor's infallibility, under whatever grounding it has, entail the backtracking counterfactual that her choice would have differed had the scan differed, and if so, is that counterfactual doing the work in securing one-boxing, or is one-boxing secured by a route that does not pass through psychological coherence?",
-   "paper_direction": "A paper here would argue that the coherence argument for one-boxing in Newcomb's Problem is sound only in a narrower form than originally stated. The original premise ties the backtracking counterfactual to standing counterfactual dispositions toward the predictor's model of the agent. The Maya case shows that this clause is dispensable. Read as a forward, interventionist counterfactual, the glitch scenario is the wrong test, since it holds Maya's psychology fixed while altering the scan, and stipulating a misread scan conflicts with the infallibility she believes in. The right test is backtracking: hold the predictor's reliability fixed and ask whether Maya's choice would have differed had the scan differed. On that reading, infallibility held fixed already entails that the scan covaries with the choice, because the prediction must match the choice. So the counterfactual is supported by the content of the infallibility belief itself, whatever its grounding. The paper therefore concedes the referee's point that statistical grounding does not undermine backtracking support, and drops the claim that a causal-model versus statistical distinction is needed. What survives is a claim about the structure of the argument. Coherence, understood as the backtracking counterfactual plus infallibility, is sufficient for one-boxing. It is not necessary, because Maya one-boxes by expected-utility maximization on the track record alone, with no self-directed counterfactual dispositions. The paper argues that this shows the coherence route secures one-boxing only for agents whose belief in infallibility is represented as covering their own choices, and that the general conclusion c012 must be restated accordingly. It does not defend the claim that statistical belief fails to support the relevant counterfactuals, since on the backtracking reading it does not fail. The normative requirement of evidential integration is dropped as unspecified. The paper's contribution is to isolate which premise carries the load, to show that the glitch objection targets an equivocation rather than the conclusion, and to specify the backtracking semantics needed for the argument to go through.",
+   "research_question": "Does the Jamesian doxastic-venture model's account of believing acceptance, understood as taking an unestablished claim as true in practical reasoning while remaining compatible with doubt, deliver the assurance or certitude that the model needs in order to claim phenomenological superiority over sub-doxastic rivals?",
+   "paper_direction": "A paper here would argue that the Jamesian doxastic-venture model's constitutive analysis of faith (a passional tendency to believe plus believing acceptance of an unestablished claim) can be granted as a conceptual account of what faith is, but that the inference from this analysis to the claim that the model captures the assurance or certitude of Christian faith (c047) fails. The argument proceeds by separating believing acceptance, understood as taking p as true in practical reasoning under evidential ambiguity and compatible with doubt, from assurance, understood as the absence of live doubt and felt settledness about p. Using Bishop's account of believing by faith and the Howard-Snyder and McKaughan literature on doubt-compatible faith, the paper would show that an agent can satisfy every conjunct of the model while retaining the doubt that assurance excludes, so the model does not by itself deliver the phenomenology cited in c047. The paper would then assess whether sub-doxastic and attenuated rivals fare any better on the same measure. The paper drops any demand that the model supply a psychological mechanism for stabilization, and drops the unfalsifiability charge, since both misread a constitutive analysis. Its comparative claim is restricted to what the model's own conditions entail about assurance, and it leaves open whether a separate account of certitude could be added to the venture model.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 3.0,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "A clearly planned paper built on a contestable reading of 'believing acceptance' and a strong reading of 'accommodates', both of which a referee familiar with Bishop would challenge immediately; it is publishable only if it confronts the overbelief reading and the weaker accommodation claim head-on."
+   }
+  },
+  "quality": 0.6,
+  "score": 0.312,
+  "tier": 0
+ },
+ {
+  "id": "brief-W1784340735.arg1.o38f866",
+  "run_id": "run-oa-W1784340735",
+  "research_question": "Can the argument from the best possible world survive by restricting mathematical elegance to instrumental value in worlds without a suitable valuer, or does this revision undermine the inference to the existence of God?",
+  "outcome": "revision_required",
+  "novelty": 0.7,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "A Theological Argument for an Everett Multiverse",
+  "challenged_premise": {
+   "id": "W1784340735.arg1.r3",
+   "text": "Mathematical elegance adds to the total goodness of a world containing conscious experiences only when a suitable Being appreciates it, and the argument must concede that elegance may carry non-relational value in worlds like Lattice without thereby establishing that a God must exist."
+  },
+  "paper_direction": "A paper here would argue that the defenders' retreat to an instrumental–non-instrumental distinction fails to salvage the inference from the best-possible-world hypothesis to the existence of God. The case would develop the Sky counterexample to show that mathematical elegance can augment a world's goodness through its effects on conscious experience without any suitable appreciator, and would then argue that the revised premise restricting non-instrumental aesthetic value to appreciated elegance introduces an ad hoc distinction that was not operative in the original argument. The strongest reply to anticipate is that the argument always concerned non-instrumental aesthetic value and that Sky therefore misses its target. To succeed, the paper would need to show either that the distinction cannot be coherently applied to mathematical elegance, or that even non-instrumental value does not entail a transcendent valuer, or that the revised framework renders the argument question-begging by making the existence of a suitable Being a definitional precondition for the kind of value that makes the actual world best.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.0,
+   "scores": {
+    "coherence": 2,
+    "robustness": 1,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "As framed this would be rejected: the Sky case trades on instrumental value the argument explicitly sets aside, so the 'ad hoc retreat' charge fails, though the fallback question of whether intrinsic aesthetic value needs a divine appreciator could become a paper if pursued directly."
+  },
+  "revision": {
+   "research_question": "Does the non-experiential, intrinsic value that premise c010 assigns to mathematical elegance require an appreciating valuer? If it does, does making a divine appreciator a precondition of that value render the inference from the best-possible-world hypothesis to an omniscient, omnipotent, omnibenevolent God question-begging? If it does not, does the inference fail to reach God at all?",
+   "paper_direction": "A paper here would argue that the inference from the best-possible-world hypothesis to an omniscient, omnipotent, omnibenevolent God fails on either reading of the intrinsic value that premise c010 assigns to mathematical elegance. The paper drops the Sky counterexample as its central case. Its work starts from the gap between c008, which defines total goodness as the pleasure-minus-suffering total of conscious experiences, and c010, which adds a further intrinsic contribution from elegance. Any contribution that is not experiential falls outside c008's total, so the paper must say what it is and where it enters the goodness of the world. The paper then develops a dilemma. If the intrinsic contribution depends on an appreciating valuer, a divine appreciator is a precondition of the value that makes the actual world best, so the conclusion that God exists is built into the premise that the world is best, and the inference is question-begging. If the contribution does not depend on an appreciator, as the Lattice clause in the challenged premise suggests, nothing in the argument supplies a creator or valuer, and arg1.mp, which is unstated, does not bridge the step from elegance-value to a God who creates and values the universe. The paper engages the literature on objective aesthetic value and on value-to-whom accounts to decide which horn is stronger. Its claim is limited: it does not show that theism is false, only that this argument does not establish it.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 4
+    },
+    "summary": "There is a usable observation in the c008/c010 gap, but the dilemma as framed rests on mistaking entailment for question-begging and on misreading an abductive argument as deductive, so it would not survive a first referee without a substantial rebuild."
+   }
+  },
+  "quality": 0.55,
+  "score": 0.308,
+  "tier": 1
+ },
+ {
+  "id": "brief-W1784340735.arg1.o8ee18f",
+  "run_id": "run-oa-W1784340735",
+  "research_question": "Can a best-possible-world argument for the existence of God rely on mathematical elegance as a source of intrinsic value if that value does not require a conscious valuer?",
+  "outcome": "revision_required",
+  "novelty": 0.7,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "A Theological Argument for an Everett Multiverse",
+  "challenged_premise": {
+   "id": "W1784340735.arg1.r1",
+   "text": "Mathematical elegance adds to a world's intrinsic value only when it is appreciated by a suitable Being, so that its added value is relational to that appreciation rather than wholly independent of any valuer."
+  },
+  "paper_direction": "A paper here would argue that theistic arguments from the best possible world face a dilemma when they invoke mathematical elegance as a source of intrinsic value: if elegance adds value non-relationally, as the Lattice case suggests, then a divine appreciator is not necessary for that value; if elegance adds value only through appreciation, then the argument must defend a restriction to experiential worlds that appears ad hoc. The case would develop the Lattice thought experiment to show that unappreciated structural properties such as symmetry, economy, and unity generate genuine intrinsic value independent of any valuer. The strongest reply to anticipate is the theistic retreat to a weaker premise that analogizes unappreciated elegance to unfelt pleasure and claims that only the conscious appreciation of a suitable Being supplies value sufficient to offset suffering and make a world best. The paper would need to show that this restricted premise either begs the question against non-relational axiologies or is metaphysically unmotivated, and that conceding even minor non-relational elegance-value is enough to break the inference from elegance to the necessary existence of God.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.25,
+   "scores": {
+    "coherence": 2,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "As framed this would be dismissed quickly, because it confuses elegance with its value and simply asserts against the argument's own experientialist axiology a Moorean intuition that is long contested; only a substantial reframing around that debate could yield a paper."
+  },
+  "revision": {
+   "research_question": "Given the argument's own experientialist axiology (c008), can mathematical elegance contribute intrinsic value to a best-possible-world argument for God, and if so, does that establish God as appreciator, as creator, or neither?",
+   "paper_direction": "A paper here would argue that the best-possible-world argument for God cannot use mathematical elegance as an independent source of value, because the argument's own axiology already makes elegance-value relational to conscious experience. The paper separates elegance, a structural property a world has, from elegance-value, the contribution that property makes to a world's total goodness. The Lattice case, with its unobserved symmetric structure, shows at most that elegance persists without a valuer. It does not show that elegance-value persists, since that claim is the contested Moorean intuition the referee identifies, and the paper concedes this. The paper then argues that c008 and c010 are in tension. If total goodness is exhausted by the pleasure minus suffering of conscious experiences, as c008 states, then elegance can add value only as it figures in some experience, so the premise is derived from c008 and not an ad hoc restriction. If instead c010 adds elegance-value on top of experiential value, c008 must be revised, and the paper shows that this revision is what the non-relational horn requires. The paper takes up the Moore and Sidgwick debate on unobserved beauty and engages the argument Page advances on this question. It shows that on the experientialist horn, the appreciator role is secured only if divine appreciation is itself a conscious experience with positive value sufficient to outweigh the suffering the referee and c009 acknowledge, and that the additive reply (divine appreciation adds further value) does not by itself deliver necessity. On the non-relational horn, the appreciator inference fails, and the creator clause in the conditional premise is left unsupported, because non-relational elegance-value is realized whether or not any being creates the world. The paper's conclusion is therefore narrow. The best-possible-world argument can at most support a conditional claim about a divine appreciator under c008, and it does not support God as creator from elegance alone.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 4
+    },
+    "summary": "The direction is clearly organized, but its main thesis largely restates Page's own structure and its remaining claims target inferences the argument does not make, so a competent referee would likely reject it unless it is refocused on the abductive form and the offsetting problem."
+   }
+  },
+  "quality": 0.55,
+  "score": 0.308,
+  "tier": 2
+ },
+ {
+  "id": "brief-W4394980009.arg1.o3c8ac1",
+  "run_id": "run-oa-W4394980009",
+  "research_question": "Does the absence of certainty in the postmodern rendition of Pascal's Wager entail its replacement by the classical version, or does that inference presuppose a contested conception of apologetic purpose?",
+  "outcome": "revision_required",
+  "novelty": 0.85,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Pascal’s Wager and Its Postmodern Counterpart",
+  "challenged_premise": {
+   "id": "W4394980009.arg1.mp",
+   "text": "If the postmodern rendition is ambivalent, fails to give the seeker certainty and hope, and Pascal provides certainty about the object of the wager, then Pascal's wager should be used in apologetics instead of the postmodern rendition."
+  },
+  "paper_direction": "A paper here would argue that the inference from the postmodern rendition's lack of certainty to the exclusive use of Pascal's wager depends on an undefended premise about the proper goal of apologetics. The thesis would be that the postmodern rendition need not be replaced by Pascal's wager if apologetics can legitimately aim at fostering curiosity and dialogue rather than at delivering certainty. The case would examine whether the activity of apologetics is essentially certainty-oriented, drawing on the Elias scenario to argue that ambiguity can be a pedagogical virtue rather than a defect. The strongest reply to anticipate is that apologetics by definition must offer the seeker a settled place to stand, so that withholding certainty undermines the activity itself; the paper would need to show either that this definition is stipulative and excludes legitimate apologetic practices, or that Pascal's wager does not in fact provide the unambiguous certainty required to sustain the contrast.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.5,
+   "scores": {
+    "coherence": 3,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "As framed this is a missing-premise observation that the author can patch in a sentence; it becomes a paper only if refocused on whether Pascal's wager itself supplies the certainty the contrast assumes."
+  },
+  "revision": {
+   "research_question": "Does the premise that Pascal's wager supplies certainty about its object survive scrutiny, and if it does not, does the comparison with the postmodern rendition still support replacing that rendition in apologetics?",
+   "paper_direction": "A paper here would argue that the case for using Pascal's wager in apologetics rests on a premise the argument has not yet earned: that Pascal supplies certainty about the object of the wager. The paper keeps two defects separate. Ambivalence is a feature of how a rendition presents its content, while lack of certainty is a feature of what it establishes, and the original draft ran them together. The paper concedes that the inference is enthymematic and that a referee can make it valid by adding an explicit premise about the goal of apologetics, namely that apologetics aims to give the seeker a settled place to stand. It does not rest its thesis on Elias's preference, which at most describes a different practice. Its main claim is that the added goal premise is not sufficient. The wager is a choice under acknowledged epistemic uncertainty: its decision-theoretic structure shows that wagering is rational given the stakes and the probabilities, but it does not by itself fix what the wager is about. The Pensées identify the object only through further argument, so the certainty attributed to Pascal in the remainder of the text belongs to that further argument and not to the wager's structure. The paper will read the wager's decision-theoretic form and the relevant passages of the Pensées closely to test whether the object is fixed by the wager or by later material, and it will show whether the object is determinate enough to supply the certainty the contrast needs. It will then identify which postmodern rendition is at issue. The referee's candidates are Caputo, Vattimo and Kearney, and the author must choose one and state its claims precisely before comparison. The comparison will test whether the postmodern rendition's lack of certainty really counts against it once Pascal's own certainty is shown to be conditional on premises that the wager does not supply. The conclusion is conditional: if Pascal's wager fails to fix its object, then the case for replacement does not follow, and the postmodern rendition may remain available for apologetic purposes that do not require certainty.",
    "assessment": {
     "grade": "not yet defensible",
     "overall": 2.25,
@@ -564,27 +344,27 @@
      "significance": 2,
      "specificity": 3
     },
-    "summary": "Not a viable paper as framed: it corrects a necessity claim the argument never made and offers a vacuous restriction, though there is a better paper nearby on whether the coherence argument reduces to evidential decision theory."
+    "summary": "As framed, this misidentifies its target and, in its central move, concedes the author's own claim. It is not yet a defensible paper, though retargeting it at whether the Pensées actually deliver determinate certainty about the wager's object could make it workable."
    }
   },
   "quality": 0.45,
-  "score": 0.324,
-  "tier": 2
+  "score": 0.306,
+  "tier": 1
  },
  {
-  "id": "brief-W2124966002.arg1.o11fa20",
-  "run_id": "run-oa-W2124966002",
-  "research_question": "Can the Jamesian doxastic‑venture model coherently accommodate the simultaneous phenomenology of absolute certitude and the presence of epistemic risk without requiring the believer to maintain reflective awareness of the claim’s unestablished status?",
+  "id": "brief-W3208436359.arg1.oc06a4d",
+  "run_id": "run-oa-W3208436359",
+  "research_question": "Does conservativeness over finite-valued decision problems suffice to establish surreal numbers as a foundation for transfinite decision theory, or must the surreal theory independently vindicate its strict preferences over gambles with infinitesimal probabilities?",
   "outcome": "revision_required",
-  "novelty": 0.45,
+  "novelty": 0.6,
   "records_searched": 2330,
   "survival": 0.8,
-  "paper_title": "Faith as doxastic venture",
+  "paper_title": "Surreal decisions",
   "challenged_premise": {
-   "id": "W2124966002.c031",
-   "text": "The Jamesian doxastic‑venture model supplies what is needed by treating faith as a passionally based tendency to believe and as believingly accepting an unestablished claim."
+   "id": "W3208436359.c010",
+   "text": "A decision theory framed entirely in Conway’s surreal numbers serves as a conservative extension of finitist EU theory."
   },
-  "paper_direction": "A paper here would argue that the Jamesian doxastic‑venture model can be salvaged only by articulating a two‑stage phenomenology: an initial risk‑laden commitment followed by a distinct, certitude‑filled state. It would reconstruct the argument to make explicit the premise that the venture’s risk resides in the act of committing before proof, while the later assurance is a post‑commitment affect that does not require ongoing awareness of epistemic contingency. The paper would anticipate Defender A’s temporal‑sequencing reply and Defender B’s objective‑status move, showing why each either preserves or undermines the venture’s phenomenological core. To succeed, the paper must provide a detailed phenomenological analysis (drawing on James and contemporary cognitive‑philosophical work) and, if possible, experimental data demonstrating that agents can feel absolute certitude after a risk‑bearing commitment without retaining conscious doubt about the claim’s evidential status.",
+  "paper_direction": "A paper here would argue that conservativeness over the finite fragment of expected utility theory is insufficient to justify surreal numbers as a foundation for transfinite decision theory, because the surreal theory's strict preferences over infinitesimal-probability gambles contradict finitist permissive verdicts without independent normative warrant. The case would focus on the Ann gamble, in which both options have finite expectations and finitist theory permits either choice, whereas surreal theory strictly prefers the option with an infinitesimally higher expectation. The strongest reply to anticipate is that finitist theory cannot express infinitesimal probabilities, so its tie is merely an artifact of expressive limitation rather than a verdict that a conservative extension must preserve. The paper would need to show that either this finitist permissiveness constitutes a binding constraint on any legitimate extension, or that surreal decision theory can supply a non-question-begging normative argument for why infinitesimally superior expectations should ground strict preference.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.25,
@@ -594,129 +374,85 @@
     "significance": 2,
     "specificity": 3
    },
-   "summary": "Not a paper as it stands: the incompatibility it sets out to fix comes from reading 'unestablished' de dicto and inflating 'certitude', and once those are corrected the dismissed Defender B reply answers the objection."
+   "summary": "As framed, a competent referee would dismiss this: the counterexample sits outside the finitist language, and the missing 'normative warrant' is plain weak dominance; only a reframed attack on the conservativeness-to-foundation inference, engaging the dominance and regularity literature, might yield a paper."
   },
   "revision": {
-   "research_question": "On a de re reading of the Jamesian doxastic-venture model, can believing a claim that is in fact evidentially unestablished yield the assurance, certitude and full belief that Christian faith is standardly taken to involve, without the believer needing to represent the claim as unestablished? And what does 'venture' amount to when its risk is not consciously represented?",
-   "paper_direction": "A paper here would argue that premise c031 should be read de re, as believing a claim that is in fact evidentially unestablished, and that on this reading the model supplies the passionally based tendency to believe and the believing acceptance that c031 requires without any occurrent first-person awareness of the claim's unestablished status. It would first examine James's and Bishop's texts to determine whether the model makes such awareness a condition of venturesome believing. The central claim depends on that examination. If the texts do require reflective awareness, the paper will concede that the objection holds against that version and will restrict its thesis to the de re reading as one the model can coherently adopt. It would then specify the state that c030 and c031 actually require, namely assurance, certitude and full belief. It will argue that this state is weaker than absolute, unshakable certitude and is compatible with acknowledged evidential shortfall, as on the traditional account of the certitude of faith. The venture is located in the believer's evidential situation: the commitment is made where the evidence does not settle the matter, and the risk is the real possibility of error that the commitment carries, whether or not that risk is represented. The two-stage phenomenology and the planned experimental support are dropped, since on the de re reading the two-stage structure is an unmotivated repair. The paper will address whether the move from risk to certitude is self-deception by asking whether the de re reading gives the believer any warrant for certitude that the evidence does not supply. The case rests on textual and conceptual analysis and does not depend on empirical claims about phenomenology.",
+   "research_question": "Does conservativeness over the finitist base language suffice to make Conway's surreal numbers a firm foundation for transfinite decision theory, or must the surreal theory independently warrant the verdicts it reaches only in its enriched language, such as strict preference over infinitesimal-probability gambles?",
+   "paper_direction": "A paper here would argue that conservativeness over the finitist base language does not, by itself, establish surreal numbers as a firm foundation for transfinite decision theory. The Ann case cannot refute the conservativeness claim as stated (c010), because finitist EU takes only real-valued probabilities as inputs, so the 'finitist tie' between X and Y is produced by rounding 1/omega to 0, a step outside the base theory. The paper therefore drops the claim that c010 is false and narrows its target to the unstated bridge premise (arg1.mp): that conservativeness plus expressive enrichment yields a firm foundation. It argues that the bridge fails because the enriched verdicts, including Y's strict preference over X, need warrant of their own. The paper takes the referee's proposed warrant seriously, namely weak dominance, which Y satisfies state by state. It then tests whether weak dominance can carry that burden. The test engages Chen & Rubio's treatment of infinitesimal probabilities, lexicographic expected utility (Hausner, Fishburn, Blume-Brandenburger-Dekel), and the regularity debate (Easwaran, Pruss, Williamson). The paper examines whether dominance-based strict preference conflicts with other surreal verdicts, and whether the regularity and lexicographic literatures that motivate infinitesimals already supply a non-question-begging principle or merely relocate the dispute. The paper's contribution is to show that foundational status requires an account of enriched verdicts beyond conservativeness, and to identify what that account must contain. It does not claim that surreal decision theory is refuted.",
    "assessment": {
-    "grade": "needs work",
-    "overall": 3.5,
+    "grade": "not yet defensible",
+    "overall": 3.0,
     "scores": {
      "coherence": 4,
-     "robustness": 3,
-     "significance": 3,
-     "specificity": 4
-    },
-    "summary": "There is a publishable paper here only if it is rebuilt around the claim that certitude as firm adherence is compatible with acknowledged evidential shortfall; the de re scope move, as the main thesis, would be quickly dismissed as making venture vacuous and as Defender B's reply in new clothing."
-   }
-  },
-  "quality": 0.7,
-  "score": 0.252,
-  "tier": 1
- },
- {
-  "id": "brief-W1784340735.arg1.od393fb",
-  "run_id": "run-oa-W1784340735",
-  "research_question": "How can a best‑possible‑world theological argument be reformulated to include non‑hedonic goods such as authentic relationships, agency, and achievement while still grounding the overall value ranking in divine appreciation of mathematical elegance?",
-  "outcome": "revision_required",
-  "novelty": 0.5,
-  "records_searched": 2340,
-  "survival": 0.8,
-  "paper_title": "A Theological Argument for an Everett Multiverse",
-  "challenged_premise": {
-   "id": "W1784340735.c008",
-   "text": "Total goodness of the world is the intrinsic value—pleasure minus suffering—of all conscious experiences."
-  },
-  "paper_direction": "A paper here would argue that the theological best‑possible‑world argument can be salvaged by constructing a composite axiological account that treats hedonic balance, authentic agency, relational depth, and artistic achievement as co‑intrinsic goods, and then shows how a divine appreciation of mathematical elegance provides a supervenient, non‑exhaustive source of additional value. The case would begin by formalizing a pluralistic value function, demonstrate that Worlds A and B illustrate the insufficiency of a pure pleasure‑minus‑suffering metric, and then integrate the divine aesthetic appreciation as a weighting factor that does not eclipse but complements creaturely goods. Anticipating Defender A’s concern, the paper would develop a principled account—perhaps via a divine‑valuational hierarchy or a relational‑aesthetic synthesis—explaining how God’s appreciation of elegance translates into increased worth for authenticity and achievement. To succeed, the paper must show that this enriched metric still permits the claim that the actual Everett‑multiverse world maximizes total goodness, and that the added complexity does not undermine the argument’s explanatory coherence.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.0,
-   "scores": {
-    "coherence": 2,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 2
-   },
-   "summary": "A familiar objection attached to a repair plan that, if carried out, would remove the reason the argument appeals to God at all; not yet a defensible paper."
-  },
-  "revision": {
-   "research_question": "On a hedonist axiology, can a divine conscious appreciation of mathematical elegance be the supplement that makes the actual world best, and can the experience-machine objection be answered without assuming that World B is better?",
-   "paper_direction": "A paper here would argue that the best-possible-world argument cannot keep its divine-appreciation step if value is pluralised, and that it survives only in a narrower form that keeps hedonism (c008) as its axiological base. The paper would first set out a dilemma. If authenticity, agency and achievement are intrinsic goods, creaturely goods can offset suffering in a soul-making pattern, so the inference from suffering to a deficit that only God's appreciation of elegance can fill (c009-c011) loses its motivation. If value is hedonic, the deficit inference holds, but the Worlds A and B case must be met on its merits. The paper would take the second horn. It would defend hedonism against the experience-machine case by engaging the status-quo bias reply and the reversed-machine reply (De Brigard) rather than assuming World B's superiority. It would then specify the mechanism that c008 requires: divine appreciation counts as a good only because it is a conscious experience, so it contributes to the hedonic total without any further account of how elegance raises the worth of other goods. The paper would drop the claim that divine appreciation translates into increased worth for authenticity and achievement. It would then treat the bridging premise from best world to God's existence as a separate section, since that premise is the argument's weakest point. The Everett branch-aggregation question would be stated as a dependency that the conclusion relies on and that this paper does not settle. The paper would position the narrowed argument against the best-world literature (Rowe, Kraay, Page) without claiming to refute or extend it.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.75,
-    "scores": {
-     "coherence": 3,
      "robustness": 2,
      "significance": 2,
      "specificity": 4
     },
-    "summary": "This is a tidy, well-organised plan, but its central move of counting God's pleasure in the hedonic total invites an obvious swamping-or-circularity objection that the proposal never confronts, so it is not yet a defensible paper."
+    "summary": "A clean, honest retreat from a failed counterexample, but the remaining thesis attacks a premise the authors never relied on and ignores their axiomatic justification, so in its current form it would not survive a referee familiar with Chen & Rubio and lexicographic EU."
    }
   },
-  "quality": 0.55,
-  "score": 0.22,
-  "tier": 2
+  "quality": 0.6,
+  "score": 0.288,
+  "tier": 0
  },
  {
-  "id": "brief-W2124966002.arg1.o897c06",
-  "run_id": "run-oa-W2124966002",
-  "research_question": "Does a normative account of Christian faith require belief with assurance or certitude, or can sub‑doxastic, assumption‑based faith be genuinely Christian?",
-  "outcome": "revision_required",
-  "novelty": 0.45,
-  "records_searched": 2340,
-  "survival": 0.8,
-  "paper_title": "Faith as doxastic venture",
-  "challenged_premise": {
-   "id": "W2124966002.c030",
-   "text": "An attenuated sub‑doxastic view of faith is too weak because Christian faith involves assurance, certitude, and belief rather than mere assumption."
-  },
-  "paper_direction": "A paper here would argue that the debate over the doxastic content of Christian faith hinges on whether assurance and certitude are normative desiderata or necessary conditions for authentic faith. It would first reconstruct the Jamesian doxastic‑venture model, emphasizing its claim that faith is a passionally motivated tendency to believe that may fall short of full certainty yet remains belief. The paper would then critically assess the revised premise suggested by the defenders, evaluating whether the tradition indeed treats assurance as a core requirement or merely an ideal. Anticipating the strongest defender reply—that the Jamesian model uniquely accommodates both the normative ideal and lived cases of sub‑doxastic believers—the paper would need to show either (a) that the Jamesian model fails to preserve the epistemic distinction between trust and belief, or (b) that an alternative model can account for the normative role of assurance without demanding full doxastic certainty. The argument would conclude by proposing a refined account of Christian faith that integrates normative desiderata with a spectrum of doxastic attitudes, thereby resolving the tension highlighted by Sarah's case.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.0,
-   "scores": {
-    "coherence": 2,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 2
-   },
-   "summary": "As it stands this would be rejected: the central case confuses lacking certitude with lacking belief, and the direction rehearses the existing doxastic vs. non-doxastic faith debate without a distinctive thesis."
-  },
-  "revision": {
-   "research_question": "Does the paradigm of Christian faith require belief held with assurance or certitude as a constitutive component, or can faith that operates as assumption without belief be genuinely Christian, if deficient?",
-   "paper_direction": "A paper here would argue that premise c030 should be restricted rather than rejected, and that the restriction changes what the Sarah case can show. The paper first fixes an independent criterion for a doxastic attitude: a subject believes p only if p functions for her as settled-true in theoretical and practical reasoning, and she revises p in belief's characteristic way when given counterevidence, treating not-p as a reason for surprise or inquiry. Self-report is evidence for this profile but does not settle it. An attitude adopted as a working assumption, used to guide practice without functioning as settled-true in theoretical reasoning, is non-doxastic by this criterion. Sarah's 'I trust, but I cannot claim to know' disclaims knowledge and certitude. Whether it also disclaims belief is a question the criterion answers, and the paper does not presuppose the answer. The paper then separates two readings of c030's 'too weak'. On the constitutive reading, any faith lacking a belief component is not faith at all. On the paradigm-normative reading, assurance and belief mark the standard against which faith is assessed, and a faith lacking them is deficient but still faith. The paper argues that the constitutive reading is refuted by any case that meets the non-doxastic criterion, and that the paradigm claim does not license it. The paradigm-normative reading survives, and it is the only reading on which the bishop's verdict of genuine but deficient faith is coherent. The thesis is therefore that c030 is false as a necessary-condition claim and true only as a claim about the paradigm, with the Sarah case refuting the first and leaving the second intact. The paper then engages the existing non-doxastic faith literature the referee identifies, to show what the criterion adds beyond the thesis that assurance is an ideal rather than a necessary condition. Its added content is a test that separates non-doxastic assumption from overbelief without knowledge, which the Jamesian model must pass to remain a rival account. If Sarah fails the test and is overbelieving, her case is compatible with c030, and the paper says so and rests on the paradigm reading.",
-   "assessment": {
-    "grade": "not yet defensible",
-    "overall": 2.75,
-    "scores": {
-     "coherence": 3,
-     "robustness": 2,
-     "significance": 2,
-     "specificity": 4
-    },
-    "summary": "A tidy but largely redundant paper: it refutes a reading of the premise Bishop does not hold and lands on his own view, so it needs to be redirected at the comparative step to c047 before it is worth writing."
-   }
-  },
-  "quality": 0.55,
-  "score": 0.198,
-  "tier": 2
- },
- {
-  "id": "brief-W3208436359.arg1.o061cdb",
+  "id": "brief-W3208436359.arg1.o825cfe",
   "run_id": "run-oa-W3208436359",
-  "research_question": "Can a decision‑theoretic framework based on Conway's surreal numbers provide well‑formed transfinite utility assignments in contexts where the set of possible outcomes is not a completed totality, such as under open theism?",
+  "research_question": "What normative work must a mathematical foundation for transfinite decision theory perform, and can surreal-number expected utility theory perform it once infinitesimal differences are detached from experientially realizable outcomes?",
   "outcome": "revision_required",
-  "novelty": 0.45,
+  "novelty": 0.65,
   "records_searched": 2330,
   "survival": 0.8,
   "paper_title": "Surreal decisions",
   "challenged_premise": {
-   "id": "W3208436359.c006",
-   "text": "Decision problems with transfinite utilities are no less sensible or well‑formed than those with only finite utilities."
+   "id": "W3208436359.arg1.r1",
+   "text": "Surreal-framed strict preferences over options whose expectations differ only by infinitesimal terms (such as 5 + 1/ω versus 5) correctly track genuine value differences, so the surreal verdicts added beyond the finitist fragment are normatively warranted."
   },
-  "paper_direction": "A paper here would argue that the claim that surreal numbers furnish a firm foundation for transfinite decision theory must be qualified by a set‑sized outcome‑space requirement. It would first reconstruct the original argument and the objection grounded in open theism, then evaluate the defenders' replies, showing that while they preserve well‑formedness under a static outcome set, they do not resolve the ontological obstacle posed by a non‑completed future. Anticipating the strongest defender response—that surreal utilities need not rely on a supremum—the paper would develop a formal account of assigning surreal utilities to individual outcomes without invoking a global maximum, and examine whether such an account can coexist with a probability measure over a proper class. The paper would conclude by demonstrating whether the revised premise (requiring a set‑sized, measurable outcome space) restores the conservativity of surreal EU or reveals deeper limits to transfinite decision theory in open‑theist contexts.",
+  "paper_direction": "A paper here would argue that surreal-number expected utility theory faces a foundational dilemma exposed by the hospital case: its strict preferences over infinitesimally separated options either must be grounded in actual, realizable outcomes, in which case the surreal machinery itself offers no way to identify which differences qualify, or they must be justified by the structural demands of completeness and dominance in an extended ordered field, in which case the theory severs the link between preference and welfare. The paper would develop the case that ranking 5 + 1/ω above 5 when no finite patient experiences any extra benefit undermines the normative warrant for surreal strict preferences, and would anticipate the reply that preserving dominance and structural rationality suffices to justify the ranking. What the paper would need to show is that either structural coherence can genuinely normatively compel strict preference without any realizable difference, or that a principled, non-arbitrary criterion can be embedded within the surreal framework to filter out artifactual infinitesimal differences without collapsing the theory into finitism.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.0,
+   "scores": {
+    "coherence": 2,
+    "robustness": 1,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "Reject in current form: the hospital case misattributes a stipulated utility assignment to the surreal framework, and a paper built on it would be dismissed by the first referee who knows that EU theories take utilities as given."
+  },
+  "revision": {
+   "research_question": "Can a surreal-number expected utility theory generate strict preferences from its own arithmetic, such as those arising from infinitesimal probabilities, that are normatively warranted when the utility inputs are fixed and shared across representations that agree on every finite outcome?",
+   "paper_direction": "A paper here would argue that the hospital case fails as a counterexample to surreal expected utility. It stipulates an infinitesimal utility for an outcome the case describes as valueless, and it relies on an infinite sum that surreal arithmetic does not define, so the verdict reflects a modeling error rather than the framework. The paper concedes this and narrows its thesis to a case the framework generates on its own terms: a decision in which the infinitesimal difference arises from the theory's probability arithmetic, for example when two options differ only by an infinitesimal probability of a finite benefit within a mixed strategy, while all utility inputs are fixed and identical. The argument is that in such a case the surreal verdict is not determined by the inputs, because the same inputs and the same finite outcomes admit surreal, hyperreal, and lexicographic representations that rank the options differently or leave them tied. Finite expected utility theory has no analogue of this. Once utilities are fixed, its verdicts are fixed, so the reply that the input is at fault does not transfer. The paper therefore claims that a strict surreal preference in this case is not normatively warranted by value differences, since no realizable difference in outcomes grounds it and its presence depends on a representational choice the decision problem does not supply. It then tests whether a non-arbitrary realizability criterion, requiring that an infinitesimal probability difference correspond to a difference in some realizable outcome distribution, can be stated within the surreal framework without collapsing it into finitism. If no such criterion is available, the thesis is that surreal strict preferences over infinitesimally separated options are underdetermined by value and should not be treated as decisive.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 3
+    },
+    "summary": "A reasonable target and a sensible concession, but the core argument rests on a contrast between input-generated and arithmetic-generated infinitesimals that does not survive scrutiny. It would need a genuinely specified case of model-divergent verdicts, grounded in the infinitesimal-probability literature, before it is worth writing."
+   }
+  },
+  "quality": 0.55,
+  "score": 0.286,
+  "tier": 1
+ },
+ {
+  "id": "brief-W4394980009.arg1.od4914e",
+  "run_id": "run-oa-W4394980009",
+  "research_question": "Does Pascal's Pensées provide a determinate object for the wager sufficient to ground apologetic certainty, given that fragments 418, 277, and 282 present calculation, the heart, and tradition as competing or incompatible routes to certainty?",
+  "outcome": "revision_required",
+  "novelty": 0.7,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Pascal’s Wager and Its Postmodern Counterpart",
+  "challenged_premise": {
+   "id": "W4394980009.c060",
+   "text": "Pascal is certain about where our certainty lies."
+  },
+  "paper_direction": "A paper here would argue that Pascal's Pensées does not provide the apologetic certainty about the wager's object that the argument requires, because the three fragments identified by the objector present not merely different routes to a single object but competing conceptions of what warrants commitment, with fragment 282's exclusivity undermining the compatibility of calculation and tradition as legitimate paths. The case would examine whether the object-level claims in the remainder of the Pensées genuinely settle whether the seeker wagers on the God of Scripture, the Christian God, or a way of life, or whether the unresolved tension among faculties bleeds into indeterminacy about the object itself. The strongest reply to anticipate is that Pascal's multiple epistemic paths are complementary means of persuasion converging on one unambiguous object, and that the exclusivity in fragment 282 concerns only the reliability of the route, not the identity of the object. To succeed, the paper would need to show that the object-level clarification in the Pensées is robust enough to survive the charge of underdetermination, or alternatively, that the competing routes imply contradictory conditions for what counts as wagering rightly, which would prevent the narrowed premise from doing the work the apologetic argument demands.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 1.75,
@@ -726,55 +462,231 @@
     "significance": 2,
     "specificity": 2
    },
-   "summary": "Not a paper as framed: the open-theist case bears equally on finite utilities and so cannot touch c006's comparative claim, and the potentially interesting question about class-sized outcome spaces in surreal EU is disconnected from the motivating objection."
+   "summary": "Reject in current form: the claimed three-way contradiction rests on miscited and misread fragments and ignores Pascal's own explicit integration of reason, custom and inspiration, and the salvageable core (indeterminacy of the wager's object) is the familiar many-gods problem unless it is sharpened considerably."
   },
   "revision": {
-   "research_question": "Does a decision theory framed in Conway's surreal numbers, with surreal-valued probabilities over an outcome space that may be a proper class, remain a conservative extension of finitist expected utility theory, and does any failure of that conservativity show that transfinite decision problems are less well-formed than finite ones?",
-   "paper_direction": "A paper here would argue that the open-theist objection does not establish any asymmetry between transfinite and finite decision problems, so c006 survives as a comparative claim, and that the real test of the surreal foundation lies elsewhere. It would first show that the open-theist worry is a parity worry: if open futures undermine a utility scale, they undermine Mia's finite-utility funding decision equally, since Savage-style small-world partitions over epistemic possibilities are well-defined under open theism. It would then reject the supremum premise on which the objection depends, showing that a surreal-valued utility need not be the supremum over all conceivable impacts. Having set the open-theist framing aside, the paper would turn to the class-sized outcome-space and measure problem directly against Chen and Rubio's surreal framework. It would identify the feature that the finite case lacks: whether a surreal-valued probability measure can be defined over a proper class of outcomes while preserving the finite-case axioms and conservativity. It would then test whether the set-sized outcome-space requirement is needed to restore conservativity, or whether the framework is well-formed without it. If no feature absent in the finite case is found, the paper concludes that c006 holds as a parity claim and that the open-theist case contributes nothing to the debate.",
+   "research_question": "Does the layered apologetic of the Pensées, in which reason, custom and inspiration are ordered as complementary means (L808/B245), fix a determinate object for the wager sufficient to ground apologetic certainty, or does the wager's object remain underdetermined in a way that differs from the many-gods problem?",
+   "paper_direction": "A paper here would argue that the premise that Pascal is certain about where certainty lies cannot carry the apologetic weight placed on it, but that a narrower question survives: whether the layered account of the Pensées fixes the object of the wager. The paper drops its earlier claim that Pascal's routes to certainty (calculation at L418, the heart at L110/B282, and tradition) are rival or incompatible. The textual case is rebuilt from fragments cited in a single edition (Lafuma), with Brunschvicg numbers given only as cross-references. The exclusivity claim previously attributed to a Brunschvicg fragment is withdrawn because no such text supports it. The paper engages L808/B245 and the order-of-the-heart scholarship (Mesnard, Sellier, Wetsel), which reads the faculties as hierarchically integrated. The central thesis is that the object question is separable from the faculty question. The faculty question asks what warrants commitment. The object question asks what the commitment is to, and the wager's stakes argument fixes only that some infinite good is at stake. The paper tests whether the practice-directed pointers (holy water, masses) that L418 offers pick out a single object, namely the God of Scripture, or whether custom leaves the object open to a way of life. The method for this test is to check, for each route, whether it individuates the object by its doctrinal content or by its practice, and then to see whether the object-level clarifications elsewhere in the Pensées settle the matter. This is distinct from the many-gods objection because the indeterminacy here arises from the wager's own expected-value structure, which specifies the payoff as infinite without specifying its bearer, and from the way the practice route presupposes an identified object. The paper argues that this is a narrower and testable claim, whose success condition is not self-defeating.",
    "assessment": {
     "grade": "not yet defensible",
-    "overall": 2.25,
+    "overall": 2.5,
     "scores": {
-     "coherence": 2,
+     "coherence": 3,
      "robustness": 2,
      "significance": 2,
      "specificity": 3
     },
-    "summary": "The open-theist rebuttal is too easy to carry a paper and the proposed real test is aimed at a feature transfinite decision theory does not need, so this would not survive a competent first reader without being rebuilt around a genuine finite/transfinite disanalogy."
+    "summary": "The corrected textual groundwork is welcome, but the surviving 'object indeterminacy' thesis is either answered by L418 and the surrounding apologetic or is the many-gods objection restated, so it is not yet a paper a referee would accept."
    }
   },
-  "quality": 0.45,
-  "score": 0.162,
+  "quality": 0.5,
+  "score": 0.28,
+  "tier": 2
+ },
+ {
+  "id": "brief-W2124966002.arg1.o11fa20",
+  "run_id": "run-oa-W2124966002",
+  "research_question": "What psychological structure must a Jamesian doxastic-venture model attribute to faith if the believer's occurrent phenomenology is one of absolute certitude rather than felt epistemic risk?",
+  "outcome": "revision_required",
+  "novelty": 0.6,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Faith as doxastic venture",
+  "challenged_premise": {
+   "id": "W2124966002.c031",
+   "text": "The Jamesian doxastic‑venture model supplies what is needed by treating faith as a passionally based tendency to believe and as believingly accepting an unestablished claim."
+  },
+  "paper_direction": "A paper here would argue that the Jamesian doxastic-venture model survives the objection from phenomenological certitude only by redefining the venture as the passional genesis of belief beyond evidence rather than as an occurrent psychological engagement with risk. The case would trace how both defenders are forced to concede that if 'unestablished' describes only the third-person evidential standing of the claim, the model no longer explains the experience of venturing, and that if the venture is instead located in the believer's implicit recognition of going beyond evidence, the model must demonstrate that this implicit structure is psychologically real and ethically defensible. The strongest reply to anticipate is that the will's commitment under live, evidentially unsettled options constitutes the venture even when the resultant state is one of assured certitude that eclipses its own origin. What the paper would need to show is that this genetic or causal conception of venture can still be distinguished from mere belief-formation, and that it can sustain the argument's conclusion that the model is phenomenologically superior without collapsing into an external description that the believer never inhabits.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.25,
+   "scores": {
+    "coherence": 2,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "As framed this would be returned. The core objection misreads 'accepting an unestablished claim' as 'accepting a claim as unestablished.' A narrower paper on whether the venture must be personal-level rather than merely etiological might be salvageable with serious engagement with Bishop and the voluntarism literature."
+  },
+  "revision": {
+   "research_question": "Can a Jamesian doxastic-venture model, read as the claim that faith is believing, passionally caused, of a claim not settled by the believer's total evidence, locate its 'venture' at the personal level in practical commitment while the believer's occurrent phenomenology is one of certitude, and does this mean the model is compatible with certitude without being phenomenologically superior?",
+   "paper_direction": "A paper here would argue that the objection from phenomenological certitude rests on a scope slide, but that the slide exposes a real gap in the argument's conclusion. The thesis is narrowed: c031 survives as the claim that faith is passionally caused belief in a proposition that is in fact unestablished by the believer's total evidence, and that this is distinct from assumption. The claim that the model is phenomenologically superior, which the lab supplied as an unstated bridge premise, is dropped from the argument. The paper's positive case has three parts. First, it distinguishes three readings of 'accepting an unestablished claim': (a) accepting the claim as unestablished, which is occurrent and does conflict with certitude; (b) accepting a claim that is unestablished in fact, with no occurrent awareness required; and (c) practical commitment, taking the claim as true in one's practical reasoning and acting on it at risk. The paper rejects (a) as the reading c031 needs and defends (b) and (c) against the objection. Second, it directly argues against the alternative that the venture is only a third-person evidential status or only a causal etiology. If 'venture' were merely a label for a causal history or for an evidential standing, it would be explanatorily idle, because it would do no work in distinguishing faith from any passionally caused belief. The paper therefore argues that the venture must be realized at the personal level. What makes this psychologically real without felt risk is a structural condition: the believer's practical reasoning treats the claim as held on grounds that exceed what the evidence settles, and the believer would, on reflection, accept that the evidence does not settle it, even though no such reflection is occurring in the state of certitude. Third, the paper separates certitude, a degree of psychological assurance, from evidential establishment, and argues that absolute certitude about an unestablished claim is coherent. It engages the literature on doxastic voluntarism and on faith and certitude directly, testing the account against Bishop's texts and the referee's specification of practical commitment, rather than against Pascal's Wager material. The paper's conclusion is that the Jamesian model can accommodate certitude as a phenomenology of faith, and that it does so without requiring that the phenomenology be better than its rivals.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 4
+    },
+    "summary": "A competent clarificatory note whose central move is already in Bishop, and whose new contribution, a dispositional personal-level venture condition, fails on exactly the certain believer the objection describes. Revise the venture condition before writing."
+   }
+  },
+  "quality": 0.55,
+  "score": 0.264,
   "tier": 1
  },
  {
-  "id": "brief-W3208436359.arg1.o96113c",
+  "id": "brief-W3208436359.arg1.o39f2d5",
   "run_id": "run-oa-W3208436359",
-  "research_question": "Can a decision theory grounded in Conway's surreal numbers consistently rank lotteries with transfinite outcomes while preserving dominance‑like and continuity intuitions, and if so what additional axioms or premises are required?",
+  "research_question": "Does the well-formedness of a transfinite decision problem require that every utility correspond to a determinate terminal outcome, or can mathematically specified limits of non-terminating processes serve as adequate relata in an expected utility framework?",
   "outcome": "revision_required",
-  "novelty": 0.45,
+  "novelty": 0.5,
   "records_searched": 2330,
   "survival": 0.8,
   "paper_title": "Surreal decisions",
   "challenged_premise": {
-   "id": "W3208436359.c001",
-   "text": "Expected utility theory is fruitful and elegant in the finite realm, but attempts to generalize it to infinite values have produced many paradoxes."
+   "id": "W3208436359.c006",
+   "text": "Decision problems with transfinite utilities are no less sensible or well‑formed than those with only finite utilities."
   },
-  "paper_direction": "A paper here would argue that while Conway's surreal numbers furnish a mathematically elegant extension of expected utility for finite lotteries, they do not automatically yield a satisfactory decision theory for transfinite‑outcome lotteries because the standard EU axioms fail to distinguish a sure infinite payoff from a probabilistic one. The thesis would propose a refined set of axioms—strengthening dominance and introducing an infinite‑risk sensitivity principle—that preserve the conservative finite‑lottery results while delivering a coherent ranking of transfinite prospects. The paper would anticipate Defender A's claim that the tie reflects only a representational limitation and would show that without the new axioms the surreal framework collapses intuitively relevant risk distinctions. It would then demonstrate, via constructive examples, that the augmented axiom system restores the expected ordering and thereby validates the claim that surreal numbers can serve as a firm foundation for transfinite decision theory, provided these extra premises are adopted.",
+  "paper_direction": "A paper here would argue that the well-formedness of transfinite decision problems requires a determinate terminal outcome for every utility assignment, and that using surreal numbers to label infinite-horizon processes conflates formal definability with genuine decision-theoretic well-formedness. The case would turn on the firefighter counterexample: because Plan B never yields a terminal world-state, the surreal value ω lacks a relatum in the state space, producing a formally calculable expectation that is not a well-formed decision matrix. The strongest reply to anticipate is that the target argument restricts itself to finite state spaces with determinate terminal outcomes, so the counterexample strikes only a broader formulation that the revised premise already abandons. To succeed, the paper would need to show either that this restriction is ad hoc and surrenders the ambition of a general transfinite decision theory, or that even within finite state spaces the shift from finite to surreal utilities introduces a discontinuity in outcome-determinacy that the surreal apparatus cannot bridge.",
   "assessment": {
    "grade": "not yet defensible",
-   "overall": 1.25,
+   "overall": 2.5,
    "scores": {
-    "coherence": 1,
-    "robustness": 1,
-    "significance": 1,
-    "specificity": 2
+    "coherence": 3,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
    },
-   "summary": "Not a viable paper: the entire direction depends on the false claim that 0.75·ω = ω in the surreals, which is precisely what surreal decision theory avoids, so the first competent reader would dismiss it."
+   "summary": "As framed, this would be dismissed quickly: it rests on an unargued potentialist requirement that outcomes be terminal states, a requirement standard decision theory rejects, and the student would need to defend that premise independently before there is a paper."
   },
   "revision": {
-   "research_question": "Given surreal-valued outcomes, which of the continuity (Archimedean) and dominance-style principles can a surreal expected-utility ranking satisfy when probabilities are restricted to the reals, and does satisfying them require admitting infinitesimal probabilities?",
-   "paper_direction": "A paper here would argue that surreal expected utility ranks sure infinite payoffs and their probabilistic counterparts correctly, so the earlier tie claim is withdrawn. The real pressure point is continuity. With real probabilities, any positive chance q of an infinite outcome omega exceeds the sure finite outcome 1, since q·omega is still infinite and therefore greater than 1, while 1 is strictly above 0. The Archimedean principle requires some real q with q·omega below 1 whenever omega is preferred to 1 and 1 to 0, and no such q exists, so the ranking violates continuity. The paper would show that this failure is a genuine structural cost of restricting probabilities to the reals, not an artifact of the arithmetic, and it would compare two repairs: admitting infinitesimal probabilities (which restores the Archimedean condition and is the choice that has to be justified), or keeping real probabilities and accepting the discontinuity. It would engage Chen and Rubio's 'Surreal Decisions' directly, and the surrounding literature (Hajek, Bartha, Pivato), on which probability domains are admissible and what each choice commits the theorist to. The thesis is limited to showing that the continuity question is open and depends on the probability domain, and it does not claim that surreal decision theory is incoherent or that new axioms are needed to fix a tie.",
+   "research_question": "Is a transfinite decision problem well-formed when each utility is assigned to a determinate outcome, whether that outcome is a complete history of a non-terminating process or a lexically specified good, and does the surreal framework respect that determinacy?",
+   "paper_direction": "A paper here would argue, in narrower form, that a transfinite decision problem is well-formed whenever every act maps every state to a uniquely determined outcome in the outcome space, and that this determinacy condition does not require a temporally terminal world-state. Outcomes may be complete histories of non-terminating processes, which are fully determinate even though they are never completed at any moment, or lexically specified goods to which a surreal utility is assigned directly. On this view the firefighter case is well-formed: Plan B's outcome is the complete trajectory fixed by the act, so its utility of ω attaches to a determinate relatum and the 'no terminus' objection fails. The terminal-state requirement is dropped because it would also invalidate finite-valued infinite-horizon theories such as discounted reward streams and infinite-horizon MDPs, which are accepted as well-formed. The paper then argues that surreal numbers can serve as the utility scale for such determinate outcomes, using the conservative-extension result for finitist expected utility theory to show that the transfinite assignments add no inconsistency to the finite theory. The paper concedes that a potentialist who denies that a complete infinite history is an actual outcome can reject the complete-history reading. The claim is therefore conditional: it holds within an actualist treatment of outcomes, and the potentialist question about actual infinities is treated as a separate metaphysical issue that the decision-theoretic thesis does not need to settle. The original general ambition is restricted to the class of transfinite problems with determinate outcomes, and the aggregative-limit source of infinite value is treated as one case within that class, not the whole of it.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 3.25,
+    "scores": {
+     "coherence": 4,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "There is a clear thesis here, but as planned it would be stopped by the first referee who asks why the infinite history is worth ω rather than any other infinite surreal, so it is not yet a defensible paper."
+   }
+  },
+  "quality": 0.65,
+  "score": 0.26,
+  "tier": 2
+ },
+ {
+  "id": "brief-W2124966002.arg1.o0fdac0",
+  "run_id": "run-oa-W2124966002",
+  "research_question": "Can the Jamesian doxastic-venture model claim phenomenological superiority over sub-doxastic rivals if faith’s assurance-laden core consists in an unstabilised passional tendency expressed through committed action rather than in settled belief?",
+  "outcome": "revision_required",
+  "novelty": 0.6,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Faith as doxastic venture",
+  "challenged_premise": {
+   "id": "W2124966002.arg1.r1",
+   "text": "The Jamesian model supplies what faith needs only where the passionally motivated tendency to believe is stabilised into believingly accepting the unestablished claim, and c031 should be restricted accordingly."
+  },
+  "paper_direction": "A paper here would argue that the Jamesian doxastic-venture model loses its claimed phenomenological superiority once the stabilisation condition is removed, because the revised, unstabilised account cannot distinguish faith from the attenuated sub-doxastic views it was meant to supplant. The case would centre on cases like Marta’s, where practical assurance is present without doxastic settlement, to show that assurance-in-action is insufficient to mark a distinctly doxastic venture and that c030’s requirement of belief and certitude is undermined rather than satisfied by dropping stabilisation. The strongest reply to anticipate is the revised premise that committed passional tendency alone constitutes faith’s assured core; the paper would need to show that this either tacitly reintroduces a form of acceptance equivalent to stabilised belief, or else concedes that the model collapses into a sub-doxastic hope account and therefore cannot claim phenomenological superiority over its rivals.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.25,
+   "scores": {
+    "coherence": 2,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "As framed, this would be dismissed quickly: it attacks an artificial revision of the premise and depends on running together 'unestablished by evidence' with 'not believed', so the student would need to rebuild it around a real criterion for belief before it is worth drafting."
+  },
+  "revision": {
+   "research_question": "On the Jamesian doxastic-venture model, does the assurance-laden core of Christian faith require believing acceptance in the practical-reasoning sense, and can an independent test distinguish such acceptance from hope in cases like Marta's?",
+   "paper_direction": "A paper here would argue that the stabilisation restriction in arg1.r1 misreads the doxastic-venture model, because on that model believing acceptance of an unestablished claim is taking p to be true in practical reasoning while recognising that the evidence does not settle p. The paper would therefore drop the claim that Marta's case falls outside the model's scope and would instead test whether her case falls inside it. It would give an independent criterion for the difference between believing acceptance and hope: believing acceptance treats p as a premise in practical and assertoric reasoning, so that the agent answers questions about p from p and reasons from it to conclusions such as what to say and do; hope takes the desired outcome as the object of motivation, with action conditioned on p without p functioning as a premise. Credence-level reports, such as 'I am not certain', are relevant evidence but do not settle which state is present, since the inferential role is what does the work. Applied to Marta, the criterion yields a split: her assertion to the family that she is sure, and her reasoning from the afterlife claim in her ministry, are believing-acceptance evidence, while her disavowal of certainty and her reluctance to treat p as settled are hope evidence. The paper would argue that the Marta-type case is a real test only if these two strands can be separated in an actual agent, and that where they cannot, the model is committed to classifying the agent as believing beyond evidence. The paper's claim about phenomenological superiority in c047 is withdrawn in favour of the narrower claim that assurance-laden faith, read through inferential role, is a doxastic venture rather than a sub-doxastic hope.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "A tidy acceptance-versus-hope criterion that leaves untouched the real problem, distinguishing doxastic venture from sub-doxastic acceptance, so the first competent reader would note that it reproduces Cohen's acceptance and send it back."
+   }
+  },
+  "quality": 0.5,
+  "score": 0.24,
+  "tier": 2
+ },
+ {
+  "id": "brief-W4220703499.arg1.o58586e",
+  "run_id": "run-oa-W4220703499",
+  "research_question": "Can the Grounding Principle be reformulated so that the truth of divine foreknowledge depends on libertarian free choices without rendering the divine essence contingent on creation?",
+  "outcome": "revision_required",
+  "novelty": 0.6,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Saving Eternity (and Divine Foreknowledge and Free Will): A Reply to Hasker",
+  "challenged_premise": {
+   "id": "W4220703499.c007",
+   "text": "The truth about, and knowledge of, a free choice depends upon that actual choice (Grounding Principle)."
+  },
+  "paper_direction": "A paper here would argue that the Grounding Principle can be reformulated with an explicit extrinsicness clause so that the truth of divine knowledge depends on creaturely free choices without compromising divine simplicity or aseity. The case would develop a metaphysics of eternalist divine cognition on which the truth-conditions of God's knowledge are fixed by temporal objects through a real relation of reason that leaves the divine essence intrinsically unchanged, drawing on the distinction between the content of knowledge and the ontological ground of the knower. The strongest reply to anticipate is that if God's knowledge is identical to His essence, any truth-conditional dependence on contingent acts necessarily renders the essence itself contingent, a challenge the paper must meet by showing that extrinsic relationality to contingent objects does not introduce contingency into the essence of a simple being. To succeed, the paper would need to show not merely that this distinction is coherent, but that it is already implicit in the eternalist framework and can be stated without collapsing into the very modal dependence the objector identifies.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.25,
+   "scores": {
+    "coherence": 2,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "This is a rediscovery of the existing extrinsic-model debate about simplicity and contingent knowledge, aimed at a premise whose truth it does not actually challenge; without engaging Grant and showing something specific to eternalist grounding, a competent reader would dismiss it."
+  },
+  "revision": {
+   "research_question": "On an eternalist, libertarian reading of the Grounding Principle, can the truth-conditions of divine foreknowledge depend on creaturely free choices without making the divine essence contingent? Does eternalism, rather than the simplicity problem as such, change how that dependence must be stated?",
+   "paper_direction": "A paper here would argue that, for the eternalist and libertarian Grounding Principle, the dependence of divine knowledge on a free creaturely act is a dependence of truth-value on the act, not of the divine essence on the act. The paper engages the existing extrinsic-model literature directly, including Grant's treatment of contingent truths under divine simplicity, rather than treating it as background. Its specific contribution concerns the eternalist, libertarian case. Grounding by God's own contingent creative will is an intra-divine dependence on a will that God freely exercises, so the essence is not made to depend on anything outside itself. Grounding by free creaturely acts is different. Those acts must be open under the Anselmian thesis, so the grounding relation cannot be read as causal or sequential. On an eternal view, God's knowing is not located before the act, so no temporal or causal dependence of the knower is available. The paper argues that the grounding relation must therefore be restricted to the propositional content of divine knowledge, and it states this with an extrinsicness clause. The clause specifies that the relation holds between a proposition about God's knowing and the creaturely act, and that it does not hold between the act and the divine knowing relation or essence. Conditional necessities of the form 'if X then X' are used to show that this truth-conditional dependence does not make the knowing relation contingent. The paper treats the generic simplicity worry, which also arises for knowledge of what God creates, as a distinct and prior problem. It addresses that worry through the extrinsic model and does not claim the eternalist framing solves it. The paper's claim is limited: eternalism and the libertarian reading of the Grounding Principle require a specific extrinsicness clause, and that clause is what allows foreknowledge to be reconciled with open choices, which bears on the reconciliation dispute with Hasker's objections.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "A competent reader would see this as the standard extrinsic-model answer to simplicity, relabelled as eternalist and libertarian without showing that those features matter, so it needs a real distinctive argument before it is a paper."
+   }
+  },
+  "quality": 0.5,
+  "score": 0.24,
+  "tier": 0
+ },
+ {
+  "id": "brief-W2995194683.arg1.o25a81e",
+  "run_id": "run-oa-W2995194683",
+  "research_question": "Can a uniformly two-boxing psychology in Newcomb's Problem satisfy cross-time coherence constraints without accepting the backtracking counterfactuals that the original argument claims are required?",
+  "outcome": "revision_required",
+  "novelty": 0.6,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "The philosopher’s paradox: How to make a coherent decision in the Newcomb Problem",
+  "challenged_premise": {
+   "id": "W2995194683.c004",
+   "text": "Psychological coherence requires certain backtracking counterfactuals to be true, which entail that choosing one box is the rational decision."
+  },
+  "paper_direction": "A paper here would argue that psychological coherence in Newcomb's Problem does not require the backtracking counterfactuals defended in the original argument, because a uniformly two-boxing psychology can satisfy cross-time coherence constraints without them. The case would develop the objector's observation that a stable two-boxing disposition—where the scan records a two-boxing state, later beliefs and intentions continue it, and the predictor's success is preserved—exhibits no unexplained cross-time disconnect, and that treating the scan as a fixed past event is standard problem setup rather than a question-begging assumption. The strongest reply to anticipate is that genuine coherence requires viewing the decision as an extended process nomically linked to the predictor's scan, so that regarding the choice as causally independent from the prior scan is a bare stance incompatible with the agent's evidence of the predictor's success. To succeed, the paper would need to show that the extended-process model either lacks independent motivation and illicitly presupposes the backtracking counterfactual, or that the standard causal reasoning about the sealed boxes constitutes a legitimate evidence-based defeater that coherence constraints cannot exclude without begging the question.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.5,
+   "scores": {
+    "coherence": 3,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "There is a paper-shaped idea here, but as framed it restates the two-boxer's intuition against a straw version of the coherence view and leaves the infallibility–counterfactual tension unanswered, so a competent referee would reject it without substantial rethinking."
+  },
+  "revision": {
+   "research_question": "Which notion of cross-time psychological coherence is at issue, and can an agent who believes the predictor's success is nomic or infallible, and who deliberates by holding the scan fixed, satisfy that coherence without accepting the backtracking counterfactual from the choice to the scan?",
+   "paper_direction": "A paper here would argue that the original claim, that psychological coherence requires certain backtracking counterfactuals, is too strong as stated, and that the defensible claim is narrower. Coherence is understood as the absence of contradiction among beliefs, desires, and intentions held across time, together with consistency between intention and action and between the agent's credences and the options it evaluates. On this notion, coherence alone does not force backtracking counterfactuals, because a two-boxing psychology can be internally consistent over time. The paper would then show where the real pressure lies. The belief in nomic or infallible prediction is a belief that the scan and the choice are nomically linked. Whether that link supports counterfactuals from the choice back to the scan, or only forward-tracking counterfactuals from the scan to the prediction, is the substantive question. The paper would argue that nomic success supports forward-tracking counterfactuals from the scan. A coherent agent can therefore accept infallibility while denying that the choice counterfactually fixes the scan, provided it concedes that under its own beliefs a one-box world is one in which the scan differs or the predictor errs. The paper would place this against the backtracking and causal decision theory literature (Lewis, Horgan, Spohn, Joyce), and would argue that the remaining cost is a stability cost, not a cross-time incoherence. The thesis is therefore that coherence constrains evaluation of options only through the agent's account of the scan-choice link, not through a fixed backtracking counterfactual.",
    "assessment": {
     "grade": "not yet defensible",
     "overall": 2.25,
@@ -784,11 +696,99 @@
      "significance": 2,
      "specificity": 3
     },
-    "summary": "Not a paper yet: the original objection was an arithmetic error, and the salvage repeats a known point that the target paper already accommodates, so the student needs to find a genuine cost in Chen and Rubio's surreal-probability axioms and aim it at c002 rather than c001."
+    "summary": "There is an obvious target here, but as framed the paper attacks a thinner notion of coherence than the argument uses and rests on an unmotivated, arguably incoherent asymmetry claim, so a competent referee would reject it without substantial rethinking."
    }
   },
   "quality": 0.45,
-  "score": 0.162,
+  "score": 0.216,
+  "tier": 2
+ },
+ {
+  "id": "brief-W4220703499.arg1.o3aeab4",
+  "run_id": "run-oa-W4220703499",
+  "research_question": "Can the modal fixity objection to eternalist reconciliations of divine foreknowledge and libertarian freedom be answered by adding a premise about the logical posteriority or cross-world contingency of God's eternal knowledge, or does eternal fixity remain incompatible with the power to do otherwise?",
+  "outcome": "revision_required",
+  "novelty": 0.5,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Saving Eternity (and Divine Foreknowledge and Free Will): A Reply to Hasker",
+  "challenged_premise": {
+   "id": "W4220703499.c025",
+   "text": "Positing God as eternal, with all time present to Him, best respects both divine foreknowledge and libertarian free will."
+  },
+  "paper_direction": "A paper here would argue that the modal fixity objection to eternalist reconciliations of divine foreknowledge and libertarian freedom can be answered by supplementing the Grounding Principle with a premise about the logical posteriority and cross-world contingency of God's eternal knowledge. The case would develop the defenders' revised claims—that God's eternal perception is grounded in the creature's choice and, though immutable within any single possible world, is contingent across possible worlds on that free choice—to show that eternal fixity is the consequence rather than the constraint of the creature's act. The strongest reply to anticipate is the objector's charge that grounding and logical priority are explanatory rather than modal relations, so that an eternally unalterable perception which necessarily entails the act still removes the power to do otherwise at the moment of choice. The paper would need to show that logical posteriority within God's eternal act genuinely leaves the creature's options open at T2 rather than merely redescribing a fixed eternal fact, and that the appeal to cross-world contingency does not presuppose the libertarian conclusion it is meant to defend.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.5,
+   "scores": {
+    "coherence": 3,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "This restates the traditional eternalist reply without confronting the timeless-knowledge transfer argument that defines the current debate. It is not publishable until it commits to rejecting a specific premise of that argument and defends that rejection."
+  },
+  "revision": {
+   "research_question": "Can the timeless-knowledge transfer argument be blocked by denying its first premise, that God's eternal belief is fixed relative to a temporal agent like an accidentally necessary past fact, on independent grounds, or does eternal fixity remain incompatible with the power to do otherwise?",
+   "paper_direction": "A paper here would argue that the transfer argument (Pike, Plantinga's 'On Ockham's Way Out', Zagzebski 1991, Hasker 1989) can be blocked by denying its first premise, that God's timeless belief is as fixed relative to Sarah at T2 as a past fact is. The paper abandons the earlier supplement of logical posteriority and cross-world contingency, because that move leaves premises (i) and (iii) untouched and so restates the Boethian and Anselmian position already held to be insufficient. The denial rests on the Grounding Principle (c007): the truth of God's belief depends on the actual choice, so the belief is not a hard fact that obtains independently of the agent's options at the time of choice. The paper defends this with a distinction between hard and soft facts. A soft fact is one whose unalterability relative to an agent is itself counterfactually dependent on that agent's act. Eternal beliefs are soft in this sense. The paper supports this with c019: the belief cannot be fixed at an earlier time, since S cannot be choosing before he is choosing. Rule Beta is granted in its proper modal scope, but it transfers necessity only from hard facts. The paper engages Rogers' Anselmian account on this point, using the open-options thesis (c006) as the test the soft-fact denial must meet. The conclusion is conditional: if the soft-fact denial can be independently motivated, eternalist reconciliation survives the transfer argument. If it cannot, the paper concedes that eternal fixity is incompatible with the power to do otherwise. Stump and Kretzmann, Leftow and Fischer serve as the standard rivals against which the soft-fact account is tested. The open-theist comparison is dropped, since open theism gives up exhaustive foreknowledge and cannot better respect both desiderata.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "A competent restatement of Ockhamist eternalism that runs straight into the hard-type soft fact objection without an answer; it is not yet a paper, and it needs a non-question-begging criterion of softness specific to timeless belief before it is worth writing."
+   }
+  },
+  "quality": 0.5,
+  "score": 0.2,
+  "tier": 1
+ },
+ {
+  "id": "brief-W4220703499.arg1.ocfad31",
+  "run_id": "run-oa-W4220703499",
+  "research_question": "Can an eternalist theory of time reconcile divine foreknowledge with libertarian freedom once deliberation is recognized as an extended activity of choosing, or does the Grounding Principle generate a fixed future that violates the open-options condition?",
+  "outcome": "revision_required",
+  "novelty": 0.5,
+  "records_searched": 2330,
+  "survival": 0.8,
+  "paper_title": "Saving Eternity (and Divine Foreknowledge and Free Will): A Reply to Hasker",
+  "challenged_premise": {
+   "id": "W4220703499.c019",
+   "text": "At T1 S cannot choose between A and B because he cannot be choosing before he is choosing."
+  },
+  "paper_direction": "A paper here would argue that reconciling divine foreknowledge with libertarian freedom on an eternalist theory of time requires recognizing deliberation as constitutive of choosing, which undermines the premise that an agent cannot be choosing before that agent is choosing. The case would draw on the extended-process model of agency to show that treating choosing as an activity unfolding over time makes the original c019 either false or question-begging, and would then press the dilemma that either God's eternal perception fixes the outcome during deliberation, violating the open-options condition, or it does not, rendering the prohibition on prior choosing redundant. The strongest reply to anticipate is that God's knowledge is grounded in the settled choice alone, not in the deliberative process, so the paper would need to show that this grounding relation still makes the eternal fact of God's knowledge prior to the choice in a way that collapses the distinction between logical posteriority and temporal fixity, thereby demonstrating that the eternalist reconciliation fails once deliberation is taken seriously.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.25,
+   "scores": {
+    "coherence": 2,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "As framed, a competent referee would dismiss this: it attacks a tautological premise on a misreading and then reasserts Hasker's objection while presupposing the temporal priority of eternity that Rogers denies."
+  },
+  "revision": {
+   "research_question": "Given that deliberation is an extended activity of choosing, does the Grounding Principle, together with an atemporal God whose knowledge is not located at any time, force the choice to become fixed at some time before it is made, and if so, does that violate the open-options condition or only the claim that T1 is a pre-choice time?",
+   "paper_direction": "A paper here would argue that the Maya case does not refute the premise at c019. Read as Rogers uses it, c019 says only that at a time before S's choice, S is not yet choosing, which is an instance of the internal necessity at c010 and is compatible with deliberation being an extended activity of choosing. The paper therefore concedes that c019 is true and drops the claim that it bans deliberation. The live question shifts to where settledness falls. If choosing is extended, there is a series of times within deliberation at which the choice is still open and a time at which it becomes actual. The paper would argue that the Grounding Principle at c007 makes the truth and knowledge of the choice depend on the actual choice, so the eternal knowledge of God is grounded in an event that occurs at a definite point in the deliberative sequence. It would then press the question whether the open-options condition at c006 requires that the choice be unsettled at every time before its occurrence, and whether the atemporalist can accept that settledness is a feature of the choice's own temporal profile, not of God's knowledge, without assuming that eternity is temporally prior to events. The paper would show that the answer depends on whether the grounding relation generates temporal fixity at any time within deliberation or only logical posteriority, and it would argue that the eternalist reconciliation survives only if the second holds. This is a narrower thesis than the original one, and it engages Hasker's priority objection and Rogers' reply directly rather than reconstructing Hasker's objection in new premises.",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "Drop the Maya strawman and the restated Boethian distinction; the only paper here is one that argues against Hasker that eternal knowledge cannot generate temporal fixity through its use or accessibility in time, and this proposal does not yet do that."
+   }
+  },
+  "quality": 0.5,
+  "score": 0.2,
   "tier": 2
  }
 ]
