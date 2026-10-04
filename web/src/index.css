@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F7F3EA;
+  --color-paper-deep: #EFE8D8;
+  --color-ink: #1F1B16;
+  --color-ink-soft: #5B544A;
+  --color-rule: #D9CFBC;
+  --color-misreading: #8A8580;
+  --color-known_answer: #3B6EA8;
+  --color-rebutted: #2F8F83;
+  --color-revision_required: #C98A1B;
+  --color-standing: #B03A2E;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html, body, #root { background: var(--color-paper); color: var(--color-ink); }
+body { font-family: var(--font-serif); -webkit-font-smoothing: antialiased; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}

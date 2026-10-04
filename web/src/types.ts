@@ -1,0 +1,338 @@
+// Data contract for web/public/data/*.json, written by crux_lab/export.py.
+// Mirrors crux_lab/graph/schema.py. Keep in sync with tests/test_export.py.
+
+export type Outcome = "misreading" | "known_answer" | "rebutted" | "revision_required" | "standing";
+export type ClaimKind = "premise" | "conclusion" | "assumption" | "objection" | "reply" | "open_question";
+
+export interface Claim {
+  id: string;
+  paper_id: string;
+  kind: ClaimKind;
+  text: string;
+  quote: string;
+  level: "fulltext" | "abstract" | "generated";
+}
+
+export interface Argument {
+  id: string;
+  paper_id: string;
+  title: string;
+  premise_ids: string[];
+  conclusion_id: string;
+  skeleton: string; // "f1; f2; ... |- c" (premise formulas in premise_ids order)
+  atoms: Record<string, string>;
+  valid: boolean | null;
+  missing_premise: string | null; // "text [formula]"
+  missing_premise_id: string | null;
+}
+
+export interface Edge {
+  src: string;
+  dst: string;
+  relation: "supports" | "attacks" | "replies_to" | "same_move" | "presupposes";
+}
+
+export interface Objection {
+  id: string;
+  argument_id: string;
+  target_premise_id: string;
+  kind: string; // thought_experiment | hidden_premise | tradition | naive_sharpened
+  text: string;
+  agent: string; // blind_thought_experimenter | hidden_premise_attacker | tradition_lens | naive_questioner+sharpener
+  model: string;
+  family: string;
+  depth: number;
+  tradition: string | null;
+  premise_fails_because: string;
+}
+
+export interface NearestMatch {
+  record_id: string; // claim id, "abs:<paper_id>" or "live:<paper_id>"
+  paper_id: string;
+  verdict: "same_move" | "related" | "different";
+  similarity: number;
+  quote: string;
+  title: string;
+}
+
+export interface Novelty {
+  objection_id: string;
+  restatements: { paper_vocabulary?: string; plain_english?: string; neighboring_tradition?: string };
+  novelty: number;
+  records_searched: number;
+  reranked: number;
+  live_openalex: string;
+  nearest: NearestMatch[];
+  matches: NearestMatch[];
+}
+
+export interface Turn {
+  exchange: number; // 0 = pre-screen, 1 = Defender A exchange, 2 = Defender B exchange
+  speaker: "defender_a" | "defender_b" | "attacker" | "referee";
+  phase: "prescreen" | "reply" | "rejoinder" | "close" | "label";
+  model: string;
+  family: string;
+  content: string;
+  cited_claim_ids: string[];
+  struck_claim_ids: string[];
+  concedes: boolean;
+  revised_premise: string | null;
+}
+
+export interface PerDefender {
+  outcome: Outcome;
+  rationale: string;
+  deciding_quote: string;
+  revised_premise: string | null;
+  verified: string[];
+  struck: string[];
+  model: string;
+  family: string;
+}
+
+export interface Trial {
+  id: string; // "trial-<objection_id>"
+  objection_id: string;
+  rounds: Turn[];
+  outcome: Outcome | null;
+  rationale: string;
+  deciding_quote: string;
+  cited_claim_ids: string[];
+  revised_premise: string | null;
+  per_defender: Record<string, PerDefender>;
+  status: "ok" | "failed";
+  error: string | null;
+}
+
+export interface QueueRow {
+  objection_id: string;
+  target_premise_id: string;
+  agent: string;
+  family: string;
+  depth: number;
+  S: number;
+  N: number;
+  C: number;
+  E: number;
+  priority: number;
+}
+
+export interface DirectorStep {
+  step: number;
+  queue: QueueRow[];
+  picked: string[];
+  note: string;
+}
+
+export type RunEvent =
+  | { t: number; type: "run_start"; run_id: string; target: string; argument_id: string }
+  | { t: number; type: "objection"; objection: Objection }
+  | { t: number; type: "naive_question"; question: string; sharpened: boolean }
+  | { t: number; type: "novelty"; objection_id: string; novelty: number; records_searched: number; nearest: NearestMatch[] }
+  | { t: number; type: "queue"; step: number; queue: QueueRow[]; picked: string[] }
+  | { t: number; type: "trial_start"; trial_id: string; objection_id: string }
+  | { t: number; type: "turn"; turn: Turn; trial_id?: string; objection_id?: string }
+  | { t: number; type: "trial_end"; trial_id: string; objection_id: string; outcome: Outcome | null; status: string }
+  | { t: number; type: "revised_premise"; id: string; text: string; from_trial: string }
+  | { t: number; type: "brief"; brief_id: string; objection_id: string }
+  | { t: number; type: "run_end"; stop_reason: string };
+
+export interface Target {
+  id: string;
+  paper_id: string;
+  kind: "fresh" | "classic" | "manual";
+  title: string;
+  authors?: string[];
+  year?: number | null;
+  published?: string | null;
+  url?: string;
+  thesis?: string;
+  reason: string;
+}
+
+export interface Run {
+  run_id: string;
+  target: Target;
+  started_at: string;
+  finished_at: string;
+  stop_reason: string;
+  argument: Argument;
+  claims: Record<string, Claim>; // this paper's claims incl. missing premise (".mp") and revised (".rN")
+  revised_premises: Record<string, string>;
+  dependence: Record<string, number>;
+  objections: Objection[];
+  novelty: Record<string, Novelty>;
+  trials: Trial[];
+  director_steps: DirectorStep[];
+  briefs: string[];
+  naive_questioner: { question?: string; sharpened?: string | null; error?: string }[];
+  families_used: string[];
+  models: Record<string, string>; // role -> "family:model"
+  generators: string[];
+  diversity: string;
+  events: RunEvent[];
+}
+
+export interface RunSummary {
+  run_id: string;
+  target_id: string;
+  kind: string;
+  title: string;
+  paper_id: string;
+  argument_title: string;
+  objections: number;
+  trials: number;
+  outcomes: Partial<Record<Outcome | "failed", number>>;
+  briefs: string[];
+  families: string[];
+  stop_reason: string;
+  finished_at: string;
+}
+
+export interface Index {
+  generated_at: string;
+  runs: RunSummary[];
+  targets: Target[];
+  briefs: number;
+  trials: number;
+  objections: number;
+  headline: { label: string; value: string; source: string }[];
+}
+
+export interface LiteratureRef {
+  record_id: string;
+  paper_id?: string;
+  title?: string;
+  authors?: string[];
+  year?: number | null;
+  url?: string;
+  verdict?: string;
+  similarity?: number;
+  quote?: string;
+}
+
+export interface Brief {
+  id: string;
+  objection_id: string;
+  research_question: string;
+  argument: {
+    id: string;
+    title: string;
+    paper_id: string;
+    paper_title: string;
+    premises: { id: string; text: string; quote: string }[];
+    missing_premise: { id: string; text: string } | null;
+    conclusion: { id: string; text: string };
+    skeleton: string;
+    valid: boolean | null;
+  };
+  challenged_premise: { id: string; text: string };
+  objection: string;
+  strongest_responses: { defender: string; response: string; why_it_failed: string }[];
+  closest_literature: LiteratureRef[];
+  novelty: number;
+  records_searched: number;
+  nearest: NearestMatch[];
+  open_questions: string[];
+  paper_direction: string;
+  outcome: Outcome | "";
+  disclaimer: string;
+}
+
+export interface BriefSummary {
+  id: string;
+  run_id: string | null;
+  research_question: string;
+  outcome: Outcome | "";
+  novelty: number;
+  records_searched: number;
+  survival: number;
+  paper_title: string;
+  challenged_premise: { id: string; text: string };
+  paper_direction: string;
+}
+
+export interface CorpusRecord {
+  id: string;
+  title: string;
+  authors: string[];
+  year: number | null;
+  url: string;
+  venue: string | null;
+  abstract: string;
+  source: string;
+  fresh: boolean;
+  published: string | null;
+}
+
+export interface ClaimsFile {
+  claims: Claim[];
+  arguments: Argument[];
+  edges: Edge[];
+}
+
+export interface ResultsFile {
+  e1: E1 | null;
+  e2: E2 | null;
+  e3: E3 | null;
+}
+
+export interface E1 {
+  n: number;
+  methods: { name: string; recall_at_5: number; hits: number }[];
+  settings: Record<string, unknown>;
+  models: Record<string, string>;
+  timestamp: string;
+  limits: string;
+}
+
+export interface E2 {
+  known_answer: { n: number; labelled_known_answer: number; correct_reply_cited: number };
+  misreading: { n: number; caught: number };
+  items: { kind: string; source_paper: string; outcome: string | null; correct: boolean }[];
+  settings: Record<string, unknown>;
+  models: Record<string, string>;
+  timestamp: string;
+  limits: string;
+}
+
+export interface E3 {
+  conditions: {
+    name: string;
+    n: number;
+    distinct_premises: number;
+    mean_pairwise_distance: number;
+    share_surviving: number | null;
+    share_novelty_gt_05: number;
+  }[];
+  settings: Record<string, unknown>;
+  models: Record<string, string>;
+  timestamp: string;
+  limits: string;
+}
+
+export interface About {
+  diversity: string;
+  families: string[];
+  roles: Record<string, unknown>;
+  models: { provider: string; model: string; family: string; ok: boolean }[];
+  targets_meta: Record<string, unknown>;
+  map_stats: Record<string, unknown>;
+  corpus: { records: number; with_abstract: number; full_texts: number; fresh: number };
+}
+
+export const OUTCOME_COLORS: Record<Outcome, string> = {
+  misreading: "#8A8580",
+  known_answer: "#3B6EA8",
+  rebutted: "#2F8F83",
+  revision_required: "#C98A1B",
+  standing: "#B03A2E",
+};
+
+export const OUTCOME_LABELS: Record<Outcome, string> = {
+  misreading: "Misreading",
+  known_answer: "Known answer",
+  rebutted: "Rebutted",
+  revision_required: "Revision required",
+  standing: "Standing",
+};
