@@ -117,10 +117,11 @@ async def run(client: LLMClient | None = None) -> dict:
     res_k = await asyncio.gather(*[guarded(i, it, "known") for i, it in enumerate(known)])
     res_m = await asyncio.gather(*[guarded(i, it, "misread") for i, it in enumerate(mis)])
     items = []
-    k_label = k_correct = 0
+    k_label = k_correct = k_gold_cited = 0
     for it, t in res_k:
         shorts = [p.split(":", 1)[-1] + "." for p in it["reply_papers"]]
         cited_right = any(c.startswith(sh) for c in t.cited_claim_ids for sh in shorts)
+        k_gold_cited += cited_right
         k_label += t.outcome == "known_answer"
         k_correct += t.outcome == "known_answer" and cited_right
         items.append({"kind": "known_answer", "source_paper": ", ".join(it["reply_papers"]),
@@ -136,7 +137,8 @@ async def run(client: LLMClient | None = None) -> dict:
                       "correct": t.outcome == "misreading", "status": t.status})
     data = {
         "experiment": "E2 gauntlet calibration", "n": len(items),
-        "known_answer": {"n": len(res_k), "labelled_known_answer": k_label, "correct_reply_cited": k_correct},
+        "known_answer": {"n": len(res_k), "labelled_known_answer": k_label, "correct_reply_cited": k_correct,
+                         "gold_reply_cited_by_a_defender": k_gold_cited},
         "misreading": {"n": len(res_m), "caught": caught},
         "items": items,
         "settings": {"argument": fx["title"], "fixture_note": fx["note"],
@@ -147,7 +149,9 @@ async def run(client: LLMClient | None = None) -> dict:
                      "gauntlet": "full: pre-screen, two defenders with retrieved literature, referee labels"},
         "models": model_ids(client, ["defender_a", "defender_b", "referee", "reranker"]) | {"misreading_writer": gen.label},
         "timestamp": stamp(),
-        "limits": ("Small n (10 + 10). Objections are LLM restatements of published claims, and the 'published reply' is "
+        "limits": ("correct_reply_cited counts items labelled known_answer whose verified citations include a gold "
+                   "reply paper; gold_reply_cited_by_a_defender counts items where a defender cited (verified) a claim "
+                   "from a gold reply paper, whatever the label. Small n (10 + 10). Objections are LLM restatements of published claims, and the 'published reply' is "
                    "chosen by retrieval + an LLM judge from abstract-level claims, so both the pairing and the gold reply are "
                    "model-made. A first version of this eval paired each objection with its own source paper as the 'reply' "
                    "(0/10 correct by construction) and was discarded. "
