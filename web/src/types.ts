@@ -267,6 +267,13 @@ export interface CorpusRecord {
   published: string | null;
 }
 
+/** titles.json: slim index used by /atlas (records.json carries the full record). */
+export interface TitleRecord {
+  id: string;
+  title: string;
+  year: number | null;
+}
+
 export interface ClaimsFile {
   claims: Claim[];
   arguments: Argument[];

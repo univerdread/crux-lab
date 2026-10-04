@@ -165,6 +165,9 @@ def main() -> dict:
             live.setdefault(w["id"], {**w, "source": "openalex_live"})
     records = {pid: _record(papers.get(pid) or live[pid]) for pid in sorted(needed) if pid in papers or pid in live}
     (out / "records.json").write_text(json.dumps(records, ensure_ascii=False))
+    # Slim title index for /atlas (it shows titles and years only; the record drawer loads records.json).
+    titles = {pid: {"id": pid, "title": r["title"], "year": r["year"]} for pid, r in records.items()}
+    (out / "titles.json").write_text(json.dumps(titles, ensure_ascii=False, separators=(",", ":")))
 
     results = {k: _read(RESULTS / f"{k}.json") for k in ("e1", "e2", "e3")}
     (out / "results.json").write_text(json.dumps(results, ensure_ascii=False, indent=1))

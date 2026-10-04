@@ -11,10 +11,10 @@ export function stripRecordPrefix(recordId: string): string {
 }
 
 /** Find the corpus record a claim id (or paper id) belongs to. Records are keyed by full paper id ("oa:W..."). */
-export function recordFor(
+export function recordFor<T = CorpusRecord>(
   idOrPaper: string,
-  records: Record<string, CorpusRecord> | undefined,
-): CorpusRecord | undefined {
+  records: Record<string, T> | undefined,
+): T | undefined {
   if (!records) return undefined;
   if (records[idOrPaper]) return records[idOrPaper];
   const stripped = stripRecordPrefix(idOrPaper);

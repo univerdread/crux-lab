@@ -7,11 +7,11 @@ import { BM25 } from "../lib/bm25";
 import { useJSON } from "../lib/data";
 import { excerpt, num } from "../lib/format";
 import { recordFor } from "../lib/ids";
-import type { Claim, ClaimsFile, CorpusRecord } from "../types";
+import type { Claim, ClaimsFile, TitleRecord } from "../types";
 
 export default function Atlas() {
   const claims = useJSON<ClaimsFile>("claims.json");
-  const records = useJSON<Record<string, CorpusRecord>>("records.json");
+  const records = useJSON<Record<string, TitleRecord>>("titles.json");
   const recs = records.status === "ready" ? records.data : undefined;
   return (
     <div className="mx-auto max-w-[1300px] px-4 py-10 sm:px-6">
@@ -30,7 +30,7 @@ export default function Atlas() {
   );
 }
 
-function AtlasView({ file, records }: { file: ClaimsFile; records?: Record<string, CorpusRecord> }) {
+function AtlasView({ file, records }: { file: ClaimsFile; records?: Record<string, TitleRecord> }) {
   const byId = useMemo(() => Object.fromEntries(file.claims.map((c) => [c.id, c])) as Record<string, Claim>, [file]);
   const papers = useMemo(() => new Set(file.claims.map((c) => c.paper_id)).size, [file]);
   const relCounts = useMemo(() => {
@@ -71,7 +71,7 @@ interface Hit {
   title?: string;
 }
 
-function MoveSearch({ claims, records }: { claims: Claim[]; records?: Record<string, CorpusRecord> }) {
+function MoveSearch({ claims, records }: { claims: Claim[]; records?: Record<string, TitleRecord> }) {
   const { openClaim } = useDrawer();
   const [q, setQ] = useState("");
   const [mode, setMode] = useState<"local" | "live">("local");
@@ -258,7 +258,7 @@ function ArgumentsSection({ file, byId }: { file: ClaimsFile; byId: Record<strin
 
 const PAGE = 60;
 
-function ClaimList({ claims, records }: { claims: Claim[]; records?: Record<string, CorpusRecord> }) {
+function ClaimList({ claims, records }: { claims: Claim[]; records?: Record<string, TitleRecord> }) {
   const { openClaim } = useDrawer();
   const [text, setText] = useState("");
   const [kind, setKind] = useState("all");
