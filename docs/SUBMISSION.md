@@ -16,13 +16,13 @@ In philosophy the debate is the experiment. Crux Lab runs it: it reads recent pa
 - **Measured:** prior-art recall@5 86% for the lab's pipeline vs 16% for keyword search (n=50); the Referee caught 10/10 deliberate misreadings; a defender cited the published reply in 7/10 known-answer cases (the Referee still labelled only 1/10 as known_answer); diversity ablation — plain prompt, one model: 1.8 distinct premises/argument, spread 0.114; constrained roles, one model: 2.4 distinct premises/argument, spread 0.224; constrained roles, mixed families: 2.6 distinct premises/argument, spread 0.213.
 
 ## Quality control
-An Assessor agent (a different model family from the brief writer) reads every research direction like a journal referee and grades coherence, robustness, significance and specificity; the grade is computed in code. Result: 14 not yet defensible of 14. The lab shows each direction's strongest objection and what a paper would need, rather than overselling its leads.
+An Assessor agent (a different model family from the brief writer) reads every research direction like a journal referee and grades coherence, robustness, significance and specificity; the grade is computed in code. Result: 14 not yet defensible of 14. The lab shows each direction's strongest objection and what a paper would need, rather than overselling its leads. A revision round then rewrote each direction to answer its strongest objection and re-graded it in a fresh read: 2 of 14 moved up a grade (to needs work) and the rest stayed not yet defensible, each with the next objection it must meet.
 
 ## Example output
-Top research direction: *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched.
+Top research direction: *Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?* — revision_required, novelty 0.45, 4139 records searched.
 
 ## Databricks
-Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1423 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
+Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1452 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
 
 ## Honest limits
 Model diversity degraded: 2 families; PhilArchive's OAI API was unavailable; evals are small and have no human labels; outcome labels are model judgements about the state of a debate, never verdicts on truth.

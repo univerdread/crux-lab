@@ -116,13 +116,20 @@ def main() -> None:
         src += " " + b["objection"] + " " + " ".join(r["content"] for r in trial.get("rounds", []))
         prose = " ".join([b["research_question"], b["paper_direction"], " ".join(b["open_questions"])] +
                          [r["response"] + " " + r["why_it_failed"] for r in b["strongest_responses"]])
+        if b.get("revision"):     # revision prose may also draw on the referee's critique it answers
+            r, q = b["revision"], b.get("assessment") or {}
+            prose += " " + " ".join([r["research_question"], r["paper_direction"], r["reply_to_strongest_objection"]])
+            src += " " + " ".join([q.get("strongest_objection", ""), q.get("what_it_needs", ""),
+                                   " ".join((q.get("reasons") or {}).values())])
         names = set()
         for sent in re.split(r"(?<=[.?!:;])\s+|\n+", prose):        # skip each sentence's first word
             words = sent.split()
             names |= {m.group(1) for w in words[1:] if (m := re.match(r"\(?([A-Z][a-z]{3,}(?:[-'][A-Z][a-z]+)?)", w))}
         for name in names - _COMMON:
             tot["names"] += 1
-            ok = name in src or name.removesuffix("'s") in src
+            dash = str.maketrans({"\u2013": "-", "\u2014": "-"})
+            src_n, name_n = src.translate(dash), name.translate(dash)
+            ok = name_n in src_n or name_n.removesuffix("'s") in src_n
             tot["names_ok"] += ok
             if not ok:
                 problems.append(f"{b['id']}: name '{name}' not in the paper or the trial")

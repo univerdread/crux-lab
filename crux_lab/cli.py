@@ -44,6 +44,11 @@ def _assess(a):
     asyncio.run(main())
 
 
+def _revise(a):
+    from crux_lab.lab.assess import main_revise
+    asyncio.run(main_revise())
+
+
 def _export(a):
     from crux_lab.export import main
     main()
@@ -108,6 +113,7 @@ def main(argv=None):
     rs.set_defaults(f=_runs)
     sub.add_parser("export").set_defaults(f=_export)
     sub.add_parser("assess").set_defaults(f=_assess)
+    sub.add_parser("revise").set_defaults(f=_revise)
     e = sub.add_parser("eval")
     e.add_argument("--only", default="")
     e.set_defaults(f=_eval)

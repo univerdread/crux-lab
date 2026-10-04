@@ -63,6 +63,17 @@ def main() -> None:
                 f"computed from coherence, robustness, significance and specificity): "
                 + ", ".join(f"{k} {v}" for k, v in sorted(tally.items(), key=lambda kv: -kv[1]))
                 + f" of {len(graded)}. Each brief shows the strongest objection to it and what the paper would need."]
+        revised = [b for b in graded if (b.get("revision") or {}).get("assessment")]
+        if revised:
+            after: dict[str, int] = {}
+            for b in revised:
+                g = b["revision"]["assessment"]["grade"]
+                after[g] = after.get(g, 0) + 1
+            up = sum(1 for b in revised if b["revision"]["assessment"]["overall"] > b["assessment"]["overall"])
+            down = sum(1 for b in revised if b["revision"]["assessment"]["overall"] < b["assessment"]["overall"])
+            out += ["", f"**Revision round** (each direction rewritten to answer its strongest objection, then re-graded "
+                    f"in a fresh read): " + ", ".join(f"{k} {v}" for k, v in sorted(after.items(), key=lambda kv: -kv[1]))
+                    + f" of {len(revised)} after revision; overall score up for {up}, down for {down}."]
     if briefs:
         out += ["", "**Top research directions** (survival × novelty, best per target first):", ""]
         for b in briefs[:5]:

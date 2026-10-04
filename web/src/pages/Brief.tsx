@@ -1,4 +1,4 @@
-import { QualityPanel } from "../components/Quality";
+import { QualityPanel, RevisionPanel } from "../components/Quality";
 import { useState } from "react";
 import { Link, useParams } from "react-router";
 import { VerdictTag } from "../components/NoveltyPanel";
@@ -151,6 +151,11 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
       {b.assessment ? (
         <div className="mt-6">
           <QualityPanel a={b.assessment} />
+        </div>
+      ) : null}
+      {b.revision ? (
+        <div className="mt-4">
+          <RevisionPanel r={b.revision} before={b.assessment} />
         </div>
       ) : null}
 

@@ -1,5 +1,89 @@
 [
  {
+  "id": "brief-W2575351351.arg1.oc4a9a4",
+  "run_id": "run-oa-W2575351351",
+  "research_question": "Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?",
+  "outcome": "revision_required",
+  "novelty": 0.45,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
+  "challenged_premise": {
+   "id": "W2575351351.c017",
+   "text": "Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable."
+  },
+  "paper_direction": "A paper here would argue that the many-goods response requires a net-of-overlap formulation and cannot rely on an unqualified aggregation of individually lesser goods. It would develop the case for comparing whole feasible histories, rather than merely counting named outcomes, while anticipating the strongest reply that shared dispositions and the intrinsic value of divine relationship make the goods non-additive or non-compensatory. To succeed, the paper would need to specify a defensible measure of non-duplicative value, defend the relevant counterfactual comparison with the God-relationship alternative, and identify a plausible bounded case in which the surviving package outweighs the lost relationship.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.5,
+   "scores": {
+    "coherence": 3,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "The objection mostly shows that one example double-counts, which a defender can easily absorb; the paper is worth writing only if it moves to the real commensurability and counterfactual questions and does substantive work on them."
+  },
+  "revision": {
+   "research_question": "Can a bounded period of nonresistant nonbelief generate a set of goods that is distinctive to nonbelief, where no feasible history within the relationship with God realizes those goods, and whose combined value, net of shared dispositional sources, exceeds the intrinsic value of the lost relationship?",
+   "assessment": {
+    "grade": "needs work",
+    "overall": 3.5,
+    "scores": {
+     "coherence": 4,
+     "robustness": 3,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "A writable and respectable refinement of the many-goods reply, but it will stand or fall on whether the distinctiveness test can avoid trivial fine-grained individuation and whether the value comparison is set up as bounded delay rather than total loss."
+   }
+  },
+  "score": 0.36,
+  "tier": 0
+ },
+ {
+  "id": "brief-W2072673546.arg1.o607d86",
+  "run_id": "run-oa-W2072673546",
+  "research_question": "Can Schellenberg’s analogy for P1 preserve a Vanstonean conception of vulnerable divine love while establishing that God is obligated, absent overriding reasons, to make voluntary relationship genuinely accessible?",
+  "outcome": "revision_required",
+  "novelty": 0.32,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "Some critical reflections on the hiddenness argument",
+  "challenged_premise": {
+   "id": "W2072673546.c064",
+   "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love."
+  },
+  "paper_direction": "A paper here would argue that the Elena analogy undermines the claim that Schellenberg’s analogical route distorts vulnerable love, because costly self-disclosure that leaves acceptance free can itself be a form of kenotic vulnerability. The case would then distinguish that limited result from the stronger claim that perfect love obligates God to make relationship genuinely accessible. The strongest reply to anticipate is that the analogy establishes only permissible availability and leaves divine overriding reasons unresolved. The paper would need to show either that vulnerable perfect love generates a defeasible obligation of accessibility, together with principled limits on overriding reasons, or that Schellenberg’s argument can proceed on a weaker, non-exceptionless analogue of P1.",
+  "assessment": {
+   "grade": "not yet defensible",
+   "overall": 2.5,
+   "scores": {
+    "coherence": 3,
+    "robustness": 2,
+    "significance": 2,
+    "specificity": 3
+   },
+   "summary": "A coherent but narrow point built on a disanalogous case: it needs a nonresistant-nonbeliever version of the example and a committed argument for obligation before it is a paper rather than a seminar response."
+  },
+  "revision": {
+   "research_question": "Can Schellenberg's analogical route for P1 preserve a Vanstonean conception of vulnerable divine love when the analogue is a nonresistant beloved who lacks belief that the lover exists, and if so, does this support only a defeasible obligation of accessibility rather than the exceptionless P1?",
+   "assessment": {
+    "grade": "needs work",
+    "overall": 3.5,
+    "scores": {
+     "coherence": 4,
+     "robustness": 3,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "A coherent, writable refinement that answers the distortion charge in principle, but it stands or falls on an undefended reading of Vanstone and concedes enough on P1 that its payoff is modest."
+   }
+  },
+  "score": 0.256,
+  "tier": 0
+ },
+ {
   "id": "brief-W7212186029.arg1.o10f4f4",
   "run_id": "run-oa-W7212186029",
   "research_question": "Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?",
@@ -23,6 +107,20 @@
     "specificity": 3
    },
    "summary": "There is a real question about whether a formal similarity-parthood relation captures what classical simplicity denies, but the copper-wire argument begs the question against constituent ontology and must be replaced by engagement with the traditional notion of metaphysical composition before this becomes a paper."
+  },
+  "revision": {
+   "research_question": "Can a similarity-relative parthood relation, with relevance criteria taken from the tradition's own criteria of metaphysical composition (subject and accident, potency and act), model the constituency that classical divine simplicity denies?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 3
+    },
+    "summary": "A reasonable adequacy question, but as proposed it defers its only real contribution and has not noticed that its traditional criteria presuppose a substance ontology that the property-fusion premise rejects; revise before writing."
+   }
   },
   "score": 0.736,
   "tier": 0
@@ -52,6 +150,20 @@
    },
    "summary": "There is a real issue here, but as framed it reruns the essential-indexical debate without engaging it and dodges the obvious reply that forming G's intention already requires de se self-ascription; pick a side, engage Perry and Cappelen–Dever, and say what is distinctive about the divine case."
   },
+  "revision": {
+   "research_question": "Does robust contrastive responsibility for actualising one world rather than another require irreducibly de se content in divine cognition, or can a rigid, de re representation of an agent's controlling intention and its act suffice when the agent's identity is not in doubt?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 3.0,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "There is a paper-shaped idea here, but its central claim that the divine case lacks an identity gap assumes the point at issue, and it would not survive a referee who knows Lewis's two-gods case until it shows how third-personal intention can guide action without self-location."
+   }
+  },
   "score": 0.704,
   "tier": 0
  },
@@ -79,6 +191,20 @@
     "specificity": 3
    },
    "summary": "The counterexample does not touch a generic claim, and the proposed aggregate-premise demand ends up supporting the argument's modest underdetermination conclusion; as stated, this is not a paper."
+  },
+  "revision": {
+   "research_question": "Does the apparent randomness of history, together with the absence of a directional moral signature, show that worldly evidence alone cannot decide between theism and naturalism? And can morally legible patterns produced by human culpability and power be separated from patterns that would bear on providence?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "This is a tidy repair of a weak premise, but it relocates rather than removes the unsupported aggregate claim and treats mutual accommodation as evidential parity, so the first competent reader would send it back."
+   }
   },
   "score": 0.528,
   "tier": 0
@@ -108,6 +234,20 @@
    },
    "summary": "A tidy but thin direction: as framed it misreads a modal premise and lands on a version of the standard necessity condition, so it needs a sharper target in the actual many-goods literature before it is a paper."
   },
+  "revision": {
+   "research_question": "Can a many-goods response to divine hiddenness count several goods arising from one person's nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil, when the measure of that evil does not presuppose a sensus divinitatis account?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 4
+    },
+    "summary": "A tidy accounting proposal that, by its own lights, vindicates the modal premise it set out to challenge; it needs to show that the goods doing the real outweighing are non-nested before it becomes an objection rather than a footnote."
+   }
+  },
   "score": 0.376,
   "tier": 0
  },
@@ -135,6 +275,20 @@
     "specificity": 3
    },
    "summary": "As written, this objection misreads the premise and ends up conceding it; there might be a modest paper on transfer conditions for parental-love analogies, but it would have to be reframed and positioned against substantial existing literature."
+  },
+  "revision": {
+   "research_question": "Can a grounds-based account of when withholding access from a beloved is a failure of care, drawn from particular vulnerable loving relationships, establish a context-sensitive duty for a perfectly loving God to make relationship accessible to nonresistant persons, and does that duty hold for every such person?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 4
+    },
+    "summary": "A clearly organised but ultimately modest proposal: it turns the objection into a grounds-based bridge principle, then sets aside the transfer-to-every-person question on which any defence of P1's analogical route depends, so a competent referee would call it incomplete as it stands."
+   }
   },
   "score": 0.336,
   "tier": 0
@@ -164,6 +318,20 @@
    },
    "summary": "A tidy distinction built on a case whose own stipulated intention concedes the point, and whose best outcome still leaves the de se conclusion standing; not yet a publishable paper."
   },
+  "revision": {
+   "research_question": "Does robust contrastive responsibility require the agent's cognition to contain a representation of the selected outcome, or of the agent's act, as the agent's own, and if an act-level self-representation is what is required, is that content irreducibly de se, so that the inference to irreducible de se divine cognition holds?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 3
+    },
+    "summary": "A tidy reframing that concedes the counterexample and then defers everything important to the existing de se debate; as it stands it is a literature-review-shaped conditional, not yet a publishable paper."
+   }
+  },
   "score": 0.688,
   "tier": 1
  },
@@ -192,23 +360,37 @@
    },
    "summary": "As framed, this restates textbook objections to bundle theory against a premise the argument only needs for a timeless God; it would need refocusing on the divine case, for example on circularity or on whether similarity-parthood really models instantiation, before it is a paper."
   },
+  "revision": {
+   "research_question": "Can similarity-based parthood, which permits mutual parthood, capture the instantiation relation between God and God's attributes, or does it yield only co-characterization? And does the symmetry formulation of divine simplicity survive once the parthood model is restricted to God's timeless essential properties?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 3.0,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "A workable topic with a clear structure, but its central dilemma ignores the defender's natural reply that collapsing the direction of predication is exactly what divine simplicity claims, and it must engage the Plantinga literature before it can stand."
+   }
+  },
   "score": 0.656,
   "tier": 1
  },
  {
-  "id": "brief-W2575351351.arg1.oc4a9a4",
+  "id": "brief-W2575351351.arg1.o4bf7f6",
   "run_id": "run-oa-W2575351351",
-  "research_question": "Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?",
+  "research_question": "Can a many-goods response to divine hiddenness establish that the goods arising during a bounded episode of nonresistant nonbelief outweigh the relationship-loss of that episode once goods that require additional duration or severity are counted as part of its cost?",
   "outcome": "revision_required",
-  "novelty": 0.45,
+  "novelty": 0.42,
   "records_searched": 4139,
   "survival": 0.8,
   "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
   "challenged_premise": {
-   "id": "W2575351351.c017",
-   "text": "Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable."
+   "id": "W2575351351.c014",
+   "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil."
   },
-  "paper_direction": "A paper here would argue that the many-goods response requires a net-of-overlap formulation and cannot rely on an unqualified aggregation of individually lesser goods. It would develop the case for comparing whole feasible histories, rather than merely counting named outcomes, while anticipating the strongest reply that shared dispositions and the intrinsic value of divine relationship make the goods non-additive or non-compensatory. To succeed, the paper would need to specify a defensible measure of non-duplicative value, defend the relevant counterfactual comparison with the God-relationship alternative, and identify a plausible bounded case in which the surviving package outweighs the lost relationship.",
+  "paper_direction": "A paper here would argue that a viable many-goods response must distinguish goods that warrant the duration and severity of an episode of nonresistant nonbelief from goods that are genuinely co-realized at no additional relationship-loss. The case would show why aggregating all goods associated with an episode overstates the response when some goods require the episode to become longer or more anguished. It would anticipate the strongest reply: that bounded episodes can contain several cost-free goods and that temporary loss may still be outweighed. It would need to show either that such independently bounded episodes can be specified and valued in a way that supports the defense, or that the dependence of an episode’s cost on its goods makes the required aggregate comparison unavailable.",
   "assessment": {
    "grade": "not yet defensible",
    "overall": 2.5,
@@ -218,9 +400,23 @@
     "significance": 2,
     "specificity": 3
    },
-   "summary": "The objection mostly shows that one example double-counts, which a defender can easily absorb; the paper is worth writing only if it moves to the real commensurability and counterfactual questions and does substantive work on them."
+   "summary": "A legitimate bookkeeping observation that misreads the modal strength of the challenged premise and does not yet answer the obvious net-value reply. It is not a paper until it argues that the bounding of episodes makes the aggregate comparison genuinely unavailable."
   },
-  "score": 0.36,
+  "revision": {
+   "research_question": "Can the aggregate comparison that a many-goods response needs, between the goods of a nonresistant nonbelief episode and its relationship-loss, be made determinate when some of those goods require the episode to be longer or more severe, so that the episode's cost is not fixed independently of the goods it is said to justify?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 3.0,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "A clearly framed but misdiagnosed project: the interdependence of goods and episode cost undermines per-good cost attribution, not the aggregate comparison, so the indeterminacy thesis needs rebuilding before this is a defensible paper."
+   }
+  },
+  "score": 0.336,
   "tier": 1
  },
  {
@@ -247,6 +443,20 @@
     "specificity": 3
    },
    "summary": "As framed, this targets a pursuit-based reading of P1 that Schellenberg does not hold, and its own proposed refinement collapses into his openness premise, so it needs to be rebuilt around whether vulnerable love entails openness to nonresistant persons before it is a paper."
+  },
+  "revision": {
+   "research_question": "Does a Vanstone-style conception of vulnerable divine love entail that God must keep relationship recognizably available to nonresistant nonbelievers, such as Tom, in the openness sense that Schellenberg's analogy requires, or does the analogy only hold for resistant refusal?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.25,
+    "scores": {
+     "coherence": 2,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "As written, this is a narrowed restatement of a misaimed objection: unless the student can show from Vanstone that vulnerable love does not require a recognizable offer, a competent referee will treat it as begging the question against P1."
+   }
   },
   "score": 0.32,
   "tier": 1
@@ -276,6 +486,20 @@
    },
    "summary": "A tidy observation that c011 sits badly with the argument's own theology, but as proposed it rehearses the skeptical-theism debate without engaging it and stays noncommittal on the one question that would make it a paper."
   },
+  "revision": {
+   "research_question": "Does a Molinist account of providence make the observed distribution of suffering evidentially neutral, or does it leave that distribution with an inscrutable likelihood that cannot settle a comparison with naturalism?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 3
+    },
+    "summary": "A tidy but largely familiar point about permission versus expectation that leaves its one novel claim, that naturalism makes no definite prediction, unargued, so a competent referee would send it back as not yet a paper."
+   }
+  },
   "score": 0.304,
   "tier": 1
  },
@@ -303,6 +527,20 @@
     "specificity": 3
    },
    "summary": "A clean counterexample to a carelessly worded premise, but it is easily repaired and does not reach the de se issue, so it would be dismissed as verbal unless rebuilt around whether source attribution can be non-de-se."
+  },
+  "revision": {
+   "research_question": "Does robust contrastive responsibility require irreducibly de se representation of the selected outcome, or is agent-relative source attribution, represented in non-de-se terms, enough; and does divine basic action change that answer?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 3.0,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 3,
+     "specificity": 4
+    },
+    "summary": "The headline counterexample is a wording point that the argument's other premises already fix, and the real project is a reworking of the old omniscience-and-indexicals debate that still needs a coherent account of non-de-se self-identification before it is a paper."
+   }
   },
   "score": 0.672,
   "tier": 2
@@ -332,63 +570,21 @@
    },
    "summary": "As framed, this is a logic-textbook observation dressed up as an objection to divine simplicity; it becomes a paper only if the author can show that similarity-relative parthood is independently liable to indeterminacy."
   },
+  "revision": {
+   "research_question": "Does the inference from God having no proper parts to God being part of all of God's parts require bivalence or determinacy for the similarity-relative parthood relation, and under which definitions of 'proper part' does that dependence arise?",
+   "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.75,
+    "scores": {
+     "coherence": 3,
+     "robustness": 2,
+     "significance": 2,
+     "specificity": 4
+    },
+    "summary": "A clearly organised but thin proposal: its core result is a standard fact about three-valued logic, and it becomes a paper only if the author can show the target account is genuinely committed to indeterminate divine parthood."
+   }
+  },
   "score": 0.656,
-  "tier": 2
- },
- {
-  "id": "brief-W2575351351.arg1.o4bf7f6",
-  "run_id": "run-oa-W2575351351",
-  "research_question": "Can a many-goods response to divine hiddenness establish that the goods arising during a bounded episode of nonresistant nonbelief outweigh the relationship-loss of that episode once goods that require additional duration or severity are counted as part of its cost?",
-  "outcome": "revision_required",
-  "novelty": 0.42,
-  "records_searched": 4139,
-  "survival": 0.8,
-  "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
-  "challenged_premise": {
-   "id": "W2575351351.c014",
-   "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil."
-  },
-  "paper_direction": "A paper here would argue that a viable many-goods response must distinguish goods that warrant the duration and severity of an episode of nonresistant nonbelief from goods that are genuinely co-realized at no additional relationship-loss. The case would show why aggregating all goods associated with an episode overstates the response when some goods require the episode to become longer or more anguished. It would anticipate the strongest reply: that bounded episodes can contain several cost-free goods and that temporary loss may still be outweighed. It would need to show either that such independently bounded episodes can be specified and valued in a way that supports the defense, or that the dependence of an episode’s cost on its goods makes the required aggregate comparison unavailable.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.5,
-   "scores": {
-    "coherence": 3,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "A legitimate bookkeeping observation that misreads the modal strength of the challenged premise and does not yet answer the obvious net-value reply. It is not a paper until it argues that the bounding of episodes makes the aggregate comparison genuinely unavailable."
-  },
-  "score": 0.336,
-  "tier": 2
- },
- {
-  "id": "brief-W2072673546.arg1.o607d86",
-  "run_id": "run-oa-W2072673546",
-  "research_question": "Can Schellenberg’s analogy for P1 preserve a Vanstonean conception of vulnerable divine love while establishing that God is obligated, absent overriding reasons, to make voluntary relationship genuinely accessible?",
-  "outcome": "revision_required",
-  "novelty": 0.32,
-  "records_searched": 4140,
-  "survival": 0.8,
-  "paper_title": "Some critical reflections on the hiddenness argument",
-  "challenged_premise": {
-   "id": "W2072673546.c064",
-   "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love."
-  },
-  "paper_direction": "A paper here would argue that the Elena analogy undermines the claim that Schellenberg’s analogical route distorts vulnerable love, because costly self-disclosure that leaves acceptance free can itself be a form of kenotic vulnerability. The case would then distinguish that limited result from the stronger claim that perfect love obligates God to make relationship genuinely accessible. The strongest reply to anticipate is that the analogy establishes only permissible availability and leaves divine overriding reasons unresolved. The paper would need to show either that vulnerable perfect love generates a defeasible obligation of accessibility, together with principled limits on overriding reasons, or that Schellenberg’s argument can proceed on a weaker, non-exceptionless analogue of P1.",
-  "assessment": {
-   "grade": "not yet defensible",
-   "overall": 2.5,
-   "scores": {
-    "coherence": 3,
-    "robustness": 2,
-    "significance": 2,
-    "specificity": 3
-   },
-   "summary": "A coherent but narrow point built on a disanalogous case: it needs a nonresistant-nonbeliever version of the example and a committed argument for obligation before it is a paper rather than a seminar response."
-  },
-  "score": 0.256,
   "tier": 2
  }
 ]

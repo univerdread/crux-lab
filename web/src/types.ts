@@ -227,6 +227,17 @@ export interface Assessment {
   assessed_at?: string;
 }
 
+export interface Revision {
+  research_question: string;
+  paper_direction: string;
+  reply_to_strongest_objection: string;
+  what_changed: string;
+  narrowed: boolean;
+  model?: string;
+  revised_at?: string;
+  assessment?: Assessment | null;
+}
+
 export interface Brief {
   id: string;
   objection_id: string;
@@ -253,6 +264,7 @@ export interface Brief {
   paper_direction: string;
   outcome: Outcome | "";
   assessment?: Assessment | null;
+  revision?: Revision | null;
   disclaimer: string;
 }
 
@@ -270,6 +282,10 @@ export interface BriefSummary {
   score?: number; // survival x novelty
   tier?: number; // 0 = best direction for its target paper, 1 = second, ...
   assessment?: Pick<Assessment, "grade" | "overall" | "scores" | "summary"> | null;
+  revision?: {
+    research_question: string;
+    assessment: Pick<Assessment, "grade" | "overall" | "scores" | "summary"> | null;
+  } | null;
 }
 
 export interface CorpusRecord {

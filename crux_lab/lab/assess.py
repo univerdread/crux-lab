@@ -90,6 +90,94 @@ async def assess_brief(client: LLMClient, spec: ModelSpec, b: Brief) -> dict | N
             "model": spec.label, "assessed_at": datetime.now(timezone.utc).isoformat()}
 
 
+class ReviseOut(BaseModel):
+    research_question: str
+    paper_direction: str = Field(description='starts with "A paper here would argue"')
+    reply_to_strongest_objection: str = Field(description="how the paper answers the referee's objection, max ~150 words")
+    what_changed: str = Field(description="one sentence: what the revision changed")
+    narrowed: bool = Field(description="true if the thesis had to be narrowed because the objection was decisive")
+
+
+def reviser_spec(client: LLMClient, assessor: ModelSpec) -> ModelSpec:
+    """A writer that is not the Assessor model (ideally another family)."""
+    for s in client.generator_specs():
+        if s.label != assessor.label and s.provider in ("claude_cli", "codex_cli") and settings.has(s.provider):
+            if s.family != assessor.family:
+                return s
+    if settings.has("claude_cli"):
+        return ModelSpec("claude_cli", "sonnet", "anthropic", "high")
+    return client.spec_for("defender_a")
+
+
+def _validate_revision(o: ReviseOut) -> str | None:
+    if not o.paper_direction.strip().startswith("A paper here would argue"):
+        return 'paper_direction must start with "A paper here would argue"'
+    if len(o.reply_to_strongest_objection.split()) < 25:
+        return "say in full how the paper answers the objection (at least a few sentences)"
+    return None
+
+
+async def revise_brief(client: LLMClient, spec: ModelSpec, b: Brief) -> dict | None:
+    a, q = b.argument, b.assessment or {}
+    premises = "\n".join(f"{p['id']}: {p['text']}" for p in a["premises"])
+    if a.get("missing_premise"):
+        premises += f"\n{a['missing_premise']['id']} (unstated, found by the lab): {a['missing_premise']['text']}"
+    argument = f"{premises}\nTherefore {a['conclusion']['id']}: {a['conclusion']['text']}"
+    system, user = render("reviser", area=TOPIC.get("area", "philosophy"), paper_title=a.get("paper_title", ""),
+                          argument=argument, target_id=b.challenged_premise["id"],
+                          target_text=b.challenged_premise["text"], objection=b.objection,
+                          question=b.research_question, direction=b.paper_direction,
+                          strongest=q.get("strongest_objection", ""),
+                          reasons="\n".join(f"- {k}: {v}" for k, v in (q.get("reasons") or {}).items()),
+                          needs=q.get("what_it_needs", ""))
+    out, _ = await client.json("reviser", user, ReviseOut, system, spec=spec, validate=_validate_revision,
+                               max_tokens=3000)
+    if not out:
+        return None
+    return {**out.model_dump(), "model": spec.label, "revised_at": datetime.now(timezone.utc).isoformat()}
+
+
+async def main_revise() -> None:
+    """Revision round: rewrite each assessed direction to answer its strongest objection, then re-grade it
+    from scratch (the Assessor does not see its earlier critique). Both grades are kept."""
+    client = LLMClient()
+    assessor = assessor_spec(client)
+    writer = reviser_spec(client, assessor)
+    store = Store()
+    objections = {}
+    for f in RUNS.glob("run-*.json"):
+        for o in json.loads(f.read_text())["objections"]:
+            objections[o["id"]] = Objection(**o)
+    files = sorted(BRIEFS.glob("brief-*.json"))
+    sem = asyncio.Semaphore(4)
+
+    async def one(f):
+        b = Brief.model_validate_json(f.read_text())
+        if not b.assessment:
+            return f.stem, None, None
+        async with sem:
+            rev = await revise_brief(client, writer, b)
+            if not rev:
+                return f.stem, None, None
+            revised = b.model_copy(update={
+                "research_question": rev["research_question"],
+                "paper_direction": rev["paper_direction"] + "\n\nHow the paper answers the main objection: "
+                + rev["reply_to_strongest_objection"]})
+            again = await assess_brief(client, assessor, revised)
+        rev["assessment"] = again
+        b = b.model_copy(update={"revision": rev})
+        f.write_text(b.model_dump_json(indent=2))
+        f.with_suffix(".md").write_text(to_markdown(b, objections.get(b.objection_id)))
+        store.put(b)
+        return f.stem, b.assessment, again
+
+    for bid, before, after in await asyncio.gather(*[one(f) for f in files]):
+        if after:
+            print(f"{bid}: {before['grade']} {before['overall']} -> {after['grade']} {after['overall']} {after['scores']}")
+        else:
+            print(f"{bid}: revision FAILED")
+
+
 async def main() -> None:
     client = LLMClient()
     spec = assessor_spec(client)

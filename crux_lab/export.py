@@ -191,9 +191,17 @@ def main() -> dict:
                        "challenged_premise": b["challenged_premise"],
                        "paper_direction": b["paper_direction"],
                        "assessment": ({k: b["assessment"][k] for k in ("grade", "overall", "scores", "summary")}
-                                      if b.get("assessment") else None)})
+                                      if b.get("assessment") else None),
+                       "revision": ({"research_question": b["revision"]["research_question"],
+                                     "assessment": ({k: b["revision"]["assessment"][k]
+                                                     for k in ("grade", "overall", "scores", "summary")}
+                                                    if b["revision"].get("assessment") else None)}
+                                    if b.get("revision") else None)})
     # Directions the Assessor judged not yet defensible go after the others (each group keeps its ranking).
-    weak = [b for b in briefs if (b.get("assessment") or {}).get("grade") == "not yet defensible"]
+    def latest_grade(b: dict) -> str | None:
+        rev = (b.get("revision") or {}).get("assessment")
+        return (rev or b.get("assessment") or {}).get("grade")
+    weak = [b for b in briefs if latest_grade(b) == "not yet defensible"]
     briefs = rank_directions([b for b in briefs if b not in weak]) + rank_directions(weak)
     (out / "briefs.json").write_text(json.dumps(briefs, ensure_ascii=False, indent=1))
 

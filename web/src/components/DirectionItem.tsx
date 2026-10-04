@@ -24,9 +24,16 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
         {brief.paper_direction ? (
           <p className="measure text-[1.02rem] leading-relaxed text-ink">{long ? brief.paper_direction : excerpt(brief.paper_direction, 340)}</p>
         ) : null}
-        {brief.assessment?.summary ? (
+        {brief.revision?.research_question ? (
+          <p className="measure mt-2 text-[0.95rem]">
+            <span className="smallcaps mr-1 text-ink-soft">revised</span>
+            {brief.revision.research_question}
+          </p>
+        ) : null}
+        {(brief.revision?.assessment?.summary ?? brief.assessment?.summary) ? (
           <p className="measure mt-2 border-l-2 border-ink pl-3 text-[0.92rem] italic text-ink-soft">
-            Assessor: {brief.assessment.summary}
+            Assessor{brief.revision?.assessment ? " (after revision)" : ""}:{" "}
+            {brief.revision?.assessment?.summary ?? brief.assessment?.summary}
           </p>
         ) : null}
         <p className="measure text-[0.92rem] text-ink-soft">
@@ -51,8 +58,17 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
         {brief.assessment ? (
           <>
             <dt className="smallcaps text-ink-soft">quality</dt>
-            <dd>
-              <GradeChip grade={brief.assessment.grade} overall={brief.assessment.overall} />
+            <dd className="flex flex-wrap items-center gap-1">
+              {brief.revision?.assessment ? (
+                <>
+                  <GradeChip grade={brief.revision.assessment.grade} overall={brief.revision.assessment.overall} />
+                  <span className="font-mono text-[0.66rem] text-ink-soft" title="grade before the revision round">
+                    was {brief.assessment.grade}
+                  </span>
+                </>
+              ) : (
+                <GradeChip grade={brief.assessment.grade} overall={brief.assessment.overall} />
+              )}
             </dd>
           </>
         ) : null}

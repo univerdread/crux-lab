@@ -161,5 +161,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.199245+00:00"
   },
+  "revision": {
+    "research_question": "Can similarity-based parthood, which permits mutual parthood, capture the instantiation relation between God and God's attributes, or does it yield only co-characterization? And does the symmetry formulation of divine simplicity survive once the parthood model is restricted to God's timeless essential properties?",
+    "paper_direction": "A paper here would argue that the parthood model of instantiation fails in the one domain where the divine-simplicity argument needs it, so the symmetry formulation can be stated but not grounded as a claim about instantiation. The paper drops the lamp-change case. Its target is the timeless divine case. It takes the premise under discussion in its restricted form: for God's essential properties, instantiation may be modelled as parthood. It then tests whether similarity-based parthood, as defined so that proper parthood is irreflexive, asymmetric and transitive for ordinary objects, and as permitting mutual parthood between God and omniscience while they remain numerically distinct, still expresses instantiation. Instantiation is directed: God is the bearer of omniscience, and not conversely. Mutual parthood makes the relation symmetric on the pair. The paper argues that the model therefore delivers co-characterization, a symmetric relation of shared characterization, unless it adds a direction-marking condition. Any such condition is a new primitive, and the paper shows that adding it either reintroduces the asymmetry that the symmetry formulation was meant to deny or leaves the relation without a principled ground. The paper also tests a second horn: whether defining proper parthood through similarity presupposes the simplicity thesis, because treating God's attributes as parts is only a substantive claim if the similarity relation is specified independently of the claim that God has no proper parts. The paper engages Paul's mereological bundle theory as the strongest version of the unrestricted view. It grants that Paul's acceptance of overlap through shared universals and the standard replies to change are coherent for ordinary objects. Its claim is that these replies do not transfer to God, since in the divine case the problem is directionality and not persistence. The paper concludes that the symmetry formulation is coherent as a formal thesis, but that the argument for it from instantiation-as-parthood is unsound unless the directionality problem is solved independently of the simplicity thesis.",
+    "reply_to_strongest_objection": "The referee is right that the lamp case does not touch the timeless divine application, so the paper drops it and presses the objection at the point where it bites in that case. The paper uses one distinction: instantiation is directed, while the mutual-parthood clause of the similarity model is symmetric. The argument for the symmetry formulation needs a relation that holds from God to God's parts and fails in the reverse direction, and the model only supplies a relation that can hold both ways. The paper replies that bundle-theoretic responses to change and overlap do not address this, because they concern persistence and identity, not the direction of predication. It then shows that adding a direction-marking condition either reintroduces asymmetry the formulation was meant to avoid or depends on the simplicity thesis for its specification. The paper therefore does not rely on the unrestricted premise the referee identifies as too broad.",
+    "what_changed": "The revision drops the lamp-change objection and narrows the paper to the timeless divine case, where it argues that similarity-based mutual parthood yields co-characterization rather than instantiation and so cannot ground the symmetry formulation without an independent directionality condition.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:15:55.418617+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 3.0,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 3,
+        "specificity": 4
+      },
+      "reasons": {
+        "coherence": "The restricted target (instantiation as parthood for God's essential properties) is a fair reading of c013 as the argument uses it, but the plan wrongly says the argument needs a relation holding from God to God's parts and failing in reverse, when the formulation explicitly asserts mutual parthood, so the aim is muddled at its central step.",
+        "robustness": "The obvious bite-the-bullet reply, that loss of direction in God's case is just what simplicity asserts, is not anticipated; the dilemma about direction-marking conditions assumes the defender must restore direction.",
+        "significance": "If it succeeded, it would show that the mereological route to simplicity cannot ground the formulation in a theory of instantiation, a useful refinement, though close to existing Plantinga-style objections.",
+        "specificity": "There is a definite thesis, a clear case (God and omniscience), two named horns, and a named interlocutor (Paul), though the second horn about circularity in specifying similarity is only gestured at."
+      },
+      "strongest_objection": "The directionality problem is plausibly a feature of the view rather than a refutation of it. The symmetry formulation is meant to say that in God's case the bearer/attribute asymmetry collapses: God is God's omniscience, as Aquinas has it. A defender can therefore accept that, for God, parthood-modelled instantiation becomes co-characterization, while for ordinary objects the asymmetric proper-parthood clause keeps the direction intact. If so, the paper's dilemma (add a direction-marking primitive or lose instantiation) has a third horn: no direction is needed in the divine case. This is also a rerun of Plantinga's 'God is a property' objection, so the paper must say what it adds beyond that debate and its standard replies (Brower's truthmaker account, Bergmann and Brower).",
+      "reply_available": false,
+      "what_it_needs": "The paper must show why instantiation has to remain directed even in the divine case. One route is to show that predication of God (e.g. 'God knows') becomes ill-formed or explanatorily idle under mutual parthood, without simply assuming the anti-simplicity intuition. It must also position the argument against Plantinga's objection and the truthmaker replies, and drop the misstatement that the symmetry formulation needs a relation that fails in the reverse direction.",
+      "summary": "A workable topic with a clear structure, but its central dilemma ignores the defender's natural reply that collapsing the direction of predication is exactly what divine simplicity claims, and it must engage the Plantinga literature before it can stand.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:16:15.394102+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

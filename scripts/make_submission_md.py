@@ -23,7 +23,20 @@ def assessor_line(briefs: list[dict]) -> str:
             "journal referee and grades coherence, robustness, significance and specificity; the grade is computed in "
             "code. Result: " + ", ".join(f"{v} {k}" for k, v in sorted(tally.items(), key=lambda kv: -kv[1]))
             + f" of {len(graded)}. The lab shows each direction's strongest objection and what a paper would need, "
-            "rather than overselling its leads.")
+            "rather than overselling its leads." + revision_sentence(graded))
+
+
+def revision_sentence(graded: list[dict]) -> str:
+    rev = [b for b in graded if (b.get("revision") or {}).get("assessment")]
+    if not rev:
+        return ""
+    better = [b for b in rev if b["revision"]["assessment"]["grade"] != b["assessment"]["grade"]
+              and b["revision"]["assessment"]["overall"] > b["assessment"]["overall"]]
+    return (f" A revision round then rewrote each direction to answer its strongest objection and re-graded it in a "
+            f"fresh read: {len(better)} of {len(rev)} moved up a grade (to "
+            + ", ".join(sorted({b['revision']['assessment']['grade'] for b in better})) + ") and the rest stayed "
+            "not yet defensible, each with the next objection it must meet.") if better else (
+            f" A revision round rewrote each direction to answer its strongest objection; none moved up a grade.")
 
 
 def main() -> None:

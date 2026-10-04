@@ -35,13 +35,15 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 
 **Academic quality check** (Assessor agent, a journal-referee read of each direction; grade computed from coherence, robustness, significance and specificity): not yet defensible 14 of 14. Each brief shows the strongest objection to it and what the paper would need.
 
+**Revision round** (each direction rewritten to answer its strongest objection, then re-graded in a fresh read): not yet defensible 12, needs work 2 of 14 after revision; overall score up for 9, down for 1.
+
 **Top research directions** (survival × novelty, best per target first):
 
+- *Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?* — revision_required, novelty 0.45, 4139 records searched; assessor: not yet defensible (2.5/5). Further human review required.
+- *Can Schellenberg’s analogy for P1 preserve a Vanstonean conception of vulnerable divine love while establishing that God is obligated, absent overriding reasons, to make voluntary relationship genuinely accessible?* — revision_required, novelty 0.32, 4140 records searched; assessor: not yet defensible (2.5/5). Further human review required.
 - *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched; assessor: not yet defensible (2.75/5). Further human review required.
 - *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched; assessor: not yet defensible (3.0/5). Further human review required.
 - *Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?* — revision_required, novelty 0.66, 4139 records searched; assessor: not yet defensible (2.25/5). Further human review required.
-- *Can a many-goods response to divine hiddenness count several goods arising from one person’s nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil?* — revision_required, novelty 0.47, 4140 records searched; assessor: not yet defensible (2.75/5). Further human review required.
-- *Can an analogy from vulnerable human love support a context-sensitive divine obligation to make relationship accessible to nonresistant persons without first establishing a general obligation of vulnerable love?* — revision_required, novelty 0.42, 4130 records searched; assessor: not yet defensible (2.25/5). Further human review required.
 
 ### Evaluation (automatic, no human labels)
 

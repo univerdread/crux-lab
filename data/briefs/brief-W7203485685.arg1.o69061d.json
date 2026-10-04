@@ -156,5 +156,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.189937+00:00"
   },
+  "revision": {
+    "research_question": "Does robust contrastive responsibility require the agent's cognition to contain a representation of the selected outcome, or of the agent's act, as the agent's own, and if an act-level self-representation is what is required, is that content irreducibly de se, so that the inference to irreducible de se divine cognition holds?",
+    "paper_direction": "A paper here would argue that the inference from robust contrastive responsibility to irreducible de se divine cognition goes through only if the source-attribution requirement is located at the level of the agent's intended act and that act-level content is irreducibly first-personal. The Mira case cannot show that outcome-level self-representation is unnecessary, because the intention she is stipulated to have already represents the village outcome as to be brought about by her pulling A. The paper therefore drops the claim that the case refutes c006 and instead proves a conditional. It distinguishes three kinds of content: impersonal representation of causal consequences (A opens gate 1; gate 1 sends water to the quarry), act-level self-representation carried by an intention to pull A, and outcome-level representation of the outcome as issuing from one's control. It then argues that robust responsibility requires the second kind whenever the selection is deliberate, and that the impersonal display contributes only the contrastive knowledge. If the act-level content is reducible to impersonal content, c052 fails, since the required self-involvement can be fully specified without de se content. If it is irreducible, c052 survives and the paper shows that the divine case turns on whether God's act of actualising, which is identical to the outcome, admits act-level de se content. The irreducibility question is therefore the paper's central target, and it is addressed directly against the accounts of de se content in the literature (Perry, Lewis, Cappelen–Dever), not assumed.",
+    "reply_to_strongest_objection": "The referee is right that Mira's intention already supplies self-involvement, so the case cannot serve as a counterexample to c006 as stated. The paper accepts this and uses the case to separate three contents: impersonal causal representation, act-level self-representation carried by intention, and outcome-level attribution. The impersonal display does not secure responsibility, because the contrastive knowledge in it is available without any attribution. The paper then argues that act-level self-representation is what a deliberate, contrastive selection requires, which narrows c006 from outcome-level to act-level. Against the charge that this leaves c052 untouched, the paper shows that the conclusion's strength depends entirely on whether act-level content is irreducibly de se, and it tests that claim against reductive proposals rather than assuming it. It also considers a case with no intention, to check whether any robust responsibility lacks first-personal content.",
+    "what_changed": "The thesis is narrowed from an outcome-level, case-based refutation of c006 to a conditional claim that the inference to irreducible de se divine cognition depends on whether act-level self-representation, which the Mira case already contains, is irreducibly de se.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:14:53.086415+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 2.75,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 3,
+        "specificity": 3
+      },
+      "reasons": {
+        "coherence": "The direction is internally strained. It says Mira's intention represents the outcome as to be brought about by her pulling A, which is outcome-level self-representation and supports c006 as stated. Yet it also claims to narrow c006 to the act level, and it asserts an act–outcome identity for God that dissolves its own three-way distinction.",
+        "robustness": "The obvious reply is that the conditional is trivial and the real question is the unresolved de se debate. The direction answers only by promising to 'test against reductive proposals', with no indicated argument, and it never addresses the act–outcome collapse in the divine case.",
+        "significance": "A careful separation of act-level from outcome-level source attribution would be a useful refinement of the responsibility premise. But because the decisive question is deferred to a familiar debate, it would not change how the argument is discussed.",
+        "specificity": "There is a definite conditional thesis, a three-way taxonomy and a named literature, but the central irreducibility argument is unspecified. The promised 'case with no intention' is not described."
+      },
+      "strongest_objection": "The proposed conditional (c052 holds iff the act-level self-representation is irreducibly de se) does little more than restate the argument's structure. All the substantive weight is moved onto the essential-indexical debate (Perry, Lewis, Cappelen–Dever), where the paper offers no new argument either way. Worse, the paper itself says that in the divine case God's act of actualising is identical to the outcome. There the act-level/outcome-level distinction collapses, so the narrowing of c006 has no bearing on the divine argument, and the paper's verdict on c052 simply inherits whatever view of de se content the reader already holds.",
+      "reply_available": false,
+      "what_it_needs": "It needs an original argument that the self-involvement required for deliberate contrastive selection either is or is not reducible, for example via a case where reductive (Lewisian centred-world or Cappelen–Dever) content fails or succeeds in grounding responsibility. It must also show why the act/outcome distinction survives, or matters, once act and outcome are identified in God.",
+      "summary": "A tidy reframing that concedes the counterexample and then defers everything important to the existing de se debate; as it stands it is a literature-review-shaped conditional, not yet a publishable paper.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:15:09.009258+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

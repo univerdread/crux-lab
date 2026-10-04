@@ -166,5 +166,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.196380+00:00"
   },
+  "revision": {
+    "research_question": "Does the apparent randomness of history, together with the absence of a directional moral signature, show that worldly evidence alone cannot decide between theism and naturalism? And can morally legible patterns produced by human culpability and power be separated from patterns that would bear on providence?",
+    "paper_direction": "A paper here would argue that the argument from worldly randomness does not need, and should not rest on, a generic aggregate claim about how often outcomes are morally indiscriminate. Its load-bearing premises are symmetry and absence: naturalism and biblical theology each explain apparent randomness through their own resources (impersonal causation and probability on one side; agency, natural processes, hidden providence, and delayed judgment on the other), and historical evidence lacks the directional signature a benevolently steered history would be expected to show. From these, the paper concludes that worldly evidence alone yields no clear winner, and that this conclusion is supported by evidential uncertainty rather than threatened by it. The paper would then state a principled criterion separating morally legible patterns produced by human agency from patterns relevant to providence. A pattern counts as human-agency-produced when it is fully accounted for by the culpability, privilege, and power of agents in the causal chain. A pattern counts as providence-relevant only if it displays desert-sensitive distribution that is not exhausted by those agents' choices. The bridge case illustrates the first category: the inspector's concealment and the mayor's policy fully account for who died and who was spared, so it is accommodated by both worldviews and does not discriminate between them. The paper would clarify 'non-monotonic' as outcomes whose harm does not vary in step with desert or culpability (for example, the more culpable are not uniformly the more harmed). It would argue that c001 survives only in this narrowed form, that the comparative assessment of theism and naturalism is settled by the combination of c002, c011, c038 and c039 rather than by any frequency claim, and that the bridge case shows the distinction does work but does not establish the frequency premise. The paper would not claim that theism predicts earthly moral tracking, and it would present the modest underdetermination conclusion as its actual result.",
+    "reply_to_strongest_objection": "The referee is right that one vivid case cannot establish a generic 'many' or 'often', and that the bridge pattern tracks culpability and privilege rather than governance. The paper concedes both points and no longer relies on a frequency premise. It uses the case differently: as a test of the criterion that separates agency-produced legibility from providence-relevant pattern, showing that the apparent moral pattern is fully explained by agents' choices and so is evidentially neutral between the rival worldviews. Uncertainty about the aggregate distribution is accepted as supporting underdetermination, since the conclusion needs only that no directional signature is found. Because c038 and c039 already deny earthly tracking on the theistic side, the paper locates the argument's weight in c002, c011, and the symmetry claim, and it states c001 only in narrowed form.",
+    "what_changed": "The revision drops the generic aggregate frequency premise, grounds the underdetermination conclusion in explanatory symmetry and the absence of a directional signature, and adds a criterion distinguishing agency-produced moral legibility from providence-relevant pattern, with the bridge case reassigned to illustrate that criterion.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:15:26.836116+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 2.5,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 2,
+        "specificity": 3
+      },
+      "reasons": {
+        "coherence": "The direction is internally consistent, but it answers the challenge to c001 by shrinking c001 until it does almost no work, while c011 quietly carries the same aggregate burden the paper claims to have dropped.",
+        "robustness": "Neither the paper plan nor the transcript addresses the gap between accommodation and likelihood, or the concurrentist reply to the criterion, and conceding the referee's points does not by itself rescue the conclusion.",
+        "significance": "Even if it succeeded, the result would be a modest underdetermination thesis already common in discussions of evidential evil and skeptical theism, plus a criterion likely to look question-begging to its main audience.",
+        "specificity": "There is a definite thesis, a stated criterion, a clarified sense of 'non-monotonic', and a role for the case, but no method for establishing the absence of a directional signature, which is the premise the argument actually depends on."
+      },
+      "strongest_objection": "The paper says it drops the aggregate frequency claim, but it does not. Premise c011 ('historical evidence lacks the directional signature') is itself an aggregate claim about the whole distribution of outcomes across history, so the unsupported premise has only been moved. The symmetry claim also confuses accommodation with evidential parity. If c038 and c039 empty theism of predictions about earthly distribution, then 'both explain randomness' says nothing about likelihoods. A Draper-style reply holds that a hypothesis of indifference predicts the observed morally indiscriminate distribution better than theism does, so mutual accommodation does not yield 'no clear winner.' The proposed criterion has a further problem. Treating agency-produced patterns as 'fully accounted for' by human choices begs the question against concurrentist accounts of providence, on which providence works through secondary causes, including culpable human agency.",
+      "reply_available": false,
+      "what_it_needs": "It must give an independent, non-anecdotal case for c011, or else restate the conclusion conditionally on it. It must also replace bare 'both worldviews explain it' with a comparative likelihood analysis that engages Draper and the skeptical-theism literature. Finally, the criterion separating agency-produced from providence-relevant patterns has to be defended against double-agency views of providence.",
+      "summary": "This is a tidy repair of a weak premise, but it relocates rather than removes the unsupported aggregate claim and treats mutual accommodation as evidential parity, so the first competent reader would send it back.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:15:46.537837+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

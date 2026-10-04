@@ -177,5 +177,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.194761+00:00"
   },
+  "revision": {
+    "research_question": "Does a Molinist account of providence make the observed distribution of suffering evidentially neutral, or does it leave that distribution with an inscrutable likelihood that cannot settle a comparison with naturalism?",
+    "paper_direction": "A paper here would argue that the Mara case establishes a narrower point than the original claim. Molinist providence shows that the absence of a directional moral signature in history is permitted by theism, but it does not show that this absence is expected on theism. The paper would therefore replace the 'expected signature' premise (c011) with the weaker claim that theism's likelihood for the observed distribution is not fixed by the argument's own theology, given c038 and c039. It would then argue that this inscrutability does not, by itself, amount to evidential neutrality. Neutrality requires that the likelihood ratio be one, and the Molinist has supplied no basis for that. The paper's positive commitment is limited to a single claim. The comparative verdict between theism and naturalism on the historical distribution cannot be drawn from worldly randomness alone unless one supplies a prior over the counterfactuals of freedom, which the paper does not do. The paper would argue that the mp in the argument (arg1) therefore loses its second premise and that c041 must be restated as a conditional claim about what the historical evidence can and cannot adjudicate given that prior. The paper would not argue that naturalism's definite prediction is thereby defeated, and it would concede that a comparison of the two likelihoods, if one could be made, could still favor naturalism.",
+    "reply_to_strongest_objection": "The referee is right that c011's 'should' overstated what the argument's theology licensed, since c038 and c039 already deny that Scripture predicts earthly justice. The paper replies by separating permission from expectation: the Mara case shows that a steered history may show no trend, so the absence of trend is compatible with theism, but it does not show the absence is probable on theism. This removes c011 as an independent premise and makes the paper's conclusion narrower than the original. Against the Draper-style inscrutable-likelihood objection, the paper does not claim neutrality. It claims only that the comparative likelihood is undetermined on the Molinist side. The paper then argues that a definite naturalist prediction is needed to favor naturalism, and that this prediction is not supplied by naturalism's probabilistic treatment of contingency alone. The paper leaves the full comparison open and says so.",
+    "what_changed": "The revision replaces the claim that historical evidence lacks an expected signature with a narrower claim that Molinist permission for an absent trend leaves theism's likelihood inscrutable, not neutral, and it restates the conclusion conditionally on a prior over counterfactuals of freedom.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:15:24.613227+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 2.5,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 2,
+        "specificity": 3
+      },
+      "reasons": {
+        "coherence": "The permission/expectation distinction bears precisely on c011's 'expected' wording, but the direction does not confront that the Mara objection already supports the argument's own neutrality conclusion, which makes the attack partly self-cancelling. Its claim that naturalism makes no definite prediction also sits uneasily with its concession that a comparison could favor naturalism.",
+        "robustness": "The obvious Draper-style objection is that an inscrutable theistic likelihood against a fairly determinate naturalist one favors naturalism. The direction answers only by an unsupported denial that naturalism predicts indiscriminate outcomes, and otherwise concedes the point.",
+        "significance": "That inscrutable likelihoods are not the same as likelihood ratios of one, and that Molinist accommodation is not prediction, are well-established points in the evidential problem of evil. Applying them to a weak argument whose c011 conflicts with its own c038/c039 is a minor local refinement.",
+        "specificity": "There is a definite thesis (permission is not expectation; inscrutability is not neutrality), a case, and a target restatement of c041. The decisive step about the naturalist likelihood and the 'prior over counterfactuals of freedom' is left as a gesture rather than a plan."
+      },
+      "strongest_objection": "Draper's Bayesian reply: if the Molinist leaves theism's likelihood inscrutable, theism spreads its probability over many possible histories, including desert-tracking ones. Naturalism, with no reason for outcomes to track moral character, concentrates its probability on morally indiscriminate distributions like the one observed. So the likelihood comparison still favors naturalism. The paper's claim that naturalism 'supplies no definite prediction' is asserted, not argued, and is implausible given c001 and c025.",
+      "reply_available": false,
+      "what_it_needs": "The paper must engage the skeptical-theism and inscrutable-likelihood literature (Draper, Rowe, Bergmann, Howard-Snyder, imprecise-probability treatments). It must give an actual argument that naturalism lacks a determinate likelihood for morally indiscriminate outcomes, or else drop that claim and defend a narrower, explicitly conditional thesis.",
+      "summary": "A tidy but largely familiar point about permission versus expectation that leaves its one novel claim, that naturalism makes no definite prediction, unargued, so a competent referee would send it back as not yet a paper.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:15:48.681037+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

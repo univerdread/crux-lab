@@ -184,5 +184,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.178151+00:00"
   },
+  "revision": {
+    "research_question": "Can a grounds-based account of when withholding access from a beloved is a failure of care, drawn from particular vulnerable loving relationships, establish a context-sensitive duty for a perfectly loving God to make relationship accessible to nonresistant persons, and does that duty hold for every such person?",
+    "paper_direction": "A paper here would argue that vulnerable human love generates a duty to make relationship accessible when specified local grounds obtain: the beloved has expressed willingness to relate, cannot initiate contact for reasons other than their own resistance, and the lover can provide safe and available access. It would defend this grounds-based principle as an explicit bridge principle that is itself the context-sensitive obligation the analogical route requires, rather than a permission inferred from the Mira case, and it would argue that the Mira case illustrates the principle without establishing it on its own. The paper would then argue that these grounds can hold in the divine case for each nonresistant person, because they concern present access to relationship, which a reply appealing to eventual encounter does not supply, and because a perfectly knowing lover can assess each person's situation without a further general proof covering all circumstances. The paper would state its conclusion in narrowed form: the analogical route establishes a duty for every nonresistant person in whom the grounds obtain. Whether the grounds obtain universally, and whether permanent nonresistant nonbelief is compatible with perfect vulnerable love, are the points on which the universal form of P1 stands or falls, and the paper would identify them as such rather than assume them.",
+    "reply_to_strongest_objection": "The referee is right that the Mira case as first stated shows compatibility and explanation, which is permission-level, and the paper concedes that the case alone does not prove obligation. It replies by making the bridge principle explicit: when a lover knows the beloved's expressed willingness, the beloved's inability to initiate for reasons other than resistance, and that access can be provided safely, withholding it is a failure of care. The paper argues that this principle is a context-sensitive obligation, not a general one, and that its grounds are what generate the duty; the Mira case illustrates it. For universality, the paper argues that the grounds are present-tense conditions that a perfectly knowing God can assess for each person, so no general proof covering every circumstance is needed, and it rejects eventual encounter as a substitute because it does not satisfy the present-access ground. Where the grounds fail, the paper makes no claim.",
+    "what_changed": "The revision replaces the claim that the Mira analogy supports obligation without a general principle with an explicit grounds-based bridge principle that is itself the local obligation, and narrows the universal claim to nonresistant persons in whom those grounds obtain.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:14:14.303749+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 2.75,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 2,
+        "specificity": 4
+      },
+      "reasons": {
+        "coherence": "The original Mira objection shows only compatibility and motivational explanation, which is permission-level and so aimed below what P1 requires. The paper direction repairs this by arguing for a context-sensitive obligation, which in effect concedes r1's demand for an obligation and contests only its 'independent/general' form, so the aim is coherent but shifted.",
+        "robustness": "Neither the direction nor the transcript answers the transfer problem: the paper explicitly sets aside whether the grounds obtain universally, and God's omniscience bears only on assessing the grounds, not on whether they are satisfied.",
+        "significance": "If it succeeded, the paper would yield a conditional, grounds-relative duty that leaves the contested universal P1 open, which is a modest refinement of Defender B's position rather than a change in how the analogical route is assessed.",
+        "specificity": "The thesis, the three local grounds, the role of the Mira case as illustration, the rejection of eventual-encounter replies, and the narrowed conclusion are all stated concretely enough to write, though the decisive universality step is deferred rather than planned."
+      },
+      "strongest_objection": "The grounds-based principle does not transfer to the divine case, and where it seems to, it assumes what is in dispute. A nonresistant nonbeliever has not 'expressed willingness to relate' to God in the way Leon has to Mira, since he does not believe there is anyone to relate to. Whether God can provide access 'safely', without defeating goods such as soul-making, morally significant freedom, or non-coercive response, is exactly what greater-goods and skeptical-theist critics of P1 contest. The fallback conclusion (a duty holds for every nonresistant person in whom the grounds obtain) is close to trivially conditional and leaves P1's universal form, the only form the argument needs, untouched.",
+      "reply_available": false,
+      "what_it_needs": "The paper must reformulate the grounds so they demonstrably have divine analogues for nonbelievers, for example by replacing expressed willingness with dispositional openness and arguing why that suffices. It must also argue, rather than stipulate, that the 'safe access' condition is met against the standard greater-goods and skeptical-theist replies; otherwise it should openly recast itself as a partial defence of the analogical route.",
+      "summary": "A clearly organised but ultimately modest proposal: it turns the objection into a grounds-based bridge principle, then sets aside the transfer-to-every-person question on which any defence of P1's analogical route depends, so a competent referee would call it incomplete as it stands.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:14:36.863470+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

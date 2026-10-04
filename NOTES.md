@@ -1,5 +1,19 @@
 # NOTES — newest entry first
 
+## 2026-10-04 11:20 — revision round run (Claude, human said "yes run it")
+- `make revise` (crux_lab/lab/assess.py main_revise, prompts/reviser.md): a Reviser rewrites each direction
+  to answer the Assessor's strongest objection (narrowing if decisive; may only name works/philosophers that
+  appear in its inputs), then the Assessor re-grades it in a fresh read that does not see its own earlier
+  critique. Both grades are kept in the brief (`assessment` and `revision.assessment`).
+- Models: Reviser claude:sonnet, Assessor claude:opus (same family: Codex is capped) — 28 calls, ~3 min.
+- Result: 2/14 moved up to "needs work" (3.5/5): the many-goods direction (W2575351351.oc4a9a4: adds a
+  counterfactual distinctiveness test; re-assessor now raises an individuation dilemma) and the
+  vulnerable-love direction (W2072673546.o607d86); 12 stayed "not yet defensible"; overall score up for 9,
+  down for 1. Site: revision panel with before → after grade; list shows the latest grade and revised
+  question; ranking uses the latest grade. Audit extended to revision prose (0 problems).
+- Note: the Assessor's critiques name philosophers from model knowledge (e.g. Perry, Cappelen–Dever); the
+  panel says these are not checked against the corpus.
+
 ## 2026-10-04 13:05 — Assessor agent grades every research direction (Claude, at the human's request)
 - `crux_lab/lab/assess.py` + prompts/assessor.md (`make assess`): a journal-referee read of each brief
   (never sees model names). Scores 1-5: coherence, robustness (states the strongest objection and judges

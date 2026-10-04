@@ -178,5 +178,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.188072+00:00"
   },
+  "revision": {
+    "research_question": "Can a many-goods response to divine hiddenness count several goods arising from one person's nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil, when the measure of that evil does not presuppose a sensus divinitatis account?",
+    "paper_direction": "A paper here would argue that the many-goods response can count several goods from one person's nonresistant nonbelief without increasing nonbelief-related evil only for goods whose required episodes are nested within a single continuous interval, and that goods requiring separated or non-nested episodes must be booked as additional evil. The argument has three parts. First, it shows that defenders of the many-goods response rely on a non-comparative count, in which everything that happens during one long deprivation is booked against one fixed evil, so that the cost of the deprivation is fixed by the life-span and not by what the goods require. Second, it sets out an episode-individuation criterion: an episode is a maximal continuous interval of nonresistant nonbelief, and a good is nested in an episode when its requirements fall wholly inside that interval. The measure of evil is the total extent of the minimal union of intervals that the joint bundle requires, weighted by a neutral depth index, such as the strength of unresisted absence of conviction, that does not presuppose any account of proper basicality. On this measure nested goods add no further episode, so their joint cost equals the cost of the longest-spanning requirement, which is already a cost on the ledger. Distributed goods that need separate episodes, or that need an interval longer than any single requirement, add measured evil. Third, the paper applies this to Maria's case. Her three goods are nested only to the extent that the search, the shared uncertainty, and the ethical crisis lie in one continuous interval. Where the crisis requires a stretch separated from the search by a period of resisting nonbelief, or where the solidarity good requires recurrence, the paper shows that the good's cost is an added episode rather than a re-description of one. The paper concedes that the modal premise survives only in its restricted, episode-sensitive form, and it anticipates the fixed-interval reply by showing that the interval is necessary for the combined goods only when the goods are nested. Where that condition fails, relevant alternatives that secure comparable goods must be shown to impose equal or greater evil.",
+    "reply_to_strongest_objection": "The paper does not rest on the Reformed-style claim that dulled faculty is itself the evil. It grants the referee's point that c014 is modal and that comparative necessity is a standard constraint, and it shows that the constraint is non-trivial here because the non-comparative count it targets fails. The count books every good from one deprivation against one fixed evil, which hides how much of the deprivation each good actually requires. The paper replaces this with an episode criterion: nested goods share one episode and add no evil beyond the longest requirement, while distributed or recurrent goods add episodes. The measure uses duration and a neutral depth index rather than the sensus divinitatis premise. This shows that c014 holds for nested goods and fails for distributed ones, so the referee's demand for a non-question-begging measure is met.",
+    "what_changed": "The revision replaces the unrestricted possibility claim with an episode-sensitive, nested-versus-distributed criterion, and it supplies a neutral measure of evil and a non-comparative counting target to make the restricted claim non-trivial.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:14:56.178458+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 2.75,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 2,
+        "specificity": 4
+      },
+      "reasons": {
+        "coherence": "The direction is internally consistent and rightly drops the question-begging sensus divinitatis premise, but it targets a non-modal 'booking' practice rather than c014 as stated, which its own nested case satisfies.",
+        "robustness": "The obvious reply is that the paper concedes c014's possibility claim; the direction treats this as a 'restricted form' without explaining why the restriction damages c017 or c021, and it is not shown that the measure is non-ad-hoc.",
+        "significance": "At best the paper would supply a useful accounting discipline for many-goods theodicies, but it would not change how the modal argument is assessed.",
+        "specificity": "It has a definite criterion (maximal continuous interval, nested requirements, minimal union weighted by a depth index), a worked case, and a three-part plan, though the depth index and the claim about defenders' non-comparative count are underspecified."
+      },
+      "strongest_objection": "c014 is an existential modal claim: multiple goods *may* arise from one instance without increasing the evil. The paper's own criterion grants that nested goods sharing one continuous interval add no evil beyond the longest requirement. That establishes the possibility c014 asserts, and c021 is likewise only a 'may'. So the episode-sensitive restriction leaves the argument's modal conclusion intact. The defender simply picks a nested bundle, and the paper refutes nothing the argument claims. It only shows that some bundles (Maria's, under some descriptions) would be costed differently.",
+      "reply_available": false,
+      "what_it_needs": "The paper must show that the goods that do the collective outweighing in c017 (the goods actually cited, not invented nested ones) are typically non-nested, so that restricting to nested goods drains the many-goods response of its aggregate value. It must also defend the interval-additive, depth-weighted measure against a relational view of the evil that is not additive over time.",
+      "summary": "A tidy accounting proposal that, by its own lights, vindicates the modal premise it set out to challenge; it needs to show that the goods doing the real outweighing are non-nested before it becomes an objection rather than a footnote.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:15:14.994267+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

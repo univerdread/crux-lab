@@ -121,4 +121,5 @@ class Brief(BaseModel):
     paper_direction: str
     outcome: str = ""
     assessment: dict | None = None        # the Assessor's academic-quality grade (crux_lab/lab/assess.py)
+    revision: dict | None = None          # revision round: rewritten direction + its fresh re-assessment
     disclaimer: str = "Further human review required."

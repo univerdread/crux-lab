@@ -161,5 +161,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.200495+00:00"
   },
+  "revision": {
+    "research_question": "Does the inference from God having no proper parts to God being part of all of God's parts require bivalence or determinacy for the similarity-relative parthood relation, and under which definitions of 'proper part' does that dependence arise?",
+    "paper_direction": "A paper here would argue that the step from 'God has no proper parts' to the symmetry formulation of divine simplicity (God is part of all God's parts) holds under classical semantics, and fails only if the parthood relation admits truth-value gaps together with one specific definition of proper part, namely 'reverse parthood is false' rather than 'reverse parthood is not true'. The paper would proceed in three steps. First, it would show that under the 'not true' definition, and under strong Kleene evaluation, the three-valued countermodel does not falsify the conditional, because the antecedent is then false or undetermined, so the counterexample depends on a single definitional choice. Second, it would give an independent motivation for gaps: similarity comes in degrees, and similarity-relative parthood inherits that gradation, so some pairs such as 'God is part of omniscience' may lack a determinate value. This is a substantive claim the paper must argue, not assume. Third, it would state the result as a conditional: the symmetry formulation follows from the absence of proper parts whenever reverse parthood is bivalent for the relevant pairs. The central thesis is therefore a bounded claim about the dependence of the inference on bivalence, not a refutation of divine simplicity or of the classical argument.",
+    "reply_to_strongest_objection": "The paper concedes the referee's central point: in classical mereology c008 holds, and the three-valued countermodel works only with the reverse-false definition of proper part. Under the not-true definition, omniscience counts as a proper part, so 'no proper parts' is false and the conditional is not falsified. Under strong Kleene evaluation, 'no proper parts' is undetermined, so again no counterexample arises. The paper therefore does not claim that c008 is refuted in general. It claims that the inference depends on bivalence under one definitional choice, and it supplies the motivating case for gaps by appeal to degreed similarity yielding vague parthood, argued in the paper rather than assumed. If that motivation fails, the result reduces to a remark about classical equivalence, and the paper states this openly.",
+    "what_changed": "The thesis is narrowed from a general refutation of premise c008 to a conditional claim that the inference depends on bivalence under the reverse-false definition, with an explicit argument for gaps and an open concession that the result is small if that argument fails.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:16:01.972762+00:00",
+    "assessment": {
+      "grade": "not yet defensible",
+      "overall": 2.75,
+      "scores": {
+        "coherence": 3,
+        "robustness": 2,
+        "significance": 2,
+        "specificity": 4
+      },
+      "reasons": {
+        "coherence": "The objection is internally consistent and does target c008. However, it bears on a non-classical reading the original argument never adopts, so it is aimed at a different claim rather than the premise as stated.",
+        "robustness": "The direction itself concedes that if the gap motivation fails, nothing but a classical-equivalence remark remains. Its gap motivation (degreed similarity) is gestured at, not developed, and invites the obvious reply that degrees are not gaps and that divine indeterminacy is independently implausible.",
+        "significance": "Even if successful, it adds only a bivalence proviso to a step every reader already understands as classical, which is at most a minor footnote to the symmetry formulation debate.",
+        "specificity": "It has a definite bounded thesis, a concrete three-step plan, and an explicit statement of what must be argued (the gap motivation), though the key second step is underspecified."
+      },
+      "strongest_objection": "The result is a textbook logical fact rather than a finding about divine simplicity. In any gappy logic, ¬∃x(Pxg ∧ ¬Pgx) fails to entail ∀x(Pxg → Pgx) without excluded middle. c008 is stated within a classical mereology where proper parthood is defined by non-symmetry, so the countermodel changes the logic instead of finding a flaw. Worse, the proposed motivation for gaps, degreed similarity, sits poorly with simplicity theorists. They will deny that God's nature admits indeterminacy, and degreed similarity more naturally yields degrees of parthood than gaps.",
+      "reply_available": false,
+      "what_it_needs": "It must show that the similarity-relative parthood relation in the target account is independently committed to indeterminacy, and that a simplicity theorist cannot deny this without cost. That means engaging the vague-composition and indeterminate-identity literature (Evans-style arguments, Sider, Barnes and Williams on metaphysical indeterminacy) and showing the dependence is a real liability. Otherwise the paper only records that a classical equivalence fails in Kleene logic.",
+      "summary": "A clearly organised but thin proposal: its core result is a standard fact about three-valued logic, and it becomes a paper only if the author can show the target account is genuinely committed to indeterminate divine parthood.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:16:19.534080+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

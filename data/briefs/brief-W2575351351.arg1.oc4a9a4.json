@@ -180,5 +180,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.186517+00:00"
   },
+  "revision": {
+    "research_question": "Can a bounded period of nonresistant nonbelief generate a set of goods that is distinctive to nonbelief, where no feasible history within the relationship with God realizes those goods, and whose combined value, net of shared dispositional sources, exceeds the intrinsic value of the lost relationship?",
+    "paper_direction": "A paper here would argue for a bounded existential claim: there are feasible cases in which temporally limited nonresistant nonbelief yields several goods that are individually below the value of a relationship with God, that do not depend on one another's dispositional sources, and that together outweigh that relationship. The paper would not claim that most or typical cases succeed, and it would not defend the net-of-overlap formulation as a distinct thesis, since the referee is right that competent aggregation already assesses value net of overlap. Overlap instead becomes a constraint on case construction: a candidate case must show that its goods have separate sources. The paper would give three components. First, an axiological argument on commensurability: it would argue, against lexical priority of the relational good, that finite goods can in principle be compared with and outweigh a supreme relational good, and it would engage the existing axiological and greater-goods literature directly on this point. Second, a principled counterfactual test for distinctiveness: a good G counts as unavailable within the relationship only if every feasible history in which the agent is in that relationship and realizes G's core features requires an element the relationship cannot supply, such as the specific reconciliation that presupposes the prior estrangement. The claim that a relationship would cultivate the same disposition 'more deeply and more reliably' would be treated as a premise to be tested under this test, not assumed. Third, a worked bounded case with separate sources for each good, checked against the test, that shows the package outweighs the lost relationship under a stated value measure.",
+    "reply_to_strongest_objection": "The paper accepts that one overlapping case such as Mara's refutes only that instance, not the possibility claim in c017, so the modal thesis is kept as an existential claim. It answers the referee's concern about question-begging by replacing the assertion that a relationship would cultivate the disposition more reliably with a counterfactual test: a good is distinctive only if its core features are unrealizable within the relationship across all feasible histories. The paper then supplies a candidate case whose goods have independent sources, so the test, not the critic's assertion, decides overlap. It also drops net-of-overlap as a separate thesis, conceding that it is implicit in aggregation, and it argues directly for commensurability, which is the substantive question the referee identifies.",
+    "what_changed": "The revision narrows the thesis to an existential possibility claim, drops net-of-overlap as a standalone thesis, and adds a counterfactual distinctiveness test, a commensurability argument, and a worked bounded case.",
+    "narrowed": false,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:14:45.945495+00:00",
+    "assessment": {
+      "grade": "needs work",
+      "overall": 3.5,
+      "scores": {
+        "coherence": 4,
+        "robustness": 3,
+        "significance": 3,
+        "specificity": 4
+      },
+      "reasons": {
+        "coherence": "The direction coherently targets c017 as an existential, world-level claim and correctly concedes that one failed case like Mara does not refute it, but the research question slightly misaims by pitting the package against 'the intrinsic value of the lost relationship' rather than against a temporarily delayed relationship within a whole-world comparison.",
+        "robustness": "The 'core features' clause in the counterfactual test gestures at the individuation problem and the separate commensurability component addresses lexical priority, but neither is yet worked out, so the answer exists in outline and needs real work.",
+        "significance": "A successful version would sharpen the many-goods reply with a usable distinctiveness criterion and a concrete case, a useful refinement to the existing greater-goods and axiological literature rather than a change in how the hiddenness argument is discussed.",
+        "specificity": "There is a definite bounded existential thesis and a three-part plan (commensurability, counterfactual test, worked case), though the value measure and the case itself remain unspecified."
+      },
+      "strongest_objection": "The distinctiveness test faces an individuation dilemma. If goods are individuated finely, as in 'this reconciliation, which presupposes this estrangement,' they trivially pass the test, because any history-indexed token is unrealizable in a different history. But then their value is not plausibly indexed to the token, and a value-relevantly equivalent type of good (reconciliation, forgiveness, patience in care) is available within the relationship. If goods are individuated by value-relevant type, they will almost always fail the test. Either way, the worked case outweighs the relationship only because of an individuation choice and a stipulated value measure, which a hiddenness theorist will simply reject.",
+      "reply_available": true,
+      "what_it_needs": "It must give a principled, non-stipulative account of the 'core features' that fix a good's identity for value purposes, one that makes distinctiveness non-trivial without collapsing it. It must also frame the comparison correctly as worlds or histories with a bounded interval of lost relationship, not as package versus the whole intrinsic value of the relationship, and pair this with a commensurability argument that engages lexical-priority views rather than assuming them away.",
+      "summary": "A writable and respectable refinement of the many-goods reply, but it will stand or fall on whether the distinctiveness test can avoid trivial fine-grained individuation and whether the value comparison is set up as bounded delay rather than total loss.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:15:06.699646+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

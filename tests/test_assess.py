@@ -36,3 +36,17 @@ def test_assess_brief_validates_and_grades():
     assert res["grade"] == "promising" and res["overall"] == 4.0 and res["scores"]["robustness"] == 5
     md = to_markdown(BRIEF.model_copy(update={"assessment": res}))
     assert "Academic quality check" in md and "**promising**" in md
+
+
+def test_revise_brief_requires_a_real_answer():
+    revise_replies = iter([
+        json.dumps({"research_question": "Q2", "paper_direction": "This paper argues...", "what_changed": "x",
+                    "reply_to_strongest_objection": "short", "narrowed": False}),
+        json.dumps({"research_question": "Q2", "paper_direction": "A paper here would argue that P1 holds only in a narrower form.",
+                    "what_changed": "Narrowed to the modal claim.", "narrowed": True,
+                    "reply_to_strongest_objection": " ".join(["The paper distinguishes possibility from actuality and"] * 4)}),
+    ])
+    client = LLMClient.fake(lambda s, m, model: next(revise_replies))
+    brief = BRIEF.model_copy(update={"assessment": {"strongest_objection": "o", "reasons": {}, "what_it_needs": "n"}})
+    rev = asyncio.run(assess.revise_brief(client, client.spec_for("referee"), brief))
+    assert rev and rev["paper_direction"].startswith("A paper here would argue") and rev["narrowed"]

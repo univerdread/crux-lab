@@ -184,5 +184,36 @@
     "model": "anthropic:opus",
     "assessed_at": "2026-10-04T09:05:16.182771+00:00"
   },
+  "revision": {
+    "research_question": "Can Schellenberg's analogical route for P1 preserve a Vanstonean conception of vulnerable divine love when the analogue is a nonresistant beloved who lacks belief that the lover exists, and if so, does this support only a defeasible obligation of accessibility rather than the exceptionless P1?",
+    "paper_direction": "A paper here would argue that the Elena case, as originally framed, cannot show that Schellenberg's analogical route leaves vulnerable love intact, because Tomas is resistant and already believes Elena exists, so the case tests availability under resistance and not P1's claim about nonresistant nonbelief. The paper rebuilds the analogy around a nonresistant son who has never learned that his mother exists, or knows of her only uncertainly. It then asks whether the mother remains vulnerable if she secures belief-level accessibility, for example by making herself reliably and unmistakably known through a standing channel. The paper distinguishes two exposures: non-reception, the risk that a disclosure goes unregistered through no fault of the beloved, and non-response, the risk that a registered disclosure is refused. It argues that Vanstone's conception locates love's vulnerability chiefly in non-response, since the self-giving seeks a free answer, so guaranteeing reception does not by itself remove the exposure that makes love vulnerable. The paper must defend this claim against the rival view that non-reception is the core risk. It then gives a non-analogical bridge from vulnerable love to a defeasible obligation of accessibility: a lover whose aim is a free response has reason to secure the awareness that response presupposes, and this reason is overridable only by considerations that themselves respect the beloved's freedom. The paper engages Schellenberg's parent analogies and the existing literature on divine openness. It does not defend the exceptionless P1. The surviving thesis is that the analogy supports a defeasible obligation of accessibility that is compatible with vulnerable love.",
+    "reply_to_strongest_objection": "The paper concedes that the Elena case does not reach nonresistant nonbelief and rebuilds the analogy around a nonresistant beloved who lacks belief. Against the claim that guaranteed reception removes the risk love bears, it distinguishes non-reception from non-response. Guaranteeing belief-level accessibility removes the first but leaves the second, the beloved's free refusal of a registered disclosure, which the Vanstonean conception treats as the essential exposure. The paper argues that this is where love's vulnerability lies, and that a lover who secures awareness still stakes the relationship on a response it cannot compel. Because the exceptionless P1 demands that no nonresistant nonbelief ever occur, the paper does not defend it. It holds that only a defeasible obligation of accessibility survives, with overriding reasons limited to those that respect the beloved's freedom.",
+    "what_changed": "The revision replaces the resistant Elena analogue with a nonresistant, nonbelieving beloved, separates non-reception from non-response as the locus of vulnerability, and narrows the thesis to a defeasible obligation of accessibility in place of the exceptionless P1.",
+    "narrowed": true,
+    "model": "anthropic:sonnet",
+    "revised_at": "2026-10-04T09:14:14.316868+00:00",
+    "assessment": {
+      "grade": "needs work",
+      "overall": 3.5,
+      "scores": {
+        "coherence": 4,
+        "robustness": 3,
+        "significance": 3,
+        "specificity": 4
+      },
+      "reasons": {
+        "coherence": "It targets the 'because it distorts Vanstone' clause of c064 rather than P1's truth, and it honestly repairs the Elena case's mismatch (resistant believer versus nonresistant nonbeliever), though conceding only a defeasible obligation leaves c064's bare verdict that the analogy fails to establish P1 partly intact.",
+        "robustness": "The direction identifies the needed reply, the non-reception/non-response distinction, but that reply rests on a contestable reading of Vanstone that has not yet been argued, so surviving the kenotic-control objection needs real textual and conceptual work.",
+        "significance": "If it succeeded, it would neutralize one specific Vanstonean critique of Schellenberg and clarify which exposures vulnerable love involves, but retreating from exceptionless P1 to a defeasible obligation moves the debate back into familiar territory about overriding reasons, a refinement rather than a reorientation.",
+        "specificity": "It has a definite thesis, a rebuilt case, a named distinction, a stated rival view to answer, and a proposed bridge principle, though the class of 'freedom-respecting' overriders is not specified and the paper still needs to be differentiated from the closest literature, especially the absent-mother analogy paper."
+      },
+      "strongest_objection": "The pivotal claim, that Vanstonean vulnerability lies chiefly in non-response rather than non-reception, is an interpretive thesis about Vanstone that the critic can deny on textual grounds. Vanstone's kenotic love is marked by the lover's self-limitation of power and by the precariousness of love's endeavour, including the risk of going unrecognized. On that reading, a lover who guarantees belief-level reception through an unmistakable standing channel has already exercised the control that kenosis renounces. If so, the distortion charge stands, and the non-reception/non-response distinction begs the question.",
+      "reply_available": true,
+      "what_it_needs": "The paper must ground the non-response reading in Vanstone's actual text (Love's Endeavour, Love's Expense) and show that self-disclosure securing awareness is not the kind of control kenosis renounces. It must also say concretely which freedom-respecting overriding reasons remain, so that the defeasible obligation is not empty.",
+      "summary": "A coherent, writable refinement that answers the distortion charge in principle, but it stands or falls on an undefended reading of Vanstone and concedes enough on P1 that its payoff is modest.",
+      "model": "anthropic:opus",
+      "assessed_at": "2026-10-04T09:14:37.039964+00:00"
+    }
+  },
   "disclaimer": "Further human review required."
 }

@@ -119,6 +119,18 @@ def to_markdown(b: Brief, objection: Objection | None = None) -> str:
               f"- Strongest objection to this direction: {s['strongest_objection']}",
               f"- A viable answer is {'available' if s['reply_available'] else 'not yet available'} in the brief or the debate.",
               f"- What the paper needs: {s['what_it_needs']}", f"- Assessor: {s['model']}", ""]
+    if b.revision:
+        r = b.revision
+        L += ["## Revised after the quality check",
+              f"*{r.get('what_changed', '')}*" + (" The thesis was narrowed." if r.get("narrowed") else ""), "",
+              f"**Revised question:** {r['research_question']}", "", r["paper_direction"], "",
+              f"**How the paper answers the main objection:** {r['reply_to_strongest_objection']}", ""]
+        q = r.get("assessment")
+        if q:
+            L += [f"**Re-assessment** (fresh read, the assessor did not see its earlier critique): **{q['grade']}** · "
+                  f"overall {q['overall']}/5 · " + " · ".join(f"{k} {v}/5" for k, v in q["scores"].items()),
+                  "", f"*{q['summary']}*", "", f"- Strongest remaining objection: {q['strongest_objection']}",
+                  f"- What it still needs: {q['what_it_needs']}", f"- Reviser: {r.get('model')}; assessor: {q['model']}", ""]
     L += [f"**{b.disclaimer}**", ""]
     return "\n".join(L)
 

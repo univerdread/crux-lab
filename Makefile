@@ -6,7 +6,7 @@ ifneq ($(TOPIC),)
 export CRUX_LAB_TOPIC := $(TOPIC)
 endif
 
-.PHONY: setup check providers corpus targets map assess run runs export eval demo demo-video smoke live-test serve docs databricks
+.PHONY: setup check providers corpus targets map assess revise run runs export eval demo demo-video smoke live-test serve docs databricks
 
 setup:
 	@test -d .venv || (command -v uv >/dev/null && uv venv --python 3.11 .venv || python3.11 -m venv .venv)
@@ -40,6 +40,10 @@ runs:
 # Assessor: grade every research direction on academic quality (one model call per brief)
 assess:
 	$(PY) -m crux_lab.cli assess
+
+# Revision round: answer each direction's strongest objection, then re-grade (two model calls per brief)
+revise:
+	$(PY) -m crux_lab.cli revise
 
 export:
 	$(PY) -m crux_lab.cli export
