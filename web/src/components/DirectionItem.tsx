@@ -1,4 +1,4 @@
-import { GradeChip } from "./Quality";
+import { fmtScore, GradeChip } from "./Quality";
 import { Link } from "react-router";
 import type { BriefSummary } from "../types";
 import { displayTitle, excerpt, num, shortId } from "../lib/format";
@@ -62,8 +62,8 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
               {brief.revision?.assessment ? (
                 <>
                   <GradeChip grade={brief.revision.assessment.grade} overall={brief.revision.assessment.overall} />
-                  <span className="font-mono text-[0.66rem] text-ink-soft" title="grade before the revision round">
-                    was {brief.assessment.grade}
+                  <span className="font-mono text-[0.66rem] text-ink-soft" title="compared with the grade before the revision round">
+                    {revisionNote(brief.assessment, brief.revision.assessment)}
                   </span>
                 </>
               ) : (
@@ -91,4 +91,11 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
       </dl>
     </li>
   );
+}
+
+/** After the revision round: name the old grade only if it changed; otherwise the old score, or "unchanged". */
+function revisionNote(before: { grade: string; overall: number }, after: { grade: string; overall: number }): string {
+  if (before.grade !== after.grade) return `after revision · was ${before.grade}`;
+  if (before.overall !== after.overall) return `after revision · was ${fmtScore(before.overall)}/5`;
+  return "after revision · unchanged";
 }

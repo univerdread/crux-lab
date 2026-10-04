@@ -9,6 +9,9 @@ const STYLE: Record<QualityGrade, { border: string; note: string }> = {
   "not yet defensible": { border: "dotted", note: "as framed, it falls to an obvious objection; see what it needs" },
 };
 
+/** Scores are averages of four integers (multiples of 0.25): show them exactly, without trailing zeros. */
+export const fmtScore = (x: number) => String(Number(x.toFixed(2)));
+
 export function GradeChip({ grade, overall }: { grade: QualityGrade; overall?: number }) {
   const st = STYLE[grade] ?? STYLE["needs work"];
   return (
@@ -18,7 +21,7 @@ export function GradeChip({ grade, overall }: { grade: QualityGrade; overall?: n
       title={`Assessor: ${grade} — ${st.note}`}
     >
       {grade}
-      {overall !== undefined ? <span className="text-ink-soft">{overall.toFixed(1)}/5</span> : null}
+      {overall !== undefined ? <span className="text-ink-soft">{fmtScore(overall)}/5</span> : null}
     </span>
   );
 }
