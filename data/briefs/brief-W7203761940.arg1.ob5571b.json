@@ -1,7 +1,7 @@
 {
   "id": "brief-W7203761940.arg1.ob5571b",
   "objection_id": "W7203761940.arg1.ob5571b",
-  "research_question": "Can the absence of a history-wide directional pattern toward the good be established without assuming that morally intelligible patterns of culpability, privilege, and harm are merely exceptional?",
+  "research_question": "Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?",
   "argument": {
     "id": "W7203761940.arg1",
     "title": "Randomness Underdetermines God",
@@ -58,13 +58,13 @@
   "strongest_responses": [
     {
       "defender": "Defender A",
-      "response": "The bridge case concerns one local event and does not establish the global directional signature toward the good that the argument requires. Both naturalism and biblical theology can explain human agency, privilege, and suffering, while biblical theology does not predict that moral character will reliably determine worldly outcomes.",
-      "why_it_failed": "This reply correctly distinguishes a local moral pattern from a history-wide providential pattern, but it does not support c001's claim that outcomes are often morally indiscriminate and non-monotonic. Defender A ultimately conceded that an aggregate-level premise was needed."
+      "response": "The bridge case concerns a localized event whose morally legible features arise from human agency, culpability, privilege, and private motives; it does not establish a history-wide directional signature toward the good. Both naturalism and biblical theology can accommodate such an event, and biblical theology does not predict that worldly outcomes reliably track moral character.",
+      "why_it_failed": "This reply correctly distinguishes a local pattern from a global conclusion, but it does not support c001's claim that outcomes are often morally indiscriminate and non-monotonic. Defender A ultimately conceded that an aggregate-level premise was needed and absent."
     },
     {
       "defender": "Defender B",
-      "response": "Although the catastrophe is morally intelligible in some respects, it does not display proportionate justice, reliable protection of the good, or a stable tendency for wrongdoing to receive fitting outcomes. The argument can instead claim that visible moral patterns are too inconsistent to provide a reliable directional signature of history being steered toward the good.",
-      "why_it_failed": "The revision identifies a more relevant evidential standard, but its assertion of inconsistency across history remains unsupported in the stated argument. It also leaves unclear how morally intelligible patterns should be distinguished from evidence of systematic moral direction."
+      "response": "A catastrophe may contain identifiable causal and moral connections without exhibiting proportionate justice, reliable protection of the good, or a stable tendency for wrongdoing to receive fitting outcomes. The argument therefore needs only the weaker claim that visible moral patterns occur too inconsistently to yield a reliable directional signature.",
+      "why_it_failed": "This narrows the premise in a plausible way, but the asserted inconsistency remains unsupported in the exchange. It also leaves unspecified what counts as a visible moral pattern and how much consistency would amount to a directional signature."
     }
   ],
   "closest_literature": [
@@ -106,83 +106,6 @@
       "verdict": "different",
       "similarity": 0.18,
       "quote": ""
-    },
-    {
-      "record_id": "W7203761940.c001",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c011",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c025",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c038",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c041",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c039",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c029",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
     }
   ],
   "novelty": 0.66,
@@ -214,12 +137,12 @@
     }
   ],
   "open_questions": [
-    "What evidential standard would show that visible moral patterns are not systematically dominant across history?",
-    "How should a historical outcome be classified as morally indiscriminate, morally intelligible, or evidence of a directional tendency toward the good?",
-    "Can recurrent patterns of harm through culpability, privilege, and power count as moral intelligibility without supporting benevolent providence?",
-    "What degree and kind of history-wide moral pattern would discriminate between naturalism and biblical theology?"
+    "What evidential method could determine whether outcomes tracking culpability, desert, privilege, or power are systematically dominant across history?",
+    "How should morally intelligible patterns generated by human agency be distinguished from evidence of moral governance or providential direction?",
+    "What degree and kind of correspondence between character and outcome would count as a directional signature of history being steered toward the good?",
+    "Can the absence of a benevolent directional signature underdetermine theism and naturalism if history nevertheless displays recurrent non-benevolent moral patterns?"
   ],
-  "paper_direction": "A paper here would argue that the argument from worldly randomness requires an explicit aggregate-level evidential premise, rather than relying on the unsupported claim that historical outcomes are often morally indiscriminate and non-monotonic. It would distinguish local moral intelligibility, such as patterns generated by culpability and unequal power, from a directional historical tendency toward proportionate justice or the good. The strongest reply to anticipate is that neither worldview predicts reliable earthly desert and that local patterns therefore cannot decide between them. The paper would need to specify a defensible classification standard and show, through an appropriate account of historical evidence, whether visible moral patterns are genuinely too inconsistent to bear on the competing worldviews.",
+  "paper_direction": "A paper here would argue that the argument from worldly randomness requires an explicit and independently supported aggregate premise about the distribution of morally intelligible outcomes in history. It would show that individual cases of harm structured by culpability, privilege, and power neither establish providence nor simply count as morally indiscriminate, while defending the claim that no reliable benevolent directional signature follows from their recurrence. The strongest reply to anticipate is that the relevant conclusion needs only inconsistency, not universal indiscriminacy; the paper would need to specify a standard for identifying moral patterns, justify the move from cases to an aggregate assessment, and explain why the resulting evidential profile underdetermines the rival worldviews.",
   "outcome": "revision_required",
   "disclaimer": "Further human review required."
 }

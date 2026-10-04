@@ -113,8 +113,9 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 - [x] P5.2 Mixed families across all roles; Naive Questioner if ≥ 2 families (else skip, note).
   **Check:** run JSON shows the families used.
   → families_used [anthropic, openai]; Naive Questioner (haiku) → sharpened by gpt-5.6-sol.
-- [ ] P5.3 Run all targets in the background, then export.
+- [x] P5.3 Run all targets in the background, then export.
   **Check:** ≥ 3 runs and ≥ 3 briefs exported.
+  → 5 runs, 55 objections, 30 trials (20 revision_required, 9 misreading, 1 known_answer), 14 briefs exported.
 - [x] P5.4 Live mode: FastAPI `/api/run` (SSE) + `/api/prior-art`; frontend switches on
   `VITE_API_URL`.
   **Check:** SSE emits events for a cached run.

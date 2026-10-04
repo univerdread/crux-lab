@@ -34,27 +34,47 @@ class Misread(BaseModel):
     distorted_claim: str
 
 
-async def build_known(client: LLMClient, store: Store, fx: dict, n: int) -> list[dict]:
+class Replies(BaseModel):
+    reply_numbers: list[int]
+
+
+async def build_known(client: LLMClient, store: Store, fx: dict, n: int, ix: HybridIndex) -> list[dict]:
+    """Published objection (a claim from paper A) + published reply (paper B != A, found by retrieval and
+    confirmed by an LLM judge). Correct later = known_answer citing a claim from one of the B papers."""
     corpus = {p["id"]: p for p in load_corpus() if not p.get("fresh")}
-    replies = [c for c in store.all(Claim) if c.kind == "reply" and c.paper_id in corpus and c.level == "abstract"]
-    random.Random(11).shuffle(replies)
+    cands = [c for c in store.all(Claim) if c.level == "abstract" and c.paper_id in corpus
+             and c.kind in ("objection", "conclusion", "reply")]
+    random.Random(11).shuffle(cands)
     text = canonical_text(fx)
     out: list[dict] = []
-    for i in range(0, len(replies), 12):
-        batch = replies[i:i + 12]
 
-        async def one(c: Claim):
-            p = corpus[c.paper_id]
-            system, user = render("eval_pair", argument=text, title=p["title"], abstract=p["abstract"][:1800], reply=c.text)
-            r, _ = await client.json("reranker", user, Pair, system,
-                                     validate=lambda o: None if (not o.usable or o.target_premise_id in fx["premises"])
-                                     else f"target_premise_id must be one of {list(fx['premises'])}")
-            return c, r
-        for c, r in await asyncio.gather(*[one(c) for c in batch]):
-            if r and r.usable and r.objection and c.paper_id not in {x["reply_paper"] for x in out}:
-                out.append({"objection": r.objection, "target": r.target_premise_id, "reply_paper": c.paper_id,
-                            "reply_claim": c.id})
-        if len(out) >= n:
+    async def one(c: Claim):
+        system, user = render("eval_objection", argument=text, title=corpus[c.paper_id]["title"], claim=c.text)
+        r, _ = await client.json("reranker", user, Pair, system,
+                                 validate=lambda o: None if (not o.usable or o.target_premise_id in fx["premises"])
+                                 else f"target_premise_id must be one of {list(fx['premises'])}")
+        if not (r and r.usable and r.objection):
+            return None
+        hits = [h for h in ix.search(r.objection, k=24) if h.meta.get("paper_id") != c.paper_id][:12]
+        if not hits:
+            return None
+        listing = "\n\n".join(f"[{i + 1}] ({h.meta.get('title', '')[:90]}) {h.text}" for i, h in enumerate(hits))
+        system, user = render("eval_find_reply", argument=text, target=r.target_premise_id, objection=r.objection,
+                              passages=listing)
+        rep, _ = await client.json("reranker", user, Replies, system)
+        idx = [k for k in (rep.reply_numbers if rep else []) if 1 <= k <= len(hits)]
+        if not idx:
+            return None
+        replies = [hits[k - 1] for k in idx]
+        return {"objection": r.objection, "target": r.target_premise_id, "objection_paper": c.paper_id,
+                "objection_claim": c.id, "reply_claims": [h.id for h in replies],
+                "reply_papers": sorted({h.meta["paper_id"] for h in replies})}
+
+    for i in range(0, len(cands), 12):
+        for item in await asyncio.gather(*[one(c) for c in cands[i:i + 12]]):
+            if item and item["objection_paper"] not in {x["objection_paper"] for x in out}:
+                out.append(item)
+        if len(out) >= n or i > 120:
             break
     return out[:n]
 
@@ -80,7 +100,7 @@ async def run(client: LLMClient | None = None) -> dict:
     fx = canonical_argument()
     text = canonical_text(fx)
     ix = HybridIndex.load(INDEX_DIR / "claims")
-    known = await build_known(client, store, fx, N_KNOWN)
+    known = await build_known(client, store, fx, N_KNOWN, ix)
     mis = await build_misreadings(client, fx, N_MISREAD)
     gen = client.generator_specs()[0]
 
@@ -99,11 +119,13 @@ async def run(client: LLMClient | None = None) -> dict:
     items = []
     k_label = k_correct = 0
     for it, t in res_k:
-        short = it["reply_paper"].split(":", 1)[-1]
-        cited_right = any(c.startswith(short + ".") for c in t.cited_claim_ids)
+        shorts = [p.split(":", 1)[-1] + "." for p in it["reply_papers"]]
+        cited_right = any(c.startswith(sh) for c in t.cited_claim_ids for sh in shorts)
         k_label += t.outcome == "known_answer"
         k_correct += t.outcome == "known_answer" and cited_right
-        items.append({"kind": "known_answer", "source_paper": it["reply_paper"], "objection": it["objection"],
+        items.append({"kind": "known_answer", "source_paper": ", ".join(it["reply_papers"]),
+                      "objection_paper": it["objection_paper"], "reply_claims": it["reply_claims"],
+                      "objection": it["objection"],
                       "target": it["target"], "outcome": t.outcome, "cited": t.cited_claim_ids,
                       "correct": t.outcome == "known_answer" and cited_right, "status": t.status})
     caught = 0
@@ -118,13 +140,17 @@ async def run(client: LLMClient | None = None) -> dict:
         "misreading": {"n": len(res_m), "caught": caught},
         "items": items,
         "settings": {"argument": fx["title"], "fixture_note": fx["note"],
-                     "known_items": "objections reconstructed by an LLM from corpus claims of kind 'reply' (the replying paper is in the corpus)",
+                     "known_items": ("objection: an LLM restates a corpus claim (paper A) as an objection to one premise; reply: "
+                                     "hybrid retrieval over the claim index (excluding paper A), then an LLM judge keeps "
+                                     "passages that answer the objection (paper B). Correct = known_answer citing a B claim."),
                      "misreading_items": "LLM-written objections that attack a distorted premise (2 variants x 4 premises, round robin)",
                      "gauntlet": "full: pre-screen, two defenders with retrieved literature, referee labels"},
         "models": model_ids(client, ["defender_a", "defender_b", "referee", "reranker"]) | {"misreading_writer": gen.label},
         "timestamp": stamp(),
-        "limits": ("Small n (10 + 10). The 'published objections' are reconstructed by an LLM from the replying paper's own "
-                   "abstract, so the reply is guaranteed relevant but the objection wording is not the original author's. "
+        "limits": ("Small n (10 + 10). Objections are LLM restatements of published claims, and the 'published reply' is "
+                   "chosen by retrieval + an LLM judge from abstract-level claims, so both the pairing and the gold reply are "
+                   "model-made. A first version of this eval paired each objection with its own source paper as the 'reply' "
+                   "(0/10 correct by construction) and was discarded. "
                    "Misreadings are written by a model from the same pool as the defenders. The argument is a paraphrased "
                    "fixture, not a corpus record. No human labels."),
     }

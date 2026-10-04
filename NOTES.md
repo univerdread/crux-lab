@@ -1,5 +1,20 @@
 # NOTES — newest entry first
 
+## 2026-10-04 03:36 — all targets run; E1 done; E2 rebuilt (Claude)
+- 5 runs / 55 objections / 30 trials / 14 briefs. Outcomes: revision_required 20, misreading 9,
+  known_answer 1, rebutted 0, standing 0. I read the revision_required labels: they are genuine
+  premise changes (narrowing/strengthening), not mere clarifications, so the Referee prompt stays.
+  The one known_answer (W2072673546) cites W7168366306.a3, whose verbatim quote does say what the
+  trial claims. Limits mention that this gauntlet produced no rebutted/standing outcomes.
+- E1 (n=50) recall@5: BM25 abstracts 12%, embeddings abstracts 18%, embeddings claims 54%,
+  claims + 3-way restatement + rerank 86%.
+- **E2 v1 discarded (construction bug, kept as results/e2_v1_discarded.json):** the item builder
+  restated each theist paper's own response as the objection and then counted that same paper as
+  the "published reply", so known_answer-with-correct-citation was 0/10 by construction.
+  Misreadings were 10/10. v2 pairs an objection from paper A with replies from other papers B,
+  found by retrieval and confirmed by an LLM judge; re-running now (misreading half is cached).
+- Product: briefs ranked by survival × novelty lead the site ("Research directions").
+
 ## 2026-10-04 03:21 — P2 done, lab running on all targets (Claude)
 - Map: 5/5 targets → 1 argument each (3–6 premises), all invalid as stated, each with a truth-table-
   checked missing premise; claims: 303 full-text (drop 5%) + 2615 abstract (drop 1%). Index:

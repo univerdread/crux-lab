@@ -23,8 +23,8 @@
   },
   "reason": "Published 2026-08-18 (after 2026-08-01), open-access full text (38,971 chars); argues for a thesis; hiddenness relevance 2/3 (divine love, availability or evidence); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:21:20.287980+00:00",
- "finished_at": "2026-10-04T01:25:50.129450+00:00",
+ "started_at": "2026-10-04T01:30:26.412148+00:00",
+ "finished_at": "2026-10-04T01:32:25.583247+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W7203761940.arg1",
@@ -419,7 +419,7 @@
    "id": "W7203761940.arg1.r1",
    "paper_id": "oa:W7203761940",
    "kind": "premise",
-   "text": "If rival worldviews assign comparable probability to the historical distribution of outcomes, not merely each being able to explain it, then worldly evidence alone cannot decide between them.",
+   "text": "Visible moral patterns, in which outcomes track culpability or desert, are not systematically dominant across history at the aggregate level, so the directional signature c011 describes is absent at the scale history presents.",
    "quote": "",
    "level": "generated"
   },
@@ -427,7 +427,7 @@
    "id": "W7203761940.arg1.r2",
    "paper_id": "oa:W7203761940",
    "kind": "premise",
-   "text": "If rival worldviews each explain apparent randomness and the worldly evidence is equally or only weakly discriminating between their predictions, then worldly evidence alone does not strongly favor either worldview, so judging God's existence by worldly randomness yields no clear winner.",
+   "text": "Visible desert-tracking outcomes at the aggregate level are not predicted by either naturalism or theism, so their absence is evidentially neutral between worldviews and c011 cannot serve as an expected-signature premise against theism.",
    "quote": "",
    "level": "generated"
   }
@@ -590,7 +590,7 @@
    "novelty": 0.62,
    "records_searched": 4138,
    "reranked": 14,
-   "live_openalex": "ok: 8 results",
+   "live_openalex": "cached: 8 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7196946190",
@@ -742,7 +742,7 @@
    "novelty": 0.48,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W4230565829",
@@ -894,7 +894,7 @@
    "novelty": 0.66,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "abs:oa:W4205129762",
@@ -1046,7 +1046,7 @@
    "novelty": 0.44,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "W7196922436.a2",
@@ -1799,11 +1799,11 @@
   "W7203761940.arg1.oc3f271": {
    "objection_id": "W7203761940.arg1.oc3f271",
    "restatements": {
-    "paper_vocabulary": "The aggregate-history premise equivocates between all of history and particular historical domains. A well-documented domain can be statistically dominated by desert-tracking outcomes, with identifiable deviations, so r1's unrestricted denial of systematically dominant visible moral patterns is false unless it specifies a different scale.",
-    "plain_english": "One carefully recorded part of the past may show that people usually get treated according to what they did, while the exceptions have known causes. That is enough to disprove the claim that such a pattern never shows up in the past, unless the claim says exactly which larger group it means.",
-    "neighboring_tradition": "This is a counterexample and domain-restriction objection to an overly broad empirical generalization: evidence of robust local moral order defeats a universal aggregate claim, while an appeal to a different reference class or level of analysis must be stated independently rather than introduced ad hoc."
+    "paper_vocabulary": "The aggregate-level claim in r1 overgeneralizes: a well-documented historical domain may display predominantly desert-tracking outcomes, with identifiable deviations such as corruption. Unless “history” is restricted to a specified scale or evidential domain, such a case falsifies the premise that visible moral patterns are not systematically dominant.",
+    "plain_english": "A careful record from one place can show that people usually get consequences that fit what they did, while the exceptions have known explanations. That is enough to disprove the claim that this never happens in history, unless the claim says exactly which kinds or sizes of historical record it means.",
+    "neighboring_tradition": "This is a scope and quantifier objection familiar from inductive generalization: evidence of locally reliable moral order is a counterinstance to an unrestricted universal claim of aggregate moral disorder. The argument must state a reference class or scale before moving from uneven global outcomes to the absence of dominant desert-sensitive regularities."
    },
-   "novelty": 0.66,
+   "novelty": 0.88,
    "records_searched": 4130,
    "reranked": 14,
    "live_openalex": "skipped (daily cap of 45 live OpenAlex searches reached)",
@@ -1811,58 +1811,50 @@
     {
      "record_id": "W7213498438.a2",
      "paper_id": "oa:W7213498438",
-     "verdict": "related",
-     "similarity": 0.34,
-     "quote": "Extrapolating later legendary sources onto earlier historical periods presents methodological problems.",
+     "verdict": "different",
+     "similarity": 0.12,
+     "quote": "",
      "title": "Sacred landscapes of Turan: religious beliefs, ritual practices and mythological traditions of ancient Central Asia in written sources (based on Khwandamir's \"Maosir al-Muluk\") and some archaeological sources"
     },
     {
      "record_id": "W7154543882.a2",
      "paper_id": "oa:W7154543882",
-     "verdict": "related",
-     "similarity": 0.32,
-     "quote": "Historical maritime representations show that sea space is lived differently according to its moment-specific representation.",
+     "verdict": "different",
+     "similarity": 0.12,
+     "quote": "",
      "title": "Navigating gods and monsters: the production of safe insecure spatialities in the deterrence of risk at sea"
     },
     {
-     "record_id": "W7164481491.a1",
-     "paper_id": "oa:W7164481491",
+     "record_id": "W7206181660.a2",
+     "paper_id": "oa:W7206181660",
      "verdict": "different",
-     "similarity": 0.18,
+     "similarity": 0.08,
      "quote": "",
-     "title": "The Role of Private Evidence in Avoiding Epistemic Suspension of Judgment (Agnosticism) Regarding the Existence of God"
+     "title": "The Moral Purity Industry - Volume 2"
     }
    ],
    "matches": [
     {
      "record_id": "W7213498438.a2",
      "paper_id": "oa:W7213498438",
-     "verdict": "related",
-     "similarity": 0.34,
-     "quote": "Extrapolating later legendary sources onto earlier historical periods presents methodological problems.",
+     "verdict": "different",
+     "similarity": 0.12,
+     "quote": "",
      "title": "Sacred landscapes of Turan: religious beliefs, ritual practices and mythological traditions of ancient Central Asia in written sources (based on Khwandamir's \"Maosir al-Muluk\") and some archaeological sources"
     },
     {
      "record_id": "W7154543882.a2",
      "paper_id": "oa:W7154543882",
-     "verdict": "related",
-     "similarity": 0.32,
-     "quote": "Historical maritime representations show that sea space is lived differently according to its moment-specific representation.",
-     "title": "Navigating gods and monsters: the production of safe insecure spatialities in the deterrence of risk at sea"
-    },
-    {
-     "record_id": "W7164481491.a1",
-     "paper_id": "oa:W7164481491",
      "verdict": "different",
-     "similarity": 0.18,
+     "similarity": 0.12,
      "quote": "",
-     "title": "The Role of Private Evidence in Avoiding Epistemic Suspension of Judgment (Agnosticism) Regarding the Existence of God"
+     "title": "Navigating gods and monsters: the production of safe insecure spatialities in the deterrence of risk at sea"
     },
     {
      "record_id": "W7206181660.a2",
      "paper_id": "oa:W7206181660",
      "verdict": "different",
-     "similarity": 0.14,
+     "similarity": 0.08,
      "quote": "",
      "title": "The Moral Purity Industry - Volume 2"
     },
@@ -1870,15 +1862,23 @@
      "record_id": "W7206187239.a2",
      "paper_id": "oa:W7206187239",
      "verdict": "different",
-     "similarity": 0.14,
+     "similarity": 0.08,
      "quote": "",
      "title": "The Moral Purity Industry - Volume 2"
+    },
+    {
+     "record_id": "W7206191538.a1",
+     "paper_id": "oa:W7206191538",
+     "verdict": "different",
+     "similarity": 0.08,
+     "quote": "",
+     "title": "The Moral Purity Industry - Volume 3"
     },
     {
      "record_id": "abs:oa:W7206159660",
      "paper_id": "oa:W7206159660",
      "verdict": "different",
-     "similarity": 0.13,
+     "similarity": 0.08,
      "quote": "",
      "title": "The Moral Purity Industry - Volume 3"
     },
@@ -1886,63 +1886,63 @@
      "record_id": "abs:oa:W7206191538",
      "paper_id": "oa:W7206191538",
      "verdict": "different",
-     "similarity": 0.13,
+     "similarity": 0.08,
      "quote": "",
      "title": "The Moral Purity Industry - Volume 3"
     },
     {
-     "record_id": "W7162958149.a3",
-     "paper_id": "oa:W7162958149",
+     "record_id": "W4413655127.a2",
+     "paper_id": "oa:W4413655127",
      "verdict": "different",
-     "similarity": 0.12,
+     "similarity": 0.03,
      "quote": "",
-     "title": "From Lament to Resistance: Theopolitical Mourning in Shia Islam and Biblical Traditions"
+     "title": "Modeling the Argument"
     },
     {
-     "record_id": "W4413655133.a2",
-     "paper_id": "oa:W4413655133",
+     "record_id": "W3204134618.a1",
+     "paper_id": "oa:W3204134618",
      "verdict": "different",
-     "similarity": 0.09,
+     "similarity": 0.03,
      "quote": "",
-     "title": "On Arguments Against God"
+     "title": "The Hiddenness Argument and the Ground of Its Soundness"
     },
     {
      "record_id": "W7114386886.a2",
      "paper_id": "oa:W7114386886",
      "verdict": "different",
-     "similarity": 0.08,
+     "similarity": 0.02,
      "quote": "",
      "title": "Divine Hiddenness Versus Bayesian Inference"
     },
     {
-     "record_id": "W3137822470.a2",
-     "paper_id": "oa:W3137822470",
+     "record_id": "abs:oa:W7164481491",
+     "paper_id": "oa:W7164481491",
      "verdict": "different",
-     "similarity": 0.07,
+     "similarity": 0.02,
      "quote": "",
-     "title": "Histoire de souffrances: Ethics of Remembering and Listening in Sylvie Germain’s La Pleurante des rues de Prague"
+     "title": "The Role of Private Evidence in Avoiding Epistemic Suspension of Judgment (Agnosticism) Regarding the Existence of God"
     },
     {
      "record_id": "W7212780622.a2",
      "paper_id": "oa:W7212780622",
      "verdict": "different",
-     "similarity": 0.04,
+     "similarity": 0.02,
      "quote": "",
      "title": "Quantitative Semantic-Breadth Ranking of Bridal-Mystic Erotic Poetry"
-    },
-    {
-     "record_id": "W7204147058.a3",
-     "paper_id": "oa:W7204147058",
-     "verdict": "different",
-     "similarity": 0.03,
-     "quote": "",
-     "title": "Works for 8/24/2026 - Elizabeth Montgomery"
     },
     {
      "record_id": "W7204121103.a3",
      "paper_id": "oa:W7204121103",
      "verdict": "different",
-     "similarity": 0.03,
+     "similarity": 0.01,
+     "quote": "",
+     "title": "Works for 8/24/2026 - Elizabeth Montgomery"
+    },
+    {
+     "record_id": "W7204147058.a3",
+     "paper_id": "oa:W7204147058",
+     "verdict": "different",
+     "similarity": 0.01,
      "quote": "",
      "title": "Works for 8/24/2026 - Elizabeth Montgomery"
     }
@@ -1951,110 +1951,142 @@
   "W7203761940.arg1.o8daccd": {
    "objection_id": "W7203761940.arg1.o8daccd",
    "restatements": {
-    "paper_vocabulary": "The revised premise wrongly treats aggregate desert-tracking as predicted by neither worldview: ordinary social mechanisms can predict partial, noisy moral-outcome correlations, while theism can regard the same correlations as providence through those mechanisms. Such a pattern is therefore a directional signature against a hypothesis of pure moral indifference, not evidentially neutral simply because it is non-systematic.",
-    "plain_english": "Good and trustworthy people may do better over time because others trust and help them, while bad actors lose support. That pattern can fit both a world run by ordinary human causes and a world in which God works through those causes, so it cannot be dismissed as meaningless just because it is incomplete and messy.",
-    "neighboring_tradition": "This is a likelihood or common-evidence objection: a noisy correlation between virtue and flourishing can be expected under multiple accounts and can still count against a null hypothesis of no connection at all. The mistake is to infer evidential neutrality from the failure of perfect desert-tracking, rather than comparing the observed pattern with the prediction of moral indifference."
+    "paper_vocabulary": "W7203761940.arg1.r2 wrongly treats aggregate desert-tracking as unpredicted by both naturalism and theism. Both can predict a partial, noisy correlation between moral conduct and historical outcomes—through reputation and repeated interaction under naturalism, and ordinary providential means under theism—so such a correlation can be a directional signature rather than evidentially neutral.",
+    "plain_english": "The claim says neither side expects decent people to do better overall, but both sides may expect that sometimes. If trustworthy people tend to recover more than cruel people, ordinary social causes can explain it while also fitting the idea that God works through those causes.",
+    "neighboring_tradition": "This is a shared-evidence or common-prediction objection: a noisy correlation between virtue and flourishing may be anticipated by competing causal models, rather than excluded by them. In philosophy of religion, it challenges the claim that worldly moral order has no evidential bearing by treating partial moral order as a defeasible sign against a hypothesis of complete moral indifference."
    },
-   "novelty": 0.34,
+   "novelty": 0.42,
    "records_searched": 4130,
    "reranked": 14,
    "live_openalex": "skipped (daily cap of 45 live OpenAlex searches reached)",
    "nearest": [
     {
-     "record_id": "W7164197413.a3",
-     "paper_id": "oa:W7164197413",
-     "verdict": "related",
-     "similarity": 0.66,
-     "quote": "Geographic clustering of belief enables distinctive exemplar types across cultures and is predicted more specifically by exemplarism than naturalism.",
-     "title": "The Exemplarist Theodicy (iii)"
-    },
-    {
-     "record_id": "abs:oa:W7128127015",
-     "paper_id": "oa:W7128127015",
-     "verdict": "related",
-     "similarity": 0.65,
-     "quote": "The contemporary deadlock in the philosophy of religion, where the same data (e.g., the laws of physics or the existence of pain) is confidently cited as evidence for and against God, demonstrates that \"evidence\" in this domain is not objective. It is paradigm-dependent.",
-     "title": "Incapable Judgements: The God Fallacy"
-    },
-    {
      "record_id": "abs:oa:W2256873583",
      "paper_id": "oa:W2256873583",
-     "verdict": "related",
-     "similarity": 0.62,
-     "quote": "the lopsided distribution of theistic belief throughout the world's populations is much more to be expected given naturalism than given theism. I try to meet Maitzen's challenge by developing a theistic explanation for this lopsidedness.",
-     "title": "Mutual epistemic dependence and the demographic divine hiddenness problem"
-    }
-   ],
-   "matches": [
-    {
-     "record_id": "W7164197413.a3",
-     "paper_id": "oa:W7164197413",
-     "verdict": "related",
-     "similarity": 0.66,
-     "quote": "Geographic clustering of belief enables distinctive exemplar types across cultures and is predicted more specifically by exemplarism than naturalism.",
-     "title": "The Exemplarist Theodicy (iii)"
-    },
-    {
-     "record_id": "abs:oa:W7128127015",
-     "paper_id": "oa:W7128127015",
-     "verdict": "related",
-     "similarity": 0.65,
-     "quote": "The contemporary deadlock in the philosophy of religion, where the same data (e.g., the laws of physics or the existence of pain) is confidently cited as evidence for and against God, demonstrates that \"evidence\" in this domain is not objective. It is paradigm-dependent.",
-     "title": "Incapable Judgements: The God Fallacy"
-    },
-    {
-     "record_id": "abs:oa:W2256873583",
-     "paper_id": "oa:W2256873583",
-     "verdict": "related",
-     "similarity": 0.62,
-     "quote": "the lopsided distribution of theistic belief throughout the world's populations is much more to be expected given naturalism than given theism. I try to meet Maitzen's challenge by developing a theistic explanation for this lopsidedness.",
-     "title": "Mutual epistemic dependence and the demographic divine hiddenness problem"
-    },
-    {
-     "record_id": "abs:oa:W7164863935",
-     "paper_id": "oa:W7164863935",
      "verdict": "related",
      "similarity": 0.58,
-     "quote": "Standard fine-tuning arguments, however, appear to require precisely the sort of expectation-guided reasoning that sceptical theism places under pressure.",
-     "title": "Sceptical theism and fine-tuning: relocating rather than resolving the tension"
+     "quote": "the lopsided distribution of theistic belief throughout the world's populations is much more to be expected given naturalism than given theism.",
+     "title": "Mutual epistemic dependence and the demographic divine hiddenness problem"
+    },
+    {
+     "record_id": "W7164197413.a3",
+     "paper_id": "oa:W7164197413",
+     "verdict": "related",
+     "similarity": 0.57,
+     "quote": "Geographic clustering of belief enables distinctive exemplar types across cultures and is predicted more specifically by exemplarism than naturalism.",
+     "title": "The Exemplarist Theodicy (iii)"
     },
     {
      "record_id": "abs:oa:W2049514036",
      "paper_id": "oa:W2049514036",
      "verdict": "related",
      "similarity": 0.52,
-     "quote": "I argue that a hidden premise causes Maitzen to overlook a Molinist solution. The upshot is a softening of the atheological import of the demographic data.",
+     "quote": "",
      "title": "Do the demographics of theistic belief disconfirm theism? A reply to Maitzen"
+    }
+   ],
+   "matches": [
+    {
+     "record_id": "abs:oa:W2256873583",
+     "paper_id": "oa:W2256873583",
+     "verdict": "related",
+     "similarity": 0.58,
+     "quote": "the lopsided distribution of theistic belief throughout the world's populations is much more to be expected given naturalism than given theism.",
+     "title": "Mutual epistemic dependence and the demographic divine hiddenness problem"
+    },
+    {
+     "record_id": "W7164197413.a3",
+     "paper_id": "oa:W7164197413",
+     "verdict": "related",
+     "similarity": 0.57,
+     "quote": "Geographic clustering of belief enables distinctive exemplar types across cultures and is predicted more specifically by exemplarism than naturalism.",
+     "title": "The Exemplarist Theodicy (iii)"
+    },
+    {
+     "record_id": "abs:oa:W2049514036",
+     "paper_id": "oa:W2049514036",
+     "verdict": "related",
+     "similarity": 0.52,
+     "quote": "",
+     "title": "Do the demographics of theistic belief disconfirm theism? A reply to Maitzen"
+    },
+    {
+     "record_id": "W1993847218.a1",
+     "paper_id": "oa:W1993847218",
+     "verdict": "related",
+     "similarity": 0.51,
+     "quote": "theistic explanations of theistic-belief demographics are implausible and less plausible than naturalistic explanations.",
+     "title": "Does Molinism explain the demographics of theism?"
     },
     {
      "record_id": "W2342449373.a1",
      "paper_id": "oa:W2342449373",
      "verdict": "related",
-     "similarity": 0.4,
+     "similarity": 0.48,
      "quote": "Natural nonbelief in early humans provides weakened support for naturalism over theism.",
      "title": "Natural Nonbelief as a Necessary Means to a Life of Choiceworthy Meaning"
     },
     {
-     "record_id": "W7196946190.a3",
-     "paper_id": "oa:W7196946190",
-     "verdict": "related",
-     "similarity": 0.4,
-     "quote": "Realism brackets divine intention in empirical causation without settling God’s existence.",
-     "title": "A Unified Definition of Realism The Denial of Fate as the Condition of Explicability and Intervention"
-    },
-    {
-     "record_id": "W4408620197.a1",
-     "paper_id": "oa:W4408620197",
+     "record_id": "abs:oa:W4322724210",
+     "paper_id": "oa:W4322724210",
      "verdict": "related",
      "similarity": 0.32,
-     "quote": "Contemporary formulations of the problem of evil miss the mark against classical theism.",
-     "title": "Bringing Good Even Out of Evil"
+     "quote": "on evil: as both sides have difficulties, a draw. (Theism is not the only view that faces severe trouble in explaining evil; naturalism does, as well).",
+     "title": "An Introduction to Hegel's Lectures on the Philosophy of Religion by Jon Stewart Oxford University Press, Oxford, 2022, pp.304, £75.00, hbk"
+    },
+    {
+     "record_id": "W7214972017.a3",
+     "paper_id": "oa:W7214972017",
+     "verdict": "different",
+     "similarity": 0.2,
+     "quote": "",
+     "title": "Mercy and Justice in the Context of John 8:1-11: A Philosophy of Religion Perspective"
+    },
+    {
+     "record_id": "W766712332.a2",
+     "paper_id": "oa:W766712332",
+     "verdict": "different",
+     "similarity": 0.18,
+     "quote": "",
+     "title": "C. S. Lewis on the Problem of Divine Hiddenness"
+    },
+    {
+     "record_id": "W7153694762.a3",
+     "paper_id": "oa:W7153694762",
+     "verdict": "different",
+     "similarity": 0.18,
+     "quote": "",
+     "title": "Divine hiddenness and originating initiative: an analytic account"
+    },
+    {
+     "record_id": "W2575351351.c004",
+     "paper_id": "oa:W2575351351",
+     "verdict": "different",
+     "similarity": 0.17,
+     "quote": "",
+     "title": "Divine Hiddenness, Greater Goods, and Accommodation"
+    },
+    {
+     "record_id": "W4210404881.a1",
+     "paper_id": "oa:W4210404881",
+     "verdict": "different",
+     "similarity": 0.16,
+     "quote": "",
+     "title": "Enlightenment Virtue, 1680–1794 ed. by James Fowler, Marine Ganofsky"
+    },
+    {
+     "record_id": "abs:oa:W7206171357",
+     "paper_id": "oa:W7206171357",
+     "verdict": "different",
+     "similarity": 0.12,
+     "quote": "",
+     "title": "The Moral Purity Industry - Volume 1"
     },
     {
      "record_id": "W2955876568.a3",
      "paper_id": "oa:W2955876568",
      "verdict": "different",
-     "similarity": 0.15,
+     "similarity": 0.08,
      "quote": "",
      "title": "Skeptical Theism, Free Will Skepticism and Atheism: Pondering the Scope of Moral Paralysis"
     },
@@ -2062,41 +2094,9 @@
      "record_id": "W7203485685.c018",
      "paper_id": "oa:W7203485685",
      "verdict": "different",
-     "similarity": 0.1,
+     "similarity": 0.05,
      "quote": "",
      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience"
-    },
-    {
-     "record_id": "W2767659503.a3",
-     "paper_id": "oa:W2767659503",
-     "verdict": "different",
-     "similarity": 0.1,
-     "quote": "",
-     "title": "Exaltation and atrocity: why kenotic humility can’t justify divine concurrence of evil"
-    },
-    {
-     "record_id": "W7161834801.a3",
-     "paper_id": "oa:W7161834801",
-     "verdict": "different",
-     "similarity": 0.05,
-     "quote": "",
-     "title": "Apples and Oranges: Exaggerated Multiple Religious Belief in East Asia"
-    },
-    {
-     "record_id": "abs:oa:W7214307906",
-     "paper_id": "oa:W7214307906",
-     "verdict": "different",
-     "similarity": 0.05,
-     "quote": "",
-     "title": "The Structure of Yearning: Bouzid's Rule (B+F=Nf) as an Axiological Framework for Virtue and Vice"
-    },
-    {
-     "record_id": "W7203667048.a2",
-     "paper_id": "oa:W7203667048",
-     "verdict": "different",
-     "similarity": 0.02,
-     "quote": "",
-     "title": "Widowhood and loneliness in Haulawng community"
     }
    ]
   }
@@ -2284,6 +2284,32 @@
    "error": null
   },
   {
+   "id": "trial-W7203761940.arg1.oc3f271",
+   "objection_id": "W7203761940.arg1.oc3f271",
+   "rounds": [
+    {
+     "exchange": 0,
+     "speaker": "referee",
+     "phase": "prescreen",
+     "model": "gpt-5.6-sol",
+     "family": "openai",
+     "content": "Misreading: The objection treats r1 as a universal claim that no historical domain can be dominated by desert-tracking outcomes. But r1 concerns whether such patterns are systematically dominant across history at the aggregate scale; one town-level domain does not contradict that claim.",
+     "cited_claim_ids": [],
+     "struck_claim_ids": [],
+     "concedes": false,
+     "revised_premise": null
+    }
+   ],
+   "outcome": "misreading",
+   "rationale": "The objection treats r1 as a universal claim that no historical domain can be dominated by desert-tracking outcomes. But r1 concerns whether such patterns are systematically dominant across history at the aggregate scale; one town-level domain does not contradict that claim.",
+   "deciding_quote": "A single well-documented domain where they are dominant is a counterexample to that universal claim, and the premise cannot be rescued without restricting it to a scale the argument never names.",
+   "cited_claim_ids": [],
+   "revised_premise": null,
+   "per_defender": {},
+   "status": "ok",
+   "error": null
+  },
+  {
    "id": "trial-W7203761940.arg1.o1897dd",
    "objection_id": "W7203761940.arg1.o1897dd",
    "rounds": [
@@ -2461,32 +2487,6 @@
    "error": null
   },
   {
-   "id": "trial-W7203761940.arg1.oc3f271",
-   "objection_id": "W7203761940.arg1.oc3f271",
-   "rounds": [
-    {
-     "exchange": 0,
-     "speaker": "referee",
-     "phase": "prescreen",
-     "model": "gpt-5.6-sol",
-     "family": "openai",
-     "content": "Misreading: The objection recasts r1 as a universal claim about every individual historical domain. R1 instead concerns whether desert-tracking patterns are systematically dominant across history at the aggregate scale; one town-level domain does not contradict that claim.",
-     "cited_claim_ids": [],
-     "struck_claim_ids": [],
-     "concedes": false,
-     "revised_premise": null
-    }
-   ],
-   "outcome": "misreading",
-   "rationale": "The objection recasts r1 as a universal claim about every individual historical domain. R1 instead concerns whether desert-tracking patterns are systematically dominant across history at the aggregate scale; one town-level domain does not contradict that claim.",
-   "deciding_quote": "A single well-documented domain where they are dominant is a counterexample to that universal claim, and the premise cannot be rescued without restricting it to a scale the argument never names.",
-   "cited_claim_ids": [],
-   "revised_premise": null,
-   "per_defender": {},
-   "status": "ok",
-   "error": null
-  },
-  {
    "id": "trial-W7203761940.arg1.ob46797",
    "objection_id": "W7203761940.arg1.ob46797",
    "rounds": [
@@ -2496,7 +2496,7 @@
      "phase": "prescreen",
      "model": "gpt-5.6-sol",
      "family": "openai",
-     "content": "Misreading: The objection attributes to biblical theism a prediction of discernible restoration within history, whereas the argument explicitly denies that theism predicts aggregate visible desert-tracking outcomes and locates complete justice in a future judgment.",
+     "content": "Misreading: The objection attributes to the biblical worldview an earthly historical prediction that the argument does not make. The argument instead says that complete justice occurs in a future judgment and denies that visible moral outcomes systematically govern earthly life.",
      "cited_claim_ids": [],
      "struck_claim_ids": [],
      "concedes": false,
@@ -2504,7 +2504,7 @@
     }
    ],
    "outcome": "misreading",
-   "rationale": "The objection attributes to biblical theism a prediction of discernible restoration within history, whereas the argument explicitly denies that theism predicts aggregate visible desert-tracking outcomes and locates complete justice in a future judgment.",
+   "rationale": "The objection attributes to the biblical worldview an earthly historical prediction that the argument does not make. The argument instead says that complete justice occurs in a future judgment and denies that visible moral outcomes systematically govern earthly life.",
    "deciding_quote": "Ben's framework makes a further prediction that Ana's does not: that suffering will be followed, at some point in history, by discernible restorative patterns, such as recurring moral correction across communities.",
    "cited_claim_ids": [],
    "revised_premise": null,
@@ -2624,6 +2624,18 @@
    "step": 1,
    "queue": [
     {
+     "objection_id": "W7203761940.arg1.oc3f271",
+     "target_premise_id": "W7203761940.arg1.r1",
+     "agent": "blind_thought_experimenter",
+     "family": "anthropic",
+     "depth": 1,
+     "S": 0.5,
+     "N": 0.88,
+     "C": 0.2,
+     "E": 0,
+     "priority": 0.264
+    },
+    {
      "objection_id": "W7203761940.arg1.o1897dd",
      "target_premise_id": "W7203761940.c011",
      "agent": "tradition_lens",
@@ -2648,18 +2660,6 @@
      "priority": 0.214
     },
     {
-     "objection_id": "W7203761940.arg1.oc3f271",
-     "target_premise_id": "W7203761940.arg1.r1",
-     "agent": "blind_thought_experimenter",
-     "family": "anthropic",
-     "depth": 1,
-     "S": 0.5,
-     "N": 0.66,
-     "C": 0.2,
-     "E": 0,
-     "priority": 0.198
-    },
-    {
      "objection_id": "W7203761940.arg1.ob46797",
      "target_premise_id": "W7203761940.arg1.mp",
      "agent": "hidden_premise_attacker",
@@ -2709,8 +2709,8 @@
     }
    ],
    "picked": [
-    "W7203761940.arg1.o1897dd",
-    "W7203761940.arg1.o964b25"
+    "W7203761940.arg1.oc3f271",
+    "W7203761940.arg1.o1897dd"
    ],
    "note": ""
   },
@@ -2718,16 +2718,16 @@
    "step": 2,
    "queue": [
     {
-     "objection_id": "W7203761940.arg1.oc3f271",
-     "target_premise_id": "W7203761940.arg1.r1",
-     "agent": "blind_thought_experimenter",
+     "objection_id": "W7203761940.arg1.o964b25",
+     "target_premise_id": "W7203761940.c011",
+     "agent": "tradition_lens",
      "family": "anthropic",
-     "depth": 1,
+     "depth": 0,
      "S": 0.5,
-     "N": 0.66,
+     "N": 0.38,
      "C": 0.2,
-     "E": 0,
-     "priority": 0.198
+     "E": 1,
+     "priority": 0.214
     },
     {
      "objection_id": "W7203761940.arg1.ob46797",
@@ -2776,22 +2776,10 @@
      "C": 0.2,
      "E": 1,
      "priority": 0.124
-    },
-    {
-     "objection_id": "W7203761940.arg1.o8daccd",
-     "target_premise_id": "W7203761940.arg1.r2",
-     "agent": "blind_thought_experimenter",
-     "family": "anthropic",
-     "depth": 1,
-     "S": 0.5,
-     "N": 0.34,
-     "C": 0.2,
-     "E": 0,
-     "priority": 0.102
     }
    ],
    "picked": [
-    "W7203761940.arg1.oc3f271",
+    "W7203761940.arg1.o964b25",
     "W7203761940.arg1.ob46797"
    ],
    "note": ""
@@ -2809,7 +2797,6 @@
  ],
  "families_used": [
   "anthropic",
-  "anthropic→openai",
   "openai"
  ],
  "models": {
@@ -2827,34 +2814,34 @@
  ],
  "diversity": "degraded: 2 families",
  "llm_stats": {
-  "calls": 54,
-  "cache_hits": 13,
+  "calls": 346,
+  "cache_hits": 326,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 533,
+  "cli_calls": 1022,
   "cli_limit": 4000,
-  "notional_cli_usd": 8.1148
+  "notional_cli_usd": 12.8213
  },
  "events": [
   {
-   "t": 1791076880.29,
+   "t": 1791077426.41,
    "type": "run_start",
    "run_id": "run-oa-W7203761940",
    "target": "oa-W7203761940",
    "argument_id": "W7203761940.arg1"
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.23,
    "type": "naive_question",
    "question": "Here's what puzzles me most:\n\nIf God's plan is so hidden that the world looks exactly the same whether God exists or doesn't exist, how is believing in God actually different from not believing? And doesn't that make the argument circular—saying we can't decide based on evidence because the evidence looks the same under both worldviews?",
    "sharpened": true
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.oe01bb3",
@@ -2871,7 +2858,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.od9294e",
@@ -2888,7 +2875,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.ob5571b",
@@ -2905,7 +2892,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.of0b402",
@@ -2922,7 +2909,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.ob46797",
@@ -2939,7 +2926,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o964b25",
@@ -2956,7 +2943,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o1897dd",
@@ -2973,7 +2960,7 @@
    }
   },
   {
-   "t": 1791076904.46,
+   "t": 1791077434.24,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o6f0f1d",
@@ -2990,7 +2977,7 @@
    }
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.oe01bb3",
    "novelty": 0.62,
@@ -3023,7 +3010,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.od9294e",
    "novelty": 0.48,
@@ -3056,7 +3043,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.ob5571b",
    "novelty": 0.66,
@@ -3089,7 +3076,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.of0b402",
    "novelty": 0.44,
@@ -3122,7 +3109,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.ob46797",
    "novelty": 0.2,
@@ -3155,7 +3142,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o964b25",
    "novelty": 0.38,
@@ -3188,7 +3175,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o1897dd",
    "novelty": 0.38,
@@ -3221,7 +3208,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o6f0f1d",
    "novelty": 0.08,
@@ -3254,7 +3241,7 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -3361,19 +3348,19 @@
    ]
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.ob5571b",
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791076936.72,
+   "t": 1791077448.49,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.oe01bb3",
    "objection_id": "W7203761940.arg1.oe01bb3"
   },
   {
-   "t": 1791076943.35,
+   "t": 1791077448.49,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3391,7 +3378,7 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791076946.53,
+   "t": 1791077448.56,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3409,7 +3396,7 @@
    "objection_id": "W7203761940.arg1.oe01bb3"
   },
   {
-   "t": 1791076946.53,
+   "t": 1791077448.56,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -3417,7 +3404,7 @@
    "objection_id": "W7203761940.arg1.oe01bb3"
   },
   {
-   "t": 1791076950.15,
+   "t": 1791077448.98,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3439,27 +3426,7 @@
    }
   },
   {
-   "t": 1791076955.57,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your bridge case shows that a single catastrophe can display a morally intelligible local pattern: culpable officials create the danger, and the mayor’s preferential power helps his own son. That is compatible with c001. The premise is a broad, defeasible observation about many apparently random historical events, not a universal generalization over every tragedy.\n\nIndeed, your example reinforces the distinction c001 needs. Identifiable causal and moral connections within one event do not establish a history-wide directional pattern toward the good. The inspector’s daughter dies despite the inspector’s warning to her, and the mayor’s son survives despite the mayor’s culpable policy; the case contains morally legible features, but it does not show proportionate justice, reliable protection of the good, or a stable tendency for wrongdoing to receive fitting outcomes. Scripture itself does not promise that character determines worldly health, prosperity, longevity, or political success [W7203761940.c038], and the paper locates complete justice beyond earthly history [W7203761940.c039].\n\nStill, you expose an imprecision: “their outcomes” could sound universal. The argument survives with a modest revision: it need only claim that visible moral patterns occur too inconsistently to supply the directional signature required to decide between the rival worldviews. That is also why absence of such a pattern in severe illness is a serious evidential question rather than decisive proof [W7203761940.c029].\n\nRevised premise: Many apparently random historical events have identifiable biological, political, or social causes, and visible moral patterns occur too inconsistently across their outcomes to provide a reliable directional signature of history being steered toward the good.",
-    "cited_claim_ids": [
-     "W7203761940.c038",
-     "W7203761940.c039",
-     "W7203761940.c029"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "Many apparently random historical events have identifiable biological, political, or social causes, and visible moral patterns occur too inconsistently across their outcomes to provide a reliable directional signature of history being steered toward the good."
-   }
-  },
-  {
-   "t": 1791076957.2,
+   "t": 1791077448.98,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3475,7 +3442,7 @@
    }
   },
   {
-   "t": 1791076963.27,
+   "t": 1791077448.98,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3498,7 +3465,27 @@
    }
   },
   {
-   "t": 1791076971.31,
+   "t": 1791077448.98,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "Your bridge case shows that a single catastrophe can display a morally intelligible local pattern: culpable officials create the danger, and the mayor’s preferential power helps his own son. That is compatible with c001. The premise is a broad, defeasible observation about many apparently random historical events, not a universal generalization over every tragedy.\n\nIndeed, your example reinforces the distinction c001 needs. Identifiable causal and moral connections within one event do not establish a history-wide directional pattern toward the good. The inspector’s daughter dies despite the inspector’s warning to her, and the mayor’s son survives despite the mayor’s culpable policy; the case contains morally legible features, but it does not show proportionate justice, reliable protection of the good, or a stable tendency for wrongdoing to receive fitting outcomes. Scripture itself does not promise that character determines worldly health, prosperity, longevity, or political success [W7203761940.c038], and the paper locates complete justice beyond earthly history [W7203761940.c039].\n\nStill, you expose an imprecision: “their outcomes” could sound universal. The argument survives with a modest revision: it need only claim that visible moral patterns occur too inconsistently to supply the directional signature required to decide between the rival worldviews. That is also why absence of such a pattern in severe illness is a serious evidential question rather than decisive proof [W7203761940.c029].\n\nRevised premise: Many apparently random historical events have identifiable biological, political, or social causes, and visible moral patterns occur too inconsistently across their outcomes to provide a reliable directional signature of history being steered toward the good.",
+    "cited_claim_ids": [
+     "W7203761940.c038",
+     "W7203761940.c039",
+     "W7203761940.c029"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "Many apparently random historical events have identifiable biological, political, or social causes, and visible moral patterns occur too inconsistently across their outcomes to provide a reliable directional signature of history being steered toward the good."
+   }
+  },
+  {
+   "t": 1791077449.06,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3516,7 +3503,7 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791076979.73,
+   "t": 1791077449.06,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3534,7 +3521,7 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791076979.73,
+   "t": 1791077449.06,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -3542,14 +3529,14 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791076979.73,
+   "t": 1791077449.07,
    "type": "revised_premise",
    "id": "W7203761940.arg1.r1",
    "text": "Visible moral patterns, in which outcomes track culpability or desert, are not systematically dominant across history at the aggregate level, so the directional signature c011 describes is absent at the scale history presents.",
    "from_trial": "trial-W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791076993.69,
+   "t": 1791077449.08,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.oc3f271",
@@ -3566,43 +3553,55 @@
    }
   },
   {
-   "t": 1791077014.56,
+   "t": 1791077473.42,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.oc3f271",
-   "novelty": 0.66,
+   "novelty": 0.88,
    "records_searched": 4130,
    "nearest": [
     {
      "record_id": "W7213498438.a2",
      "paper_id": "oa:W7213498438",
-     "verdict": "related",
-     "similarity": 0.34,
-     "quote": "Extrapolating later legendary sources onto earlier historical periods presents methodological problems.",
+     "verdict": "different",
+     "similarity": 0.12,
+     "quote": "",
      "title": "Sacred landscapes of Turan: religious beliefs, ritual practices and mythological traditions of ancient Central Asia in written sources (based on Khwandamir's \"Maosir al-Muluk\") and some archaeological sources"
     },
     {
      "record_id": "W7154543882.a2",
      "paper_id": "oa:W7154543882",
-     "verdict": "related",
-     "similarity": 0.32,
-     "quote": "Historical maritime representations show that sea space is lived differently according to its moment-specific representation.",
+     "verdict": "different",
+     "similarity": 0.12,
+     "quote": "",
      "title": "Navigating gods and monsters: the production of safe insecure spatialities in the deterrence of risk at sea"
     },
     {
-     "record_id": "W7164481491.a1",
-     "paper_id": "oa:W7164481491",
+     "record_id": "W7206181660.a2",
+     "paper_id": "oa:W7206181660",
      "verdict": "different",
-     "similarity": 0.18,
+     "similarity": 0.08,
      "quote": "",
-     "title": "The Role of Private Evidence in Avoiding Epistemic Suspension of Judgment (Agnosticism) Regarding the Existence of God"
+     "title": "The Moral Purity Industry - Volume 2"
     }
    ]
   },
   {
-   "t": 1791077014.56,
+   "t": 1791077473.42,
    "type": "queue",
    "step": 1,
    "queue": [
+    {
+     "objection_id": "W7203761940.arg1.oc3f271",
+     "target_premise_id": "W7203761940.arg1.r1",
+     "agent": "blind_thought_experimenter",
+     "family": "anthropic",
+     "depth": 1,
+     "S": 0.5,
+     "N": 0.88,
+     "C": 0.2,
+     "E": 0,
+     "priority": 0.264
+    },
     {
      "objection_id": "W7203761940.arg1.o1897dd",
      "target_premise_id": "W7203761940.c011",
@@ -3628,16 +3627,139 @@
      "priority": 0.214
     },
     {
-     "objection_id": "W7203761940.arg1.oc3f271",
-     "target_premise_id": "W7203761940.arg1.r1",
+     "objection_id": "W7203761940.arg1.ob46797",
+     "target_premise_id": "W7203761940.arg1.mp",
+     "agent": "hidden_premise_attacker",
+     "family": "anthropic",
+     "depth": 0,
+     "S": 0.5,
+     "N": 0.2,
+     "C": 0.2,
+     "E": 1,
+     "priority": 0.16
+    },
+    {
+     "objection_id": "W7203761940.arg1.od9294e",
+     "target_premise_id": "W7203761940.c025",
      "agent": "blind_thought_experimenter",
      "family": "anthropic",
-     "depth": 1,
+     "depth": 0,
      "S": 0.5,
-     "N": 0.66,
+     "N": 0.48,
      "C": 0.2,
      "E": 0,
-     "priority": 0.198
+     "priority": 0.144
+    },
+    {
+     "objection_id": "W7203761940.arg1.of0b402",
+     "target_premise_id": "W7203761940.c002",
+     "agent": "blind_thought_experimenter",
+     "family": "openai",
+     "depth": 0,
+     "S": 0.5,
+     "N": 0.44,
+     "C": 0.2,
+     "E": 0,
+     "priority": 0.132
+    },
+    {
+     "objection_id": "W7203761940.arg1.o6f0f1d",
+     "target_premise_id": "W7203761940.arg1.mp",
+     "agent": "naive_questioner+sharpener",
+     "family": "anthropic→openai",
+     "depth": 0,
+     "S": 0.5,
+     "N": 0.08,
+     "C": 0.2,
+     "E": 1,
+     "priority": 0.124
+    }
+   ],
+   "picked": [
+    "W7203761940.arg1.oc3f271",
+    "W7203761940.arg1.o1897dd"
+   ]
+  },
+  {
+   "t": 1791077473.42,
+   "type": "trial_start",
+   "trial_id": "trial-W7203761940.arg1.oc3f271",
+   "objection_id": "W7203761940.arg1.oc3f271"
+  },
+  {
+   "t": 1791077473.42,
+   "type": "trial_start",
+   "trial_id": "trial-W7203761940.arg1.o1897dd",
+   "objection_id": "W7203761940.arg1.o1897dd"
+  },
+  {
+   "t": 1791077473.44,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Misreading: The objection targets a claim that rightly perceiving God’s governance requires a simple, publicly measurable upward historical curve. The argument claims only that aggregate historical evidence lacks systematically dominant visible moral patterns and therefore cannot by itself decide between worldviews; it does not deny non-inferential or personal religious warrant.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7203761940.arg1.o1897dd",
+   "objection_id": "W7203761940.arg1.o1897dd"
+  },
+  {
+   "t": 1791077473.44,
+   "type": "trial_end",
+   "outcome": "misreading",
+   "status": "ok",
+   "trial_id": "trial-W7203761940.arg1.o1897dd",
+   "objection_id": "W7203761940.arg1.o1897dd"
+  },
+  {
+   "t": 1791077482.5,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Misreading: The objection treats r1 as a universal claim that no historical domain can be dominated by desert-tracking outcomes. But r1 concerns whether such patterns are systematically dominant across history at the aggregate scale; one town-level domain does not contradict that claim.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7203761940.arg1.oc3f271",
+   "objection_id": "W7203761940.arg1.oc3f271"
+  },
+  {
+   "t": 1791077482.5,
+   "type": "trial_end",
+   "outcome": "misreading",
+   "status": "ok",
+   "trial_id": "trial-W7203761940.arg1.oc3f271",
+   "objection_id": "W7203761940.arg1.oc3f271"
+  },
+  {
+   "t": 1791077482.5,
+   "type": "queue",
+   "step": 2,
+   "queue": [
+    {
+     "objection_id": "W7203761940.arg1.o964b25",
+     "target_premise_id": "W7203761940.c011",
+     "agent": "tradition_lens",
+     "family": "anthropic",
+     "depth": 0,
+     "S": 0.5,
+     "N": 0.38,
+     "C": 0.2,
+     "E": 1,
+     "priority": 0.214
     },
     {
      "objection_id": "W7203761940.arg1.ob46797",
@@ -3689,50 +3811,24 @@
     }
    ],
    "picked": [
-    "W7203761940.arg1.o1897dd",
-    "W7203761940.arg1.o964b25"
+    "W7203761940.arg1.o964b25",
+    "W7203761940.arg1.ob46797"
    ]
   },
   {
-   "t": 1791077014.56,
-   "type": "trial_start",
-   "trial_id": "trial-W7203761940.arg1.o1897dd",
-   "objection_id": "W7203761940.arg1.o1897dd"
-  },
-  {
-   "t": 1791077014.56,
+   "t": 1791077482.5,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.o964b25",
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077025.83,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Misreading: The objection targets a claim that rightly perceiving God’s governance requires a simple, publicly measurable upward historical curve. The argument claims only that aggregate historical evidence lacks systematically dominant visible moral patterns and therefore cannot by itself decide between worldviews; it does not deny non-inferential or personal religious warrant.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7203761940.arg1.o1897dd",
-   "objection_id": "W7203761940.arg1.o1897dd"
+   "t": 1791077482.5,
+   "type": "trial_start",
+   "trial_id": "trial-W7203761940.arg1.ob46797",
+   "objection_id": "W7203761940.arg1.ob46797"
   },
   {
-   "t": 1791077025.83,
-   "type": "trial_end",
-   "outcome": "misreading",
-   "status": "ok",
-   "trial_id": "trial-W7203761940.arg1.o1897dd",
-   "objection_id": "W7203761940.arg1.o1897dd"
-  },
-  {
-   "t": 1791077026.04,
+   "t": 1791077482.5,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3750,7 +3846,7 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077035.52,
+   "t": 1791077482.75,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3772,27 +3868,7 @@
    }
   },
   {
-   "t": 1791077044.78,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your Mara case shows that, on a Molinist account, providence might work through free choices and goods distributed across persons, times, and eternity, rather than through a visible reward-and-punishment pattern. That is a serious objection to c011 as worded. Molinism is at least a developed way to combine middle knowledge, libertarian freedom, and meticulous providence [W4200623636.a1], although whether God can know every such free choice in advance remains controversial [W2575351351.c037].\n\nBut your case does not make worldly randomness evidence for divine steering; it makes it evidentially ambiguous. An indefinitely hidden network of counterfactual goods can accommodate virtually any observed distribution, while impersonal causation and probability can also accommodate it. So you strengthen the conclusion that worldly randomness supplies no clear winner, even though you defeat the claim that a visible moral trend was expected.\n\nThe argument therefore survives only after c011 is weakened: its point cannot be that the absence of a trend disconfirms providence, but that it cannot independently establish providence. Biblical theology’s placement of complete justice in future judgment also makes earthly outcome-patterns an especially poor sole test [W7203761940.c039].\n\nRevised premise: Historical evidence lacks a visible directional signature that would independently establish benevolent divine steering, because both impersonal causation and hidden providential accounts can accommodate its absence.",
-    "cited_claim_ids": [
-     "W4200623636.a1",
-     "W2575351351.c037",
-     "W7203761940.c039"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "Historical evidence lacks a visible directional signature that would independently establish benevolent divine steering, because both impersonal causation and hidden providential accounts can accommodate its absence."
-   }
-  },
-  {
-   "t": 1791077048.44,
+   "t": 1791077482.76,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3808,7 +3884,7 @@
    }
   },
   {
-   "t": 1791077055.24,
+   "t": 1791077482.76,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3829,7 +3905,27 @@
    }
   },
   {
-   "t": 1791077063.22,
+   "t": 1791077482.76,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "Your Mara case shows that, on a Molinist account, providence might work through free choices and goods distributed across persons, times, and eternity, rather than through a visible reward-and-punishment pattern. That is a serious objection to c011 as worded. Molinism is at least a developed way to combine middle knowledge, libertarian freedom, and meticulous providence [W4200623636.a1], although whether God can know every such free choice in advance remains controversial [W2575351351.c037].\n\nBut your case does not make worldly randomness evidence for divine steering; it makes it evidentially ambiguous. An indefinitely hidden network of counterfactual goods can accommodate virtually any observed distribution, while impersonal causation and probability can also accommodate it. So you strengthen the conclusion that worldly randomness supplies no clear winner, even though you defeat the claim that a visible moral trend was expected.\n\nThe argument therefore survives only after c011 is weakened: its point cannot be that the absence of a trend disconfirms providence, but that it cannot independently establish providence. Biblical theology’s placement of complete justice in future judgment also makes earthly outcome-patterns an especially poor sole test [W7203761940.c039].\n\nRevised premise: Historical evidence lacks a visible directional signature that would independently establish benevolent divine steering, because both impersonal causation and hidden providential accounts can accommodate its absence.",
+    "cited_claim_ids": [
+     "W4200623636.a1",
+     "W2575351351.c037",
+     "W7203761940.c039"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "Historical evidence lacks a visible directional signature that would independently establish benevolent divine steering, because both impersonal causation and hidden providential accounts can accommodate its absence."
+   }
+  },
+  {
+   "t": 1791077482.76,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3847,7 +3943,7 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077070.1,
+   "t": 1791077482.76,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3865,7 +3961,7 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077070.1,
+   "t": 1791077482.76,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -3873,14 +3969,40 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077070.1,
+   "t": 1791077494.29,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Misreading: The objection attributes to the biblical worldview an earthly historical prediction that the argument does not make. The argument instead says that complete justice occurs in a future judgment and denies that visible moral outcomes systematically govern earthly life.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7203761940.arg1.ob46797",
+   "objection_id": "W7203761940.arg1.ob46797"
+  },
+  {
+   "t": 1791077494.29,
+   "type": "trial_end",
+   "outcome": "misreading",
+   "status": "ok",
+   "trial_id": "trial-W7203761940.arg1.ob46797",
+   "objection_id": "W7203761940.arg1.ob46797"
+  },
+  {
+   "t": 1791077494.29,
    "type": "revised_premise",
    "id": "W7203761940.arg1.r2",
    "text": "Visible desert-tracking outcomes at the aggregate level are not predicted by either naturalism or theism, so their absence is evidentially neutral between worldviews and c011 cannot serve as an expected-signature premise against theism.",
    "from_trial": "trial-W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077075.99,
+   "t": 1791077494.3,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o8daccd",
@@ -3897,199 +4019,52 @@
    }
   },
   {
-   "t": 1791077112.41,
+   "t": 1791077520.09,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o8daccd",
-   "novelty": 0.34,
+   "novelty": 0.42,
    "records_searched": 4130,
    "nearest": [
-    {
-     "record_id": "W7164197413.a3",
-     "paper_id": "oa:W7164197413",
-     "verdict": "related",
-     "similarity": 0.66,
-     "quote": "Geographic clustering of belief enables distinctive exemplar types across cultures and is predicted more specifically by exemplarism than naturalism.",
-     "title": "The Exemplarist Theodicy (iii)"
-    },
-    {
-     "record_id": "abs:oa:W7128127015",
-     "paper_id": "oa:W7128127015",
-     "verdict": "related",
-     "similarity": 0.65,
-     "quote": "The contemporary deadlock in the philosophy of religion, where the same data (e.g., the laws of physics or the existence of pain) is confidently cited as evidence for and against God, demonstrates that \"evidence\" in this domain is not objective. It is paradigm-dependent.",
-     "title": "Incapable Judgements: The God Fallacy"
-    },
     {
      "record_id": "abs:oa:W2256873583",
      "paper_id": "oa:W2256873583",
      "verdict": "related",
-     "similarity": 0.62,
-     "quote": "the lopsided distribution of theistic belief throughout the world's populations is much more to be expected given naturalism than given theism. I try to meet Maitzen's challenge by developing a theistic explanation for this lopsidedness.",
+     "similarity": 0.58,
+     "quote": "the lopsided distribution of theistic belief throughout the world's populations is much more to be expected given naturalism than given theism.",
      "title": "Mutual epistemic dependence and the demographic divine hiddenness problem"
+    },
+    {
+     "record_id": "W7164197413.a3",
+     "paper_id": "oa:W7164197413",
+     "verdict": "related",
+     "similarity": 0.57,
+     "quote": "Geographic clustering of belief enables distinctive exemplar types across cultures and is predicted more specifically by exemplarism than naturalism.",
+     "title": "The Exemplarist Theodicy (iii)"
+    },
+    {
+     "record_id": "abs:oa:W2049514036",
+     "paper_id": "oa:W2049514036",
+     "verdict": "related",
+     "similarity": 0.52,
+     "quote": "",
+     "title": "Do the demographics of theistic belief disconfirm theism? A reply to Maitzen"
     }
    ]
   },
   {
-   "t": 1791077112.41,
-   "type": "queue",
-   "step": 2,
-   "queue": [
-    {
-     "objection_id": "W7203761940.arg1.oc3f271",
-     "target_premise_id": "W7203761940.arg1.r1",
-     "agent": "blind_thought_experimenter",
-     "family": "anthropic",
-     "depth": 1,
-     "S": 0.5,
-     "N": 0.66,
-     "C": 0.2,
-     "E": 0,
-     "priority": 0.198
-    },
-    {
-     "objection_id": "W7203761940.arg1.ob46797",
-     "target_premise_id": "W7203761940.arg1.mp",
-     "agent": "hidden_premise_attacker",
-     "family": "anthropic",
-     "depth": 0,
-     "S": 0.5,
-     "N": 0.2,
-     "C": 0.2,
-     "E": 1,
-     "priority": 0.16
-    },
-    {
-     "objection_id": "W7203761940.arg1.od9294e",
-     "target_premise_id": "W7203761940.c025",
-     "agent": "blind_thought_experimenter",
-     "family": "anthropic",
-     "depth": 0,
-     "S": 0.5,
-     "N": 0.48,
-     "C": 0.2,
-     "E": 0,
-     "priority": 0.144
-    },
-    {
-     "objection_id": "W7203761940.arg1.of0b402",
-     "target_premise_id": "W7203761940.c002",
-     "agent": "blind_thought_experimenter",
-     "family": "openai",
-     "depth": 0,
-     "S": 0.5,
-     "N": 0.44,
-     "C": 0.2,
-     "E": 0,
-     "priority": 0.132
-    },
-    {
-     "objection_id": "W7203761940.arg1.o6f0f1d",
-     "target_premise_id": "W7203761940.arg1.mp",
-     "agent": "naive_questioner+sharpener",
-     "family": "anthropic→openai",
-     "depth": 0,
-     "S": 0.5,
-     "N": 0.08,
-     "C": 0.2,
-     "E": 1,
-     "priority": 0.124
-    },
-    {
-     "objection_id": "W7203761940.arg1.o8daccd",
-     "target_premise_id": "W7203761940.arg1.r2",
-     "agent": "blind_thought_experimenter",
-     "family": "anthropic",
-     "depth": 1,
-     "S": 0.5,
-     "N": 0.34,
-     "C": 0.2,
-     "E": 0,
-     "priority": 0.102
-    }
-   ],
-   "picked": [
-    "W7203761940.arg1.oc3f271",
-    "W7203761940.arg1.ob46797"
-   ]
-  },
-  {
-   "t": 1791077112.41,
-   "type": "trial_start",
-   "trial_id": "trial-W7203761940.arg1.oc3f271",
-   "objection_id": "W7203761940.arg1.oc3f271"
-  },
-  {
-   "t": 1791077112.41,
-   "type": "trial_start",
-   "trial_id": "trial-W7203761940.arg1.ob46797",
-   "objection_id": "W7203761940.arg1.ob46797"
-  },
-  {
-   "t": 1791077121.42,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Misreading: The objection recasts r1 as a universal claim about every individual historical domain. R1 instead concerns whether desert-tracking patterns are systematically dominant across history at the aggregate scale; one town-level domain does not contradict that claim.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7203761940.arg1.oc3f271",
-   "objection_id": "W7203761940.arg1.oc3f271"
-  },
-  {
-   "t": 1791077121.42,
-   "type": "trial_end",
-   "outcome": "misreading",
-   "status": "ok",
-   "trial_id": "trial-W7203761940.arg1.oc3f271",
-   "objection_id": "W7203761940.arg1.oc3f271"
-  },
-  {
-   "t": 1791077121.51,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Misreading: The objection attributes to biblical theism a prediction of discernible restoration within history, whereas the argument explicitly denies that theism predicts aggregate visible desert-tracking outcomes and locates complete justice in a future judgment.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7203761940.arg1.ob46797",
-   "objection_id": "W7203761940.arg1.ob46797"
-  },
-  {
-   "t": 1791077121.51,
-   "type": "trial_end",
-   "outcome": "misreading",
-   "status": "ok",
-   "trial_id": "trial-W7203761940.arg1.ob46797",
-   "objection_id": "W7203761940.arg1.ob46797"
-  },
-  {
-   "t": 1791077136.02,
+   "t": 1791077533.84,
    "type": "brief",
    "brief_id": "brief-W7203761940.arg1.ob5571b",
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077150.13,
+   "t": 1791077545.58,
    "type": "brief",
    "brief_id": "brief-W7203761940.arg1.o964b25",
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077150.13,
+   "t": 1791077545.58,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }

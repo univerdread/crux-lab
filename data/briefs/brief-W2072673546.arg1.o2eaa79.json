@@ -1,7 +1,7 @@
 {
   "id": "brief-W2072673546.arg1.o2eaa79",
   "objection_id": "W2072673546.arg1.o2eaa79",
-  "research_question": "Can Schellenberg’s analogical route to P1 be defended by context-sensitive obligations of vulnerable love, rather than by an independently established general obligation to make relationship accessible?",
+  "research_question": "Can an analogy from vulnerable human love support a context-sensitive divine obligation to make relationship accessible to nonresistant persons without first establishing a general obligation of vulnerable love?",
   "argument": {
     "id": "W2072673546.arg1",
     "title": "Hiddenness Argument Fails",
@@ -43,18 +43,13 @@
   "strongest_responses": [
     {
       "defender": "Defender A",
-      "response": "The original Mira case establishes only that vulnerability is compatible with, or can explain, offering access; compatibility and explanation do not establish an obligation. P1 requires the stronger claim that perfect love must make access available.",
-      "why_it_failed": "The objector strengthened the case with Leon’s expressed desire, inability to initiate, low-cost communication, and absence of countervailing concerns. Defender A conceded that these features support a local obligation, so the requirement of a prior general obligation was too strong."
-    },
-    {
-      "defender": "Defender A",
-      "response": "Mira’s local obligation transfers to God only if the features grounding it also hold in the divine case; differences concerning dignity, safety, divine means of ensuring encounter, and temporary versus permanent nonbelief require further argument.",
-      "why_it_failed": "This reply preserves a revised, conditional challenge rather than the original premise. It identifies a genuine bridge problem but does not establish that the relevant features are absent from all cases of nonresistant nonbelief."
+      "response": "The original premise correctly distinguishes mere compatibility or motivational explanation from obligation: Mira's letter initially showed only that vulnerable love may make access available. After the case was strengthened, Defender A conceded that Mira has a local obligation but argued that this does not transfer unless analogous conditions obtain in the divine case, including conditions concerning dignity, safety, and permanent rather than temporary nonresistant nonbelief.",
+      "why_it_failed": "This reply could not preserve the original requirement of an independently established general obligation. Its concession supports the objector's point that a local, context-sensitive obligation may be enough for analogical reasoning, though it identifies unresolved transfer conditions."
     },
     {
       "defender": "Defender B",
-      "response": "The analogy may make divine openness motivationally intelligible, but it cannot establish P1’s universal expectation without grounds in the divine case analogous to Leon’s desire, inability to initiate, and Mira’s low-cost opportunity to respond.",
-      "why_it_failed": "It succeeds as a narrower revision of r1, but concedes that an analogy need not first derive a general obligation. Its remaining force depends on specifying and defending the required case-sensitive bridge grounds."
+      "response": "The analogy need not establish a general duty, because Leon's expressed desire, shame, and Mira's low-cost ability to contact him supply case-specific normative grounds. But vulnerability alone does not establish P1's universal expectation; the analogy needs bridge grounds showing that comparable grounds apply for each nonresistant person in the divine case.",
+      "why_it_failed": "This response largely accommodates the objection by revising r1. It leaves the decisive issue open: whether the relevant divine circumstances supply grounds for accessible relationship in every case."
     }
   ],
   "closest_literature": [
@@ -129,18 +124,6 @@
       "year": 2017,
       "url": "https://doi.org/10.1007/s11841-016-0561-x",
       "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W2072673546.c039",
-      "paper_id": "oa:W2072673546",
-      "title": "Some critical reflections on the hiddenness argument",
-      "authors": [
-        "Imran Aijaz",
-        "Markus Weidler"
-      ],
-      "year": 2007,
-      "url": "https://doi.org/10.1007/s11153-006-9103-8",
-      "verdict": "cited_in_trial"
     }
   ],
   "novelty": 0.42,
@@ -172,12 +155,12 @@
     }
   ],
   "open_questions": [
-    "Which features of Mira’s case are necessary for an obligation of vulnerable love to make relationship-access available?",
-    "Do nonresistant persons have relevantly similar needs, desires, and incapacity to initiate relationship with God?",
-    "Can God’s ability to secure an eventual encounter permissibly justify temporary nonresistant nonbelief, and what would distinguish permissible temporary hiddenness from impermissible permanent hiddenness?",
-    "Would making divine access available compromise a person’s dignity, safety, freedom, or the vulnerability characteristic of divine love?"
+    "Which features make Mira's failure to initiate contact a failure of care, and which of those features have genuine divine analogues?",
+    "Does perfect vulnerable love require making relationship accessible to every nonresistant person, or only ensuring that willing persons eventually encounter it?",
+    "How should temporary and permanent nonresistant nonbelief affect the proposed obligation?",
+    "Can relationships with God that lack conscious reciprocity satisfy the relevant demands of divine love?"
   ],
-  "paper_direction": "A paper here would argue that the analogical route to P1 should be assessed through context-sensitive obligations of vulnerable love rather than through an antecedently proven general duty of divine openness. It would develop the Mira case to show how expressed desire for reconciliation, inability to initiate, feasible communication, and no countervailing concern can ground an obligation to offer access, then test whether corresponding conditions obtain for nonresistant persons in the divine case. The strongest reply to anticipate is that God may permissibly secure relationship only eventually, or that divine access may carry dignity, safety, or freedom-related costs absent from Mira’s case. The paper would need to specify the transfer conditions precisely and show either that they obtain in cases of permanent nonresistant nonbelief or that alleged divine differences do not defeat the obligation.",
+  "paper_direction": "A paper here would argue that the analogical route need not rest on a general obligation of vulnerable love, because context-sensitive obligations can be established through the features of particular loving relationships. It would develop the Mira case as a model of why expressed willingness, inability to initiate, and safe available contact can make withholding access a failure of care; it would then anticipate the strongest reply that these grounds may not transfer to God, especially if God can ensure eventual encounter without compromising dignity or safety. The paper would need to specify the relevant transfer conditions, explain their application to nonresistant nonbelief, and show whether permanent nonresistant nonbelief is compatible with perfect vulnerable love.",
   "outcome": "revision_required",
   "disclaimer": "Further human review required."
 }

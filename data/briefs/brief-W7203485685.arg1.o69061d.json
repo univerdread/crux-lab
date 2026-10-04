@@ -1,7 +1,7 @@
 {
   "id": "brief-W7203485685.arg1.o69061d",
   "objection_id": "W7203485685.arg1.o69061d",
-  "research_question": "Does robust contrastive responsibility require an agent to represent the selected outcome as attributable to her own intentional exercise of control, and if so, does that requirement involve irreducible de se content?",
+  "research_question": "Does robust contrastive responsibility require an agent to represent the selected outcome as attributable to that agent’s own exercise of control, and if so, must this representation contain irreducible de se content?",
   "argument": {
     "id": "W7203485685.arg1",
     "title": "Self-Location Constraint",
@@ -48,13 +48,13 @@
   "strongest_responses": [
     {
       "defender": "Defender A",
-      "response": "Mira's impersonal display does not exhaust her cognition: she represents a lever as the one she intends to pull and represents saving the village as her aim. The proposed revision requires cognition that represents the selected outcome, contrasted with its alternative, as resulting from an act the cognizing agent performs and intends.",
-      "why_it_failed": "The defender concedes that this establishes at most practical self-involvement in representing the act, not an outcome-representation indexed to the agent. Mira may act on impersonal propositions plus a separate ownership tag, so c006 as stated remains vulnerable."
+      "response": "Mira’s impersonal display does not exhaust her cognition: she represents a lever as the one she intends to pull and represents saving the village as her aim. This practical, intentional representation may supply the relevant self-involvement.",
+      "why_it_failed": "Defender A grants that the case leaves open whether this is de se content about the outcome rather than merely a separately stored index concerning the act. The defender could not show that the outcome itself must be represented as issuing from the agent."
     },
     {
       "defender": "Defender B",
-      "response": "The relevant requirement is not an explicit thought such as “I am causing the quarry outcome,” but an integrated agential representation of available options, intentional control, and the outcome's attribution to the agent. On this reading, Mira's deliberation locates A and B within her agential alternative-set.",
-      "why_it_failed": "This reply narrows or revises c006 rather than defending its original claim that the outcome must be represented as issuing from the agent's activity. It also leaves unresolved whether integrated agential representation entails irreducible de se content."
+      "response": "The relevant requirement need not be an explicit thought such as “I cause the quarry outcome.” Mira represents A and B as options under her control, and her intention connects her selection of A to the outcome within an agential alternative-set.",
+      "why_it_failed": "This reply narrows the premise to integrated agential representation rather than the stated requirement that the outcome be represented as issuing from the agent. It preserves a revised claim but concedes that c006 overstates what responsibility requires."
     }
   ],
   "closest_literature": [
@@ -96,61 +96,6 @@
       "verdict": "different",
       "similarity": 0.12,
       "quote": ""
-    },
-    {
-      "record_id": "W7203485685.c006",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c007",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c043",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c044",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c035",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
     }
   ],
   "novelty": 0.86,
@@ -182,12 +127,12 @@
     }
   ],
   "open_questions": [
-    "Can impersonal representations of actions, alternatives, and consequences, together with an intention, fully ground robust contrastive responsibility?",
-    "What distinguishes a representation of an act as available to an agent from irreducibly de se self-ascription?",
-    "Must source attribution attach to the outcome itself, or is representation of the agent's intended difference-making act sufficient?",
-    "Would the revised agential-control requirement establish the irreducible de se content needed for the argument about divine cognition?"
+    "What distinguishes an integrated agential representation of an option and its outcome from impersonal causal tracking supplemented by a representation of an intended act?",
+    "Does representing an act as available to oneself or intended by oneself require irreducible de se content?",
+    "Must robust responsibility involve an outcome-directed source attribution, or is representation of one’s controlled act sufficient?",
+    "Can the revised premise support the argument’s conclusion that divine cognition must include irreducible de se content?"
   ],
-  "paper_direction": "A paper here would argue that the original source-attribution premise overstates the cognitive conditions of robust contrastive responsibility: an agent may be responsible through intentional control among alternatives without representing the outcome itself as issuing from her own activity. The case would distinguish impersonal outcome-tracking, representation of an intended act, and irreducibly de se source attribution; it would then assess whether the defenders' revised requirement of integrated agential control avoids the objection. The strongest reply to anticipate is that practical deliberation already represents options as the agent's and thereby supplies the relevant source attribution. The paper would need to show either that this representation can be wholly impersonal or that, even if it is agent-involving, it does not yield the irreducible de se content required by the divine-omniscience conclusion.",
+  "paper_direction": "A paper here would argue that the move from robust contrastive responsibility to irreducible de se divine cognition depends on a stronger and presently unestablished source-attribution requirement. It would use cases such as Mira’s to distinguish impersonal representation of causal consequences, self-representation of an intended act, and representation of an outcome as attributable to one’s control; it would then assess whether only the last is necessary for responsibility. The strongest reply to anticipate is that practical deliberation already integrates agent, option, and outcome in a way that grounds attribution without explicit self-ascription. The paper would need to show either that this integration necessarily has irreducible de se content, or that responsibility can be grounded by act-level self-representation without the outcome-level de se representation required by the original argument.",
   "outcome": "revision_required",
   "disclaimer": "Further human review required."
 }

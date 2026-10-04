@@ -23,8 +23,8 @@
   },
   "reason": "Published 2026-09-10 (after 2026-08-01), open-access full text (55,601 chars); argues for a thesis; hiddenness relevance 1/3 (God's attributes/existence); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:21:22.259584+00:00",
- "finished_at": "2026-10-04T01:28:51.450530+00:00",
+ "started_at": "2026-10-04T01:30:29.267599+00:00",
+ "finished_at": "2026-10-04T01:31:36.541544+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W7212186029.arg1",
@@ -517,6 +517,38 @@
    "text": "The symmetry formulation is viable, retains standard motivations, and addresses objections concerning attribute distinctness and modal collapse.",
    "quote": "The symmetry formulation also addresses common objections to divine simplicity regarding distinctness in God’s attributes and those coming from modal collapse arguments.",
    "level": "abstract"
+  },
+  "W7212186029.arg1.r1": {
+   "id": "W7212186029.arg1.r1",
+   "paper_id": "oa:W7212186029",
+   "kind": "premise",
+   "text": "Proper parthood, as used in the divine simplicity claim, is the similarity-relative relation of c018, and that relation tracks metaphysical constituency closely enough that having no proper parts under it expresses the traditional denial of composition.",
+   "quote": "",
+   "level": "generated"
+  },
+  "W7212186029.arg1.r2": {
+   "id": "W7212186029.arg1.r2",
+   "paper_id": "oa:W7212186029",
+   "kind": "premise",
+   "text": "Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects.",
+   "quote": "",
+   "level": "generated"
+  },
+  "W7212186029.arg1.r3": {
+   "id": "W7212186029.arg1.r3",
+   "paper_id": "oa:W7212186029",
+   "kind": "premise",
+   "text": "For God and each of God's parts, parthood is bivalent, so that God's being part of each such part is settled true rather than merely not false.",
+   "quote": "",
+   "level": "generated"
+  },
+  "W7212186029.arg1.r4": {
+   "id": "W7212186029.arg1.r4",
+   "paper_id": "oa:W7212186029",
+   "kind": "premise",
+   "text": "For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood.",
+   "quote": "",
+   "level": "generated"
   }
  },
  "revised_premises": {
@@ -693,7 +725,7 @@
    "novelty": 0.82,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7204121442",
@@ -845,7 +877,7 @@
    "novelty": 0.58,
    "records_searched": 4138,
    "reranked": 14,
-   "live_openalex": "ok: 8 results",
+   "live_openalex": "cached: 8 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7215855285",
@@ -997,7 +1029,7 @@
    "novelty": 0.61,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7208776090",
@@ -1149,7 +1181,7 @@
    "novelty": 0.82,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7214094617",
@@ -1301,7 +1333,7 @@
    "novelty": 0.66,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7215855285",
@@ -1453,7 +1485,7 @@
    "novelty": 0.92,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "W7213496574.a3",
@@ -1605,7 +1637,7 @@
    "novelty": 0.38,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7215855285",
@@ -3253,34 +3285,34 @@
  ],
  "diversity": "degraded: 2 families",
  "llm_stats": {
-  "calls": 285,
-  "cache_hits": 32,
+  "calls": 343,
+  "cache_hits": 326,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 743,
+  "cli_calls": 1017,
   "cli_limit": 4000,
-  "notional_cli_usd": 10.4526
+  "notional_cli_usd": 12.7446
  },
  "events": [
   {
-   "t": 1791076882.26,
+   "t": 1791077429.27,
    "type": "run_start",
    "run_id": "run-oa-W7212186029",
    "target": "oa-W7212186029",
    "argument_id": "W7212186029.arg1"
   },
   {
-   "t": 1791076907.7,
+   "t": 1791077434.25,
    "type": "naive_question",
    "question": "If the whole point of divine simplicity is that God *doesn't* have proper parts, why does the conclusion say that God *is* a part of all God's parts—doesn't that mean God actually does have parts after all?",
    "sharpened": false
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.25,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o192bde",
@@ -3297,7 +3329,7 @@
    }
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.26,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o7a6a9e",
@@ -3314,7 +3346,7 @@
    }
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.26,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.oad261e",
@@ -3331,7 +3363,7 @@
    }
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.26,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o65112e",
@@ -3348,7 +3380,7 @@
    }
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.26,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o0d5b3a",
@@ -3365,7 +3397,7 @@
    }
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.26,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o10f4f4",
@@ -3382,7 +3414,7 @@
    }
   },
   {
-   "t": 1791076907.71,
+   "t": 1791077434.26,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.ob295df",
@@ -3399,7 +3431,7 @@
    }
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o192bde",
    "novelty": 0.82,
@@ -3432,7 +3464,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o7a6a9e",
    "novelty": 0.58,
@@ -3465,7 +3497,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.oad261e",
    "novelty": 0.61,
@@ -3498,7 +3530,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o65112e",
    "novelty": 0.82,
@@ -3531,7 +3563,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o0d5b3a",
    "novelty": 0.66,
@@ -3564,7 +3596,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o10f4f4",
    "novelty": 0.92,
@@ -3597,7 +3629,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.ob295df",
    "novelty": 0.38,
@@ -3630,7 +3662,7 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -3725,19 +3757,19 @@
    ]
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o10f4f4",
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077020.86,
+   "t": 1791077448.49,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o192bde",
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077031.45,
+   "t": 1791077448.71,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3755,7 +3787,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077034.29,
+   "t": 1791077448.78,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3773,28 +3805,7 @@
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077043.84,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your wire case is a strong objection to treating property-parthood as ordinary material composition. But the argument need not do that. It proposes a distinct, similarity-based mereological relation: when an object is understood as a collection of properties, instantiating a property makes it a part of that object in that respect [W7212186029.c014]. Thus loss of coiledness and acquisition of being thought of by Mara need not involve material departure or arrival; they are changes in similarity-based structure, while the physical inventory remains constant.\n\nThat distinction matters in the God case. The intended claim is not that omniscience is a spatial or material ingredient of God, nor that divine simplicity is a thesis about physical inventory. It is that, on a non-antisymmetric parthood theory, God and an attribute may be mutual parts without numerical identity, and so God can lack non-symmetric proper parts by being part of every part [W7212186029.c002; W7212186029.c018].\n\nStill, you correctly expose that c013 is too broad if read as a claim about all ordinary objects or all properties. The argument survives only with a restricted modelling claim: the relevant property-fusion account must apply to divine attributes, and the resulting parthood must be explicitly non-compositional.\n\nRevised premise: For divine attributes, instantiation may be modelled by a non-compositional, similarity-based parthood relation, without implying that attributes are material constituents of God.",
-    "cited_claim_ids": [
-     "W7212186029.c013",
-     "W7212186029.c014",
-     "W7212186029.c002",
-     "W7212186029.c018"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "For divine attributes, instantiation may be modelled by a non-compositional, similarity-based parthood relation, without implying that attributes are material constituents of God."
-   }
-  },
-  {
-   "t": 1791077044.26,
+   "t": 1791077448.99,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3815,47 +3826,7 @@
    }
   },
   {
-   "t": 1791077048.03,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your temporal case exposes a real underspecification, but not yet a contradiction. The proposal is that, when objects are collections of properties, instantiation makes the relevant property part of the object with respect to similarity [W7212186029.c014]; it is not committed to saying that a persisting lamp is identical at every time to one fixed fusion of timeless universals. A defensible version can take the relevant relata to be time-indexed property instances: being-lit-at-noon is then a similarity-part of L at noon, while its absence at one does not force L’s numerical replacement. Likewise, sharing the repeatable property being-a-lamp does not itself entail an unacceptable result: distinct fusions may overlap without being identical, and the paper’s central framework expressly permits non-antisymmetric parthood where distinct things can be mutual parts [W7212186029.c017]. What matters for the divine-simplicity application is that object–property relations can plausibly be understood as parthood, not that ordinary-object fusions are disjoint or temporally immutable [W7212186029.c045]. Still, you are right that c013, as stated, needs a restriction: without one, its talk of “the fusion of its properties” invites precisely the persistence problem you identify.\n\nRevised premise: Instantiation can be modelled as similarity-based parthood when an object is associated with its time-indexed property instances, so changes in instantiated properties need not entail a change in the object’s numerical identity.",
-    "cited_claim_ids": [
-     "W7212186029.c014",
-     "W7212186029.c017",
-     "W7212186029.c045"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "Instantiation can be modelled as similarity-based parthood when an object is associated with its time-indexed property instances, so changes in instantiated properties need not entail a change in the object’s numerical identity."
-   }
-  },
-  {
-   "t": 1791077050.61,
-   "type": "turn",
-   "turn": {
-    "exchange": 1,
-    "speaker": "defender_a",
-    "phase": "reply",
-    "model": "sonnet",
-    "family": "anthropic",
-    "content": "You are right that c013, read as an unrestricted claim, cannot survive the lamp case. A fusion fixed by the properties an object has at a time will change when the lamp goes off, so the lamp-at-noon and lamp-at-one come out as distinct fusions. The overlap worry also bites: 'being a lamp' is a shared part of every lamp-fusion. I accept both costs for the general model. But the argument's use of c013 concerns God, whose relevant properties, such as omniscience, are timeless and essential. The persistence problem does not arise without temporal variation in the instantiated properties. The overlap cost is one the argument already accepts in c016 and c017, where distinct things are mutual parts with respect to similarity, so it is not a new burden. What the argument cannot keep is the unrestricted wording of c013. Because c013 as written is too broad, I concede that the argument as stated does not survive. It survives with the restricted premise below, which the objection leaves untouched.\n\nRevised premise: Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects.",
-    "cited_claim_ids": [
-     "W7212186029.c013",
-     "W7212186029.c016",
-     "W7212186029.c017"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects."
-   }
-  },
-  {
-   "t": 1791077055.12,
+   "t": 1791077448.99,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3871,25 +3842,7 @@
    }
   },
   {
-   "t": 1791077057.55,
-   "type": "turn",
-   "turn": {
-    "exchange": 1,
-    "speaker": "referee",
-    "phase": "label",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "revision_required: The defender concedes that c013 is too broad and saves the argument only by restricting it to God's timelessly and essentially held properties.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7212186029.arg1.o192bde",
-   "objection_id": "W7212186029.arg1.o192bde"
-  },
-  {
-   "t": 1791077062.26,
+   "t": 1791077448.99,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3912,33 +3865,68 @@
    }
   },
   {
-   "t": 1791077066.2,
+   "t": 1791077448.99,
    "type": "turn",
    "turn": {
     "exchange": 2,
-    "speaker": "referee",
-    "phase": "label",
-    "model": "gpt-5.6-sol",
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
     "family": "openai",
-    "content": "revision_required: The defender concedes that c013 cannot answer the objection as stated and preserves the argument by restricting it to time-indexed property instances.",
-    "cited_claim_ids": [],
+    "content": "Your wire case is a strong objection to treating property-parthood as ordinary material composition. But the argument need not do that. It proposes a distinct, similarity-based mereological relation: when an object is understood as a collection of properties, instantiating a property makes it a part of that object in that respect [W7212186029.c014]. Thus loss of coiledness and acquisition of being thought of by Mara need not involve material departure or arrival; they are changes in similarity-based structure, while the physical inventory remains constant.\n\nThat distinction matters in the God case. The intended claim is not that omniscience is a spatial or material ingredient of God, nor that divine simplicity is a thesis about physical inventory. It is that, on a non-antisymmetric parthood theory, God and an attribute may be mutual parts without numerical identity, and so God can lack non-symmetric proper parts by being part of every part [W7212186029.c002; W7212186029.c018].\n\nStill, you correctly expose that c013 is too broad if read as a claim about all ordinary objects or all properties. The argument survives only with a restricted modelling claim: the relevant property-fusion account must apply to divine attributes, and the resulting parthood must be explicitly non-compositional.\n\nRevised premise: For divine attributes, instantiation may be modelled by a non-compositional, similarity-based parthood relation, without implying that attributes are material constituents of God.",
+    "cited_claim_ids": [
+     "W7212186029.c013",
+     "W7212186029.c014",
+     "W7212186029.c002",
+     "W7212186029.c018"
+    ],
     "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7212186029.arg1.o192bde",
-   "objection_id": "W7212186029.arg1.o192bde"
+    "concedes": true,
+    "revised_premise": "For divine attributes, instantiation may be modelled by a non-compositional, similarity-based parthood relation, without implying that attributes are material constituents of God."
+   }
   },
   {
-   "t": 1791077066.2,
-   "type": "trial_end",
-   "outcome": "revision_required",
-   "status": "ok",
-   "trial_id": "trial-W7212186029.arg1.o192bde",
-   "objection_id": "W7212186029.arg1.o192bde"
+   "t": 1791077448.99,
+   "type": "turn",
+   "turn": {
+    "exchange": 1,
+    "speaker": "defender_a",
+    "phase": "reply",
+    "model": "sonnet",
+    "family": "anthropic",
+    "content": "You are right that c013, read as an unrestricted claim, cannot survive the lamp case. A fusion fixed by the properties an object has at a time will change when the lamp goes off, so the lamp-at-noon and lamp-at-one come out as distinct fusions. The overlap worry also bites: 'being a lamp' is a shared part of every lamp-fusion. I accept both costs for the general model. But the argument's use of c013 concerns God, whose relevant properties, such as omniscience, are timeless and essential. The persistence problem does not arise without temporal variation in the instantiated properties. The overlap cost is one the argument already accepts in c016 and c017, where distinct things are mutual parts with respect to similarity, so it is not a new burden. What the argument cannot keep is the unrestricted wording of c013. Because c013 as written is too broad, I concede that the argument as stated does not survive. It survives with the restricted premise below, which the objection leaves untouched.\n\nRevised premise: Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects.",
+    "cited_claim_ids": [
+     "W7212186029.c013",
+     "W7212186029.c016",
+     "W7212186029.c017"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects."
+   }
   },
   {
-   "t": 1791077069.88,
+   "t": 1791077448.99,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "Your temporal case exposes a real underspecification, but not yet a contradiction. The proposal is that, when objects are collections of properties, instantiation makes the relevant property part of the object with respect to similarity [W7212186029.c014]; it is not committed to saying that a persisting lamp is identical at every time to one fixed fusion of timeless universals. A defensible version can take the relevant relata to be time-indexed property instances: being-lit-at-noon is then a similarity-part of L at noon, while its absence at one does not force L’s numerical replacement. Likewise, sharing the repeatable property being-a-lamp does not itself entail an unacceptable result: distinct fusions may overlap without being identical, and the paper’s central framework expressly permits non-antisymmetric parthood where distinct things can be mutual parts [W7212186029.c017]. What matters for the divine-simplicity application is that object–property relations can plausibly be understood as parthood, not that ordinary-object fusions are disjoint or temporally immutable [W7212186029.c045]. Still, you are right that c013, as stated, needs a restriction: without one, its talk of “the fusion of its properties” invites precisely the persistence problem you identify.\n\nRevised premise: Instantiation can be modelled as similarity-based parthood when an object is associated with its time-indexed property instances, so changes in instantiated properties need not entail a change in the object’s numerical identity.",
+    "cited_claim_ids": [
+     "W7212186029.c014",
+     "W7212186029.c017",
+     "W7212186029.c045"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "Instantiation can be modelled as similarity-based parthood when an object is associated with its time-indexed property instances, so changes in instantiated properties need not entail a change in the object’s numerical identity."
+   }
+  },
+  {
+   "t": 1791077449.06,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3956,7 +3944,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077079.0,
+   "t": 1791077449.06,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3974,7 +3962,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077079.0,
+   "t": 1791077449.06,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -3982,14 +3970,58 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077079.0,
+   "t": 1791077449.06,
+   "type": "turn",
+   "turn": {
+    "exchange": 1,
+    "speaker": "referee",
+    "phase": "label",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "revision_required: The defender concedes that c013 is too broad and saves the argument only by restricting it to God's timelessly and essentially held properties.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7212186029.arg1.o192bde",
+   "objection_id": "W7212186029.arg1.o192bde"
+  },
+  {
+   "t": 1791077449.06,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "referee",
+    "phase": "label",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "revision_required: The defender concedes that c013 cannot answer the objection as stated and preserves the argument by restricting it to time-indexed property instances.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7212186029.arg1.o192bde",
+   "objection_id": "W7212186029.arg1.o192bde"
+  },
+  {
+   "t": 1791077449.06,
+   "type": "trial_end",
+   "outcome": "revision_required",
+   "status": "ok",
+   "trial_id": "trial-W7212186029.arg1.o192bde",
+   "objection_id": "W7212186029.arg1.o192bde"
+  },
+  {
+   "t": 1791077449.08,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r1",
    "text": "Proper parthood, as used in the divine simplicity claim, is the similarity-relative relation of c018, and that relation tracks metaphysical constituency closely enough that having no proper parts under it expresses the traditional denial of composition.",
    "from_trial": "trial-W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077086.85,
+   "t": 1791077449.08,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o784374",
@@ -4006,7 +4038,7 @@
    }
   },
   {
-   "t": 1791077109.37,
+   "t": 1791077449.98,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o784374",
    "novelty": 0.65,
@@ -4039,14 +4071,14 @@
    ]
   },
   {
-   "t": 1791077109.38,
+   "t": 1791077449.99,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r2",
    "text": "Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects.",
    "from_trial": "trial-W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077118.0,
+   "t": 1791077449.99,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o361289",
@@ -4063,7 +4095,7 @@
    }
   },
   {
-   "t": 1791077142.54,
+   "t": 1791077450.86,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o361289",
    "novelty": 0.58,
@@ -4096,7 +4128,7 @@
    ]
   },
   {
-   "t": 1791077142.54,
+   "t": 1791077450.86,
    "type": "queue",
    "step": 1,
    "queue": [
@@ -4191,19 +4223,19 @@
    ]
   },
   {
-   "t": 1791077142.54,
+   "t": 1791077450.86,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o65112e",
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077142.54,
+   "t": 1791077450.86,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o0d5b3a",
    "objection_id": "W7212186029.arg1.o0d5b3a"
   },
   {
-   "t": 1791077160.73,
+   "t": 1791077450.99,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4221,7 +4253,7 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077162.09,
+   "t": 1791077451.03,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4239,7 +4271,7 @@
    "objection_id": "W7212186029.arg1.o0d5b3a"
   },
   {
-   "t": 1791077162.09,
+   "t": 1791077451.03,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4247,7 +4279,7 @@
    "objection_id": "W7212186029.arg1.o0d5b3a"
   },
   {
-   "t": 1791077172.69,
+   "t": 1791077451.04,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4268,7 +4300,7 @@
    }
   },
   {
-   "t": 1791077173.77,
+   "t": 1791077451.04,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4287,7 +4319,7 @@
    }
   },
   {
-   "t": 1791077180.84,
+   "t": 1791077451.32,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4305,7 +4337,7 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077188.31,
+   "t": 1791077451.32,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4323,7 +4355,7 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077188.31,
+   "t": 1791077451.32,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4331,14 +4363,14 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077188.31,
+   "t": 1791077451.45,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r3",
    "text": "For God and each of God's parts, parthood is bivalent, so that God's being part of each such part is settled true rather than merely not false.",
    "from_trial": "trial-W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077193.99,
+   "t": 1791077451.45,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.od25eb2",
@@ -4355,7 +4387,7 @@
    }
   },
   {
-   "t": 1791077216.25,
+   "t": 1791077452.57,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.od25eb2",
    "novelty": 0.6,
@@ -4388,7 +4420,7 @@
    ]
   },
   {
-   "t": 1791077216.26,
+   "t": 1791077452.57,
    "type": "queue",
    "step": 2,
    "queue": [
@@ -4471,37 +4503,19 @@
    ]
   },
   {
-   "t": 1791077216.26,
+   "t": 1791077452.57,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.ob295df",
    "objection_id": "W7212186029.arg1.ob295df"
   },
   {
-   "t": 1791077216.26,
+   "t": 1791077452.57,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o784374",
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077223.23,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Not a misreading: The objection directly attacks arg1.r1 as stated by arguing that similarity-relative parthood does not track metaphysical constituency closely enough for absence of proper parts under that relation to express the traditional denial of composition.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7212186029.arg1.o784374",
-   "objection_id": "W7212186029.arg1.o784374"
-  },
-  {
-   "t": 1791077230.07,
+   "t": 1791077452.89,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4519,7 +4533,7 @@
    "objection_id": "W7212186029.arg1.ob295df"
   },
   {
-   "t": 1791077230.07,
+   "t": 1791077452.89,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4527,7 +4541,25 @@
    "objection_id": "W7212186029.arg1.ob295df"
   },
   {
-   "t": 1791077231.04,
+   "t": 1791077452.89,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Not a misreading: The objection directly attacks arg1.r1 as stated by arguing that similarity-relative parthood does not track metaphysical constituency closely enough for absence of proper parts under that relation to express the traditional denial of composition.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7212186029.arg1.o784374",
+   "objection_id": "W7212186029.arg1.o784374"
+  },
+  {
+   "t": 1791077452.97,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4548,7 +4580,7 @@
    }
   },
   {
-   "t": 1791077239.93,
+   "t": 1791077452.97,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4564,27 +4596,7 @@
    }
   },
   {
-   "t": 1791077244.06,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "You are right that mutual similarity alone cannot bear the constituency-tracking burden. The paper’s point is that similarity-based parthood can be non-antisymmetric, allowing distinct mutual parts [W7212186029.c017], and hence that lacking proper parts need not entail identity with every part [W7212186029.c002]. But neither point establishes that any qualitative resemblance—for example, shared horse-shape across bronze and marble—constitutes a compositional relation. Your case therefore exposes a gap in r1, not merely an unwelcome consequence of the symmetry formulation. At most, the defender can say that the relevant resemblance is not property-sharing in the loose, shape-based sense; resemblance may instead concern sufficiently similar properties without a shared property [W7212186029.c034]. Yet that response by itself still does not connect resemblance to constituency. The argument survives only if its similarity relation is independently restricted to relations grounded in the divine attributes’ metaphysical constitution. Without that restriction, a thing could be materially composite while having no non-symmetric similarity-parts, exactly as you contend.\n\nRevised premise: For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood.",
-    "cited_claim_ids": [
-     "W7212186029.c017",
-     "W7212186029.c002",
-     "W7212186029.c034"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood."
-   }
-  },
-  {
-   "t": 1791077245.92,
+   "t": 1791077452.97,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4605,7 +4617,27 @@
    }
   },
   {
-   "t": 1791077255.12,
+   "t": 1791077452.97,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "You are right that mutual similarity alone cannot bear the constituency-tracking burden. The paper’s point is that similarity-based parthood can be non-antisymmetric, allowing distinct mutual parts [W7212186029.c017], and hence that lacking proper parts need not entail identity with every part [W7212186029.c002]. But neither point establishes that any qualitative resemblance—for example, shared horse-shape across bronze and marble—constitutes a compositional relation. Your case therefore exposes a gap in r1, not merely an unwelcome consequence of the symmetry formulation. At most, the defender can say that the relevant resemblance is not property-sharing in the loose, shape-based sense; resemblance may instead concern sufficiently similar properties without a shared property [W7212186029.c034]. Yet that response by itself still does not connect resemblance to constituency. The argument survives only if its similarity relation is independently restricted to relations grounded in the divine attributes’ metaphysical constitution. Without that restriction, a thing could be materially composite while having no non-symmetric similarity-parts, exactly as you contend.\n\nRevised premise: For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood.",
+    "cited_claim_ids": [
+     "W7212186029.c017",
+     "W7212186029.c002",
+     "W7212186029.c034"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood."
+   }
+  },
+  {
+   "t": 1791077453.11,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4623,7 +4655,7 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077264.35,
+   "t": 1791077453.11,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4641,7 +4673,7 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077264.35,
+   "t": 1791077453.11,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4649,14 +4681,14 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077264.35,
+   "t": 1791077453.55,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r4",
    "text": "For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood.",
    "from_trial": "trial-W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077271.24,
+   "t": 1791077453.55,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.od83243",
@@ -4673,7 +4705,7 @@
    }
   },
   {
-   "t": 1791077291.22,
+   "t": 1791077454.07,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.od83243",
    "novelty": 0.69,
@@ -4706,25 +4738,25 @@
    ]
   },
   {
-   "t": 1791077304.9,
+   "t": 1791077469.14,
    "type": "brief",
    "brief_id": "brief-W7212186029.arg1.o10f4f4",
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077318.25,
+   "t": 1791077482.76,
    "type": "brief",
    "brief_id": "brief-W7212186029.arg1.o192bde",
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077331.45,
+   "t": 1791077496.54,
    "type": "brief",
    "brief_id": "brief-W7212186029.arg1.o65112e",
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077331.45,
+   "t": 1791077496.54,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }

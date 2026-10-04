@@ -1,7 +1,7 @@
 {
   "id": "brief-W7203761940.arg1.o964b25",
   "objection_id": "W7203761940.arg1.o964b25",
-  "research_question": "Does a Molinist account of providence give any independently measurable historical signature of benevolent divine steering, or does it make the apparent randomness of history evidentially neutral between theism and naturalism?",
+  "research_question": "Can a Molinist account of providence generate any observable historical signature of benevolent governance, or does it make the apparent distribution of suffering evidentially neutral?",
   "argument": {
     "id": "W7203761940.arg1",
     "title": "Randomness Underdetermines God",
@@ -58,13 +58,13 @@
   "strongest_responses": [
     {
       "defender": "Defender A",
-      "response": "The Mara case does not exclude divine steering; it shows that a simple expectation of visible moral governance is not the only theistic account. Worldly evidence may therefore underdetermine the choice between naturalism and theism.",
-      "why_it_failed": "A accepted that this response requires weakening c011. He could not identify an aggregate measure that Molinism predicts, so the original expected-signature premise does no independent evidential work."
+      "response": "The objection shows only that providence is not excluded by ordinary contingency; it supports the broader conclusion that worldly randomness underdetermines the choice between naturalism and theism.",
+      "why_it_failed": "This preserves the conclusion only by abandoning c011's claim that benevolent steering was expected to leave a directional signature. Defender A ultimately conceded that no measurable aggregate trend is predicted on the Molinist account."
     },
     {
       "defender": "Defender B",
-      "response": "A hidden network of goods mediated by free choices can accommodate the observed distribution of suffering, but impersonal causation and probability can accommodate it as well. Thus worldly randomness is evidentially ambiguous rather than evidence for providence.",
-      "why_it_failed": "This preserves the conclusion that randomness supplies no clear winner, but it concedes the objection to c011 as originally formulated. Its replacement premise concerns the inability of history independently to establish providence, not an expected signature absent from history."
+      "response": "A hidden network of counterfactual goods does not make randomness evidence for divine steering, because impersonal causation and hidden providence can both accommodate the same observed distribution.",
+      "why_it_failed": "The reply successfully supports evidential ambiguity, but it revises c011 from a premise about an expected but absent signature into a premise about the inability of historical evidence to establish providence independently."
     }
   ],
   "closest_literature": [
@@ -108,39 +108,6 @@
       "quote": "Schellenberg’s implicit refutation of providence assumes there is no good end of history."
     },
     {
-      "record_id": "W7203761940.c011",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c039",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203761940.c041",
-      "paper_id": "oa:W7203761940",
-      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
-      "authors": [
-        "Jeremy Tan"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.67690/x8tmte22",
-      "verdict": "cited_in_trial"
-    },
-    {
       "record_id": "W2575351351.c037",
       "paper_id": "oa:W2575351351",
       "title": "Divine Hiddenness, Greater Goods, and Accommodation",
@@ -181,12 +148,12 @@
     }
   ],
   "open_questions": [
-    "Can Molinism derive a non-arbitrary, empirically assessable aggregate prediction from middle knowledge and providential aims?",
-    "Does a theistic commitment to repentance, character formation, and eschatological justice remove all expectation of visible desert-tracking outcomes, or only weaken it?",
-    "When a theory accommodates any observed history through hidden counterfactual goods, does that make the evidence neutral, or does it reduce the theory's explanatory or evidential value?",
-    "Can the argument for c041 be established without c011, and what precise neutrality premise would be sufficient?"
+    "Does Molinism imply any measurable aggregate historical pattern beyond desert-tracking outcomes?",
+    "What constraints, if any, prevent appeals to remote counterfactual goods and deferred justice from accommodating every possible history?",
+    "Can evidential neutrality between naturalism and providence be established without assuming that both accounts have equal explanatory flexibility?",
+    "Does the argument's conclusion require c011 at all once biblical theology denies that earthly outcomes track moral character?"
   ],
-  "paper_direction": "A paper here would argue that a Molinist model of providence undermines the claim that benevolent historical steering should exhibit a visible directional signature, while leaving open whether the resulting accommodation of apparently random suffering is evidential neutrality or explanatory immunization. It would develop the structural point that providence through free choices, temporally dispersed goods, and deferred justice need not optimize earthly desert, then anticipate the strongest reply: that this only shows ambiguity and so supports the argument's final conclusion. To succeed, the paper would need to distinguish carefully between revising c011 into a neutrality premise and defending its original evidential role, and determine whether Molinism supplies any principled observable prediction at all.",
+  "paper_direction": "A paper here would argue that Molinist providence undermines the claim that benevolent historical steering should produce a visible aggregate moral signature, while leaving open whether the resulting neutrality is principled or merely immunizing. The case would distinguish the failure of desert-tracking outcomes from the absence of all possible providential evidence, anticipate the reply that hidden providence and impersonal causation are simply evidentially ambiguous, and show either that Molinism supplies a non-arbitrary constraint on acceptable historical distributions or that c011 should be removed from the argument because it does no independent evidential work.",
   "outcome": "revision_required",
   "disclaimer": "Further human review required."
 }

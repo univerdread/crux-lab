@@ -1,7 +1,7 @@
 {
   "id": "brief-W2575351351.arg1.oc4a9a4",
   "objection_id": "W2575351351.arg1.oc4a9a4",
-  "research_question": "Can the many-goods response to divine hiddenness justify temporary nonresistant nonbelief once the value of putative goods is assessed net of overlap with goods or sources already available in a relationship with God?",
+  "research_question": "Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?",
   "argument": {
     "id": "W2575351351.arg1",
     "title": "Many-goods response",
@@ -48,13 +48,13 @@
   "strongest_responses": [
     {
       "defender": "Defender A",
-      "response": "The relevant goods need not overlap completely: reconciliation, reciprocal care, and community relations benefit distinct persons and may not be produced by the same dispositional source. Moreover, a relationship with God is intrinsically valuable, so it should not be treated merely as a source of attention or other downstream dispositions.",
-      "why_it_failed": "A conceded that c017 does not state the required net-of-overlap qualification and therefore cannot survive as written. The reply also did not establish that the remaining goods exceed the intrinsic value of the lost relationship."
+      "response": "The relevant goods should be assessed net of overlap, and Mara's reconciliation, care relation, and garden may involve distinct recipients and relations rather than merely one disposition of attention.",
+      "why_it_failed": "Defender A ultimately conceded that this qualification is absent from c017 as written. The case also does not establish that the remaining non-overlapping goods exceed a relationship valued for itself."
     },
     {
       "defender": "Defender B",
-      "response": "The comparison should concern whole feasible histories rather than separately named goods. A divine relationship's cultivation of attention does not show that it would secure this particular package of reconciliation, care, and cooperative community without loss, especially where goods depend on other persons and wider social relations.",
-      "why_it_failed": "This preserves a modal possibility but does not show that Mara's goods are non-duplicative or collectively outweigh the lost relationship. B ultimately accepts that the example cannot support c017 as stated and requires a revised premise."
+      "response": "The comparison should concern whole feasible histories: a relationship with God cultivating attention need not secure this particular package of reconciliation, reciprocal care, and mutual support without loss. The many-goods response therefore remains a possibility claim for bounded temporary nonbelief.",
+      "why_it_failed": "The objector correctly pressed that a possibility claim still requires a non-duplicative package whose net value exceeds the lost relationship-value. Mara, as described, does not provide such a case, and Defender B accepted revision of the premise."
     }
   ],
   "closest_literature": [
@@ -110,17 +110,6 @@
       "verdict": "cited_in_trial"
     },
     {
-      "record_id": "W2575351351.c023",
-      "paper_id": "oa:W2575351351",
-      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
-      "authors": [
-        "Luke Teeninga"
-      ],
-      "year": 2017,
-      "url": "https://doi.org/10.1007/s11841-016-0561-x",
-      "verdict": "cited_in_trial"
-    },
-    {
       "record_id": "W2950222172.a3",
       "paper_id": "oa:W2950222172",
       "title": "The \"greater goods\" response to the argument from divine hiddenness",
@@ -129,50 +118,6 @@
       ],
       "year": 2018,
       "url": "https://doi.org/10.5287/ora-2a650nq7d",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W2575351351.c028",
-      "paper_id": "oa:W2575351351",
-      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
-      "authors": [
-        "Luke Teeninga"
-      ],
-      "year": 2017,
-      "url": "https://doi.org/10.1007/s11841-016-0561-x",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W2575351351.c017",
-      "paper_id": "oa:W2575351351",
-      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
-      "authors": [
-        "Luke Teeninga"
-      ],
-      "year": 2017,
-      "url": "https://doi.org/10.1007/s11841-016-0561-x",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W2575351351.c041",
-      "paper_id": "oa:W2575351351",
-      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
-      "authors": [
-        "Luke Teeninga"
-      ],
-      "year": 2017,
-      "url": "https://doi.org/10.1007/s11841-016-0561-x",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W2575351351.c029",
-      "paper_id": "oa:W2575351351",
-      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
-      "authors": [
-        "Luke Teeninga"
-      ],
-      "year": 2017,
-      "url": "https://doi.org/10.1007/s11841-016-0561-x",
       "verdict": "cited_in_trial"
     }
   ],
@@ -205,12 +150,12 @@
     }
   ],
   "open_questions": [
-    "What criterion distinguishes permissible shared sources of several goods from overlap that makes their value double-counted?",
-    "How should the intrinsic value of a relationship with God be compared with a package of interpersonal and social goods without reducing either side to instrumental value?",
-    "Can a concrete bounded episode of nonresistant nonbelief be shown to yield a relational package that a God-relationship alternative neither duplicates nor guarantees?",
-    "Does the whole-history comparison supply determinate grounds for judging that the surviving net value exceeds the value of the lost relationship?"
+    "What account of value determines when goods sharing a dispositional source are genuinely additional rather than double-counted?",
+    "What counterfactual standard establishes that a God-relationship alternative would not duplicate or guarantee a whole relational package?",
+    "Can the intrinsic value of a relationship with God be outweighed by finite, jointly realized goods, and if so under what axiological assumptions?",
+    "Are there plausible cases of bounded nonresistant nonbelief that yield distinctive relational goods not available within an alternative relationship with God?"
   ],
-  "paper_direction": "A paper here would argue that the many-goods response requires a counterfactual, net-of-overlap account of value rather than a simple aggregation of goods arising during nonresistant nonbelief. It would show why shared dispositional sources and goods available under the God-relationship alternative constrain aggregation, while anticipating the strongest reply that distinct interpersonal histories may constitute irreducible whole-history goods. To establish the thesis, the paper would need to formulate a defensible non-duplication criterion, explain comparison with a relationship valued for itself, and assess whether any bounded case can meet the revised premise.",
+  "paper_direction": "A paper here would argue that the many-goods response requires a net-of-overlap formulation and cannot rely on an unqualified aggregation of individually lesser goods. It would develop the case for comparing whole feasible histories, rather than merely counting named outcomes, while anticipating the strongest reply that shared dispositions and the intrinsic value of divine relationship make the goods non-additive or non-compensatory. To succeed, the paper would need to specify a defensible measure of non-duplicative value, defend the relevant counterfactual comparison with the God-relationship alternative, and identify a plausible bounded case in which the surviving package outweighs the lost relationship.",
   "outcome": "revision_required",
   "disclaimer": "Further human review required."
 }

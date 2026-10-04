@@ -1,7 +1,7 @@
 {
   "id": "brief-W7203485685.arg1.ofd28a0",
   "objection_id": "W7203485685.arg1.ofd28a0",
-  "research_question": "Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, beyond third-personal cognition that identifies the agent, intention, causal control, and selected outcome?",
+  "research_question": "Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?",
   "argument": {
     "id": "W7203485685.arg1",
     "title": "Self-Location Constraint",
@@ -48,13 +48,13 @@
   "strongest_responses": [
     {
       "defender": "Defender A",
-      "response": "The G-proposition identifies and causally explains the unique actualiser, but the argument requires representation of the outcome as the agent's own doing, not merely representation of G as a causal bearer. A rigid designator fixes reference without fixing the agent's stance toward the act.",
-      "why_it_failed": "The response did not establish why the further agent-relative stance makes a responsibility-relevant difference. It concedes that this is the contested bridge premise rather than something secured by c008 alone."
+      "response": "The G-proposition identifies the controller and connects G's intention to W1, but robust responsibility requires representing the outcome as the agent's own doing, not merely as a causally explained event involving that agent. A rigid designator fixes reference without fixing the agent's stance toward the act.",
+      "why_it_failed": "The objector's example already represents W1 as issuing from G's intention and control. Defender A conceded that the argument did not independently show why the further agent-relative stance matters for responsibility."
     },
     {
       "defender": "Defender B",
-      "response": "The relevant distinction should concern the cognition's role in intentional agency rather than its grammatical third-personal form. Third-personal source-identifying content alone does not guarantee a practically self-ascriptive representation of the actualisation.",
-      "why_it_failed": "This revision avoids the objection to c008 as a claim about propositional form, but it requires an argument that practical self-ascription is necessary for robust responsibility and unavailable to the G-cognition."
+      "response": "The argument should distinguish third-personal source-identifying content from practically self-ascriptive cognition that represents actualisation as issuing from that very agent's agency. The relevant condition concerns intentional agency rather than the grammatical form of a proposition.",
+      "why_it_failed": "This reformulation preserves a possible route to the conclusion, but it revises rather than establishes c008. It leaves open whether the G-thought can itself have the required practical role despite its third-personal form."
     }
   ],
   "closest_literature": [
@@ -96,83 +96,6 @@
       "verdict": "different",
       "similarity": 0.08,
       "quote": ""
-    },
-    {
-      "record_id": "W7203485685.c005",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c006",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c008",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c043",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c027",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c030",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
-    },
-    {
-      "record_id": "W7203485685.c031",
-      "paper_id": "oa:W7203485685",
-      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
-      "authors": [
-        "Wandile Ganya"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.1007/s11841-026-01169-y",
-      "verdict": "cited_in_trial"
     }
   ],
   "novelty": 0.88,
@@ -204,12 +127,12 @@
     }
   ],
   "open_questions": [
-    "What responsibility-relevant difference is made by representing an act under an agent-relative aspect once cognition already represents the agent's intention, control, and causal production of the outcome?",
-    "Can a rigid third-personal identifier figure in a complete practical self-representation for the very agent it identifies?",
-    "How should a practically self-ascriptive mode of presentation be individuated independently of the conclusion that irreducible de se content is required?",
-    "Does robust contrastive responsibility require a stance of doing rather than merely accurate knowledge of one's intention-driven action?"
+    "What responsibility-relevant difference, if any, separates knowing that G intentionally actualised W1 from representing that actualisation under an agent-relative aspect?",
+    "Can a thought expressed with a rigid third-personal identifier be practically self-ascriptive for its bearer?",
+    "Must agent-relative representation involve irreducible de se content, or can its role in intention and control supply the relevant self-ascription?",
+    "What account of robust contrastive responsibility establishes that a stance of doing is necessary in addition to accurate source identification and intentional control?"
   ],
-  "paper_direction": "A paper here would argue that the inference from third-personal source identification to the absence of responsibility-sufficient self-representation is invalid unless robust contrastive responsibility independently requires an agent-relative practical aspect. It would use the G case to show that third-personal cognition can represent intention, alternative control, causal production, and the unique source of actualisation, then anticipate the strongest reply: that these contents do not yet represent the act as the agent's own doing. The paper would need to specify that further stance without defining it as irreducible de se content, and show why its absence undermines robust responsibility even where the agent has complete third-personal knowledge and control.",
+  "paper_direction": "A paper here would argue that the argument from divine contrastive responsibility to irreducible de se content depends on a substantive agency condition, not on the merely third-personal grammar or referential precision of divine cognition. It would develop the distinction between source-identifying knowledge and practically self-ascriptive representation, anticipate the rigid-identifier case in which G's intention selects and produces W1, and show either that this case lacks the agency-relative aspect required for robust responsibility or that no such additional aspect is needed. To succeed, the paper would need to state and defend a responsibility-relevant criterion that distinguishes treating an intentional act as an object of knowledge from representing it as one's own doing.",
   "outcome": "revision_required",
   "disclaimer": "Further human review required."
 }

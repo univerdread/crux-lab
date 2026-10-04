@@ -23,8 +23,8 @@
   },
   "reason": "Classic fallback, open-access full text (55,619 chars); argues for a thesis; hiddenness relevance 3/3 (divine hiddenness); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:21:25.328550+00:00",
- "finished_at": "2026-10-04T01:29:37.690825+00:00",
+ "started_at": "2026-10-04T01:30:33.165319+00:00",
+ "finished_at": "2026-10-04T01:31:34.660484+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W2575351351.arg1",
@@ -563,6 +563,30 @@
    "text": "Nonresistant nonbelievers in the actual world do not entail that God does not exist.",
    "quote": "If this is the case, then the existence of ‘nonresistant nonbelievers’ in the actual world does not entail that God does not exist.",
    "level": "abstract"
+  },
+  "W2575351351.arg1.r1": {
+   "id": "W2575351351.arg1.r1",
+   "paper_id": "oa:W2575351351",
+   "kind": "premise",
+   "text": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief, with its evil measured by the lost relationship over that episode rather than by the number of goods it supports.",
+   "quote": "",
+   "level": "generated"
+  },
+  "W2575351351.arg1.r2": {
+   "id": "W2575351351.arg1.r2",
+   "paper_id": "oa:W2575351351",
+   "kind": "premise",
+   "text": "Goods individually less valuable than a relationship with God, after subtracting value shared through common dispositional sources, can collectively make a world containing temporary nonresistant nonbelief more valuable than the lost relationship, which is valued for itself.",
+   "quote": "",
+   "level": "generated"
+  },
+  "W2575351351.arg1.r3": {
+   "id": "W2575351351.arg1.r3",
+   "paper_id": "oa:W2575351351",
+   "kind": "premise",
+   "text": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves.",
+   "quote": "",
+   "level": "generated"
   }
  },
  "revised_premises": {
@@ -736,7 +760,7 @@
    "novelty": 0.45,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "abs:oa:W2950222172",
@@ -888,7 +912,7 @@
    "novelty": 0.42,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "abs:oa:W2950222172",
@@ -1040,7 +1064,7 @@
    "novelty": 0.55,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "W2072673546.c003",
@@ -1192,7 +1216,7 @@
    "novelty": 0.49,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "W7213499939.a2",
@@ -1344,7 +1368,7 @@
    "novelty": 0.49,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "abs:oa:W243944806",
@@ -1496,7 +1520,7 @@
    "novelty": 0.47,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W2780156828",
@@ -1648,7 +1672,7 @@
    "novelty": 0.08,
    "records_searched": 4139,
    "reranked": 14,
-   "live_openalex": "ok: 9 results",
+   "live_openalex": "cached: 9 results",
    "nearest": [
     {
      "record_id": "abs:oa:W7164197413",
@@ -1800,7 +1824,7 @@
    "novelty": 0.42,
    "records_searched": 4140,
    "reranked": 14,
-   "live_openalex": "ok: 10 results",
+   "live_openalex": "cached: 10 results",
    "nearest": [
     {
      "record_id": "abs:oa:W2950222172",
@@ -3370,7 +3394,6 @@
  ],
  "families_used": [
   "anthropic",
-  "anthropic→openai",
   "openai"
  ],
  "models": {
@@ -3388,34 +3411,34 @@
  ],
  "diversity": "degraded: 2 families",
  "llm_stats": {
-  "calls": 291,
-  "cache_hits": 32,
+  "calls": 343,
+  "cache_hits": 326,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 750,
+  "cli_calls": 1015,
   "cli_limit": 4000,
-  "notional_cli_usd": 10.5653
+  "notional_cli_usd": 12.7118
  },
  "events": [
   {
-   "t": 1791076885.33,
+   "t": 1791077433.17,
    "type": "run_start",
    "run_id": "run-oa-W2575351351",
    "target": "oa-W2575351351",
    "argument_id": "W2575351351.arg1"
   },
   {
-   "t": 1791076901.19,
+   "t": 1791077434.32,
    "type": "naive_question",
    "question": "I'm confused about something basic: If all the good things that come from God being hidden could *also* happen in a world where God is right there in a relationship with us, then why would God hiding ever make the world better instead of worse?",
    "sharpened": true
   },
   {
-   "t": 1791076901.19,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.oc4a9a4",
@@ -3432,7 +3455,7 @@
    }
   },
   {
-   "t": 1791076901.19,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o4bf7f6",
@@ -3449,7 +3472,7 @@
    }
   },
   {
-   "t": 1791076901.2,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o1c44e2",
@@ -3466,7 +3489,7 @@
    }
   },
   {
-   "t": 1791076901.2,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o0bcc84",
@@ -3483,7 +3506,7 @@
    }
   },
   {
-   "t": 1791076901.2,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.od9d59c",
@@ -3500,7 +3523,7 @@
    }
   },
   {
-   "t": 1791076901.2,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.oe4df31",
@@ -3517,7 +3540,7 @@
    }
   },
   {
-   "t": 1791076901.2,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o60cab5",
@@ -3534,7 +3557,7 @@
    }
   },
   {
-   "t": 1791076901.2,
+   "t": 1791077434.32,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o5e162b",
@@ -3551,7 +3574,7 @@
    }
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.oc4a9a4",
    "novelty": 0.45,
@@ -3584,7 +3607,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o4bf7f6",
    "novelty": 0.42,
@@ -3617,7 +3640,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o1c44e2",
    "novelty": 0.55,
@@ -3650,7 +3673,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o0bcc84",
    "novelty": 0.49,
@@ -3683,7 +3706,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.od9d59c",
    "novelty": 0.49,
@@ -3716,7 +3739,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.oe4df31",
    "novelty": 0.47,
@@ -3749,7 +3772,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o60cab5",
    "novelty": 0.08,
@@ -3782,7 +3805,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o5e162b",
    "novelty": 0.42,
@@ -3815,7 +3838,7 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -3922,19 +3945,19 @@
    ]
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.o1c44e2",
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791076985.81,
+   "t": 1791077448.98,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.o0bcc84",
    "objection_id": "W2575351351.arg1.o0bcc84"
   },
   {
-   "t": 1791077013.91,
+   "t": 1791077449.0,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3952,7 +3975,33 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077024.57,
+   "t": 1791077449.05,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Misreading: The objection attacks the stronger claim that accommodating even a pivotal good cannot defeat the many-goods response. But c020 claims only that accommodation does not defeat the response merely because an individual good can occur within a relationship with God. The objection adds that courage supplies most of the package’s value and that the remaining goods cannot compensate, so its conclusion is compatible with c020 rather than a challenge to it.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W2575351351.arg1.o0bcc84",
+   "objection_id": "W2575351351.arg1.o0bcc84"
+  },
+  {
+   "t": 1791077449.05,
+   "type": "trial_end",
+   "outcome": "misreading",
+   "status": "ok",
+   "trial_id": "trial-W2575351351.arg1.o0bcc84",
+   "objection_id": "W2575351351.arg1.o0bcc84"
+  },
+  {
+   "t": 1791077449.05,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3973,33 +4022,7 @@
    }
   },
   {
-   "t": 1791077026.04,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Misreading: The objection attacks the stronger claim that accommodating even a pivotal good cannot defeat the many-goods response. But c020 claims only that accommodation does not defeat the response merely because an individual good can occur within a relationship with God. The objection adds that courage supplies most of the package’s value and that the remaining goods cannot compensate, so its conclusion is compatible with c020 rather than a challenge to it.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W2575351351.arg1.o0bcc84",
-   "objection_id": "W2575351351.arg1.o0bcc84"
-  },
-  {
-   "t": 1791077026.04,
-   "type": "trial_end",
-   "outcome": "misreading",
-   "status": "ok",
-   "trial_id": "trial-W2575351351.arg1.o0bcc84",
-   "objection_id": "W2575351351.arg1.o0bcc84"
-  },
-  {
-   "t": 1791077035.88,
+   "t": 1791077449.05,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4018,7 +4041,7 @@
    }
   },
   {
-   "t": 1791077045.04,
+   "t": 1791077449.05,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4034,7 +4057,7 @@
    }
   },
   {
-   "t": 1791077062.62,
+   "t": 1791077449.06,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4053,7 +4076,7 @@
    }
   },
   {
-   "t": 1791077069.7,
+   "t": 1791077449.07,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4071,7 +4094,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077084.03,
+   "t": 1791077449.07,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4089,7 +4112,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077084.03,
+   "t": 1791077449.07,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4097,7 +4120,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077084.04,
+   "t": 1791077449.91,
    "type": "queue",
    "step": 1,
    "queue": [
@@ -4180,37 +4203,19 @@
    ]
   },
   {
-   "t": 1791077084.04,
+   "t": 1791077449.91,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.od9d59c",
    "objection_id": "W2575351351.arg1.od9d59c"
   },
   {
-   "t": 1791077084.04,
+   "t": 1791077449.91,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.oe4df31",
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077090.71,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Not a misreading: The objection directly attacks c014 as stated by arguing that the cited goods cannot arise from a single instance of nonresistant nonbelief without increasing the evil, because realizing each additional good requires a longer, deeper, or renewed faculty malfunction.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W2575351351.arg1.oe4df31",
-   "objection_id": "W2575351351.arg1.oe4df31"
-  },
-  {
-   "t": 1791077094.08,
+   "t": 1791077449.91,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4228,7 +4233,7 @@
    "objection_id": "W2575351351.arg1.od9d59c"
   },
   {
-   "t": 1791077094.08,
+   "t": 1791077449.91,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4236,7 +4241,25 @@
    "objection_id": "W2575351351.arg1.od9d59c"
   },
   {
-   "t": 1791077099.93,
+   "t": 1791077449.91,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Not a misreading: The objection directly attacks c014 as stated by arguing that the cited goods cannot arise from a single instance of nonresistant nonbelief without increasing the evil, because realizing each additional good requires a longer, deeper, or renewed faculty malfunction.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
+  },
+  {
+   "t": 1791077449.98,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4257,27 +4280,7 @@
    }
   },
   {
-   "t": 1791077108.62,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your Maria case identifies an important constraint, but it does not establish that stacking goods always enlarges the evil. You assume that each good must cause a distinct extension or deepening of the faculty’s silence. The defender can instead describe one temporally fixed episode of nonbelief: its already-set duration includes Maria’s search, years of fellowship with doubters, and the later crisis. Those goods can be different consequences of that same profile; counting them separately does not itself make the silence longer, deeper, or recurrent. Nor does the fact that belief might be properly basic entail that every period without it is a progressively worsening malfunction; that is an additional evaluative assumption.\n\nStill, you are right that a many-goods defense cannot simply aggregate goods while silently changing the duration or severity of the nonbelief required for each. It must compare the fixed episode and its alternatives, as the response’s success condition requires [W2575351351.c019]. If the episode is temporary and followed by relationship with God, its lost value may be outweighed by many goods [W2575351351.c029]. Your example defeats only an aggregation that relies on incremental impairment, not the modal claim in [W2575351351.c014].",
-    "cited_claim_ids": [
-     "W2575351351.c014",
-     "W2575351351.c019",
-     "W2575351351.c029"
-    ],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   }
-  },
-  {
-   "t": 1791077110.1,
+   "t": 1791077449.98,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4293,7 +4296,7 @@
    }
   },
   {
-   "t": 1791077117.03,
+   "t": 1791077449.98,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4314,7 +4317,27 @@
    }
   },
   {
-   "t": 1791077120.45,
+   "t": 1791077449.98,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "Your Maria case identifies an important constraint, but it does not establish that stacking goods always enlarges the evil. You assume that each good must cause a distinct extension or deepening of the faculty’s silence. The defender can instead describe one temporally fixed episode of nonbelief: its already-set duration includes Maria’s search, years of fellowship with doubters, and the later crisis. Those goods can be different consequences of that same profile; counting them separately does not itself make the silence longer, deeper, or recurrent. Nor does the fact that belief might be properly basic entail that every period without it is a progressively worsening malfunction; that is an additional evaluative assumption.\n\nStill, you are right that a many-goods defense cannot simply aggregate goods while silently changing the duration or severity of the nonbelief required for each. It must compare the fixed episode and its alternatives, as the response’s success condition requires [W2575351351.c019]. If the episode is temporary and followed by relationship with God, its lost value may be outweighed by many goods [W2575351351.c029]. Your example defeats only an aggregation that relies on incremental impairment, not the modal claim in [W2575351351.c014].",
+    "cited_claim_ids": [
+     "W2575351351.c014",
+     "W2575351351.c019",
+     "W2575351351.c029"
+    ],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   }
+  },
+  {
+   "t": 1791077449.98,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4330,7 +4353,7 @@
    }
   },
   {
-   "t": 1791077137.05,
+   "t": 1791077449.98,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4349,7 +4372,7 @@
    }
   },
   {
-   "t": 1791077148.59,
+   "t": 1791077449.99,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4367,7 +4390,7 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077160.02,
+   "t": 1791077449.99,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4385,7 +4408,7 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077160.02,
+   "t": 1791077449.99,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4393,14 +4416,14 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077160.05,
+   "t": 1791077450.59,
    "type": "revised_premise",
    "id": "W2575351351.arg1.r1",
    "text": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief, with its evil measured by the lost relationship over that episode rather than by the number of goods it supports.",
    "from_trial": "trial-W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077167.42,
+   "t": 1791077450.59,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o157a57",
@@ -4417,7 +4440,7 @@
    }
   },
   {
-   "t": 1791077196.83,
+   "t": 1791077451.31,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o157a57",
    "novelty": 0.42,
@@ -4450,7 +4473,7 @@
    ]
   },
   {
-   "t": 1791077196.83,
+   "t": 1791077451.31,
    "type": "queue",
    "step": 2,
    "queue": [
@@ -4521,19 +4544,19 @@
    ]
   },
   {
-   "t": 1791077196.83,
+   "t": 1791077451.31,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.oc4a9a4",
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077196.83,
+   "t": 1791077451.31,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.o4bf7f6",
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077203.68,
+   "t": 1791077451.32,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4551,7 +4574,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077204.34,
+   "t": 1791077451.38,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4569,7 +4592,7 @@
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077210.77,
+   "t": 1791077451.44,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4590,27 +4613,7 @@
    }
   },
   {
-   "t": 1791077211.84,
-   "type": "turn",
-   "turn": {
-    "exchange": 1,
-    "speaker": "defender_a",
-    "phase": "reply",
-    "model": "sonnet",
-    "family": "anthropic",
-    "content": "You are right that the episode's length and pain matter, and that c014 as worded is too quick: if each good requires a longer or sharper episode, then the goods are not free riders on one fixed cost, and c014's 'without increasing that evil' fails for Mara's case. But the argument's own framing, via arg1.r1, locates the evil in the lost relationship over the episode, so the question is whether Mara's extended doubt lengthens that loss. It does: two months versus eighteen months is a larger lost relationship, so the stated evil does rise with the goods' demands. The defender's best reply is that the many-goods response need not claim that goods are free; it needs only that the goods' combined value exceeds the increase in lost relationship. Your case shows that for goods requiring escalating duration, that comparison must be made explicitly, not assumed. Greater goods of this kind are the sort the hiddenness literature treats as possibly unknown rather than guaranteed [W2072673546.c089]. Whether they can cover the additional evil is an empirical-style weighing the argument has not yet done. I therefore concede that c014, as unrestricted, does not survive; the argument survives only with the restricted premise below.\n\nRevised premise: Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves.",
-    "cited_claim_ids": [
-     "W2072673546.c089",
-     "W2575351351.c014",
-     "W2575351351.c029"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves."
-   }
-  },
-  {
-   "t": 1791077215.63,
+   "t": 1791077451.44,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4626,48 +4629,7 @@
    }
   },
   {
-   "t": 1791077219.9,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your Mara case is a serious warning against a careless application of c014. If moral courage requires two months, empathic understanding requires a more anguished phase, and her brother’s freely chosen companionship requires eighteen months, then these particular goods do not merely share a fixed episode: their joint realization helps determine its duration and severity. One cannot simply count them as independent benefits against the cost of two calm months.\n\nBut that does not refute the premise’s modal claim. The many-goods response need identify a bounded episode whose length and intensity are independently fixed, and in which several goods arise together—perhaps Mara’s understanding and her brother’s companionship both arise during the same already-permitted period—without each requiring a further extension or intensification. Your example shows that overlap must be demonstrated, not presumed; it does not show that genuine overlap is impossible.\n\nMoreover, the response concerns temporary nonbelief, after which relationship remains possible [W2575351351.c026], and holds that the lost value of such a temporary episode may be outweighed by many goods [W2575351351.c029]. So Mara defeats an overbroad tally of her three goods, but not the possibility asserted in c014 [W2575351351.c014].",
-    "cited_claim_ids": [
-     "W2575351351.c014",
-     "W2575351351.c026",
-     "W2575351351.c029"
-    ],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   }
-  },
-  {
-   "t": 1791077223.63,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "reply",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "Your Mara case identifies a real constraint: one cannot simply count three outcomes alongside a relationship with God if the relationship would already secure the same outcomes, or their common source, more fully. Schellenberg’s point that relationship is intrinsically valuable must also be retained in the comparison [W2072673546.c060]. But that shows at most that Mara’s stipulated package has not yet established the premise; it does not refute its modal claim [W2575351351.c017]. The relevant comparison is between whole feasible histories, not a tally of separately named goods. That a divine relationship cultivates open-handed attention does not entail that it would produce this reconciliation, this care relation, and this cooperative garden together, with their particular interpersonal histories. Nor does the availability of each good within relationship establish that the entire package is available there without loss; this is precisely why individual accommodation does not automatically defeat the many-goods strategy. Some goods may also depend on believers and wider social relations rather than merely on Mara’s disposition [W2575351351.c041]. If, however, your stronger counterfactual is true—God-relationship reliably yields all three goods at least as well—then Mara’s episode supplies no many-goods justification. The argument survives only as a possibility claim, especially for bounded temporary nonbelief whose lost relationship-value can be outweighed [W2575351351.c029].",
-    "cited_claim_ids": [
-     "W2072673546.c060",
-     "W2575351351.c017",
-     "W2575351351.c041",
-     "W2575351351.c029"
-    ],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   }
-  },
-  {
-   "t": 1791077223.96,
+   "t": 1791077451.44,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4688,23 +4650,28 @@
    }
   },
   {
-   "t": 1791077231.11,
+   "t": 1791077451.44,
    "type": "turn",
    "turn": {
     "exchange": 2,
-    "speaker": "attacker",
-    "phase": "rejoinder",
-    "model": "opus",
-    "family": "anthropic",
-    "content": "You concede that Mara's goods enlarge the evil, but retreat to bare possibility: some episode might be \"independently fixed,\" with several goods arising inside it. I ask what fixes it. A perfectly loving God permits nonbelief only for the sake of goods, so the episode's length and severity must be set by the goods themselves, specifically by the most demanding one. The other goods ride free only if they need no more than that episode already supplies. But then the episode is justified mainly by its most demanding good, and the \"many\" add only what fits inside its shadow.\n\nYour revised premise, r1, measures evil by the lost relationship over the episode. My case shows that this measure is a function of which goods are pursued. So c014's \"without increasing that evil\" holds only for goods that cost nothing extra. That restriction quietly shrinks the aggregate that c017 needs in order to outweigh the loss.",
-    "cited_claim_ids": [],
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "Your Mara case identifies a real constraint: one cannot simply count three outcomes alongside a relationship with God if the relationship would already secure the same outcomes, or their common source, more fully. Schellenberg’s point that relationship is intrinsically valuable must also be retained in the comparison [W2072673546.c060]. But that shows at most that Mara’s stipulated package has not yet established the premise; it does not refute its modal claim [W2575351351.c017]. The relevant comparison is between whole feasible histories, not a tally of separately named goods. That a divine relationship cultivates open-handed attention does not entail that it would produce this reconciliation, this care relation, and this cooperative garden together, with their particular interpersonal histories. Nor does the availability of each good within relationship establish that the entire package is available there without loss; this is precisely why individual accommodation does not automatically defeat the many-goods strategy. Some goods may also depend on believers and wider social relations rather than merely on Mara’s disposition [W2575351351.c041]. If, however, your stronger counterfactual is true—God-relationship reliably yields all three goods at least as well—then Mara’s episode supplies no many-goods justification. The argument survives only as a possibility claim, especially for bounded temporary nonbelief whose lost relationship-value can be outweighed [W2575351351.c029].",
+    "cited_claim_ids": [
+     "W2072673546.c060",
+     "W2575351351.c017",
+     "W2575351351.c041",
+     "W2575351351.c029"
+    ],
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
    }
   },
   {
-   "t": 1791077231.52,
+   "t": 1791077451.44,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4720,7 +4687,82 @@
    }
   },
   {
-   "t": 1791077246.82,
+   "t": 1791077451.44,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "close",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "You are right that Mara, as described, cannot bear the weight placed on her: the friendship and garden partly instantiate the same attention, so treating them as three fully separate increments overcounts. Nor can I answer that by merely relabeling the claim modal. A bounded episode still needs a non-duplicative package whose net value exceeds the episode’s lost relationship-value. Temporary nonbelief remains the relevant setting, since its loss may be outweighed, unlike permanent nonbelief [W2575351351.c029].\n\nThe smallest repair is not your stronger requirement that goods have no shared source at all. Distinct goods may share a source and still add value; what matters is that their value is not already included in, or guaranteed by, the God-relationship alternative. A candidate case would involve a bounded episode enabling three irreducible relations: reconciliation with an estranged brother, a particular reciprocal care relation with a dying stranger, and an enduring mutual-support network among isolated neighbors. Their common occasion may be Mara’s situation, but the relevant comparison must establish that a relationship with God would not secure that whole relational package without foreclosing its distinctive value. The thought that some relevant goods may require other believers and broader social relations supports this non-individual comparison [W2575351351.c041].\n\nSo Mara is not a successful instance of c017 as stated. The argument survives only with the revised premise below; absent evidence of such a package, its conclusion is a live possibility rather than an established justification.\n\nRevised premise: Goods each less valuable than a relationship with God can collectively make a world containing a bounded episode of nonresistant nonbelief more valuable only when their jointly realized net value is not duplicated or guaranteed by the available God-relationship alternative and exceeds that episode’s lost relationship-value.",
+    "cited_claim_ids": [
+     "W2575351351.c029",
+     "W2575351351.c041"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "Goods each less valuable than a relationship with God can collectively make a world containing a bounded episode of nonresistant nonbelief more valuable only when their jointly realized net value is not duplicated or guaranteed by the available God-relationship alternative and exceeds that episode’s lost relationship-value."
+   }
+  },
+  {
+   "t": 1791077451.44,
+   "type": "turn",
+   "turn": {
+    "exchange": 1,
+    "speaker": "defender_a",
+    "phase": "reply",
+    "model": "sonnet",
+    "family": "anthropic",
+    "content": "You are right that the episode's length and pain matter, and that c014 as worded is too quick: if each good requires a longer or sharper episode, then the goods are not free riders on one fixed cost, and c014's 'without increasing that evil' fails for Mara's case. But the argument's own framing, via arg1.r1, locates the evil in the lost relationship over the episode, so the question is whether Mara's extended doubt lengthens that loss. It does: two months versus eighteen months is a larger lost relationship, so the stated evil does rise with the goods' demands. The defender's best reply is that the many-goods response need not claim that goods are free; it needs only that the goods' combined value exceeds the increase in lost relationship. Your case shows that for goods requiring escalating duration, that comparison must be made explicitly, not assumed. Greater goods of this kind are the sort the hiddenness literature treats as possibly unknown rather than guaranteed [W2072673546.c089]. Whether they can cover the additional evil is an empirical-style weighing the argument has not yet done. I therefore concede that c014, as unrestricted, does not survive; the argument survives only with the restricted premise below.\n\nRevised premise: Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves.",
+    "cited_claim_ids": [
+     "W2072673546.c089",
+     "W2575351351.c014",
+     "W2575351351.c029"
+    ],
+    "struck_claim_ids": [],
+    "concedes": true,
+    "revised_premise": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves."
+   }
+  },
+  {
+   "t": 1791077451.45,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "defender_b",
+    "phase": "reply",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "content": "Your Mara case is a serious warning against a careless application of c014. If moral courage requires two months, empathic understanding requires a more anguished phase, and her brother’s freely chosen companionship requires eighteen months, then these particular goods do not merely share a fixed episode: their joint realization helps determine its duration and severity. One cannot simply count them as independent benefits against the cost of two calm months.\n\nBut that does not refute the premise’s modal claim. The many-goods response need identify a bounded episode whose length and intensity are independently fixed, and in which several goods arise together—perhaps Mara’s understanding and her brother’s companionship both arise during the same already-permitted period—without each requiring a further extension or intensification. Your example shows that overlap must be demonstrated, not presumed; it does not show that genuine overlap is impossible.\n\nMoreover, the response concerns temporary nonbelief, after which relationship remains possible [W2575351351.c026], and holds that the lost value of such a temporary episode may be outweighed by many goods [W2575351351.c029]. So Mara defeats an overbroad tally of her three goods, but not the possibility asserted in c014 [W2575351351.c014].",
+    "cited_claim_ids": [
+     "W2575351351.c014",
+     "W2575351351.c026",
+     "W2575351351.c029"
+    ],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   }
+  },
+  {
+   "t": 1791077451.45,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "attacker",
+    "phase": "rejoinder",
+    "model": "opus",
+    "family": "anthropic",
+    "content": "You concede that Mara's goods enlarge the evil, but retreat to bare possibility: some episode might be \"independently fixed,\" with several goods arising inside it. I ask what fixes it. A perfectly loving God permits nonbelief only for the sake of goods, so the episode's length and severity must be set by the goods themselves, specifically by the most demanding one. The other goods ride free only if they need no more than that episode already supplies. But then the episode is justified mainly by its most demanding good, and the \"many\" add only what fits inside its shadow.\n\nYour revised premise, r1, measures evil by the lost relationship over the episode. My case shows that this measure is a function of which goods are pursued. So c014's \"without increasing that evil\" holds only for goods that cost nothing extra. That restriction quietly shrinks the aggregate that c017 needs in order to outweigh the loss.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   }
+  },
+  {
+   "t": 1791077451.45,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4740,44 +4782,7 @@
    }
   },
   {
-   "t": 1791077254.27,
-   "type": "turn",
-   "turn": {
-    "exchange": 1,
-    "speaker": "referee",
-    "phase": "label",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "revision_required: The defender accepts the objection and preserves the argument only by restricting c014 with an added condition.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
-   "objection_id": "W2575351351.arg1.o4bf7f6"
-  },
-  {
-   "t": 1791077254.53,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "defender_b",
-    "phase": "close",
-    "model": "gpt-5.6-terra",
-    "family": "openai",
-    "content": "You are right that Mara, as described, cannot bear the weight placed on her: the friendship and garden partly instantiate the same attention, so treating them as three fully separate increments overcounts. Nor can I answer that by merely relabeling the claim modal. A bounded episode still needs a non-duplicative package whose net value exceeds the episode’s lost relationship-value. Temporary nonbelief remains the relevant setting, since its loss may be outweighed, unlike permanent nonbelief [W2575351351.c029].\n\nThe smallest repair is not your stronger requirement that goods have no shared source at all. Distinct goods may share a source and still add value; what matters is that their value is not already included in, or guaranteed by, the God-relationship alternative. A candidate case would involve a bounded episode enabling three irreducible relations: reconciliation with an estranged brother, a particular reciprocal care relation with a dying stranger, and an enduring mutual-support network among isolated neighbors. Their common occasion may be Mara’s situation, but the relevant comparison must establish that a relationship with God would not secure that whole relational package without foreclosing its distinctive value. The thought that some relevant goods may require other believers and broader social relations supports this non-individual comparison [W2575351351.c041].\n\nSo Mara is not a successful instance of c017 as stated. The argument survives only with the revised premise below; absent evidence of such a package, its conclusion is a live possibility rather than an established justification.\n\nRevised premise: Goods each less valuable than a relationship with God can collectively make a world containing a bounded episode of nonresistant nonbelief more valuable only when their jointly realized net value is not duplicated or guaranteed by the available God-relationship alternative and exceeds that episode’s lost relationship-value.",
-    "cited_claim_ids": [
-     "W2575351351.c029",
-     "W2575351351.c041"
-    ],
-    "struck_claim_ids": [],
-    "concedes": true,
-    "revised_premise": "Goods each less valuable than a relationship with God can collectively make a world containing a bounded episode of nonresistant nonbelief more valuable only when their jointly realized net value is not duplicated or guaranteed by the available God-relationship alternative and exceeds that episode’s lost relationship-value."
-   }
-  },
-  {
-   "t": 1791077263.46,
+   "t": 1791077451.95,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4795,33 +4800,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077263.63,
-   "type": "turn",
-   "turn": {
-    "exchange": 2,
-    "speaker": "referee",
-    "phase": "label",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "revision_required: The defender concedes that the inference as stated fails and preserves the argument only by adding a stronger premise requiring the relevant goods to outweigh the episode’s full relationship-loss.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
-   "objection_id": "W2575351351.arg1.o4bf7f6"
-  },
-  {
-   "t": 1791077263.63,
-   "type": "trial_end",
-   "outcome": "revision_required",
-   "status": "ok",
-   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
-   "objection_id": "W2575351351.arg1.o4bf7f6"
-  },
-  {
-   "t": 1791077272.59,
+   "t": 1791077451.95,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4839,7 +4818,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077272.59,
+   "t": 1791077451.95,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4847,14 +4826,58 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077272.6,
+   "t": 1791077451.95,
+   "type": "turn",
+   "turn": {
+    "exchange": 1,
+    "speaker": "referee",
+    "phase": "label",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "revision_required: The defender accepts the objection and preserves the argument only by restricting c014 with an added condition.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
+  },
+  {
+   "t": 1791077451.95,
+   "type": "turn",
+   "turn": {
+    "exchange": 2,
+    "speaker": "referee",
+    "phase": "label",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "revision_required: The defender concedes that the inference as stated fails and preserves the argument only by adding a stronger premise requiring the relevant goods to outweigh the episode’s full relationship-loss.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
+  },
+  {
+   "t": 1791077451.95,
+   "type": "trial_end",
+   "outcome": "revision_required",
+   "status": "ok",
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
+  },
+  {
+   "t": 1791077452.26,
    "type": "revised_premise",
    "id": "W2575351351.arg1.r2",
    "text": "Goods individually less valuable than a relationship with God, after subtracting value shared through common dispositional sources, can collectively make a world containing temporary nonresistant nonbelief more valuable than the lost relationship, which is valued for itself.",
    "from_trial": "trial-W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077280.08,
+   "t": 1791077452.26,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o7a5dd4",
@@ -4871,7 +4894,7 @@
    }
   },
   {
-   "t": 1791077305.64,
+   "t": 1791077453.1,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o7a5dd4",
    "novelty": 0.38,
@@ -4904,14 +4927,14 @@
    ]
   },
   {
-   "t": 1791077305.65,
+   "t": 1791077453.1,
    "type": "revised_premise",
    "id": "W2575351351.arg1.r3",
    "text": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves.",
    "from_trial": "trial-W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077312.23,
+   "t": 1791077453.1,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.oa19d5f",
@@ -4928,7 +4951,7 @@
    }
   },
   {
-   "t": 1791077336.05,
+   "t": 1791077454.04,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.oa19d5f",
    "novelty": 0.75,
@@ -4961,25 +4984,25 @@
    ]
   },
   {
-   "t": 1791077350.08,
+   "t": 1791077467.15,
    "type": "brief",
    "brief_id": "brief-W2575351351.arg1.oe4df31",
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077364.29,
+   "t": 1791077479.96,
    "type": "brief",
    "brief_id": "brief-W2575351351.arg1.oc4a9a4",
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077377.69,
+   "t": 1791077494.66,
    "type": "brief",
    "brief_id": "brief-W2575351351.arg1.o4bf7f6",
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077377.69,
+   "t": 1791077494.66,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }
