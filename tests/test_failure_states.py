@@ -217,3 +217,28 @@ def test_stale_partial_trial_in_a_stored_run_is_failed_and_not_ranked():
     assert why["o1"] == "trial incomplete"           # partial trial: no survivor brief
     assert why["o2"] == "novelty not assessed"       # a 1.0 from the failure path: no lead score
     assert why["o3"] == ""
+
+
+# ---- APORIA fusion: cognitive profiles as generators ---------------------------------------------------
+
+def test_profiles_differ_by_policy_and_collapse_at_delta_zero():
+    from crux_lab.lab import cognition
+    moves = {p: cognition.move_of(cognition.policy(p, 1.0)) for p in cognition.PROFILES}
+    assert moves == {"explorer": "imagine", "formalist": "formalize", "skeptic": "doubt",
+                     "synthesizer": "memory", "minimalist": "introspect"}
+    base = {p: cognition.move_of(cognition.policy(p, 0.0)) for p in cognition.PROFILES}
+    assert len(set(base.values())) == 1          # Δ = 0: one shared policy, the noise floor
+
+
+def test_learned_value_steers_the_directors_curiosity_term():
+    from crux_lab.graph.schema import Objection
+    from crux_lab.lab import cognition, director
+    mk = lambda i, p: Objection(id=i, argument_id="a", target_premise_id="X.c1", kind="k", text="t",  # noqa: E731
+                                agent=f"reasoner:{p}", model="m", family="f")
+    done, a, b = mk("d", "skeptic"), mk("a", "skeptic"), mk("b", "explorer")
+    learned = cognition.learned_values([done], {"d": 0.64})
+    assert learned == {"skeptic": 0.64}
+    tried = {director.explore_key(done)}
+    rows = {r.objection_id: r for r in director.rank([done, a, b], {"a": 0.5, "b": 0.5}, {}, tried,
+                                                     {"d": "standing"}, learned=learned)}
+    assert rows["a"].E == 0.64 and rows["b"].E == 1   # a tried profile earns its learned value; untried = 1

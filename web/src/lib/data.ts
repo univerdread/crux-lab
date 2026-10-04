@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 // Every file the site reads lives under public/data and is written by crux_lab/export.py.
-const BASE = `${import.meta.env.BASE_URL}data/`;
+// VITE_DATA_DIR lets the site share a host with other data (APORIA serves its own docs/data/).
+const BASE = `${import.meta.env.BASE_URL}${import.meta.env.VITE_DATA_DIR ?? "data"}/`;
 
 export class MissingDataError extends Error {
   path: string;

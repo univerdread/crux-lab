@@ -21,7 +21,11 @@ from crux_lab.graph.index import INDEX_DIR, HybridIndex
 from crux_lab.graph.schema import SURVIVAL, Argument, Claim, Edge, Objection, Trial
 from crux_lab.graph.store import Store
 from crux_lab.lab import brief as brief_mod
-from crux_lab.lab import director, generators, novelty
+import os
+
+from crux_lab.lab import cognition, director, generators, novelty
+
+COGNITIVE = os.environ.get("COGNITION", "on") != "off"   # APORIA reasoners as generators (crux_lab/lab/cognition.py)
 from crux_lab.lab.gauntlet import run_trial
 from crux_lab.llm.budget import BudgetExceeded
 from crux_lab.llm.client import LLMClient, ModelSpec
@@ -136,7 +140,7 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
 
     try:
         # 1. generation, wave one
-        wave = await generators.first_wave(client, arg, own, max_n=8)
+        wave = await generators.first_wave(client, arg, own, max_n=8, dependence=C)
         if len(client.families) >= 2:
             try:
                 q, o = await generators.naive(client, arg, own, client.spec_for("naive_questioner"),
@@ -151,7 +155,11 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
 
         step, extra_waves = 0, 0
         while len(trials) < director.MAX_TRIALS:
-            rows = director.rank(objections, {k: v["novelty"] for k, v in nov.items()}, C, tried_keys, outcomes)
+            realized = {oid: SURVIVAL.get(outcomes[oid], 0) * (nov.get(oid, {}).get("novelty") or 0)
+                        for oid in outcomes if outcomes[oid] != "failed"}
+            learned = cognition.learned_values(objections, realized)
+            rows = director.rank(objections, {k: v["novelty"] for k, v in nov.items()}, C, tried_keys, outcomes,
+                                 learned=learned)
             if not rows:
                 blocked = [o.id for o in objections if o.id not in outcomes and nov.get(o.id, {}).get("novelty") is None]
                 why = (f"; {len(blocked)} untested objection(s) left out because their novelty could not be assessed"
@@ -160,8 +168,14 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
                     stop_reason = "objection budget used up" + why
                     break
                 taken = [o.target_premise_id for o in objections]
-                more = await asyncio.gather(*[generators.blind(client, arg, own, s, taken=taken, revised=revised)
-                                              for s in client.generator_specs()], return_exceptions=True)
+                if COGNITIVE:   # APORIA reasoners, best-learned way of thinking first, on the next model family
+                    profs = sorted(cognition.PROFILES, key=lambda p: -learned.get(p, 1.0))
+                    more = await asyncio.gather(*[cognition.reasoner(client, arg, own, p, taken=taken, dependence=C,
+                                                                     revised=revised, offset=extra_waves + 1)
+                                                  for p in profs], return_exceptions=True)
+                else:
+                    more = await asyncio.gather(*[generators.blind(client, arg, own, s, taken=taken, revised=revised)
+                                                  for s in client.generator_specs()], return_exceptions=True)
                 more = [m for m in more if isinstance(m, Objection)]
                 before = len(objections)
                 if more and extra_waves < 2:
@@ -200,8 +214,13 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
                     await emit({"type": "revised_premise", "id": rid, "text": t.revised_premise, "from_trial": t.id})
                     untried = [s for s in client.generator_specs() if f"blind_thought_experimenter|{s.family}" not in tried_keys] \
                         or client.generator_specs()
-                    nxt = await generators.blind(client, arg, own, untried[0], depth=o.depth + 1,
-                                                 revised={rid: t.revised_premise}, only=rid)
+                    if COGNITIVE:   # the revised premise is attacked by the way of thinking that has learned most
+                        best = max(cognition.PROFILES, key=lambda p: learned.get(p, 0.0))
+                        nxt = await cognition.reasoner(client, arg, own, best, depth=o.depth + 1, dependence=C,
+                                                       revised={rid: t.revised_premise}, only=rid, offset=step + 1)
+                    else:
+                        nxt = await generators.blind(client, arg, own, untried[0], depth=o.depth + 1,
+                                                     revised={rid: t.revised_premise}, only=rid)
                     if nxt:
                         C[rid] = 1 / max(1, store.count(Argument))
                         await assess([nxt])
@@ -244,6 +263,7 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
         "revised_premises": revised, "dependence": C,
         "objections": [o.model_dump() for o in objections],
         "novelty": nov, "trials": [t.model_dump() for t in trials.values()],
+        "cognition": cognition.run_metrics(objections, trials, nov, briefs, claims_ix.embedder) if COGNITIVE else None,
         "director_steps": steps, "briefs": briefs, "naive_questioner": naive_log,
         "families_used": fams,
         "models": {r: (client.spec_for(r).label) for r in ("defender_a", "defender_b", "referee", "extractor", "reranker")},

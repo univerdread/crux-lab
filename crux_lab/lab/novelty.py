@@ -165,10 +165,12 @@ def live_openalex(query: str, n: int = 10) -> tuple[list[Passage], str]:
 async def check(client: LLMClient, objection_id: str, objection: str, argument_text: str,
                 target_id: str, target_text: str, claims_ix: HybridIndex, abstracts_ix: HybridIndex,
                 use_live: bool = True, exclude_paper: str | None = None, k: int = 20,
-                rerank_n: int = 14) -> NoveltyResult:
-    system, user = render("restate", argument=argument_text, target=f"{target_id}: {target_text}",
-                          objection=objection)
-    rs, _ = await client.json("reranker", user, Restatements, system)
+                rerank_n: int = 14, restate: bool = True) -> NoveltyResult:
+    rs = None
+    if restate:
+        system, user = render("restate", argument=argument_text, target=f"{target_id}: {target_text}",
+                              objection=objection)
+        rs, _ = await client.json("reranker", user, Restatements, system)
     queries = [objection] + ([rs.paper_vocabulary, rs.plain_english, rs.neighboring_tradition] if rs else [])
     fused: dict[str, tuple[float, Passage]] = {}
 

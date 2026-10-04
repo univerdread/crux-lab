@@ -14,7 +14,7 @@ MAX_OBJECTIONS = 12
 MAX_TRIALS = 6
 
 
-def priority(S: float, N: float, C: float, E: int) -> float:
+def priority(S: float, N: float, C: float, E: float) -> float:
     return S * N * (0.5 + 0.5 * C) + 0.1 * E
 
 
@@ -28,7 +28,7 @@ class QueueRow:
     S: float
     N: float
     C: float
-    E: int
+    E: float
     priority: float
 
 
@@ -37,7 +37,8 @@ def explore_key(o: Objection) -> str:
 
 
 def rank(objections: list[Objection], novelty: dict[str, float | None], dependence: dict[str, float],
-         tried_keys: set[str], outcomes: dict[str, str] | None = None) -> list[QueueRow]:
+         tried_keys: set[str], outcomes: dict[str, str] | None = None,
+         learned: dict[str, float] | None = None) -> list[QueueRow]:
     """Rows for untried objections, highest priority first. Ties: shallower depth, then id.
 
     Eligibility: an objection whose novelty check could not be completed (novelty None) is not ranked at
@@ -52,7 +53,10 @@ def rank(objections: list[Objection], novelty: dict[str, float | None], dependen
         S = PRIOR_SURVIVAL
         N = novelty.get(o.id, 0.5)
         C = dependence.get(o.target_premise_id, 0.0)
-        E = 0 if explore_key(o) in tried_keys else 1
+        # E: curiosity. An untried agent/family is worth exploring (1). For an APORIA reasoner whose profile
+        # has finished trials, E is that profile's learned value (mean realized S x N): in-session learning.
+        prof = o.agent.split(":", 1)[1] if o.agent.startswith("reasoner:") else None
+        E = 1 if explore_key(o) not in tried_keys else (round(learned[prof], 4) if learned and prof in learned else 0)
         rows.append(QueueRow(o.id, o.target_premise_id, o.agent, o.family, o.depth, S, round(N, 3),
                              round(C, 3), E, round(priority(S, N, C, E), 4)))
     rows.sort(key=lambda r: (-r.priority, r.depth, r.objection_id))

@@ -150,8 +150,29 @@ async def naive(client: LLMClient, arg: Argument, own: dict[str, Claim], small: 
     return q, obj
 
 
-async def first_wave(client: LLMClient, arg: Argument, own: dict[str, Claim], max_n: int = 8) -> list[Objection]:
-    """One blind objection per generator model, the hidden-premise attacker, two tradition lenses."""
+async def first_wave(client: LLMClient, arg: Argument, own: dict[str, Claim], max_n: int = 8,
+                     dependence: dict[str, float] | None = None) -> list[Objection]:
+    """APORIA's five cognitive profiles (one reasoner each, rotating across model families), then the
+    hidden-premise attacker and two tradition lenses. COGNITION=off restores the family-only blind wave."""
+    import os
+    if os.environ.get("COGNITION", "on") != "off":
+        from crux_lab.lab import cognition
+        taken: list[str] = []
+        tasks = []
+        for prof in cognition.PROFILES:
+            pol = cognition.policy(prof)
+            tgt = cognition.choose_premise(pol, arg, taken, dependence or {}, f"{arg.id}|{prof}|0")
+            taken.append(tgt)
+            tasks.append(cognition.reasoner(client, arg, own, prof, dependence=dependence, only=tgt))
+        fams: dict[str, ModelSpec] = {}
+        for g in client.generator_specs():
+            fams.setdefault(g.family, g)
+        rest = list(fams.values())[len(cognition.PROFILES):] or list(fams.values())
+        tasks.append(hidden(client, arg, own, rest[0]))
+        for i, school in enumerate(_schools_for(arg.id)):
+            tasks.append(tradition(client, arg, own, rest[(i + 1) % len(rest)], school))
+        res = await asyncio.gather(*tasks, return_exceptions=True)
+        return [r for r in res if isinstance(r, Objection)][:max_n]
     gens = client.generator_specs()
     # One model per family (first listed = strongest), so a large model pool still leaves room for the
     # Hidden-Premise Attacker and the two Tradition Lenses within max_n.

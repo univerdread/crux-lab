@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import json
 import logging
 import os
 import subprocess
@@ -37,6 +38,12 @@ def _run(a):
 def _runs(a):
     from crux_lab.lab.run import main_all
     asyncio.run(main_all(only=[x for x in a.only.split(",") if x], skip=[x for x in a.skip.split(",") if x]))
+
+
+def _bridge(a):
+    from crux_lab.lab.bridge import main
+    d = asyncio.run(main(a.runs))
+    print(json.dumps({k: d[k] for k in ("n", "by_condition", "by_profile")}, indent=1))
 
 
 def _assess(a):
@@ -113,6 +120,9 @@ def main(argv=None):
     rs.add_argument("--skip", default="")
     rs.set_defaults(f=_runs)
     sub.add_parser("export").set_defaults(f=_export)
+    br = sub.add_parser("bridge", help="check APORIA's reasoner objections against the topic's literature")
+    br.add_argument("--runs", required=True, help="glob of APORIA run files, e.g. ../aporia/lab/runs/*.json")
+    br.set_defaults(f=_bridge)
     sub.add_parser("assess").set_defaults(f=_assess)
     sub.add_parser("revise").set_defaults(f=_revise)
     e = sub.add_parser("eval")

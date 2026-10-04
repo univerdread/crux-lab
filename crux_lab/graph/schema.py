@@ -67,6 +67,8 @@ class Objection(BaseModel):
     depth: int = 0
     tradition: str | None = None
     premise_fails_because: str = ""
+    profile: str | None = None            # APORIA cognitive profile that generated it (crux_lab/lab/cognition.py)
+    delta: float | None = None            # APORIA's Δ for that profile
 
 
 class Turn(BaseModel):
