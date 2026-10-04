@@ -60,6 +60,17 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 | constrained roles, mixed families | 20 | 2.6 | 0.213 | 80% | 45% |
 <!-- /RESULTS -->
 
+## Screenshots
+
+| Research directions (landing) | Lab replay |
+| --- | --- |
+| ![Landing page with research directions](docs/screens/landing.png) | ![Lab replay: argument map, trial feed, Director queue](docs/screens/lab.png) |
+| **Research brief** | **Results (E1–E3)** |
+| ![A research brief](docs/screens/brief.png) | ![Evaluation results](docs/screens/results.png) |
+
+Walkthrough video (Playwright, ~1 minute): [`docs/demo.webm`](docs/demo.webm). Two-minute talk track with
+real ids and numbers: [`docs/DEMO.md`](docs/DEMO.md).
+
 ## The discovery loop
 
 ```
@@ -156,6 +167,24 @@ crux_lab/
   api/       server.py (FastAPI + SSE live mode)
 web/         Vite + React + TypeScript + Tailwind site (replay by default; VITE_API_URL = live)
 ```
+
+## Databricks (sponsor)
+
+Wired in, never blocking; the local index stays the source of truth.
+
+- **Model Serving / Foundation Model APIs** — first in the provider chain: `make providers` lists
+  `GET {host}/api/2.0/serving-endpoints`, probes the candidates in `config/models.yaml` (Llama, Qwen,
+  gpt-oss, Gemma, Claude) and assigns roles across families.
+- **MLflow tracing** — every LLM call is one trace (`crux_lab/llm/tracing.py`): to a Databricks experiment
+  when `DATABRICKS_HOST`/`DATABRICKS_TOKEN` are set, otherwise to local `mlruns/`.
+- **AI Search (formerly Vector Search)** — `make databricks` writes every extracted claim to a `claims`
+  Delta table (Change Data Feed on) through a SQL warehouse (`DATABRICKS_WAREHOUSE_ID`) and creates a
+  Delta Sync index over it with managed `databricks-gte-large-en` embeddings; `crux_lab.databricks_sync.query()`
+  answers "Has this move been made?" from it.
+- **Databricks Apps** — `app.yaml` serves the FastAPI live-mode API.
+
+**In this build no Databricks workspace credentials were available**, so the agents ran on subscription CLIs,
+MLflow traced locally, and `make databricks` reports "not configured" and exits. The /about page states this.
 
 ## Prior work
 

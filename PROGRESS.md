@@ -93,16 +93,20 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P4 Website v1 — target 06:30 · GATE B
 
-- [ ] P4.1 `make export`: runs index, run details, trials, briefs, cited corpus records →
+- [x] P4.1 `make export`: runs index, run details, trials, briefs, cited corpus records →
   `web/public/data/`.
   **Check:** schema test on exported JSON.
-- [ ] P4.2 Vite + React + TS + Tailwind scaffold, routing, design tokens from CLAUDE.md.
+  → tests/test_export.py (3 tests) on the real export: 5 runs, 14 briefs, 2940 claims, 1086 records.
+- [x] P4.2 Vite + React + TS + Tailwind scaffold, routing, design tokens from CLAUDE.md.
   **Check:** `npm run build` passes.
-- [ ] P4.3 `/lab/:run` replay: argument map (React Flow), trial feed with autoplay/step,
+  → build + typecheck pass (Vite 8, React 19, Tailwind 4, react-router 7, @xyflow/react 12, recharts 3).
+- [x] P4.3 `/lab/:run` replay: argument map (React Flow), trial feed with autoplay/step,
   Director queue, outcome chips, family badges.
   **Check:** renders real run data; Playwright smoke screenshot in `docs/screens/`.
-- [ ] P4.4 `/trial/:id`, `/briefs`, `/brief/:id`; citations open a corpus-record drawer.
+  → docs/screens/lab.png (+ lab-mobile.png); replay driven by run.events (turn events carry trial_id).
+- [x] P4.4 `/trial/:id`, `/briefs`, `/brief/:id`; citations open a corpus-record drawer.
   **Check:** smoke test passes. **GATE B.**
+  → GATE B MET ~03:45: 10/10 Playwright smoke tests pass on the final export.
 
 ## P5 Full lab — target 07:30
 
@@ -129,24 +133,27 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
   → misreadings caught 10/10; known_answer with correct reply 1/10, but a defender cited a verified gold reply in 7/10 (Referee labels revision_required when defenders also narrow the premise). v1 discarded (construction bug), kept as e2_v1_discarded.json.
 - [x] P6.3 E3 diversity ablation → `results/e3.json`. (First to cut if behind.)
   → n=20/condition: distinct premises per argument 1.8 / 2.4 / 2.6; mean pairwise distance 0.114 / 0.224 / 0.213; pass pre-screen 100% / 85% / 80%; novelty>0.5 50% / 55% / 45% (plain / constrained one model / constrained mixed). share_surviving not run (cost).
-- [ ] P6.4 `/results` page: E1 grouped bars, E2 and E3 compact tables, limits text, all read from
+- [x] P6.4 `/results` page: E1 grouped bars, E2 and E3 compact tables, limits text, all read from
   `results/*.json` via export.
   **Check:** build + smoke screenshot. **GATE C — after this, no new features.**
+  → docs/screens/results.png. GATE C MET ~03:45 → feature freeze; only polish, docs, fixes from here.
 
 ## P7 Polish — from 08:30
 
-- [ ] P7.1 Landing page: one-liner, loop ring, 3 headline numbers pulled from results.
-- [ ] P7.2 `/atlas`: claim graph + "Has this move been made?" box (live API, else client-side
+- [x] P7.1 Landing page: one-liner, loop ring, 3 headline numbers pulled from results.
+- [x] P7.2 `/atlas`: claim graph + "Has this move been made?" box (live API, else client-side
   BM25 over exported claims).
-- [ ] P7.3 `/about`: how it works, stack, Databricks components, honest limits, diversity status.
-- [ ] P7.4 README: what, why, quickstart, architecture, results with real numbers, limits,
+- [x] P7.3 `/about`: how it works, stack, Databricks components, honest limits, diversity status.
+- [x] P7.4 README: what, why, quickstart, architecture, results with real numbers, limits,
   screenshots, and "Prior work" listing every file adapted from Crux.
-- [ ] P7.5 `docs/DEMO.md`: the 2-minute script with real numbers filled in and the exact
+- [x] P7.5 `docs/DEMO.md`: the 2-minute script with real numbers filled in and the exact
   run/trial/brief ids to show, in order.
-- [ ] P7.6 `make demo-video`: Playwright walkthrough of the DEMO.md path → `docs/demo.webm`.
-- [ ] P7.7 Databricks wiring, only if creds exist: MLflow traces to a Databricks experiment;
+- [x] P7.6 `make demo-video`: Playwright walkthrough of the DEMO.md path → `docs/demo.webm`.
+  → 53 s walkthrough recorded on the final build (6 MB).
+- [x] P7.7 Databricks wiring, only if creds exist: MLflow traces to a Databricks experiment;
   `claims` Delta table + AI Search Delta Sync index; `app.yaml` for Databricks Apps. Document
   in README. Never block on this.
+  → no creds: code + app.yaml + README section; `make databricks` reports not configured. MLflow traces local (1100+).
 
 ## Polish forever (when everything above is ticked; never stop)
 

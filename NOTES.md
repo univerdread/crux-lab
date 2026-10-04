@@ -1,5 +1,20 @@
 # NOTES — newest entry first
 
+## 2026-10-04 03:47 — GATES B and C met; everything in PROGRESS ticked except P1.2 (Claude)
+- Website built by a subagent against `web/src/types.ts`, verified on the real export: typecheck +
+  build pass, 10/10 Playwright smoke tests, screenshots in docs/screens/, 53 s walkthrough in
+  docs/demo.webm. Run tests with `make smoke` (needs a Chromium matching Playwright; set
+  `PW_CHROMIUM=$HOME/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell`
+  to reuse the one on this Mac).
+- Turn events now carry trial_id (cached re-run; outcomes identical).
+- README results/limits and docs/DEMO.md are generated from the export (`make docs`). The site and
+  README rank research directions round-robin across targets (best per paper first).
+- Human, morning checklist: (1) `make demo` and click /, a brief, /lab, a trial, /results;
+  (2) read one brief + its trial (`/brief/brief-W7212186029.arg1.o10f4f4` is top); the one
+  known_answer is in run-oa-W2072673546 (cites W7168366306.a3 — I checked the quote);
+  (3) deploy `web/dist` (static; SPA fallback needed for deep links); (4) optional: Databricks
+  token + warehouse → `make providers && make databricks`, which would raise family diversity.
+
 ## 2026-10-04 03:36 — all targets run; E1 done; E2 rebuilt (Claude)
 - 5 runs / 55 objections / 30 trials / 14 briefs. Outcomes: revision_required 20, misreading 9,
   known_answer 1, rebutted 0, standing 0. I read the revision_required labels: they are genuine
