@@ -25,6 +25,8 @@ I set `DISABLE_PROVIDERS=codex_cli` in `.env`; remove the line to re-enable Code
 
 **Checks you can run:** `make check` (50 Python + 9 web tests + typecheck), `make smoke` (10 page smoke + 8 axe
 accessibility), `make live-test` (FastAPI SSE live mode), `PYTHONPATH=. .venv/bin/python scripts/audit.py`.
+Playwright needs its Chromium: `cd web && npx playwright install chromium`, or reuse the one on this Mac with
+`PW_CHROMIUM=$HOME/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell make smoke`.
 
 ## 2026-10-04 07:00 — duplicate-records follow-ups closed (Claude)
 - Novelty now excludes every record of the target work; the gauntlet treats claims from another record
