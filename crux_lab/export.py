@@ -36,6 +36,22 @@ METHOD_NOTES = [
 ]
 
 
+def tracing_summary() -> dict:
+    """How many LLM calls were traced with MLflow (local sqlite store unless Databricks was configured)."""
+    import sqlite3
+
+    from crux_lab.config import ROOT
+    from crux_lab.config import settings
+    db = ROOT / "mlruns" / "mlflow.db"
+    out = {"backend": "databricks" if settings.has("databricks") else "local MLflow (mlruns/)", "traces": None}
+    if db.exists():
+        try:
+            out["traces"] = sqlite3.connect(db).execute("select count(*) from trace_info").fetchone()[0]
+        except sqlite3.Error:
+            pass
+    return out
+
+
 def _read(p):
     return json.loads(p.read_text()) if p.exists() else None
 
@@ -144,6 +160,7 @@ def main() -> dict:
                    "fresh": sum(1 for p in corpus if p.get("fresh"))},
     }
     about["method_notes"] = METHOD_NOTES
+    about["tracing"] = tracing_summary()
     (out / "about.json").write_text(json.dumps(about, ensure_ascii=False, indent=1))
     index = {"generated_at": datetime.now(timezone.utc).isoformat(), "runs": runs_summary,
              "targets": targets.get("targets", []), "briefs": len(briefs),
