@@ -137,11 +137,15 @@ make run TARGET=oa-W2072673546   # one full lab run → data/runs/, data/briefs/
 make runs           # all targets in parallel
 make eval           # E1–E3 → results/
 make export         # → web/public/data/
-make demo           # build + preview the site (http://localhost:4680)
+make demo           # build + preview the site (http://localhost:4680) from the committed export
 make check          # pytest (no network) + web typecheck
 ```
 
 Without `make`: `python -m crux_lab.cli <cmd>`.
+
+**Just want to see it?** `cd web && npm install && npm run build && npm run preview` serves the
+committed results (`web/public/data`) — no API keys, no model calls. Re-running the lab needs a model
+provider (see below); the claim store and LLM cache it builds stay local (gitignored).
 
 ### Model providers
 
