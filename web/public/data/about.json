@@ -136,6 +136,7 @@
  },
  "corpus": {
   "records": 1212,
+  "distinct_works": 962,
   "with_abstract": 1212,
   "full_texts": 75,
   "fresh": 635

@@ -90,7 +90,7 @@ function E1Section({ e }: { e: E1 | null }) {
       <h2 className="font-serif text-[1.6rem] font-medium leading-tight">Can the lab find the paper an objection came from?</h2>
       <p className="measure mt-1 text-[0.98rem] text-ink-soft">
         Objections extracted from corpus papers are reworded without names or jargon, then searched four ways. Recall@5:
-        how often the source paper is among the top five results.
+        how often the source work is among the top five distinct works (duplicate records of one paper merged).
       </p>
       {e && e.methods?.length ? (
         <>
@@ -135,6 +135,7 @@ function E1Section({ e }: { e: E1 | null }) {
                 <th>method</th>
                 <th className="num">recall@5</th>
                 <th className="num">hits / n</th>
+                <th className="num" title="Record-level: duplicate records of a paper count as misses">strict, per record</th>
               </tr>
             </thead>
             <tbody>
@@ -145,6 +146,7 @@ function E1Section({ e }: { e: E1 | null }) {
                   <td className="num">
                     {m.hits} / {e.n}
                   </td>
+                  <td className="num">{m.recall_at_5_strict_record != null ? pct(m.recall_at_5_strict_record) : "—"}</td>
                 </tr>
               ))}
             </tbody>

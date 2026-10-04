@@ -18,7 +18,7 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 <!-- RESULTS -->
 ## What the lab produced (generated from `web/public/data`)
 
-- Corpus: **1212** OpenAlex records (635 published since 2026-08-01), **75** open-access full texts.
+- Corpus: **1212** OpenAlex records (**962** distinct works once duplicate versions are merged; 635 records published since 2026-08-01), **75** open-access full texts.
 - Targets: **5** papers; **55** objections generated; **30** full trials; **14** research briefs.
 - Model families: degraded: 2 families (anthropic, openai).
 
@@ -40,14 +40,14 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 
 ### Evaluation (automatic, no human labels)
 
-**E1 prior-art recall@5** (n=50):
+**E1 prior-art recall@5** (n=50; scored per work, duplicate records merged):
 
-| Method | recall@5 |
-| --- | --- |
-| BM25 over abstracts | 12% (6/50) |
-| embeddings over abstracts | 20% (10/50) |
-| embeddings over claims | 58% (29/50) |
-| claims + 3-way restatement + rerank | 86% (43/50) |
+| Method | recall@5 | strict, per record |
+| --- | --- | --- |
+| BM25 over abstracts | 16% (8/50) | 12% |
+| embeddings over abstracts | 24% (12/50) | 20% |
+| embeddings over claims | 64% (32/50) | 58% |
+| claims + 3-way restatement + rerank | 86% (43/50) | 86% |
 
 **E2 gauntlet calibration**: 1/10 published objections labelled known_answer, 1/10 with the correct reply cited and verified; a defender cited (verified) a gold reply in 7/10 items; 10/10 deliberate misreadings labelled misreading.
 
@@ -214,7 +214,7 @@ Everything else was written for Crux Lab.
 - Grounding is audited mechanically: [`docs/AUDIT.md`](docs/AUDIT.md) re-checks every quote, cited id, deciding sentence and brief reference against its source.
 - Reconstructions are the Extractor's; every premise has a verbatim quote, but an author might reconstruct their argument differently. Read the paper.
 
-- E1: The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels. Embedding-based retrieval is not bit-reproducible across runs (local model on Apple MPS): previous_runs holds the scores of earlier runs over the same 50 items and the same cached rewordings, which shows the run-to-run variance.
+- E1: The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels. Recall is scored per work: OpenAlex lists many papers more than once (versions), so duplicate records are merged (title + first-author surname) before taking the top 5; recall_at_5_strict_record gives the stricter record-level score. Embedding-based retrieval is not bit-reproducible across runs (local model on Apple MPS): previous_runs holds the scores of earlier runs over the same 50 items and the same cached rewordings (each with its scoring unit; compare record-level runs with recall_at_5_strict_record), which shows the run-to-run variance.
 - E2: correct_reply_cited counts items labelled known_answer whose verified citations include a gold reply paper; gold_reply_cited_by_a_defender counts items where a defender cited (verified) a claim from a gold reply paper, whatever the label. Small n (10 + 10). Objections are LLM restatements of published claims, and the 'published reply' is chosen by retrieval + an LLM judge from abstract-level claims, so both the pairing and the gold reply are model-made. A first version of this eval paired each objection with its own source paper as the 'reply' (0/10 correct by construction) and was discarded. Misreadings are written by a model from the same pool as the defenders. The argument is a paraphrased fixture, not a corpus record. No human labels.
 - E3: Only 2 model families were available (anthropic, openai), so 'mixed families' means 2 families. share_surviving = share of objections whose full gauntlet trial (pre-screen, two defenders, Referee) ended in revision_required or standing (S >= 0.8); trials use the lab's gauntlet without updating the argument between trials. CLI providers ignore temperature, so 'plain' variation comes from the 'objection k of n' prompt. 5 arguments x 4 objections per condition. Full trials were attempted for every objection, but fewer than 80% completed in 3 condition(s) (plain prompt, one model: 4/20; constrained roles, one model: 3/20; constrained roles, mixed families: 4/20 trials completed) because the OpenAI/Codex provider hit its ChatGPT workspace spend cap during the run; share_surviving is therefore reported as not available for those conditions rather than computed on a biased remainder.
 <!-- /LIMITS -->

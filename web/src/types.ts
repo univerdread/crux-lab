@@ -289,7 +289,9 @@ export interface ResultsFile {
 export interface E1 {
   experiment?: string;
   n: number;
-  methods: { name: string; recall_at_5: number; hits: number }[];
+  methods: { name: string; recall_at_5: number; hits: number; recall_at_5_strict_record?: number }[];
+  unit?: string;
+  previous_runs?: { timestamp: string; unit: string; methods: { name: string; recall_at_5: number }[] }[];
   settings: Record<string, unknown>;
   models: Record<string, string>;
   timestamp: string;

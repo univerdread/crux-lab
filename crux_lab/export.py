@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 
 from crux_lab.config import BRIEFS, CONFIG, DATA, RESOLVED_MODELS, RESULTS, RUNS, TARGETS, WEB_DATA
 from crux_lab.corpus.build import load_corpus
+from crux_lab.corpus.dedup import work_ids
 from crux_lab.graph.schema import SURVIVAL, Argument, Claim
 from crux_lab.graph.store import Store
 
@@ -181,7 +182,8 @@ def main() -> dict:
         "targets_meta": targets.get("meta", {}),
         "map_stats": {k: map_stats.get(k) for k in ("fulltext_claims", "abstract_claims", "claims_indexed",
                                                    "abstracts_indexed", "embedder")},
-        "corpus": {"records": len(corpus), "with_abstract": sum(1 for p in corpus if p.get("abstract")),
+        "corpus": {"records": len(corpus), "distinct_works": len(set(work_ids(corpus).values())),
+                   "with_abstract": sum(1 for p in corpus if p.get("abstract")),
                    "full_texts": sum(1 for p in corpus if p.get("pdf_path")),
                    "fresh": sum(1 for p in corpus if p.get("fresh"))},
     }

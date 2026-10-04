@@ -44,7 +44,8 @@ def main() -> None:
         raise SystemExit("run `make export` first")
     c = about.get("corpus", {})
     out = ["## What the lab produced (generated from `web/public/data`)", "",
-           f"- Corpus: **{c.get('records')}** OpenAlex records ({c.get('fresh')} published since 2026-08-01), "
+           f"- Corpus: **{c.get('records')}** OpenAlex records (**{c.get('distinct_works')}** distinct works once "
+           f"duplicate versions are merged; {c.get('fresh')} records published since 2026-08-01), "
            f"**{c.get('full_texts')}** open-access full texts.",
            f"- Targets: **{len(idx['targets'])}** papers; **{idx['objections']}** objections generated; "
            f"**{idx['trials']}** full trials; **{idx['briefs']}** research briefs.",
@@ -61,8 +62,10 @@ def main() -> None:
     e1, e2, e3 = res.get("e1"), res.get("e2"), res.get("e3")
     out += ["", "### Evaluation (automatic, no human labels)", ""]
     if e1:
-        out += [f"**E1 prior-art recall@5** (n={e1['n']}):", "", "| Method | recall@5 |", "| --- | --- |"]
-        out += [f"| {m['name']} | {m['recall_at_5']:.0%} ({m['hits']}/{e1['n']}) |" for m in e1["methods"]]
+        out += [f"**E1 prior-art recall@5** (n={e1['n']}; scored per work, duplicate records merged):", "",
+                "| Method | recall@5 | strict, per record |", "| --- | --- | --- |"]
+        out += [f"| {m['name']} | {m['recall_at_5']:.0%} ({m['hits']}/{e1['n']}) | "
+                f"{m.get('recall_at_5_strict_record', m['recall_at_5']):.0%} |" for m in e1["methods"]]
         out.append("")
     if e2:
         k, m = e2["known_answer"], e2["misreading"]

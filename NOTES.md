@@ -1,5 +1,16 @@
 # NOTES — newest entry first
 
+## 2026-10-04 06:12 — duplicate records found; E1 rescored per work (Claude)
+- The OpenAlex corpus lists many papers more than once (Zenodo/figshare versions, preprint + article):
+  194 duplicate groups, 250 extra copies → 962 distinct works among 1212 records (key = normalised
+  title + first-author surname; different papers that merely share a title stay distinct).
+- 22/50 E1 items had a duplicate, so a method retrieving the *same work* under another id was scored as a
+  miss. E1 now ranks distinct works (`crux_lab/corpus/dedup.py`) and keeps the strict record-level score:
+  work-level BM25 16%, emb. abstracts 24%, emb. claims 64%, full pipeline 86% (strict: 12/20/58/86).
+  Regenerated from cache (no model calls). previous_runs entries are labelled with their unit.
+- README/site/about report distinct works next to records. Not changed: novelty scores (a duplicate of a
+  prior-art record is still prior art) and the claim index (re-mapping would need new model calls).
+
 ## 2026-10-04 05:40 — E1 run-to-run variance found and recorded (Claude)
 - Regenerating E1 from cache (to clarify its limits) changed the two embedding-only methods:
   embeddings-over-abstracts 18% → 20%, embeddings-over-claims 54% → 58%; BM25 (12%) and the full

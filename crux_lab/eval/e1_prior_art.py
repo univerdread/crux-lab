@@ -89,23 +89,46 @@ async def run(client: LLMClient | None = None, n: int = N) -> dict:
     reworded = await asyncio.gather(*[reword(c) for c in items])
     pairs = [(c, q) for c, q in zip(items, reworded) if q]
     m4 = await asyncio.gather(*[method4(client, q, claims_ix, abstracts_ix) for _, q in pairs])
+    # Duplicate records of one work (Zenodo/figshare versions etc.) count as the same paper: rank works,
+    # not records. The strict record-level score is kept alongside for transparency.
+    from crux_lab.corpus.build import load_corpus
+    from crux_lab.corpus.dedup import work_ids
+    wid = work_ids(load_corpus())
+
+    def top_works(ranked: list[str], k: int = 5) -> list[str]:
+        out: list[str] = []
+        for pid in ranked:
+            w = wid.get(pid, pid)
+            if w not in out:
+                out.append(w)
+            if len(out) == k:
+                break
+        return out
     methods = {"BM25 over abstracts": [], "embeddings over abstracts": [], "embeddings over claims": [],
                "claims + 3-way restatement + rerank": []}
     rows = []
+    strict_methods = {k: [] for k in methods}
     for (c, q), r4 in zip(pairs, m4):
-        r1 = [h.id for h in abstracts_ix.bm25_search(q, k=5)]
-        r2 = [h.id for h in abstracts_ix.dense_search(q, k=5)]
-        r3 = papers_from_hits(claims_ix.dense_search(q, k=30), lambda h: h.meta.get("paper_id"))[:5]
-        hits = {}
-        for name, ranked in zip(methods, (r1, r2, r3, r4[:5])):
-            ok = c.paper_id in ranked[:5]
+        r1 = [h.id for h in abstracts_ix.bm25_search(q, k=30)]
+        r2 = [h.id for h in abstracts_ix.dense_search(q, k=30)]
+        r3 = papers_from_hits(claims_ix.dense_search(q, k=60), lambda h: h.meta.get("paper_id"))
+        hits, strict_hits = {}, {}
+        for name, ranked in zip(methods, (r1, r2, r3, r4)):
+            ok = wid.get(c.paper_id, c.paper_id) in top_works(ranked)
             methods[name].append(ok)
             hits[name] = ok
-        rows.append({"claim_id": c.id, "paper_id": c.paper_id, "original": c.text, "reworded": q, "hit": hits})
+            strict = c.paper_id in ranked[:5]
+            strict_methods[name].append(strict)
+            strict_hits[name] = strict
+        rows.append({"claim_id": c.id, "paper_id": c.paper_id, "original": c.text, "reworded": q, "hit": hits,
+                     "hit_strict_record": strict_hits})
     n_ok = len(pairs)
     data = {
         "experiment": "E1 prior-art recall", "n": n_ok,
-        "methods": [{"name": k, "recall_at_5": round(sum(v) / max(1, n_ok), 3), "hits": sum(v)} for k, v in methods.items()],
+        "methods": [{"name": k, "recall_at_5": round(sum(v) / max(1, n_ok), 3), "hits": sum(v),
+                     "recall_at_5_strict_record": round(sum(strict_methods[k]) / max(1, n_ok), 3)}
+                    for k, v in methods.items()],
+        "unit": "work (duplicate records of one paper merged by title + first author)",
         "settings": {"items": "objection-like claims extracted from corpus abstracts (kind objection first, then conclusion/reply), one per paper, seed 7",
                      "rewording": "LLM removes names and jargon", "k": 5,
                      "claims_indexed": len(claims_ix), "abstracts_indexed": len(abstracts_ix),
@@ -115,7 +138,9 @@ async def run(client: LLMClient | None = None, n: int = N) -> dict:
                    "and that claim is itself in the claims index, so this measures recovery of a known move under "
                    "paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers "
                    "and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). "
-                   "One rewording per item; no human labels."),
+                   "One rewording per item; no human labels. Recall is scored per work: OpenAlex lists many papers "
+                   "more than once (versions), so duplicate records are merged (title + first-author surname) before "
+                   "taking the top 5; recall_at_5_strict_record gives the stricter record-level score."),
     }
     # Run-to-run variance: dense retrieval (local embeddings on Apple MPS) is not bit-reproducible, so a re-run
     # over the same items can flip near-ties in the top 5. Keep earlier runs' scores instead of overwriting them.
@@ -125,11 +150,12 @@ async def run(client: LLMClient | None = None, n: int = N) -> dict:
     if prev_path.exists():
         prev = _json.loads(prev_path.read_text())
         if sorted(r["claim_id"] for r in prev.get("items", [])) == sorted(r["claim_id"] for r in rows):
-            data["previous_runs"] = prev.get("previous_runs", []) + [
-                {"timestamp": prev.get("timestamp"), "methods": prev.get("methods")}]
+            data["previous_runs"] = [{**r, "unit": r.get("unit", "record")} for r in prev.get("previous_runs", [])] + [
+                {"timestamp": prev.get("timestamp"), "methods": prev.get("methods"), "unit": prev.get("unit", "record")}]
     if data.get("previous_runs"):
         data["limits"] += (" Embedding-based retrieval is not bit-reproducible across runs (local model on Apple MPS): "
                            "previous_runs holds the scores of earlier runs over the same 50 items and the same cached "
-                           "rewordings, which shows the run-to-run variance.")
+                           "rewordings (each with its scoring unit; compare record-level runs with recall_at_5_strict_record), "
+                           "which shows the run-to-run variance.")
     write("e1", data)
     return data
