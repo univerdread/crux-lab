@@ -10,6 +10,7 @@ import random
 from pydantic import BaseModel
 
 from crux_lab.agents.roles import render
+from crux_lab.config import TOPIC
 from crux_lab.graph.index import INDEX_DIR, HybridIndex
 from crux_lab.graph.schema import Claim
 from crux_lab.graph.store import Store
@@ -136,8 +137,9 @@ async def run(client: LLMClient | None = None, n: int = N) -> dict:
         "models": model_ids(client, ["reranker"]), "timestamp": stamp(), "items": rows,
         "limits": ("The query is a reworded version of a claim the Extractor took from the source paper's abstract, "
                    "and that claim is itself in the claims index, so this measures recovery of a known move under "
-                   "paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers "
-                   "and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). "
+                   "paraphrase, not discovery of unknown prior art. Items come from the whole corpus of the topic "
+                   f"({TOPIC.get('name', 'the topic')}: its searches plus recent work in the area), not only from papers "
+                   "directly on it. Corpus: OpenAlex abstracts only (no PhilArchive). "
                    "One rewording per item; no human labels. Recall is scored per work: OpenAlex lists many papers "
                    "more than once (versions), so duplicate records are merged (title + first-author surname) before "
                    "taking the top 5; recall_at_5_strict_record gives the stricter record-level score."),
