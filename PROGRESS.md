@@ -119,7 +119,7 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
   → families_used [anthropic, openai]; Naive Questioner (haiku) → sharpened by gpt-5.6-sol.
 - [x] P5.3 Run all targets in the background, then export.
   **Check:** ≥ 3 runs and ≥ 3 briefs exported.
-  → 5 runs, 55 objections, 30 trials (20 revision_required, 9 misreading, 1 known_answer), 14 briefs exported.
+  → 5 runs, 55 objections, 30 trials (18 revision_required, 11 misreading, 1 known_answer — final re-run), 14 briefs exported.
 - [x] P5.4 Live mode: FastAPI `/api/run` (SSE) + `/api/prior-art`; frontend switches on
   `VITE_API_URL`.
   **Check:** SSE emits events for a cached run.

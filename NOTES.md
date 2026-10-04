@@ -1,5 +1,13 @@
 # NOTES — newest entry first
 
+## 2026-10-04 04:12 — loop iteration: live mode verified; corrections (Claude)
+- Correction: final outcome counts are revision_required 18, misreading 11, known_answer 1 (30 trials).
+  The "20 / 9" in the 03:36 entry was from target 1's first attempt, before the final cached re-run.
+  The README limits now compute this distribution from the runs and say no trial ended rebutted/standing.
+- Live mode tested end to end (`make live-test`): Playwright starts the FastAPI server and a build with
+  VITE_API_URL; /lab streams a cached run over SSE, /atlas searches via /api/prior-art. No model calls.
+- P1.2 revisited: philarchive.org/oai.pl still answers our client with 403 → stays [!].
+
 ## 2026-10-04 04:05 — ⚠️ Codex hit the ChatGPT workspace spend cap; Codex disabled (Claude)
 - At ~03:58, while adding full trials to E3 (share_surviving), every `codex exec` call started failing:
   "You hit your spend cap set by the owner of your workspace." **Human: check the ChatGPT workspace

@@ -14,6 +14,22 @@ def load(name):
     return json.loads(p.read_text()) if p.exists() else None
 
 
+def outcome_limit(idx: dict) -> str:
+    """State which outcomes the gauntlet never produced (computed from the runs)."""
+    tot: dict[str, int] = {}
+    for r in idx["runs"]:
+        for k, v in r["outcomes"].items():
+            tot[k] = tot.get(k, 0) + v
+    never = [o for o in ("rebutted", "standing", "known_answer") if not tot.get(o)]
+    dist = ", ".join(f"{k} {v}" for k, v in sorted(tot.items(), key=lambda kv: -kv[1]))
+    s = f"- **The gauntlet's outcome distribution is skewed** ({dist})."
+    if never:
+        s += (f" No trial ended {' or '.join(never)}: defenders usually save the argument by narrowing a premise, "
+              "which the Referee scores as revision_required. Read revision_required as 'the premise needs work', "
+              "not as a defeated argument.")
+    return s
+
+
 def block(tag: str, body: str, text: str) -> str:
     start, end = f"<!-- {tag} -->", f"<!-- /{tag} -->"
     new = f"{start}\n{body.strip()}\n{end}"
@@ -71,9 +87,10 @@ def main() -> None:
            "- **PhilArchive was unavailable**: its OAI-PMH API now needs a key (api.philpapers.org) or blocks our client "
            "(philarchive.org, Cloudflare). Fresh targets come from OpenAlex instead, and none of the fresh open-access "
            "full texts was about divine hiddenness itself, so fresh targets are philosophy of religion more broadly.",
-           f"- **Model diversity is degraded**: {about.get('diversity')}. The design wants Defender A, Defender B and the "
+           f"- **Model diversity is {about.get('diversity')}.** The design wants Defender A, Defender B and the "
            "Referee from three different families; without Databricks/OpenRouter keys only Anthropic (Claude) and "
            "OpenAI (Codex) models were reachable, through subscription CLIs.",
+           outcome_limit(idx),
            "- The Referee and defenders are LLMs; outcome labels are dialectical judgements by models, not verdicts on "
            "truth, and they are noisy. The evals are small (n reported with each) and have no human labels.",
            "- Grounding is audited mechanically: [`docs/AUDIT.md`](docs/AUDIT.md) re-checks every quote, cited id, "
