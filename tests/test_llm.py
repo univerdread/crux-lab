@@ -101,3 +101,10 @@ def test_evroc_families_give_three_family_gauntlet_and_bulk_off_claude():
     roles, fams = assign_roles(w, {}, ["openai", "gpt-oss", "llama", "qwen"])
     assert len({roles[r]["family"] for r in ("defender_a", "defender_b", "referee")}) == 3
     assert roles["extractor"]["provider"] == "evroc" and roles["extractor"]["family"] == "gpt-oss"
+
+
+def test_evroc_style_ids_match_family_patterns():
+    from crux_lab.llm.resolve import _norm
+    assert _norm("Llama-3.3-70B") in _norm("llama-3-3-70b-instruct-fp8-9u9p")
+    assert _norm("gpt-oss-120b") in _norm("gpt-oss-120b-x1y2")
+    assert _norm("Qwen3") in _norm("qwen3-235b-a22b-k3m4")

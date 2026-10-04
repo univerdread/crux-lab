@@ -14,6 +14,11 @@ from crux_lab.llm.providers import available_providers, build_provider
 FAMILY_PREFERENCE = ["anthropic", "openai", "llama", "qwen", "mistral", "gpt-oss", "kimi", "gemma", "deepseek"]
 
 
+def _norm(x: str) -> str:
+    import re
+    return re.sub(r"[._/\s]+", "-", x.lower())
+
+
 def family_of(model_id: str, declared: str) -> str:
     if declared != "small":
         return declared
@@ -59,7 +64,8 @@ async def resolve(write: bool = True) -> dict:
             if p not in listed:
                 continue
             for rank, pat in enumerate(patterns):
-                matches = [m for m in listed[p] if pat.lower() in m.lower()]
+                # normalise separators: evroc ids look like "llama-3-3-70b-instruct-fp8-9u9p" for Llama-3.3-70B
+                matches = [m for m in listed[p] if _norm(pat) in _norm(m)]
                 # Prefer exact match, then shortest id (base model over variants).
                 matches.sort(key=lambda m: (m.lower() != pat.lower(), len(m)))
                 for m in matches[:1]:
@@ -67,7 +73,7 @@ async def resolve(write: bool = True) -> dict:
                         continue
                     seen.add((p, m))
                     small_pats = cfg["families"].get("small", {}).get(p, [])
-                    is_small = fam == "small" or any(sp.lower() in m.lower() for sp in small_pats)
+                    is_small = fam == "small" or any(_norm(sp) in _norm(m) for sp in small_pats)
                     candidates.append({"provider": p, "model": m, "family": family_of(m, fam),
                                        "small": is_small, "rank": rank})
 
