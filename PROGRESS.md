@@ -31,21 +31,25 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P1 Corpus — target 03:45
 
-- [ ] P1.1 OpenAlex harvester (queries: divine hiddenness; nonresistant nonbelief; divine silence;
+- [x] P1.1 OpenAlex harvester (queries: divine hiddenness; nonresistant nonbelief; divine silence;
   hiddenness of God; skeptical theism hiddenness; Schellenberg hiddenness argument), abstracts
   rebuilt from the inverted index → `data/corpus.jsonl`.
   **Check:** ≥ 300 records with abstracts, or the true count noted.
-- [ ] P1.2 PhilArchive OAI-PMH client: Identify, ListRecords (`oai_dc`, `from`/`until`,
+  → 577 classic hiddenness records with abstracts + 635 fresh (1212 total, all with abstracts).
+- [!] P1.2 PhilArchive OAI-PMH client: Identify, ListRecords (`oai_dc`, `from`/`until`,
   resumptionToken), GetRecord; 1 req/s; raw XML to `data/raw/oai/`.
   **Check:** records from 2026-08-01 onward fetched and parsed.
-- [ ] P1.3 Full texts: up to 50 open-access PDFs relevant to hiddenness / philosophy of religion,
+  → BLOCKED: api.philpapers.org needs an API key; philarchive.org/oai.pl is behind Cloudflare bot checks for our client (403); not circumvented. Client + parser built; the one page fetched while testing (999 records since 2026-08-01) parsed fine but was all deletion stubs. Fresh targets come from OpenAlex (from_publication_date ≥ 2026-08-01) instead.
+- [x] P1.3 Full texts: up to 50 open-access PDFs relevant to hiddenness / philosophy of religion,
   text via PyMuPDF.
   **Check:** ≥ 20 full texts extracted, or the true count noted.
-- [ ] P1.4 Target selection → `data/targets.json`: 3 fresh targets (deposited ≥ 2026-08-01;
+  → 75 (50 fresh + 25 classic hiddenness), 67 in English.
+- [x] P1.4 Target selection → `data/targets.json`: 3 fresh targets (deposited ≥ 2026-08-01;
   prefer hiddenness, then philosophy of religion, then any paper whose abstract says it argues
   for a thesis; full text required) + 2 classic fallback targets from the corpus, each with a
   reason. Include `data/manual_targets/*.md` if present.
   **Check:** 3–5 targets with reasons.
+  → 5 targets (3 fresh, 2 classic hiddenness), LLM screen of 75 full-text papers + code checks; no fresh paper on hiddenness itself.
 
 ## P2 Mapping — target 04:30
 

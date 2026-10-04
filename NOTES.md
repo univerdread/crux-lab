@@ -1,5 +1,28 @@
 # NOTES — newest entry first
 
+## 2026-10-04 03:04 — P1 corpus + targets (Claude)
+- Human logged `claude -p` back in at ~02:58 → `make providers` now finds **2 families**
+  (anthropic: sonnet/opus/haiku via claude_cli; openai: gpt-5.6-terra/sol/luna via codex_cli).
+  Roles: Defender A = anthropic:sonnet, Defender B = openai:terra, Referee = openai:sol,
+  generators = sonnet, opus, terra, sol; naive questioner = haiku. Still "diversity degraded:
+  2 families" (no third family without Databricks/OpenRouter keys). Decision: bulk roles
+  (extractor, reranker) run on Codex (`bulk_family: openai` in models.yaml) so the lab does not
+  drain the Claude plan that also runs this build session.
+- **PhilArchive OAI is blocked** (P1.2 [!]): api.philpapers.org requires an API key now;
+  philarchive.org/oai.pl answers curl but returns a Cloudflare 403 page to our Python client.
+  That is bot detection, so I did not work around it. Fresh targets come from OpenAlex with
+  `from_publication_date ≥ 2026-08-01` (OpenAlex's `from_created_date` is premium-only).
+- **OpenAlex without a key = ~$0.10/day ≈ 100 list requests.** Used ~25 so far. Don't waste them:
+  `make corpus` re-harvests; the corpus is committed in `data/corpus.jsonl`.
+- Corpus: 1212 records with abstracts (577 classic hiddenness, 635 fresh since 2026-08-01),
+  75 OA full texts (50 fresh, 25 classic; many publisher PDFs 403 or OJS HTML viewers → skipped).
+- Targets (data/targets.json): no fresh full-text paper on hiddenness itself exists in what we can
+  reach, so fresh targets fall back to philosophy of religion: W7203761940 (randomness vs visible
+  divine control, hiddenness-relevance 2/3), W7203485685 (de se knowledge and omniscience, Sophia),
+  W7212186029 (divine simplicity as symmetric parthood, Religious Studies); classic fallbacks
+  W2072673546 (critical reflections on the hiddenness argument), W2575351351 (hiddenness, greater
+  goods, accommodation). A Russian full text slipped past the LLM screen → added a code check.
+
 ## 2026-10-04 02:47 — P0.1–P0.4 scaffold + LLM layer (Claude)
 - Setup done by Claude at the human's request (START-HERE steps): repo at `~/crux-lab`, private
   GitHub repo `univerdread/crux-lab` created and pushed; Crux copied to `reference/crux/` (gitignored,
