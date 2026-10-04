@@ -4,7 +4,8 @@
 - At ~03:58, while adding full trials to E3 (share_surviving), every `codex exec` call started failing:
   "You hit your spend cap set by the owner of your workspace." **Human: check the ChatGPT workspace
   billing/spend cap** — usage past the plan allowance may have drawn on paid credits up to the cap.
-  Ledger: ~1,600 Codex calls tonight (cache/spend.jsonl).
+  Ledger (cache/spend.jsonl): 1,171 successful Codex calls + 240 Claude calls tonight (notional API-price
+  estimate ≈ $12 Codex, ≈ $4 Claude; each Codex call also carries ~14k tokens of CLI overhead not in that estimate).
 - I set `DISABLE_PROVIDERS=codex_cli` in `.env` (new switch; documented in .env.example). Cached calls still
   replay, so every run, brief, export and eval regenerates without calling Codex. Any *new* LLM work would
   need `make providers` (Claude only) or the cap raised. Remove the line from .env to re-enable Codex.
