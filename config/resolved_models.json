@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T00:46:08.119577+00:00",
+  "generated_at": "2026-10-04T00:54:29.492220+00:00",
   "providers_available": [
     "codex_cli",
     "claude_cli"
@@ -12,9 +12,9 @@
       "family": "anthropic",
       "small": false,
       "rank": 0,
-      "ok": false,
-      "latency_s": 1.8,
-      "error": "claude exit 1: Failed to authenticate: OAuth session expired and could not be refreshed"
+      "ok": true,
+      "latency_s": 2.99,
+      "error": ""
     },
     {
       "provider": "claude_cli",
@@ -22,9 +22,9 @@
       "family": "anthropic",
       "small": false,
       "rank": 1,
-      "ok": false,
-      "latency_s": 1.91,
-      "error": "claude exit 1: Failed to authenticate: OAuth session expired and could not be refreshed"
+      "ok": true,
+      "latency_s": 8.23,
+      "error": ""
     },
     {
       "provider": "claude_cli",
@@ -32,9 +32,9 @@
       "family": "anthropic",
       "small": true,
       "rank": 2,
-      "ok": false,
-      "latency_s": 1.9,
-      "error": "claude exit 1: Failed to authenticate: OAuth session expired and could not be refreshed"
+      "ok": true,
+      "latency_s": 4.14,
+      "error": ""
     },
     {
       "provider": "codex_cli",
@@ -43,7 +43,7 @@
       "small": false,
       "rank": 0,
       "ok": true,
-      "latency_s": 5.49,
+      "latency_s": 5.0,
       "error": ""
     },
     {
@@ -53,7 +53,7 @@
       "small": false,
       "rank": 1,
       "ok": true,
-      "latency_s": 7.06,
+      "latency_s": 5.0,
       "error": ""
     },
     {
@@ -63,26 +63,33 @@
       "small": true,
       "rank": 2,
       "ok": true,
-      "latency_s": 6.34,
+      "latency_s": 4.55,
       "error": ""
     }
   ],
   "families": [
+    "anthropic",
     "openai"
   ],
-  "diversity": "degraded: 1 family",
+  "diversity": "degraded: 2 families",
   "roles": {
+    "formalizer": {
+      "provider": "claude_cli",
+      "model": "sonnet",
+      "family": "anthropic",
+      "effort": "medium"
+    },
+    "defender_a": {
+      "provider": "claude_cli",
+      "model": "sonnet",
+      "family": "anthropic",
+      "effort": "medium"
+    },
     "extractor": {
       "provider": "codex_cli",
       "model": "gpt-5.6-terra",
       "family": "openai",
       "effort": "low"
-    },
-    "formalizer": {
-      "provider": "codex_cli",
-      "model": "gpt-5.6-terra",
-      "family": "openai",
-      "effort": "medium"
     },
     "reranker": {
       "provider": "codex_cli",
@@ -90,15 +97,9 @@
       "family": "openai",
       "effort": "low"
     },
-    "defender_a": {
-      "provider": "codex_cli",
-      "model": "gpt-5.6-terra",
-      "family": "openai",
-      "effort": "medium"
-    },
     "defender_b": {
       "provider": "codex_cli",
-      "model": "gpt-5.6-sol",
+      "model": "gpt-5.6-terra",
       "family": "openai",
       "effort": "medium"
     },
@@ -109,6 +110,18 @@
       "effort": "medium"
     },
     "generators": [
+      {
+        "provider": "claude_cli",
+        "model": "sonnet",
+        "family": "anthropic",
+        "effort": "medium"
+      },
+      {
+        "provider": "claude_cli",
+        "model": "opus",
+        "family": "anthropic",
+        "effort": "medium"
+      },
       {
         "provider": "codex_cli",
         "model": "gpt-5.6-terra",
@@ -123,9 +136,9 @@
       }
     ],
     "naive_questioner": {
-      "provider": "codex_cli",
-      "model": "gpt-5.6-luna",
-      "family": "openai",
+      "provider": "claude_cli",
+      "model": "haiku",
+      "family": "anthropic",
       "effort": "low"
     }
   }

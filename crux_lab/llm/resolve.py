@@ -77,7 +77,7 @@ async def resolve(write: bool = True) -> dict:
         models.append({**c, "ok": ok, "latency_s": round(lat, 2), "error": err})
     working = [m for m in models if m["ok"]]
 
-    roles, families = assign_roles(working, cfg.get("effort", {}))
+    roles, families = assign_roles(working, cfg.get("effort", {}), cfg.get("bulk_family"))
     n = len(families)
     resolved = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -93,7 +93,7 @@ async def resolve(write: bool = True) -> dict:
     return resolved
 
 
-def assign_roles(working: list[dict], effort: dict) -> tuple[dict, list[str]]:
+def assign_roles(working: list[dict], effort: dict, bulk_family: str | None = None) -> tuple[dict, list[str]]:
     if not working:
         return {}, []
     by_fam: dict[str, list[dict]] = {}
@@ -110,13 +110,19 @@ def assign_roles(working: list[dict], effort: dict) -> tuple[dict, list[str]]:
     f2 = fams[1] if len(fams) > 1 else f1
     f3 = fams[2] if len(fams) > 2 else (fams[1] if len(fams) > 1 else f1)
     pick = lambda f, i=0: strong[f][min(i, len(strong[f]) - 1)]  # noqa: E731
-    roles = {r: spec(pick(f1), r) for r in ("extractor", "formalizer", "reranker", "defender_a")}
+    roles = {r: spec(pick(f1), r) for r in ("formalizer", "defender_a")}
+    # Bulk roles (many calls: extraction, reranking) go to `bulk_family` when it exists, so the
+    # Claude plan that also runs the build session is not drained by the lab.
+    fb = bulk_family if bulk_family in strong else f1
+    for r in ("extractor", "reranker"):
+        roles[r] = spec(pick(fb), r)
     # Defender B: other family; with one family, at least a different model.
     roles["defender_b"] = spec(pick(f2, 0 if f2 != f1 else 1), "defender_b")
-    roles["referee"] = spec(pick(f3, 0 if f3 not in (f1,) else 1), "referee")
+    # Referee: third family; if it must share a family, use a different model than that defender.
+    roles["referee"] = spec(pick(f3, 0 if f3 not in (f1, f2) else 1), "referee")
     gens = []
     for f in fams:
-        for m in strong[f][:3 if len(fams) == 1 else 1]:
+        for m in strong[f][:3 if len(fams) == 1 else 2]:
             gens.append(spec(m, "generators"))
     roles["generators"] = gens
     small = [m for m in working if m["small"]]

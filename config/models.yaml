@@ -25,6 +25,8 @@ roles:
   referee: third_family
   generators: rotate_all_families
   naive_questioner: small
+# Family for high-volume roles (extractor, reranker) when available.
+bulk_family: openai
 # Reasoning effort for CLI providers (ignored by APIs).
 effort:
   extractor: low
