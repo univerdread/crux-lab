@@ -158,6 +158,33 @@ Without `make`: `python -m crux_lab.cli <cmd>`.
 committed results (`web/public/data`) — no API keys, no model calls. Re-running the lab needs a model
 provider (see below); the claim store and LLM cache it builds stay local (gitignored).
 
+### Topics
+
+The lab works on one topic at a time. A topic is a file in `config/topics/<slug>.yaml`; pick it with
+`make <targets> TOPIC=<slug>` (or `CRUX_LAB_TOPIC=<slug>`, or `python -m crux_lab.cli --topic <slug> …`). The default
+topic, `divine-hiddenness`, keeps its data in `data/`, `results/` and `web/public/data/`; any other topic gets
+`data/topics/<slug>/`, `results/topics/<slug>/` and `web/public/data/topics/<slug>/`, and the site switches
+between them on `/topics` (`?topic=<slug>`). The site's **Start a topic** page writes the file with you.
+
+```bash
+make corpus targets map runs assess revise export TOPIC=decision-theory
+```
+
+| Field | What it does |
+| --- | --- |
+| `name`, `description`, `area` | Shown on the site; `area` also tells the target screen and the Assessor what field they are in |
+| `queries` | label → OpenAlex search string, harvested for the corpus |
+| `max_per_query` | records per search (default 400; 200 = one request, useful under the keyless daily allowance) |
+| `fresh_from`, `fresh_queries` | searches for papers published since that date (target candidates the models cannot have read replies to) |
+| `relevant`, `fresh_relevant` | regexes an abstract must match to enter the corpus; `fresh_relevant` holds broad fresh searches to a stricter test |
+| `relevance_levels` | the 0–3 scale the target screen uses |
+| `targets` | `fresh`, `classic` (how many of each), `fresh_min_relevance`, and `spread: true` to take classic targets from each search in turn |
+| `schools` | the traditions the Tradition-Lens agents argue from |
+| `e2_fixture` | optional: a canonical argument with published replies, for the E2 calibration test |
+
+Three topics are configured: divine hiddenness (run overnight on Codex + Claude), decision theory in philosophy
+of religion (run on evroc + Claude, see `NOTES.md`), and the fine-tuning argument (set up, not run).
+
 ### Model providers
 
 Provider chain, using whatever exists: **Databricks** Model Serving (`DATABRICKS_HOST`,

@@ -1,5 +1,28 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:00 — Second topic run: decision theory in philosophy of religion (Claude, human's request)
+- Human asked to run "decision theory in religious philosophy, potentially exploring Newcomb's problem, God's
+  own decision problem, etc." on the new evroc + Claude setup. Topic file: `config/topics/decision-theory.yaml`.
+- evroc: 4 keys in .env (EVROC_API_KEY used); `make providers` resolved 11 models, 8 families (anthropic,
+  kimi, glm, mistral, qwen, llama, gpt-oss, gemma). Roles: Defender A claude:sonnet, Defender B Kimi-K2.6,
+  Referee GLM-5.2, extractor/reranker gpt-oss-120b, generators one per family. Fixes needed: reasoning models
+  return empty text at tiny max_tokens (probe 400, evroc floor 8192), evroc ids use dashes for dots.
+- Hiddenness results keep their own model snapshot (`data/resolved_models.json`, the Codex + Claude
+  assignment they ran with); each topic's `make runs` now writes its snapshot, and export reads it.
+- OpenAlex: keyless allowance had 26 requests left today (resets ~02:00). Topic uses one page per search
+  (`max_per_query: 200`): 8 classic + 3 fresh = 11 requests; live prior-art searches capped at 10 more
+  (`OPENALEX_LIVE_CAP=55`, 45 already used in the last 24 h).
+- Corpus: 549 classic + 99 fresh records after `fresh_relevant` (the fresh "decision theory" search also
+  returned ecology and engineering: a fresh paper must now mention religion), 50 full texts (34 classic).
+- Targets: no fresh open-access paper scored >= 2/3 on topic, so all six are classics. `spread: true` takes
+  the best paper from each search in turn (otherwise five were Pascal's-wager papers); journal articles
+  break ties over preprints. Six: Hoefer, Viger & Viger on Newcomb (THEORIA 2019, one-boxing from
+  psychological coherence), Chen & Rubio "Surreal decisions" (2018, infinite utilities in the wager), Nyman
+  "Pascal's Wager and Its Postmodern Counterpart" (2024), Bishop "Faith as doxastic venture" (2002), Page
+  "A Theological Argument for an Everett Multiverse" (2012, God's choice of world), Rogers "Saving
+  Eternity" (2022, divine foreknowledge and free will). No fresh target: the "cannot have read replies"
+  guarantee does not hold for this topic, and the site says so per paper.
+
 ## 2026-10-04 11:40 — evroc Think provider wired in (no key yet) (Claude)
 - Human asked whether evroc Think can power the debates. Yes: OpenAI-compatible API at
   https://models.think.evroc.com/v1 (API key from the evroc console/CLI), EU-hosted open models
