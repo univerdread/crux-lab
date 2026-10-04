@@ -118,7 +118,7 @@ export function LeadCard({ brief }: { brief: BriefSummary }) {
         <OutcomeChip outcome={brief.outcome} />
         {latest ? <GradeChip grade={latest.grade} overall={latest.overall} /> : null}
       </div>
-      <h3 id="lead-h" className="mt-2 font-serif text-[1.75rem] font-medium leading-snug">
+      <h3 id="lead-h" className="mt-2 font-serif text-[1.3rem] font-medium leading-snug sm:text-[1.75rem]">
         <Link to={`/brief/${encodeURIComponent(brief.id)}`} className="link decoration-transparent hover:decoration-ink">
           {question}
         </Link>
