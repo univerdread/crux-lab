@@ -27,7 +27,7 @@ Start: `make demo` → http://localhost:4680
 
 ## 1:35 — Does it work? (`/results`)
 - E1 prior-art recall@5 (n=50): BM25 over abstracts 12%; embeddings over abstracts 18%; embeddings over claims 54%; claims + 3-way restatement + rerank 86%.
-- E2 calibration: 1/10 published objections labelled known_answer with the right reply cited; 10/10 deliberate misreadings caught.
+- E2 calibration: 1/10 published objections labelled known_answer with the right reply cited, but a defender cited a verified gold reply in 7/10 (the Referee is conservative); 10/10 deliberate misreadings caught.
 - E3 diversity: plain prompt, one model: 1.8 distinct premises, novelty>0.5 share 50%; constrained roles, one model: 2.4 distinct premises, novelty>0.5 share 55%; constrained roles, mixed families: 2.6 distinct premises, novelty>0.5 share 45%.
 - Read the limits line aloud: the numbers are small and the lab says so.
 

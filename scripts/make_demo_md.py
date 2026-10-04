@@ -61,7 +61,9 @@ def main() -> None:
         L.append("- E1 prior-art recall@5 (n=%d): " % e1["n"] + "; ".join(f"{m['name']} {m['recall_at_5']:.0%}" for m in e1["methods"]) + ".")
     if e2:
         L.append(f"- E2 calibration: {e2['known_answer']['correct_reply_cited']}/{e2['known_answer']['n']} published objections "
-                 f"labelled known_answer with the right reply cited; {e2['misreading']['caught']}/{e2['misreading']['n']} deliberate misreadings caught.")
+                 f"labelled known_answer with the right reply cited, but a defender cited a verified gold reply in "
+                 f"{e2['known_answer'].get('gold_reply_cited_by_a_defender', '?')}/{e2['known_answer']['n']} (the Referee is conservative); "
+                 f"{e2['misreading']['caught']}/{e2['misreading']['n']} deliberate misreadings caught.")
     if e3:
         L.append("- E3 diversity: " + "; ".join(f"{c['name']}: {c['distinct_premises']} distinct premises, novelty>0.5 share {c['share_novelty_gt_05']:.0%}" for c in e3["conditions"]) + ".")
     L += ["- Read the limits line aloud: the numbers are small and the lab says so.", "",
