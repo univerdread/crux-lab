@@ -1,5 +1,15 @@
 # NOTES — newest entry first
 
+## 2026-10-04 10:30 — LIVE: https://univerdread.github.io/crux-lab/ (repo now public) (Claude)
+- At the human's request: repo `univerdread/crux-lab` made **public** (full history scanned first: no
+  secrets, no .env ever committed; commit author email from git config is now visible, as on any public
+  repo) and deployed to **GitHub Pages** via `.github/workflows/pages.yml` (Actions source; builds `web/`
+  with `VITE_BASE=/crux-lab/`; redeploys on every push to main touching `web/`). Verified live: landing,
+  /results and /lab deep links render; all assets and data return 200 (deep links come back with HTTP 404
+  + the app via 404.html, which is how SPA fallback works on Pages).
+- `vite.config.ts` base is now `process.env.VITE_BASE || "/"` (local/Vercel/Netlify unchanged).
+- docs/SUBMISSION.md now carries the live and repo links.
+
 ## ☀️ MORNING SUMMARY — read this first (written 07:40 by Claude)
 **State:** everything in PROGRESS.md is done except P1.2 (PhilArchive OAI blocked: API key / Cloudflare 403,
 re-checked hourly, still 403). Gates A/B/C were met by ~03:45; since then only polish, fixes and docs.

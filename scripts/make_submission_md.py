@@ -60,9 +60,9 @@ def main() -> None:
         f"Model diversity {about.get('diversity')}; PhilArchive's OAI API was unavailable; evals are small and have no human labels; "
         "outcome labels are model judgements about the state of a debate, never verdicts on truth.", "",
         "## Links to fill in",
-        "- Live demo: <deploy web/dist, paste URL>",
+        "- Live demo: https://univerdread.github.io/crux-lab/",
         "- Video: <record from docs/DEMO.md; docs/demo.webm is a silent 53 s walkthrough>",
-        "- Repo: https://github.com/univerdread/crux-lab (private — make public if the form requires it)", "",
+        "- Repo: https://github.com/univerdread/crux-lab (public)", "",
     ]
     (ROOT / "docs" / "SUBMISSION.md").write_text("\n".join(L))
     print("wrote docs/SUBMISSION.md")
