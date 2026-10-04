@@ -19,7 +19,8 @@ I set `DISABLE_PROVIDERS=codex_cli` in `.env`; remove the line to re-enable Code
 1. `make demo` (or `cd web && npm install && npm run build && npm run preview`) → http://localhost:4680; click
    / → top research direction → its run (/lab, press Replay) → a trial → /results → /about.
 2. Read one brief + its trial yourself (top: /brief/brief-W7212186029.arg1.o10f4f4).
-3. Deploy `web/dist` (static; `web/vercel.json` and `web/public/_redirects` handle deep links).
+3. Deploy the `web/` folder as a static site: Vercel (root directory `web`, preset Vite) or Netlify (base
+   directory `web`; `web/netlify.toml` sets build + publish). Deep links are handled by both configs.
 4. Record the 2-minute video from `docs/DEMO.md` (a silent 55 s walkthrough is in `docs/demo.webm`).
 5. Paste from `docs/SUBMISSION.md` (draft text with real numbers); repo is private → make public if required.
 
