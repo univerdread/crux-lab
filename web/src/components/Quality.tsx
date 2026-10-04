@@ -144,3 +144,23 @@ export function RevisionPanel({ r, before }: { r: Revision; before?: Assessment 
     </section>
   );
 }
+
+/** One line near the top of a brief: the grade (before → after revision) and a link to the full check below. */
+export function QualityStrip({ a, after }: { a: Assessment; after: Assessment | null }) {
+  return (
+    <p className="no-print mt-4 flex flex-wrap items-center gap-2 border-y border-rule py-2 text-[0.92rem]">
+      <span className="smallcaps text-ink-soft">academic quality</span>
+      <GradeChip grade={a.grade} overall={a.overall} />
+      {after ? (
+        <>
+          <span aria-hidden className="text-ink-soft">→</span>
+          <GradeChip grade={after.grade} overall={after.overall} />
+          <span className="text-ink-soft">after revision</span>
+        </>
+      ) : null}
+      <a href="#quality" className="link ml-auto">
+        Referee’s assessment{after ? " and revision" : ""} ↓
+      </a>
+    </p>
+  );
+}

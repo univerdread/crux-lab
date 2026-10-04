@@ -1,4 +1,4 @@
-import { QualityPanel, RevisionPanel } from "../components/Quality";
+import { QualityPanel, QualityStrip, RevisionPanel } from "../components/Quality";
 import { useState } from "react";
 import { Link, useParams } from "react-router";
 import { VerdictTag } from "../components/NoveltyPanel";
@@ -149,14 +149,7 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
       </header>
 
       {b.assessment ? (
-        <div className="mt-6">
-          <QualityPanel a={b.assessment} />
-        </div>
-      ) : null}
-      {b.revision ? (
-        <div className="mt-4">
-          <RevisionPanel r={b.revision} before={b.assessment} />
-        </div>
+        <QualityStrip a={b.assessment} after={b.revision?.assessment ?? null} />
       ) : null}
 
       <Marginal label="paper direction">
@@ -260,6 +253,13 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
           <Empty>No corpus record came close enough to list.</Empty>
         )}
       </Marginal>
+
+      {b.assessment ? (
+        <div id="quality" className="mt-10 scroll-mt-6 space-y-4">
+          <QualityPanel a={b.assessment} />
+          {b.revision ? <RevisionPanel r={b.revision} before={b.assessment} /> : null}
+        </div>
+      ) : null}
 
       <Disclaimer text={b.disclaimer} />
     </article>
