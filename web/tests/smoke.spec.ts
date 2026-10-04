@@ -96,6 +96,27 @@ test.describe("Crux Lab smoke", () => {
     await visit(page, "/about", "about");
   });
 
+  test("second topic", async ({ page, request }) => {
+    const topics = (await (await request.get("/data/topics.json")).json()) as {
+      topics: { slug: string; name: string; status: string; default: boolean; data: string }[];
+    };
+    const other = topics.topics.find((t) => !t.default && t.status === "ready");
+    test.skip(!other, "only one topic has been run");
+    await visit(page, `/?topic=${other!.slug}`, "landing-topic2");
+    await expect(page.getByText(`Topic: ${other!.name}`).first()).toBeVisible();
+    await expect(page.getByText("strongest lead", { exact: true }).first()).toBeVisible();
+    // a novelty check that could not be completed is shown as not assessed, never as a score
+    const ix = (await (await request.get(`/data/${other!.data}index.json`)).json()) as IndexFile;
+    for (const r of ix.runs) {
+      const run = await (await request.get(`/data/${other!.data}runs/${r.run_id}.json`)).json();
+      const na = Object.values(run.novelty as Record<string, { status?: string }>).some((n) => n.status && n.status !== "assessed");
+      if (!na) continue;
+      await page.goto(`/lab/${encodeURIComponent(r.run_id)}?topic=${other!.slug}&at=end`);
+      await expect(page.getByText(/not assessed: /).first()).toBeVisible({ timeout: 20_000 });
+      break;
+    }
+  });
+
   test("mobile landing", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await visit(page, "/", "landing-mobile");
