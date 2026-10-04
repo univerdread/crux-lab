@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 TARGET ?=
 
-.PHONY: setup check providers corpus map run runs export eval demo demo-video smoke serve docs databricks
+.PHONY: setup check providers corpus map run runs export eval demo demo-video smoke live-test serve docs databricks
 
 setup:
 	@test -d .venv || (command -v uv >/dev/null && uv venv --python 3.11 .venv || python3.11 -m venv .venv)
@@ -41,6 +41,10 @@ demo: export
 # Playwright needs a Chromium; set PW_CHROMIUM=<path to a chrome binary> to reuse one already on disk.
 smoke:
 	cd web && npm run build && npx playwright test --project=smoke --project=a11y
+
+# Live mode end to end: FastAPI SSE server + a VITE_API_URL build (replays cached runs; no model calls).
+live-test:
+	cd web && npx playwright test -c playwright.live.config.ts
 
 demo-video:
 	cd web && npm run build && npx playwright test --project=demo
