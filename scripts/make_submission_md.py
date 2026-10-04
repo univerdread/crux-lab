@@ -39,6 +39,31 @@ def revision_sentence(graded: list[dict]) -> str:
             f" A revision round rewrote each direction to answer its strongest objection; none moved up a grade.")
 
 
+def replication() -> str:
+    """E1 on the other explored topics, if it was run there."""
+    out = []
+    for p in sorted((D / "topics").glob("*/results.json")):
+        e1 = (json.loads(p.read_text()).get("e1") or {})
+        if not e1.get("methods"):
+            continue
+        best = max(e1["methods"], key=lambda m: m.get("recall_at_5", 0))
+        kw = next((m for m in e1["methods"] if m["name"].startswith("BM25")), {})
+        about = json.loads((p.parent / "about.json").read_text())
+        out.append(f" E1 replicated on {about.get('topic', {}).get('name', p.parent.name)} (n={e1['n']}): "
+                   f"{best['recall_at_5']:.0%} ({best['name']}) vs {kw.get('recall_at_5', 0):.0%} for keyword search.")
+    return "".join(out)
+
+
+def diversity_line(about: dict) -> str:
+    try:
+        topics = [t for t in load("topics.json")["topics"] if t.get("families")]
+    except (OSError, KeyError):
+        topics = []
+    if len(topics) < 2:
+        return str(about.get("diversity"))
+    return "; ".join(f"{t['name']} ran on {len(t['families'])} model families" for t in topics)
+
+
 def topics_lines() -> list[str]:
     """One line per configured topic, from topics.json: what was run, on which model families."""
     try:
@@ -94,7 +119,7 @@ def main() -> None:
         f"{e2.get('misreading', {}).get('n')} deliberate misreadings; a defender cited the published reply in "
         f"{e2.get('known_answer', {}).get('gold_reply_cited_by_a_defender')}/{e2.get('known_answer', {}).get('n')} known-answer cases "
         f"(the Referee still labelled only {e2.get('known_answer', {}).get('labelled_known_answer')}/{e2.get('known_answer', {}).get('n')} as known_answer); "
-        f"diversity ablation — {e3rows}.", "",
+        f"diversity ablation — {e3rows}." + replication(), "",
         "## Quality control",
         assessor_line(briefs), "",
         "## Example output",
@@ -108,7 +133,7 @@ def main() -> None:
         f"({about.get('tracing', {}).get('traces')} traced in this build, locally because no workspace token was available); "
         "a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).", "",
         "## Honest limits",
-        f"Model diversity {about.get('diversity')}; PhilArchive's OAI API was unavailable; evals are small and have no human labels; "
+        f"Model diversity: {diversity_line(about)}; PhilArchive's OAI API was unavailable; evals are small and have no human labels; "
         "outcome labels are model judgements about the state of a debate, never verdicts on truth.", "",
         "## Links to fill in",
         "- Live demo: https://univerdread.github.io/crux-lab/",

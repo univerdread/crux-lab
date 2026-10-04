@@ -13,7 +13,7 @@ In philosophy the debate is the experiment. Crux Lab runs it: it reads recent pa
 ## What is new
 - **The loop is an experiment loop, not a chat:** hypothesis (objection) → test (adversarial trial against two defenders) → measurement (outcome label + survival S) → prior-art check (novelty N) → Director chooses the next test by S·N·(0.5+0.5C)+0.1E; a forced revision becomes a new premise that is attacked in turn.
 - **Grounding enforced in code:** quotes verified against source text, citations are corpus ids verified by code, generators cannot see literature, validity is decided by a truth table, novelty is never claimed.
-- **Measured:** prior-art recall@5 86% for the lab's pipeline vs 16% for keyword search (n=50); the Referee caught 10/10 deliberate misreadings; a defender cited the published reply in 7/10 known-answer cases (the Referee still labelled only 1/10 as known_answer); diversity ablation — plain prompt, one model: 1.8 distinct premises/argument, spread 0.114; constrained roles, one model: 2.4 distinct premises/argument, spread 0.224; constrained roles, mixed families: 2.6 distinct premises/argument, spread 0.213.
+- **Measured:** prior-art recall@5 86% for the lab's pipeline vs 16% for keyword search (n=50); the Referee caught 10/10 deliberate misreadings; a defender cited the published reply in 7/10 known-answer cases (the Referee still labelled only 1/10 as known_answer); diversity ablation — plain prompt, one model: 1.8 distinct premises/argument, spread 0.114; constrained roles, one model: 2.4 distinct premises/argument, spread 0.224; constrained roles, mixed families: 2.6 distinct premises/argument, spread 0.213. E1 replicated on Decision theory in philosophy of religion (n=50): 78% (embeddings over claims) vs 28% for keyword search.
 
 ## Quality control
 An Assessor agent (a different model family from the brief writer) reads every research direction like a journal referee and grades coherence, robustness, significance and specificity; the grade is computed in code. Result: 14 not yet defensible of 14. The lab shows each direction's strongest objection and what a paper would need, rather than overselling its leads. A revision round then rewrote each direction to answer its strongest objection and re-graded it in a fresh read: 2 of 14 moved up a grade (to needs work) and the rest stayed not yet defensible, each with the next objection it must meet.
@@ -23,15 +23,15 @@ Top research direction (highest lead score = survival × novelty × Assessor qua
 
 ## Topics
 The lab is topic-configurable (`config/topics/<slug>.yaml`); the site switches between topics on `/topics`.
-- **Decision theory in philosophy of religion**: configured, not run (the site shows the commands to run it).
-- **Divine hiddenness**: 5 papers, 55 objections, 30 trials, 14 research directions
+- **Divine hiddenness**: 5 papers, 55 objections, 30 trials, 14 research directions; 2 model families (anthropic, openai)
+- **Decision theory in philosophy of religion**: 6 papers, 72 objections, 36 trials, 18 research directions; 8 model families (anthropic, kimi, glm, mistral, qwen, llama, gpt-oss, gemma)
 - **The fine-tuning argument**: configured, not run (the site shows the commands to run it).
 
 ## Databricks
-Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1632 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
+Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (2298 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
 
 ## Honest limits
-Model diversity degraded: 2 families; PhilArchive's OAI API was unavailable; evals are small and have no human labels; outcome labels are model judgements about the state of a debate, never verdicts on truth.
+Model diversity: Divine hiddenness ran on 2 model families; Decision theory in philosophy of religion ran on 8 model families; PhilArchive's OAI API was unavailable; evals are small and have no human labels; outcome labels are model judgements about the state of a debate, never verdicts on truth.
 
 ## Links to fill in
 - Live demo: https://univerdread.github.io/crux-lab/
