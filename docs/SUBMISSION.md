@@ -15,6 +15,9 @@ In philosophy the debate is the experiment. Crux Lab runs it: it reads recent pa
 - **Grounding enforced in code:** quotes verified against source text, citations are corpus ids verified by code, generators cannot see literature, validity is decided by a truth table, novelty is never claimed.
 - **Measured:** prior-art recall@5 86% for the lab's pipeline vs 16% for keyword search (n=50); the Referee caught 10/10 deliberate misreadings; a defender cited the published reply in 7/10 known-answer cases (the Referee still labelled only 1/10 as known_answer); diversity ablation — plain prompt, one model: 1.8 distinct premises/argument, spread 0.114; constrained roles, one model: 2.4 distinct premises/argument, spread 0.224; constrained roles, mixed families: 2.6 distinct premises/argument, spread 0.213.
 
+## Quality control
+An Assessor agent (a different model family from the brief writer) reads every research direction like a journal referee and grades coherence, robustness, significance and specificity; the grade is computed in code. Result: 14 not yet defensible of 14. The lab shows each direction's strongest objection and what a paper would need, rather than overselling its leads.
+
 ## Example output
 Top research direction: *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched.
 

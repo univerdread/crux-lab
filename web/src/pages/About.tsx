@@ -25,6 +25,7 @@ const AGENTS: { name: string; constraint: string }[] = [
   { name: "Referee", constraint: "Picks exactly one outcome; quotes the deciding sentence verbatim; every cited id is verified and unverifiable ones are struck. Never rules on whether the conclusion is true." },
   { name: "Prior-Art Hunter", constraint: "Restates the objection three ways, searches BM25 + embeddings and OpenAlex, then gives each match a verdict: same move, related, different." },
   { name: "Director", constraint: "Plain code, no model: priority = S · N · (0.5 + 0.5·C) + 0.1·E." },
+  { name: "Assessor", constraint: "Reads each finished research direction like a journal referee (never sees which models wrote it): scores coherence, robustness, significance and specificity 1–5, names the strongest objection and what the paper needs. The grade is computed in code; robustness 2 or lower means “not yet defensible”." },
 ];
 
 // Status pills use ink tones (outcome colours are reserved for outcomes): solid = used in this build,

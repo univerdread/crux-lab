@@ -35,6 +35,9 @@ METHOD_NOTES = [
     "Subscription CLI providers (codex, claude -p) ignore temperature; diversity comes from different models and roles.",
     "Novelty is never claimed: it is 1 - max similarity among same_move/related matches in what retrieval found, "
     "reported with records searched, the three nearest matches and 'Further human review required.'",
+    "Every research direction is graded by an Assessor agent from a different model family than the brief writer, "
+    "acting as a journal referee; the grade (promising / needs work / not yet defensible) is computed in code from "
+    "its four 1-5 scores, and a direction that falls to an obvious objection is never 'promising'.",
 ]
 
 

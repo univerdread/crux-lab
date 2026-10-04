@@ -43,7 +43,12 @@ def main() -> None:
         L += [f"- Research question: *{top['research_question']}*",
               f"- Outcome **{top['outcome']}**, novelty {top['novelty']:.2f} over {top['records_searched']} records searched. "
               "Point at the three nearest matches and the line *Further human review required.*",
-              f"- Challenged premise `{top['challenged_premise']['id']}`: {top['challenged_premise']['text']}", ""]
+              f"- Challenged premise `{top['challenged_premise']['id']}`: {top['challenged_premise']['text']}"]
+        if top.get("assessment"):
+            q = top["assessment"]
+            L += [f"- Scroll to the **academic quality check**: the Assessor grades it *{q['grade']}* "
+                  f"({q['overall']}/5) — read its one-line verdict aloud: \"{q['summary'][:200]}\""]
+        L += [""]
     L += [f"## 0:45 — How it got there (`/lab/{run_id}`)",
           f"- Target: *{run['target']['title']}* ({run['target'].get('kind')}, {run['target'].get('published') or run['target'].get('year')}).",
           f"- Left: the argument map; the Formalizer's hidden premise `{run['argument'].get('missing_premise_id')}` is highlighted "

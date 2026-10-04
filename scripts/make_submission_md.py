@@ -12,6 +12,20 @@ def load(name):
     return json.loads((D / name).read_text())
 
 
+def assessor_line(briefs: list[dict]) -> str:
+    graded = [b for b in briefs if b.get("assessment")]
+    if not graded:
+        return "No Assessor grades exported yet."
+    tally: dict[str, int] = {}
+    for b in graded:
+        tally[b["assessment"]["grade"]] = tally.get(b["assessment"]["grade"], 0) + 1
+    return ("An Assessor agent (a different model family from the brief writer) reads every research direction like a "
+            "journal referee and grades coherence, robustness, significance and specificity; the grade is computed in "
+            "code. Result: " + ", ".join(f"{v} {k}" for k, v in sorted(tally.items(), key=lambda kv: -kv[1]))
+            + f" of {len(graded)}. The lab shows each direction's strongest objection and what a paper would need, "
+            "rather than overselling its leads.")
+
+
 def main() -> None:
     idx, briefs, res, about = load("index.json"), load("briefs.json"), load("results.json"), load("about.json")
     e1, e2, e3 = res.get("e1") or {}, res.get("e2") or {}, res.get("e3") or {}
@@ -49,6 +63,8 @@ def main() -> None:
         f"{e2.get('known_answer', {}).get('gold_reply_cited_by_a_defender')}/{e2.get('known_answer', {}).get('n')} known-answer cases "
         f"(the Referee still labelled only {e2.get('known_answer', {}).get('labelled_known_answer')}/{e2.get('known_answer', {}).get('n')} as known_answer); "
         f"diversity ablation — {e3rows}.", "",
+        "## Quality control",
+        assessor_line(briefs), "",
         "## Example output",
         f"Top research direction: *{top.get('research_question', '')}* — {top.get('outcome', '')}, novelty {top.get('novelty', 0):.2f}, "
         f"{top.get('records_searched', 0)} records searched.", "",
