@@ -23,8 +23,8 @@
   },
   "reason": "Published 2026-08-18 (after 2026-08-01), open-access full text (38,971 chars); argues for a thesis; hiddenness relevance 2/3 (divine love, availability or evidence); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:30:26.412148+00:00",
- "finished_at": "2026-10-04T01:32:25.583247+00:00",
+ "started_at": "2026-10-04T01:43:03.866431+00:00",
+ "finished_at": "2026-10-04T01:43:21.029132+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W7203761940.arg1",
@@ -2814,34 +2814,34 @@
  ],
  "diversity": "degraded: 2 families",
  "llm_stats": {
-  "calls": 346,
-  "cache_hits": 326,
+  "calls": 286,
+  "cache_hits": 286,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 1022,
+  "cli_calls": 1317,
   "cli_limit": 4000,
-  "notional_cli_usd": 12.8213
+  "notional_cli_usd": 14.8784
  },
  "events": [
   {
-   "t": 1791077426.41,
+   "t": 1791078183.87,
    "type": "run_start",
    "run_id": "run-oa-W7203761940",
    "target": "oa-W7203761940",
    "argument_id": "W7203761940.arg1"
   },
   {
-   "t": 1791077434.23,
+   "t": 1791078188.0,
    "type": "naive_question",
    "question": "Here's what puzzles me most:\n\nIf God's plan is so hidden that the world looks exactly the same whether God exists or doesn't exist, how is believing in God actually different from not believing? And doesn't that make the argument circular—saying we can't decide based on evidence because the evidence looks the same under both worldviews?",
    "sharpened": true
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.oe01bb3",
@@ -2858,7 +2858,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.od9294e",
@@ -2875,7 +2875,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.ob5571b",
@@ -2892,7 +2892,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.of0b402",
@@ -2909,7 +2909,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.ob46797",
@@ -2926,7 +2926,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o964b25",
@@ -2943,7 +2943,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o1897dd",
@@ -2960,7 +2960,7 @@
    }
   },
   {
-   "t": 1791077434.24,
+   "t": 1791078188.0,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o6f0f1d",
@@ -2977,7 +2977,7 @@
    }
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.oe01bb3",
    "novelty": 0.62,
@@ -3010,7 +3010,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.od9294e",
    "novelty": 0.48,
@@ -3043,7 +3043,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.ob5571b",
    "novelty": 0.66,
@@ -3076,7 +3076,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.of0b402",
    "novelty": 0.44,
@@ -3109,7 +3109,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.ob46797",
    "novelty": 0.2,
@@ -3142,7 +3142,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o964b25",
    "novelty": 0.38,
@@ -3175,7 +3175,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o1897dd",
    "novelty": 0.38,
@@ -3208,7 +3208,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o6f0f1d",
    "novelty": 0.08,
@@ -3241,7 +3241,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -3348,19 +3348,19 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.ob5571b",
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.oe01bb3",
    "objection_id": "W7203761940.arg1.oe01bb3"
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3378,7 +3378,7 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077448.56,
+   "t": 1791078197.21,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3396,7 +3396,7 @@
    "objection_id": "W7203761940.arg1.oe01bb3"
   },
   {
-   "t": 1791077448.56,
+   "t": 1791078197.21,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -3404,7 +3404,7 @@
    "objection_id": "W7203761940.arg1.oe01bb3"
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3423,10 +3423,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": "Apparent moral indiscriminateness and non-monotonicity hold in the aggregate or across the historical record, not necessarily in every individual catastrophe."
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.ob5571b",
+   "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3439,10 +3441,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.ob5571b",
+   "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3462,10 +3466,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Visible moral patterns, in which outcomes track culpability or desert, are not systematically dominant across history at the aggregate level, so the directional signature c011 describes is absent at the scale history presents."
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.ob5571b",
+   "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3482,10 +3488,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Many apparently random historical events have identifiable biological, political, or social causes, and visible moral patterns occur too inconsistently across their outcomes to provide a reliable directional signature of history being steered toward the good."
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.ob5571b",
+   "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3503,7 +3511,7 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3521,7 +3529,7 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -3529,14 +3537,14 @@
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "revised_premise",
    "id": "W7203761940.arg1.r1",
    "text": "Visible moral patterns, in which outcomes track culpability or desert, are not systematically dominant across history at the aggregate level, so the directional signature c011 describes is absent at the scale history presents.",
    "from_trial": "trial-W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077449.08,
+   "t": 1791078197.58,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.oc3f271",
@@ -3553,7 +3561,7 @@
    }
   },
   {
-   "t": 1791077473.42,
+   "t": 1791078198.62,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.oc3f271",
    "novelty": 0.88,
@@ -3586,7 +3594,7 @@
    ]
   },
   {
-   "t": 1791077473.42,
+   "t": 1791078198.62,
    "type": "queue",
    "step": 1,
    "queue": [
@@ -3681,45 +3689,19 @@
    ]
   },
   {
-   "t": 1791077473.42,
+   "t": 1791078198.62,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.oc3f271",
    "objection_id": "W7203761940.arg1.oc3f271"
   },
   {
-   "t": 1791077473.42,
+   "t": 1791078198.62,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.o1897dd",
    "objection_id": "W7203761940.arg1.o1897dd"
   },
   {
-   "t": 1791077473.44,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Misreading: The objection targets a claim that rightly perceiving God’s governance requires a simple, publicly measurable upward historical curve. The argument claims only that aggregate historical evidence lacks systematically dominant visible moral patterns and therefore cannot by itself decide between worldviews; it does not deny non-inferential or personal religious warrant.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7203761940.arg1.o1897dd",
-   "objection_id": "W7203761940.arg1.o1897dd"
-  },
-  {
-   "t": 1791077473.44,
-   "type": "trial_end",
-   "outcome": "misreading",
-   "status": "ok",
-   "trial_id": "trial-W7203761940.arg1.o1897dd",
-   "objection_id": "W7203761940.arg1.o1897dd"
-  },
-  {
-   "t": 1791077482.5,
+   "t": 1791078198.63,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3737,7 +3719,7 @@
    "objection_id": "W7203761940.arg1.oc3f271"
   },
   {
-   "t": 1791077482.5,
+   "t": 1791078198.63,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -3745,7 +3727,33 @@
    "objection_id": "W7203761940.arg1.oc3f271"
   },
   {
-   "t": 1791077482.5,
+   "t": 1791078198.63,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Misreading: The objection targets a claim that rightly perceiving God’s governance requires a simple, publicly measurable upward historical curve. The argument claims only that aggregate historical evidence lacks systematically dominant visible moral patterns and therefore cannot by itself decide between worldviews; it does not deny non-inferential or personal religious warrant.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7203761940.arg1.o1897dd",
+   "objection_id": "W7203761940.arg1.o1897dd"
+  },
+  {
+   "t": 1791078198.63,
+   "type": "trial_end",
+   "outcome": "misreading",
+   "status": "ok",
+   "trial_id": "trial-W7203761940.arg1.o1897dd",
+   "objection_id": "W7203761940.arg1.o1897dd"
+  },
+  {
+   "t": 1791078199.22,
    "type": "queue",
    "step": 2,
    "queue": [
@@ -3816,19 +3824,19 @@
    ]
   },
   {
-   "t": 1791077482.5,
+   "t": 1791078199.22,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.o964b25",
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.5,
+   "t": 1791078199.22,
    "type": "trial_start",
    "trial_id": "trial-W7203761940.arg1.ob46797",
    "objection_id": "W7203761940.arg1.ob46797"
   },
   {
-   "t": 1791077482.5,
+   "t": 1791078199.47,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3846,7 +3854,33 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.75,
+   "t": 1791078199.52,
+   "type": "turn",
+   "turn": {
+    "exchange": 0,
+    "speaker": "referee",
+    "phase": "prescreen",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "content": "Misreading: The objection attributes to the biblical worldview an earthly historical prediction that the argument does not make. The argument instead says that complete justice occurs in a future judgment and denies that visible moral outcomes systematically govern earthly life.",
+    "cited_claim_ids": [],
+    "struck_claim_ids": [],
+    "concedes": false,
+    "revised_premise": null
+   },
+   "trial_id": "trial-W7203761940.arg1.ob46797",
+   "objection_id": "W7203761940.arg1.ob46797"
+  },
+  {
+   "t": 1791078199.52,
+   "type": "trial_end",
+   "outcome": "misreading",
+   "status": "ok",
+   "trial_id": "trial-W7203761940.arg1.ob46797",
+   "objection_id": "W7203761940.arg1.ob46797"
+  },
+  {
+   "t": 1791078199.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3865,10 +3899,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": "Visible moral patterns, in which outcomes track culpability or desert, are not systematically dominant across history at the aggregate level, and c011 should be read as claiming only this narrower absence rather than as ruling out providential steering."
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.o964b25",
+   "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078199.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3881,10 +3917,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.o964b25",
+   "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078199.53,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3902,10 +3940,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Visible desert-tracking outcomes at the aggregate level are not predicted by either naturalism or theism, so their absence is evidentially neutral between worldviews and c011 cannot serve as an expected-signature premise against theism."
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.o964b25",
+   "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078199.53,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3922,10 +3962,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Historical evidence lacks a visible directional signature that would independently establish benevolent divine steering, because both impersonal causation and hidden providential accounts can accommodate its absence."
-   }
+   },
+   "trial_id": "trial-W7203761940.arg1.o964b25",
+   "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078199.7,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3943,7 +3985,7 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078199.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3961,7 +4003,7 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078199.7,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -3969,40 +4011,14 @@
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077494.29,
-   "type": "turn",
-   "turn": {
-    "exchange": 0,
-    "speaker": "referee",
-    "phase": "prescreen",
-    "model": "gpt-5.6-sol",
-    "family": "openai",
-    "content": "Misreading: The objection attributes to the biblical worldview an earthly historical prediction that the argument does not make. The argument instead says that complete justice occurs in a future judgment and denies that visible moral outcomes systematically govern earthly life.",
-    "cited_claim_ids": [],
-    "struck_claim_ids": [],
-    "concedes": false,
-    "revised_premise": null
-   },
-   "trial_id": "trial-W7203761940.arg1.ob46797",
-   "objection_id": "W7203761940.arg1.ob46797"
-  },
-  {
-   "t": 1791077494.29,
-   "type": "trial_end",
-   "outcome": "misreading",
-   "status": "ok",
-   "trial_id": "trial-W7203761940.arg1.ob46797",
-   "objection_id": "W7203761940.arg1.ob46797"
-  },
-  {
-   "t": 1791077494.29,
+   "t": 1791078200.06,
    "type": "revised_premise",
    "id": "W7203761940.arg1.r2",
    "text": "Visible desert-tracking outcomes at the aggregate level are not predicted by either naturalism or theism, so their absence is evidentially neutral between worldviews and c011 cannot serve as an expected-signature premise against theism.",
    "from_trial": "trial-W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077494.3,
+   "t": 1791078200.06,
    "type": "objection",
    "objection": {
     "id": "W7203761940.arg1.o8daccd",
@@ -4019,7 +4035,7 @@
    }
   },
   {
-   "t": 1791077520.09,
+   "t": 1791078201.02,
    "type": "novelty",
    "objection_id": "W7203761940.arg1.o8daccd",
    "novelty": 0.42,
@@ -4052,19 +4068,19 @@
    ]
   },
   {
-   "t": 1791077533.84,
+   "t": 1791078201.03,
    "type": "brief",
    "brief_id": "brief-W7203761940.arg1.ob5571b",
    "objection_id": "W7203761940.arg1.ob5571b"
   },
   {
-   "t": 1791077545.58,
+   "t": 1791078201.03,
    "type": "brief",
    "brief_id": "brief-W7203761940.arg1.o964b25",
    "objection_id": "W7203761940.arg1.o964b25"
   },
   {
-   "t": 1791077545.58,
+   "t": 1791078201.03,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }

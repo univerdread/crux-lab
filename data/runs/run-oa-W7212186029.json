@@ -23,8 +23,8 @@
   },
   "reason": "Published 2026-09-10 (after 2026-08-01), open-access full text (55,601 chars); argues for a thesis; hiddenness relevance 1/3 (God's attributes/existence); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:30:29.267599+00:00",
- "finished_at": "2026-10-04T01:31:36.541544+00:00",
+ "started_at": "2026-10-04T01:43:06.021561+00:00",
+ "finished_at": "2026-10-04T01:43:22.519696+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W7212186029.arg1",
@@ -3286,33 +3286,33 @@
  "diversity": "degraded: 2 families",
  "llm_stats": {
   "calls": 343,
-  "cache_hits": 326,
+  "cache_hits": 343,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 1017,
+  "cli_calls": 1317,
   "cli_limit": 4000,
-  "notional_cli_usd": 12.7446
+  "notional_cli_usd": 14.8784
  },
  "events": [
   {
-   "t": 1791077429.27,
+   "t": 1791078186.02,
    "type": "run_start",
    "run_id": "run-oa-W7212186029",
    "target": "oa-W7212186029",
    "argument_id": "W7212186029.arg1"
   },
   {
-   "t": 1791077434.25,
+   "t": 1791078188.01,
    "type": "naive_question",
    "question": "If the whole point of divine simplicity is that God *doesn't* have proper parts, why does the conclusion say that God *is* a part of all God's parts—doesn't that mean God actually does have parts after all?",
    "sharpened": false
   },
   {
-   "t": 1791077434.25,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o192bde",
@@ -3329,7 +3329,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o7a6a9e",
@@ -3346,7 +3346,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.oad261e",
@@ -3363,7 +3363,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o65112e",
@@ -3380,7 +3380,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o0d5b3a",
@@ -3397,7 +3397,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o10f4f4",
@@ -3414,7 +3414,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.ob295df",
@@ -3431,7 +3431,7 @@
    }
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o192bde",
    "novelty": 0.82,
@@ -3464,7 +3464,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o7a6a9e",
    "novelty": 0.58,
@@ -3497,7 +3497,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.oad261e",
    "novelty": 0.61,
@@ -3530,7 +3530,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o65112e",
    "novelty": 0.82,
@@ -3563,7 +3563,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o0d5b3a",
    "novelty": 0.66,
@@ -3596,7 +3596,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o10f4f4",
    "novelty": 0.92,
@@ -3629,7 +3629,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.ob295df",
    "novelty": 0.38,
@@ -3662,7 +3662,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -3757,19 +3757,19 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o10f4f4",
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o192bde",
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077448.71,
+   "t": 1791078197.31,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3787,7 +3787,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077448.78,
+   "t": 1791078197.36,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3805,7 +3805,7 @@
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3823,10 +3823,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": "Instantiation is modelled as a similarity-relative parthood relation whose formal profile is fixed by the definition of proper parthood; the model is a claim about formal structure, not about physical composition."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o10f4f4",
+   "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3839,10 +3841,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o10f4f4",
+   "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3862,10 +3866,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Proper parthood, as used in the divine simplicity claim, is the similarity-relative relation of c018, and that relation tracks metaphysical constituency closely enough that having no proper parts under it expresses the traditional denial of composition."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o10f4f4",
+   "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3883,10 +3889,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "For divine attributes, instantiation may be modelled by a non-compositional, similarity-based parthood relation, without implying that attributes are material constituents of God."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o10f4f4",
+   "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3903,10 +3911,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o192bde",
+   "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.51,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3923,10 +3933,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Instantiation can be modelled as similarity-based parthood when an object is associated with its time-indexed property instances, so changes in instantiated properties need not entail a change in the object’s numerical identity."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o192bde",
+   "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3944,7 +3956,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -3962,7 +3974,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -3970,7 +3982,7 @@
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -3988,7 +4000,7 @@
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4006,7 +4018,7 @@
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4014,14 +4026,14 @@
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077449.08,
+   "t": 1791078197.59,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r1",
    "text": "Proper parthood, as used in the divine simplicity claim, is the similarity-relative relation of c018, and that relation tracks metaphysical constituency closely enough that having no proper parts under it expresses the traditional denial of composition.",
    "from_trial": "trial-W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077449.08,
+   "t": 1791078197.59,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o784374",
@@ -4038,7 +4050,7 @@
    }
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o784374",
    "novelty": 0.65,
@@ -4071,14 +4083,14 @@
    ]
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r2",
    "text": "Instantiation of God's timelessly and essentially held properties, such as omniscience, can be modelled as parthood because God may be understood as the mereological fusion of those properties, with no claim that this holds for contingent, time-varying properties of ordinary objects.",
    "from_trial": "trial-W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.o361289",
@@ -4095,7 +4107,7 @@
    }
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.53,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.o361289",
    "novelty": 0.58,
@@ -4128,7 +4140,7 @@
    ]
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.53,
    "type": "queue",
    "step": 1,
    "queue": [
@@ -4223,19 +4235,19 @@
    ]
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.53,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o65112e",
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.53,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o0d5b3a",
    "objection_id": "W7212186029.arg1.o0d5b3a"
   },
   {
-   "t": 1791077450.99,
+   "t": 1791078199.65,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4253,7 +4265,7 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.03,
+   "t": 1791078199.69,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4271,7 +4283,7 @@
    "objection_id": "W7212186029.arg1.o0d5b3a"
   },
   {
-   "t": 1791077451.03,
+   "t": 1791078199.69,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4279,7 +4291,7 @@
    "objection_id": "W7212186029.arg1.o0d5b3a"
   },
   {
-   "t": 1791077451.04,
+   "t": 1791078199.7,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4297,10 +4309,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "For God and each of God's parts, parthood is bivalent, so that God's being part of each such part is settled true rather than merely not false."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o65112e",
+   "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.04,
+   "t": 1791078199.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4316,10 +4330,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "For the similarity-relative parthood relation at issue, every parthood claim between God and one of God’s parts is determinate—true or false—and proper parthood is parthood whose reverse is false."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o65112e",
+   "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.32,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4337,7 +4353,7 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.32,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4355,7 +4371,7 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.32,
+   "t": 1791078200.07,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4363,14 +4379,14 @@
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.45,
+   "t": 1791078200.32,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r3",
    "text": "For God and each of God's parts, parthood is bivalent, so that God's being part of each such part is settled true rather than merely not false.",
    "from_trial": "trial-W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077451.45,
+   "t": 1791078200.32,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.od25eb2",
@@ -4387,7 +4403,7 @@
    }
   },
   {
-   "t": 1791077452.57,
+   "t": 1791078201.29,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.od25eb2",
    "novelty": 0.6,
@@ -4420,7 +4436,7 @@
    ]
   },
   {
-   "t": 1791077452.57,
+   "t": 1791078201.29,
    "type": "queue",
    "step": 2,
    "queue": [
@@ -4503,19 +4519,19 @@
    ]
   },
   {
-   "t": 1791077452.57,
+   "t": 1791078201.29,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.ob295df",
    "objection_id": "W7212186029.arg1.ob295df"
   },
   {
-   "t": 1791077452.57,
+   "t": 1791078201.29,
    "type": "trial_start",
    "trial_id": "trial-W7212186029.arg1.o784374",
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077452.89,
+   "t": 1791078201.51,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4533,7 +4549,7 @@
    "objection_id": "W7212186029.arg1.ob295df"
   },
   {
-   "t": 1791077452.89,
+   "t": 1791078201.51,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4541,7 +4557,7 @@
    "objection_id": "W7212186029.arg1.ob295df"
   },
   {
-   "t": 1791077452.89,
+   "t": 1791078201.51,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4559,7 +4575,7 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4577,10 +4593,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": "Proper parthood, as used in the divine simplicity claim, is the similarity-relative relation of c018 restricted to God and God's timelessly and essentially held properties, and having no proper parts under that restricted relation expresses the traditional denial of composition for God."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o784374",
+   "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4593,10 +4611,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o784374",
+   "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4614,10 +4634,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Having no proper parts under the c018 similarity relation expresses the traditional denial of composition only if that relation is independently shown to track metaphysical constituency for God and the divine properties, which the argument has not shown."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o784374",
+   "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.58,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4634,10 +4656,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood."
-   }
+   },
+   "trial_id": "trial-W7212186029.arg1.o784374",
+   "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4655,7 +4679,7 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4673,7 +4697,7 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4681,14 +4705,14 @@
    "objection_id": "W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077453.55,
+   "t": 1791078202.01,
    "type": "revised_premise",
    "id": "W7212186029.arg1.r4",
    "text": "For God’s essential attributes, similarity-based parthood is restricted to resemblance relations grounded in metaphysical constituency, so merely qualitative similarity between independently constituted things never suffices for parthood.",
    "from_trial": "trial-W7212186029.arg1.o784374"
   },
   {
-   "t": 1791077453.55,
+   "t": 1791078202.01,
    "type": "objection",
    "objection": {
     "id": "W7212186029.arg1.od83243",
@@ -4705,7 +4729,7 @@
    }
   },
   {
-   "t": 1791077454.07,
+   "t": 1791078202.51,
    "type": "novelty",
    "objection_id": "W7212186029.arg1.od83243",
    "novelty": 0.69,
@@ -4738,25 +4762,25 @@
    ]
   },
   {
-   "t": 1791077469.14,
+   "t": 1791078202.52,
    "type": "brief",
    "brief_id": "brief-W7212186029.arg1.o10f4f4",
    "objection_id": "W7212186029.arg1.o10f4f4"
   },
   {
-   "t": 1791077482.76,
+   "t": 1791078202.52,
    "type": "brief",
    "brief_id": "brief-W7212186029.arg1.o192bde",
    "objection_id": "W7212186029.arg1.o192bde"
   },
   {
-   "t": 1791077496.54,
+   "t": 1791078202.52,
    "type": "brief",
    "brief_id": "brief-W7212186029.arg1.o65112e",
    "objection_id": "W7212186029.arg1.o65112e"
   },
   {
-   "t": 1791077496.54,
+   "t": 1791078202.52,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }

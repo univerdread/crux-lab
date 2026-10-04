@@ -3,8 +3,10 @@
 @theme {
   --color-paper: #F7F3EA;
   --color-paper-deep: #EFE8D8;
+  --color-paper-edge: #E6DCC6;
   --color-ink: #1F1B16;
   --color-ink-soft: #5B544A;
+  --color-ink-faint: #7A7266;
   --color-rule: #D9CFBC;
   --color-misreading: #8A8580;
   --color-known_answer: #3B6EA8;
@@ -16,9 +18,102 @@
 }
 
 html, body, #root { background: var(--color-paper); color: var(--color-ink); }
-body { font-family: var(--font-serif); -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-serif);
+  font-size: 17.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+}
+
+::selection { background: #E9DCBC; }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Section labels: small caps, tracked, marginalia voice. */
+.smallcaps {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.09em;
+  font-feature-settings: "smcp", "c2sc";
+}
+
+.measure { max-width: 70ch; }
+
+.mono { font-family: var(--font-mono); }
+
+/* A thin double rule, like a ledger. */
+.ledger-rule { border-top: 1px solid var(--color-rule); box-shadow: 0 2px 0 -1px var(--color-paper), 0 3px 0 -1px var(--color-rule); }
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 120ms ease;
+}
+.link:hover { text-decoration-color: var(--color-ink); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  padding: 0.25rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.btn:hover:not(:disabled) { background: var(--color-ink); color: var(--color-paper); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn[aria-pressed="true"] { background: var(--color-ink); color: var(--color-paper); }
+.btn-quiet { border-color: var(--color-rule); }
+
+.field {
+  border: 1px solid var(--color-rule);
+  background: #FBF8F1;
+  color: var(--color-ink);
+  border-radius: 2px;
+  padding: 0.45rem 0.6rem;
+}
+.field:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 0; }
+
+/* Agent turns are set like a typed lab record. */
+.turn-body { font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.65; }
+
+/* Tables */
+.table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.table th { text-align: left; font-weight: 500; color: var(--color-ink-soft); border-bottom: 1px solid var(--color-ink); padding: 0.35rem 0.6rem 0.35rem 0; font-variant-caps: all-small-caps; letter-spacing: 0.08em; }
+.table td { border-bottom: 1px solid var(--color-rule); padding: 0.45rem 0.6rem 0.45rem 0; vertical-align: top; }
+.table td.num, .table th.num { text-align: right; font-family: var(--font-mono); font-size: 0.82rem; }
+
+/* xyflow on paper */
+.react-flow { --xy-background-color: transparent; --xy-edge-stroke: #8A8580; --xy-controls-button-background-color: #FBF8F1; --xy-controls-button-border-color: #D9CFBC; --xy-controls-button-color: #1F1B16; }
+.react-flow__node:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+.react-flow__attribution { background: transparent !important; font-family: var(--font-mono); font-size: 9px; }
+
+@keyframes ink-in { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+.ink-in { animation: ink-in 260ms ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .ink-in { animation: none; }
+  * { scroll-behavior: auto !important; }
+}
 
 @media print {
   .no-print { display: none !important; }
-  body { background: white; }
+  html, body, #root { background: white !important; }
+  body { font-size: 11.5pt; }
+  a { text-decoration: none; }
+  .print-break-avoid { break-inside: avoid; }
 }

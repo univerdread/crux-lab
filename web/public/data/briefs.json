@@ -1,0 +1,240 @@
+[
+ {
+  "id": "brief-W7212186029.arg1.o10f4f4",
+  "run_id": "run-oa-W7212186029",
+  "research_question": "Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?",
+  "outcome": "revision_required",
+  "novelty": 0.92,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "Divine simplicity as symmetric parthood",
+  "challenged_premise": {
+   "id": "W7212186029.c013",
+   "text": "Instantiation can be modelled as parthood because objects may be understood as mereological fusions of their properties."
+  },
+  "paper_direction": "A paper here would argue that the symmetric-parthood formulation of divine simplicity succeeds only if its similarity-relative parthood relation is shown to represent the constituent relation excluded by traditional simplicity. It would distinguish the formal reconstruction from ordinary material composition, assess the proposed restriction to divine attributes, and anticipate the reply that formal modelling need not reproduce a physical inventory. To establish the thesis, it would need independently motivated criteria for relevant similarity-parts and an account of why those criteria make the relation sufficiently constituency-tracking, non-trivial, and resistant to contingent relational-property cases.",
+  "score": 0.736,
+  "tier": 0
+ },
+ {
+  "id": "brief-W7203485685.arg1.ofd28a0",
+  "run_id": "run-oa-W7203485685",
+  "research_question": "Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?",
+  "outcome": "revision_required",
+  "novelty": 0.88,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+  "challenged_premise": {
+   "id": "W7203485685.c008",
+   "text": "A third-personal proposition identifying God as actualising a world does not itself represent that actualisation under the first-personal aspect required for source attribution."
+  },
+  "paper_direction": "A paper here would argue that the argument from divine contrastive responsibility to irreducible de se content depends on a substantive agency condition, not on the merely third-personal grammar or referential precision of divine cognition. It would develop the distinction between source-identifying knowledge and practically self-ascriptive representation, anticipate the rigid-identifier case in which G's intention selects and produces W1, and show either that this case lacks the agency-relative aspect required for robust responsibility or that no such additional aspect is needed. To succeed, the paper would need to state and defend a responsibility-relevant criterion that distinguishes treating an intentional act as an object of knowledge from representing it as one's own doing.",
+  "score": 0.704,
+  "tier": 0
+ },
+ {
+  "id": "brief-W7203761940.arg1.ob5571b",
+  "run_id": "run-oa-W7203761940",
+  "research_question": "Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?",
+  "outcome": "revision_required",
+  "novelty": 0.66,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
+  "challenged_premise": {
+   "id": "W7203761940.c001",
+   "text": "Many apparently random historical events have identifiable biological, political, or social causes, yet their outcomes often appear morally indiscriminate and non-monotonic."
+  },
+  "paper_direction": "A paper here would argue that the argument from worldly randomness requires an explicit and independently supported aggregate premise about the distribution of morally intelligible outcomes in history. It would show that individual cases of harm structured by culpability, privilege, and power neither establish providence nor simply count as morally indiscriminate, while defending the claim that no reliable benevolent directional signature follows from their recurrence. The strongest reply to anticipate is that the relevant conclusion needs only inconsistency, not universal indiscriminacy; the paper would need to specify a standard for identifying moral patterns, justify the move from cases to an aggregate assessment, and explain why the resulting evidential profile underdetermines the rival worldviews.",
+  "score": 0.528,
+  "tier": 0
+ },
+ {
+  "id": "brief-W2575351351.arg1.oe4df31",
+  "run_id": "run-oa-W2575351351",
+  "research_question": "Can a many-goods response to divine hiddenness count several goods arising from one person’s nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil?",
+  "outcome": "revision_required",
+  "novelty": 0.47,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
+  "challenged_premise": {
+   "id": "W2575351351.c014",
+   "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil."
+  },
+  "paper_direction": "A paper here would argue that the many-goods response requires a comparative, episode-sensitive account of nonresistant nonbelief: several goods may support a single period of hiddenness only when their joint realization requires no additional nonbelief-related evil relative to available alternatives that secure an adequately comparable set of goods. The case would distinguish genuinely overlapping goods from goods distributed across a life and show why merely redescribing an extended deprivation as one instance does not settle its cost. It would anticipate the strongest reply that all goods can be consequences of one fixed interval, and would need to show either that the interval is necessary for the combined goods or that relevant alternatives impose equal or greater evil.",
+  "score": 0.376,
+  "tier": 0
+ },
+ {
+  "id": "brief-W2072673546.arg1.o2eaa79",
+  "run_id": "run-oa-W2072673546",
+  "research_question": "Can an analogy from vulnerable human love support a context-sensitive divine obligation to make relationship accessible to nonresistant persons without first establishing a general obligation of vulnerable love?",
+  "outcome": "revision_required",
+  "novelty": 0.42,
+  "records_searched": 4130,
+  "survival": 0.8,
+  "paper_title": "Some critical reflections on the hiddenness argument",
+  "challenged_premise": {
+   "id": "W2072673546.arg1.r1",
+   "text": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated to make the beloved's access to relationship available, rather than merely permitted to do so."
+  },
+  "paper_direction": "A paper here would argue that the analogical route need not rest on a general obligation of vulnerable love, because context-sensitive obligations can be established through the features of particular loving relationships. It would develop the Mira case as a model of why expressed willingness, inability to initiate, and safe available contact can make withholding access a failure of care; it would then anticipate the strongest reply that these grounds may not transfer to God, especially if God can ensure eventual encounter without compromising dignity or safety. The paper would need to specify the relevant transfer conditions, explain their application to nonresistant nonbelief, and show whether permanent nonresistant nonbelief is compatible with perfect vulnerable love.",
+  "score": 0.336,
+  "tier": 0
+ },
+ {
+  "id": "brief-W7203485685.arg1.o69061d",
+  "run_id": "run-oa-W7203485685",
+  "research_question": "Does robust contrastive responsibility require an agent to represent the selected outcome as attributable to that agent’s own exercise of control, and if so, must this representation contain irreducible de se content?",
+  "outcome": "revision_required",
+  "novelty": 0.86,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+  "challenged_premise": {
+   "id": "W7203485685.c006",
+   "text": "Robust contrastive responsibility requires cognition that represents an outcome as issuing from the agent's own activity rather than relevant alternatives."
+  },
+  "paper_direction": "A paper here would argue that the move from robust contrastive responsibility to irreducible de se divine cognition depends on a stronger and presently unestablished source-attribution requirement. It would use cases such as Mira’s to distinguish impersonal representation of causal consequences, self-representation of an intended act, and representation of an outcome as attributable to one’s control; it would then assess whether only the last is necessary for responsibility. The strongest reply to anticipate is that practical deliberation already integrates agent, option, and outcome in a way that grounds attribution without explicit self-ascription. The paper would need to show either that this integration necessarily has irreducible de se content, or that responsibility can be grounded by act-level self-representation without the outcome-level de se representation required by the original argument.",
+  "score": 0.688,
+  "tier": 1
+ },
+ {
+  "id": "brief-W7212186029.arg1.o192bde",
+  "run_id": "run-oa-W7212186029",
+  "research_question": "Can instantiation be modelled as similarity-based parthood in a way that preserves the persistence of ordinary objects and supports the divine-simplicity application?",
+  "outcome": "revision_required",
+  "novelty": 0.82,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "Divine simplicity as symmetric parthood",
+  "challenged_premise": {
+   "id": "W7212186029.c013",
+   "text": "Instantiation can be modelled as parthood because objects may be understood as mereological fusions of their properties."
+  },
+  "paper_direction": "A paper here would argue that the unrestricted fusion account of instantiation cannot support the divine-simplicity argument, because temporal change and shared properties expose missing identity and overlap conditions, while a restricted account may remain available for God's timeless essential properties. It would develop the lamp case to show why the original premise needs revision, anticipate Defender B's time-indexed-instance reply and Defender A's divine restriction, and determine whether either revision still supplies a coherent parthood relation capable of grounding the symmetry formulation. The paper would need to show either that the revised model has independently defensible persistence and identity conditions, or that its repairs make it too different or too weak to support the original argument.",
+  "score": 0.656,
+  "tier": 1
+ },
+ {
+  "id": "brief-W2575351351.arg1.oc4a9a4",
+  "run_id": "run-oa-W2575351351",
+  "research_question": "Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?",
+  "outcome": "revision_required",
+  "novelty": 0.45,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
+  "challenged_premise": {
+   "id": "W2575351351.c017",
+   "text": "Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable."
+  },
+  "paper_direction": "A paper here would argue that the many-goods response requires a net-of-overlap formulation and cannot rely on an unqualified aggregation of individually lesser goods. It would develop the case for comparing whole feasible histories, rather than merely counting named outcomes, while anticipating the strongest reply that shared dispositions and the intrinsic value of divine relationship make the goods non-additive or non-compensatory. To succeed, the paper would need to specify a defensible measure of non-duplicative value, defend the relevant counterfactual comparison with the God-relationship alternative, and identify a plausible bounded case in which the surviving package outweighs the lost relationship.",
+  "score": 0.36,
+  "tier": 1
+ },
+ {
+  "id": "brief-W2072673546.arg1.o3eca09",
+  "run_id": "run-oa-W2072673546",
+  "research_question": "Can a Vanstone-style conception of vulnerable divine love require God to provide an intelligible, non-coercive opportunity for relationship without requiring the pursuit-based access that Schellenberg’s parental analogy attributes to perfect love?",
+  "outcome": "revision_required",
+  "novelty": 0.4,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "Some critical reflections on the hiddenness argument",
+  "challenged_premise": {
+   "id": "W2072673546.c064",
+   "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love."
+  },
+  "paper_direction": "A paper here would argue that the decisive issue is not whether vulnerable love permits unanswered love, but whether it requires a recognizable and non-coercive form of divine availability. It would distinguish availability from pursuit, argue that Mara-style restraint undermines any inference from perfect love to pressure or repeated intervention, and assess whether Schellenberg’s analogy can instead support a thinner requirement of intelligible access. The strongest reply to anticipate is that kenotic love still seeks the beloved’s good and makes itself available; the paper would need to show either that this requirement is satisfied despite hiddenness or that the vulnerable conception does not entail it in the relevant sense.",
+  "score": 0.32,
+  "tier": 1
+ },
+ {
+  "id": "brief-W7203761940.arg1.o964b25",
+  "run_id": "run-oa-W7203761940",
+  "research_question": "Can a Molinist account of providence generate any observable historical signature of benevolent governance, or does it make the apparent distribution of suffering evidentially neutral?",
+  "outcome": "revision_required",
+  "novelty": 0.38,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
+  "challenged_premise": {
+   "id": "W7203761940.c011",
+   "text": "Historical evidence alone lacks the directional signature expected if history were steered toward the good."
+  },
+  "paper_direction": "A paper here would argue that Molinist providence undermines the claim that benevolent historical steering should produce a visible aggregate moral signature, while leaving open whether the resulting neutrality is principled or merely immunizing. The case would distinguish the failure of desert-tracking outcomes from the absence of all possible providential evidence, anticipate the reply that hidden providence and impersonal causation are simply evidentially ambiguous, and show either that Molinism supplies a non-arbitrary constraint on acceptable historical distributions or that c011 should be removed from the argument because it does no independent evidential work.",
+  "score": 0.304,
+  "tier": 1
+ },
+ {
+  "id": "brief-W7203485685.arg1.o6a7507",
+  "run_id": "run-oa-W7203485685",
+  "research_question": "Does robust contrastive responsibility require irreducibly de se representation of the selected outcome, or only representation of that outcome as resulting from an act the agent performs or selects?",
+  "outcome": "revision_required",
+  "novelty": 0.84,
+  "records_searched": 4138,
+  "survival": 0.8,
+  "paper_title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+  "challenged_premise": {
+   "id": "W7203485685.c005",
+   "text": "If an agent is robustly responsible for bringing about one outcome rather than another, its cognition must represent the first outcome as its own action."
+  },
+  "paper_direction": "A paper here would argue that the objection identifies a genuine equivocation between responsibility for an outcome and representing that outcome as an action: robust contrastive responsibility requires an agent-relative representation of the act–outcome relation, not self-representation of the distal outcome as an action. The case would develop the reservoir example and analogous ordinary agency cases, then anticipate the strongest reply that source attribution still requires a first-personal stance toward the selected act. It would need to show either that this stance is available in non-de-se terms, weakening the route to the divine conclusion, or that a principled feature of divine actualisation makes irreducible de se content necessary despite the revised premise.",
+  "score": 0.672,
+  "tier": 2
+ },
+ {
+  "id": "brief-W7212186029.arg1.o65112e",
+  "run_id": "run-oa-W7212186029",
+  "research_question": "Does the inference from God's having no proper parts to God's being part of all of God's parts require bivalence or determinacy for the relevant parthood relation?",
+  "outcome": "revision_required",
+  "novelty": 0.82,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "Divine simplicity as symmetric parthood",
+  "challenged_premise": {
+   "id": "W7212186029.c008",
+   "text": "If proper parthood is non-symmetric parthood, the claim that God has no proper parts yields the symmetry formulation of divine simplicity."
+  },
+  "paper_direction": "A paper here would argue that the symmetry formulation of divine simplicity is not entailed by the absence of proper parts unless the underlying parthood relation is bivalent or otherwise determinate. Its central case would be the three-valued countermodel, in which omniscience is part of God while the reverse relation is undetermined, so omniscience is not a proper part but reciprocal parthood does not follow. The strongest reply to anticipate is that the intended similarity-relative parthood relation already carries determinate structural features and that bivalence is only a clarification. The paper would need to show either that those features do not entail determinacy, making the repair substantively additional, or that an independently motivated semantics supplies determinacy and thereby restores the inference.",
+  "score": 0.656,
+  "tier": 2
+ },
+ {
+  "id": "brief-W2575351351.arg1.o4bf7f6",
+  "run_id": "run-oa-W2575351351",
+  "research_question": "Can a many-goods response to divine hiddenness establish that the goods arising during a bounded episode of nonresistant nonbelief outweigh the relationship-loss of that episode once goods that require additional duration or severity are counted as part of its cost?",
+  "outcome": "revision_required",
+  "novelty": 0.42,
+  "records_searched": 4139,
+  "survival": 0.8,
+  "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
+  "challenged_premise": {
+   "id": "W2575351351.c014",
+   "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil."
+  },
+  "paper_direction": "A paper here would argue that a viable many-goods response must distinguish goods that warrant the duration and severity of an episode of nonresistant nonbelief from goods that are genuinely co-realized at no additional relationship-loss. The case would show why aggregating all goods associated with an episode overstates the response when some goods require the episode to become longer or more anguished. It would anticipate the strongest reply: that bounded episodes can contain several cost-free goods and that temporary loss may still be outweighed. It would need to show either that such independently bounded episodes can be specified and valued in a way that supports the defense, or that the dependence of an episode’s cost on its goods makes the required aggregate comparison unavailable.",
+  "score": 0.336,
+  "tier": 2
+ },
+ {
+  "id": "brief-W2072673546.arg1.o607d86",
+  "run_id": "run-oa-W2072673546",
+  "research_question": "Can Schellenberg’s analogy for P1 preserve a Vanstonean conception of vulnerable divine love while establishing that God is obligated, absent overriding reasons, to make voluntary relationship genuinely accessible?",
+  "outcome": "revision_required",
+  "novelty": 0.32,
+  "records_searched": 4140,
+  "survival": 0.8,
+  "paper_title": "Some critical reflections on the hiddenness argument",
+  "challenged_premise": {
+   "id": "W2072673546.c064",
+   "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love."
+  },
+  "paper_direction": "A paper here would argue that the Elena analogy undermines the claim that Schellenberg’s analogical route distorts vulnerable love, because costly self-disclosure that leaves acceptance free can itself be a form of kenotic vulnerability. The case would then distinguish that limited result from the stronger claim that perfect love obligates God to make relationship genuinely accessible. The strongest reply to anticipate is that the analogy establishes only permissible availability and leaves divine overriding reasons unresolved. The paper would need to show either that vulnerable perfect love generates a defeasible obligation of accessibility, together with principled limits on overriding reasons, or that Schellenberg’s argument can proceed on a weaker, non-exceptionless analogue of P1.",
+  "score": 0.256,
+  "tier": 2
+ }
+]

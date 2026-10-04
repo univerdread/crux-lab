@@ -23,8 +23,8 @@
   },
   "reason": "Classic fallback, open-access full text (55,619 chars); argues for a thesis; hiddenness relevance 3/3 (divine hiddenness); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:30:33.165319+00:00",
- "finished_at": "2026-10-04T01:31:34.660484+00:00",
+ "started_at": "2026-10-04T01:43:07.424407+00:00",
+ "finished_at": "2026-10-04T01:43:22.485562+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W2575351351.arg1",
@@ -3411,34 +3411,34 @@
  ],
  "diversity": "degraded: 2 families",
  "llm_stats": {
-  "calls": 343,
-  "cache_hits": 326,
+  "calls": 336,
+  "cache_hits": 336,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 1015,
+  "cli_calls": 1317,
   "cli_limit": 4000,
-  "notional_cli_usd": 12.7118
+  "notional_cli_usd": 14.8784
  },
  "events": [
   {
-   "t": 1791077433.17,
+   "t": 1791078187.42,
    "type": "run_start",
    "run_id": "run-oa-W2575351351",
    "target": "oa-W2575351351",
    "argument_id": "W2575351351.arg1"
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.01,
    "type": "naive_question",
    "question": "I'm confused about something basic: If all the good things that come from God being hidden could *also* happen in a world where God is right there in a relationship with us, then why would God hiding ever make the world better instead of worse?",
    "sharpened": true
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.oc4a9a4",
@@ -3455,7 +3455,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o4bf7f6",
@@ -3472,7 +3472,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o1c44e2",
@@ -3489,7 +3489,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o0bcc84",
@@ -3506,7 +3506,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.02,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.od9d59c",
@@ -3523,7 +3523,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.02,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.oe4df31",
@@ -3540,7 +3540,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.02,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o60cab5",
@@ -3557,7 +3557,7 @@
    }
   },
   {
-   "t": 1791077434.32,
+   "t": 1791078188.02,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o5e162b",
@@ -3574,7 +3574,7 @@
    }
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.oc4a9a4",
    "novelty": 0.45,
@@ -3607,7 +3607,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o4bf7f6",
    "novelty": 0.42,
@@ -3640,7 +3640,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o1c44e2",
    "novelty": 0.55,
@@ -3673,7 +3673,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o0bcc84",
    "novelty": 0.49,
@@ -3706,7 +3706,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.od9d59c",
    "novelty": 0.49,
@@ -3739,7 +3739,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.oe4df31",
    "novelty": 0.47,
@@ -3772,7 +3772,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o60cab5",
    "novelty": 0.08,
@@ -3805,7 +3805,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o5e162b",
    "novelty": 0.42,
@@ -3838,7 +3838,7 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -3945,19 +3945,19 @@
    ]
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.o1c44e2",
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077448.98,
+   "t": 1791078197.5,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.o0bcc84",
    "objection_id": "W2575351351.arg1.o0bcc84"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3975,7 +3975,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.05,
+   "t": 1791078197.56,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -3993,7 +3993,7 @@
    "objection_id": "W2575351351.arg1.o0bcc84"
   },
   {
-   "t": 1791077449.05,
+   "t": 1791078197.56,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4001,7 +4001,7 @@
    "objection_id": "W2575351351.arg1.o0bcc84"
   },
   {
-   "t": 1791077449.05,
+   "t": 1791078197.56,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4019,10 +4019,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "A good may overcome the accommodation strategy only if the good is available to the person only through temporary nonresistant nonbelief, so that the nonbelief is its enabling condition and not merely its temporal context."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o1c44e2",
+   "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.05,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4038,10 +4040,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o1c44e2",
+   "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.05,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4054,10 +4058,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o1c44e2",
+   "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.06,
+   "t": 1791078197.57,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4073,10 +4079,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o1c44e2",
+   "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4094,7 +4102,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4112,7 +4120,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4120,7 +4128,7 @@
    "objection_id": "W2575351351.arg1.o1c44e2"
   },
   {
-   "t": 1791077449.91,
+   "t": 1791078198.54,
    "type": "queue",
    "step": 1,
    "queue": [
@@ -4203,19 +4211,19 @@
    ]
   },
   {
-   "t": 1791077449.91,
+   "t": 1791078198.54,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.od9d59c",
    "objection_id": "W2575351351.arg1.od9d59c"
   },
   {
-   "t": 1791077449.91,
+   "t": 1791078198.54,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.oe4df31",
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.91,
+   "t": 1791078198.54,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4233,7 +4241,7 @@
    "objection_id": "W2575351351.arg1.od9d59c"
   },
   {
-   "t": 1791077449.91,
+   "t": 1791078198.54,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -4241,7 +4249,7 @@
    "objection_id": "W2575351351.arg1.od9d59c"
   },
   {
-   "t": 1791077449.91,
+   "t": 1791078198.54,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4259,7 +4267,7 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4277,10 +4285,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4293,10 +4303,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4314,10 +4326,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief, with its evil measured by the lost relationship over that episode rather than by the number of goods it supports."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4334,10 +4348,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4350,10 +4366,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.98,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4369,10 +4387,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Multiple goods arising across one person’s nonresistant nonbelief support the many-goods response only if their joint realization requires no more nonbelief-related evil than any available alternative that realizes an adequately comparable set of goods."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oe4df31",
+   "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4390,7 +4410,7 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.63,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4408,7 +4428,7 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.63,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4416,14 +4436,14 @@
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077450.59,
+   "t": 1791078199.22,
    "type": "revised_premise",
    "id": "W2575351351.arg1.r1",
    "text": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief, with its evil measured by the lost relationship over that episode rather than by the number of goods it supports.",
    "from_trial": "trial-W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077450.59,
+   "t": 1791078199.22,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o157a57",
@@ -4440,7 +4460,7 @@
    }
   },
   {
-   "t": 1791077451.31,
+   "t": 1791078199.95,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o157a57",
    "novelty": 0.42,
@@ -4473,7 +4493,7 @@
    ]
   },
   {
-   "t": 1791077451.31,
+   "t": 1791078199.95,
    "type": "queue",
    "step": 2,
    "queue": [
@@ -4544,19 +4564,19 @@
    ]
   },
   {
-   "t": 1791077451.31,
+   "t": 1791078199.95,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.oc4a9a4",
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.31,
+   "t": 1791078199.95,
    "type": "trial_start",
    "trial_id": "trial-W2575351351.arg1.o4bf7f6",
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.32,
+   "t": 1791078199.95,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4574,7 +4594,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.38,
+   "t": 1791078200.01,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4592,7 +4612,7 @@
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4610,10 +4630,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": "Multiple goods may collectively outweigh a relationship with God only when their value is assessed net of shared dispositional sources, so that each counted good contributes independently to the tally."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oc4a9a4",
+   "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4626,10 +4648,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oc4a9a4",
+   "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4647,10 +4671,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Goods individually less valuable than a relationship with God, after subtracting value shared through common dispositional sources, can collectively make a world containing temporary nonresistant nonbelief more valuable than the lost relationship, which is valued for itself."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oc4a9a4",
+   "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4668,10 +4694,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oc4a9a4",
+   "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4684,10 +4712,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oc4a9a4",
+   "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4703,10 +4733,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Goods each less valuable than a relationship with God can collectively make a world containing a bounded episode of nonresistant nonbelief more valuable only when their jointly realized net value is not duplicated or guaranteed by the available God-relationship alternative and exceeds that episode’s lost relationship-value."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.oc4a9a4",
+   "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.44,
+   "t": 1791078200.07,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4723,10 +4755,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.45,
+   "t": 1791078200.08,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4743,10 +4777,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.45,
+   "t": 1791078200.08,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4759,10 +4795,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.45,
+   "t": 1791078200.08,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4779,10 +4817,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "For at least one bounded episode of nonresistant nonbelief, the goods that warrant its full duration and severity together with genuinely cost-free co-realized goods outweigh the lost value of relationship with God over that episode."
-   }
+   },
+   "trial_id": "trial-W2575351351.arg1.o4bf7f6",
+   "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.32,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4800,7 +4840,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.32,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4818,7 +4858,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.32,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4826,7 +4866,7 @@
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.33,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4844,7 +4884,7 @@
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.33,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4862,7 +4902,7 @@
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.33,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4870,14 +4910,14 @@
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077452.26,
+   "t": 1791078201.02,
    "type": "revised_premise",
    "id": "W2575351351.arg1.r2",
    "text": "Goods individually less valuable than a relationship with God, after subtracting value shared through common dispositional sources, can collectively make a world containing temporary nonresistant nonbelief more valuable than the lost relationship, which is valued for itself.",
    "from_trial": "trial-W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077452.26,
+   "t": 1791078201.02,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.o7a5dd4",
@@ -4894,7 +4934,7 @@
    }
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.69,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.o7a5dd4",
    "novelty": 0.38,
@@ -4927,14 +4967,14 @@
    ]
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.69,
    "type": "revised_premise",
    "id": "W2575351351.arg1.r3",
    "text": "Multiple goods may arise from a single bounded episode of nonresistant nonbelief without increasing that evil, provided the goods do not require the episode to be lengthened or intensified beyond what the minimal episode supporting them already involves.",
    "from_trial": "trial-W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.69,
    "type": "objection",
    "objection": {
     "id": "W2575351351.arg1.oa19d5f",
@@ -4951,7 +4991,7 @@
    }
   },
   {
-   "t": 1791077454.04,
+   "t": 1791078202.48,
    "type": "novelty",
    "objection_id": "W2575351351.arg1.oa19d5f",
    "novelty": 0.75,
@@ -4984,25 +5024,25 @@
    ]
   },
   {
-   "t": 1791077467.15,
+   "t": 1791078202.48,
    "type": "brief",
    "brief_id": "brief-W2575351351.arg1.oe4df31",
    "objection_id": "W2575351351.arg1.oe4df31"
   },
   {
-   "t": 1791077479.96,
+   "t": 1791078202.48,
    "type": "brief",
    "brief_id": "brief-W2575351351.arg1.oc4a9a4",
    "objection_id": "W2575351351.arg1.oc4a9a4"
   },
   {
-   "t": 1791077494.66,
+   "t": 1791078202.49,
    "type": "brief",
    "brief_id": "brief-W2575351351.arg1.o4bf7f6",
    "objection_id": "W2575351351.arg1.o4bf7f6"
   },
   {
-   "t": 1791077494.66,
+   "t": 1791078202.49,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }

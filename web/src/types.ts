@@ -250,6 +250,8 @@ export interface BriefSummary {
   paper_title: string;
   challenged_premise: { id: string; text: string };
   paper_direction: string;
+  score?: number; // survival x novelty
+  tier?: number; // 0 = best direction for its target paper, 1 = second, ...
 }
 
 export interface CorpusRecord {
@@ -278,6 +280,7 @@ export interface ResultsFile {
 }
 
 export interface E1 {
+  experiment?: string;
   n: number;
   methods: { name: string; recall_at_5: number; hits: number }[];
   settings: Record<string, unknown>;
@@ -287,9 +290,27 @@ export interface E1 {
 }
 
 export interface E2 {
-  known_answer: { n: number; labelled_known_answer: number; correct_reply_cited: number };
+  experiment?: string;
+  n?: number;
+  known_answer: {
+    n: number;
+    labelled_known_answer: number;
+    correct_reply_cited: number;
+    gold_reply_cited_by_a_defender?: number;
+  };
   misreading: { n: number; caught: number };
-  items: { kind: string; source_paper: string; outcome: string | null; correct: boolean }[];
+  items: {
+    kind: string;
+    source_paper: string;
+    outcome: string | null;
+    correct: boolean;
+    objection?: string;
+    objection_paper?: string;
+    reply_claims?: string[];
+    target?: string;
+    cited?: string[];
+    status?: string;
+  }[];
   settings: Record<string, unknown>;
   models: Record<string, string>;
   timestamp: string;
@@ -297,12 +318,14 @@ export interface E2 {
 }
 
 export interface E3 {
+  experiment?: string;
   conditions: {
     name: string;
     n: number;
     distinct_premises: number;
     mean_pairwise_distance: number;
     share_surviving: number | null;
+    share_passing_prescreen?: number | null;
     share_novelty_gt_05: number;
   }[];
   settings: Record<string, unknown>;
@@ -319,6 +342,8 @@ export interface About {
   targets_meta: Record<string, unknown>;
   map_stats: Record<string, unknown>;
   corpus: { records: number; with_abstract: number; full_texts: number; fresh: number };
+  method_notes?: string[];
+  tracing?: { backend: string; traces: number | null };
 }
 
 export const OUTCOME_COLORS: Record<Outcome, string> = {

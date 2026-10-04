@@ -132,7 +132,7 @@ async def run_trial(client: LLMClient, store: Store, objection: Objection, argum
         ex = await asyncio.gather(*[
             run_exchange(client, speaker=s, defender=specs[s], attacker=attacker, argument=argument_text,
                          objection=objection.text, target_id=objection.target_premise_id,
-                         literature=literature, exchange=i + 1, on_event=on_event)
+                         literature=literature, exchange=i + 1, on_event=emit)
             for i, s in enumerate(specs)])
         # 4. referee labels each defense, citations verified first
         per = {}

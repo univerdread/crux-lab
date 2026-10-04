@@ -24,8 +24,8 @@
   },
   "reason": "Classic fallback, open-access full text (85,865 chars); argues for a thesis; hiddenness relevance 3/3 (divine hiddenness); argument clarity 3/3."
  },
- "started_at": "2026-10-04T01:30:31.372690+00:00",
- "finished_at": "2026-10-04T01:31:36.873413+00:00",
+ "started_at": "2026-10-04T01:43:06.877184+00:00",
+ "finished_at": "2026-10-04T01:43:22.536263+00:00",
  "stop_reason": "trial budget per target reached (6)",
  "argument": {
   "id": "W2072673546.arg1",
@@ -3974,34 +3974,34 @@
  ],
  "diversity": "degraded: 2 families",
  "llm_stats": {
-  "calls": 343,
-  "cache_hits": 326,
+  "calls": 346,
+  "cache_hits": 346,
   "json_failures": 0,
   "errors": 0
  },
  "budget": {
   "spent_usd": 0.0,
   "limit_usd": 20.0,
-  "cli_calls": 1018,
+  "cli_calls": 1317,
   "cli_limit": 4000,
-  "notional_cli_usd": 12.7636
+  "notional_cli_usd": 14.8784
  },
  "events": [
   {
-   "t": 1791077431.37,
+   "t": 1791078186.88,
    "type": "run_start",
    "run_id": "run-oa-W2072673546",
    "target": "oa-W2072673546",
    "argument_id": "W2072673546.arg1"
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "naive_question",
    "question": "I'm confused about the main premise that's supposedly unstated—if Schellenberg never actually made the argument that you're saying he needs to make (the one labeled \"arg1.mp\"), then how does it make sense to conclude his whole argument fails based on it?",
    "sharpened": false
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o3eca09",
@@ -4018,7 +4018,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o67078d",
@@ -4035,7 +4035,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o583805",
@@ -4052,7 +4052,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o607d86",
@@ -4069,7 +4069,7 @@
    }
   },
   {
-   "t": 1791077434.26,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.oa91946",
@@ -4086,7 +4086,7 @@
    }
   },
   {
-   "t": 1791077434.31,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o92f5f1",
@@ -4103,7 +4103,7 @@
    }
   },
   {
-   "t": 1791077434.31,
+   "t": 1791078188.01,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.oe71b64",
@@ -4120,7 +4120,7 @@
    }
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o3eca09",
    "novelty": 0.4,
@@ -4153,7 +4153,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o67078d",
    "novelty": 0.35,
@@ -4186,7 +4186,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o583805",
    "novelty": 0.12,
@@ -4219,7 +4219,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o607d86",
    "novelty": 0.32,
@@ -4252,7 +4252,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.oa91946",
    "novelty": 0.07,
@@ -4285,7 +4285,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o92f5f1",
    "novelty": 0.02,
@@ -4318,7 +4318,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.oe71b64",
    "novelty": 0.2,
@@ -4351,7 +4351,7 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "queue",
    "step": 0,
    "queue": [
@@ -4446,19 +4446,19 @@
    ]
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "trial_start",
    "trial_id": "trial-W2072673546.arg1.o3eca09",
    "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.49,
+   "t": 1791078197.16,
    "type": "trial_start",
    "trial_id": "trial-W2072673546.arg1.o67078d",
    "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077448.84,
+   "t": 1791078197.4,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4476,7 +4476,7 @@
    "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.92,
+   "t": 1791078197.45,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4494,7 +4494,7 @@
    "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4512,10 +4512,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o3eca09",
+   "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4528,10 +4530,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o3eca09",
+   "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4549,10 +4553,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated to make the beloved's access to relationship available, rather than merely permitted to do so."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o3eca09",
+   "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4568,10 +4574,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o3eca09",
+   "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4584,10 +4592,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o3eca09",
+   "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077448.99,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4603,10 +4613,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Schellenberg’s parental analogy fails to establish P1 unless it shows that perfect vulnerable love requires more than a non-coercive, intelligible opportunity for the beloved to recognize and answer divine self-offer."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o3eca09",
+   "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4623,10 +4635,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o67078d",
+   "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4639,10 +4653,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o67078d",
+   "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4659,10 +4675,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Schellenberg's conditional premise needs to be restricted to needless divine hiddenness, and the a priori status of that restricted conditional is what the Theo case would have to establish."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o67078d",
+   "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4679,10 +4697,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o67078d",
+   "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4695,10 +4715,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o67078d",
+   "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.0,
+   "t": 1791078197.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4715,10 +4737,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o67078d",
+   "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4736,7 +4760,7 @@
    "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4754,7 +4778,7 @@
    "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -4762,7 +4786,7 @@
    "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -4780,7 +4804,7 @@
    "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -4798,7 +4822,7 @@
    "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.07,
+   "t": 1791078197.58,
    "type": "trial_end",
    "outcome": "known_answer",
    "status": "ok",
@@ -4806,14 +4830,14 @@
    "objection_id": "W2072673546.arg1.o67078d"
   },
   {
-   "t": 1791077449.08,
+   "t": 1791078197.59,
    "type": "revised_premise",
    "id": "W2072673546.arg1.r1",
    "text": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated to make the beloved's access to relationship available, rather than merely permitted to do so.",
    "from_trial": "trial-W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077449.08,
+   "t": 1791078197.59,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o2eaa79",
@@ -4830,7 +4854,7 @@
    }
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o2eaa79",
    "novelty": 0.42,
@@ -4863,7 +4887,7 @@
    ]
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "queue",
    "step": 1,
    "queue": [
@@ -4946,19 +4970,19 @@
    ]
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "trial_start",
    "trial_id": "trial-W2072673546.arg1.o2eaa79",
    "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077449.99,
+   "t": 1791078198.62,
    "type": "trial_start",
    "trial_id": "trial-W2072673546.arg1.o607d86",
    "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.48,
+   "t": 1791078199.1,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4976,7 +5000,7 @@
    "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.53,
+   "t": 1791078199.15,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -4994,7 +5018,7 @@
    "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.58,
+   "t": 1791078199.21,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5011,10 +5035,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o2eaa79",
+   "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.58,
+   "t": 1791078199.21,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5027,10 +5053,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o2eaa79",
+   "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.58,
+   "t": 1791078199.21,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5048,10 +5076,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "The analogical route for P1 succeeds only if the features that make Mira's obligation to make access available hold generally in the divine case, namely that God can make access available without cost to the beloved's dignity or safety and that permanent nonresistant nonbelief is not compatible with perfect vulnerable love."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o2eaa79",
+   "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.58,
+   "t": 1791078199.21,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5067,10 +5097,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Schellenberg's analogical route for P1 is successful only if it independently establishes that the divine case has grounds making access to relationship expected for each nonresistant person, not merely that vulnerable love can permissibly offer such access."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o2eaa79",
+   "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.59,
+   "t": 1791078199.21,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5088,10 +5120,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o607d86",
+   "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.59,
+   "t": 1791078199.21,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5104,10 +5138,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o607d86",
+   "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.59,
+   "t": 1791078199.22,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5124,10 +5160,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated, absent overriding reasons that the hiddenness literature leaves open, to keep voluntary relationship genuinely accessible to the beloved."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o607d86",
+   "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.59,
+   "t": 1791078199.22,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5144,10 +5182,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated to make the beloved's access to relationship available, rather than merely permitted to do so."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.o607d86",
+   "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5165,7 +5205,7 @@
    "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5183,7 +5223,7 @@
    "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.52,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -5191,7 +5231,7 @@
    "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.52,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5209,7 +5249,7 @@
    "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.52,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5227,7 +5267,7 @@
    "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077450.86,
+   "t": 1791078199.52,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -5235,14 +5275,14 @@
    "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077451.03,
+   "t": 1791078199.7,
    "type": "revised_premise",
    "id": "W2072673546.arg1.r2",
    "text": "The analogical route for P1 succeeds only if the features that make Mira's obligation to make access available hold generally in the divine case, namely that God can make access available without cost to the beloved's dignity or safety and that permanent nonresistant nonbelief is not compatible with perfect vulnerable love.",
    "from_trial": "trial-W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077451.03,
+   "t": 1791078199.7,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o105ec8",
@@ -5259,7 +5299,7 @@
    }
   },
   {
-   "t": 1791077451.95,
+   "t": 1791078200.78,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o105ec8",
    "novelty": 0.31,
@@ -5292,14 +5332,14 @@
    ]
   },
   {
-   "t": 1791077451.96,
+   "t": 1791078200.78,
    "type": "revised_premise",
    "id": "W2072673546.arg1.r3",
    "text": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated, absent overriding reasons that the hiddenness literature leaves open, to keep voluntary relationship genuinely accessible to the beloved.",
    "from_trial": "trial-W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077451.96,
+   "t": 1791078200.78,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.o3b7a88",
@@ -5316,7 +5356,7 @@
    }
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.o3b7a88",
    "novelty": 0.31,
@@ -5349,7 +5389,7 @@
    ]
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "queue",
    "step": 2,
    "queue": [
@@ -5432,19 +5472,19 @@
    ]
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "trial_start",
    "trial_id": "trial-W2072673546.arg1.oe71b64",
    "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.57,
    "type": "trial_start",
    "trial_id": "trial-W2072673546.arg1.oa91946",
    "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077452.97,
+   "t": 1791078201.58,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -5462,7 +5502,7 @@
    "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.03,
+   "t": 1791078201.63,
    "type": "turn",
    "turn": {
     "exchange": 0,
@@ -5480,7 +5520,7 @@
    "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.69,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5498,10 +5538,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": "Belief that God exists is unnecessary for an explicit, positively meaningful relationship with God, where that claim is established by the acceptance case rather than by any general account of which conditions God requires."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oe71b64",
+   "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.69,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5514,10 +5556,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oe71b64",
+   "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.69,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5536,10 +5580,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "The second premise of the expectations sub-argument is false because some person can, by accepting rather than believing that God exists, stand in mutual personal acknowledgment with God, so that belief is unnecessary for explicit, positively meaningful relationship with God."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oe71b64",
+   "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5556,10 +5602,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oe71b64",
+   "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5572,10 +5620,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oe71b64",
+   "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.1,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5592,10 +5642,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "A person can knowingly and freely enter an explicit, positively meaningful reciprocal relationship with God through acceptance that God exists, where that acceptance is distinct from belief yet sufficiently grounds personal address, trust, and response."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oe71b64",
+   "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5613,10 +5665,12 @@
     "struck_claim_ids": [],
     "concedes": true,
     "revised_premise": "The expectations sub-argument's second premise must be restricted to explicit relationship in a sense that excludes nonbelieving relationships like Mara's, and that restriction must be independently defended."
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oa91946",
+   "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5633,10 +5687,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oa91946",
+   "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5649,10 +5705,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oa91946",
+   "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.11,
+   "t": 1791078201.7,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5669,10 +5727,12 @@
     "struck_claim_ids": [],
     "concedes": false,
     "revised_premise": null
-   }
+   },
+   "trial_id": "trial-W2072673546.arg1.oa91946",
+   "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.48,
+   "t": 1791078201.95,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5690,7 +5750,7 @@
    "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.48,
+   "t": 1791078201.95,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5708,7 +5768,7 @@
    "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.48,
+   "t": 1791078201.95,
    "type": "trial_end",
    "outcome": "revision_required",
    "status": "ok",
@@ -5716,7 +5776,7 @@
    "objection_id": "W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.48,
+   "t": 1791078201.95,
    "type": "turn",
    "turn": {
     "exchange": 1,
@@ -5734,7 +5794,7 @@
    "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.48,
+   "t": 1791078201.95,
    "type": "turn",
    "turn": {
     "exchange": 2,
@@ -5752,7 +5812,7 @@
    "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.48,
+   "t": 1791078201.95,
    "type": "trial_end",
    "outcome": "misreading",
    "status": "ok",
@@ -5760,14 +5820,14 @@
    "objection_id": "W2072673546.arg1.oa91946"
   },
   {
-   "t": 1791077453.8,
+   "t": 1791078202.25,
    "type": "revised_premise",
    "id": "W2072673546.arg1.r4",
    "text": "The second premise of the expectations sub-argument is false because some person can, by accepting rather than believing that God exists, stand in mutual personal acknowledgment with God, so that belief is unnecessary for explicit, positively meaningful relationship with God.",
    "from_trial": "trial-W2072673546.arg1.oe71b64"
   },
   {
-   "t": 1791077453.8,
+   "t": 1791078202.25,
    "type": "objection",
    "objection": {
     "id": "W2072673546.arg1.od10c25",
@@ -5784,7 +5844,7 @@
    }
   },
   {
-   "t": 1791077454.09,
+   "t": 1791078202.53,
    "type": "novelty",
    "objection_id": "W2072673546.arg1.od10c25",
    "novelty": 0.45,
@@ -5817,25 +5877,25 @@
    ]
   },
   {
-   "t": 1791077468.93,
+   "t": 1791078202.53,
    "type": "brief",
    "brief_id": "brief-W2072673546.arg1.o2eaa79",
    "objection_id": "W2072673546.arg1.o2eaa79"
   },
   {
-   "t": 1791077482.8,
+   "t": 1791078202.53,
    "type": "brief",
    "brief_id": "brief-W2072673546.arg1.o3eca09",
    "objection_id": "W2072673546.arg1.o3eca09"
   },
   {
-   "t": 1791077496.87,
+   "t": 1791078202.54,
    "type": "brief",
    "brief_id": "brief-W2072673546.arg1.o607d86",
    "objection_id": "W2072673546.arg1.o607d86"
   },
   {
-   "t": 1791077496.87,
+   "t": 1791078202.54,
    "type": "run_end",
    "stop_reason": "trial budget per target reached (6)"
   }

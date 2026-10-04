@@ -1,0 +1,158 @@
+{
+ "diversity": "degraded: 2 families",
+ "families": [
+  "anthropic",
+  "openai"
+ ],
+ "roles": {
+  "formalizer": {
+   "provider": "claude_cli",
+   "model": "sonnet",
+   "family": "anthropic",
+   "effort": "medium"
+  },
+  "defender_a": {
+   "provider": "claude_cli",
+   "model": "sonnet",
+   "family": "anthropic",
+   "effort": "medium"
+  },
+  "extractor": {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-terra",
+   "family": "openai",
+   "effort": "low"
+  },
+  "reranker": {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-terra",
+   "family": "openai",
+   "effort": "low"
+  },
+  "defender_b": {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-terra",
+   "family": "openai",
+   "effort": "medium"
+  },
+  "referee": {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-sol",
+   "family": "openai",
+   "effort": "medium"
+  },
+  "generators": [
+   {
+    "provider": "claude_cli",
+    "model": "sonnet",
+    "family": "anthropic",
+    "effort": "medium"
+   },
+   {
+    "provider": "claude_cli",
+    "model": "opus",
+    "family": "anthropic",
+    "effort": "medium"
+   },
+   {
+    "provider": "codex_cli",
+    "model": "gpt-5.6-terra",
+    "family": "openai",
+    "effort": "medium"
+   },
+   {
+    "provider": "codex_cli",
+    "model": "gpt-5.6-sol",
+    "family": "openai",
+    "effort": "medium"
+   }
+  ],
+  "naive_questioner": {
+   "provider": "claude_cli",
+   "model": "haiku",
+   "family": "anthropic",
+   "effort": "low"
+  }
+ },
+ "models": [
+  {
+   "provider": "claude_cli",
+   "model": "sonnet",
+   "family": "anthropic",
+   "ok": true
+  },
+  {
+   "provider": "claude_cli",
+   "model": "opus",
+   "family": "anthropic",
+   "ok": true
+  },
+  {
+   "provider": "claude_cli",
+   "model": "haiku",
+   "family": "anthropic",
+   "ok": true
+  },
+  {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-terra",
+   "family": "openai",
+   "ok": true
+  },
+  {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-sol",
+   "family": "openai",
+   "ok": true
+  },
+  {
+   "provider": "codex_cli",
+   "model": "gpt-5.6-luna",
+   "family": "openai",
+   "ok": true
+  }
+ ],
+ "targets_meta": {
+  "generated_at": "2026-10-04T00:59:42.233756+00:00",
+  "screened": 67,
+  "eligible_fresh": 21,
+  "eligible_classic": 17,
+  "note": "No fresh full-text paper on divine hiddenness itself was available; fresh targets fall back to philosophy of religion (CLAUDE.md order)."
+ },
+ "map_stats": {
+  "fulltext_claims": {
+   "proposed": 319,
+   "kept": 303,
+   "drop_rate": 0.05
+  },
+  "abstract_claims": {
+   "proposed": 2642,
+   "kept": 2615,
+   "drop_rate": 0.01
+  },
+  "claims_indexed": 2918,
+  "abstracts_indexed": 1212,
+  "embedder": "bge-small-en-v1.5 (local)"
+ },
+ "corpus": {
+  "records": 1212,
+  "with_abstract": 1212,
+  "full_texts": 75,
+  "fresh": 635
+ },
+ "method_notes": [
+  "Generators never see literature: their context builder only receives the argument's own premises (enforced by construction and by a test that inspects the module's imports).",
+  "Every extracted claim carries a verbatim quote (at most two sentences) found in the source text (rapidfuzz partial_ratio >= 90); claims whose quote cannot be found are dropped.",
+  "Citations are corpus claim ids only. Code verifies each cited id (it exists and the defender was shown it, or it belongs to the argument's own paper) and strikes the rest; known_answer requires a verified literature id.",
+  "The Formalizer's validity verdicts come from a truth table in code, not from the model; a proposed missing premise is kept only if the re-check makes the argument valid without making the premises inconsistent.",
+  "After a trial ends in revision_required, the revised premise joins the argument: later trials in the same run test the revised argument, and one new objection attacks the revised premise (depth at most 2).",
+  "The objection keeps the outcome most favourable to the original argument across the two defenders, so an outcome of revision_required means both defenders needed a premise change.",
+  "Blind generators run in parallel and are each assigned a different stated premise for coverage; the Hidden-Premise Attacker always targets the Formalizer's missing premise.",
+  "Subscription CLI providers (codex, claude -p) ignore temperature; diversity comes from different models and roles.",
+  "Novelty is never claimed: it is 1 - max similarity among same_move/related matches in what retrieval found, reported with records searched, the three nearest matches and 'Further human review required.'"
+ ],
+ "tracing": {
+  "backend": "local MLflow (mlruns/)",
+  "traces": 1315
+ }
+}

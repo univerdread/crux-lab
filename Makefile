@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 TARGET ?=
 
-.PHONY: setup check providers corpus map run runs export eval demo demo-video serve docs databricks
+.PHONY: setup check providers corpus map run runs export eval demo demo-video smoke serve docs databricks
 
 setup:
 	@test -d .venv || (command -v uv >/dev/null && uv venv --python 3.11 .venv || python3.11 -m venv .venv)
@@ -38,8 +38,12 @@ eval:
 demo: export
 	cd web && npm run build && npm run preview
 
+# Playwright needs a Chromium; set PW_CHROMIUM=<path to a chrome binary> to reuse one already on disk.
+smoke:
+	cd web && npm run build && npx playwright test --project=smoke
+
 demo-video:
-	cd web && npx playwright test demo.spec.ts
+	cd web && npm run build && npx playwright test --project=demo
 
 serve:
 	$(PY) -m crux_lab.cli serve
