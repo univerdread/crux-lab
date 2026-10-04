@@ -130,18 +130,20 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
         <Disclaimer text={b.disclaimer} />
         <p className="text-[0.92rem] text-ink-soft">
           From <cite className="not-italic">{displayTitle(a.paper_title)}</cite> <span className="font-mono text-[0.75rem]">({a.paper_id})</span>
-          {" · "}
-          <Link to={`/trial/${encodeURIComponent(trialId)}`} className="link no-print">
-            the full trial
-          </Link>
-          {runId ? (
-            <>
-              {" · "}
-              <Link to={`/lab/${encodeURIComponent(runId)}?at=end`} className="link no-print">
-                the run
-              </Link>
-            </>
-          ) : null}
+          <span className="no-print">
+            {" · "}
+            <Link to={`/trial/${encodeURIComponent(trialId)}`} className="link">
+              the full trial
+            </Link>
+            {runId ? (
+              <>
+                {" · "}
+                <Link to={`/lab/${encodeURIComponent(runId)}?at=end`} className="link">
+                  the run
+                </Link>
+              </>
+            ) : null}
+          </span>
         </p>
       </header>
 
