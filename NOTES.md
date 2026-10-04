@@ -1,5 +1,31 @@
 # NOTES — newest entry first
 
+## ☀️ MORNING SUMMARY — read this first (written 07:40 by Claude)
+**State:** everything in PROGRESS.md is done except P1.2 (PhilArchive OAI blocked: API key / Cloudflare 403,
+re-checked hourly, still 403). Gates A/B/C were met by ~03:45; since then only polish, fixes and docs.
+
+**Numbers (all read from web/public/data):** corpus 1212 OpenAlex records = 962 distinct works,
+75 open-access full texts; 5 target papers → 55 objections → 30 trials
+(revision_required 18, misreading 11, known_answer 1) → 14 research briefs.
+E1 prior-art recall@5: 86% (full pipeline) vs 16% (BM25), n=50.
+E2: 10/10 misreadings caught; gold reply cited by a defender 7/10,
+labelled known_answer only 1/10 (Referee is conservative). E3: constrained roles ≈ double the spread
+of objections; its survival column is n/a (see below). Grounding audit (docs/AUDIT.md): 0 problems.
+
+**⚠️ Needs you:** Codex hit your ChatGPT workspace **spend cap** at ~03:58 → check that workspace's billing.
+I set `DISABLE_PROVIDERS=codex_cli` in `.env`; remove the line to re-enable Codex.
+
+**To submit (deadline 15:00 Stockholm):**
+1. `make demo` (or `cd web && npm install && npm run build && npm run preview`) → http://localhost:4680; click
+   / → top research direction → its run (/lab, press Replay) → a trial → /results → /about.
+2. Read one brief + its trial yourself (top: /brief/brief-W7212186029.arg1.o10f4f4).
+3. Deploy `web/dist` (static; `web/vercel.json` and `web/public/_redirects` handle deep links).
+4. Record the 2-minute video from `docs/DEMO.md` (a silent 55 s walkthrough is in `docs/demo.webm`).
+5. Paste from `docs/SUBMISSION.md` (draft text with real numbers); repo is private → make public if required.
+
+**Checks you can run:** `make check` (50 Python + 9 web tests + typecheck), `make smoke` (10 page smoke + 8 axe
+accessibility), `make live-test` (FastAPI SSE live mode), `PYTHONPATH=. .venv/bin/python scripts/audit.py`.
+
 ## 2026-10-04 07:00 — duplicate-records follow-ups closed (Claude)
 - Novelty now excludes every record of the target work; the gauntlet treats claims from another record
   of the target work as the argument's own (never literature for known_answer); E2 scores gold replies
