@@ -1,0 +1,91 @@
+"""Fill README.md's RESULTS and LIMITS blocks from web/public/data (numbers are never typed by hand)."""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+D = ROOT / "web" / "public" / "data"
+
+
+def load(name):
+    p = D / name
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+def block(tag: str, body: str, text: str) -> str:
+    start, end = f"<!-- {tag} -->", f"<!-- /{tag} -->"
+    new = f"{start}\n{body.strip()}\n{end}"
+    if end in text:
+        return re.sub(re.escape(start) + r".*?" + re.escape(end), new, text, flags=re.S)
+    return text.replace(start, new)
+
+
+def main() -> None:
+    idx, briefs, res, about = load("index.json"), load("briefs.json") or [], load("results.json") or {}, load("about.json") or {}
+    if not idx:
+        raise SystemExit("run `make export` first")
+    c = about.get("corpus", {})
+    out = ["## What the lab produced (generated from `web/public/data`)", "",
+           f"- Corpus: **{c.get('records')}** OpenAlex records ({c.get('fresh')} published since 2026-08-01), "
+           f"**{c.get('full_texts')}** open-access full texts.",
+           f"- Targets: **{len(idx['targets'])}** papers; **{idx['objections']}** objections generated; "
+           f"**{idx['trials']}** full trials; **{idx['briefs']}** research briefs.",
+           f"- Model families: {about.get('diversity')} ({', '.join(about.get('families', []))}).", "",
+           "| Target | Objections | Trials | Outcomes | Briefs |", "| --- | --- | --- | --- | --- |"]
+    for r in idx["runs"]:
+        oc = ", ".join(f"{k} {v}" for k, v in sorted(r["outcomes"].items()))
+        out.append(f"| {r['title'][:70]} ({r['kind']}) | {r['objections']} | {r['trials']} | {oc} | {len(r['briefs'])} |")
+    if briefs:
+        out += ["", "**Top research directions** (survival × novelty):", ""]
+        for b in briefs[:5]:
+            out.append(f"- *{b['research_question']}* — {b['outcome']}, novelty {b['novelty']:.2f}, "
+                       f"{b['records_searched']} records searched. Further human review required.")
+    e1, e2, e3 = res.get("e1"), res.get("e2"), res.get("e3")
+    out += ["", "### Evaluation (automatic, no human labels)", ""]
+    if e1:
+        out += [f"**E1 prior-art recall@5** (n={e1['n']}):", "", "| Method | recall@5 |", "| --- | --- |"]
+        out += [f"| {m['name']} | {m['recall_at_5']:.0%} ({m['hits']}/{e1['n']}) |" for m in e1["methods"]]
+        out.append("")
+    if e2:
+        k, m = e2["known_answer"], e2["misreading"]
+        out += [f"**E2 gauntlet calibration**: {k['labelled_known_answer']}/{k['n']} published objections labelled "
+                f"known_answer, {k['correct_reply_cited']}/{k['n']} with the correct reply cited and verified; "
+                f"{m['caught']}/{m['n']} deliberate misreadings labelled misreading.", ""]
+    if e3:
+        out += ["**E3 diversity ablation**:", "",
+                "| Condition | n | distinct premises / argument | mean pairwise distance | passes pre-screen | novelty > 0.5 |",
+                "| --- | --- | --- | --- | --- | --- |"]
+        out += [f"| {x['name']} | {x['n']} | {x['distinct_premises']} | {x['mean_pairwise_distance']} | "
+                f"{x.get('share_passing_prescreen', 0):.0%} | {x['share_novelty_gt_05']:.0%} |" for x in e3["conditions"]]
+        out.append("")
+    if not (e1 or e2 or e3):
+        out.append("No evaluation results yet.")
+    lim = ["## Limits (read before trusting anything)", "",
+           "- **Never a novelty claim.** Novelty is `1 − max similarity` to what our retrieval found in "
+           f"{about.get('map_stats', {}).get('claims_indexed', '?')} indexed claims, "
+           f"{about.get('map_stats', {}).get('abstracts_indexed', '?')} abstracts and a live OpenAlex query. "
+           "Books, paywalled papers and anything OpenAlex lacks are invisible to it.",
+           "- **PhilArchive was unavailable**: its OAI-PMH API now needs a key (api.philpapers.org) or blocks our client "
+           "(philarchive.org, Cloudflare). Fresh targets come from OpenAlex instead, and none of the fresh open-access "
+           "full texts was about divine hiddenness itself, so fresh targets are philosophy of religion more broadly.",
+           f"- **Model diversity is degraded**: {about.get('diversity')}. The design wants Defender A, Defender B and the "
+           "Referee from three different families; without Databricks/OpenRouter keys only Anthropic (Claude) and "
+           "OpenAI (Codex) models were reachable, through subscription CLIs.",
+           "- The Referee and defenders are LLMs; outcome labels are dialectical judgements by models, not verdicts on "
+           "truth, and they are noisy. The evals are small (n reported with each) and have no human labels.",
+           "- Reconstructions are the Extractor's; every premise has a verbatim quote, but an author might reconstruct "
+           "their argument differently. Read the paper.", ""]
+    for name, e in (("E1", e1), ("E2", e2), ("E3", e3)):
+        if e and e.get("limits"):
+            lim.append(f"- {name}: {e['limits']}")
+    text = (ROOT / "README.md").read_text()
+    text = block("RESULTS", "\n".join(out), text)
+    text = block("LIMITS", "\n".join(lim), text)
+    (ROOT / "README.md").write_text(text)
+    print("README results/limits updated")
+
+
+if __name__ == "__main__":
+    main()

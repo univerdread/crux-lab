@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 TARGET ?=
 
-.PHONY: setup check providers corpus map run runs export eval demo demo-video serve
+.PHONY: setup check providers corpus map run runs export eval demo demo-video serve docs databricks
 
 setup:
 	@test -d .venv || (command -v uv >/dev/null && uv venv --python 3.11 .venv || python3.11 -m venv .venv)
@@ -43,3 +43,10 @@ demo-video:
 
 serve:
 	$(PY) -m crux_lab.cli serve
+
+docs: export
+	$(PY) scripts/make_demo_md.py
+	$(PY) scripts/readme_results.py
+
+databricks:
+	$(PY) -m crux_lab.databricks_sync
