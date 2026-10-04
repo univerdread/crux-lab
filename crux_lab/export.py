@@ -98,7 +98,12 @@ def main() -> dict:
     edges = [e.model_dump() for e in store.edges()]
     (out / "claims.json").write_text(json.dumps({"claims": claims, "arguments": args, "edges": edges},
                                                 ensure_ascii=False))
-    records = {pid: _record(papers[pid]) for pid in sorted(needed) if pid in papers}
+    live = {}
+    from crux_lab.lab.novelty import LIVE_CACHE
+    for f in LIVE_CACHE.glob("*.json") if LIVE_CACHE.exists() else []:
+        for w in json.loads(f.read_text()):
+            live.setdefault(w["id"], {**w, "source": "openalex_live"})
+    records = {pid: _record(papers.get(pid) or live[pid]) for pid in sorted(needed) if pid in papers or pid in live}
     (out / "records.json").write_text(json.dumps(records, ensure_ascii=False))
 
     results = {k: _read(RESULTS / f"{k}.json") for k in ("e1", "e2", "e3")}

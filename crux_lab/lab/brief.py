@@ -54,8 +54,11 @@ async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], o
     nearest = [NearestMatch(**m) for m in novelty.get("nearest", [])]
     closest = []
     for m in nearest:
-        closest.append({**record_ref(papers.get(m.paper_id), m.record_id), "verdict": m.verdict,
-                        "similarity": m.similarity, "quote": m.quote})
+        ref = record_ref(papers.get(m.paper_id), m.record_id)
+        if "title" not in ref:   # live OpenAlex record (cached in data/raw/openalex_live, exported to records)
+            ref.update(paper_id=m.paper_id, title=m.title,
+                       url=f"https://openalex.org/{m.paper_id.split(':', 1)[-1]}")
+        closest.append({**ref, "verdict": m.verdict, "similarity": m.similarity, "quote": m.quote})
     for cid in trial.cited_claim_ids:
         pid = cid.rsplit(".", 1)[0]
         p = next((pp for k, pp in papers.items() if k.endswith(":" + pid) or k == pid), None)

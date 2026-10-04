@@ -109,9 +109,10 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
   **Check:** run JSON shows the families used.
 - [ ] P5.3 Run all targets in the background, then export.
   **Check:** ≥ 3 runs and ≥ 3 briefs exported.
-- [ ] P5.4 Live mode: FastAPI `/api/run` (SSE) + `/api/prior-art`; frontend switches on
+- [x] P5.4 Live mode: FastAPI `/api/run` (SSE) + `/api/prior-art`; frontend switches on
   `VITE_API_URL`.
   **Check:** SSE emits events for a cached run.
+  → crux_lab/api/server.py; tests/test_api.py replays a cached run over SSE (run_start…run_end, done). Frontend switch on VITE_API_URL is in the web build.
 
 ## P6 Evaluation — target 08:30 · GATE C (feature freeze)
 

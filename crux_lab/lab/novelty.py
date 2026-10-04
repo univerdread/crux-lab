@@ -71,6 +71,12 @@ class NoveltyResult:
                 "matches": [m.model_dump() for m in self.matches]}
 
 
+def keywords(text: str, n: int = 10) -> str:
+    """Content words for a live search (long sentences match nothing; punctuation breaks filters)."""
+    from crux_lab.graph.index import tokenize
+    return " ".join(list(dict.fromkeys(tokenize(text)))[:n])
+
+
 def _live_today() -> int:
     import time
     if not LIVE_CACHE.exists():
@@ -94,7 +100,7 @@ def live_openalex(query: str, n: int = 10) -> tuple[list[Passage], str]:
     else:
         try:
             works = [openalex.to_paper(w) for w in openalex.search(
-                " ".join(query.split()[:30]), max_records=n, per_page=n, field="title_and_abstract.search")]
+                keywords(query), max_records=n, per_page=n, field="search")]
             path.write_text(json.dumps(works))
             status = "ok"
         except Exception as e:  # noqa: BLE001
@@ -128,7 +134,8 @@ async def check(client: LLMClient, objection_id: str, objection: str, argument_t
             add(Passage(f"abs:{h.id}", h.id, h.text[:1500], h.meta.get("title", ""), "abstracts"), 0.8 / (60 + rank))
     live_status, live_n = "skipped", 0
     if use_live:
-        live, live_status = live_openalex(rs.plain_english if rs else objection)
+        import asyncio
+        live, live_status = await asyncio.to_thread(live_openalex, rs.plain_english if rs else objection)
         live_n = len(live)
         for rank, p in enumerate(live):
             add(p, 0.8 / (60 + rank))

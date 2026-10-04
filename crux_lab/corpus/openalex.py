@@ -58,10 +58,13 @@ def to_paper(w: dict, query: str = "") -> dict:
 def search(query: str | None = None, filters: dict | None = None, max_records: int = 400,
            per_page: int = 200, field: str = "title_and_abstract.search") -> Iterator[dict]:
     flt = dict(filters or {})
-    if query:
+    params: dict = {"per_page": per_page, "select": SELECT, "cursor": "*"}
+    if query and field == "search":
+        params["search"] = query          # relevance-ranked full search; no filter-syntax pitfalls
+    elif query:
         flt[field] = SEARCH_STRINGS.get(query, query)
-    params = {"filter": ",".join(f"{k}:{v}" for k, v in flt.items()), "per_page": per_page,
-              "select": SELECT, "cursor": "*"}
+    if flt:
+        params["filter"] = ",".join(f"{k}:{v}" for k, v in flt.items())
     n = 0
     while n < max_records:
         r = http.get(BASE, params=params, timeout=60)
