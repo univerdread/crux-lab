@@ -28,13 +28,20 @@ describe("attributeTurns", () => {
 
 // Integration: every exported run replays to the end with every turn attributed and the
 // final outcomes equal to the trials stored in the run file.
-const RUNS = path.resolve(__dirname, "../../../public/data/runs");
-const files = fs.existsSync(RUNS) ? fs.readdirSync(RUNS).filter((f) => f.endsWith(".json")) : [];
+const DATA = path.resolve(__dirname, "../../../public/data");
+const runDirs = [path.join(DATA, "runs")].concat(
+  fs.existsSync(path.join(DATA, "topics"))
+    ? fs.readdirSync(path.join(DATA, "topics")).map((t) => path.join(DATA, "topics", t, "runs"))
+    : [],
+);
+const files = runDirs
+  .filter((d) => fs.existsSync(d))
+  .flatMap((d) => fs.readdirSync(d).filter((f) => f.endsWith(".json")).map((f) => path.join(d, f)));
 
 describe.skipIf(!files.length)("exported runs replay faithfully", () => {
   for (const f of files) {
-    it(f, () => {
-      const run = JSON.parse(fs.readFileSync(path.join(RUNS, f), "utf8")) as Run;
+    it(path.relative(DATA, f), () => {
+      const run = JSON.parse(fs.readFileSync(f, "utf8")) as Run;
       const attribution = attributeTurns(run);
       run.events.forEach((ev, i) => {
         if (ev.type === "turn") expect(attribution[i], `turn event ${i} unattributed`).not.toBeNull();
