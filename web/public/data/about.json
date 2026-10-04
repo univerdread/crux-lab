@@ -151,7 +151,8 @@
   "Blind generators run in parallel and are each assigned a different stated premise for coverage; the Hidden-Premise Attacker always targets the Formalizer's missing premise.",
   "Subscription CLI providers (codex, claude -p) ignore temperature; diversity comes from different models and roles.",
   "Novelty is never claimed: it is 1 - max similarity among same_move/related matches in what retrieval found, reported with records searched, the three nearest matches and 'Further human review required.'",
-  "Outcome distribution across all trials: revision_required 18, misreading 11, known_answer 1. No trial ended rebutted or standing: defenders usually save the argument by narrowing a premise, which counts as revision_required, so read it as 'this premise needs work', not as a defeated argument."
+  "Outcome distribution across all trials: revision_required 18, misreading 11, known_answer 1. No trial ended rebutted or standing: defenders usually save the argument by narrowing a premise, which counts as revision_required, so read it as 'this premise needs work', not as a defeated argument.",
+  "OpenAlex lists some papers more than once (versions, preprint + article): the 1212 corpus records are 962 distinct works. 'Records searched' counts records; nearest matches, the prior-art search box and E1 are scored per distinct work."
  ],
  "tracing": {
   "backend": "local MLflow (mlruns/)",

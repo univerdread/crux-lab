@@ -198,7 +198,11 @@ def main() -> dict:
             + (f". No trial ended {' or '.join(never)}: defenders usually save the argument by narrowing a premise, "
                "which counts as revision_required, so read it as 'this premise needs work', not as a defeated argument."
                if never else "."))
-    about["method_notes"] = METHOD_NOTES + ([skew] if tot else [])
+    n_works = len(set(work_ids(corpus).values()))
+    dup_note = (f"OpenAlex lists some papers more than once (versions, preprint + article): the {len(corpus)} corpus "
+                f"records are {n_works} distinct works. 'Records searched' counts records; nearest matches, the "
+                "prior-art search box and E1 are scored per distinct work.")
+    about["method_notes"] = METHOD_NOTES + ([skew] if tot else []) + [dup_note]
     about["tracing"] = tracing_summary()
     (out / "about.json").write_text(json.dumps(about, ensure_ascii=False, indent=1))
     index = {"generated_at": datetime.now(timezone.utc).isoformat(), "runs": runs_summary,
