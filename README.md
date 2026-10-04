@@ -138,7 +138,11 @@ make runs           # all targets in parallel
 make eval           # E1–E3 → results/
 make export         # → web/public/data/
 make demo           # build + preview the site (http://localhost:4680) from the committed export
-make check          # pytest (no network) + web typecheck
+make check          # pytest (no network) + web typecheck + web unit/replay tests
+make smoke          # Playwright: 10 page smoke tests (+ screenshots) and 8 axe accessibility checks
+make live-test      # live mode end to end: FastAPI SSE server + a VITE_API_URL build
+make docs           # export, then regenerate docs/DEMO.md, README results/limits, docs/AUDIT.md, docs/SUBMISSION.md
+make databricks     # claims Delta table + AI Search Delta Sync index (needs workspace credentials)
 ```
 
 Without `make`: `python -m crux_lab.cli <cmd>`.
@@ -155,20 +159,25 @@ ChatGPT app, `claude -p`). The CLI providers run as isolated completions: no too
 web, no user config. Every call goes through one client with a disk cache keyed on
 `sha256(provider, model, messages, params)`, a spend guard, Pydantic-validated JSON with two
 retries carrying the validation error, and an MLflow trace (Databricks experiment when credentials
-exist, otherwise local `mlruns/`).
+exist, otherwise local `mlruns/`). `DISABLE_PROVIDERS=codex_cli` (in `.env`) switches a provider off
+while cached calls still replay.
 
 ## Layout
 
 ```
 crux_lab/
-  config.py  cli.py  export.py
+  config.py  cli.py  export.py  databricks_sync.py
   llm/       client, providers, cache, budget, tracing, resolve
-  corpus/    openalex, philarchive_oai, pdf, targets, build
+  corpus/    openalex, philarchive_oai, pdf, targets, dedup (same-work detection), build
   graph/     schema, store (SQLite), extract, logic, formalize, index, build
   agents/    roles.py, prompts/*.md
   lab/       debate (exchange engine), generators, novelty, gauntlet, director, brief, run
-  eval/      e1_prior_art, e2_calibration, e3_diversity
+  eval/      e1_prior_art, e2_calibration, e3_diversity (+ fixtures/)
   api/       server.py (FastAPI + SSE live mode)
+scripts/     audit.py (grounding audit), make_demo_md.py, readme_results.py, make_submission_md.py, dedupe_nearest.py
+data/        corpus.jsonl, targets.json, runs/, briefs/, map_stats.json (raw texts, SQLite store: local only)
+results/     e1.json, e2.json, e3.json (+ e2_v1_discarded.json)
+docs/        DEMO.md, SUBMISSION.md, AUDIT.md, CRUX_INVENTORY.md, screens/, demo.webm
 web/         Vite + React + TypeScript + Tailwind site (replay by default; VITE_API_URL = live)
 ```
 
