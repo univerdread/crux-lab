@@ -48,7 +48,8 @@ def _eval(a):
 def _check(a):
     rc = subprocess.call([sys.executable, "-m", "pytest", "-q", "-m", "not network"], cwd=ROOT)
     if rc == 0 and (ROOT / "web" / "package.json").exists():
-        rc = subprocess.call(["npm", "run", "-s", "typecheck"], cwd=ROOT / "web")
+        rc = subprocess.call(["npm", "run", "-s", "typecheck"], cwd=ROOT / "web") or \
+            subprocess.call(["npm", "run", "-s", "test"], cwd=ROOT / "web")
     sys.exit(rc)
 
 

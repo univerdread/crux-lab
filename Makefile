@@ -12,7 +12,7 @@ setup:
 
 check:
 	$(PY) -m pytest -q -m "not network"
-	@if [ -f web/package.json ]; then cd web && npm run -s typecheck; fi
+	@if [ -f web/package.json ]; then cd web && npm run -s typecheck && npm run -s test; fi
 
 providers:
 	$(PY) -m crux_lab.cli providers
