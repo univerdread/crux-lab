@@ -27,6 +27,16 @@ export default function Landing() {
             it challenges, the replies it survived, the closest passages the lab could find, and how many records it
             searched. None of it is a claim of novelty: further human review is always required.
           </p>
+          <p className="measure mt-3 text-[0.95rem] text-ink-soft">
+            This build studies divine hiddenness and nearby philosophy of religion.
+            {index.status === "ready" && index.data.targets.length ? (
+              <>
+                {" "}
+                {index.data.targets.filter((t) => t.kind === "fresh").length} of {index.data.targets.length} target papers
+                were published after 1 August 2026, so the models cannot have read published replies to them.
+              </>
+            ) : null}
+          </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#directions" className="btn">
               Research directions ↓
