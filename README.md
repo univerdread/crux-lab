@@ -7,7 +7,9 @@ research brief: *here is an open question, here is how far it got, here is what 
 would have to show.*
 
 Built for Hack-Nation's 7th Global AI Hackathon, Challenge 3 "Agentic Scientific Discovery"
-(sponsor: Databricks). Subfield: **divine hiddenness** and nearby philosophy of religion.
+(sponsor: Databricks). Topics run so far: **divine hiddenness** (Codex + Claude) and **decision theory in philosophy
+of religion** — Newcomb's problem, Pascal's wager, God's choice of world (evroc's open models + Claude, 8 model
+families). Any topic can be added with one file (see [Topics](#topics)).
 
 > In philosophy, the debate is the experiment.
 
