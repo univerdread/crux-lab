@@ -3,80 +3,6 @@
  "current_export": "divine-hiddenness",
  "topics": [
   {
-   "slug": "decision-theory",
-   "name": "Decision theory in philosophy of religion",
-   "description": "Decision-theoretic reasoning about God and by God: Newcomb's problem and divine foreknowledge (God as the perfect predictor), Pascal's wager with its infinite utilities and the many-gods objection, and God's own decision problem, whether a perfect being must create the best world, and whether there is one to create.",
-   "area": "philosophy of religion and decision theory",
-   "default": false,
-   "status": "not_run",
-   "data": "topics/decision-theory/",
-   "counts": null,
-   "searches": [
-    "Newcomb's problem",
-    "Pascal's wager",
-    "many-gods objection",
-    "decision theory and God",
-    "God's choice of world",
-    "divine foreknowledge and choice",
-    "infinite utility",
-    "pragmatic arguments for belief"
-   ],
-   "config": {
-    "slug": "decision-theory",
-    "name": "Decision theory in philosophy of religion",
-    "description": "Decision-theoretic reasoning about God and by God: Newcomb's problem and divine foreknowledge (God as the perfect predictor), Pascal's wager with its infinite utilities and the many-gods objection, and God's own decision problem, whether a perfect being must create the best world, and whether there is one to create.",
-    "area": "philosophy of religion and decision theory",
-    "queries": {
-     "Newcomb's problem": "\"Newcomb's problem\" OR \"Newcomb problem\" OR \"Newcomb's paradox\"",
-     "Pascal's wager": "\"Pascal's wager\" OR \"Pascalian wager\"",
-     "many-gods objection": "\"many gods objection\" OR \"many-gods objection\"",
-     "decision theory and God": "\"decision theory\" AND (God OR theism OR religious)",
-     "God's choice of world": "\"best possible world\" AND (God OR creation OR creator)",
-     "divine foreknowledge and choice": "\"divine foreknowledge\" AND (decision OR choice OR deliberation OR Newcomb)",
-     "infinite utility": "(\"infinite utility\" OR \"infinite expected utility\" OR \"infinite value\") AND (God OR wager OR heaven)",
-     "pragmatic arguments for belief": "\"pragmatic argument\" AND (God OR theism OR theistic)"
-    },
-    "fresh_from": "2026-08-01",
-    "fresh_queries": [
-     "\"decision theory\"",
-     "\"Pascal's wager\" OR Newcomb OR \"expected utility\"",
-     "\"philosophy of religion\""
-    ],
-    "relevant": "newcomb|wager|pascal|decision|expected (utilit|value)|infinite (utilit|value)|foreknow|predict|best possible world|divine (choice|freedom|creat)|many.gods|pragmatic|rational choice|god\\b|theis|atheis",
-    "relevance_levels": [
-     "none",
-     "touches philosophy of religion or decision theory",
-     "applies decision-theoretic or rational-choice reasoning to a religious question",
-     "directly about decision theory and God (Newcomb-type problems, Pascal's wager, God's choice among worlds)"
-    ],
-    "schools": [
-     "causal decision theory",
-     "evidential decision theory",
-     "classical theism",
-     "Molinism and middle knowledge",
-     "open theism",
-     "Bayesian formal epistemology"
-    ]
-   },
-   "schools": [
-    "causal decision theory",
-    "evidential decision theory",
-    "classical theism",
-    "Molinism and middle knowledge",
-    "open theism",
-    "Bayesian formal epistemology"
-   ],
-   "config_path": "config/topics/decision-theory.yaml",
-   "commands": [
-    "make corpus TOPIC=decision-theory",
-    "make targets TOPIC=decision-theory",
-    "make map TOPIC=decision-theory",
-    "make runs TOPIC=decision-theory",
-    "make eval TOPIC=decision-theory",
-    "make export TOPIC=decision-theory"
-   ]
-  },
-  {
    "slug": "divine-hiddenness",
    "name": "Divine hiddenness",
    "description": "Schellenberg's hiddenness argument (1993 onward) and the debate it started: whether a perfectly loving God would allow nonresistant nonbelief, plus recent philosophy of religion.",
@@ -91,6 +17,18 @@
     "briefs": 14,
     "records": 1212,
     "works": 962
+   },
+   "families": [
+    "anthropic",
+    "openai"
+   ],
+   "lead": {
+    "id": "brief-W7203485685.arg1.ofd28a0",
+    "question": "Does robust contrastive responsibility for actualising one world rather than another require irreducibly de se content in divine cognition, or can a rigid, de re representation of an agent's controlling intention and its act suffice when the agent's identity is not in doubt?",
+    "score": 0.4224,
+    "outcome": "revision_required",
+    "novelty": 0.88,
+    "quality": 0.6
    },
    "searches": [
     "divine hiddenness",
@@ -152,8 +90,88 @@
     "make targets",
     "make map",
     "make runs",
+    "make assess",
+    "make revise",
     "make eval",
     "make export"
+   ]
+  },
+  {
+   "slug": "decision-theory",
+   "name": "Decision theory in philosophy of religion",
+   "description": "Decision-theoretic reasoning about God and by God: Newcomb's problem and divine foreknowledge (God as the perfect predictor), Pascal's wager with its infinite utilities and the many-gods objection, and God's own decision problem, whether a perfect being must create the best world, and whether there is one to create.",
+   "area": "philosophy of religion and decision theory",
+   "default": false,
+   "status": "not_run",
+   "data": "topics/decision-theory/",
+   "counts": null,
+   "families": null,
+   "lead": null,
+   "searches": [
+    "Newcomb's problem",
+    "Pascal's wager",
+    "many-gods objection",
+    "decision theory and God",
+    "God's choice of world",
+    "divine foreknowledge and choice",
+    "infinite utility",
+    "pragmatic arguments for belief"
+   ],
+   "config": {
+    "slug": "decision-theory",
+    "name": "Decision theory in philosophy of religion",
+    "description": "Decision-theoretic reasoning about God and by God: Newcomb's problem and divine foreknowledge (God as the perfect predictor), Pascal's wager with its infinite utilities and the many-gods objection, and God's own decision problem, whether a perfect being must create the best world, and whether there is one to create.",
+    "area": "philosophy of religion and decision theory",
+    "queries": {
+     "Newcomb's problem": "\"Newcomb's problem\" OR \"Newcomb problem\" OR \"Newcomb's paradox\"",
+     "Pascal's wager": "\"Pascal's wager\" OR \"Pascalian wager\"",
+     "many-gods objection": "\"many gods objection\" OR \"many-gods objection\"",
+     "decision theory and God": "\"decision theory\" AND (God OR theism OR religious)",
+     "God's choice of world": "\"best possible world\" AND (God OR creation OR creator)",
+     "divine foreknowledge and choice": "\"divine foreknowledge\" AND (decision OR choice OR deliberation OR Newcomb)",
+     "infinite utility": "(\"infinite utility\" OR \"infinite expected utility\" OR \"infinite value\") AND (God OR wager OR heaven)",
+     "pragmatic arguments for belief": "\"pragmatic argument\" AND (God OR theism OR theistic)"
+    },
+    "fresh_from": "2026-08-01",
+    "fresh_queries": [
+     "\"decision theory\"",
+     "\"Pascal's wager\" OR Newcomb OR \"expected utility\"",
+     "\"philosophy of religion\""
+    ],
+    "relevant": "newcomb|wager|pascal|decision|expected (utilit|value)|infinite (utilit|value)|foreknow|predict|best possible world|divine (choice|freedom|creat)|many.gods|pragmatic|rational choice|god\\b|theis|atheis",
+    "relevance_levels": [
+     "none",
+     "touches philosophy of religion or decision theory",
+     "applies decision-theoretic or rational-choice reasoning to a religious question",
+     "directly about decision theory and God (Newcomb-type problems, Pascal's wager, God's choice among worlds)"
+    ],
+    "schools": [
+     "causal decision theory",
+     "evidential decision theory",
+     "classical theism",
+     "Molinism and middle knowledge",
+     "open theism",
+     "Bayesian formal epistemology"
+    ]
+   },
+   "schools": [
+    "causal decision theory",
+    "evidential decision theory",
+    "classical theism",
+    "Molinism and middle knowledge",
+    "open theism",
+    "Bayesian formal epistemology"
+   ],
+   "config_path": "config/topics/decision-theory.yaml",
+   "commands": [
+    "make corpus TOPIC=decision-theory",
+    "make targets TOPIC=decision-theory",
+    "make map TOPIC=decision-theory",
+    "make runs TOPIC=decision-theory",
+    "make assess TOPIC=decision-theory",
+    "make revise TOPIC=decision-theory",
+    "make eval TOPIC=decision-theory",
+    "make export TOPIC=decision-theory"
    ]
   },
   {
@@ -165,6 +183,8 @@
    "status": "not_run",
    "data": "topics/fine-tuning/",
    "counts": null,
+   "families": null,
+   "lead": null,
    "searches": [
     "fine-tuning argument",
     "fine-tuning and design",
@@ -223,6 +243,8 @@
     "make targets TOPIC=fine-tuning",
     "make map TOPIC=fine-tuning",
     "make runs TOPIC=fine-tuning",
+    "make assess TOPIC=fine-tuning",
+    "make revise TOPIC=fine-tuning",
     "make eval TOPIC=fine-tuning",
     "make export TOPIC=fine-tuning"
    ]

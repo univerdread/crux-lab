@@ -58,7 +58,9 @@ def write_topics_index() -> dict:
         web = topic_paths(slug)["web"]
         idx = _read(web / "index.json") if (web / "index.json").exists() else None
         ab = _read(web / "about.json") if (web / "about.json").exists() else None
+        br = _read(web / "briefs.json") if (web / "briefs.json").exists() else None
         ready = bool(idx and idx.get("runs"))
+        lead = br[0] if ready and br else None
         topics.append({
             "slug": slug, "name": t.get("name", slug), "description": t.get("description", ""),
             "area": t.get("area", ""), "default": slug == DEFAULT_TOPIC,
@@ -69,6 +71,9 @@ def write_topics_index() -> dict:
                         "records": (ab or {}).get("corpus", {}).get("records"),
                         "works": (ab or {}).get("corpus", {}).get("distinct_works")} if ready else None),
             "families": (ab or {}).get("families") if ready else None,   # model families its runs used
+            "lead": ({"id": lead["id"], "question": (lead.get("revision") or {}).get("research_question")
+                      or lead["research_question"], "score": lead.get("score"), "outcome": lead.get("outcome"),
+                      "novelty": lead.get("novelty"), "quality": lead.get("quality")} if lead else None),
             "searches": list((t.get("queries") or {}).keys()),
             # the full topic definition, so the site's "Start a topic" page can use any topic as a template
             "config": {k: t.get(k) for k in ("slug", "name", "description", "area", "queries", "fresh_from",
@@ -77,6 +82,7 @@ def write_topics_index() -> dict:
             "config_path": f"config/topics/{slug}.yaml",
             "commands": topic_commands(slug),
         })
+    topics.sort(key=lambda x: (x["status"] != "ready", not x["default"], x["name"]))   # explored first
     out = {"default": DEFAULT_TOPIC, "current_export": TOPIC_SLUG, "topics": topics}
     WEB_DATA_ROOT.mkdir(parents=True, exist_ok=True)
     (WEB_DATA_ROOT / "topics.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))

@@ -451,6 +451,7 @@ export interface TopicInfo {
   searches: string[];
   schools: string[];
   families?: string[] | null; // model families its runs used (from its about.json)
+  lead?: { id: string; question: string; score?: number; outcome: string; novelty: number; quality?: number | null } | null;
   config_path: string;
   commands: string[];
   config: TopicConfig;

@@ -62,6 +62,26 @@ function TopicCard({ t, current }: { t: TopicInfo; current: boolean }) {
         </p>
       ) : null}
 
+      {ready && t.lead ? (
+        <div className="mt-3 border-l-2 border-ink pl-3">
+          <Label>strongest lead</Label>
+          <p className="measure font-serif text-[1.1rem] leading-snug">
+            {current ? (
+              <Link to={`/brief/${encodeURIComponent(t.lead.id)}`} className="link decoration-transparent hover:decoration-ink">
+                {t.lead.question}
+              </Link>
+            ) : (
+              t.lead.question
+            )}
+          </p>
+          <p className="font-mono text-[0.72rem] text-ink-soft">
+            novelty {t.lead.novelty.toFixed(2)}
+            {t.lead.quality != null ? ` · quality ${Number((t.lead.quality * 5).toFixed(2))}/5` : ""}
+            {t.lead.score !== undefined ? ` · lead score ${t.lead.score.toFixed(3)}` : ""}
+          </p>
+        </div>
+      ) : null}
+
       <div className="mt-3 grid gap-4 md:grid-cols-2">
         <div>
           <Label>searches the literature for</Label>
