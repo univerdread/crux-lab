@@ -77,19 +77,6 @@
       "quote": ""
     },
     {
-      "record_id": "abs:oa:W7214082458",
-      "paper_id": "oa:W7214082458",
-      "title": "Completing Gödel's Ontological",
-      "authors": [
-        "Christopher Mills"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.5281/zenodo.22926312",
-      "verdict": "different",
-      "similarity": 0.18,
-      "quote": ""
-    },
-    {
       "record_id": "abs:oa:W7204924268",
       "paper_id": "oa:W7204924268",
       "title": "Ockham ante una cuestión espinosa: ¿cómo conciliar la omnisciencia divina con la contingencia del futuro?",
@@ -100,6 +87,19 @@
       "url": "https://doi.org/10.34096/petm.v47.n1.18449",
       "verdict": "different",
       "similarity": 0.16,
+      "quote": ""
+    },
+    {
+      "record_id": "W7203485685.c010",
+      "paper_id": "oa:W7203485685",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+      "authors": [
+        "Wandile Ganya"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s11841-026-01169-y",
+      "verdict": "different",
+      "similarity": 0.08,
       "quote": ""
     }
   ],
@@ -115,20 +115,20 @@
       "title": "Completing Gödel's Ontological"
     },
     {
-      "record_id": "abs:oa:W7214082458",
-      "paper_id": "oa:W7214082458",
-      "verdict": "different",
-      "similarity": 0.18,
-      "quote": "",
-      "title": "Completing Gödel's Ontological"
-    },
-    {
       "record_id": "abs:oa:W7204924268",
       "paper_id": "oa:W7204924268",
       "verdict": "different",
       "similarity": 0.16,
       "quote": "",
       "title": "Ockham ante una cuestión espinosa: ¿cómo conciliar la omnisciencia divina con la contingencia del futuro?"
+    },
+    {
+      "record_id": "W7203485685.c010",
+      "paper_id": "oa:W7203485685",
+      "verdict": "different",
+      "similarity": 0.08,
+      "quote": "",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience"
     }
   ],
   "open_questions": [

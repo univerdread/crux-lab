@@ -72,19 +72,6 @@
       "quote": ""
     },
     {
-      "record_id": "W7204237595.a2",
-      "paper_id": "oa:W7204237595",
-      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle",
-      "authors": [
-        "CAN Deyer Baysüngur"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.5281/zenodo.22110178",
-      "verdict": "different",
-      "similarity": 0.12,
-      "quote": ""
-    },
-    {
       "record_id": "abs:oa:W7213497479",
       "paper_id": "oa:W7213497479",
       "title": "FROM INTELLIGIBILITY TO IDENTITY",
@@ -95,6 +82,19 @@
       "url": "https://doi.org/10.5281/zenodo.22815334",
       "verdict": "different",
       "similarity": 0.08,
+      "quote": ""
+    },
+    {
+      "record_id": "W4249212677.a2",
+      "paper_id": "oa:W4249212677",
+      "title": "The Evidence for God",
+      "authors": [
+        "Paul K. Moser"
+      ],
+      "year": 2009,
+      "url": "https://doi.org/10.1017/cbo9780511817731",
+      "verdict": "different",
+      "similarity": 0.06,
       "quote": ""
     }
   ],
@@ -110,20 +110,20 @@
       "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle"
     },
     {
-      "record_id": "W7204237595.a2",
-      "paper_id": "oa:W7204237595",
-      "verdict": "different",
-      "similarity": 0.12,
-      "quote": "",
-      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle"
-    },
-    {
       "record_id": "abs:oa:W7213497479",
       "paper_id": "oa:W7213497479",
       "verdict": "different",
       "similarity": 0.08,
       "quote": "",
       "title": "FROM INTELLIGIBILITY TO IDENTITY"
+    },
+    {
+      "record_id": "W4249212677.a2",
+      "paper_id": "oa:W4249212677",
+      "verdict": "different",
+      "similarity": 0.06,
+      "quote": "",
+      "title": "The Evidence for God"
     }
   ],
   "open_questions": [

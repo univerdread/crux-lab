@@ -1,5 +1,15 @@
 # NOTES — newest entry first
 
+## 2026-10-04 06:25 — briefs' nearest matches deduplicated by work (Claude)
+- 7/14 briefs (and 27/55 objection novelty panels) listed the same work twice among their 3 nearest
+  matches (claim + abstract of one paper, or two version records). Nearest is now the 3 nearest
+  *distinct works*: `novelty.check` does it for new runs; `scripts/dedupe_nearest.py` rebuilt the derived
+  fields of existing runs/briefs from their stored match lists (no model calls; novelty scores unchanged,
+  they are computed over all matches). Brief prose was written seeing the raw top 3; references are
+  system-rendered, so only the reference list changed. 0 briefs now repeat a work; audit 0 problems.
+- Note: re-running `make runs` from cache would now need new model calls for the 7 brief prompts that
+  included a duplicate (their prompt text changes). Not needed for the submission.
+
 ## 2026-10-04 06:12 — duplicate records found; E1 rescored per work (Claude)
 - The OpenAlex corpus lists many papers more than once (Zenodo/figshare versions, preprint + article):
   194 duplicate groups, 250 extra copies → 962 distinct works among 1212 records (key = normalised

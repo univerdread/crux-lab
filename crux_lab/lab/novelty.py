@@ -172,5 +172,6 @@ async def check(client: LLMClient, objection_id: str, objection: str, argument_t
     matches.sort(key=lambda m: -m.similarity)
     hits = [m.similarity for m in matches if m.verdict in ("same_move", "related")]
     novelty = 1 - (max(hits) if hits else (matches[0].similarity if matches else 0.0))
+    from crux_lab.corpus.dedup import distinct_nearest
     return NoveltyResult(objection_id, rs.model_dump() if rs else {}, novelty, records_searched,
-                         len(cands), matches[:3], live_status, matches)
+                         len(cands), distinct_nearest(matches), live_status, matches)

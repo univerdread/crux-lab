@@ -72,19 +72,6 @@
       "quote": ""
     },
     {
-      "record_id": "abs:oa:W7204237595",
-      "paper_id": "oa:W7204237595",
-      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle",
-      "authors": [
-        "CAN Deyer Baysüngur"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.5281/zenodo.22110178",
-      "verdict": "different",
-      "similarity": 0.14,
-      "quote": ""
-    },
-    {
       "record_id": "abs:oa:W7203578844",
       "paper_id": "oa:W7203578844",
       "title": "Personal Ultimate Ground: An Independently Developed Philosophical-Formal Framework",
@@ -95,6 +82,19 @@
       "url": "https://doi.org/10.5281/zenodo.21969944",
       "verdict": "different",
       "similarity": 0.12,
+      "quote": ""
+    },
+    {
+      "record_id": "W7204478327.a2",
+      "paper_id": "oa:W7204478327",
+      "title": "Didst Thou Not Agree with Me for a Penny? On the Wage the Will Names, and the Am That Receives It",
+      "authors": [
+        "Oscar Gaitan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22131981",
+      "verdict": "different",
+      "similarity": 0.1,
       "quote": ""
     }
   ],
@@ -110,20 +110,20 @@
       "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle"
     },
     {
-      "record_id": "abs:oa:W7204237595",
-      "paper_id": "oa:W7204237595",
-      "verdict": "different",
-      "similarity": 0.14,
-      "quote": "",
-      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle"
-    },
-    {
       "record_id": "abs:oa:W7203578844",
       "paper_id": "oa:W7203578844",
       "verdict": "different",
       "similarity": 0.12,
       "quote": "",
       "title": "Personal Ultimate Ground: An Independently Developed Philosophical-Formal Framework"
+    },
+    {
+      "record_id": "W7204478327.a2",
+      "paper_id": "oa:W7204478327",
+      "verdict": "different",
+      "similarity": 0.1,
+      "quote": "",
+      "title": "Didst Thou Not Agree with Me for a Penny? On the Wage the Will Names, and the Am That Receives It"
     }
   ],
   "open_questions": [

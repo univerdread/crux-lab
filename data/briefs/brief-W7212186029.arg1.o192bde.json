@@ -77,19 +77,6 @@
       "quote": ""
     },
     {
-      "record_id": "abs:oa:W7204099109",
-      "paper_id": "oa:W7204099109",
-      "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis.",
-      "authors": [
-        "Manfred Albert Hörz"
-      ],
-      "year": 2026,
-      "url": "https://doi.org/10.5281/zenodo.22083687",
-      "verdict": "different",
-      "similarity": 0.18,
-      "quote": ""
-    },
-    {
       "record_id": "W7213499087.a2",
       "paper_id": "oa:W7213499087",
       "title": "FROM INTELLIGIBILITY TO IDENTITY",
@@ -100,6 +87,19 @@
       "url": "https://doi.org/10.5281/zenodo.22815335",
       "verdict": "different",
       "similarity": 0.16,
+      "quote": ""
+    },
+    {
+      "record_id": "abs:oa:W7204213976",
+      "paper_id": "oa:W7204213976",
+      "title": "The Topology of Time: On Change, Identity, Presence, and the Ground That Holds",
+      "authors": [
+        "Oscar Gaitan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22089328",
+      "verdict": "different",
+      "similarity": 0.08,
       "quote": ""
     }
   ],
@@ -115,20 +115,20 @@
       "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis."
     },
     {
-      "record_id": "abs:oa:W7204099109",
-      "paper_id": "oa:W7204099109",
-      "verdict": "different",
-      "similarity": 0.18,
-      "quote": "",
-      "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis."
-    },
-    {
       "record_id": "W7213499087.a2",
       "paper_id": "oa:W7213499087",
       "verdict": "different",
       "similarity": 0.16,
       "quote": "",
       "title": "FROM INTELLIGIBILITY TO IDENTITY"
+    },
+    {
+      "record_id": "abs:oa:W7204213976",
+      "paper_id": "oa:W7204213976",
+      "verdict": "different",
+      "similarity": 0.08,
+      "quote": "",
+      "title": "The Topology of Time: On Change, Identity, Presence, and the Ground That Holds"
     }
   ],
   "open_questions": [

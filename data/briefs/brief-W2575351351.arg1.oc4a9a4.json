@@ -85,17 +85,18 @@
       "quote": "it is possible to experience many of the goods attributed to atheism if God is hidden even if they do not really obtain, while also gaining many of the additional goods connected to theism."
     },
     {
-      "record_id": "W2780156828.a2",
-      "paper_id": "oa:W2780156828",
-      "title": "The axiological solution to divine hiddenness",
+      "record_id": "W2072673546.c060",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
       "authors": [
-        "Kirk Lougheed"
+        "Imran Aijaz",
+        "Markus Weidler"
       ],
-      "year": 2017,
-      "url": "https://doi.org/10.1111/rati.12186",
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
       "verdict": "related",
       "similarity": 0.38,
-      "quote": "A hidden God permits apparent atheistic goods while providing additional goods associated with theism."
+      "quote": "Schellenberg maintains that divine love values a relationship with creatures intrinsically, not merely for its benefits to them."
     },
     {
       "record_id": "W2072673546.c060",
@@ -141,12 +142,12 @@
       "title": "The axiological solution to divine hiddenness"
     },
     {
-      "record_id": "W2780156828.a2",
-      "paper_id": "oa:W2780156828",
+      "record_id": "W2072673546.c060",
+      "paper_id": "oa:W2072673546",
       "verdict": "related",
       "similarity": 0.38,
-      "quote": "A hidden God permits apparent atheistic goods while providing additional goods associated with theism.",
-      "title": "The axiological solution to divine hiddenness"
+      "quote": "Schellenberg maintains that divine love values a relationship with creatures intrinsically, not merely for its benefits to them.",
+      "title": "Some critical reflections on the hiddenness argument"
     }
   ],
   "open_questions": [

@@ -72,19 +72,6 @@
       "quote": "it is possible to experience many of the goods attributed to atheism if God is hidden even if they do not really obtain, while also gaining many of the additional goods connected to theism."
     },
     {
-      "record_id": "W2780156828.a2",
-      "paper_id": "oa:W2780156828",
-      "title": "The axiological solution to divine hiddenness",
-      "authors": [
-        "Kirk Lougheed"
-      ],
-      "year": 2017,
-      "url": "https://doi.org/10.1111/rati.12186",
-      "verdict": "related",
-      "similarity": 0.51,
-      "quote": "A hidden God permits apparent atheistic goods while providing additional goods associated with theism."
-    },
-    {
       "record_id": "abs:oa:W2950222172",
       "paper_id": "oa:W2950222172",
       "title": "The \"greater goods\" response to the argument from divine hiddenness",
@@ -96,6 +83,19 @@
       "verdict": "related",
       "similarity": 0.48,
       "quote": "One of the most prominent ways to respond to this kind of argument from divine hiddenness is to maintain that God withholds evidence of Himself in order to bring about some greater good or another. But there are a few challenges facing these “greater goods” responses."
+    },
+    {
+      "record_id": "abs:oa:W2035598954",
+      "paper_id": "oa:W2035598954",
+      "title": "Divine Hiddenness and Human Sin: The Noetic Effect of Sin",
+      "authors": [
+        "Ebrahim Azadegan"
+      ],
+      "year": 2013,
+      "url": "https://doi.org/10.1163/15697312-12341274",
+      "verdict": "related",
+      "similarity": 0.43,
+      "quote": "The cognitive effects of sin on our sensus divinitatis as a faculty of producing basic beliefs about God will be assessed."
     },
     {
       "record_id": "W2950222172.a1",
@@ -132,20 +132,20 @@
       "title": "The axiological solution to divine hiddenness"
     },
     {
-      "record_id": "W2780156828.a2",
-      "paper_id": "oa:W2780156828",
-      "verdict": "related",
-      "similarity": 0.51,
-      "quote": "A hidden God permits apparent atheistic goods while providing additional goods associated with theism.",
-      "title": "The axiological solution to divine hiddenness"
-    },
-    {
       "record_id": "abs:oa:W2950222172",
       "paper_id": "oa:W2950222172",
       "verdict": "related",
       "similarity": 0.48,
       "quote": "One of the most prominent ways to respond to this kind of argument from divine hiddenness is to maintain that God withholds evidence of Himself in order to bring about some greater good or another. But there are a few challenges facing these “greater goods” responses.",
       "title": "The \"greater goods\" response to the argument from divine hiddenness"
+    },
+    {
+      "record_id": "abs:oa:W2035598954",
+      "paper_id": "oa:W2035598954",
+      "verdict": "related",
+      "similarity": 0.43,
+      "quote": "The cognitive effects of sin on our sensus divinitatis as a faculty of producing basic beliefs about God will be assessed.",
+      "title": "Divine Hiddenness and Human Sin: The Noetic Effect of Sin"
     }
   ],
   "open_questions": [
