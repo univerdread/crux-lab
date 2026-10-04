@@ -7,7 +7,7 @@ import json
 import logging
 from datetime import datetime, timezone
 
-from crux_lab.config import DATA, ROOT
+from crux_lab.config import MAP_STATS, ROOT
 from crux_lab.corpus.build import load_corpus
 from crux_lab.corpus.targets import load_targets
 from crux_lab.graph.extract import (ExtractStats, abstract_claims, extract_paper_claims,
@@ -19,7 +19,7 @@ from crux_lab.graph.store import Store
 from crux_lab.llm.client import LLMClient
 
 log = logging.getLogger(__name__)
-STATS = DATA / "map_stats.json"
+STATS = MAP_STATS
 
 
 def target_text(t: dict) -> str:

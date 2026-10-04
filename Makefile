@@ -1,5 +1,10 @@
 PY := .venv/bin/python
 TARGET ?=
+# Topic: config/topics/<slug>.yaml (default: divine-hiddenness). Example: make corpus TOPIC=fine-tuning
+TOPIC ?=
+ifneq ($(TOPIC),)
+export CRUX_LAB_TOPIC := $(TOPIC)
+endif
 
 .PHONY: setup check providers corpus targets map run runs export eval demo demo-video smoke live-test serve docs databricks
 

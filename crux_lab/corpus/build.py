@@ -5,15 +5,13 @@ import json
 import logging
 import re
 
-from crux_lab.config import CORPUS, RAW
+from crux_lab.config import CORPUS, RAW, TOPIC
 from crux_lab.corpus import openalex, pdf
 
 log = logging.getLogger(__name__)
-FRESH_FROM = "2026-08-01"
-FRESH_QUERIES = ['"divine hiddenness"', "hiddenness AND God", "theism", "atheism", '"existence of God"',
-                 '"philosophy of religion"', "God AND argument", '"religious belief"']
-RELEVANT = re.compile(r"hidden|nonbelie|non-belie|divine|god\b|theis|atheis|religio|faith|silence",
-                      re.I)
+FRESH_FROM = str(TOPIC.get("fresh_from", "2026-08-01"))
+FRESH_QUERIES: list[str] = list(TOPIC.get("fresh_queries", []))
+RELEVANT = re.compile(TOPIC.get("relevant", "."), re.I)
 
 
 def harvest_classic() -> list[dict]:

@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pydantic import BaseModel, Field
 
 from crux_lab.agents.roles import render
-from crux_lab.config import MANUAL_TARGETS, ROOT, TARGETS
+from crux_lab.config import MANUAL_TARGETS, ROOT, TARGETS, TOPIC
 from crux_lab.corpus.build import load_corpus
 from crux_lab.llm.client import LLMClient
 
@@ -17,17 +17,20 @@ log = logging.getLogger(__name__)
 
 
 class Screen(BaseModel):
-    philosophy_of_religion: bool
+    in_area: bool
     argues_for_thesis: bool
     thesis: str = ""
-    hiddenness_relevance: int = Field(ge=0, le=3)
+    topic_relevance: int = Field(ge=0, le=3)
     argument_clarity: int = Field(ge=0, le=3)
     english: bool
 
 
 async def screen(client: LLMClient, papers: list[dict]) -> dict[str, Screen]:
     async def one(p):
-        system, user = render("target_screen", title=p["title"], abstract=p["abstract"][:3000])
+        levels = TOPIC.get("relevance_levels") or ["none", "related", "closely related", "directly on topic"]
+        scale = ", ".join(f"{i} {lvl}" for i, lvl in enumerate(levels[:4])) + "."
+        system, user = render("target_screen", title=p["title"], abstract=p["abstract"][:3000],
+                              area=TOPIC.get("area", "philosophy"), scale=scale)
         obj, _ = await client.json("reranker", user, Screen, system)
         return p["id"], obj
     res = await asyncio.gather(*[one(p) for p in papers])
@@ -60,9 +63,9 @@ def tiebreak(p: dict) -> tuple:
 
 
 def score(s: Screen) -> float:
-    if not (s.philosophy_of_religion and s.argues_for_thesis and s.english):
+    if not (s.in_area and s.argues_for_thesis and s.english):
         return -1
-    return s.hiddenness_relevance * 2 + s.argument_clarity
+    return s.topic_relevance * 2 + s.argument_clarity
 
 
 def manual_targets() -> list[dict]:
@@ -83,18 +86,18 @@ async def select(client: LLMClient | None = None) -> list[dict]:
     ranked_fresh = sorted([p for p in fresh if p["id"] in screens and score(screens[p["id"]]) >= 0],
                           key=lambda p: (-score(screens[p["id"]]), *tiebreak(p)))
     ranked_classic = sorted([p for p in classic if p["id"] in screens and score(screens[p["id"]]) >= 0],
-                            key=lambda p: (-screens[p["id"]].hiddenness_relevance,
+                            key=lambda p: (-screens[p["id"]].topic_relevance,
                                            -screens[p["id"]].argument_clarity,
                                            -(p.get("cited_by_count") or 0)))
     targets = []
     for kind, pool, n in (("fresh", ranked_fresh, 3), ("classic", ranked_classic, 2)):
         for p in pool[:n]:
             s = screens[p["id"]]
-            rel = ["none", "God's attributes/existence", "divine love, availability or evidence",
-                   "divine hiddenness"][s.hiddenness_relevance]
+            levels = TOPIC.get("relevance_levels") or ["none", "related", "closely related", "on topic"]
+            rel = levels[min(s.topic_relevance, len(levels) - 1)]
             why = (f"{'Published ' + (p.get('publication_date') or '') + ' (after 2026-08-01), ' if kind == 'fresh' else 'Classic fallback, '}"
                    f"open-access full text ({p.get('fulltext_chars', 0):,} chars); argues for a thesis; "
-                   f"hiddenness relevance {s.hiddenness_relevance}/3 ({rel}); argument clarity {s.argument_clarity}/3.")
+                   f"topic relevance {s.topic_relevance}/3 ({rel}); argument clarity {s.argument_clarity}/3.")
             targets.append({"id": p["id"].replace(":", "-"), "paper_id": p["id"], "kind": kind,
                             "title": p["title"], "authors": p.get("authors", []),
                             "year": p.get("year"), "published": p.get("publication_date"),
@@ -103,9 +106,10 @@ async def select(client: LLMClient | None = None) -> list[dict]:
     targets += manual_targets()
     meta = {"generated_at": datetime.now(timezone.utc).isoformat(), "screened": len(screens),
             "eligible_fresh": len(ranked_fresh), "eligible_classic": len(ranked_classic),
-            "note": ("No fresh full-text paper on divine hiddenness itself was available; fresh targets "
-                     "fall back to philosophy of religion (CLAUDE.md order)."
-                     if not any(screens[t['paper_id']].hiddenness_relevance == 3 for t in targets
+            "topic": TOPIC.get("slug"),
+            "note": (f"No fresh full-text paper directly on {TOPIC.get('name', 'the topic')} was available; fresh "
+                     f"targets fall back to the wider area ({TOPIC.get('area', 'philosophy')})."
+                     if not any(screens[t['paper_id']].topic_relevance == 3 for t in targets
                                 if t['kind'] == 'fresh') else "")}
     TARGETS.write_text(json.dumps({"meta": meta, "targets": targets}, indent=2, ensure_ascii=False))
     return targets

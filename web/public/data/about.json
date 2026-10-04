@@ -1,4 +1,10 @@
 {
+ "topic": {
+  "slug": "divine-hiddenness",
+  "name": "Divine hiddenness",
+  "description": "Schellenberg's hiddenness argument (1993 onward) and the debate it started: whether a perfectly loving God would allow nonresistant nonbelief, plus recent philosophy of religion.",
+  "area": "philosophy of religion"
+ },
  "diversity": "degraded: 2 families",
  "families": [
   "anthropic",

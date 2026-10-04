@@ -4,10 +4,9 @@ from __future__ import annotations
 import argparse
 import asyncio
 import logging
+import os
 import subprocess
 import sys
-
-from crux_lab.config import ROOT
 
 
 def _providers(a):
@@ -51,6 +50,7 @@ def _eval(a):
 
 
 def _check(a):
+    from crux_lab.config import ROOT
     rc = subprocess.call([sys.executable, "-m", "pytest", "-q", "-m", "not network"], cwd=ROOT)
     if rc == 0 and (ROOT / "web" / "package.json").exists():
         rc = subprocess.call(["npm", "run", "-s", "typecheck"], cwd=ROOT / "web") or \
@@ -59,12 +59,14 @@ def _check(a):
 
 
 def _demo(a):
+    from crux_lab.config import ROOT
     web = ROOT / "web"
     subprocess.check_call(["npm", "run", "build"], cwd=web)
     subprocess.call(["npm", "run", "preview"], cwd=web)
 
 
 def _demo_video(a):
+    from crux_lab.config import ROOT
     subprocess.check_call(["npx", "playwright", "test", "demo.spec.ts"], cwd=ROOT / "web")
 
 
@@ -74,8 +76,15 @@ def _serve(a):
 
 
 def main(argv=None):
+    # --topic must be applied before crux_lab.config is imported (paths and queries are read at import).
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if "--topic" in argv:
+        i = argv.index("--topic")
+        os.environ["CRUX_LAB_TOPIC"] = argv[i + 1]
+        del argv[i:i + 2]
+    from crux_lab.config import TOPIC_SLUG
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    p = argparse.ArgumentParser(prog="crux_lab")
+    p = argparse.ArgumentParser(prog="crux_lab", epilog="Global option: --topic <slug> (config/topics/<slug>.yaml)")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("providers").set_defaults(f=_providers)
     sub.add_parser("targets").set_defaults(f=_targets)
@@ -103,6 +112,7 @@ def main(argv=None):
     s.add_argument("--port", type=int, default=8765)
     s.set_defaults(f=_serve)
     a = p.parse_args(argv)
+    logging.getLogger(__name__).info("topic: %s", TOPIC_SLUG)
     a.f(a)
 
 

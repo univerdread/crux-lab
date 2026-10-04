@@ -13,7 +13,10 @@ from crux_lab.agents.roles import render
 from crux_lab.graph.schema import Argument, Claim, Objection
 from crux_lab.llm.client import LLMClient, ModelSpec
 
-SCHOOLS = ["skeptical theism", "Molinism", "open theism", "Reformed epistemology", "naturalism"]
+from crux_lab.config import TOPIC
+
+SCHOOLS: list[str] = list(TOPIC.get("schools") or
+                          ["skeptical theism", "Molinism", "open theism", "Reformed epistemology", "naturalism"])
 MAX_WORDS = 200          # prompt says 180; small tolerance for counting differences
 _CITATION = re.compile(r"\(\s*\d{4}[a-z]?\s*\)|\bet al\b|\b(19|20)\d\d\b|\bibid\b", re.I)
 

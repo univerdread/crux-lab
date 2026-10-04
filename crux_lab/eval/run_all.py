@@ -16,5 +16,7 @@ async def main(only: str = "") -> None:
         try:
             r = await mod.run()
             log.info("%s done: n=%s", name, r.get("n", r.get("conditions")))
+        except LookupError as e:          # e.g. a topic without an E2 fixture
+            log.warning("%s skipped: %s", name, e)
         except Exception:  # noqa: BLE001 - a failed eval must not stop the others
             log.exception("%s failed", name)

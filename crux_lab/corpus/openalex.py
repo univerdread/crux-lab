@@ -12,19 +12,12 @@ SELECT = ("id,doi,display_name,publication_year,publication_date,created_date,au
           "abstract_inverted_index,primary_location,best_oa_location,open_access,type,"
           "cited_by_count,primary_topic,language")
 
-# Quoted = phrase match. Unquoted title_and_abstract.search is stemmed and very broad.
-QUERIES = [
-    "divine hiddenness", "nonresistant nonbelief", "divine silence", "hiddenness of God",
-    "skeptical theism hiddenness", "Schellenberg hiddenness argument",
-]
-SEARCH_STRINGS = {
-    "divine hiddenness": '"divine hiddenness"',
-    "nonresistant nonbelief": '"nonresistant nonbelief" OR "nonresistant nonbelievers"',
-    "divine silence": '"divine silence"',
-    "hiddenness of God": '"hiddenness of God"',
-    "skeptical theism hiddenness": '"skeptical theism" AND hiddenness',
-    "Schellenberg hiddenness argument": 'Schellenberg AND hiddenness',
-}
+# Queries come from the topic (config/topics/<slug>.yaml): label -> OpenAlex search string.
+# Quoted = phrase match; unquoted title_and_abstract.search is stemmed and very broad.
+from crux_lab.config import TOPIC
+
+SEARCH_STRINGS: dict[str, str] = dict(TOPIC.get("queries", {}))
+QUERIES = list(SEARCH_STRINGS)
 # OpenAlex without an API key: ~$0.10/day = ~100 list requests; from_created_date is premium-only.
 
 

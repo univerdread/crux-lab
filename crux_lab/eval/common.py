@@ -27,7 +27,13 @@ def write(name: str, data: dict) -> Path:
 
 
 def canonical_argument() -> dict:
-    return json.loads((FIXTURES / "schellenberg.json").read_text())
+    """The topic's E2 calibration argument (config/topics/<slug>.yaml: e2_fixture)."""
+    from crux_lab.config import TOPIC
+
+    name = TOPIC.get("e2_fixture")
+    if not name:
+        raise LookupError(f"topic {TOPIC.get('slug')!r} has no e2_fixture: E2 needs a canonical argument; skipped")
+    return json.loads((FIXTURES / name).read_text())
 
 
 def canonical_text(fx: dict) -> str:

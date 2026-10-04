@@ -17,10 +17,10 @@ from pathlib import Path
 import numpy as np
 from rank_bm25 import BM25Okapi
 
-from crux_lab.config import CACHE
+from crux_lab.config import INDEX_DIR as _INDEX_DIR
 
 log = logging.getLogger(__name__)
-INDEX_DIR = CACHE / "index"
+INDEX_DIR = _INDEX_DIR          # per topic (config.topic_paths)
 _STOP = set("""a an the of to in and or is are was were be been being for on with as by that this
 these those it its at from but not no can could would should may might must will shall do does did
 has have had he she they we you i his her their our your them him us me my so if then than such

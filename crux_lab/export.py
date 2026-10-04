@@ -9,7 +9,8 @@ import json
 import shutil
 from datetime import datetime, timezone
 
-from crux_lab.config import BRIEFS, DATA, RESOLVED_MODELS, RESULTS, RUNS, TARGETS, WEB_DATA
+from crux_lab.config import (BRIEFS, DEFAULT_TOPIC, MAP_STATS, RESOLVED_MODELS, RESULTS, RUNS, TARGETS, TOPIC,
+                             TOPIC_SLUG, TOPICS, WEB_DATA, WEB_DATA_ROOT, topic_paths)
 from crux_lab.corpus.build import load_corpus
 from crux_lab.corpus.dedup import work_ids
 from crux_lab.graph.schema import SURVIVAL, Argument, Claim
@@ -35,6 +36,44 @@ METHOD_NOTES = [
     "Novelty is never claimed: it is 1 - max similarity among same_move/related matches in what retrieval found, "
     "reported with records searched, the three nearest matches and 'Further human review required.'",
 ]
+
+
+def topic_commands(slug: str) -> list[str]:
+    t = "" if slug == DEFAULT_TOPIC else f" TOPIC={slug}"
+    return [f"make corpus{t}", f"make targets{t}", f"make map{t}", f"make runs{t}", f"make eval{t}",
+            f"make export{t}"]
+
+
+def write_topics_index() -> dict:
+    """web/public/data/topics.json: every configured topic, whether it has been run and exported, and how
+    to run it. Written on every export, whichever topic is being exported."""
+    topics = []
+    for slug, t in TOPICS.items():
+        web = topic_paths(slug)["web"]
+        idx = _read(web / "index.json") if (web / "index.json").exists() else None
+        ab = _read(web / "about.json") if (web / "about.json").exists() else None
+        ready = bool(idx and idx.get("runs"))
+        topics.append({
+            "slug": slug, "name": t.get("name", slug), "description": t.get("description", ""),
+            "area": t.get("area", ""), "default": slug == DEFAULT_TOPIC,
+            "status": "ready" if ready else "not_run",
+            "data": "" if slug == DEFAULT_TOPIC else f"topics/{slug}/",
+            "counts": ({"papers": len(idx["runs"]), "objections": idx.get("objections"), "trials": idx.get("trials"),
+                        "briefs": idx.get("briefs"),
+                        "records": (ab or {}).get("corpus", {}).get("records"),
+                        "works": (ab or {}).get("corpus", {}).get("distinct_works")} if ready else None),
+            "searches": list((t.get("queries") or {}).keys()),
+            # the full topic definition, so the site's "Start a topic" page can use any topic as a template
+            "config": {k: t.get(k) for k in ("slug", "name", "description", "area", "queries", "fresh_from",
+                                              "fresh_queries", "relevant", "relevance_levels", "schools")},
+            "schools": t.get("schools", []),
+            "config_path": f"config/topics/{slug}.yaml",
+            "commands": topic_commands(slug),
+        })
+    out = {"default": DEFAULT_TOPIC, "current_export": TOPIC_SLUG, "topics": topics}
+    WEB_DATA_ROOT.mkdir(parents=True, exist_ok=True)
+    (WEB_DATA_ROOT / "topics.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    return out
 
 
 def rank_directions(briefs: list[dict]) -> list[dict]:
@@ -176,8 +215,9 @@ def main() -> dict:
     (out / "results.json").write_text(json.dumps(results, ensure_ascii=False, indent=1))
     resolved = _read(RESOLVED_MODELS) or {}
     targets = _read(TARGETS) or {}
-    map_stats = _read(DATA / "map_stats.json") or {}
+    map_stats = _read(MAP_STATS) or {}
     about = {
+        "topic": {k: TOPIC.get(k) for k in ("slug", "name", "description", "area")},
         "diversity": resolved.get("diversity"), "families": resolved.get("families", []),
         "roles": resolved.get("roles", {}),
         "models": [{k: m[k] for k in ("provider", "model", "family", "ok")} for m in resolved.get("models", [])],
@@ -211,6 +251,7 @@ def main() -> dict:
              "objections": sum(r["objections"] for r in runs_summary),
              "headline": headline(results, runs_summary, briefs)}
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1))
+    write_topics_index()
     print(f"exported {len(runs_summary)} runs, {len(briefs)} briefs, {len(claims)} claims, "
           f"{len(records)} records -> {out}")
     return index
