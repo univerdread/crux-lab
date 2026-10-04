@@ -95,7 +95,7 @@ def to_markdown(b: Brief, objection: Objection | None = None) -> str:
         L.append(f"- **{a['missing_premise']['id']}** *(unstated, found by the Formalizer)*: {a['missing_premise']['text']}")
     L += [f"- **Therefore {a['conclusion']['id']}**: {a['conclusion']['text']}", "",
           f"Skeleton: `{a.get('skeleton', '')}` ({'valid' if a.get('valid') else 'invalid as stated'})", "",
-          f"## Challenged premise", f"**{b.challenged_premise['id']}**: {b.challenged_premise['text']}", "",
+          "## Challenged premise", f"**{b.challenged_premise['id']}**: {b.challenged_premise['text']}", "",
           "## Objection"]
     if objection:
         L.append(f"*{objection.agent} · {objection.family}:{objection.model}*")

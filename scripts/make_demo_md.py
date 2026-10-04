@@ -34,7 +34,7 @@ def main() -> None:
          "## 0:00 — The problem (landing page `/`)",
          "- Say: *Philosophers need to know where the open questions are. Crux Lab is a research lab in which AI agents "
          "run the experiment philosophy actually has: the debate.*",
-         f"- Point at the three numbers: " + "; ".join(f"**{h['value']}** {h['label']}" for h in idx["headline"]) + ".",
+         "- Point at the three numbers: " + "; ".join(f"**{h['value']}** {h['label']}" for h in idx["headline"]) + ".",
          f"- Corpus: {corpus.get('records', '?')} OpenAlex records ({corpus.get('distinct_works', '?')} distinct works), "
          f"{corpus.get('full_texts', '?')} open-access full texts, "
          f"{corpus.get('fresh', '?')} published since 2026-08-01.", "",

@@ -25,7 +25,6 @@ def responder_factory(label_outcomes):
     labels = iter(label_outcomes)
 
     def responder(system, messages, model):
-        u = messages[-1]["content"]
         if "Pre-screen" in system:
             return json.dumps({"misreading": False, "explanation": "attacks the premise as stated",
                                "deciding_quote": "Mara leaves the door open every night"})

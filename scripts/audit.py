@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import json
 import re
-from pathlib import Path
 
 _COMMON = set("""A An The This That These Those It If In On For To Of And Or But Does Do Can Could Would Should May Might
 Must Is Are Was Were Be What Which Who How Why When Where Whether Defender Objector Referee God God's Christian Christians

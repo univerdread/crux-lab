@@ -25,7 +25,6 @@ def responder(judgments):
             return json.dumps({"paper_vocabulary": "loving God belief nonresistant", "plain_english": "God would make belief available",
                                "neighboring_tradition": "providence free choices"})
         if "Prior-Art Hunter" in system:
-            n = u.count("\n[")+ (1 if u.startswith("[") else 0)
             return json.dumps({"judgments": judgments(u)})
         return "{}"
     return r

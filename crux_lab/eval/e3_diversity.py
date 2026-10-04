@@ -98,7 +98,7 @@ async def run(client: LLMClient | None = None) -> dict:
             dists.append(pairwise_distance(claims_ix.embedder.encode([o.text for o in objs])))
             atext = argument_text(a, own, {})
 
-            async def assess(o):
+            async def assess(o, atext=atext, own=own, a=a):   # bind this iteration's argument explicitly
                 system, user = render("referee_prescreen", argument=atext, objection=o.text,
                                       target_id=o.target_premise_id)
                 pre, _ = await client.json("referee", user, PrescreenOut, system, spec=referee)

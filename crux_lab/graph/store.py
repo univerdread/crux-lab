@@ -1,7 +1,6 @@
 """SQLite store. One table per object kind (JSON payload + indexed keys) and an edge table."""
 from __future__ import annotations
 
-import json
 import sqlite3
 import threading
 from pathlib import Path

@@ -56,7 +56,7 @@ def parse_records(xml_text: str) -> tuple[list[dict], str | None]:
         datestamp = h.findtext("oai:datestamp", default="", namespaces=NS)
         deleted = h.get("status") == "deleted"
         dc = rec.find(".//oai_dc:dc", NS)
-        f = lambda tag: [e.text.strip() for e in dc.findall(f"dc:{tag}", NS) if e.text] if dc is not None else []  # noqa: E731
+        f = lambda tag, dc=dc: [e.text.strip() for e in dc.findall(f"dc:{tag}", NS) if e.text] if dc is not None else []  # noqa: E731
         out.append({
             "oai_id": ident, "datestamp": datestamp, "deleted": deleted,
             "title": " ".join(f("title")), "creators": f("creator"), "subjects": f("subject"),

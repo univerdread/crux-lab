@@ -9,7 +9,7 @@ import json
 import shutil
 from datetime import datetime, timezone
 
-from crux_lab.config import BRIEFS, CONFIG, DATA, RESOLVED_MODELS, RESULTS, RUNS, TARGETS, WEB_DATA
+from crux_lab.config import BRIEFS, DATA, RESOLVED_MODELS, RESULTS, RUNS, TARGETS, WEB_DATA
 from crux_lab.corpus.build import load_corpus
 from crux_lab.corpus.dedup import work_ids
 from crux_lab.graph.schema import SURVIVAL, Argument, Claim
