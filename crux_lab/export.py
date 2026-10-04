@@ -177,7 +177,16 @@ def main() -> dict:
                    "full_texts": sum(1 for p in corpus if p.get("pdf_path")),
                    "fresh": sum(1 for p in corpus if p.get("fresh"))},
     }
-    about["method_notes"] = METHOD_NOTES
+    tot: dict[str, int] = {}
+    for r in runs_summary:
+        for k, v in r["outcomes"].items():
+            tot[k] = tot.get(k, 0) + v
+    never = [o for o in ("rebutted", "standing", "known_answer") if not tot.get(o)]
+    skew = ("Outcome distribution across all trials: " + ", ".join(f"{k} {v}" for k, v in sorted(tot.items(), key=lambda kv: -kv[1]))
+            + (f". No trial ended {' or '.join(never)}: defenders usually save the argument by narrowing a premise, "
+               "which counts as revision_required, so read it as 'this premise needs work', not as a defeated argument."
+               if never else "."))
+    about["method_notes"] = METHOD_NOTES + ([skew] if tot else [])
     about["tracing"] = tracing_summary()
     (out / "about.json").write_text(json.dumps(about, ensure_ascii=False, indent=1))
     index = {"generated_at": datetime.now(timezone.utc).isoformat(), "runs": runs_summary,
