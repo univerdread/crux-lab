@@ -32,7 +32,7 @@ def _run(a):
 
 def _runs(a):
     from crux_lab.lab.run import main_all
-    asyncio.run(main_all())
+    asyncio.run(main_all(only=[x for x in a.only.split(",") if x], skip=[x for x in a.skip.split(",") if x]))
 
 
 def _export(a):
@@ -81,7 +81,10 @@ def main(argv=None):
     r = sub.add_parser("run")
     r.add_argument("target")
     r.set_defaults(f=_run)
-    sub.add_parser("runs").set_defaults(f=_runs)
+    rs = sub.add_parser("runs")
+    rs.add_argument("--only", default="")
+    rs.add_argument("--skip", default="")
+    rs.set_defaults(f=_runs)
     sub.add_parser("export").set_defaults(f=_export)
     e = sub.add_parser("eval")
     e.add_argument("--only", default="")

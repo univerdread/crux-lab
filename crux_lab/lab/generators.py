@@ -150,7 +150,11 @@ async def naive(client: LLMClient, arg: Argument, own: dict[str, Claim], small: 
 async def first_wave(client: LLMClient, arg: Argument, own: dict[str, Claim], max_n: int = 8) -> list[Objection]:
     """One blind objection per generator model, the hidden-premise attacker, two tradition lenses."""
     gens = client.generator_specs()
-    tasks = [blind(client, arg, own, s) for s in gens]
+    # Blind generators run in parallel and, left alone, converge on the weakest point. A lab wants
+    # coverage, so each is assigned a different stated premise (the missing premise belongs to the
+    # Hidden-Premise Attacker); the Director then ranks them by novelty and survival.
+    order = sorted(arg.premise_ids, key=lambda p: int(hashlib.sha1((arg.id + p).encode()).hexdigest(), 16))
+    tasks = [blind(client, arg, own, s, only=order[i % len(order)]) for i, s in enumerate(gens)]
     tasks.append(hidden(client, arg, own, gens[0]))
     for i, school in enumerate(_schools_for(arg.id)):
         tasks.append(tradition(client, arg, own, gens[(i + 1) % len(gens)], school))

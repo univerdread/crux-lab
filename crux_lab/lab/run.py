@@ -251,9 +251,10 @@ async def main(tid: str) -> None:
           f"briefs {run['briefs']}, stop: {run['stop_reason']}")
 
 
-async def main_all() -> None:
-    targets = load_targets()
-    res = await asyncio.gather(*[run_target(t) for t in targets], return_exceptions=True)
+async def main_all(only: list[str] | None = None, skip: list[str] | None = None) -> None:
+    targets = [t for t in load_targets() if (not only or t["id"] in only) and t["id"] not in (skip or [])]
+    client = LLMClient()   # one client => shared per-provider concurrency limits across targets
+    res = await asyncio.gather(*[run_target(t, client) for t in targets], return_exceptions=True)
     for t, r in zip(targets, res):
         if isinstance(r, Exception):
             print(f"{t['id']}: FAILED {r!r}")
