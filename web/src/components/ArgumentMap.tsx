@@ -15,7 +15,8 @@ import {
 import "@xyflow/react/dist/style.css";
 import type { Argument, Claim, Outcome } from "../types";
 import { agentLabel, shortId } from "../lib/format";
-import { outcomeColor } from "./ui";
+import { OUTCOME_TEXT_COLORS } from "../types";
+import { isOutcome, outcomeColor } from "./ui";
 
 export interface MapObjection {
   id: string;
@@ -33,7 +34,7 @@ type PremiseData = {
   formula?: string;
   variant: "premise" | "missing" | "revised" | "conclusion";
 };
-type ObjectionData = { label: string; color: string; active: boolean; title: string };
+type ObjectionData = { label: string; color: string; text: string; active: boolean; title: string };
 type PremiseNode = Node<PremiseData, "premise">;
 type ObjectionNode = Node<ObjectionData, "objection">;
 
@@ -77,9 +78,11 @@ function ObjectionDot({ data }: NodeProps<ObjectionNode>) {
     <div
       className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full font-serif text-[12px] italic"
       style={{
+        // the outcome colour marks the ring; text uses its darker shade (>= 4.5:1), and an active dot is filled
+        // with that shade so paper-coloured text stays readable
         border: `1.5px solid ${data.color}`,
-        background: data.active ? data.color : "#FBF8F1",
-        color: data.active ? "#F7F3EA" : data.color,
+        background: data.active ? data.text : "#FBF8F1",
+        color: data.active ? "#F7F3EA" : data.text,
       }}
       title={data.title}
     >
@@ -223,6 +226,7 @@ export function ArgumentMap({
         const x = xOf[target] + NODE_W / 2 - (inRow * DOT) / 2 + k * DOT + 2;
         const y = yOf[target] - 52 - r * 44;
         const color = o.outcome ? outcomeColor(o.outcome) : "#6B6458";
+        const text = o.outcome && isOutcome(o.outcome) ? OUTCOME_TEXT_COLORS[o.outcome] : o.outcome ? "#1F1B16" : "#5B544A";
         nodes.push({
           id: `obj-${o.id}`,
           type: "objection",
@@ -230,6 +234,7 @@ export function ArgumentMap({
           data: {
             label: `O${o.index}`,
             color,
+            text,
             active: !!o.active,
             title: `Objection O${o.index} · ${agentLabel(o.agent)} (${o.family}) · ${o.outcome ? o.outcome.replace(/_/g, " ") : o.active ? "in trial" : "not tried"}`,
           } satisfies ObjectionData,
