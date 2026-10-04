@@ -35,8 +35,10 @@ Start: `make demo` → http://localhost:4680
 - Read the limits line aloud: the numbers are small and the lab says so.
 
 ## 1:45 — Any topic (`/topics`, `/start`)
-- Topics lists what has been run (divine hiddenness) and what is set up (the fine-tuning argument); Start a topic writes a student's own topic file and the exact commands to run the lab on it.
+- Topics lists what has been run: Divine hiddenness (2 model families); Decision theory in philosophy of religion (8 model families). Set up, not run: The fine-tuning argument.
+- Click **Explore this topic** on Decision theory in philosophy of religion: its strongest lead is *What kind of certainty and hope must a version of Pascal's wager provide to be suitable for apologetic use, and does the postmodern rendition lack the determinacy of object that apologetics requires, once procedural certainty and immanent hope are granted?* (lead score 0.52). Say: *same lab, different topic, different model families.*
+- Start a topic writes a student's own topic file and the exact commands to run the lab on it.
 
 ## 1:55 — Close (`/about`)
-- Model families: degraded: 2 families. Databricks: MLflow tracing, Model Serving provider, claims Delta table + AI Search Delta Sync index (wired; runs when workspace credentials are set).
+- Model families: Divine hiddenness: 2 (anthropic, openai); Decision theory in philosophy of religion: 8 (anthropic, kimi, glm, mistral, qwen, llama, gpt-oss, gemma). Databricks: MLflow tracing, Model Serving provider, claims Delta table + AI Search Delta Sync index (wired; runs when workspace credentials are set).
 - Say: *The lab never claims novelty. It tells a philosopher where to look, and shows its work.*

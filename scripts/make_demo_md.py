@@ -9,6 +9,31 @@ D = ROOT / "web" / "public" / "data"
 
 
 
+
+
+def families_line(about: dict) -> str:
+    p = ROOT / "web" / "public" / "data" / "topics.json"
+    run = [t for t in (json.loads(p.read_text())["topics"] if p.exists() else []) if t.get("families")]
+    if len(run) < 2:
+        return str(about.get("diversity", "?"))
+    return "; ".join(f"{t['name']}: {len(t['families'])} ({', '.join(t['families'])})" for t in run)
+
+def topic_lines() -> list[str]:
+    """The topics step, from topics.json: what was run (on which model families) and what is only set up."""
+    p = ROOT / "web" / "public" / "data" / "topics.json"
+    topics = json.loads(p.read_text())["topics"] if p.exists() else []
+    run = [t for t in topics if t.get("status") == "ready"]
+    setup = [t for t in topics if t.get("status") != "ready"]
+    L = ["- Topics lists what has been run: " + "; ".join(
+        f"{t['name']} ({len(t.get('families') or [])} model families)" for t in run)
+        + (". Set up, not run: " + ", ".join(t["name"] for t in setup) if setup else "") + "."]
+    other = next((t for t in run if not t.get("default") and t.get("lead")), None)
+    if other:
+        L.append(f"- Click **Explore this topic** on {other['name']}: its strongest lead is *{other['lead']['question']}* "
+                 f"(lead score {other['lead']['score']:.2f}). Say: *same lab, different topic, different model families.*")
+    L.append("- Start a topic writes a student's own topic file and the exact commands to run the lab on it.")
+    return L
+
 def fmt_nov(n: dict) -> str:
     """A novelty number, or 'not assessed' for a check that could not be completed."""
     return f"{n['novelty']:.2f}" if n.get("novelty") is not None else "not assessed"
@@ -94,10 +119,9 @@ def main() -> None:
         L.append("- E3 diversity: " + "; ".join(f"{c['name']}: {c['distinct_premises']} distinct premises, novelty>0.5 share {fmt_pct(c['share_novelty_gt_05'])}" for c in e3["conditions"]) + ".")
     L += ["- Read the limits line aloud: the numbers are small and the lab says so.", "",
           "## 1:45 — Any topic (`/topics`, `/start`)",
-          "- Topics lists what has been run (divine hiddenness) and what is set up (the fine-tuning argument); "
-          "Start a topic writes a student's own topic file and the exact commands to run the lab on it.", "",
+          *topic_lines(), "",
           "## 1:55 — Close (`/about`)",
-          f"- Model families: {about.get('diversity', '?')}. Databricks: MLflow tracing, Model Serving provider, "
+          f"- Model families: {families_line(about)}. Databricks: MLflow tracing, Model Serving provider, "
           "claims Delta table + AI Search Delta Sync index (wired; runs when workspace credentials are set).",
           "- Say: *The lab never claims novelty. It tells a philosopher where to look, and shows its work.*", ""]
     (ROOT / "docs" / "DEMO.md").write_text("\n".join(L))
