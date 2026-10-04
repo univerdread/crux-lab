@@ -15,6 +15,11 @@ def _providers(a):
     main()
 
 
+def _targets(a):
+    from crux_lab.corpus.targets import main
+    main()
+
+
 def _corpus(a):
     from crux_lab.corpus.build import main
     main(skip_fulltext=a.skip_fulltext)
@@ -73,6 +78,7 @@ def main(argv=None):
     p = argparse.ArgumentParser(prog="crux_lab")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("providers").set_defaults(f=_providers)
+    sub.add_parser("targets").set_defaults(f=_targets)
     c = sub.add_parser("corpus")
     c.add_argument("--skip-fulltext", action="store_true")
     c.set_defaults(f=_corpus)

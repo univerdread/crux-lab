@@ -46,6 +46,8 @@ class Settings:
     claude_bin: str
     enable_cli: bool
     disabled: tuple[str, ...] = ()
+    philpapers_api_id: str = ""
+    philpapers_api_key: str = ""
 
     @property
     def user_agent(self) -> str:
@@ -89,6 +91,8 @@ def load_settings() -> Settings:
         enable_cli=_env("ENABLE_CLI_PROVIDERS", "1") not in ("0", "false", "no"),
         # e.g. DISABLE_PROVIDERS=codex_cli after a provider hits a spend cap
         disabled=tuple(x.strip() for x in _env("DISABLE_PROVIDERS").split(",") if x.strip()),
+        philpapers_api_id=_env("PHILPAPERS_API_ID"),
+        philpapers_api_key=_env("PHILPAPERS_API_KEY"),
     )
 
 

@@ -68,7 +68,7 @@ def score(s: Screen) -> float:
 def manual_targets() -> list[dict]:
     out = []
     for f in sorted(MANUAL_TARGETS.glob("*.md")):
-        out.append({"id": f"manual:{f.stem}", "paper_id": f"manual:{f.stem}", "kind": "manual",
+        out.append({"id": f"manual-{f.stem}", "paper_id": f"manual:{f.stem}", "kind": "manual",
                     "title": f.stem.replace("-", " ").title(), "text_path": str(f.relative_to(ROOT)),
                     "reason": "Manual target supplied by the human in data/manual_targets/."})
     return out

@@ -1,5 +1,19 @@
 # NOTES — newest entry first
 
+## 2026-10-04 10:55 — home page explains itself (Claude, at the human's request)
+- Landing now has: a "How it works ↓" hero button; the outcome legend replaced by plain-language
+  definitions (what each label means + what it means for a researcher, with survival S); a paper filter
+  above the research directions (all / one paper; picking a paper shows all its directions); and a
+  "How the lab works, and how to explore it" section: one experiment = one paper (7 steps), the five
+  papers with "its research directions" + "replay its run", how to look into something else (filter,
+  Atlas search, running the lab on a new argument locally via data/manual_targets — honest that the
+  public site is a replay), and where the papers come from incl. why PhilArchive was unavailable.
+- Backend: manual targets get filename-safe ids `manual-<name>`; `make targets` / `python -m crux_lab.cli
+  targets` re-selects targets incl. manual ones; the PhilArchive harvester accepts PHILPAPERS_API_ID /
+  PHILPAPERS_API_KEY from .env (untested: no key). Manual-target runs were not exercised in this build.
+- Verified: desktop + mobile in the browser pane, filter + scroll behaviour, 50 Python + 9 web tests,
+  10 smoke + 8 axe checks.
+
 ## 2026-10-04 10:30 — LIVE: https://univerdread.github.io/crux-lab/ (repo now public) (Claude)
 - At the human's request: repo `univerdread/crux-lab` made **public** (full history scanned first: no
   secrets, no .env ever committed; commit author email from git config is now visible, as on any public

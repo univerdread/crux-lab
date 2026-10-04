@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 TARGET ?=
 
-.PHONY: setup check providers corpus map run runs export eval demo demo-video smoke live-test serve docs databricks
+.PHONY: setup check providers corpus targets map run runs export eval demo demo-video smoke live-test serve docs databricks
 
 setup:
 	@test -d .venv || (command -v uv >/dev/null && uv venv --python 3.11 .venv || python3.11 -m venv .venv)
@@ -19,6 +19,9 @@ providers:
 
 corpus:
 	$(PY) -m crux_lab.cli corpus
+
+targets:              # select targets (3 fresh + 2 classic) + any data/manual_targets/*.md
+	$(PY) -m crux_lab.cli targets
 
 map:
 	$(PY) -m crux_lab.cli map

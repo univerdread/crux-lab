@@ -25,6 +25,11 @@ RAW_OAI = RAW / "oai"
 
 
 def _call(params: dict, base: str | None = None) -> str:
+    from crux_lab.config import settings
+
+    if settings.philpapers_api_id and settings.philpapers_api_key:
+        # PhilPapers API credentials (apiId/apiKey). Untested in this build: no key was available.
+        params = {**params, "apiId": settings.philpapers_api_id, "apiKey": settings.philpapers_api_key}
     errors = []
     for b in ([base] if base else BASE_URLS):
         try:

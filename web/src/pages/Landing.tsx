@@ -1,17 +1,25 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import { DirectionItem } from "../components/DirectionItem";
+import { HowItWorks, OutcomeGuide } from "../components/Guide";
 import { LoopRing } from "../components/LoopRing";
-import { OutcomeBar, OutcomeLegend } from "../components/OutcomeBar";
+import { OutcomeBar } from "../components/OutcomeBar";
 import { Code, DataState, Disclaimer, Empty, Label, Stat } from "../components/ui";
 import { useJSON } from "../lib/data";
 import { displayTitle, when } from "../lib/format";
-import type { BriefSummary, Index } from "../types";
+import type { About, BriefSummary, Index } from "../types";
 
 const TOP = 5;
 
 export default function Landing() {
   const index = useJSON<Index>("index.json");
   const briefs = useJSON<BriefSummary[]>("briefs.json");
+  const about = useJSON<About>("about.json");
+  const [paper, setPaper] = useState<string | null>(null);
+  const pickPaper = (runId: string | null) => {
+    setPaper(runId);
+    document.getElementById("paper-filter")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
@@ -40,6 +48,9 @@ export default function Landing() {
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#directions" className="btn">
               Research directions ↓
+            </a>
+            <a href="#how" className="btn btn-quiet">
+              How it works ↓
             </a>
             <Link to="/lab" className="btn btn-quiet">
               Watch a run replay
@@ -76,24 +87,51 @@ export default function Landing() {
               Research directions
             </h2>
             <p className="measure mt-1 text-[1rem] text-ink-soft">
-              Objections that survived the gauntlet, in the order the lab exported them: each paper’s strongest direction
-              (by survival × novelty) first, then the next from each paper. Each opens a printable brief with the argument,
+              Objections that came through the lab’s trials, as leads for a paper. The lab runs one experiment per paper;
+              by default this list shows each paper’s strongest direction (by survival × novelty) first, then the next
+              from each paper. Pick a paper to see only its directions. Each opens a printable brief with the argument,
               the strongest replies and why they failed, and the closest literature.
             </p>
           </div>
-          <OutcomeLegend />
         </div>
+        <OutcomeGuide />
+        <DataState load={index} what="the index">
+          {(ix) => (
+            <div id="paper-filter" className="mt-6 flex scroll-mt-4 flex-wrap items-center gap-2" role="group" aria-label="Filter research directions by paper">
+              <span className="smallcaps mr-1 text-[0.95rem] text-ink-soft">paper</span>
+              <button type="button" className="btn btn-quiet" aria-pressed={paper === null} onClick={() => setPaper(null)}>
+                All papers
+              </button>
+              {ix.runs.map((r) => {
+                const t = displayTitle(r.title);
+                const short = t.length > 40 ? `${t.slice(0, 38).trimEnd()}…` : t;
+                return (
+                  <button
+                    key={r.run_id}
+                    type="button"
+                    className="btn btn-quiet"
+                    aria-pressed={paper === r.run_id}
+                    title={t}
+                    onClick={() => setPaper(r.run_id)}
+                  >
+                    {short}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </DataState>
         <div className="mt-6">
           <DataState load={briefs} what="research briefs">
             {(list) =>
               list.length ? (
                 <>
                   <ol>
-                    {list.slice(0, TOP).map((b, i) => (
+                    {(paper ? list.filter((b) => b.run_id === paper) : list.slice(0, TOP)).map((b, i) => (
                       <DirectionItem key={b.id} brief={b} rank={i + 1} />
                     ))}
                   </ol>
-                  {list.length > TOP ? (
+                  {!paper && list.length > TOP ? (
                     <p className="border-t border-rule pt-4">
                       <Link to="/briefs" className="link">
                         All {list.length} research directions →
@@ -165,6 +203,10 @@ export default function Landing() {
           </DataState>
         </div>
       </section>
+
+      <DataState load={index} what="the index">
+        {(ix) => <HowItWorks index={ix} about={about.status === "ready" ? about.data : null} onPickPaper={pickPaper} />}
+      </DataState>
     </div>
   );
 }
