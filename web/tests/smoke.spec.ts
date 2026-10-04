@@ -20,7 +20,8 @@ function watchConsole(page: Page): string[] {
   return errors;
 }
 
-async function visit(page: Page, url: string, shot: string) {
+// The lab's panes are sized in viewport units, so a full-page capture would stretch them: shoot the viewport.
+async function visit(page: Page, url: string, shot: string, fullPage = true) {
   const errors = watchConsole(page);
   await page.goto(url);
   const h1 = page.getByRole("heading", { level: 1 }).first();
@@ -28,7 +29,7 @@ async function visit(page: Page, url: string, shot: string) {
   await expect(h1).not.toHaveText("");
   await page.waitForLoadState("networkidle");
   await page.waitForTimeout(600); // let the argument map fit its view
-  await page.screenshot({ path: `${SHOTS}${shot}.png`, fullPage: true });
+  await page.screenshot({ path: `${SHOTS}${shot}.png`, fullPage });
   expect(errors, `console errors on ${url}`).toEqual([]);
 }
 
@@ -67,7 +68,7 @@ test.describe("Crux Lab smoke", () => {
 
   test("first run, lab", async ({ page }) => {
     test.skip(!runId, "no run exported");
-    await visit(page, `/lab/${encodeURIComponent(runId!)}?at=end`, "lab");
+    await visit(page, `/lab/${encodeURIComponent(runId!)}?at=end`, "lab", false);
     await expect(page.getByText("Director queue")).toBeVisible();
   });
 
