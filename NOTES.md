@@ -1,5 +1,18 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:07 — Ranking by lead score; strongest lead featured (Claude, human's request)
+- Human: the de se / contrastive-responsibility direction "clearly has the best play-off between academic
+  quality and novelty" and should lead; "make sure the best research directions get the most light".
+- Was: round-robin by survival × novelty across papers, with every "not yet defensible" direction after the
+  rest. With 12/14 graded not yet defensible, two low-novelty "needs work" directions (novelty 0.32, 0.45)
+  led and the best-balanced ones sat 3rd-4th.
+- Now: lead score = survival × novelty × quality, quality = the Assessor's latest overall score / 5 (after
+  revision if any; ungraded counts 3/5). Plain sort, no round-robin; `tier` = rank within its paper.
+  Hiddenness top: brief-W7203485685.arg1.ofd28a0 (0.8 × 0.88 × 3.0/5 = 0.422), then divine simplicity as
+  parthood (0.405). Home page: a "strongest lead" card shows the #1 direction (revised question + revised
+  paper direction, Assessor verdict, the four numbers); label definitions moved below the list.
+  README, /briefs, guide text and About method notes say the same. Tests: tests/test_export_ranking.py.
+
 ## 2026-10-04 12:00 — Second topic run: decision theory in philosophy of religion (Claude, human's request)
 - Human asked to run "decision theory in religious philosophy, potentially exploring Newcomb's problem, God's
   own decision problem, etc." on the new evroc + Claude setup. Topic file: `config/topics/decision-theory.yaml`.
