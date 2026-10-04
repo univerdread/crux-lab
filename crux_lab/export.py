@@ -127,6 +127,27 @@ def normalize_run(run: dict) -> dict:
     return run
 
 
+def calibration_note(runs: list[dict], about: dict) -> list[str]:
+    """How this topic's reranker scored passages it judged 'different', and how many checks therefore came out
+    at 1.0, computed from the stored judgments, so a 1.0 is read as 'nothing similar among what retrieval
+    found', not as 'nothing like this exists'."""
+    from crux_lab.lab.novelty import is_assessed
+    checks = [n for r in runs for n in (r.get("novelty") or {}).values() if is_assessed(n)]
+    diff = [m["similarity"] for n in checks for m in n.get("matches", []) if m.get("verdict") == "different"]
+    full = sum(1 for n in checks if n["novelty"] >= 0.999)
+    if not checks or not diff:
+        return []
+    r = (about.get("roles") or {}).get("reranker")
+    rr = (f"{r.get('provider')}:{r.get('model')}" if isinstance(r, dict) else str(r)) if r else "unknown model"
+    zero = sum(1 for s in diff if s == 0)
+    return [f"Novelty calibration on this topic: the reranker ({rr}) gave passages it judged 'different' a mean "
+            f"similarity of {sum(diff) / len(diff):.2f} ({zero / len(diff):.0%} of them exactly 0). {full} of "
+            f"{len(checks)} assessed novelty checks scored 1.0 because every candidate was judged different at 0: "
+            "a reading of what retrieval found in this corpus, not evidence that nothing like the objection exists. "
+            "Compare novelty within a topic; rerankers from other model families score 'different' passages "
+            "differently."]
+
+
 def brief_eligibility(runs: list[dict]) -> dict[str, str]:
     """objection id -> "" if its brief may be ranked, else why not."""
     from crux_lab.graph.schema import trial_complete
@@ -328,7 +349,7 @@ def main() -> dict:
     dup_note = (f"OpenAlex lists some papers more than once (versions, preprint + article): the {len(corpus)} corpus "
                 f"records are {n_works} distinct works. 'Records searched' counts records; nearest matches, the "
                 "prior-art search box and E1 are scored per distinct work.")
-    about["method_notes"] = METHOD_NOTES + ([skew] if tot else []) + [dup_note] + (
+    about["method_notes"] = METHOD_NOTES + ([skew] if tot else []) + [dup_note] + calibration_note(runs_all, about) + (
         [f"{len(held_back)} brief(s) are not ranked because their trial is incomplete or their novelty was not "
          "assessed: " + "; ".join(f"{h['id']} ({h['why']})" for h in held_back)] if held_back else [])
     about["tracing"] = tracing_summary()

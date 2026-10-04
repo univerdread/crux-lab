@@ -102,11 +102,34 @@
    "description": "Decision-theoretic reasoning about God and by God: Newcomb's problem and divine foreknowledge (God as the perfect predictor), Pascal's wager with its infinite utilities and the many-gods objection, and God's own decision problem, whether a perfect being must create the best world, and whether there is one to create.",
    "area": "philosophy of religion and decision theory",
    "default": false,
-   "status": "not_run",
+   "status": "ready",
    "data": "topics/decision-theory/",
-   "counts": null,
-   "families": null,
-   "lead": null,
+   "counts": {
+    "papers": 6,
+    "objections": 72,
+    "trials": 36,
+    "briefs": 18,
+    "records": 648,
+    "works": 561
+   },
+   "families": [
+    "anthropic",
+    "kimi",
+    "glm",
+    "mistral",
+    "qwen",
+    "llama",
+    "gpt-oss",
+    "gemma"
+   ],
+   "lead": {
+    "id": "brief-W3208436359.arg1.oc06a4d",
+    "question": "Under what precise formal conditions can a decision theory based on Conway's surreal numbers be shown to be a conservative extension of finitist expected utility theory, especially when decision problems involve infinitesimal probabilities or transfinite utilities?",
+    "score": 0.48,
+    "outcome": "revision_required",
+    "novelty": 1.0,
+    "quality": null
+   },
    "searches": [
     "Newcomb's problem",
     "Pascal's wager",
