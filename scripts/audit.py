@@ -17,7 +17,7 @@ Scripture Biblical Bible Molinist Molinism Reformed Divine Classical Paper Argum
 Their They Such Even Then Thus Its Each Every Both Some Any No Not Only Whose Than Since Instead Although Though Also Most
 More Less Hidden Premise Revised Open Questions Here First Second Third Many Much One Two""".split())
 
-from crux_lab.config import BRIEFS, ROOT, RUNS
+from crux_lab.config import BRIEFS, DEFAULT_TOPIC, ROOT, RUNS, TOPIC_SLUG
 from crux_lab.corpus.build import load_corpus
 from crux_lab.graph.extract import quote_found
 from crux_lab.graph.schema import Claim
@@ -26,8 +26,15 @@ from crux_lab.lab.debate import render_transcript
 from crux_lab.graph.schema import Turn
 from crux_lab.lab.generators import _CITATION
 
-OUT = ROOT / "docs" / "AUDIT.md"
+OUT = ROOT / "docs" / ("AUDIT.md" if TOPIC_SLUG == DEFAULT_TOPIC else f"AUDIT-{TOPIC_SLUG}.md")
 
+
+
+def fold(s: str) -> str:
+    """Accents folded, so 'Hajek' matches 'Hájek' and PDF text's detached 'H´ajek'; nothing else is loosened."""
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFKD", s)
+                   if not unicodedata.combining(c) and c not in "\u00b4`\u00a8\u02c6\u02dc")
 
 def main() -> None:
     store = Store()
@@ -128,7 +135,7 @@ def main() -> None:
         for name in names - _COMMON:
             tot["names"] += 1
             dash = str.maketrans({"\u2013": "-", "\u2014": "-"})
-            src_n, name_n = src.translate(dash), name.translate(dash)
+            src_n, name_n = fold(src.translate(dash)), fold(name.translate(dash))
             ok = name_n in src_n or name_n.removesuffix("'s") in src_n
             tot["names_ok"] += ok
             if not ok:

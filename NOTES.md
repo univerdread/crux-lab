@@ -1,5 +1,21 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:40 — Decision-theory topic: results (Claude)
+- Runs 12:09–12:28 on evroc + Claude (8 families): 6 papers, 72 objections, 36 trials (27 revision_required,
+  9 misreading, 0 failed, 0 half-labelled), 18 briefs. One novelty check hit the reranker-failure path
+  (stored 1.0; run-oa-W4220703499, objection o525bda): it took a trial slot at Director step 0 (the fake 1.0
+  put it first), ended misreading, no brief; the export now shows it as not assessed.
+- Novelty calibration: gpt-oss-120b (reranker) gives 52% of 'different' passages similarity 0, so 12/71
+  assessed checks are exactly 1.0 (hiddenness/Codex: 4% at 0, none at 1.0). Valid under the formula, but
+  it means novelty saturates on this topic and quality does most of the ordering. Data-derived note on About.
+- Assessor (Claude Opus): all 18 not yet defensible (1.25–2.5); it caught a real mathematical error in a
+  novelty-1.0 lead (claimed 0.75·ω = ω in the surreals; false, surreals are an ordered field). Revision
+  round: 2/18 up to needs work (Bishop doxastic venture 3.5; Nyman Pascal 3.25), 14 up, 4 unchanged, 0 down.
+- Strongest lead: brief-W4394980009.arg1.o6ef874 (Pascal's wager, certainty and hope for apologetic use):
+  0.8 × 1.0 × 3.25/5 = 0.52. E1 replicated: claims 78% vs BM25 28% (pipeline 78%, no gain over plain claim
+  embeddings here). Audit: 0 problems after folding accents in the name check ('H´ajek' in PDF text).
+- Spend: evroc $4.70 for the whole topic (map, runs, E1); ~120 Claude calls on the subscription.
+
 ## 2026-10-04 12:27 — Repair: failure states made explicit (Claude; bug report from the human's friend, by Codex)
 - Report (~/Downloads/AGENT-REPAIR-BRIEF.md) claimed two failure-handling bugs. Both confirmed in the code:
   A) novelty.check returned 1.0 when retrieval left no candidates, and 1 - 0 = 1.0 when the reranker gave no

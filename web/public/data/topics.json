@@ -123,12 +123,12 @@
     "gemma"
    ],
    "lead": {
-    "id": "brief-W3208436359.arg1.oc06a4d",
-    "question": "Under what precise formal conditions can a decision theory based on Conway's surreal numbers be shown to be a conservative extension of finitist expected utility theory, especially when decision problems involve infinitesimal probabilities or transfinite utilities?",
-    "score": 0.48,
+    "id": "brief-W4394980009.arg1.o6ef874",
+    "question": "What kind of certainty and hope must a version of Pascal's wager provide to be suitable for apologetic use, and does the postmodern rendition lack the determinacy of object that apologetics requires, once procedural certainty and immanent hope are granted?",
+    "score": 0.52,
     "outcome": "revision_required",
     "novelty": 1.0,
-    "quality": null
+    "quality": 0.65
    },
    "searches": [
     "Newcomb's problem",
