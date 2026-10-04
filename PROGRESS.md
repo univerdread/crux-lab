@@ -156,6 +156,21 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
   in README. Never block on this.
   → no creds: code + app.yaml + README section; `make databricks` reports not configured. MLflow traces local (1100+).
 
+## P8 After the freeze (human requests, 2026-10-04 morning)
+
+- [x] P8.1 GitHub Pages deploy + public repo (https://univerdread.github.io/crux-lab/).
+- [x] P8.2 Home-page guide for new readers: outcome labels, one experiment per paper, PhilArchive note.
+- [x] P8.3 Topics: config/topics/*.yaml, per-topic paths, /topics and /start pages, topic switching.
+- [x] P8.4 Assessor agent (journal-referee grade) + revision round; quality panels at the bottom of briefs.
+- [x] P8.5 evroc Think provider: 8 model families; per-topic model snapshot for About.
+- [x] P8.6 Second topic run end to end: decision theory in philosophy of religion (6 papers, 36 trials,
+  18 briefs, Assessor + revision, E1 replication, audit 0 problems).
+- [x] P8.7 Ranking by lead score (survival × novelty × quality); strongest-lead card; rank on briefs.
+- [x] P8.8 Reviewer's bug report: unavailable novelty → not assessed (never 1.0); trials need both
+  defender labels; export screens legacy records; 18 regression tests + 3 replay tests.
+- [x] P8.9 Novelty calibration note per topic; demo video re-recorded (76 s); submission draft per topic.
+- [ ] P8.10 Human: record the video (docs/DEMO.md) and submit (docs/SUBMISSION.md) before 15:00.
+
 ## Polish forever (when everything above is ticked; never stop)
 
 - Run the full pipeline from a clean clone of the repo; fix whatever breaks.
