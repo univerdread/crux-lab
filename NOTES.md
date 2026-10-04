@@ -21,6 +21,9 @@ I set `DISABLE_PROVIDERS=codex_cli` in `.env`; remove the line to re-enable Code
 2. Read one brief + its trial yourself (top: /brief/brief-W7212186029.arg1.o10f4f4).
 3. Deploy the `web/` folder as a static site: Vercel (root directory `web`, preset Vite) or Netlify (base
    directory `web`; `web/netlify.toml` sets build + publish). Deep links are handled by both configs.
+   GitHub Pages (subpath, e.g. /crux-lab/; needs a public repo or a paid plan): in `web/` run
+   `npx tsc -b && npx vite build --base=/crux-lab/ && cp dist/index.html dist/404.html` and publish `dist/`
+   (tested: routing and data loading work under the subpath; 404.html gives deep links).
 4. Record the 2-minute video from `docs/DEMO.md` (a silent 55 s walkthrough is in `docs/demo.webm`).
 5. Paste from `docs/SUBMISSION.md` (draft text with real numbers); repo is private → make public if required.
 
