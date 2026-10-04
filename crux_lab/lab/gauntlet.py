@@ -58,12 +58,21 @@ def literature_for(objection: Objection, novelty: dict | None, claims_ix: Hybrid
     return "\n".join(lines), allowed
 
 
-def verify_citations(turns: list[Turn], allowed: set[str], store: Store) -> tuple[list[str], list[str]]:
+def own_prefix(objection: Objection) -> str:
+    """Claim ids of the target paper itself start with its short id (e.g. 'W7203761940.')."""
+    return objection.argument_id.split(".", 1)[0] + "."
+
+
+def verify_citations(turns: list[Turn], allowed: set[str], store: Store,
+                     own: str = "\0") -> tuple[list[str], list[str]]:
+    """A cited id survives if it exists in the store and was either in the literature the defender
+    was shown or belongs to the argument's own paper (the defender saw those ids in the argument)."""
     verified, struck = [], []
     for t in turns:
         good, bad = [], []
         for cid in t.cited_claim_ids:
-            (good if cid in allowed and store.get(Claim, cid) else bad).append(cid)
+            ok = (cid in allowed or cid.startswith(own)) and store.get(Claim, cid) is not None
+            (good if ok else bad).append(cid)
         t.cited_claim_ids, t.struck_claim_ids = good, bad
         verified += good
         struck += bad
@@ -128,10 +137,12 @@ async def run_trial(client: LLMClient, store: Store, objection: Objection, argum
         # 4. referee labels each defense, citations verified first
         per = {}
         all_verified: list[str] = []
+        own = own_prefix(objection)
         for s, turns in zip(specs, ex):
-            verified, struck = verify_citations(turns, allowed, store)
+            verified, struck = verify_citations(turns, allowed, store, own)
             all_verified += verified
-            lab = await label(client, referee, argument_text, objection, turns, verified, struck)
+            literature = [c for c in verified if not c.startswith(own)]   # only these can make a known_answer
+            lab = await label(client, referee, argument_text, objection, turns, literature, struck)
             trial.rounds += turns
             if lab:
                 per[s] = {"outcome": lab.outcome, "rationale": lab.rationale, "deciding_quote": lab.deciding_quote,
