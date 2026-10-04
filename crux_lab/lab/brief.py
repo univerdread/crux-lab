@@ -59,7 +59,10 @@ async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], o
             ref.update(paper_id=m.paper_id, title=m.title,
                        url=f"https://openalex.org/{m.paper_id.split(':', 1)[-1]}")
         closest.append({**ref, "verdict": m.verdict, "similarity": m.similarity, "quote": m.quote})
+    own_short = arg.paper_id.split(":", 1)[-1] + "."
     for cid in trial.cited_claim_ids:
+        if cid.startswith(own_short):
+            continue            # the argument's own claims are not "literature"
         pid = cid.rsplit(".", 1)[0]
         p = next((pp for k, pp in papers.items() if k.endswith(":" + pid) or k == pid), None)
         if p and not any(c.get("record_id") == cid for c in closest):

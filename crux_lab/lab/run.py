@@ -217,7 +217,8 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
             break
     await emit({"type": "run_end", "stop_reason": stop_reason})
 
-    fams = sorted({o.family for o in objections} | {t2.family for t in trials.values() for t2 in t.rounds})
+    fams = sorted({f for o in objections for f in o.family.split("→")} |
+                  {t2.family for t in trials.values() for t2 in t.rounds})
     run = {
         "run_id": run_id, "target": target, "started_at": started,
         "finished_at": datetime.now(timezone.utc).isoformat(), "stop_reason": stop_reason,

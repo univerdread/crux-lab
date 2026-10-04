@@ -73,19 +73,23 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P3 Thin slice — target 05:30 · GATE A
 
-- [ ] P3.1 Generators: blind thought-experimenter, hidden-premise attacker, tradition lens, with
+- [x] P3.1 Generators: blind thought-experimenter, hidden-premise attacker, tradition lens, with
   code-enforced constraints.
   **Check:** 6 objections stored for target 1, each naming a real premise id.
-- [ ] P3.2 Novelty check: 3 restatements, hybrid search, live OpenAlex query, rerank verdicts,
+  → 10 objections for target 1 (blind ×4 models, hidden-premise, 2 tradition lenses, naive→sharpened, 2 depth-1 attacks on revised premises); ids validated in code.
+- [x] P3.2 Novelty check: 3 restatements, hybrid search, live OpenAlex query, rerank verdicts,
   novelty score, records_searched.
   **Check:** runs on all 6 objections.
-- [ ] P3.3 Gauntlet: `lab/debate.py` exchange engine (adapt the ADAPT items from the Crux
+  → all 10: 3 restatements, hybrid claims+abstracts search, live OpenAlex (cached), reranked verdicts; records_searched ≈ 4139.
+- [x] P3.3 Gauntlet: `lab/debate.py` exchange engine (adapt the ADAPT items from the Crux
   inventory, with origin headers; 30-minute timebox, else write fresh), then pre-screen, two
   defenders, rejoinders, Referee labels, citation verification.
   **Check:** ≥ 2 trials end in valid outcomes with only verified citations.
-- [ ] P3.4 Brief generator (JSON + Markdown).
+  → 6/6 trials valid (2 revision_required, 4 misreading); unverifiable ids struck in code. debate.py adapted from Crux (origin header).
+- [x] P3.4 Brief generator (JSON + Markdown).
   **Check:** `make run TARGET=<first target>` ends with `data/briefs/<id>.md` and
   `data/runs/<run_id>.json`. **GATE A.**
+  → GATE A MET 03:25: data/runs/run-oa-W7203761940.json + 2 briefs (.json/.md).
 
 ## P4 Website v1 — target 06:30 · GATE B
 
@@ -102,11 +106,13 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P5 Full lab — target 07:30
 
-- [ ] P5.1 Director: priority formula, queue, recursion on revision_required (max depth 2),
+- [x] P5.1 Director: priority formula, queue, recursion on revision_required (max depth 2),
   per-target budget; queue snapshots saved per step for the replay.
   **Check:** unit test of ordering; a run log shows the queue reordering.
-- [ ] P5.2 Mixed families across all roles; Naive Questioner if ≥ 2 families (else skip, note).
+  → tests/test_director.py; run-oa-W7203761940 director_steps: od9294e 0.244 → 0.144 once its family was tried; 2 revised premises spawned depth-1 attacks.
+- [x] P5.2 Mixed families across all roles; Naive Questioner if ≥ 2 families (else skip, note).
   **Check:** run JSON shows the families used.
+  → families_used [anthropic, openai]; Naive Questioner (haiku) → sharpened by gpt-5.6-sol.
 - [ ] P5.3 Run all targets in the background, then export.
   **Check:** ≥ 3 runs and ≥ 3 briefs exported.
 - [x] P5.4 Live mode: FastAPI `/api/run` (SSE) + `/api/prior-art`; frontend switches on

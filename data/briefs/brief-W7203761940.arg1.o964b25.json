@@ -1,0 +1,192 @@
+{
+  "id": "brief-W7203761940.arg1.o964b25",
+  "objection_id": "W7203761940.arg1.o964b25",
+  "research_question": "Does a Molinist account of providence give any independently measurable historical signature of benevolent divine steering, or does it make the apparent randomness of history evidentially neutral between theism and naturalism?",
+  "argument": {
+    "id": "W7203761940.arg1",
+    "title": "Randomness Underdetermines God",
+    "paper_id": "oa:W7203761940",
+    "paper_title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
+    "premises": [
+      {
+        "id": "W7203761940.c001",
+        "text": "Many apparently random historical events have identifiable biological, political, or social causes, yet their outcomes often appear morally indiscriminate and non-monotonic.",
+        "quote": "The evidence does not establish that these events are literally random; many have identifiable biological, political, or social causes. Nevertheless, their outcomes frequently appear non-monotonic and morally indiscriminate, with no consistent relationship between moral character and health, longevity, safety, prosperity, or political success."
+      },
+      {
+        "id": "W7203761940.c002",
+        "text": "Naturalism explains apparent randomness through impersonal causation and probability, while biblical theology explains it through agency, natural processes, hidden providence, suffering, and delayed judgment.",
+        "quote": "Naturalism interprets this pattern through impersonal causation and probability, whereas biblical theology appeals to human agency, regular natural processes, hidden providence, suffering, and delayed judgment."
+      },
+      {
+        "id": "W7203761940.c011",
+        "text": "Historical evidence alone lacks the directional signature expected if history were steered toward the good.",
+        "quote": "The historical record does not, on its own, display the directional signature one might expect if history were being steered toward the good."
+      },
+      {
+        "id": "W7203761940.c025",
+        "text": "War does not show that events lack causes, but it makes suffering appear distributed without visible moral governance.",
+        "quote": "The evidence from war therefore supports a carefully limited conclusion: war does not demonstrate that events are causeless, but it does create the appearance of a world in which suffering is distributed without any visible moral governance."
+      },
+      {
+        "id": "W7203761940.c038",
+        "text": "Scripture does not promise that moral character determines health, wealth, longevity, or political success in this life.",
+        "quote": "The Bible also does not promise that health, wealth, longevity, or political success will be distributed according to moral character during this life."
+      },
+      {
+        "id": "W7203761940.c039",
+        "text": "Biblical theology locates complete justice in a future judgment rather than in earthly life.",
+        "quote": "Biblical theology ultimately places complete justice in a future judgment rather than promising that injustice will be corrected during earthly life."
+      }
+    ],
+    "missing_premise": {
+      "id": "W7203761940.arg1.mp",
+      "text": "If rival worldviews each explain apparent randomness and the historical evidence lacks the expected directional signature, then worldly evidence alone cannot decide between them, so judging God's existence by worldly randomness yields no clear winner."
+    },
+    "conclusion": {
+      "id": "W7203761940.c041",
+      "text": "Judging God's existence only by apparent worldly randomness yields no clear winner because its meaning depends greatly on worldview."
+    },
+    "skeleton": "A & B; E; ~F; ~G & B; ~C; H |- D",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W7203761940.c011",
+    "text": "Historical evidence alone lacks the directional signature expected if history were steered toward the good."
+  },
+  "objection": "Consider Mara, a nurse whose village is destroyed in a war she did nothing to provoke, while her corrupt mayor escapes unharmed. Outwardly, the suffering is morally indiscriminate. But God knows what every free creature would freely do in every possible circumstance, and he actualized this world for that reason. Among the worlds he could create, only those containing this war place Mara in a border camp where she freely founds a clinic. In that camp a young officer freely protects the clinic at cost to himself. That act leads him to repent of atrocities he would otherwise have committed for decades. Here God steers history by arranging the circumstances of free choices, not by making rewards follow character. Each step looks like ordinary contingency, and the good aimed at is spread across persons, generations and eternity. So a history steered toward the good among free creatures should carry no visible trend at all. It should look just like what historians actually find.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The Mara case does not exclude divine steering; it shows that a simple expectation of visible moral governance is not the only theistic account. Worldly evidence may therefore underdetermine the choice between naturalism and theism.",
+      "why_it_failed": "A accepted that this response requires weakening c011. He could not identify an aggregate measure that Molinism predicts, so the original expected-signature premise does no independent evidential work."
+    },
+    {
+      "defender": "Defender B",
+      "response": "A hidden network of goods mediated by free choices can accommodate the observed distribution of suffering, but impersonal causation and probability can accommodate it as well. Thus worldly randomness is evidentially ambiguous rather than evidence for providence.",
+      "why_it_failed": "This preserves the conclusion that randomness supplies no clear winner, but it concedes the objection to c011 as originally formulated. Its replacement premise concerns the inability of history independently to establish providence, not an expected signature absent from history."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "W4200623636.a1",
+      "paper_id": "oa:W4200623636",
+      "title": "Molinism’s Value in Easing Mistrust of God Stemming From Suffering and Divine Silence",
+      "authors": [
+        "Zachary Breitenbach"
+      ],
+      "year": 2021,
+      "url": "https://doi.org/10.2478/perc-2021-0026",
+      "verdict": "related",
+      "similarity": 0.62,
+      "quote": "Human libertarian freedom and divine middle knowledge support meticulous providence without making God responsible for evil."
+    },
+    {
+      "record_id": "abs:oa:W7128134031",
+      "paper_id": "oa:W7128134031",
+      "title": "Game-Theoretic Modeling of Divine Omniscience and Human Free Will",
+      "authors": [
+        "G. Anbarjafari"
+      ],
+      "year": null,
+      "url": "https://philarchive.org/rec/ANBGMO",
+      "verdict": "related",
+      "similarity": 0.55,
+      "quote": ""
+    },
+    {
+      "record_id": "W4221111276.a1",
+      "paper_id": "oa:W4221111276",
+      "title": "Divine Providence, Divine Hiddenness, and Commitment to the Good",
+      "authors": [
+        "Roberto Di Ceglie"
+      ],
+      "year": 2022,
+      "url": "https://doi.org/10.14428/thl.v6i2.64003",
+      "verdict": "related",
+      "similarity": 0.52,
+      "quote": "Schellenberg’s implicit refutation of providence assumes there is no good end of history."
+    },
+    {
+      "record_id": "W7203761940.c011",
+      "paper_id": "oa:W7203761940",
+      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
+      "authors": [
+        "Jeremy Tan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.67690/x8tmte22",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7203761940.c039",
+      "paper_id": "oa:W7203761940",
+      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
+      "authors": [
+        "Jeremy Tan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.67690/x8tmte22",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7203761940.c041",
+      "paper_id": "oa:W7203761940",
+      "title": "DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE APPARENT RANDOMNESS OF EVERYTHING?",
+      "authors": [
+        "Jeremy Tan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.67690/x8tmte22",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c037",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.38,
+  "records_searched": 4140,
+  "nearest": [
+    {
+      "record_id": "W4200623636.a1",
+      "paper_id": "oa:W4200623636",
+      "verdict": "related",
+      "similarity": 0.62,
+      "quote": "Human libertarian freedom and divine middle knowledge support meticulous providence without making God responsible for evil.",
+      "title": "Molinism’s Value in Easing Mistrust of God Stemming From Suffering and Divine Silence"
+    },
+    {
+      "record_id": "abs:oa:W7128134031",
+      "paper_id": "oa:W7128134031",
+      "verdict": "related",
+      "similarity": 0.55,
+      "quote": "",
+      "title": "Game-Theoretic Modeling of Divine Omniscience and Human Free Will"
+    },
+    {
+      "record_id": "W4221111276.a1",
+      "paper_id": "oa:W4221111276",
+      "verdict": "related",
+      "similarity": 0.52,
+      "quote": "Schellenberg’s implicit refutation of providence assumes there is no good end of history.",
+      "title": "Divine Providence, Divine Hiddenness, and Commitment to the Good"
+    }
+  ],
+  "open_questions": [
+    "Can Molinism derive a non-arbitrary, empirically assessable aggregate prediction from middle knowledge and providential aims?",
+    "Does a theistic commitment to repentance, character formation, and eschatological justice remove all expectation of visible desert-tracking outcomes, or only weaken it?",
+    "When a theory accommodates any observed history through hidden counterfactual goods, does that make the evidence neutral, or does it reduce the theory's explanatory or evidential value?",
+    "Can the argument for c041 be established without c011, and what precise neutrality premise would be sufficient?"
+  ],
+  "paper_direction": "A paper here would argue that a Molinist model of providence undermines the claim that benevolent historical steering should exhibit a visible directional signature, while leaving open whether the resulting accommodation of apparently random suffering is evidential neutrality or explanatory immunization. It would develop the structural point that providence through free choices, temporally dispersed goods, and deferred justice need not optimize earthly desert, then anticipate the strongest reply: that this only shows ambiguity and so supports the argument's final conclusion. To succeed, the paper would need to distinguish carefully between revising c011 into a neutrality premise and defending its original evidential role, and determine whether Molinism supplies any principled observable prediction at all.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}
