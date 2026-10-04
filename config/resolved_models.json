@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-10-04T00:46:08.119577+00:00",
+  "providers_available": [
+    "codex_cli",
+    "claude_cli"
+  ],
+  "provider_errors": {},
+  "models": [
+    {
+      "provider": "claude_cli",
+      "model": "sonnet",
+      "family": "anthropic",
+      "small": false,
+      "rank": 0,
+      "ok": false,
+      "latency_s": 1.8,
+      "error": "claude exit 1: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "provider": "claude_cli",
+      "model": "opus",
+      "family": "anthropic",
+      "small": false,
+      "rank": 1,
+      "ok": false,
+      "latency_s": 1.91,
+      "error": "claude exit 1: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "provider": "claude_cli",
+      "model": "haiku",
+      "family": "anthropic",
+      "small": true,
+      "rank": 2,
+      "ok": false,
+      "latency_s": 1.9,
+      "error": "claude exit 1: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-terra",
+      "family": "openai",
+      "small": false,
+      "rank": 0,
+      "ok": true,
+      "latency_s": 5.49,
+      "error": ""
+    },
+    {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-sol",
+      "family": "openai",
+      "small": false,
+      "rank": 1,
+      "ok": true,
+      "latency_s": 7.06,
+      "error": ""
+    },
+    {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-luna",
+      "family": "openai",
+      "small": true,
+      "rank": 2,
+      "ok": true,
+      "latency_s": 6.34,
+      "error": ""
+    }
+  ],
+  "families": [
+    "openai"
+  ],
+  "diversity": "degraded: 1 family",
+  "roles": {
+    "extractor": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-terra",
+      "family": "openai",
+      "effort": "low"
+    },
+    "formalizer": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-terra",
+      "family": "openai",
+      "effort": "medium"
+    },
+    "reranker": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-terra",
+      "family": "openai",
+      "effort": "low"
+    },
+    "defender_a": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-terra",
+      "family": "openai",
+      "effort": "medium"
+    },
+    "defender_b": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-sol",
+      "family": "openai",
+      "effort": "medium"
+    },
+    "referee": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-sol",
+      "family": "openai",
+      "effort": "medium"
+    },
+    "generators": [
+      {
+        "provider": "codex_cli",
+        "model": "gpt-5.6-terra",
+        "family": "openai",
+        "effort": "medium"
+      },
+      {
+        "provider": "codex_cli",
+        "model": "gpt-5.6-sol",
+        "family": "openai",
+        "effort": "medium"
+      }
+    ],
+    "naive_questioner": {
+      "provider": "codex_cli",
+      "model": "gpt-5.6-luna",
+      "family": "openai",
+      "effort": "low"
+    }
+  }
+}

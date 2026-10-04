@@ -11,3 +11,10 @@ node_modules/
 web/dist/
 .DS_Store
 reference/
+data/*.sqlite-*
+*.egg-info/
+.pytest_cache/
+mlflow.db
+web/node_modules/
+web/test-results/
+web/playwright-report/

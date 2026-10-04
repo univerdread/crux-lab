@@ -6,19 +6,23 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P0 Scaffold — target 03:00
 
-- [ ] P0.1 Python package skeleton, `requirements.txt`, `Makefile` + `crux_lab/cli.py` with all
+- [x] P0.1 Python package skeleton, `requirements.txt`, `Makefile` + `crux_lab/cli.py` with all
   targets from CLAUDE.md (stubs allowed), `.gitignore` verified (.env, .venv, cache/, data/raw/,
   data/*.sqlite, logs/, mlruns/, node_modules/, web/dist/).
   **Check:** `make setup && make check` passes.
-- [ ] P0.2 LLM client: provider chain, disk cache, budget guard, JSON-mode helper with Pydantic
+  → done: 8 tests pass; venv py3.11 via uv.
+- [x] P0.2 LLM client: provider chain, disk cache, budget guard, JSON-mode helper with Pydantic
   validation and 2 retries, fake provider for tests.
   **Check:** unit tests pass; cache hit on a repeated call costs $0.
-- [ ] P0.3 `make providers`: probe candidates from `config/models.yaml`, write
+  → test_cache_hit_costs_zero + live codex repeat call cached=True cost 0.0.
+- [x] P0.3 `make providers`: probe candidates from `config/models.yaml`, write
   `config/resolved_models.json`, assign roles with family diversity.
   **Check:** at least 1 working model resolved, or NOTES.md says clearly that no provider works
   (then continue with every non-LLM task).
-- [ ] P0.4 MLflow tracing wrapper (Databricks experiment if creds, else local `mlruns/`).
+  → 3 working (codex_cli gpt-5.6-terra/sol/luna, OpenAI family); claude_cli OAuth expired; no API keys → diversity degraded: 1 family.
+- [x] P0.4 MLflow tracing wrapper (Databricks experiment if creds, else local `mlruns/`).
   **Check:** one traced call recorded.
+  → local sqlite in mlruns/, search_traces found 1.
 - [ ] P0.5 Crux inventory (15 min max): if `reference/crux/` exists, write
   `docs/CRUX_INVENTORY.md` classifying every file as ADAPT / REFERENCE / IGNORE per
   "Reusing Crux" in CLAUDE.md. Copy nothing yet.
