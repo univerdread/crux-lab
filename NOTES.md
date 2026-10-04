@@ -1,5 +1,22 @@
 # NOTES — newest entry first
 
+## 2026-10-04 03:21 — P2 done, lab running on all targets (Claude)
+- Map: 5/5 targets → 1 argument each (3–6 premises), all invalid as stated, each with a truth-table-
+  checked missing premise; claims: 303 full-text (drop 5%) + 2615 abstract (drop 1%). Index:
+  2918 claims + 1212 abstracts, bge-small-en-v1.5 local + BM25 (RRF). Retrieval check passes 5/5.
+- First trials on target 1 (randomness vs divine control): both → revision_required (defenders
+  conceded the hidden "explanatory parity ⇒ evidential parity" premise and narrowed it). Philosophy
+  quality looks right: likelihood-ratio/predictive-asymmetry cases, Molinist + Reformed lenses.
+- Fixes found while watching: (1) blind generators converged on the same hidden premise → each
+  blind generator now gets a different stated premise (coverage; Director still ranks); (2) live
+  OpenAlex 400s (commas broke filter syntax) → keyword `search=` param; daily cap 45 live searches;
+  (3) defenders citing the argument's own claim ids got struck → own-paper ids verify but never
+  count toward known_answer. Runs restarted (LLM cache makes restarts cheap).
+- Databricks: `crux_lab/databricks_sync.py` (claims Delta table via SQL warehouse + AI Search
+  Delta Sync index with managed gte-large embeddings) and `app.yaml` are wired; they print
+  "not configured" and skip without DATABRICKS_HOST/TOKEN/WAREHOUSE_ID. MLflow traces locally.
+- Frontend is being built by a subagent against `web/src/types.ts` (the export contract).
+
 ## 2026-10-04 03:06 — product direction from the human (awake at kickoff)
 - "The tool is made for philosophers or philosophy students who want help with their research and
   to find some novelty in academia — finding what they should research and write about next."
