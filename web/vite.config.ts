@@ -4,5 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/",
+  // "/" for Vercel/Netlify/local; the GitHub Pages workflow sets VITE_BASE=/crux-lab/.
+  base: process.env.VITE_BASE || "/",
 });

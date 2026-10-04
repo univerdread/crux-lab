@@ -11,6 +11,9 @@ Built for Hack-Nation's 7th Global AI Hackathon, Challenge 3 "Agentic Scientific
 
 > In philosophy, the debate is the experiment.
 
+**Live site:** https://univerdread.github.io/crux-lab/ (static replay of this repo's results; deployed by
+`.github/workflows/pages.yml` on every push to `main` that touches `web/`).
+
 **Who it is for:** philosophers and philosophy students looking for what to research and write
 next. The site leads with *research directions*: objections that survived two defenders, ranked by
 survival × novelty, each traceable to verbatim quotes and corpus records.
