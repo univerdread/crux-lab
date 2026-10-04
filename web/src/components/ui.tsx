@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router";
 import type { Load } from "../lib/data";
-import { OUTCOME_COLORS, OUTCOME_LABELS, type Outcome } from "../types";
+import { OUTCOME_COLORS, OUTCOME_LABELS, OUTCOME_TEXT_COLORS, type Outcome } from "../types";
 
 export function isOutcome(o: unknown): o is Outcome {
   return typeof o === "string" && o in OUTCOME_COLORS;
@@ -18,7 +18,7 @@ export function OutcomeChip({ outcome, size = "sm" }: { outcome: string | null |
     return (
       <span
         className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-[2px] border font-mono ${big ? "px-2.5 py-1 text-[0.8rem]" : "px-1.5 py-[1px] text-[0.7rem]"}`}
-        style={{ borderColor: c, color: c, backgroundColor: `${c}12` }}
+        style={{ borderColor: c, color: OUTCOME_TEXT_COLORS[outcome], backgroundColor: `${c}12` }}
       >
         <span aria-hidden className={`inline-block rounded-full ${big ? "h-2 w-2" : "h-1.5 w-1.5"}`} style={{ backgroundColor: c }} />
         {OUTCOME_LABELS[outcome]}

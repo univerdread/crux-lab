@@ -205,9 +205,9 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
             ))}
             {a.missing_premise ? (
               <li className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-2 border border-dashed border-revision_required px-2 py-1">
-                <span className="font-mono text-[0.8rem] text-revision_required">{shortId(a.missing_premise.id)}</span>
+                <span className="font-mono text-[0.8rem] text-revision_required-text">{shortId(a.missing_premise.id)}</span>
                 <p>
-                  <span className="smallcaps mr-1 text-revision_required">hidden premise, found by the Formalizer</span>
+                  <span className="smallcaps mr-1 text-revision_required-text">hidden premise, found by the Formalizer</span>
                   {a.missing_premise.text}
                 </p>
               </li>

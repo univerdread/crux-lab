@@ -26,7 +26,7 @@ export function TurnView({ turn, local, fresh = false }: { turn: Turn; local?: R
         <span className="smallcaps text-[0.85rem] text-ink-soft">{PHASE_LABEL[turn.phase] ?? turn.phase}</span>
         <ModelBadge family={turn.family} model={turn.model} />
         {turn.concedes ? (
-          <span className="rounded-[2px] border border-revision_required px-1.5 font-mono text-[0.66rem] text-revision_required">
+          <span className="rounded-[2px] border border-revision_required px-1.5 font-mono text-[0.66rem] text-revision_required-text">
             concedes
           </span>
         ) : null}
@@ -34,7 +34,7 @@ export function TurnView({ turn, local, fresh = false }: { turn: Turn; local?: R
       <CitedText text={body} struck={turn.struck_claim_ids} local={local} className="turn-body" />
       {turn.revised_premise ? (
         <p className="mt-2 border border-dashed border-revision_required bg-[#C98A1B0f] px-2.5 py-1.5 text-[0.92rem]">
-          <span className="smallcaps mr-1 text-revision_required">revised premise</span>
+          <span className="smallcaps mr-1 text-revision_required-text">revised premise</span>
           {turn.revised_premise}
         </p>
       ) : null}

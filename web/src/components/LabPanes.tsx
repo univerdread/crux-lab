@@ -91,7 +91,7 @@ export function MapPane({ run, state, nums }: { run: Run; state: ReplayState; nu
         </p>
         {arg.missing_premise ? (
           <p className="border border-dashed border-revision_required px-3 py-2 text-[0.95rem]">
-            <span className="smallcaps mr-1 text-revision_required">hidden premise</span>
+            <span className="smallcaps mr-1 text-revision_required-text">hidden premise</span>
             {missingPremiseText(arg, claims)}
             {arg.missing_premise_id ? (
               <span className="ml-1 font-mono text-[0.7rem] text-ink-faint">{shortId(arg.missing_premise_id)}</span>
@@ -413,7 +413,7 @@ export function DirectorPane({
           <ul className="space-y-2">
             {state.revised.map((r) => (
               <li key={r.id} className="border border-dotted border-revision_required px-2.5 py-1.5 text-[0.9rem]">
-                <span className="mr-1 font-mono text-[0.7rem] text-revision_required">{shortId(r.id)}</span>
+                <span className="mr-1 font-mono text-[0.7rem] text-revision_required-text">{shortId(r.id)}</span>
                 {r.text}
               </li>
             ))}

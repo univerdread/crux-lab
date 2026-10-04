@@ -8,7 +8,7 @@ import { Disclaimer, Label } from "./ui";
 const VERDICT_STYLE: Record<string, { label: string; style: CSSProperties }> = {
   same_move: { label: "same move", style: { background: "#1F1B16", color: "#F7F3EA", borderColor: "#1F1B16" } },
   related: { label: "related", style: { borderColor: "#1F1B16", color: "#1F1B16" } },
-  different: { label: "different", style: { borderColor: "#B9AE98", color: "#7A7266" } },
+  different: { label: "different", style: { borderColor: "#B9AE98", color: "#6B6458" } },
   cited_in_trial: { label: "cited in trial", style: { borderColor: "#5B544A", color: "#5B544A", borderStyle: "dotted" } },
 };
 

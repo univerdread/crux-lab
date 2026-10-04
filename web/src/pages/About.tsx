@@ -27,11 +27,14 @@ const AGENTS: { name: string; constraint: string }[] = [
   { name: "Director", constraint: "Plain code, no model: priority = S · N · (0.5 + 0.5·C) + 0.1·E." },
 ];
 
+// Status pills use ink tones (outcome colours are reserved for outcomes): solid = used in this build,
+// dashed = wired but not used, dotted = partly (e.g. local stand-in).
 function Status({ on, children }: { on: boolean | null; children: ReactNode }) {
-  const color = on === true ? "#2F8F83" : on === false ? "#8A8580" : "#C98A1B";
+  const color = on === true ? "#1F1B16" : "#5B544A";
+  const style = on === true ? "solid" : on === false ? "dashed" : "dotted";
   return (
-    <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-[2px] border px-1.5 font-mono text-[0.7rem]" style={{ borderColor: color, color }}>
-      <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: color }} />
+    <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-[2px] border px-1.5 font-mono text-[0.7rem]" style={{ borderColor: color, borderStyle: style, color }}>
+      <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: on === true ? color : "transparent", border: `1px solid ${color}` }} />
       {children}
     </span>
   );

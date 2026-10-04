@@ -236,7 +236,6 @@ function ArgumentsSection({ file, byId }: { file: ClaimsFile; byId: Record<strin
             role="tab"
             aria-selected={i === sel}
             className="btn btn-quiet max-w-[22rem] truncate"
-            aria-pressed={i === sel}
             onClick={() => setSel(i)}
             title={x.title}
           >

@@ -113,7 +113,7 @@ function TrialView({ run, trial }: { run: Run; trial: Trial }) {
         ) : null}
         {trial.revised_premise ? (
           <p className="measure border border-dashed border-revision_required px-3 py-2">
-            <span className="smallcaps mr-1 text-revision_required">revised premise</span>
+            <span className="smallcaps mr-1 text-revision_required-text">revised premise</span>
             {trial.revised_premise}
           </p>
         ) : null}
@@ -231,7 +231,7 @@ function Exchange({
           ) : null}
           {verdict.revised_premise ? (
             <p className="mt-2 text-[0.95rem]">
-              <span className="smallcaps mr-1 text-revision_required">revised premise</span>
+              <span className="smallcaps mr-1 text-revision_required-text">revised premise</span>
               {verdict.revised_premise}
             </p>
           ) : null}

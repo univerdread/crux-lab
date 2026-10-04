@@ -24,6 +24,7 @@ export default defineConfig({
   },
   projects: [
     { name: "smoke", testMatch: /smoke\.spec\.ts/ },
+    { name: "a11y", testMatch: /a11y\.spec\.ts/ },
     {
       name: "demo",
       testMatch: /demo\.spec\.ts/,

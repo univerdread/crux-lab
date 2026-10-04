@@ -40,7 +40,7 @@ demo: export
 
 # Playwright needs a Chromium; set PW_CHROMIUM=<path to a chrome binary> to reuse one already on disk.
 smoke:
-	cd web && npm run build && npx playwright test --project=smoke
+	cd web && npm run build && npx playwright test --project=smoke --project=a11y
 
 demo-video:
 	cd web && npm run build && npx playwright test --project=demo

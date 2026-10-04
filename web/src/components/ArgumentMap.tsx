@@ -60,8 +60,8 @@ function PremiseBox({ data }: NodeProps<PremiseNode>) {
     >
       <Handle type="target" position={Position.Top} style={hidden} isConnectable={false} />
       <div className="mb-1 flex items-baseline justify-between gap-2 font-mono text-[10px] leading-none">
-        <span style={{ color: v === "missing" || v === "revised" ? "#9A6810" : "#5B544A" }}>{tag}</span>
-        <span className="text-[#7A7266]">
+        <span style={{ color: v === "missing" || v === "revised" ? "#8A5A00" : "#5B544A" }}>{tag}</span>
+        <span className="text-[#6B6458]">
           {shortId(data.id)}
           {data.formula ? ` · ${data.formula}` : ""}
         </span>
@@ -222,7 +222,7 @@ export function ArgumentMap({
         const k = j % per;
         const x = xOf[target] + NODE_W / 2 - (inRow * DOT) / 2 + k * DOT + 2;
         const y = yOf[target] - 52 - r * 44;
-        const color = o.outcome ? outcomeColor(o.outcome) : "#7A7266";
+        const color = o.outcome ? outcomeColor(o.outcome) : "#6B6458";
         nodes.push({
           id: `obj-${o.id}`,
           type: "objection",

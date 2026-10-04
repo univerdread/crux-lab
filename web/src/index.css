@@ -6,13 +6,19 @@
   --color-paper-edge: #E6DCC6;
   --color-ink: #1F1B16;
   --color-ink-soft: #5B544A;
-  --color-ink-faint: #7A7266;
+  --color-ink-faint: #6B6458;
   --color-rule: #D9CFBC;
   --color-misreading: #8A8580;
   --color-known_answer: #3B6EA8;
   --color-rebutted: #2F8F83;
   --color-revision_required: #C98A1B;
   --color-standing: #B03A2E;
+  /* Text-only shades of the outcome colours (WCAG AA >= 4.5:1 on paper); fills/borders keep the spec colours. */
+  --color-misreading-text: #5F5A55;
+  --color-known_answer-text: #2E5A8C;
+  --color-rebutted-text: #1F6B62;
+  --color-revision_required-text: #8A5A00;
+  --color-standing-text: #9A2F24;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }

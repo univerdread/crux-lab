@@ -354,6 +354,15 @@ export const OUTCOME_COLORS: Record<Outcome, string> = {
   standing: "#B03A2E",
 };
 
+/** Darker shades for text set in an outcome colour (contrast >= 4.5:1 on paper). */
+export const OUTCOME_TEXT_COLORS: Record<Outcome, string> = {
+  misreading: "#5F5A55",
+  known_answer: "#2E5A8C",
+  rebutted: "#1F6B62",
+  revision_required: "#8A5A00",
+  standing: "#9A2F24",
+};
+
 export const OUTCOME_LABELS: Record<Outcome, string> = {
   misreading: "Misreading",
   known_answer: "Known answer",
