@@ -35,7 +35,8 @@ def main() -> None:
          "- Say: *Philosophers need to know where the open questions are. Crux Lab is a research lab in which AI agents "
          "run the experiment philosophy actually has: the debate.*",
          f"- Point at the three numbers: " + "; ".join(f"**{h['value']}** {h['label']}" for h in idx["headline"]) + ".",
-         f"- Corpus: {corpus.get('records', '?')} OpenAlex records, {corpus.get('full_texts', '?')} open-access full texts, "
+         f"- Corpus: {corpus.get('records', '?')} OpenAlex records ({corpus.get('distinct_works', '?')} distinct works), "
+         f"{corpus.get('full_texts', '?')} open-access full texts, "
          f"{corpus.get('fresh', '?')} published since 2026-08-01.", "",
          f"## 0:20 — A research direction (`/brief/{top['id']}`)" if top else "## 0:20 — Briefs (`/briefs`)"]
     if top:
