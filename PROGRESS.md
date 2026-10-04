@@ -23,10 +23,11 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 - [x] P0.4 MLflow tracing wrapper (Databricks experiment if creds, else local `mlruns/`).
   **Check:** one traced call recorded.
   → local sqlite in mlruns/, search_traces found 1.
-- [ ] P0.5 Crux inventory (15 min max): if `reference/crux/` exists, write
+- [x] P0.5 Crux inventory (15 min max): if `reference/crux/` exists, write
   `docs/CRUX_INVENTORY.md` classifying every file as ADAPT / REFERENCE / IGNORE per
   "Reusing Crux" in CLAUDE.md. Copy nothing yet.
   **Check:** the file exists, or NOTES.md says no Crux reference was provided.
+  → docs/CRUX_INVENTORY.md: 227 files, ADAPT 2 (backend/debate.py, backend/prompts.py steelman wording), REFERENCE 10, IGNORE 215.
 
 ## P1 Corpus — target 03:45
 
