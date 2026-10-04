@@ -46,8 +46,7 @@ export default function Landing() {
             {index.status === "ready" && index.data.targets.length ? (
               <>
                 {" "}
-                {index.data.targets.filter((t) => t.kind === "fresh").length} of {index.data.targets.length} target papers
-                were published after 1 August 2026, so the models cannot have read published replies to them.
+                <FreshNote fresh={index.data.targets.filter((t) => t.kind === "fresh").length} total={index.data.targets.length} />
               </>
             ) : null}{" "}
             <Link to="/topics" className="link">
@@ -217,5 +216,23 @@ export default function Landing() {
         {(ix) => <HowItWorks index={ix} about={about.status === "ready" ? about.data : null} onPickPaper={pickPaper} />}
       </DataState>
     </div>
+  );
+}
+
+/** How many targets postdate the models' training, said plainly, including when none do. */
+function FreshNote({ fresh, total }: { fresh: number; total: number }) {
+  if (fresh === 0)
+    return (
+      <>
+        All {total} target papers are older work (no recent open-access paper on this topic passed the screen), so the
+        models may already know published replies to them; the prior-art check and the “known answer” label matter
+        more here.
+      </>
+    );
+  return (
+    <>
+      {fresh === total ? `All ${total}` : `${fresh} of ${total}`} target papers were published after 1 August 2026, so
+      the models cannot have read published replies to them.
+    </>
   );
 }
