@@ -1,5 +1,18 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:50 — Polish loop after the second topic (Claude)
+- Clean clone of the public repo: `npm ci` + build pass, both topics in dist (9.9 MB).
+- A11y now covers the second topic (home, brief, a replay at its end, trial, results): found a real contrast
+  failure (misreading-grey objection dots in the argument map once outcomes are coloured); dots now use the
+  darker outcome text shades. Default topic's lab check also runs at the end of the replay. 26/26 smoke+a11y.
+- Live mode e2e (FastAPI SSE) passes with the new event fields. Replay integration test covers every topic's
+  runs (6 decision-theory runs replay faithfully).
+- Read the decision-theory lead brief and two GLM-5.2 misreading rulings: grounded and sensible.
+- Copy: lead card explains novelty 1.00; Start page lists evroc, the assess/revise steps and what the second
+  topic's run took; README intro + generated second-topic paragraph; demo script topics step and closing
+  line generated from topics.json; smaller lead heading on phones.
+- Not run: the fine-tuning topic (human chose "build it, no new run" for it).
+
 ## 2026-10-04 12:40 — Decision-theory topic: results (Claude)
 - Runs 12:09–12:28 on evroc + Claude (8 families): 6 papers, 72 objections, 36 trials (27 revision_required,
   9 misreading, 0 failed, 0 half-labelled), 18 briefs. One novelty check hit the reranker-failure path
