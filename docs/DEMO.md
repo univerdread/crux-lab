@@ -9,6 +9,7 @@ Start: `make demo` → http://localhost:4680
 - Say: *Philosophers need to know where the open questions are. Crux Lab is a research lab in which AI agents run the experiment philosophy actually has: the debate.*
 - Point at the three numbers: **18/30** objections still standing or forcing a revision after both defenders; **86%** prior-art recall@5 (claims + 3-way restatement + rerank); **10/10** deliberate misreadings caught by the Referee.
 - Corpus: 1212 OpenAlex records (962 distinct works), 75 open-access full texts, 635 published since 2026-08-01.
+- Scroll to **Research directions**: the *strongest lead* card is the direction with the highest lead score, survival 0.80 × novelty 0.88 × Assessor quality 3/5 = 0.422. Say: *new, survived both defenders, and judged sound, all at once.* Open it.
 
 ## 0:20 — A research direction (`/brief/brief-W7203485685.arg1.ofd28a0`)
 - Research question: *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?*

@@ -37,8 +37,14 @@ def main() -> None:
          "- Point at the three numbers: " + "; ".join(f"**{h['value']}** {h['label']}" for h in idx["headline"]) + ".",
          f"- Corpus: {corpus.get('records', '?')} OpenAlex records ({corpus.get('distinct_works', '?')} distinct works), "
          f"{corpus.get('full_texts', '?')} open-access full texts, "
-         f"{corpus.get('fresh', '?')} published since 2026-08-01.", "",
-         f"## 0:20 — A research direction (`/brief/{top['id']}`)" if top else "## 0:20 — Briefs (`/briefs`)"]
+         f"{corpus.get('fresh', '?')} published since 2026-08-01."]
+    if top and top.get("score") is not None:
+        L += ["- Scroll to **Research directions**: the *strongest lead* card is the direction with the highest lead "
+              f"score, survival {top['survival']:.2f} × novelty {top['novelty']:.2f} × Assessor quality "
+              f"{(top.get('quality') or 0.6) * 5:g}/5 = {top['score']:.3f}. Say: *new, survived both defenders, and "
+              "judged sound, all at once.* Open it."]
+    L += ["",
+          f"## 0:20 — A research direction (`/brief/{top['id']}`)" if top else "## 0:20 — Briefs (`/briefs`)"]
     if top:
         L += [f"- Research question: *{top['research_question']}*",
               f"- Outcome **{top['outcome']}**, novelty {top['novelty']:.2f} over {top['records_searched']} records searched. "
