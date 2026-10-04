@@ -13,11 +13,14 @@ export default function BriefPage() {
   const { id = "" } = useParams();
   const brief = useJSON<Brief>(`briefs/${id}.json`);
   const summaries = useJSON<BriefSummary[]>("briefs.json");
-  const runId = summaries.status === "ready" ? summaries.data.find((b) => b.id === id)?.run_id ?? null : null;
+  const list = summaries.status === "ready" ? summaries.data : [];
+  const at = list.findIndex((b) => b.id === id);
+  const runId = at >= 0 ? list[at].run_id ?? null : null;
+  const rank = at >= 0 ? { n: at + 1, of: list.length, score: list[at].score } : null;
   return (
     <div className="mx-auto max-w-[1100px] px-4 py-8 sm:px-6">
       <DataState load={brief} what={`brief ${id}`}>
-        {(b) => <BriefView b={b} runId={runId} />}
+        {(b) => <BriefView b={b} runId={runId} rank={rank} />}
       </DataState>
     </div>
   );
@@ -98,7 +101,15 @@ function Reference({ r }: { r: LiteratureRef }) {
   );
 }
 
-function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
+function BriefView({
+  b,
+  runId,
+  rank,
+}: {
+  b: Brief;
+  runId: string | null;
+  rank: { n: number; of: number; score?: number } | null;
+}) {
   const a = b.argument;
   const trialId = `trial-${b.objection_id}`;
   return (
@@ -127,6 +138,15 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
             <span className="smallcaps mr-1 text-ink-soft">records searched</span>
             <span className="font-mono">{b.records_searched}</span>
           </span>
+          {rank ? (
+            <span title="lead score = survival × novelty × the Assessor's quality score out of 5">
+              <span className="smallcaps mr-1 text-ink-soft">rank</span>
+              <Link to="/briefs" className="link font-mono">
+                #{rank.n} of {rank.of}
+              </Link>
+              {rank.score !== undefined ? <span className="font-mono text-ink-soft"> · lead score {num(rank.score, 3)}</span> : null}
+            </span>
+          ) : null}
         </div>
         <Disclaimer text={b.disclaimer} />
         <p className="text-[0.92rem] text-ink-soft">
