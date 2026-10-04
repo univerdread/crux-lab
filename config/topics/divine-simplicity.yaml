@@ -26,11 +26,9 @@ relevance_levels:
   - touches philosophy of religion or the metaphysics of properties
   - concerns the divine attributes, aseity or God's nature
   - directly about divine simplicity (its formulations, the modal collapse and other objections, defences)
-targets:                 # the forefront first: recent papers on topic; classics spread over the searches
+targets:                 # the forefront first: recent papers directly on simplicity; then the strongest classics on it
   fresh: 3
   classic: 2
-  fresh_min_relevance: 2
-  spread: true
-  min_score: 4
+  fresh_min_relevance: 3 # "touches the divine attributes" is not enough for this topic's recent targets
 schools: [Thomist classical theism, theistic personalism, truthmaker theory, Eastern Orthodox essence–energies theology,
           open theism, Platonism about properties]

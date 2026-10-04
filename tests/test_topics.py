@@ -64,3 +64,12 @@ def test_fulltext_quota_keeps_room_for_classics(monkeypatch):
     assert build.fulltexts(papers, limit=4, fresh_share=0.5) == 4
     # half the quota for fresh papers, the rest for the most-cited classics
     assert sorted(p["id"] for p in papers if p.get("pdf_path")) == ["c8", "c9", "f0", "f1"]
+
+
+def test_recent_paper_found_by_a_classic_search_counts_as_fresh(monkeypatch):
+    from crux_lab.corpus import build
+    monkeypatch.setattr(build, "FRESH_FROM", "2026-08-01")
+    papers = [{"id": "new", "publication_date": "2026-09-10"}, {"id": "old", "publication_date": "2022-05-06"},
+              {"id": "flagged", "fresh": True, "publication_date": "2026-08-03"}, {"id": "undated"}]
+    assert build.mark_recent(papers) == 1
+    assert [p["id"] for p in papers if p.get("fresh")] == ["new", "flagged"]

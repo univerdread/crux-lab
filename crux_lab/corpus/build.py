@@ -38,6 +38,17 @@ def harvest_fresh() -> list[dict]:
     return list(seen.values())
 
 
+def mark_recent(papers: list[dict]) -> int:
+    """A record published since FRESH_FROM is fresh whichever search found it (the topic's own search often finds
+    the newest on-topic paper first, and used to leave it unflagged)."""
+    n = 0
+    for p in papers:
+        if not p.get("fresh") and (p.get("publication_date") or "") >= FRESH_FROM:
+            p["fresh"] = True
+            n += 1
+    return n
+
+
 def fulltexts(papers: list[dict], limit: int = 50, fresh_share: float = 0.5) -> int:
     """Up to `limit` OA full texts, at most `fresh_share` of them fresh: fresh candidates first, then the
     most-cited on-topic papers (so a crowded fresh pool cannot leave the classic targets without text)."""
@@ -67,6 +78,7 @@ def main(skip_fulltext: bool = False) -> None:
     for p in fresh:
         by_id.setdefault(p["id"], p)
     papers = list(by_id.values())
+    mark_recent(papers)
     if not skip_fulltext:
         fulltexts(papers)
     with CORPUS.open("w", encoding="utf-8") as f:
@@ -82,7 +94,10 @@ def refine() -> None:
     """Re-apply the topic's filters and the full-text quota to an existing corpus, without new searches."""
     papers = [p for p in load_corpus()
               if not p.get("fresh") or FRESH_RELEVANT.search(p["title"] + " " + p["abstract"])]
-    fulltexts(papers)   # texts already downloaded for dropped papers stay in data/raw, unused
+    newly = mark_recent(papers)
+    have = sum(1 for p in papers if p.get("pdf_path"))
+    # room for recent papers that were not flagged before (fresh first in the queue)
+    fulltexts(papers, limit=max(50, have + (10 if newly else 0)))   # texts of dropped papers stay in data/raw
     with CORPUS.open("w", encoding="utf-8") as f:
         for p in papers:
             f.write(json.dumps(p, ensure_ascii=False) + "\n")
