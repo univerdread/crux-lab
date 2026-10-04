@@ -38,7 +38,7 @@ def main() -> None:
         oc = ", ".join(f"{k} {v}" for k, v in sorted(r["outcomes"].items()))
         out.append(f"| {r['title'][:70]} ({r['kind']}) | {r['objections']} | {r['trials']} | {oc} | {len(r['briefs'])} |")
     if briefs:
-        out += ["", "**Top research directions** (survival × novelty):", ""]
+        out += ["", "**Top research directions** (survival × novelty, best per target first):", ""]
         for b in briefs[:5]:
             out.append(f"- *{b['research_question']}* — {b['outcome']}, novelty {b['novelty']:.2f}, "
                        f"{b['records_searched']} records searched. Further human review required.")
@@ -51,7 +51,8 @@ def main() -> None:
     if e2:
         k, m = e2["known_answer"], e2["misreading"]
         out += [f"**E2 gauntlet calibration**: {k['labelled_known_answer']}/{k['n']} published objections labelled "
-                f"known_answer, {k['correct_reply_cited']}/{k['n']} with the correct reply cited and verified; "
+                f"known_answer, {k['correct_reply_cited']}/{k['n']} with the correct reply cited and verified; a defender "
+                f"cited (verified) a gold reply in {k.get('gold_reply_cited_by_a_defender', '?')}/{k['n']} items; "
                 f"{m['caught']}/{m['n']} deliberate misreadings labelled misreading.", ""]
     if e3:
         out += ["**E3 diversity ablation**:", "",

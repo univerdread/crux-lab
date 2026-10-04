@@ -16,6 +16,49 @@ next. The site leads with *research directions*: objections that survived two de
 survival × novelty, each traceable to verbatim quotes and corpus records.
 
 <!-- RESULTS -->
+## What the lab produced (generated from `web/public/data`)
+
+- Corpus: **1212** OpenAlex records (635 published since 2026-08-01), **75** open-access full texts.
+- Targets: **5** papers; **55** objections generated; **30** full trials; **14** research briefs.
+- Model families: degraded: 2 families (anthropic, openai).
+
+| Target | Objections | Trials | Outcomes | Briefs |
+| --- | --- | --- | --- | --- |
+| Some critical reflections on the hiddenness argument (classic) | 11 | 6 | known_answer 1, misreading 1, revision_required 4 | 3 |
+| Divine Hiddenness, Greater Goods, and Accommodation (classic) | 11 | 6 | misreading 3, revision_required 3 | 3 |
+| God and the View From Nowhere: De Se Knowledge and Divine Omniscience (fresh) | 12 | 6 | misreading 1, revision_required 5 | 3 |
+| DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE AP (fresh) | 10 | 6 | misreading 4, revision_required 2 | 2 |
+| Divine simplicity as symmetric parthood (fresh) | 11 | 6 | misreading 2, revision_required 4 | 3 |
+
+**Top research directions** (survival × novelty, best per target first):
+
+- *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched. Further human review required.
+- *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched. Further human review required.
+- *Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?* — revision_required, novelty 0.66, 4139 records searched. Further human review required.
+- *Can a many-goods response to divine hiddenness count several goods arising from one person’s nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil?* — revision_required, novelty 0.47, 4140 records searched. Further human review required.
+- *Can an analogy from vulnerable human love support a context-sensitive divine obligation to make relationship accessible to nonresistant persons without first establishing a general obligation of vulnerable love?* — revision_required, novelty 0.42, 4130 records searched. Further human review required.
+
+### Evaluation (automatic, no human labels)
+
+**E1 prior-art recall@5** (n=50):
+
+| Method | recall@5 |
+| --- | --- |
+| BM25 over abstracts | 12% (6/50) |
+| embeddings over abstracts | 18% (9/50) |
+| embeddings over claims | 54% (27/50) |
+| claims + 3-way restatement + rerank | 86% (43/50) |
+
+**E2 gauntlet calibration**: 1/10 published objections labelled known_answer, 1/10 with the correct reply cited and verified; a defender cited (verified) a gold reply in 7/10 items; 10/10 deliberate misreadings labelled misreading.
+
+**E3 diversity ablation**:
+
+| Condition | n | distinct premises / argument | mean pairwise distance | passes pre-screen | novelty > 0.5 |
+| --- | --- | --- | --- | --- | --- |
+| plain prompt, one model | 20 | 1.8 | 0.114 | 100% | 50% |
+| constrained roles, one model | 20 | 2.4 | 0.224 | 85% | 55% |
+| constrained roles, mixed families | 20 | 2.6 | 0.213 | 80% | 45% |
+<!-- /RESULTS -->
 
 ## The discovery loop
 
@@ -128,3 +171,15 @@ inventoried file by file in [`docs/CRUX_INVENTORY.md`](docs/CRUX_INVENTORY.md). 
 Everything else was written for Crux Lab.
 
 <!-- LIMITS -->
+## Limits (read before trusting anything)
+
+- **Never a novelty claim.** Novelty is `1 − max similarity` to what our retrieval found in 2918 indexed claims, 1212 abstracts and a live OpenAlex query. Books, paywalled papers and anything OpenAlex lacks are invisible to it.
+- **PhilArchive was unavailable**: its OAI-PMH API now needs a key (api.philpapers.org) or blocks our client (philarchive.org, Cloudflare). Fresh targets come from OpenAlex instead, and none of the fresh open-access full texts was about divine hiddenness itself, so fresh targets are philosophy of religion more broadly.
+- **Model diversity is degraded**: degraded: 2 families. The design wants Defender A, Defender B and the Referee from three different families; without Databricks/OpenRouter keys only Anthropic (Claude) and OpenAI (Codex) models were reachable, through subscription CLIs.
+- The Referee and defenders are LLMs; outcome labels are dialectical judgements by models, not verdicts on truth, and they are noisy. The evals are small (n reported with each) and have no human labels.
+- Reconstructions are the Extractor's; every premise has a verbatim quote, but an author might reconstruct their argument differently. Read the paper.
+
+- E1: The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels.
+- E2: correct_reply_cited counts items labelled known_answer whose verified citations include a gold reply paper; gold_reply_cited_by_a_defender counts items where a defender cited (verified) a claim from a gold reply paper, whatever the label. Small n (10 + 10). Objections are LLM restatements of published claims, and the 'published reply' is chosen by retrieval + an LLM judge from abstract-level claims, so both the pairing and the gold reply are model-made. A first version of this eval paired each objection with its own source paper as the 'reply' (0/10 correct by construction) and was discarded. Misreadings are written by a model from the same pool as the defenders. The argument is a paraphrased fixture, not a corpus record. No human labels.
+- E3: Only 2 model families were available (anthropic, openai), so 'mixed families' means 2 families. share_surviving would need full trials for all 60 objections and was not run (cost); share_passing_prescreen (the Referee's misreading check) is reported instead. CLI providers ignore temperature, so 'plain' variation comes from the 'objection k of n' prompt. 5 arguments x 4 objections per condition.
+<!-- /LIMITS -->

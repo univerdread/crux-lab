@@ -36,6 +36,24 @@ METHOD_NOTES = [
 ]
 
 
+def rank_directions(briefs: list[dict]) -> list[dict]:
+    """Survival × novelty, but round-robin across runs so the top of the list shows breadth:
+    every target's best direction first, then every target's second best, and so on."""
+    for b in briefs:
+        b["score"] = round(b["survival"] * b["novelty"], 4)
+    by_run: dict = {}
+    for b in sorted(briefs, key=lambda b: -b["score"]):
+        by_run.setdefault(b["run_id"], []).append(b)
+    out, rnd = [], 0
+    while any(by_run.values()):
+        tier = [lst.pop(0) for lst in by_run.values() if lst]
+        for b in sorted(tier, key=lambda b: -b["score"]):
+            b["tier"] = rnd
+            out.append(b)
+        rnd += 1
+    return out
+
+
 def tracing_summary() -> dict:
     """How many LLM calls were traced with MLflow (local sqlite store unless Databricks was configured)."""
     import sqlite3
@@ -124,7 +142,7 @@ def main() -> dict:
                        "paper_title": b["argument"].get("paper_title"),
                        "challenged_premise": b["challenged_premise"],
                        "paper_direction": b["paper_direction"]})
-    briefs.sort(key=lambda b: -(b["survival"] * b["novelty"]))
+    briefs = rank_directions(briefs)
     (out / "briefs.json").write_text(json.dumps(briefs, ensure_ascii=False, indent=1))
 
     # claims + edges for the atlas (embeddings dropped)
