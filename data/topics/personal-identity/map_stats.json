@@ -1,0 +1,182 @@
+{
+  "generated_at": "2026-10-04T11:41:17.338712+00:00",
+  "targets": [],
+  "fulltext_claims": {
+    "proposed": 0,
+    "kept": 0,
+    "drop_rate": 0.0
+  },
+  "abstract_claims": {
+    "proposed": 2041,
+    "kept": 1983,
+    "drop_rate": 0.028
+  },
+  "dropped_examples": [
+    {
+      "paper_id": "oa:W1982309445",
+      "quote": "it is shown here that the sort of non‑branching clause ... actually runs contrary to the very spirit of their theory.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3173358422",
+      "quote": "the same radical alterations of criminal offenders’ psychological features ... can be achieved without these having any effect on numerical identity.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1760217015",
+      "quote": "A widely accepted view ... that the notion of psychological continuity expresses a one–many or many–one relation. This belief is unfounded.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1760217015",
+      "quote": "This conclusion casts doubt on the Lockean approach ... showing that the notion of psychological continuity Lockeans rely on may not be available.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2063937593",
+      "quote": "Critics ... have argued that it cannot adequately explain what makes psychological states co‑personal ... there will inevitably be examples of states that it ascribes wrongly using only the causal con",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2168441797",
+      "quote": "Marya Schechtman has raised a series of worries for the Psychological Continuity Theory ... stemming from ... the ‘Extreme Claim’. This is roughly the claim that theories like it are unable to explain",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W194553707",
+      "quote": "The most plausible such account, I claim, is the biological criterion, according to which personal identity over time is to be defined... in terms of the continued existence over time of",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2104518160",
+      "quote": "B. Williams’ emphasis on the body was not just common sense. It was also recognition of the importance of giving priority to criteria that could be kept under intersubjective control.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3082953388",
+      "quote": "Esto resulta en varios obstáculos para determinar quién de estas dos entidades soy.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3082953388",
+      "quote": "y, dado que lo mental superviene a lo físico, los que sostienen esta tesis están obligados a decir que, en nuestro caso, de los animales humanos, hay una relación de coincidencia, y no de identidad, e",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3082953388",
+      "quote": "El problema de la persistencia en relación con nosotros suele abordarse desde un punto de vista que da prioridad a la continuidad psicológica.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1026923856",
+      "quote": "With regard to the question how many persons are involved in this case, three answers are worth considering: (i)... (ii)... (iii)...",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W4390406254",
+      "quote": "Thomas Reid ... objects that Locke's theory of personal identity lacks \"Transitive Relation\".",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1553852952",
+      "quote": "But they are not. ... it would follow that A = C , which is absurd.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1894837588",
+      "quote": "by increasing the distinctiveness of a matching physical mark ... likelihood judgments for the candidate with the similar distinctive physical mark were significantly higher than candidates with non‑d",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2140727218",
+      "quote": "The Euro‑American philosophical traditions offer two extreme positions to the problem of identity over time: G. W. Leibniz' essentialism and Derek Parfit's reductionism.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W103303662",
+      "quote": "It would seem that we are animals.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2606098849",
+      "quote": "must reject a prima facie plausible theological possibility ... concerning which individual concrete human natures an omnipotent God could assume (viz. any of them).",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3139012273",
+      "quote": "we are too",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2020827319",
+      "quote": "Friends of the Biological View hold that we continue for so long, but only so long, as our lives continue",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2317028974",
+      "quote": "Taylor's arguments against the orthodoxy do not establish ... that the orthodox position ... fails to account for personal identity.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3003882292",
+      "quote": "the account I gave of Derek Parfit’s dividing self-case ... does not depend on a dubious four-dimensionalist metaphysics as claimed by Eric Olson (2006).",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1947528920",
+      "quote": "Parfit's “reductionist” account of personal identity (including the rejection of anything like a soul) ... that “identity does not matter.”",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7161785392",
+      "quote": "Parfit argues that what matters ... is psychological connectedness and continuity (relation R), and that the identity relation does not matter.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7161785392",
+      "quote": "If Parfit's arguments do not necessarily lead to the conclusion that relation R is all that matters ... then his theory is not an adequate solution to the problem of personal identity.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2124532561",
+      "quote": "Before being able to answer key practical questions dependent on a criterion of personal identity ... we must first determine which general approach to the issue of personal identity is more plausible",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7111881935",
+      "quote": "It's my opinion that those misinterpretations result from a lack of scientific background knowledge.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7111881935",
+      "quote": "Without considering the current results in neuroscience, biology and other relevant sciences it's very difficult to get a firm and justified grip on the subject.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7111881935",
+      "quote": "I will argue that only those thought experiments are legitimate, that take into account the neurological and biological facts that join them.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2181398526",
+      "quote": "Tvrdiću da nijedan od psiholoških kriterijuma – ni samostalno ni u kombinaciji sa kasnije uvedenim telesnim kriterijumom i kriterijumom mozga – ne pruža nužne i dovoljne uslove za lični identitet.",
+      "reason": "abstract quote"
+    }
+  ],
+  "claims_indexed": 1983,
+  "abstracts_indexed": 946,
+  "embedder": "bge-small-en-v1.5 (local)",
+  "llm": {
+    "calls": 124,
+    "cache_hits": 0,
+    "json_failures": 0,
+    "errors": 0
+  },
+  "budget": {
+    "spent_usd": 13.5538,
+    "limit_usd": 20.0,
+    "cli_calls": 2106,
+    "cli_limit": 4000,
+    "notional_cli_usd": 33.9776
+  }
+}
