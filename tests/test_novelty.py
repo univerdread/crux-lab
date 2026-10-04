@@ -78,3 +78,15 @@ def test_target_paper_excluded():
 
 def test_keywords():
     assert novelty.keywords("The loving God, would it hide? Yes, God would.") == "loving god hide yes"   # stopwords (would) dropped
+
+
+def test_duplicate_record_of_target_is_excluded(monkeypatch):
+    from crux_lab.corpus import dedup
+    claims, abstracts = make_ix()
+    # pretend oa:Q is another record of the target paper oa:P
+    monkeypatch.setattr(dedup, "work_of", lambda pid: "oa:P" if pid in ("oa:P", "oa:Q") else pid)
+    c = LLMClient.fake(responder(lambda u: [{"n": n, "verdict": "different", "similarity": 0.1, "quote": ""}
+                                            for n in numbers(u)]))
+    r = asyncio.run(novelty.check(c, "o1", "loving God belief providence", "arg", "X.c1", "p", claims, abstracts,
+                                  use_live=False, exclude_paper="oa:P"))
+    assert all(m.paper_id not in ("oa:P", "oa:Q") for m in r.matches)

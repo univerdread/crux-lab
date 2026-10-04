@@ -121,9 +121,12 @@ async def check(client: LLMClient, objection_id: str, objection: str, argument_t
     queries = [objection] + ([rs.paper_vocabulary, rs.plain_english, rs.neighboring_tradition] if rs else [])
     fused: dict[str, tuple[float, Passage]] = {}
 
+    from crux_lab.corpus.dedup import work_of
+    excluded_work = work_of(exclude_paper) if exclude_paper else None
+
     def add(p: Passage, score: float):
-        if exclude_paper and p.paper_id == exclude_paper:
-            return    # the target paper itself is not prior art for an objection to it
+        if exclude_paper and (p.paper_id == exclude_paper or work_of(p.paper_id) == excluded_work):
+            return    # the target paper itself (or another record of it) is not prior art for an objection to it
         old = fused.get(p.record_id)
         fused[p.record_id] = (score + (old[0] if old else 0), p)
 
