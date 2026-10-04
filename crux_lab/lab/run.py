@@ -261,9 +261,16 @@ async def main(tid: str) -> None:
           f"briefs {run['briefs']}, stop: {run['stop_reason']}")
 
 
+def snapshot_models(client: LLMClient) -> None:
+    """Keep the model assignment a topic's runs used, so its exported /about stays true later."""
+    from crux_lab.config import TOPIC_RESOLVED
+    TOPIC_RESOLVED.write_text(json.dumps(client.resolved, indent=2))
+
+
 async def main_all(only: list[str] | None = None, skip: list[str] | None = None) -> None:
     targets = [t for t in load_targets() if (not only or t["id"] in only) and t["id"] not in (skip or [])]
     client = LLMClient()   # one client => shared per-provider concurrency limits across targets
+    snapshot_models(client)
     res = await asyncio.gather(*[run_target(t, client) for t in targets], return_exceptions=True)
     for t, r in zip(targets, res):
         if isinstance(r, Exception):

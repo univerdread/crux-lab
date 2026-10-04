@@ -17,7 +17,12 @@ DEFAULT_IN_PER_M = 3.0
 DEFAULT_OUT_PER_M = 15.0
 
 # Known per-million prices (input, output). Unknown models use the defaults above.
-PRICES: dict[str, tuple[float, float]] = {}
+PRICES: dict[str, tuple[float, float]] = {
+    # evroc Think list prices (EUR per 1M tokens, 2026-10-04), converted to USD with a 10% margin
+    "Kimi-K2.6": (1.4, 5.5), "GLM-5.2": (1.4, 5.5), "Mistral-Medium-3.5": (1.65, 6.6),
+    "Qwen3.8-27B": (0.83, 3.3), "Qwen3.6-35B": (0.33, 1.32), "Llama-3.3-70B": (1.1, 1.1),
+    "gpt-oss-120b": (0.22, 0.88), "gemma-4-26B": (0.14, 0.55),
+}
 
 CLI_PROVIDERS = {"codex_cli", "claude_cli", "fake"}
 

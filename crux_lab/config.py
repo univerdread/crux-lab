@@ -69,6 +69,7 @@ BRIEFS = _P["briefs"]
 DB_PATH = _P["db"]
 MANUAL_TARGETS = _P["manual"]
 MAP_STATS = _P["map_stats"]
+TOPIC_RESOLVED = TOPIC_DATA / "resolved_models.json"   # snapshot of the model assignment this topic ran with
 RESULTS = _P["results"]
 INDEX_DIR = _P["index"]
 WEB_DATA = _P["web"]

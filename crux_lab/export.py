@@ -9,7 +9,7 @@ import json
 import shutil
 from datetime import datetime, timezone
 
-from crux_lab.config import (BRIEFS, DEFAULT_TOPIC, MAP_STATS, RESOLVED_MODELS, RESULTS, RUNS, TARGETS, TOPIC,
+from crux_lab.config import (BRIEFS, DEFAULT_TOPIC, MAP_STATS, RESOLVED_MODELS, TOPIC_RESOLVED, RESULTS, RUNS, TARGETS, TOPIC,
                              TOPIC_SLUG, TOPICS, WEB_DATA, WEB_DATA_ROOT, topic_paths)
 from crux_lab.corpus.build import load_corpus
 from crux_lab.corpus.dedup import work_ids
@@ -228,7 +228,7 @@ def main() -> dict:
 
     results = {k: _read(RESULTS / f"{k}.json") for k in ("e1", "e2", "e3")}
     (out / "results.json").write_text(json.dumps(results, ensure_ascii=False, indent=1))
-    resolved = _read(RESOLVED_MODELS) or {}
+    resolved = _read(TOPIC_RESOLVED) or _read(RESOLVED_MODELS) or {}
     targets = _read(TARGETS) or {}
     map_stats = _read(MAP_STATS) or {}
     about = {

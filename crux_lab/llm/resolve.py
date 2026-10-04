@@ -11,7 +11,8 @@ import yaml
 from crux_lab.config import MODELS_YAML, RESOLVED_MODELS, settings
 from crux_lab.llm.providers import available_providers, build_provider
 
-FAMILY_PREFERENCE = ["anthropic", "openai", "llama", "qwen", "mistral", "gpt-oss", "kimi", "gemma", "deepseek"]
+# Order decides the gauntlet: 1st family -> Defender A, 2nd -> Defender B, 3rd -> Referee (strongest first).
+FAMILY_PREFERENCE = ["anthropic", "openai", "kimi", "glm", "mistral", "qwen", "llama", "gpt-oss", "gemma", "deepseek"]
 
 
 def _norm(x: str) -> str:
@@ -36,7 +37,7 @@ async def _probe(provider_name: str, model: str) -> tuple[bool, float, str]:
     try:
         c = await asyncio.wait_for(
             prov.complete(model, "You are a probe. Reply with the single word OK.",
-                          [{"role": "user", "content": "Say OK."}], max_tokens=10, effort="low"),
+                          [{"role": "user", "content": "Say OK."}], max_tokens=400, effort="low"),
             timeout=240)
         ok = "ok" in c.text.lower()
         return ok, time.monotonic() - t0, "" if ok else f"unexpected reply: {c.text[:80]}"

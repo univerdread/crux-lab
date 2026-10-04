@@ -136,6 +136,11 @@ class EvrocProvider(_OpenAICompatible):
 
     name = "evroc"
     BASE = "https://models.think.evroc.com/v1"
+    MIN_MAX_TOKENS = 8192   # reasoning models (Kimi, GLM, Qwen3, gpt-oss) spend output tokens before answering
+
+    async def _complete(self, model, system, messages, temperature, max_tokens, effort):
+        return await super()._complete(model, system, messages, temperature,
+                                       max(max_tokens, self.MIN_MAX_TOKENS), effort)
 
     def __init__(self, s: Settings = default_settings):
         self.key = s.evroc_key

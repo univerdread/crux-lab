@@ -153,14 +153,23 @@ async def naive(client: LLMClient, arg: Argument, own: dict[str, Claim], small: 
 async def first_wave(client: LLMClient, arg: Argument, own: dict[str, Claim], max_n: int = 8) -> list[Objection]:
     """One blind objection per generator model, the hidden-premise attacker, two tradition lenses."""
     gens = client.generator_specs()
+    # One model per family (first listed = strongest), so a large model pool still leaves room for the
+    # Hidden-Premise Attacker and the two Tradition Lenses within max_n.
+    by_family: dict[str, ModelSpec] = {}
+    for g in gens:
+        by_family.setdefault(g.family, g)
+    fams = list(by_family.values())
+    n_blind = max(1, min(len(fams), max_n - 3)) if len(fams) > 1 else len(gens)
+    blind_specs = fams[:n_blind] if len(fams) > 1 else gens
+    rest = fams[n_blind:] or fams
     # Blind generators run in parallel and, left alone, converge on the weakest point. A lab wants
     # coverage, so each is assigned a different stated premise (the missing premise belongs to the
     # Hidden-Premise Attacker); the Director then ranks them by novelty and survival.
     order = sorted(arg.premise_ids, key=lambda p: int(hashlib.sha1((arg.id + p).encode()).hexdigest(), 16))
-    tasks = [blind(client, arg, own, s, only=order[i % len(order)]) for i, s in enumerate(gens)]
-    tasks.append(hidden(client, arg, own, gens[0]))
+    tasks = [blind(client, arg, own, s, only=order[i % len(order)]) for i, s in enumerate(blind_specs)]
+    tasks.append(hidden(client, arg, own, rest[0]))
     for i, school in enumerate(_schools_for(arg.id)):
-        tasks.append(tradition(client, arg, own, gens[(i + 1) % len(gens)], school))
+        tasks.append(tradition(client, arg, own, rest[(i + 1) % len(rest)], school))
     res = await asyncio.gather(*tasks, return_exceptions=True)
     return [r for r in res if isinstance(r, Objection)][:max_n]
 
