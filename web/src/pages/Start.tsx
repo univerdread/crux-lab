@@ -238,9 +238,10 @@ export default function Start() {
               </pre>
             </li>
             <li>
-              Give it a model: put one provider in <Code>.env</Code> (a Databricks workspace token, an OpenRouter key or an
-              Anthropic key; a logged-in <Code>claude</Code> or <Code>codex</Code> command-line tool also works), then run{" "}
-              <Code>make providers</Code>. More model families make the debate better.
+              Give it a model: put one provider in <Code>.env</Code> (an evroc Think key gives eight open-model families; a
+              Databricks workspace token, an OpenRouter key or an Anthropic key also work, as does a logged-in{" "}
+              <Code>claude</Code> or <Code>codex</Code> command-line tool), then run <Code>make providers</Code>. More model
+              families make the debate better: Defender A, Defender B and the Referee then come from three different ones.
             </li>
             <li>
               Save the file above as <Code>config/topics/{slug}.yaml</Code>.
@@ -252,6 +253,8 @@ export default function Start() {
                   `make targets TOPIC=${slug}    # pick papers that argue for a thesis`,
                   `make map TOPIC=${slug}        # extract claims and arguments`,
                   `make runs TOPIC=${slug}       # objections, prior-art checks, trials, briefs`,
+                  `make assess TOPIC=${slug}     # a referee-style quality grade for every direction`,
+                  `make revise TOPIC=${slug}     # each direction answers its strongest objection, re-graded`,
                   `make export TOPIC=${slug}`,
                   "make demo                       # open the site, then Topics → your topic"].join("\n")}
               </pre>
@@ -263,10 +266,12 @@ export default function Start() {
             </li>
           </ol>
           <p className="measure mt-4 text-[0.9rem] text-ink-soft">
-            What to expect: OpenAlex’s free tier allows about a hundred searches a day, enough for one topic. The
-            divine-hiddenness build made about 1,400 model calls for five papers including its evaluations. Every call
-            is cached, so a rerun only pays for what changed. New topics have not been run end to end in this build;
-            if a step fails, the README describes each one.
+            What to expect: OpenAlex’s free tier allows about a hundred searches a day, enough for one topic (set{" "}
+            <Code>max_per_query: 200</Code> to use one search per query). The divine-hiddenness build made about 1,400
+            model calls for five papers including its evaluations. The second topic, decision theory in philosophy of
+            religion, was run end to end with exactly these steps in about 45 minutes: roughly $4.70 of evroc usage and
+            about 120 Claude calls for six papers. Every call is cached, so a rerun only pays for what changed. If a
+            step fails, the README describes each one.
           </p>
           <p className="mt-3">
             <Link to="/topics" className="link">← All topics</Link>
