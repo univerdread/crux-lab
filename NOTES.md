@@ -1,5 +1,20 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:45 — topics: any subject, not just hiddenness (Claude, at the human's request)
+- Human chose "build it, no new run". A topic is now config/topics/<slug>.yaml (queries, on-topic filter,
+  screening scale, tradition lenses, optional E2 fixture). `make <step> TOPIC=<slug>` /
+  `python -m crux_lab.cli --topic <slug>` select it; the default topic (divine-hiddenness) keeps the
+  original paths, others live under data|results|cache/index|web/public/data/topics/<slug>/.
+- Example second topic: config/topics/fine-tuning.yaml (configured, NOT run: no model spend).
+- export writes web/public/data/topics.json (all topics, status, counts, commands, full config).
+- Site: "Topics" in the nav + "topic: <name>" next to the logo; /topics (explore a run topic, or see how
+  to run one), /start (writes a topic file in the browser from scratch or from a template, with the exact
+  steps). Topic switching reads ?topic=<slug> and remembers it for the session; data loads from the
+  topic's folder (verified with a temporary test topic, then removed). Landing + guide link to both.
+- Screening prompt is now topic-generic (field topic_relevance): re-screening the hiddenness targets
+  would need new model calls. Tests: 55 Python (topic config/paths/env switching), 9 web, 10 smoke +
+  10 axe (incl. /topics and /start).
+
 ## 2026-10-04 11:25 — PhilPapers API key tried: does not unlock PhilArchive OAI (Claude)
 - The human supplied a PhilPapers API key (stored in .env only; not printed, not committed — consider
   regenerating it after the hackathon since it was pasted in chat).

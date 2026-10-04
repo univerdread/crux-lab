@@ -1,8 +1,10 @@
 import { Suspense, useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router";
+import { currentTopic } from "../lib/topics";
 import { DrawerProvider } from "./drawer";
 
 const NAV: { to: string; label: string }[] = [
+  { to: "/topics", label: "Topics" },
   { to: "/briefs", label: "Research directions" },
   { to: "/lab", label: "Lab" },
   { to: "/atlas", label: "Atlas" },
@@ -30,12 +32,19 @@ export function Layout() {
       </a>
       <header className="no-print border-b border-ink">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-baseline justify-between gap-x-8 gap-y-2 px-4 py-3 sm:px-6">
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <NavLink to="/" className="font-serif text-[1.45rem] font-semibold tracking-tight" end>
             Crux Lab
             <span className="ml-2 hidden font-mono text-[0.68rem] font-normal tracking-normal text-ink-soft sm:inline">
               a research lab for philosophy
             </span>
           </NavLink>
+          {currentTopic() ? (
+            <NavLink to="/topics" className="font-mono text-[0.72rem] text-ink-soft underline decoration-rule underline-offset-4 hover:decoration-ink" title="Change topic">
+              topic: {currentTopic()!.name}
+            </NavLink>
+          ) : null}
+          </div>
           <nav aria-label="Main">
             <ul className="flex flex-wrap gap-x-5 gap-y-1">
               {NAV.map((n) => (

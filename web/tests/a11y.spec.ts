@@ -10,7 +10,7 @@ const briefs = JSON.parse(fs.readFileSync(`${DATA}briefs.json`, "utf8")) as { id
 const run = JSON.parse(fs.readFileSync(`${DATA}runs/${index.runs[0].run_id}.json`, "utf8")) as { trials: { id: string }[] };
 
 const PAGES = ["/", "/briefs", `/brief/${briefs[0].id}`, `/lab/${index.runs[0].run_id}`,
-  `/trial/${run.trials[0].id}`, "/atlas", "/results", "/about"];
+  `/trial/${run.trials[0].id}`, "/atlas", "/results", "/about", "/topics", "/start?from=fine-tuning"];
 
 for (const url of PAGES) {
   test(`a11y ${url}`, async ({ page }) => {

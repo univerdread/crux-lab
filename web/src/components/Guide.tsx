@@ -177,6 +177,18 @@ export function HowItWorks({
               directions, or replay that paper’s run.
             </li>
             <li>
+              <span className="font-medium">A different topic</span> (say, the fine-tuning argument rather than
+              divine hiddenness). The lab runs one topic at a time. See{" "}
+              <Link to="/topics" className="link">
+                Topics
+              </Link>{" "}
+              for what has been run and what is set up; to add your own,{" "}
+              <Link to="/start" className="link">
+                Start a topic
+              </Link>{" "}
+              writes the topic file and lists the steps to run it on your machine.
+            </li>
+            <li>
               <span className="font-medium">An idea of your own.</span> The{" "}
               <Link to="/atlas" className="link">
                 Atlas

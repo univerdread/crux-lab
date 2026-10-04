@@ -12,6 +12,8 @@ const Atlas = lazy(() => import("./pages/Atlas"));
 const Results = lazy(() => import("./pages/Results"));
 const About = lazy(() => import("./pages/About"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Topics = lazy(() => import("./pages/Topics"));
+const Start = lazy(() => import("./pages/Start"));
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="atlas" element={<Atlas />} />
           <Route path="results" element={<Results />} />
           <Route path="about" element={<About />} />
+          <Route path="topics" element={<Topics />} />
+          <Route path="start" element={<Start />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

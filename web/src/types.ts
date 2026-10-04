@@ -345,6 +345,7 @@ export interface E3 {
 }
 
 export interface About {
+  topic?: { slug: string; name: string; description: string; area: string };
   diversity: string;
   families: string[];
   roles: Record<string, unknown>;
@@ -380,3 +381,39 @@ export const OUTCOME_LABELS: Record<Outcome, string> = {
   revision_required: "Revision required",
   standing: "Standing",
 };
+
+/** topics.json (site-wide): every configured topic, written by crux_lab/export.py on every export. */
+export interface TopicConfig {
+  slug: string;
+  name: string;
+  description: string;
+  area: string;
+  queries: Record<string, string>;
+  fresh_from: string;
+  fresh_queries: string[];
+  relevant: string;
+  relevance_levels: string[];
+  schools: string[];
+}
+
+export interface TopicInfo {
+  slug: string;
+  name: string;
+  description: string;
+  area: string;
+  default: boolean;
+  status: "ready" | "not_run";
+  data: string; // "" for the default topic, "topics/<slug>/" otherwise
+  counts: { papers: number; objections: number; trials: number; briefs: number; records?: number; works?: number } | null;
+  searches: string[];
+  schools: string[];
+  config_path: string;
+  commands: string[];
+  config: TopicConfig;
+}
+
+export interface TopicsFile {
+  default: string;
+  current_export: string;
+  topics: TopicInfo[];
+}

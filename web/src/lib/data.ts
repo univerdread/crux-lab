@@ -13,8 +13,17 @@ export class MissingDataError extends Error {
 
 const cache = new Map<string, Promise<unknown>>();
 
+// Topic data lives in a sub-folder (e.g. "topics/fine-tuning/"); the default topic sits at data/ itself.
+// Set once at boot (src/lib/topics.ts); switching topic reloads the app. topics.json is always site-wide.
+let TOPIC_PREFIX = "";
+const SITE_WIDE = new Set(["topics.json"]);
+export function setTopicPrefix(prefix: string) {
+  TOPIC_PREFIX = prefix;
+}
+const url = (path: string) => BASE + (SITE_WIDE.has(path) ? "" : TOPIC_PREFIX) + path;
+
 async function get(path: string): Promise<Response> {
-  const r = await fetch(BASE + path);
+  const r = await fetch(url(path));
   const ct = r.headers.get("content-type") ?? "";
   // An SPA fallback answers missing files with index.html; treat that as missing too.
   if (!r.ok || ct.includes("text/html")) throw new MissingDataError(path);
@@ -22,7 +31,8 @@ async function get(path: string): Promise<Response> {
 }
 
 export function fetchJSON<T>(path: string): Promise<T> {
-  let p = cache.get(path);
+  const key = url(path);
+  let p = cache.get(key);
   if (!p) {
     p = get(path).then(async (r) => {
       try {
@@ -31,8 +41,8 @@ export function fetchJSON<T>(path: string): Promise<T> {
         throw new MissingDataError(path);
       }
     });
-    p.catch(() => cache.delete(path));
-    cache.set(path, p);
+    p.catch(() => cache.delete(key));
+    cache.set(key, p);
   }
   return p as Promise<T>;
 }
