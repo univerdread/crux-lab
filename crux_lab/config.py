@@ -84,6 +84,7 @@ class Settings:
     databricks_host: str
     databricks_token: str
     openrouter_key: str
+    evroc_key: str
     anthropic_key: str
     budget_usd: float
     cli_call_budget: int
@@ -106,6 +107,7 @@ class Settings:
         return {
             "databricks": bool(self.databricks_host and self.databricks_token),
             "openrouter": bool(self.openrouter_key),
+            "evroc": bool(self.evroc_key),
             "anthropic": bool(self.anthropic_key),
             "codex_cli": self.enable_cli,
             "claude_cli": self.enable_cli,
@@ -128,6 +130,7 @@ def load_settings() -> Settings:
         databricks_host=host,
         databricks_token=_env("DATABRICKS_TOKEN"),
         openrouter_key=_env("OPENROUTER_API_KEY"),
+        evroc_key=_env("EVROC_API_KEY"),
         anthropic_key=_env("ANTHROPIC_API_KEY"),
         budget_usd=float(_env("LLM_BUDGET_USD", "20") or 20),
         cli_call_budget=int(_env("CLI_CALL_BUDGET", "4000") or 4000),

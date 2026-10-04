@@ -130,6 +130,31 @@ class OpenRouterProvider(_OpenAICompatible):
             return [m["id"] for m in r.json().get("data", [])]
 
 
+class EvrocProvider(_OpenAICompatible):
+    """evroc Think: EU-hosted open models (Llama, Qwen, Mistral, gpt-oss, Kimi, Gemma, ...) behind an
+    OpenAI-compatible API. Model ids are Hugging Face handles, e.g. meta-llama/Llama-3.3-70B-Instruct."""
+
+    name = "evroc"
+    BASE = "https://models.think.evroc.com/v1"
+
+    def __init__(self, s: Settings = default_settings):
+        self.key = s.evroc_key
+        super().__init__(self.BASE, self.key)
+
+    async def list_models(self) -> list[str]:
+        # OpenAI-style model list; if the endpoint is unavailable, fall back to ids pinned in models.yaml
+        try:
+            async with httpx.AsyncClient(timeout=30) as c:
+                r = await c.get(f"{self.BASE}/models", headers={"Authorization": f"Bearer {self.key}"})
+                r.raise_for_status()
+                return [m["id"] for m in r.json().get("data", [])]
+        except Exception:  # noqa: BLE001
+            import yaml
+
+            from crux_lab.config import MODELS_YAML
+            return list((yaml.safe_load(MODELS_YAML.read_text()) or {}).get("evroc_ids", []))
+
+
 class AnthropicProvider(Provider):
     name = "anthropic"
     concurrency = 6
@@ -274,9 +299,9 @@ class FakeProvider(Provider):
         return ["fake-strong", "fake-small"]
 
 
-PROVIDER_ORDER = ["databricks", "openrouter", "anthropic", "codex_cli", "claude_cli"]
+PROVIDER_ORDER = ["databricks", "evroc", "openrouter", "anthropic", "codex_cli", "claude_cli"]
 _CLASSES = {
-    "databricks": DatabricksProvider, "openrouter": OpenRouterProvider,
+    "databricks": DatabricksProvider, "evroc": EvrocProvider, "openrouter": OpenRouterProvider,
     "anthropic": AnthropicProvider, "codex_cli": CodexCLIProvider, "claude_cli": ClaudeCLIProvider,
 }
 

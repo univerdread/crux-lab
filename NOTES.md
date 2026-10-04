@@ -1,5 +1,16 @@
 # NOTES — newest entry first
 
+## 2026-10-04 11:40 — evroc Think provider wired in (no key yet) (Claude)
+- Human asked whether evroc Think can power the debates. Yes: OpenAI-compatible API at
+  https://models.think.evroc.com/v1 (API key from the evroc console/CLI), EU-hosted open models
+  (Llama 3.3, Qwen3, Mistral/Magistral, gpt-oss-120B, Kimi, Gemma, Phi). Added `EvrocProvider`
+  (providers.py), `EVROC_API_KEY`, evroc patterns per family in models.yaml (+ `evroc_ids` fallback if
+  /v1/models is unavailable), families mistral/kimi, bulk_family preference [openai, gpt-oss, llama, qwen].
+- Simulated assignment with evroc + Claude: Defender A anthropic:sonnet, Defender B llama-3.3-70b,
+  Referee qwen3, extraction/reranking on gpt-oss-120b — three-family gauntlet restored, bulk work off the
+  Claude plan. Not probed: no key. To use: put EVROC_API_KEY in .env, `make providers`, then re-run
+  (`make runs eval assess revise export docs`) — that replaces the current results with new model calls.
+
 ## 2026-10-04 11:20 — revision round run (Claude, human said "yes run it")
 - `make revise` (crux_lab/lab/assess.py main_revise, prompts/reviser.md): a Reviser rewrites each direction
   to answer the Assessor's strongest objection (narrowing if decisive; may only name works/philosophers that

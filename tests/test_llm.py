@@ -89,3 +89,15 @@ def test_assign_roles_family_diversity():
     roles, fams = assign_roles(w, {})
     assert {roles["defender_a"]["family"], roles["defender_b"]["family"], roles["referee"]["family"]} == {"anthropic", "openai", "llama"}
     assert len(roles["generators"]) == 3
+
+
+def test_evroc_families_give_three_family_gauntlet_and_bulk_off_claude():
+    from crux_lab.llm.resolve import assign_roles
+    w = [{"provider": "claude_cli", "model": m, "family": "anthropic", "small": m == "haiku", "rank": r}
+         for r, m in enumerate(["sonnet", "opus", "haiku"])]
+    w += [{"provider": "evroc", "model": m, "family": f, "small": False, "rank": 0}
+          for m, f in [("meta-llama/Llama-3.3-70B-Instruct", "llama"), ("Qwen/Qwen3", "qwen"),
+                       ("openai/gpt-oss-120b", "gpt-oss")]]
+    roles, fams = assign_roles(w, {}, ["openai", "gpt-oss", "llama", "qwen"])
+    assert len({roles[r]["family"] for r in ("defender_a", "defender_b", "referee")}) == 3
+    assert roles["extractor"]["provider"] == "evroc" and roles["extractor"]["family"] == "gpt-oss"

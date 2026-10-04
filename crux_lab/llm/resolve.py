@@ -11,7 +11,7 @@ import yaml
 from crux_lab.config import MODELS_YAML, RESOLVED_MODELS, settings
 from crux_lab.llm.providers import available_providers, build_provider
 
-FAMILY_PREFERENCE = ["anthropic", "openai", "llama", "qwen", "gpt-oss", "gemma", "mistral", "deepseek"]
+FAMILY_PREFERENCE = ["anthropic", "openai", "llama", "qwen", "mistral", "gpt-oss", "kimi", "gemma", "deepseek"]
 
 
 def family_of(model_id: str, declared: str) -> str:
@@ -93,11 +93,11 @@ async def resolve(write: bool = True) -> dict:
     return resolved
 
 
-def assign_roles(working: list[dict], effort: dict, bulk_family: str | None = None) -> tuple[dict, list[str]]:
+def assign_roles(working: list[dict], effort: dict, bulk_family: str | list | None = None) -> tuple[dict, list[str]]:
     if not working:
         return {}, []
     by_fam: dict[str, list[dict]] = {}
-    for m in sorted(working, key=lambda m: (m["small"], m["rank"])):
+    for m in sorted(working, key=lambda m: (m["small"], m["rank"])):  # noqa: B007
         by_fam.setdefault(m["family"], []).append(m)
     fams = sorted(by_fam, key=lambda f: FAMILY_PREFERENCE.index(f) if f in FAMILY_PREFERENCE else 99)
     strong = {f: [m for m in by_fam[f] if not m["small"]] or by_fam[f] for f in fams}
@@ -113,7 +113,8 @@ def assign_roles(working: list[dict], effort: dict, bulk_family: str | None = No
     roles = {r: spec(pick(f1), r) for r in ("formalizer", "defender_a")}
     # Bulk roles (many calls: extraction, reranking) go to `bulk_family` when it exists, so the
     # Claude plan that also runs the build session is not drained by the lab.
-    fb = bulk_family if bulk_family in strong else f1
+    prefs = bulk_family if isinstance(bulk_family, list) else [bulk_family]
+    fb = next((f for f in prefs if f in strong), f1)
     for r in ("extractor", "reranker"):
         roles[r] = spec(pick(fb), r)
     # Defender B: other family; with one family, at least a different model.

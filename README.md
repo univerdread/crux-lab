@@ -161,8 +161,10 @@ provider (see below); the claim store and LLM cache it builds stay local (gitign
 ### Model providers
 
 Provider chain, using whatever exists: **Databricks** Model Serving (`DATABRICKS_HOST`,
-`DATABRICKS_TOKEN`) → **OpenRouter** → **Anthropic API** → subscription CLIs (`codex` from the
-ChatGPT app, `claude -p`). The CLI providers run as isolated completions: no tools, no shell, no
+`DATABRICKS_TOKEN`) → **evroc Think** (`EVROC_API_KEY`; EU-hosted open models — Llama, Qwen, Mistral, gpt-oss,
+Kimi, Gemma — behind an OpenAI-compatible API) → **OpenRouter** → **Anthropic API** → subscription CLIs (`codex`
+from the ChatGPT app, `claude -p`). With evroc plus one other provider, Defender A, Defender B and the Referee
+get three different model families, as the design intends. The CLI providers run as isolated completions: no tools, no shell, no
 web, no user config. Every call goes through one client with a disk cache keyed on
 `sha256(provider, model, messages, params)`, a spend guard, Pydantic-validated JSON with two
 retries carrying the validation error, and an MLflow trace (Databricks experiment when credentials
