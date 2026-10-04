@@ -1,5 +1,24 @@
 # NOTES — newest entry first
 
+## 2026-10-04 12:58 — Stricter novelty checks and briefs; decision theory re-run; divine simplicity started (Claude)
+- Human: decision-theory directions look weaker; who does the novelty checks? make it stricter like hiddenness;
+  then run a topic on divine simplicity (forefront of the literature, its objections).
+- Who: hiddenness novelty + briefs = Codex gpt-5.6-terra; decision theory = evroc gpt-oss-120b (bulk role).
+- Probe (scratchpad rerank_probe.py; 12 DT objections, same candidates, no live search): gpt-oss mean 0.50,
+  2 at 1.0, 68/102 'different' at exactly 0, unstable (five stored 1.0s came back 0.4-0.9); Kimi-K2.6 mean
+  0.81, 5 at 1.0, 2 failed; Claude Sonnet mean 0.53, 0 at 1.0, 4/92 at 0. Decision: reranker (restate +
+  rerank) = Claude Sonnet, effort medium; brief writer = Kimi-K2.6 (keeps the Assessor, Claude Opus, in
+  another family). models.yaml `role_preference` (openai first, as on hiddenness, when Codex is back).
+- Briefs: if the writer fails validation, one fallback (Referee's family, GLM), then no brief (was: a
+  placeholder brief that would have been listed).
+- Decision theory v1 (gpt-oss judging) archived by git mv to data/topics/decision-theory/archive/
+  v1-gpt-oss-reranker; re-run with cached generators (same objections), new prior-art checks, trials,
+  briefs, Assessor + revision. No new live OpenAlex searches for the re-run (OPENALEX_LIVE_CAP=68, quota
+  kept for divine simplicity). E1 for decision theory stays the v1 measurement (gpt-oss reranker; noted).
+- OpenAlex had 76 requests left at 12:55 (the keyless allowance refills); divine simplicity corpus uses ~9.
+- docs/SITE-FEATURES-AND-PROCESSES.md appeared untracked at 12:52 (not written by this session); left
+  uncommitted for the human to decide.
+
 ## 2026-10-04 12:50 — Polish loop after the second topic (Claude)
 - Clean clone of the public repo: `npm ci` + build pass, both topics in dist (9.9 MB).
 - A11y now covers the second topic (home, brief, a replay at its end, trial, results): found a real contrast
