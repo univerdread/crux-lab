@@ -35,7 +35,8 @@ export:
 eval:
 	$(PY) -m crux_lab.cli eval
 
-demo: export
+# Serves the committed export (web/public/data); run `make export` first to refresh it from a local lab.
+demo:
 	cd web && npm run build && npm run preview
 
 # Playwright needs a Chromium; set PW_CHROMIUM=<path to a chrome binary> to reuse one already on disk.

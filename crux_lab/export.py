@@ -87,6 +87,11 @@ def paper_of_claim(cid: str) -> str:
 
 def main() -> dict:
     out = WEB_DATA
+    if Store().count(Claim) == 0:
+        # A fresh clone has the committed export but not the (gitignored) claim store: never overwrite
+        # the committed site data with an empty graph.
+        raise SystemExit("export: the claim store (data/crux.sqlite) is empty — run `make map` first. "
+                         "The committed web/public/data was left untouched.")
     if out.exists():
         for sub in ("runs", "briefs"):
             d = out / sub
