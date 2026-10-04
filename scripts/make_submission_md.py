@@ -137,7 +137,7 @@ def main() -> None:
         "outcome labels are model judgements about the state of a debate, never verdicts on truth.", "",
         "## Links to fill in",
         "- Live demo: https://univerdread.github.io/crux-lab/",
-        "- Video: <record from docs/DEMO.md; docs/demo.webm is a silent 53 s walkthrough>",
+        "- Video: <record from docs/DEMO.md; docs/demo.webm is a silent 76 s walkthrough, both topics>",
         "- Repo: https://github.com/univerdread/crux-lab (public)", "",
     ]
     (ROOT / "docs" / "SUBMISSION.md").write_text("\n".join(L))

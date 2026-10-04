@@ -22,7 +22,9 @@ test("demo walkthrough", async ({ page, request }) => {
 
   let runId = index.runs?.[0]?.run_id ?? null;
   if (briefs.length) {
-    await page.locator("#directions ol li h3 a").first().click();
+    // the strongest lead: the card above the list
+    const lead = page.locator("#lead-h a");
+    await ((await lead.count()) ? lead.first() : page.locator("#directions ol li h3 a").first()).click();
     await expect(page.getByText("Further human review required.").first()).toBeVisible();
     await page.waitForTimeout(3000);
     await page.mouse.wheel(0, 700);
@@ -73,6 +75,15 @@ test("demo walkthrough", async ({ page, request }) => {
   await page.waitForTimeout(3000);
   await page.mouse.wheel(0, 600);
   await page.waitForTimeout(2500);
+  // a second topic, run on other model families: its home page and strongest lead
+  const explore = page.getByRole("button", { name: "Explore this topic →" });
+  if (await explore.count()) {
+    await explore.first().click();
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await page.waitForTimeout(2000);
+    await page.locator("#directions").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(3500);
+  }
   await page.goto("/start?from=fine-tuning");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await page.waitForTimeout(3500);
