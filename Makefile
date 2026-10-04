@@ -51,6 +51,7 @@ serve:
 docs: export
 	$(PY) scripts/make_demo_md.py
 	$(PY) scripts/readme_results.py
+	PYTHONPATH=. $(PY) scripts/audit.py
 
 databricks:
 	$(PY) -m crux_lab.databricks_sync

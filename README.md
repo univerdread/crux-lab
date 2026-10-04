@@ -206,6 +206,7 @@ Everything else was written for Crux Lab.
 - **PhilArchive was unavailable**: its OAI-PMH API now needs a key (api.philpapers.org) or blocks our client (philarchive.org, Cloudflare). Fresh targets come from OpenAlex instead, and none of the fresh open-access full texts was about divine hiddenness itself, so fresh targets are philosophy of religion more broadly.
 - **Model diversity is degraded**: degraded: 2 families. The design wants Defender A, Defender B and the Referee from three different families; without Databricks/OpenRouter keys only Anthropic (Claude) and OpenAI (Codex) models were reachable, through subscription CLIs.
 - The Referee and defenders are LLMs; outcome labels are dialectical judgements by models, not verdicts on truth, and they are noisy. The evals are small (n reported with each) and have no human labels.
+- Grounding is audited mechanically: [`docs/AUDIT.md`](docs/AUDIT.md) re-checks every quote, cited id, deciding sentence and brief reference against its source.
 - Reconstructions are the Extractor's; every premise has a verbatim quote, but an author might reconstruct their argument differently. Read the paper.
 
 - E1: The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels.

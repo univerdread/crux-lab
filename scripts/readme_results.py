@@ -76,6 +76,8 @@ def main() -> None:
            "OpenAI (Codex) models were reachable, through subscription CLIs.",
            "- The Referee and defenders are LLMs; outcome labels are dialectical judgements by models, not verdicts on "
            "truth, and they are noisy. The evals are small (n reported with each) and have no human labels.",
+           "- Grounding is audited mechanically: [`docs/AUDIT.md`](docs/AUDIT.md) re-checks every quote, cited id, "
+           "deciding sentence and brief reference against its source.",
            "- Reconstructions are the Extractor's; every premise has a verbatim quote, but an author might reconstruct "
            "their argument differently. Read the paper.", ""]
     for name, e in (("E1", e1), ("E2", e2), ("E3", e3)):
