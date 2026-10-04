@@ -41,3 +41,26 @@ def test_topic_env_switches_queries_and_schools():
     env = {**os.environ, "CRUX_LAB_TOPIC": "fine-tuning"}
     out = subprocess.run([sys.executable, "-c", code], env=env, capture_output=True, text=True, check=True).stdout
     assert out.splitlines() == ["fine-tuning argument", "Bayesian confirmation theory"]
+
+
+def test_spread_takes_one_target_per_search_in_topic_order(monkeypatch):
+    from crux_lab.corpus import targets as tg
+    monkeypatch.setattr(tg, "TOPIC", {"queries": {"newcomb": "", "wager": "", "worlds": ""}})
+    mk = lambda rel: tg.Screen(in_area=True, argues_for_thesis=True, english=True, topic_relevance=rel,  # noqa: E731
+                               argument_clarity=2)
+    ranked = [{"id": "w1", "query": "wager"}, {"id": "w2", "query": "wager"}, {"id": "n1", "query": "newcomb"},
+              {"id": "x", "query": "worlds"}, {"id": "w3", "query": "wager"}]
+    screens = {"w1": mk(3), "w2": mk(3), "n1": mk(1), "x": mk(0), "w3": mk(3)}
+    out = [p["id"] for p in tg.spread(ranked, screens, min_score=4)]
+    assert out == ["n1", "w1", "w2", "w3"]   # newcomb first (topic order); "x" scores 2 < 4 and is left out
+
+
+def test_fulltext_quota_keeps_room_for_classics(monkeypatch):
+    from crux_lab.corpus import build
+    monkeypatch.setattr(build.pdf, "get_fulltext", lambda pid, url: "text")
+    monkeypatch.setattr(build.pdf, "text_path", lambda pid: build.RAW / f"{pid}.txt")
+    papers = [{"id": f"f{i}", "pdf_url": "u", "fresh": True} for i in range(10)] + \
+             [{"id": f"c{i}", "pdf_url": "u", "cited_by_count": i} for i in range(10)]
+    assert build.fulltexts(papers, limit=4, fresh_share=0.5) == 4
+    # half the quota for fresh papers, the rest for the most-cited classics
+    assert sorted(p["id"] for p in papers if p.get("pdf_path")) == ["c8", "c9", "f0", "f1"]
