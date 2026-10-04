@@ -1,75 +1,30 @@
 {
-  "generated_at": "2026-10-04T01:03:17.793922+00:00",
+  "generated_at": "2026-10-04T01:14:28.902300+00:00",
   "targets": [
     {
       "target": "oa-W7203761940",
-      "claims": 41,
       "arguments": 1,
-      "premises": [
-        6
-      ],
-      "valid": [
-        false
-      ],
-      "missing_premise": [
-        true
-      ]
+      "skipped": "already mapped"
     },
     {
       "target": "oa-W7203485685",
-      "claims": 53,
       "arguments": 1,
-      "premises": [
-        4
-      ],
-      "valid": [
-        false
-      ],
-      "missing_premise": [
-        true
-      ]
+      "skipped": "already mapped"
     },
     {
       "target": "oa-W7212186029",
-      "claims": 54,
       "arguments": 1,
-      "premises": [
-        5
-      ],
-      "valid": [
-        false
-      ],
-      "missing_premise": [
-        true
-      ]
+      "skipped": "already mapped"
     },
     {
       "target": "oa-W2072673546",
-      "claims": 95,
       "arguments": 1,
-      "premises": [
-        3
-      ],
-      "valid": [
-        false
-      ],
-      "missing_premise": [
-        true
-      ]
+      "skipped": "already mapped"
     },
     {
       "target": "oa-W2575351351",
-      "claims": 60,
       "arguments": 1,
-      "premises": [
-        4
-      ],
-      "valid": [
-        false
-      ],
-      "missing_premise": [
-        true
-      ]
+      "skipped": "already mapped"
     }
   ],
   "fulltext_claims": {
@@ -78,82 +33,217 @@
     "drop_rate": 0.05
   },
   "abstract_claims": {
-    "proposed": 0,
-    "kept": 0,
-    "drop_rate": 0.0
+    "proposed": 2642,
+    "kept": 2615,
+    "drop_rate": 0.01
   },
   "dropped_examples": [
     {
-      "paper_id": "oa:W7203761940",
-      "quote": "But given these explanations, they are still not solid proof to debunk faith healing because God works in mysterious ways. Sometimes miracles cannot immediately be noticed. They take time.",
-      "reason": "quote > 2 sentences"
+      "paper_id": "oa:W2516025754",
+      "quote": "If God exists, then nothing contrary to His (ultimate) desires could exist in the world. Something contrary to God's ultimate desires (nonbelief in the gospel message) does exist. Therefore, God does ",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W7203485685",
-      "quote": "(1) Volitional contrast: God actualises one world rather than relevant alternatives.\n(3) Contrastive responsibility: divine agency must explain why one outcome obtains rather than another.",
-      "reason": "quote not found"
+      "paper_id": "oa:W3113845873",
+      "quote": "P2. It would be bad for an omnipotent, omniscient God to remain hidden from anyone. P3. God, being perfectly good, cannot do anything that is bad.",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W7212186029",
-      "quote": "It might be thought that constitution involves mutual parthood, such that when a statue is made from a lump of clay, the statue and clay are parts of each other, but the two nevertheless remain distin",
-      "reason": "quote not found"
+      "paper_id": "oa:W7168366306",
+      "quote": "I argue that J. L. Schellenberg’s argument from divine hiddenness, among other hiddenness arguments, rests upon an inadequate conception of perfect love—namely, the assumption that perfect love requir",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W7212186029",
-      "quote": "Insofar as parthood behaves antisymmetrically, the identity formulation of DDS is not ruled out by the symmetry formulation, and is in fact equivalent to it.",
-      "reason": "quote not found"
+      "paper_id": "oa:W4388232530",
+      "quote": "The research also focuses, in the second place, on a farewell towards recovering the ‘always greater God’, who hides himself, as it were behind a mask, in dazzling, impenetrable light. In the fullness",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W7212186029",
-      "quote": "one property (collection) is part of another just in case whatever becomes more similar to the first also thereby becomes more similar to the second.",
-      "reason": "quote not found"
+      "paper_id": "oa:W1999380204",
+      "quote": "This argument is formally valid, but two of the premises are controversial. Although Schellenberg vigorously defends those two premises, I will argue that his defense of neither of them is successful.",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2575351351",
-      "quote": "In order to show that the MGR fails, critics must demonstrate that it is not plausible to think that the total value of all the proposed goods is sufficient to outweigh the value lost by nonresistant ",
-      "reason": "quote not found"
+      "paper_id": "oa:W4415959690",
+      "quote": "If a theory of identity compatible with non-identity reasoning is accepted, J. L. Schellenberg’s hiddenness argument ought to be rejected.",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2575351351",
-      "quote": "If there is a good which can be acquired both in W and in W′, and its value is the same in both worlds, then it does not count in favour of either world. However, even if the particular good in questi",
-      "reason": "quote not found"
+      "paper_id": "oa:W2921975962",
+      "quote": "To do so, A. builds his methodological foundation upon a \"hermeneutic of trust,\" a perspective that affirms historical reliability of the canonical Gospels. If John trusted these stories, so should we",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2575351351",
-      "quote": "If the total value of worlds cannot be compared in the manner I have been suggesting, then, as pointed out by Klaas J. Kraay (2011), this ‘threaten[s] the rationality of God’s choice of a world’. If G",
-      "reason": "quote > 2 sentences"
+      "paper_id": "oa:W2503799061",
+      "quote": "The fact that God does not present all human beings with such evidence suggests an argument for the non-existence of God that is of the same form as the global argument from evil: ‘If there were a God",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2575351351",
-      "quote": "Schellenberg (2007) argues that this good can be accommodated for within a relationship with God. He expresses doubt that having evidence sufficient for belief would really inhibit a person’s ability ",
-      "reason": "quote not found"
+      "paper_id": "oa:W3133588621",
+      "quote": "Monsters are in the world but not of the world. They are paradoxical personifications of otherness within sameness. On its most fundamental level, the experience of the monstrous is the experience of ",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2575351351",
-      "quote": "Only in this case could there be the benefits for the individual. Furthermore, it seems intuitive that a story which is factual has more power than a fictional story, and so the benefits to the commun",
-      "reason": "quote not found"
+      "paper_id": "oa:W4413023649",
+      "quote": "The white men and we are all human beings. Why should we be afraid of them? All men are equal.",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2072673546",
-      "quote": "Positive meaningfulness is not synonymous with (mere) reciprocity, for, if it were, Schellenberg’s substitution of the latter by the former would be superﬂuous. Nor is it the same as explicitness, sin",
-      "reason": "quote > 2 sentences"
+      "paper_id": "oa:W2432158794",
+      "quote": "The idiomatic expression, “to hide the face,” basically belongs to the wisdom literature (i.e. Psalms, Proverbs, and Job) and shows to have more a mysterious significance rather than a rebuke. In othe",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2072673546",
-      "quote": "This is false. It rests on a confusion of (a) hearing God and (b) hearing God as (interpreted as) God. We have no reason whatever to think that (a) requires (b).",
-      "reason": "quote > 2 sentences"
+      "paper_id": "oa:W2943514810",
+      "quote": "For the Hasid, creation is altogether good, and divine sparks are found at its lowest levels. In Hasidic teaching, a soul that is fully alive accepts evil as the lower level of good.",
+      "reason": "abstract quote"
     },
     {
-      "paper_id": "oa:W2072673546",
-      "quote": "If this particular premise is incorporated into variants of the hiddenness argument, it still needs to be corroborated by good reasons for thinking that a perfectly loving God would want to relate to ",
-      "reason": "quote not found"
+      "paper_id": "oa:W2965966834",
+      "quote": "As such, reader’s reception of the biblical narrative is also potentially affected. Applying such a perspective reflects cultural notions of murder and fratricide, and societal attitudes regarding how",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2626381444",
+      "quote": "Now does not this explanation omit the crucial point? What is the word of God? What is its constitution, its permanent status?",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2976724810",
+      "quote": "J. L. Schellenberg has recently argued that there is a logical incompatibility between God’s being perfectly loving and there being non-resistant nonbelievers in the proposition that God exists.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W4246461382",
+      "quote": "John L. Schellenbergs sog. Hiddenness-Argument (hiddenness argument), das die Nicht-Existenz Gottes zu beweisen ersucht, wird in der englischsprachigen analytischen Religionsphilosophie zuweilen sogar",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7213362801",
+      "quote": "The article shows that as a historical phenomenon, scientific atheism was not limited to an ideological project. From this point of view, it has transformed into a specific form of postsecular self-re",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7204716622",
+      "quote": "The forming comes first and finishes. The man is complete, and the text does not call him alive. Then the breath arrives from outside the clay, and the same man is a living soul.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7213622119",
+      "quote": "Those three Conditions are necessarily instantiated, and that structure is what the book calls Nature. Reality is nothing over and above Nature.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7216005646",
+      "quote": "Those three Conditions are necessarily instantiated, and that structure is what the book calls Nature. Reality is nothing over and above Nature.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7213428566",
+      "quote": "Those three Conditions are necessarily instantiated, and that structure is what the book calls Nature. Reality is nothing over and above Nature.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7213528501",
+      "quote": "Those three Conditions are necessarily instantiated, and that structure is what the book calls Nature. Reality is nothing over and above Nature.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7212003188",
+      "quote": "Those three Conditions are necessarily instantiated, and that structure is what the book calls Nature. Reality is nothing over and above Nature.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7214296628",
+      "quote": "Those three Conditions are necessarily instantiated, and that structure is what the book calls Nature. Reality is nothing over and above Nature.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7203868139",
+      "quote": "A significant association was identified between fear of death and religious belief (χ² = 6.46; p = 0.03; OR = 2.07). Discussion: The results show a heterogeneous expression of fear of death, with gre",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7203786420",
+      "quote": "The stigmatization of religious concepts is related to the forms of narrative practices functioning in the Internet environment. As a result, the stigmatization of religious beliefs is associated with",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7213536532",
+      "quote": "The author concludes that methodological pluralism and cultural sensitivity are necessary conditions for the development of the psychology of religion in Uzbekistan.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2516025754",
+      "quote": "If God exists, then nothing contrary to His (ultimate) desires could exist in the world. Something contrary to God's ultimate desires (nonbelief in the gospel message) does exist. Therefore, God does ",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3113845873",
+      "quote": "P2. It would be bad for an omnipotent, omniscient God to remain hidden from anyone. P3. God, being perfectly good, cannot do anything that is bad.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W7168366306",
+      "quote": "I argue that J. L. Schellenberg’s argument from divine hiddenness, among other hiddenness arguments, rests upon an inadequate conception of perfect love—namely, the assumption that perfect love requir",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W4388232530",
+      "quote": "The research also focuses, in the second place, on a farewell towards recovering the ‘always greater God’, who hides himself, as it were behind a mask, in dazzling, impenetrable light. In the fullness",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W1999380204",
+      "quote": "This argument is formally valid, but two of the premises are controversial. Although Schellenberg vigorously defends those two premises, I will argue that his defense of neither of them is successful.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W4415959690",
+      "quote": "If a theory of identity compatible with non-identity reasoning is accepted, J. L. Schellenberg’s hiddenness argument ought to be rejected.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2921975962",
+      "quote": "To do so, A. builds his methodological foundation upon a \"hermeneutic of trust,\" a perspective that affirms historical reliability of the canonical Gospels. If John trusted these stories, so should we",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2503799061",
+      "quote": "The fact that God does not present all human beings with such evidence suggests an argument for the non-existence of God that is of the same form as the global argument from evil: ‘If there were a God",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W3133588621",
+      "quote": "Monsters are in the world but not of the world. They are paradoxical personifications of otherness within sameness. On its most fundamental level, the experience of the monstrous is the experience of ",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W4413023649",
+      "quote": "The white men and we are all human beings. Why should we be afraid of them? All men are equal.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2432158794",
+      "quote": "The idiomatic expression, “to hide the face,” basically belongs to the wisdom literature (i.e. Psalms, Proverbs, and Job) and shows to have more a mysterious significance rather than a rebuke. In othe",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2943514810",
+      "quote": "For the Hasid, creation is altogether good, and divine sparks are found at its lowest levels. In Hasidic teaching, a soul that is fully alive accepts evil as the lower level of good.",
+      "reason": "abstract quote"
+    },
+    {
+      "paper_id": "oa:W2965966834",
+      "quote": "As such, reader’s reception of the biblical narrative is also potentially affected. Applying such a perspective reflects cultural notions of murder and fratricide, and societal attitudes regarding how",
+      "reason": "abstract quote"
     }
   ],
-  "claims_indexed": 303,
+  "claims_indexed": 2918,
   "abstracts_indexed": 1212,
   "embedder": "bge-small-en-v1.5 (local)",
   "llm": {
-    "calls": 54,
+    "calls": 155,
     "cache_hits": 0,
     "json_failures": 0,
     "errors": 0
@@ -161,8 +251,8 @@
   "budget": {
     "spent_usd": 0.0,
     "limit_usd": 20.0,
-    "cli_calls": 148,
+    "cli_calls": 285,
     "cli_limit": 4000,
-    "notional_cli_usd": 1.2309
+    "notional_cli_usd": 6.3893
   }
 }

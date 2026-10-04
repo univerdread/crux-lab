@@ -53,19 +53,23 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P2 Mapping — target 04:30
 
-- [ ] P2.1 SQLite store + Pydantic schemas for every object in CLAUDE.md.
+- [x] P2.1 SQLite store + Pydantic schemas for every object in CLAUDE.md.
   **Check:** round-trip tests pass.
-- [ ] P2.2 Cartographer: chunked claim + argument extraction; quote verification drops
+  → tests/test_store.py round-trips all 6 kinds + edges.
+- [x] P2.2 Cartographer: chunked claim + argument extraction; quote verification drops
   ungrounded claims. Map all targets, plus abstracts-level claims for the whole corpus.
   **Check:** each target has ≥ 1 argument with ≥ 2 premises; drop rate logged.
-- [ ] P2.3 `graph/logic.py` + Formalizer: parser, truth-table validity, missing-premise proposal
+  → 5/5 targets: 1 argument each, 3–6 premises; full-text claims 303/319 kept (drop 5%), abstract claims 2615/2642 (drop 1%) → data/map_stats.json.
+- [x] P2.3 `graph/logic.py` + Formalizer: parser, truth-table validity, missing-premise proposal
   re-checked.
   **Check:** tests (modus ponens valid; affirming the consequent invalid; added premise fixes
   an invalid form); every target argument has a skeleton and validity flag.
-- [ ] P2.4 Index: embeddings (provider or local fallback) + BM25, over claims and over abstracts
+  → 11 logic tests pass; all 5 arguments invalid as stated, each with a truth-table-checked missing premise.
+- [x] P2.4 Index: embeddings (provider or local fallback) + BM25, over claims and over abstracts
   (both needed for E1).
   **Check:** query "God would ensure everyone capable of relationship believes" returns
   hiddenness claims in the top 5.
+  → 5/5 top hits are hiddenness claims (bge-small-en-v1.5 local + BM25, RRF); 2918 claims, 1212 abstracts.
 
 ## P3 Thin slice — target 05:30 · GATE A
 

@@ -22,6 +22,7 @@ from crux_lab.llm.client import LLMClient
 
 log = logging.getLogger(__name__)
 LIVE_CACHE = RAW / "openalex_live"
+LIVE_DAILY_CAP = 45      # OpenAlex without a key allows ~100 requests/day; the corpus build uses ~30
 RANGES = {"same_move": (0.7, 1.0), "related": (0.3, 0.69), "different": (0.0, 0.29)}
 
 
@@ -70,6 +71,14 @@ class NoveltyResult:
                 "matches": [m.model_dump() for m in self.matches]}
 
 
+def _live_today() -> int:
+    import time
+    if not LIVE_CACHE.exists():
+        return 0
+    day = time.time() - 86400
+    return sum(1 for f in LIVE_CACHE.glob("*.json") if f.stat().st_mtime > day)
+
+
 def live_openalex(query: str, n: int = 10) -> tuple[list[Passage], str]:
     """One cached OpenAlex search. Fails soft (budget is ~100 requests/day without a key)."""
     from crux_lab.corpus import openalex
@@ -80,6 +89,8 @@ def live_openalex(query: str, n: int = 10) -> tuple[list[Passage], str]:
     if path.exists():
         works = json.loads(path.read_text())
         status = "cached"
+    elif _live_today() >= LIVE_DAILY_CAP:
+        return [], f"skipped (daily cap of {LIVE_DAILY_CAP} live OpenAlex searches reached)"
     else:
         try:
             works = [openalex.to_paper(w) for w in openalex.search(
