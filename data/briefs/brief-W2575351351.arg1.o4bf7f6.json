@@ -1,0 +1,172 @@
+{
+  "id": "brief-W2575351351.arg1.o4bf7f6",
+  "objection_id": "W2575351351.arg1.o4bf7f6",
+  "research_question": "Can a many-goods response to divine hiddenness justify a bounded episode of nonresistant nonbelief when the goods that arise from it partly determine its duration and severity?",
+  "argument": {
+    "id": "W2575351351.arg1",
+    "title": "Many-goods response",
+    "paper_id": "oa:W2575351351",
+    "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
+    "premises": [
+      {
+        "id": "W2575351351.c012",
+        "text": "A good may overcome the accommodation strategy if temporary nonresistant nonbelief makes that good sufficiently more valuable.",
+        "quote": "I suggest that a proposed good might overcome the accommodation strategy if that good is somehow more valuable given temporary nonresistant nonbelief. If nonresistant nonbelief sufficiently increases the value of some good, then it will constitute a sufficient reason for God to allow for nonresistant nonbelief."
+      },
+      {
+        "id": "W2575351351.c014",
+        "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil.",
+        "quote": "This is because nonresistant nonbelief is a single evil (if it can be properly called an evil), and multiple goods may arise from a single instance of evil without that evil increasing."
+      },
+      {
+        "id": "W2575351351.c017",
+        "text": "Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable.",
+        "quote": "Any good at all that is brought about by nonresistant nonbelief will contribute to the overall value of W. This means that the task of identifying goods might actually be relatively simple."
+      },
+      {
+        "id": "W2575351351.c020",
+        "text": "Schellenberg’s accommodation strategy does not defeat the many-goods response merely because an individual good can occur within a relationship with God.",
+        "quote": "But the accommodation strategy is not so devastating against the MGR. Even if some particular good might be possible to acquire within a relationship with God, it might still count in favour of W, rather than W′."
+      }
+    ],
+    "missing_premise": {
+      "id": "W2575351351.arg1.mp",
+      "text": "If every identified good can be realized within a relationship with God, the many-goods conditions still hold, so that multiple goods without increased evil, collectively outweighing goods, and no defeat by the accommodation strategy together make the many-goods response succeed."
+    },
+    "conclusion": {
+      "id": "W2575351351.c021",
+      "text": "The many-goods response may succeed even if every identified good can be realized within a relationship with God."
+    },
+    "skeleton": "B -> A; C; D; ~G |- H -> F",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W2575351351.c014",
+    "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil."
+  },
+  "objection": "Mara is a sincere seeker who wants to believe in God but cannot. Consider three goods her nonbelief might produce. First, she shows moral courage by sheltering a refugee without any expectation of divine reward. That needs her nonbelief to last through the crisis, about two months. Second, she comes to deeply understand other doubters. That needs her to feel the full desolation of unanswered searching, which takes a sharper and lonelier phase of doubt, not just mild uncertainty. Third, her brother freely chooses to walk with her through doubt rather than being prompted by evident divine presence. He is slow to choose, so her nonbelief must persist until he does, eighteen months in all. Each good attaches to the same episode of nonbelief, but each requires that episode to be longer or more painful than the previous goods required. Securing all three turns two calm months of doubt into a year and a half of anguish. The goods are not extra fruit from a fixed cost. Each one buys itself by enlarging the evil.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The defender concedes that goods requiring an episode to be longer or more painful are not benefits gained at a fixed cost. The relevant question is instead whether the combined value of those goods exceeds the increased loss of relationship with God caused by the extended episode.",
+      "why_it_failed": "This reply preserves only a restricted version of the premise and leaves the required comparative weighing undone. It does not show that the additional goods actually outweigh the additional relationship-loss."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The defender argues that the premise is existential: several goods may arise within an independently bounded episode without requiring any further extension or intensification. The appropriate comparison is between the total loss of the maximally demanding warranted episode and the goods warranted by, or cost-free within, that episode.",
+      "why_it_failed": "The reply establishes only the possibility of genuine overlap. It concedes that multiplicity alone does not establish that the resulting goods outweigh the total loss of relationship, which is the work needed for the original inference."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W2950222172",
+      "paper_id": "oa:W2950222172",
+      "title": "The \"greater goods\" response to the argument from divine hiddenness",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2018,
+      "url": "https://doi.org/10.5287/ora-2a650nq7d",
+      "verdict": "related",
+      "similarity": 0.58,
+      "quote": ""
+    },
+    {
+      "record_id": "W2072673546.c089",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "related",
+      "similarity": 0.42,
+      "quote": "Possible unknown greater goods may explain why propositional attitudes toward God are not universally available."
+    },
+    {
+      "record_id": "W2928796903.a1",
+      "paper_id": "oa:W2928796903",
+      "title": "Who Must Benefit 1 f rom Divine Hiddenness?",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2019,
+      "url": "https://doi.org/10.11612/resphil.1781",
+      "verdict": "related",
+      "similarity": 0.38,
+      "quote": "The requirement that goods permitting divine hiddenness benefit the hidden person has numerous exceptions, especially in cases of divine hiddenness."
+    },
+    {
+      "record_id": "W2575351351.c014",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c029",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c026",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.42,
+  "records_searched": 4139,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W2950222172",
+      "paper_id": "oa:W2950222172",
+      "verdict": "related",
+      "similarity": 0.58,
+      "quote": "",
+      "title": "The \"greater goods\" response to the argument from divine hiddenness"
+    },
+    {
+      "record_id": "W2072673546.c089",
+      "paper_id": "oa:W2072673546",
+      "verdict": "related",
+      "similarity": 0.42,
+      "quote": "Possible unknown greater goods may explain why propositional attitudes toward God are not universally available.",
+      "title": "Some critical reflections on the hiddenness argument"
+    },
+    {
+      "record_id": "W2928796903.a1",
+      "paper_id": "oa:W2928796903",
+      "verdict": "related",
+      "similarity": 0.38,
+      "quote": "The requirement that goods permitting divine hiddenness benefit the hidden person has numerous exceptions, especially in cases of divine hiddenness.",
+      "title": "Who Must Benefit 1 f rom Divine Hiddenness?"
+    }
+  ],
+  "open_questions": [
+    "What could make the duration and severity of an episode of nonresistant nonbelief independently fixed, rather than determined by the goods invoked to justify it?",
+    "How should the lost value of relationship with God be compared with goods that both warrant and arise within a temporary episode of nonbelief?",
+    "Can defenders identify plausible cases in which several substantial goods are genuinely co-realized without adding duration or intensity to the episode?",
+    "Does restricting the relevant aggregate to the warranting good plus cost-free co-realized goods leave enough value for the many-goods response to succeed?"
+  ],
+  "paper_direction": "A paper here would argue that the many-goods response requires a marginal-cost constraint: goods associated with nonresistant nonbelief may be aggregated only after distinguishing goods that increase the episode's duration or severity from goods genuinely realized within an already warranted episode. The case would use escalating examples such as Mara's to show why an unqualified appeal to several goods mismeasures the evil, anticipate the reply that some bounded episodes contain cost-free overlap, and show either that such overlap cannot plausibly bear the required justificatory weight or specify conditions under which the restricted response can meet the total relationship-loss.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}

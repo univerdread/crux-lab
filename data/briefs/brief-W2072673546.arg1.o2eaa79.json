@@ -1,0 +1,183 @@
+{
+  "id": "brief-W2072673546.arg1.o2eaa79",
+  "objection_id": "W2072673546.arg1.o2eaa79",
+  "research_question": "Can Schellenberg’s analogical route to P1 be defended by context-sensitive obligations of vulnerable love, rather than by an independently established general obligation to make relationship accessible?",
+  "argument": {
+    "id": "W2072673546.arg1",
+    "title": "Hiddenness Argument Fails",
+    "paper_id": "oa:W2072673546",
+    "paper_title": "Some critical reflections on the hiddenness argument",
+    "premises": [
+      {
+        "id": "W2072673546.c041",
+        "text": "Schellenberg’s attempt to establish P1 as an a priori, necessary conceptual truth fails.",
+        "quote": "For this reason, we think that Schellenberg’s attempt to support P1 as a conceptual truth, one which is also necessarily true and known a priori, is a failure."
+      },
+      {
+        "id": "W2072673546.c064",
+        "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love.",
+        "quote": "we consider Schellenberg’s analogical argument in support of P1 as unsuccessful. Independent of whether or not one agrees with Vanstone’s conception of God on its own terms, Schellenberg’s reliance on a Vanstone-inspired notion of divine love has proven distorted in character."
+      },
+      {
+        "id": "W2072673546.c083",
+        "text": "The second premise of the expectations sub-argument is false because belief that God exists is unnecessary for a positively meaningful relationship with God.",
+        "quote": "For this, we do not need the belief that God exists. We conclude, therefore, that the second premise of the expectations sub-argument, P2, is false."
+      }
+    ],
+    "missing_premise": {
+      "id": "W2072673546.arg1.mp",
+      "text": "Schellenberg's hiddenness argument succeeds only if its conditional premise is established, either by the a priori conceptual route or by the analogical route, and the second premise of the expectations sub-argument is true."
+    },
+    "conclusion": {
+      "id": "W2072673546.c084",
+      "text": "Schellenberg's hiddenness argument is unsuccessful because both its conditional premise and its belief requirement are independently vulnerable."
+    },
+    "skeleton": "~A; ~B; ~C & E |- ~D",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W2072673546.arg1.r1",
+    "text": "Schellenberg's analogical route for P1 is successful only if he independently shows that a vulnerable God is obligated to make the beloved's access to relationship available, rather than merely permitted to do so."
+  },
+  "objection": "Mira loves her estranged adult son, Leon, who has repeatedly said he wants reconciliation but is ashamed to initiate contact. Mira knows Leon’s current address and sends a plain letter: “I want a relationship with you; call me anytime.” She does not independently prove a general obligation that vulnerable parents must make reconciliation accessible; such a proof would require settling every possible family circumstance. Yet in this case, the letter successfully shows that Mira’s vulnerability is compatible with, and helps explain, her making access available: she risks rejection precisely because love makes Leon’s response matter. The analogy can therefore support the relevant claim about vulnerable divine love without first establishing an independent obligation to provide access.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The original Mira case establishes only that vulnerability is compatible with, or can explain, offering access; compatibility and explanation do not establish an obligation. P1 requires the stronger claim that perfect love must make access available.",
+      "why_it_failed": "The objector strengthened the case with Leon’s expressed desire, inability to initiate, low-cost communication, and absence of countervailing concerns. Defender A conceded that these features support a local obligation, so the requirement of a prior general obligation was too strong."
+    },
+    {
+      "defender": "Defender A",
+      "response": "Mira’s local obligation transfers to God only if the features grounding it also hold in the divine case; differences concerning dignity, safety, divine means of ensuring encounter, and temporary versus permanent nonbelief require further argument.",
+      "why_it_failed": "This reply preserves a revised, conditional challenge rather than the original premise. It identifies a genuine bridge problem but does not establish that the relevant features are absent from all cases of nonresistant nonbelief."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The analogy may make divine openness motivationally intelligible, but it cannot establish P1’s universal expectation without grounds in the divine case analogous to Leon’s desire, inability to initiate, and Mira’s low-cost opportunity to respond.",
+      "why_it_failed": "It succeeds as a narrower revision of r1, but concedes that an analogy need not first derive a general obligation. Its remaining force depends on specifying and defending the required case-sensitive bridge grounds."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W243944806",
+      "paper_id": "oa:W243944806",
+      "title": "Divine openness and creaturely nonresistant nonbelief",
+      "authors": [
+        "Daniel Howard‐Snyder"
+      ],
+      "year": 2016,
+      "url": "https://doi.org/10.1017/cbo9781139939621.008",
+      "verdict": "related",
+      "similarity": 0.58,
+      "quote": "God is at t open to being in a positively meaningful and reciprocal conscious relationship with S at t, where one is open to relationship with another only if one never does anything (by commission or omission) that would have the result that the other was prevented from being able, just by trying, to participate in that relationship. I argue that we should resist the temptation."
+    },
+    {
+      "record_id": "W4206650469.a3",
+      "paper_id": "oa:W4206650469",
+      "title": "The problem of divine hiddenness",
+      "authors": [
+        "Andrew Ter Ern Loke"
+      ],
+      "year": 2022,
+      "url": "https://doi.org/10.4324/9781003265689-7",
+      "verdict": "related",
+      "similarity": 0.49,
+      "quote": "God may provide sufficient evidence and ensure that those willing to enter a love relationship eventually encounter it."
+    },
+    {
+      "record_id": "W3005230083.a2",
+      "paper_id": "oa:W3005230083",
+      "title": "Teísmo escéptico, escepticismo sobre el libre albedrío y ateísmo: consideración sobre el alcance de la parálisis moral",
+      "authors": [
+        "Rafael Miranda Rojas"
+      ],
+      "year": 2019,
+      "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=7203442",
+      "verdict": "related",
+      "similarity": 0.44,
+      "quote": "The evidential argument from evil contains free will as a hidden premise without first assessing Free Will Skepticism."
+    },
+    {
+      "record_id": "W1552196402.a2",
+      "paper_id": "oa:W1552196402",
+      "title": "The Argument from Divine Hiddenness",
+      "authors": [
+        "Daniel Howard‐Snyder"
+      ],
+      "year": 1996,
+      "url": "https://doi.org/10.1080/00455091.1996.10717461",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7168366306.a2",
+      "paper_id": "oa:W7168366306",
+      "title": "Asymmetry in Divine Love",
+      "authors": [
+        "Zach Miyazaki"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.15664/32wy7619",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c026",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2072673546.c039",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.42,
+  "records_searched": 4130,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W243944806",
+      "paper_id": "oa:W243944806",
+      "verdict": "related",
+      "similarity": 0.58,
+      "quote": "God is at t open to being in a positively meaningful and reciprocal conscious relationship with S at t, where one is open to relationship with another only if one never does anything (by commission or omission) that would have the result that the other was prevented from being able, just by trying, to participate in that relationship. I argue that we should resist the temptation.",
+      "title": "Divine openness and creaturely nonresistant nonbelief"
+    },
+    {
+      "record_id": "W4206650469.a3",
+      "paper_id": "oa:W4206650469",
+      "verdict": "related",
+      "similarity": 0.49,
+      "quote": "God may provide sufficient evidence and ensure that those willing to enter a love relationship eventually encounter it.",
+      "title": "The problem of divine hiddenness"
+    },
+    {
+      "record_id": "W3005230083.a2",
+      "paper_id": "oa:W3005230083",
+      "verdict": "related",
+      "similarity": 0.44,
+      "quote": "The evidential argument from evil contains free will as a hidden premise without first assessing Free Will Skepticism.",
+      "title": "Teísmo escéptico, escepticismo sobre el libre albedrío y ateísmo: consideración sobre el alcance de la parálisis moral"
+    }
+  ],
+  "open_questions": [
+    "Which features of Mira’s case are necessary for an obligation of vulnerable love to make relationship-access available?",
+    "Do nonresistant persons have relevantly similar needs, desires, and incapacity to initiate relationship with God?",
+    "Can God’s ability to secure an eventual encounter permissibly justify temporary nonresistant nonbelief, and what would distinguish permissible temporary hiddenness from impermissible permanent hiddenness?",
+    "Would making divine access available compromise a person’s dignity, safety, freedom, or the vulnerability characteristic of divine love?"
+  ],
+  "paper_direction": "A paper here would argue that the analogical route to P1 should be assessed through context-sensitive obligations of vulnerable love rather than through an antecedently proven general duty of divine openness. It would develop the Mira case to show how expressed desire for reconciliation, inability to initiate, feasible communication, and no countervailing concern can ground an obligation to offer access, then test whether corresponding conditions obtain for nonresistant persons in the divine case. The strongest reply to anticipate is that God may permissibly secure relationship only eventually, or that divine access may carry dignity, safety, or freedom-related costs absent from Mira’s case. The paper would need to specify the transfer conditions precisely and show either that they obtain in cases of permanent nonresistant nonbelief or that alleged divine differences do not defeat the obligation.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}

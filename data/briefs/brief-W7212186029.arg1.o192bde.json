@@ -1,0 +1,198 @@
+{
+  "id": "brief-W7212186029.arg1.o192bde",
+  "objection_id": "W7212186029.arg1.o192bde",
+  "research_question": "Can divine simplicity be formulated as symmetric similarity-based parthood if the instantiation–parthood premise is restricted to God’s timeless and essential properties?",
+  "argument": {
+    "id": "W7212186029.arg1",
+    "title": "Divine simplicity as symmetric parthood",
+    "paper_id": "oa:W7212186029",
+    "paper_title": "Divine simplicity as symmetric parthood",
+    "premises": [
+      {
+        "id": "W7212186029.c006",
+        "text": "Divine simplicity is most plausibly understood as the claim that God lacks proper parts.",
+        "quote": "Instead, DDS is more plausibly understood as saying that God lacks proper parts – call this the mereological formulation of DDS."
+      },
+      {
+        "id": "W7212186029.c008",
+        "text": "If proper parthood is non-symmetric parthood, the claim that God has no proper parts yields the symmetry formulation of divine simplicity.",
+        "quote": "But if proper parthood is defined as non-symmetric parthood, then explicating proper parthood in the mereological formulation yields the symmetry formulation of DDS."
+      },
+      {
+        "id": "W7212186029.c013",
+        "text": "Instantiation can be modelled as parthood because objects may be understood as mereological fusions of their properties.",
+        "quote": "On the mereological bundle theory suggested by Laurie Paul (2002, 2006, 2012, 2017), for instance, objects are mereological fusions of the properties they bear."
+      },
+      {
+        "id": "W7212186029.c016",
+        "text": "God and omniscience can be mutual parts with respect to similarity while remaining numerically distinct.",
+        "quote": "it is also possible, at least in principle, for this symmetric parthood relation to hold while God remains numerically distinct from his omniscience."
+      },
+      {
+        "id": "W7212186029.c018",
+        "text": "Defining proper parthood as non-symmetric similarity-based parthood makes proper parthood irreflexive, asymmetric, and transitive.",
+        "quote": "If proper parthood is defined as non-symmetric parthood with respect to similarity, it would immediately be irreflexive, asymmetric, and transitive."
+      }
+    ],
+    "missing_premise": {
+      "id": "W7212186029.arg1.mp",
+      "text": "Proper parthood is non-symmetric parthood, and the symmetry formulation of divine simplicity is the thesis that God is part of all God's parts."
+    },
+    "conclusion": {
+      "id": "W7212186029.c044",
+      "text": "Divine simplicity can viably be formulated as the thesis that God is part of all God’s parts."
+    },
+    "skeleton": "A; B -> (A -> C); D; E; F -> H |- G",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W7212186029.c013",
+    "text": "Instantiation can be modelled as parthood because objects may be understood as mereological fusions of their properties."
+  },
+  "objection": "Take a lamp, L, that is switched on at noon and off at one. Its property of being lit is instantiated at noon and not at one. Model instantiation as parthood: L is the fusion of its properties, so 'being lit' is a part of L. Now the lamp is switched off at one, and nothing in L's identity changes, yet the fusion has lost a part. But the fusion of its properties is supposed to be fixed by which properties it has, so the lamp at one o'clock is a different fusion from the lamp at noon, though it is the same lamp. Worse, the lamp also has the property of being a lamp, and that property is shared with every other lamp. A fusion of properties would then overlap with the fusion of a neighbouring lamp, so distinct objects share parts they should not share. Parthood cannot carry instantiation without either losing the lamp's persistence or making distinct objects overlap.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The defender concedes that modelling ordinary objects as fusions of their properties fails in the lamp case, but restricts the model to God’s timelessly and essentially held properties. Temporal persistence is then not at issue, and overlap is presented as acceptable within a framework that permits distinct mutual parts with respect to similarity.",
+      "why_it_failed": "This saves only a revised argument. It concedes that c013 as stated is false or too broad, and it leaves to be shown why the restriction to divine properties is principled rather than ad hoc."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The defender proposes time-indexed property instances: being-lit-at-noon can be a similarity-part of the lamp at noon without requiring the lamp’s numerical replacement at one. Shared repeatable properties need not be objectionable because distinct fusions may overlap without being identical in the proposed non-antisymmetric framework.",
+      "why_it_failed": "The reply identifies a route around the temporal example, but it revises the premise and does not explain how time-indexed instances preserve the original claim that an object is a fusion of its properties. It also leaves the metaphysical status and consequences of overlap underdeveloped."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W7204121442",
+      "paper_id": "oa:W7204121442",
+      "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis.",
+      "authors": [
+        "Manfred Albert Hörz"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22083688",
+      "verdict": "different",
+      "similarity": 0.18,
+      "quote": ""
+    },
+    {
+      "record_id": "abs:oa:W7204099109",
+      "paper_id": "oa:W7204099109",
+      "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis.",
+      "authors": [
+        "Manfred Albert Hörz"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22083687",
+      "verdict": "different",
+      "similarity": 0.18,
+      "quote": ""
+    },
+    {
+      "record_id": "W7213499087.a2",
+      "paper_id": "oa:W7213499087",
+      "title": "FROM INTELLIGIBILITY TO IDENTITY",
+      "authors": [
+        "Darrell James"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22815335",
+      "verdict": "different",
+      "similarity": 0.16,
+      "quote": ""
+    },
+    {
+      "record_id": "W7212186029.c013",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c016",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c017",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c014",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c045",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.82,
+  "records_searched": 4140,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W7204121442",
+      "paper_id": "oa:W7204121442",
+      "verdict": "different",
+      "similarity": 0.18,
+      "quote": "",
+      "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis."
+    },
+    {
+      "record_id": "abs:oa:W7204099109",
+      "paper_id": "oa:W7204099109",
+      "verdict": "different",
+      "similarity": 0.18,
+      "quote": "",
+      "title": "Ist Existenz eine Eigenschaft? Und existiert also Gott? Eine Analyse von Existenzmodalitäten, Virtualität und Gödels Gottesbeweis."
+    },
+    {
+      "record_id": "W7213499087.a2",
+      "paper_id": "oa:W7213499087",
+      "verdict": "different",
+      "similarity": 0.16,
+      "quote": "",
+      "title": "FROM INTELLIGIBILITY TO IDENTITY"
+    }
+  ],
+  "open_questions": [
+    "What exactly makes God’s relevant properties timeless and essential in a way that licenses the restricted instantiation–parthood model?",
+    "Does similarity-based parthood of time-indexed property instances provide a genuine account of instantiation, or merely a different relation labelled parthood?",
+    "Can distinct ordinary objects overlap through shared properties without unacceptable consequences for object identity, individuation, and counting?",
+    "Does the restricted premise support the later claim that God and omniscience are numerically distinct mutual parts with respect to similarity?"
+  ],
+  "paper_direction": "A paper here would argue that the symmetry formulation of divine simplicity requires a restricted, explicitly articulated account of instantiation as similarity-based parthood, rather than the unrestricted fusion-of-properties claim. It would develop the lamp case to establish the need for restriction, assess the time-indexed-instance reply, and anticipate the strongest response that divine properties are timeless and essential. It would need to show that this restriction is independently motivated, that it yields a coherent account of divine property instantiation, and that its permissive treatment of overlap and mutual parthood does not undermine the relevant distinctions between God and divine attributes.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}

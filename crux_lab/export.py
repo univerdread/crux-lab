@@ -15,6 +15,27 @@ from crux_lab.graph.schema import SURVIVAL, Argument, Claim
 from crux_lab.graph.store import Store
 
 
+METHOD_NOTES = [
+    "Generators never see literature: their context builder only receives the argument's own premises "
+    "(enforced by construction and by a test that inspects the module's imports).",
+    "Every extracted claim carries a verbatim quote (at most two sentences) found in the source text "
+    "(rapidfuzz partial_ratio >= 90); claims whose quote cannot be found are dropped.",
+    "Citations are corpus claim ids only. Code verifies each cited id (it exists and the defender was shown it, "
+    "or it belongs to the argument's own paper) and strikes the rest; known_answer requires a verified literature id.",
+    "The Formalizer's validity verdicts come from a truth table in code, not from the model; a proposed missing "
+    "premise is kept only if the re-check makes the argument valid without making the premises inconsistent.",
+    "After a trial ends in revision_required, the revised premise joins the argument: later trials in the same run "
+    "test the revised argument, and one new objection attacks the revised premise (depth at most 2).",
+    "The objection keeps the outcome most favourable to the original argument across the two defenders, "
+    "so an outcome of revision_required means both defenders needed a premise change.",
+    "Blind generators run in parallel and are each assigned a different stated premise for coverage; the "
+    "Hidden-Premise Attacker always targets the Formalizer's missing premise.",
+    "Subscription CLI providers (codex, claude -p) ignore temperature; diversity comes from different models and roles.",
+    "Novelty is never claimed: it is 1 - max similarity among same_move/related matches in what retrieval found, "
+    "reported with records searched, the three nearest matches and 'Further human review required.'",
+]
+
+
 def _read(p):
     return json.loads(p.read_text()) if p.exists() else None
 
@@ -122,6 +143,7 @@ def main() -> dict:
                    "full_texts": sum(1 for p in corpus if p.get("pdf_path")),
                    "fresh": sum(1 for p in corpus if p.get("fresh"))},
     }
+    about["method_notes"] = METHOD_NOTES
     (out / "about.json").write_text(json.dumps(about, ensure_ascii=False, indent=1))
     index = {"generated_at": datetime.now(timezone.utc).isoformat(), "runs": runs_summary,
              "targets": targets.get("targets", []), "briefs": len(briefs),

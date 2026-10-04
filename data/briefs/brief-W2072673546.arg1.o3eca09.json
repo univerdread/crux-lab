@@ -1,0 +1,190 @@
+{
+  "id": "brief-W2072673546.arg1.o3eca09",
+  "objection_id": "W2072673546.arg1.o3eca09",
+  "research_question": "Does a Vanstone-style conception of vulnerable divine love require God to provide non-coercive, intelligible access to relationship, and if so, does Schellenberg’s parental analogy establish that requirement?",
+  "argument": {
+    "id": "W2072673546.arg1",
+    "title": "Hiddenness Argument Fails",
+    "paper_id": "oa:W2072673546",
+    "paper_title": "Some critical reflections on the hiddenness argument",
+    "premises": [
+      {
+        "id": "W2072673546.c041",
+        "text": "Schellenberg’s attempt to establish P1 as an a priori, necessary conceptual truth fails.",
+        "quote": "For this reason, we think that Schellenberg’s attempt to support P1 as a conceptual truth, one which is also necessarily true and known a priori, is a failure."
+      },
+      {
+        "id": "W2072673546.c064",
+        "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love.",
+        "quote": "we consider Schellenberg’s analogical argument in support of P1 as unsuccessful. Independent of whether or not one agrees with Vanstone’s conception of God on its own terms, Schellenberg’s reliance on a Vanstone-inspired notion of divine love has proven distorted in character."
+      },
+      {
+        "id": "W2072673546.c083",
+        "text": "The second premise of the expectations sub-argument is false because belief that God exists is unnecessary for a positively meaningful relationship with God.",
+        "quote": "For this, we do not need the belief that God exists. We conclude, therefore, that the second premise of the expectations sub-argument, P2, is false."
+      }
+    ],
+    "missing_premise": {
+      "id": "W2072673546.arg1.mp",
+      "text": "Schellenberg's hiddenness argument succeeds only if its conditional premise is established, either by the a priori conceptual route or by the analogical route, and the second premise of the expectations sub-argument is true."
+    },
+    "conclusion": {
+      "id": "W2072673546.c084",
+      "text": "Schellenberg's hiddenness argument is unsuccessful because both its conditional premise and its belief requirement are independently vulnerable."
+    },
+    "skeleton": "~A; ~B; ~C & E |- ~D",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W2072673546.c064",
+    "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love."
+  },
+  "objection": "Consider Mara, a hospice chaplain whose late husband Tom was an atheist who never asked for her faith. Mara adopts a Vanstone-style picture: divine love is vulnerable, gives up control, and risks rejection, so God would not force relationship but would make the beloved's reciprocation possible without coercion. Schellenberg's analogy says a loving parent of an adult child who refuses contact would still pursue the child in a way that makes the relationship available, so God's silence is evidence against love. Mara grants the analogy for parents but notes that Tom's refusal to reciprocate did not make her love less vulnerable; her love was already a self-giving that accepts being unanswered. The analogy therefore imports a controlling, pursuit-based model of love that Vanstone's account explicitly rejects, so the analogy misdescribes the conception it claims to test, not because it is false of parental love but because it is not a faithful rendering of the vulnerable conception.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The parental analogy does not strictly falsify vulnerable love, but its premise that love must secure the beloved’s access to relationship is not shown to belong to that conception. Vulnerable love may permit nonbelief without abandoning the beloved.",
+      "why_it_failed": "This retreats from the original claim that the analogy distorts Vanstone’s view. It establishes at most that the transfer requires independent support, not that pursuit or availability is incompatible with vulnerable love."
+    },
+    {
+      "defender": "Defender B",
+      "response": "Vulnerable love can distinguish non-coercive availability from pursuit: availability gives the beloved an intelligible opportunity to recognize and answer a self-offer, whereas pursuit adds pressure or intervention aimed at overcoming refusal.",
+      "why_it_failed": "This distinction improves the objection by identifying a substantive residual condition, but it leaves open whether divine hiddenness supplies adequate recognizable access. It blocks the parental analogy as decisive without showing that hiddenness fits Vanstone’s conception."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W2265511046",
+      "paper_id": "oa:W2265511046",
+      "title": "나타나지 않는 엄마와 숨어 계신 하나님",
+      "authors": [
+        "김한경"
+      ],
+      "year": 2013,
+      "url": "http://www.dbpia.co.kr/Journal/ArticleDetail/NODE06288769?q=%5B%EC%89%98%EB%A0%8C%EB%B2%84%EA%B7%B8%C2%A7coldb%C2%A72%C2%A751%C2%A73%5D&Multimedia=0&SearchAll=%EC%89%98%EB%A0%8C%EB%B2%84%EA%B7%B8&isFullText=0&specificParam=0&SearchMethod=0&Sort=1&SortType=desc",
+      "verdict": "related",
+      "similarity": 0.6,
+      "quote": "It is my thesis that this transfer is not reasonable because it does not do justice to the infinite disanalogy between a human mother and God. Schellenberg`s analogy argument ultimately fails to become a probable explanation of God`s hiddenness as he univocally applies key predicates such as “care for” and “love” to God and humankind."
+    },
+    {
+      "record_id": "abs:oa:W7168366306",
+      "paper_id": "oa:W7168366306",
+      "title": "Asymmetry in Divine Love",
+      "authors": [
+        "Zach Miyazaki"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.15664/32wy7619",
+      "verdict": "related",
+      "similarity": 0.58,
+      "quote": "Schellenberg’s argument from divine hiddenness, among other hiddenness arguments, rests upon an inadequate conception of perfect love—namely, the assumption that perfect love requires openness to conscious, reciprocal relationship."
+    },
+    {
+      "record_id": "W7168366306.a3",
+      "paper_id": "oa:W7168366306",
+      "title": "Asymmetry in Divine Love",
+      "authors": [
+        "Zach Miyazaki"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.15664/32wy7619",
+      "verdict": "related",
+      "similarity": 0.45,
+      "quote": "Classical Christian perfect love does not require conscious reciprocal God-creature relationship."
+    },
+    {
+      "record_id": "W2072673546.c030",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W4240083296.a1",
+      "paper_id": "oa:W4240083296",
+      "title": "The Hiddenness of God",
+      "authors": [
+        "Michael C. Rea"
+      ],
+      "year": 2018,
+      "url": "https://doi.org/10.1093/oso/9780198826019.001.0001",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2976724810.a3",
+      "paper_id": "oa:W2976724810",
+      "title": "The Hidden Love of God and the Imaging Defense",
+      "authors": [
+        "Sameer Yadav"
+      ],
+      "year": 2019,
+      "url": "https://doi.org/10.5040/9780567687753.0009",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W4415959690.a2",
+      "paper_id": "oa:W4415959690",
+      "title": "Non-Identity Reasoning and the Hiddenness Argument",
+      "authors": [
+        "Grant Broadhurst"
+      ],
+      "year": 2025,
+      "url": "https://doi.org/10.14428/thl.v9i2.84933",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2072673546.c064",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.4,
+  "records_searched": 4139,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W2265511046",
+      "paper_id": "oa:W2265511046",
+      "verdict": "related",
+      "similarity": 0.6,
+      "quote": "It is my thesis that this transfer is not reasonable because it does not do justice to the infinite disanalogy between a human mother and God. Schellenberg`s analogy argument ultimately fails to become a probable explanation of God`s hiddenness as he univocally applies key predicates such as “care for” and “love” to God and humankind.",
+      "title": "나타나지 않는 엄마와 숨어 계신 하나님"
+    },
+    {
+      "record_id": "abs:oa:W7168366306",
+      "paper_id": "oa:W7168366306",
+      "verdict": "related",
+      "similarity": 0.58,
+      "quote": "Schellenberg’s argument from divine hiddenness, among other hiddenness arguments, rests upon an inadequate conception of perfect love—namely, the assumption that perfect love requires openness to conscious, reciprocal relationship.",
+      "title": "Asymmetry in Divine Love"
+    },
+    {
+      "record_id": "W7168366306.a3",
+      "paper_id": "oa:W7168366306",
+      "verdict": "related",
+      "similarity": 0.45,
+      "quote": "Classical Christian perfect love does not require conscious reciprocal God-creature relationship.",
+      "title": "Asymmetry in Divine Love"
+    }
+  ],
+  "open_questions": [
+    "What counts as an intelligible, non-coercive opportunity to recognize and answer a divine self-offer?",
+    "Does Vanstone-style vulnerability entail an obligation to make relationship available, or only permit God to do so?",
+    "Can a principled distinction between availability and pursuit be maintained in cases of nonresistant nonbelief?",
+    "Does Schellenberg’s parental analogy establish a requirement beyond non-coercive availability, or merely assume one?"
+  ],
+  "paper_direction": "A paper here would argue that the objection to Schellenberg’s parental analogy should be recast from a claim of distortion to a claim about an unestablished transfer: vulnerable divine love may require intelligible, non-coercive availability without requiring parental-style pursuit. The case would use Mara’s unanswered love to separate acceptance of nonreciprocation from efforts to secure response, while anticipating the strongest reply that a lover who is not recognizably available has not made relationship possible at all. It would need to show both that this availability–pursuit distinction is principled and that it yields a determinate standard by which divine hiddenness can be assessed.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}

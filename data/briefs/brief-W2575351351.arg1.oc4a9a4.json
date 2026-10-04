@@ -1,0 +1,216 @@
+{
+  "id": "brief-W2575351351.arg1.oc4a9a4",
+  "objection_id": "W2575351351.arg1.oc4a9a4",
+  "research_question": "Can the many-goods response to divine hiddenness justify temporary nonresistant nonbelief once the value of putative goods is assessed net of overlap with goods or sources already available in a relationship with God?",
+  "argument": {
+    "id": "W2575351351.arg1",
+    "title": "Many-goods response",
+    "paper_id": "oa:W2575351351",
+    "paper_title": "Divine Hiddenness, Greater Goods, and Accommodation",
+    "premises": [
+      {
+        "id": "W2575351351.c012",
+        "text": "A good may overcome the accommodation strategy if temporary nonresistant nonbelief makes that good sufficiently more valuable.",
+        "quote": "I suggest that a proposed good might overcome the accommodation strategy if that good is somehow more valuable given temporary nonresistant nonbelief. If nonresistant nonbelief sufficiently increases the value of some good, then it will constitute a sufficient reason for God to allow for nonresistant nonbelief."
+      },
+      {
+        "id": "W2575351351.c014",
+        "text": "Multiple goods may arise from a single instance of nonresistant nonbelief without increasing that evil.",
+        "quote": "This is because nonresistant nonbelief is a single evil (if it can be properly called an evil), and multiple goods may arise from a single instance of evil without that evil increasing."
+      },
+      {
+        "id": "W2575351351.c017",
+        "text": "Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable.",
+        "quote": "Any good at all that is brought about by nonresistant nonbelief will contribute to the overall value of W. This means that the task of identifying goods might actually be relatively simple."
+      },
+      {
+        "id": "W2575351351.c020",
+        "text": "Schellenberg’s accommodation strategy does not defeat the many-goods response merely because an individual good can occur within a relationship with God.",
+        "quote": "But the accommodation strategy is not so devastating against the MGR. Even if some particular good might be possible to acquire within a relationship with God, it might still count in favour of W, rather than W′."
+      }
+    ],
+    "missing_premise": {
+      "id": "W2575351351.arg1.mp",
+      "text": "If every identified good can be realized within a relationship with God, the many-goods conditions still hold, so that multiple goods without increased evil, collectively outweighing goods, and no defeat by the accommodation strategy together make the many-goods response succeed."
+    },
+    "conclusion": {
+      "id": "W2575351351.c021",
+      "text": "The many-goods response may succeed even if every identified good can be realized within a relationship with God."
+    },
+    "skeleton": "B -> A; C; D; ~G |- H -> F",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W2575351351.c017",
+    "text": "Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable."
+  },
+  "objection": "Consider Mara, a widow who, through a period of nonresistant nonbelief, becomes unusually attentive to her neighbors. Her absence of belief in God means she does not pray, so she never receives the consolation or moral formation a relationship with God would have given her. Instead she gains three goods: she rebuilds a fractured friendship with her estranged brother, she learns patience through caring for a dying stranger, and she forms a community garden with people who would otherwise have been isolated. Each good is valued below a relationship with God. Yet the collective tally is supposed to exceed that relationship's value. But these three goods are not additive across her life: the friendship and the garden each draw on the same disposition of open-handed attention that a relationship with God would have cultivated more deeply and more reliably. Once the relationship is counted as a standing source of that disposition, the goods are not independent, and the sum she realizes is worth less than the single relationship she forwent.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The relevant goods need not overlap completely: reconciliation, reciprocal care, and community relations benefit distinct persons and may not be produced by the same dispositional source. Moreover, a relationship with God is intrinsically valuable, so it should not be treated merely as a source of attention or other downstream dispositions.",
+      "why_it_failed": "A conceded that c017 does not state the required net-of-overlap qualification and therefore cannot survive as written. The reply also did not establish that the remaining goods exceed the intrinsic value of the lost relationship."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The comparison should concern whole feasible histories rather than separately named goods. A divine relationship's cultivation of attention does not show that it would secure this particular package of reconciliation, care, and cooperative community without loss, especially where goods depend on other persons and wider social relations.",
+      "why_it_failed": "This preserves a modal possibility but does not show that Mara's goods are non-duplicative or collectively outweigh the lost relationship. B ultimately accepts that the example cannot support c017 as stated and requires a revised premise."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W2950222172",
+      "paper_id": "oa:W2950222172",
+      "title": "The \"greater goods\" response to the argument from divine hiddenness",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2018,
+      "url": "https://doi.org/10.5287/ora-2a650nq7d",
+      "verdict": "related",
+      "similarity": 0.55,
+      "quote": "if a conscious personal relationship with God is greater than all other goods we might wonder how there could be goods"
+    },
+    {
+      "record_id": "abs:oa:W2780156828",
+      "paper_id": "oa:W2780156828",
+      "title": "The axiological solution to divine hiddenness",
+      "authors": [
+        "Kirk Lougheed"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1111/rati.12186",
+      "verdict": "related",
+      "similarity": 0.42,
+      "quote": "it is possible to experience many of the goods attributed to atheism if God is hidden even if they do not really obtain, while also gaining many of the additional goods connected to theism."
+    },
+    {
+      "record_id": "W2780156828.a2",
+      "paper_id": "oa:W2780156828",
+      "title": "The axiological solution to divine hiddenness",
+      "authors": [
+        "Kirk Lougheed"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1111/rati.12186",
+      "verdict": "related",
+      "similarity": 0.38,
+      "quote": "A hidden God permits apparent atheistic goods while providing additional goods associated with theism."
+    },
+    {
+      "record_id": "W2072673546.c060",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c023",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2950222172.a3",
+      "paper_id": "oa:W2950222172",
+      "title": "The \"greater goods\" response to the argument from divine hiddenness",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2018,
+      "url": "https://doi.org/10.5287/ora-2a650nq7d",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c028",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c017",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c041",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2575351351.c029",
+      "paper_id": "oa:W2575351351",
+      "title": "Divine Hiddenness, Greater Goods, and Accommodation",
+      "authors": [
+        "Luke Teeninga"
+      ],
+      "year": 2017,
+      "url": "https://doi.org/10.1007/s11841-016-0561-x",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.45,
+  "records_searched": 4139,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W2950222172",
+      "paper_id": "oa:W2950222172",
+      "verdict": "related",
+      "similarity": 0.55,
+      "quote": "if a conscious personal relationship with God is greater than all other goods we might wonder how there could be goods",
+      "title": "The \"greater goods\" response to the argument from divine hiddenness"
+    },
+    {
+      "record_id": "abs:oa:W2780156828",
+      "paper_id": "oa:W2780156828",
+      "verdict": "related",
+      "similarity": 0.42,
+      "quote": "it is possible to experience many of the goods attributed to atheism if God is hidden even if they do not really obtain, while also gaining many of the additional goods connected to theism.",
+      "title": "The axiological solution to divine hiddenness"
+    },
+    {
+      "record_id": "W2780156828.a2",
+      "paper_id": "oa:W2780156828",
+      "verdict": "related",
+      "similarity": 0.38,
+      "quote": "A hidden God permits apparent atheistic goods while providing additional goods associated with theism.",
+      "title": "The axiological solution to divine hiddenness"
+    }
+  ],
+  "open_questions": [
+    "What criterion distinguishes permissible shared sources of several goods from overlap that makes their value double-counted?",
+    "How should the intrinsic value of a relationship with God be compared with a package of interpersonal and social goods without reducing either side to instrumental value?",
+    "Can a concrete bounded episode of nonresistant nonbelief be shown to yield a relational package that a God-relationship alternative neither duplicates nor guarantees?",
+    "Does the whole-history comparison supply determinate grounds for judging that the surviving net value exceeds the value of the lost relationship?"
+  ],
+  "paper_direction": "A paper here would argue that the many-goods response requires a counterfactual, net-of-overlap account of value rather than a simple aggregation of goods arising during nonresistant nonbelief. It would show why shared dispositional sources and goods available under the God-relationship alternative constrain aggregation, while anticipating the strongest reply that distinct interpersonal histories may constitute irreducible whole-history goods. To establish the thesis, the paper would need to formulate a defensible non-duplication criterion, explain comparison with a relationship valued for itself, and assess whether any bounded case can meet the revised premise.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}

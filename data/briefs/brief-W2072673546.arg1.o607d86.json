@@ -1,0 +1,195 @@
+{
+  "id": "brief-W2072673546.arg1.o607d86",
+  "objection_id": "W2072673546.arg1.o607d86",
+  "research_question": "Can Schellenberg’s analogical route support an obligation, rather than merely a permission, for a vulnerable God to make voluntary relationship genuinely accessible to nonresistant persons, absent overriding reasons?",
+  "argument": {
+    "id": "W2072673546.arg1",
+    "title": "Hiddenness Argument Fails",
+    "paper_id": "oa:W2072673546",
+    "paper_title": "Some critical reflections on the hiddenness argument",
+    "premises": [
+      {
+        "id": "W2072673546.c041",
+        "text": "Schellenberg’s attempt to establish P1 as an a priori, necessary conceptual truth fails.",
+        "quote": "For this reason, we think that Schellenberg’s attempt to support P1 as a conceptual truth, one which is also necessarily true and known a priori, is a failure."
+      },
+      {
+        "id": "W2072673546.c064",
+        "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love.",
+        "quote": "we consider Schellenberg’s analogical argument in support of P1 as unsuccessful. Independent of whether or not one agrees with Vanstone’s conception of God on its own terms, Schellenberg’s reliance on a Vanstone-inspired notion of divine love has proven distorted in character."
+      },
+      {
+        "id": "W2072673546.c083",
+        "text": "The second premise of the expectations sub-argument is false because belief that God exists is unnecessary for a positively meaningful relationship with God.",
+        "quote": "For this, we do not need the belief that God exists. We conclude, therefore, that the second premise of the expectations sub-argument, P2, is false."
+      }
+    ],
+    "missing_premise": {
+      "id": "W2072673546.arg1.mp",
+      "text": "Schellenberg's hiddenness argument succeeds only if its conditional premise is established, either by the a priori conceptual route or by the analogical route, and the second premise of the expectations sub-argument is true."
+    },
+    "conclusion": {
+      "id": "W2072673546.c084",
+      "text": "Schellenberg's hiddenness argument is unsuccessful because both its conditional premise and its belief requirement are independently vulnerable."
+    },
+    "skeleton": "~A; ~B; ~C & E |- ~D",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W2072673546.c064",
+    "text": "Schellenberg’s analogical argument for P1 is unsuccessful because it distorts Vanstone’s vulnerable conception of divine love."
+  },
+  "objection": "Elena’s adult son, Tomas, wrongly believes she abandoned him and refuses contact. Elena loves him deeply. She cannot force reconciliation without destroying its voluntary character, so she sends one clear message: she loves him, regrets their separation, and will answer whenever he calls. She keeps the same number, checks for messages, and bears the continuing risk that Tomas will reject her. Her vulnerability consists precisely in remaining genuinely available while leaving his response free. Now imagine a perfectly loving God relating to a resistant person in the same way. The analogy supports P1: perfect love requires an open path to relationship, even though it neither guarantees belief nor compels acceptance. Nothing about this comparison removes love’s exposure to rejection; divine openness is presented as the condition that makes such exposure possible. Thus the analogical route can preserve vulnerable love while supporting P1.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The Elena case shows that openness and vulnerability can coexist: openly giving oneself while leaving acceptance free is a genuine form of vulnerability, closer to Vanstone’s kenosis than the original distortion charge allowed. But the analogy must still establish that such openness is obligatory for a perfectly loving God, rather than simply one permissible expression of love.",
+      "why_it_failed": "This reply partly concedes the objection. It preserves the criticism only by shifting from the claim that the analogy distorts vulnerable love to the narrower claim that it lacks a bridge from vulnerable availability to obligatory availability."
+    },
+    {
+      "defender": "Defender A",
+      "response": "The maternal example concerns a parent who would actively frustrate her son’s recognition by closing every channel, whereas divine hiddenness may involve overriding reasons whose relevance remains disputed. The analogy does not determine whether such reasons can outweigh an obligation to make relationship accessible.",
+      "why_it_failed": "This identifies a substantive limitation in the thought experiment, but it depends on the availability and weight of overriding reasons rather than showing that the analogy itself misrepresents vulnerable love."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The example establishes at most that vulnerable love permits openness to conscious reciprocal relationship; it does not show that every perfectly loving agent must make such relationship accessible to every capable person at every time. The defender therefore replaces the distortion-based criticism with a demand for an independent argument for obligation.",
+      "why_it_failed": "The response retains pressure on P1’s necessity claim, but accepts that the original charge of distortion was too strong and does not directly defeat the revised analogy."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W7168366306",
+      "paper_id": "oa:W7168366306",
+      "title": "Asymmetry in Divine Love",
+      "authors": [
+        "Zach Miyazaki"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.15664/32wy7619",
+      "verdict": "related",
+      "similarity": 0.68,
+      "quote": "rests upon an inadequate conception of perfect love—namely, the assumption that perfect love requires openness to conscious, reciprocal relationship."
+    },
+    {
+      "record_id": "abs:oa:W243944806",
+      "paper_id": "oa:W243944806",
+      "title": "Divine openness and creaturely nonresistant nonbelief",
+      "authors": [
+        "Daniel Howard‐Snyder"
+      ],
+      "year": 2016,
+      "url": "https://doi.org/10.1017/cbo9781139939621.008",
+      "verdict": "related",
+      "similarity": 0.64,
+      "quote": "I argue that we should resist the temptation."
+    },
+    {
+      "record_id": "abs:oa:W2265511046",
+      "paper_id": "oa:W2265511046",
+      "title": "나타나지 않는 엄마와 숨어 계신 하나님",
+      "authors": [
+        "김한경"
+      ],
+      "year": 2013,
+      "url": "http://www.dbpia.co.kr/Journal/ArticleDetail/NODE06288769?q=%5B%EC%89%98%EB%A0%8C%EB%B2%84%EA%B7%B8%C2%A7coldb%C2%A72%C2%A751%C2%A73%5D&Multimedia=0&SearchAll=%EC%89%98%EB%A0%8C%EB%B2%84%EA%B7%B8&isFullText=0&specificParam=0&SearchMethod=0&Sort=1&SortType=desc",
+      "verdict": "related",
+      "similarity": 0.63,
+      "quote": "this transfer is not reasonable because it does not do justice to the infinite disanalogy between a human mother and God. Schellenberg`s analogy argument ultimately fails"
+    },
+    {
+      "record_id": "W3174087237.a1",
+      "paper_id": "oa:W3174087237",
+      "title": "Love That Takes Time: Pursuing Relationship in the Context of Hiddenness",
+      "authors": [
+        "Derek S King"
+      ],
+      "year": 2021,
+      "url": "https://doi.org/10.24204/ejpr.2021.3162",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7168366306.a3",
+      "paper_id": "oa:W7168366306",
+      "title": "Asymmetry in Divine Love",
+      "authors": [
+        "Zach Miyazaki"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.15664/32wy7619",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2072673546.c064",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W243944806.a1",
+      "paper_id": "oa:W243944806",
+      "title": "Divine openness and creaturely nonresistant nonbelief",
+      "authors": [
+        "Daniel Howard‐Snyder"
+      ],
+      "year": 2016,
+      "url": "https://doi.org/10.1017/cbo9781139939621.008",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W2072673546.c039",
+      "paper_id": "oa:W2072673546",
+      "title": "Some critical reflections on the hiddenness argument",
+      "authors": [
+        "Imran Aijaz",
+        "Markus Weidler"
+      ],
+      "year": 2007,
+      "url": "https://doi.org/10.1007/s11153-006-9103-8",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.32,
+  "records_searched": 4140,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W7168366306",
+      "paper_id": "oa:W7168366306",
+      "verdict": "related",
+      "similarity": 0.68,
+      "quote": "rests upon an inadequate conception of perfect love—namely, the assumption that perfect love requires openness to conscious, reciprocal relationship.",
+      "title": "Asymmetry in Divine Love"
+    },
+    {
+      "record_id": "abs:oa:W243944806",
+      "paper_id": "oa:W243944806",
+      "verdict": "related",
+      "similarity": 0.64,
+      "quote": "I argue that we should resist the temptation.",
+      "title": "Divine openness and creaturely nonresistant nonbelief"
+    },
+    {
+      "record_id": "abs:oa:W2265511046",
+      "paper_id": "oa:W2265511046",
+      "verdict": "related",
+      "similarity": 0.63,
+      "quote": "this transfer is not reasonable because it does not do justice to the infinite disanalogy between a human mother and God. Schellenberg`s analogy argument ultimately fails",
+      "title": "나타나지 않는 엄마와 숨어 계신 하나님"
+    }
+  ],
+  "open_questions": [
+    "What features of parental love make continued voluntary accessibility obligatory, and do those features transfer to divine love?",
+    "Does Vanstone’s kenotic conception of divine love entail public availability to the beloved, or can it include periods of concealment?",
+    "Which alleged divine goods count as overriding reasons for withholding accessible relationship, and what would show that they outweigh love-based reasons for openness?",
+    "Does the relevant obligation concern every capable person at every time, or only nonresistant persons under specified conditions?"
+  ],
+  "paper_direction": "A paper here would argue that the Elena-style analogy successfully rebuts the stronger claim that Schellenberg’s analogy necessarily distorts vulnerable love, because voluntary openness can itself be a costly exposure to rejection. Its central case would distinguish this limited vindication from the further claim that perfect love obligates God to provide accessible relationship. The strongest reply to anticipate is that divine overriding reasons may justify concealment and that the analogy shows only permission; the paper would need to specify the transfer principles from parental to divine love, clarify the kenotic account of vulnerability, and establish either that no relevant overriding reasons apply or that they cannot defeat the proposed obligation.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}
