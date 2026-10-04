@@ -38,6 +38,9 @@ METHOD_NOTES = [
     "Every research direction is graded by an Assessor agent from a different model family than the brief writer, "
     "acting as a journal referee; the grade (promising / needs work / not yet defensible) is computed in code from "
     "its four 1-5 scores, and a direction that falls to an obvious objection is never 'promising'.",
+    "Research directions are ranked by lead score = survival x novelty x quality, where quality is the Assessor's "
+    "latest overall score / 5 (after the revision round if there was one): a direction leads only if it survived the "
+    "defenders, nothing close to it was found, and the Assessor found it sound.",
 ]
 
 
@@ -79,21 +82,31 @@ def write_topics_index() -> dict:
     return out
 
 
+UNGRADED_QUALITY = 0.6   # a direction the Assessor has not read counts as a middling 3/5
+
+
+def latest_assessment(b: dict) -> dict | None:
+    """The Assessor's most recent read: after the revision round if there was one."""
+    return (b.get("revision") or {}).get("assessment") or b.get("assessment")
+
+
 def rank_directions(briefs: list[dict]) -> list[dict]:
-    """Survival × novelty, but round-robin across runs so the top of the list shows breadth:
-    every target's best direction first, then every target's second best, and so on."""
+    """Lead score = survival × novelty × quality, best first.
+
+    survival: how the objection fared against both defenders; novelty: 1 - closest prior art found; quality: the
+    Assessor's latest overall score / 5 (after revision if any). One product, so a direction that is both new and
+    sound leads, and a sound but already-published one or a new but incoherent one does not. `tier` is the
+    direction's rank within its own paper (0 = that paper's best)."""
     for b in briefs:
-        b["score"] = round(b["survival"] * b["novelty"], 4)
-    by_run: dict = {}
-    for b in sorted(briefs, key=lambda b: -b["score"]):
-        by_run.setdefault(b["run_id"], []).append(b)
-    out, rnd = [], 0
-    while any(by_run.values()):
-        tier = [lst.pop(0) for lst in by_run.values() if lst]
-        for b in sorted(tier, key=lambda b: -b["score"]):
-            b["tier"] = rnd
-            out.append(b)
-        rnd += 1
+        a = latest_assessment(b)
+        b["quality"] = round(a["overall"] / 5, 3) if a and a.get("overall") is not None else None
+        q = b["quality"] if b["quality"] is not None else UNGRADED_QUALITY
+        b["score"] = round(b["survival"] * b["novelty"] * q, 4)
+    out = sorted(briefs, key=lambda b: (-b["score"], -b["novelty"], b["id"]))
+    seen: dict = {}
+    for b in out:
+        b["tier"] = seen.get(b["run_id"], 0)
+        seen[b["run_id"]] = b["tier"] + 1
     return out
 
 
@@ -193,16 +206,12 @@ def main() -> dict:
                        "assessment": ({k: b["assessment"][k] for k in ("grade", "overall", "scores", "summary")}
                                       if b.get("assessment") else None),
                        "revision": ({"research_question": b["revision"]["research_question"],
+                                     "paper_direction": b["revision"].get("paper_direction", ""),
                                      "assessment": ({k: b["revision"]["assessment"][k]
                                                      for k in ("grade", "overall", "scores", "summary")}
                                                     if b["revision"].get("assessment") else None)}
                                     if b.get("revision") else None)})
-    # Directions the Assessor judged not yet defensible go after the others (each group keeps its ranking).
-    def latest_grade(b: dict) -> str | None:
-        rev = (b.get("revision") or {}).get("assessment")
-        return (rev or b.get("assessment") or {}).get("grade")
-    weak = [b for b in briefs if latest_grade(b) == "not yet defensible"]
-    briefs = rank_directions([b for b in briefs if b not in weak]) + rank_directions(weak)
+    briefs = rank_directions(briefs)
     (out / "briefs.json").write_text(json.dumps(briefs, ensure_ascii=False, indent=1))
 
     # claims + edges for the atlas (embeddings dropped)

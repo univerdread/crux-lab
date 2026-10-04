@@ -19,10 +19,10 @@ In philosophy the debate is the experiment. Crux Lab runs it: it reads recent pa
 An Assessor agent (a different model family from the brief writer) reads every research direction like a journal referee and grades coherence, robustness, significance and specificity; the grade is computed in code. Result: 14 not yet defensible of 14. The lab shows each direction's strongest objection and what a paper would need, rather than overselling its leads. A revision round then rewrote each direction to answer its strongest objection and re-graded it in a fresh read: 2 of 14 moved up a grade (to needs work) and the rest stayed not yet defensible, each with the next objection it must meet.
 
 ## Example output
-Top research direction: *Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?* — revision_required, novelty 0.45, 4139 records searched.
+Top research direction: *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched.
 
 ## Databricks
-Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1452 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
+Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1632 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
 
 ## Honest limits
 Model diversity degraded: 2 families; PhilArchive's OAI API was unavailable; evals are small and have no human labels; outcome labels are model judgements about the state of a debate, never verdicts on truth.

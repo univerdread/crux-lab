@@ -145,7 +145,16 @@
   "distinct_works": 962,
   "with_abstract": 1212,
   "full_texts": 75,
-  "fresh": 635
+  "fresh": 635,
+  "searches": [
+   "divine hiddenness",
+   "nonresistant nonbelief",
+   "divine silence",
+   "hiddenness of God",
+   "skeptical theism hiddenness",
+   "Schellenberg hiddenness argument"
+  ],
+  "fresh_from": "2026-08-01"
  },
  "method_notes": [
   "Generators never see literature: their context builder only receives the argument's own premises (enforced by construction and by a test that inspects the module's imports).",
@@ -158,11 +167,12 @@
   "Subscription CLI providers (codex, claude -p) ignore temperature; diversity comes from different models and roles.",
   "Novelty is never claimed: it is 1 - max similarity among same_move/related matches in what retrieval found, reported with records searched, the three nearest matches and 'Further human review required.'",
   "Every research direction is graded by an Assessor agent from a different model family than the brief writer, acting as a journal referee; the grade (promising / needs work / not yet defensible) is computed in code from its four 1-5 scores, and a direction that falls to an obvious objection is never 'promising'.",
+  "Research directions are ranked by lead score = survival x novelty x quality, where quality is the Assessor's latest overall score / 5 (after the revision round if there was one): a direction leads only if it survived the defenders, nothing close to it was found, and the Assessor found it sound.",
   "Outcome distribution across all trials: revision_required 18, misreading 11, known_answer 1. No trial ended rebutted or standing: defenders usually save the argument by narrowing a premise, which counts as revision_required, so read it as 'this premise needs work', not as a defeated argument.",
   "OpenAlex lists some papers more than once (versions, preprint + article): the 1212 corpus records are 962 distinct works. 'Records searched' counts records; nearest matches, the prior-art search box and E1 are scored per distinct work."
  ],
  "tracing": {
   "backend": "local MLflow (mlruns/)",
-  "traces": 1459
+  "traces": 1632
  }
 }

@@ -57,7 +57,8 @@ export function OutcomeGuide() {
       </dl>
       <p className="measure mt-2 text-[0.88rem] text-ink-soft">
         Each objection faces two defenders separately and keeps the outcome most favourable to the paper, so a label
-        here holds against both. Research directions are ranked by survival × novelty. Labels describe the state of the
+        here holds against both. Research directions are ranked by lead score: survival × novelty × the Assessor’s
+        quality score out of 5. Labels describe the state of the
         debate, never whether the paper’s conclusion is true. Separately, an Assessor agent reads every direction
         like a journal referee and gives it a quality grade (promising, needs work, or not yet defensible) with the
         strongest objection to it and what the paper would need.

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { DirectionItem } from "../components/DirectionItem";
+import { DirectionItem, LeadCard } from "../components/DirectionItem";
 import { HowItWorks, OutcomeGuide } from "../components/Guide";
 import { LoopRing } from "../components/LoopRing";
 import { OutcomeBar } from "../components/OutcomeBar";
@@ -95,14 +95,19 @@ export default function Landing() {
               Research directions
             </h2>
             <p className="measure mt-1 text-[1rem] text-ink-soft">
-              Objections that came through the lab’s trials, as leads for a paper. The lab runs one experiment per paper;
-              by default this list shows each paper’s strongest direction (by survival × novelty) first, then the next
-              from each paper. Pick a paper to see only its directions. Each opens a printable brief with the argument,
-              the strongest replies and why they failed, and the closest literature.
+              Objections that came through the lab’s trials, as leads for a paper, best first. A direction ranks high when
+              it is all three at once: it survived the defenders (survival), nothing close to it turned up in the
+              literature (novelty), and the Assessor judged it sound (quality, out of 5). The lead score is their product.
+              Pick a paper to see only its directions. Each opens a printable brief with the argument, the strongest
+              replies and why they failed, and the closest literature.
             </p>
           </div>
         </div>
-        <OutcomeGuide />
+        {paper ? null : (
+          <DataState load={briefs} what="research briefs">
+            {(list) => (list.length ? <LeadCard brief={list[0]} /> : null)}
+          </DataState>
+        )}
         <DataState load={index} what="the index">
           {(ix) => (
             <div id="paper-filter" className="mt-6 flex scroll-mt-4 flex-wrap items-center gap-2" role="group" aria-label="Filter research directions by paper">
@@ -135,8 +140,8 @@ export default function Landing() {
               list.length ? (
                 <>
                   <ol>
-                    {(paper ? list.filter((b) => b.run_id === paper) : list.slice(0, TOP)).map((b, i) => (
-                      <DirectionItem key={b.id} brief={b} rank={i + 1} />
+                    {(paper ? list.filter((b) => b.run_id === paper) : list.slice(1, TOP)).map((b, i) => (
+                      <DirectionItem key={b.id} brief={b} rank={i + (paper ? 1 : 2)} />
                     ))}
                   </ol>
                   {!paper && list.length > TOP ? (
@@ -147,6 +152,7 @@ export default function Landing() {
                     </p>
                   ) : null}
                   <Disclaimer className="mt-6" />
+                  <OutcomeGuide />
                 </>
               ) : (
                 <Empty>

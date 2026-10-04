@@ -279,11 +279,13 @@ export interface BriefSummary {
   paper_title: string;
   challenged_premise: { id: string; text: string };
   paper_direction: string;
-  score?: number; // survival x novelty
+  score?: number; // lead score: survival x novelty x quality (crux_lab/export.py rank_directions)
+  quality?: number | null; // the Assessor's latest overall score / 5; null when not graded
   tier?: number; // 0 = best direction for its target paper, 1 = second, ...
   assessment?: Pick<Assessment, "grade" | "overall" | "scores" | "summary"> | null;
   revision?: {
     research_question: string;
+    paper_direction?: string;
     assessment: Pick<Assessment, "grade" | "overall" | "scores" | "summary"> | null;
   } | null;
 }

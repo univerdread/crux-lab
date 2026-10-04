@@ -82,8 +82,8 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
         <dd className="font-mono text-[0.75rem]">{num(brief.survival)}</dd>
         {brief.score !== undefined ? (
           <>
-            <dt className="smallcaps text-ink-soft">score</dt>
-            <dd className="font-mono text-[0.75rem]" title="survival × novelty">
+            <dt className="smallcaps text-ink-soft">lead score</dt>
+            <dd className="font-mono text-[0.75rem]" title={leadFormula(brief)}>
               {num(brief.score, 3)}
             </dd>
           </>
@@ -93,9 +93,71 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
   );
 }
 
+/** The lead score spelled out: survival × novelty × quality (the Assessor's latest score out of 5). */
+export function leadFormula(b: BriefSummary): string {
+  const q = b.quality != null ? `quality ${fmtScore(b.quality * 5)}/5` : "quality not graded (counted as 3/5)";
+  return `survival ${num(b.survival)} × novelty ${num(b.novelty)} × ${q}`;
+}
+
 /** After the revision round: name the old grade only if it changed; otherwise the old score, or "unchanged". */
 function revisionNote(before: { grade: string; overall: number }, after: { grade: string; overall: number }): string {
   if (before.grade !== after.grade) return `after revision · was ${before.grade}`;
   if (before.overall !== after.overall) return `after revision · was ${fmtScore(before.overall)}/5`;
   return "after revision · unchanged";
+}
+
+/** The single best direction, given the most room: the lead score's three parts are shown, not just the total. */
+export function LeadCard({ brief }: { brief: BriefSummary }) {
+  const latest = brief.revision?.assessment ?? brief.assessment;
+  const question = brief.revision?.research_question || brief.research_question;
+  const direction = (brief.revision?.research_question && brief.revision.paper_direction) || brief.paper_direction;
+  return (
+    <article aria-labelledby="lead-h" className="mt-6 border border-ink bg-paper-deep/40 p-5 sm:p-7">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="smallcaps text-[0.95rem] text-ink">strongest lead</span>
+        <OutcomeChip outcome={brief.outcome} />
+        {latest ? <GradeChip grade={latest.grade} overall={latest.overall} /> : null}
+      </div>
+      <h3 id="lead-h" className="mt-2 font-serif text-[1.75rem] font-medium leading-snug">
+        <Link to={`/brief/${encodeURIComponent(brief.id)}`} className="link decoration-transparent hover:decoration-ink">
+          {question}
+        </Link>
+      </h3>
+      {question !== brief.research_question ? (
+        <p className="mt-1 text-[0.88rem] text-ink-soft">
+          Revised after the Assessor’s first read; the original question and direction are on the brief.
+        </p>
+      ) : null}
+      {direction ? <p className="measure mt-3 text-[1.05rem] leading-relaxed">{direction}</p> : null}
+      {latest?.summary ? (
+        <p className="measure mt-3 border-l-2 border-ink pl-3 text-[0.95rem] italic text-ink-soft">Assessor: {latest.summary}</p>
+      ) : null}
+      <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 border-t border-rule pt-3 sm:grid-cols-4">
+        <LeadPart label="survival" value={num(brief.survival)} note="against both defenders" />
+        <LeadPart label="novelty" value={num(brief.novelty)} note={`${brief.records_searched} records searched`} />
+        <LeadPart
+          label="quality"
+          value={brief.quality != null ? `${fmtScore(brief.quality * 5)}/5` : "—"}
+          note="Assessor, latest read"
+        />
+        <LeadPart label="lead score" value={num(brief.score, 3)} note="the product; highest here" />
+      </dl>
+      <p className="mt-3 text-[0.92rem] text-ink-soft">
+        From <cite className="not-italic">{displayTitle(brief.paper_title)}</cite>.{" "}
+        <Link to={`/brief/${encodeURIComponent(brief.id)}`} className="link">
+          Read the brief →
+        </Link>
+      </p>
+    </article>
+  );
+}
+
+function LeadPart({ label, value, note }: { label: string; value: string; note: string }) {
+  return (
+    <div>
+      <dt className="smallcaps text-[0.85rem] text-ink-soft">{label}</dt>
+      <dd className="font-mono text-[1.1rem]">{value}</dd>
+      <dd className="text-[0.78rem] text-ink-soft">{note}</dd>
+    </div>
+  );
 }

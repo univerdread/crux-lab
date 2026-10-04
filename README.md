@@ -16,7 +16,8 @@ Built for Hack-Nation's 7th Global AI Hackathon, Challenge 3 "Agentic Scientific
 
 **Who it is for:** philosophers and philosophy students looking for what to research and write
 next. The site leads with *research directions*: objections that survived two defenders, ranked by
-survival × novelty, each traceable to verbatim quotes and corpus records.
+lead score (survival × novelty × the Assessor's quality grade), each traceable to verbatim quotes and corpus
+records.
 
 <!-- RESULTS -->
 ## What the lab produced (generated from `web/public/data`)
@@ -37,13 +38,13 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 
 **Revision round** (each direction rewritten to answer its strongest objection, then re-graded in a fresh read): not yet defensible 12, needs work 2 of 14 after revision; overall score up for 9, down for 1.
 
-**Top research directions** (survival × novelty, best per target first):
+**Top research directions** (lead score = survival × novelty × Assessor quality/5, best first):
 
-- *Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?* — revision_required, novelty 0.45, 4139 records searched; assessor: not yet defensible (2.5/5). Further human review required.
-- *Can Schellenberg’s analogy for P1 preserve a Vanstonean conception of vulnerable divine love while establishing that God is obligated, absent overriding reasons, to make voluntary relationship genuinely accessible?* — revision_required, novelty 0.32, 4140 records searched; assessor: not yet defensible (2.5/5). Further human review required.
-- *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched; assessor: not yet defensible (2.75/5). Further human review required.
-- *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched; assessor: not yet defensible (3.0/5). Further human review required.
-- *Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?* — revision_required, novelty 0.66, 4139 records searched; assessor: not yet defensible (2.25/5). Further human review required.
+- *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched; assessor: not yet defensible (3.0/5); lead score 0.422. Further human review required.
+- *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched; assessor: not yet defensible (2.75/5); lead score 0.405. Further human review required.
+- *Does robust contrastive responsibility require irreducibly de se representation of the selected outcome, or only representation of that outcome as resulting from an act the agent performs or selects?* — revision_required, novelty 0.84, 4138 records searched; assessor: not yet defensible (3.0/5); lead score 0.403. Further human review required.
+- *Can instantiation be modelled as similarity-based parthood in a way that preserves the persistence of ordinary objects and supports the divine-simplicity application?* — revision_required, novelty 0.82, 4140 records searched; assessor: not yet defensible (3.0/5); lead score 0.394. Further human review required.
+- *Does robust contrastive responsibility require an agent to represent the selected outcome as attributable to that agent’s own exercise of control, and if so, must this representation contain irreducible de se content?* — revision_required, novelty 0.86, 4140 records searched; assessor: not yet defensible (2.75/5); lead score 0.378. Further human review required.
 
 ### Evaluation (automatic, no human labels)
 

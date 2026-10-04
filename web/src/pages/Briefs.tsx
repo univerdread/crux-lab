@@ -15,9 +15,9 @@ export default function Briefs() {
       <h1 className="font-serif text-[2.6rem] font-medium leading-tight">Research directions</h1>
       <p className="measure mt-2 text-[1.05rem] text-ink-soft">
         Each direction is an objection the lab generated without seeing the literature, then put through two defenders
-        and a referee, then checked against the corpus. Listed in the exported order, which favours breadth: the strongest
-        direction for each paper (by survival × novelty) first, then the second, and so on. Open one for the printable
-        brief.
+        and a referee, then checked against the corpus, then graded by an Assessor. Best first, by lead score: survival ×
+        novelty × quality (the Assessor’s latest score out of 5), so the top of the list is new, has survived, and is
+        sound. Open one for the printable brief.
       </p>
       <OutcomeGuide />
       <div className="mt-8">

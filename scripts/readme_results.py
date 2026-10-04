@@ -75,12 +75,13 @@ def main() -> None:
                     f"in a fresh read): " + ", ".join(f"{k} {v}" for k, v in sorted(after.items(), key=lambda kv: -kv[1]))
                     + f" of {len(revised)} after revision; overall score up for {up}, down for {down}."]
     if briefs:
-        out += ["", "**Top research directions** (survival × novelty, best per target first):", ""]
+        out += ["", "**Top research directions** (lead score = survival × novelty × Assessor quality/5, best first):", ""]
         for b in briefs[:5]:
-            q = b.get("assessment") or {}
+            q = (b.get("revision") or {}).get("assessment") or b.get("assessment") or {}
             out.append(f"- *{b['research_question']}* — {b['outcome']}, novelty {b['novelty']:.2f}, "
                        f"{b['records_searched']} records searched"
                        + (f"; assessor: {q['grade']} ({q['overall']}/5)" if q else "")
+                       + (f"; lead score {b['score']:.3f}" if b.get("score") is not None else "")
                        + ". Further human review required.")
     e1, e2, e3 = res.get("e1"), res.get("e2"), res.get("e3")
     out += ["", "### Evaluation (automatic, no human labels)", ""]
