@@ -46,6 +46,8 @@ records.
 - *Can instantiation be modelled as similarity-based parthood in a way that preserves the persistence of ordinary objects and supports the divine-simplicity application?* — revision_required, novelty 0.82, 4140 records searched; assessor: not yet defensible (3.0/5); lead score 0.394. Further human review required.
 - *Does robust contrastive responsibility require an agent to represent the selected outcome as attributable to that agent’s own exercise of control, and if so, must this representation contain irreducible de se content?* — revision_required, novelty 0.86, 4140 records searched; assessor: not yet defensible (2.75/5); lead score 0.378. Further human review required.
 
+**Second topic: Decision theory in philosophy of religion** (8 model families: anthropic, kimi, glm, mistral, qwen, llama, gpt-oss, gemma). 6 papers, 72 objections, 36 trials (27 standing or forcing a revision), 18 research directions. Strongest lead (lead score 0.520): *What kind of certainty and hope must a version of Pascal's wager provide to be suitable for apologetic use, and does the postmodern rendition lack the determinacy of object that apologetics requires, once procedural certainty and immanent hope are granted?* E1 replicated: 78% (embeddings over claims) vs 28% keyword search (n=50). Switch topics on the site's /topics page.
+
 ### Evaluation (automatic, no human labels)
 
 **E1 prior-art recall@5** (n=50; scored per work, duplicate records merged):

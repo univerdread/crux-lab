@@ -134,7 +134,15 @@ export function LeadCard({ brief }: { brief: BriefSummary }) {
       ) : null}
       <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 border-t border-rule pt-3 sm:grid-cols-4">
         <LeadPart label="survival" value={num(brief.survival)} note="against both defenders" />
-        <LeadPart label="novelty" value={num(brief.novelty)} note={`${brief.records_searched} records searched`} />
+        <LeadPart
+          label="novelty"
+          value={num(brief.novelty)}
+          note={
+            brief.novelty >= 0.999
+              ? "no passage the reranker read was judged similar (see About on calibration)"
+              : `${brief.records_searched} records searched`
+          }
+        />
         <LeadPart
           label="quality"
           value={brief.quality != null ? `${fmtScore(brief.quality * 5)}/5` : "—"}

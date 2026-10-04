@@ -14,6 +14,36 @@ def load(name):
     return json.loads(p.read_text()) if p.exists() else None
 
 
+def other_topics() -> list[str]:
+    """One paragraph per other explored topic, read from its own export."""
+    topics = (load("topics.json") or {}).get("topics", [])
+    out = []
+    for t in topics:
+        if t.get("default") or t.get("status") != "ready":
+            continue
+        d = D / t["data"]
+        ix = json.loads((d / "index.json").read_text())
+        br = json.loads((d / "briefs.json").read_text())
+        res = json.loads((d / "results.json").read_text()) if (d / "results.json").exists() else {}
+        k = t["counts"]
+        surv = sum(r["outcomes"].get("revision_required", 0) + r["outcomes"].get("standing", 0) for r in ix["runs"])
+        line = (f"**Second topic: {t['name']}** ({len(t.get('families') or [])} model families: "
+                f"{', '.join(t.get('families') or [])}). {k['papers']} papers, {k['objections']} objections, "
+                f"{k['trials']} trials ({surv} standing or forcing a revision), {k['briefs']} research directions.")
+        if br:
+            b = br[0]
+            q = (b.get("revision") or {}).get("research_question") or b["research_question"]
+            line += f" Strongest lead (lead score {b['score']:.3f}): *{q}*"
+        e1 = res.get("e1") or {}
+        if e1.get("methods"):
+            best = max(e1["methods"], key=lambda m: m.get("recall_at_5", 0))
+            kw = next((m for m in e1["methods"] if m["name"].startswith("BM25")), {})
+            line += (f" E1 replicated: {best['recall_at_5']:.0%} ({best['name']}) vs {kw.get('recall_at_5', 0):.0%} "
+                     f"keyword search (n={e1['n']}).")
+        out += ["", line + " Switch topics on the site's /topics page."]
+    return out
+
+
 def outcome_limit(idx: dict) -> str:
     """State which outcomes the gauntlet never produced (computed from the runs)."""
     tot: dict[str, int] = {}
@@ -83,6 +113,7 @@ def main() -> None:
                        + (f"; assessor: {q['grade']} ({q['overall']}/5)" if q else "")
                        + (f"; lead score {b['score']:.3f}" if b.get("score") is not None else "")
                        + ". Further human review required.")
+    out += other_topics()
     e1, e2, e3 = res.get("e1"), res.get("e2"), res.get("e3")
     out += ["", "### Evaluation (automatic, no human labels)", ""]
     if e1:
