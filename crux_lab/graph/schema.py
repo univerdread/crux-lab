@@ -120,4 +120,5 @@ class Brief(BaseModel):
     open_questions: list[str]
     paper_direction: str
     outcome: str = ""
+    assessment: dict | None = None        # the Assessor's academic-quality grade (crux_lab/lab/assess.py)
     disclaimer: str = "Further human review required."

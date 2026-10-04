@@ -1,5 +1,21 @@
 # NOTES — newest entry first
 
+## 2026-10-04 13:05 — Assessor agent grades every research direction (Claude, at the human's request)
+- `crux_lab/lab/assess.py` + prompts/assessor.md (`make assess`): a journal-referee read of each brief
+  (never sees model names). Scores 1-5: coherence, robustness (states the strongest objection and judges
+  whether the direction answers it), significance, specificity; plus what the paper needs. Grade computed
+  in code: promising = coherence & robustness >= 4 and mean >= 3.75; not yet defensible = coherence or
+  robustness <= 2; else needs work. Model: Claude Opus via claude -p (different family from the brief
+  writer, gpt-5.6-terra): 14 calls on the human's Claude plan.
+- Result: all 14 directions "not yet defensible" (robustness 2 everywhere; overall 2.25-3.0). I read the
+  critiques: they are specific and competent (e.g. modal premise misread; Perry/Castañeda essential-
+  indexical reply unanswered; begs the question against constituent ontology). Read as "the brief does
+  not yet answer the obvious objection", with the fix stated, not as "no idea here".
+- Site: grade chip + assessor verdict on every direction; "Academic quality check" panel on each brief;
+  directions graded not yet defensible sort last (all are, so order unchanged). README tallies grades.
+- Possible next step (model spend): a revision loop where the brief writer answers the assessor's
+  strongest objection and the assessor re-grades.
+
 ## 2026-10-04 12:45 — topics: any subject, not just hiddenness (Claude, at the human's request)
 - Human chose "build it, no new run". A topic is now config/topics/<slug>.yaml (queries, on-topic filter,
   screening scale, tradition lenses, optional E2 fixture). `make <step> TOPIC=<slug>` /

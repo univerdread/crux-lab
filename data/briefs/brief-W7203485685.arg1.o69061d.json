@@ -134,5 +134,27 @@
   ],
   "paper_direction": "A paper here would argue that the move from robust contrastive responsibility to irreducible de se divine cognition depends on a stronger and presently unestablished source-attribution requirement. It would use cases such as Mira’s to distinguish impersonal representation of causal consequences, self-representation of an intended act, and representation of an outcome as attributable to one’s control; it would then assess whether only the last is necessary for responsibility. The strongest reply to anticipate is that practical deliberation already integrates agent, option, and outcome in a way that grounds attribution without explicit self-ascription. The paper would need to show either that this integration necessarily has irreducible de se content, or that responsibility can be grounded by act-level self-representation without the outcome-level de se representation required by the original argument.",
   "outcome": "revision_required",
+  "assessment": {
+    "grade": "not yet defensible",
+    "overall": 2.5,
+    "scores": {
+      "coherence": 3,
+      "robustness": 2,
+      "significance": 2,
+      "specificity": 3
+    },
+    "reasons": {
+      "coherence": "The objection targets c006's outcome-level wording, but the case builds in an outcome-directed intention that plausibly satisfies c006, so it is coherent only loosely and not precisely aimed.",
+      "robustness": "Defender A's reply that the intention supplies the self-involvement is stronger than the lab allows, and the direction's second disjunct concedes act-level de se, leaving no viable answer to the charge that the conclusion survives.",
+      "significance": "At best the paper would refine c006 from outcome-level to act-level self-representation, which leaves the inference to irreducible de se divine cognition intact and so barely bears on the argument.",
+      "specificity": "There is a definite question, a case, and a three-way distinction to deploy, but no plan for settling irreducibility or for getting from the human case to divine cognition."
+    },
+    "strongest_objection": "The case is self-undermining: Mira is stipulated to intend to save the village and to pull A for that reason. On standard accounts of intention (Harman, Searle, Velleman), that intention represents the outcome as brought about by her own action ('I will save the village by pulling A'). So her cognition does represent the outcome as issuing from her own activity, and the impersonal display is irrelevant. Even if the reply is pushed back to act-level self-representation, that content is itself de se. The argument's conclusion (c052), that divine cognition must include irreducible de se content, survives untouched.",
+    "reply_available": false,
+    "what_it_needs": "The paper needs a case where the agent is robustly responsible but neither intention nor practical self-location carries any first-personal content about act or outcome. Otherwise it must explain why showing only act-level de se is needed weakens c052 rather than relocating it. It also needs to address irreducibility directly (Perry, Lewis, Cappelen–Dever), since the actual dialectical target is whether the required self-involvement is irreducibly de se.",
+    "summary": "A tidy distinction built on a case whose own stipulated intention concedes the point, and whose best outcome still leaves the de se conclusion standing; not yet a publishable paper.",
+    "model": "anthropic:opus",
+    "assessed_at": "2026-10-04T09:05:16.189937+00:00"
+  },
   "disclaimer": "Further human review required."
 }

@@ -25,7 +25,7 @@ ROLE_TEMPERATURE = {
     "generator": 0.9, "naive_questioner": 0.9,
     "defender_a": 0.5, "defender_b": 0.5, "attacker": 0.9,
     "extractor": 0.2, "formalizer": 0.2, "referee": 0.2, "reranker": 0.2,
-    "restater": 0.2, "gap_scout": 0.2, "brief": 0.2, "eval": 0.2,
+    "restater": 0.2, "gap_scout": 0.2, "brief": 0.2, "eval": 0.2, "assessor": 0.2,
 }
 
 

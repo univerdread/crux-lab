@@ -186,8 +186,12 @@ def main() -> dict:
                        "survival": SURVIVAL.get(b.get("outcome") or "", 0),
                        "paper_title": b["argument"].get("paper_title"),
                        "challenged_premise": b["challenged_premise"],
-                       "paper_direction": b["paper_direction"]})
-    briefs = rank_directions(briefs)
+                       "paper_direction": b["paper_direction"],
+                       "assessment": ({k: b["assessment"][k] for k in ("grade", "overall", "scores", "summary")}
+                                      if b.get("assessment") else None)})
+    # Directions the Assessor judged not yet defensible go after the others (each group keeps its ranking).
+    weak = [b for b in briefs if (b.get("assessment") or {}).get("grade") == "not yet defensible"]
+    briefs = rank_directions([b for b in briefs if b not in weak]) + rank_directions(weak)
     (out / "briefs.json").write_text(json.dumps(briefs, ensure_ascii=False, indent=1))
 
     # claims + edges for the atlas (embeddings dropped)

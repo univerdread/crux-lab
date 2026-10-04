@@ -212,6 +212,21 @@ export interface LiteratureRef {
   quote?: string;
 }
 
+export type QualityGrade = "promising" | "needs work" | "not yet defensible";
+
+export interface Assessment {
+  grade: QualityGrade;
+  overall: number;
+  scores: { coherence: number; robustness: number; significance: number; specificity: number };
+  reasons?: Record<string, string>;
+  strongest_objection?: string;
+  reply_available?: boolean;
+  what_it_needs?: string;
+  summary: string;
+  model?: string;
+  assessed_at?: string;
+}
+
 export interface Brief {
   id: string;
   objection_id: string;
@@ -237,6 +252,7 @@ export interface Brief {
   open_questions: string[];
   paper_direction: string;
   outcome: Outcome | "";
+  assessment?: Assessment | null;
   disclaimer: string;
 }
 
@@ -253,6 +269,7 @@ export interface BriefSummary {
   paper_direction: string;
   score?: number; // survival x novelty
   tier?: number; // 0 = best direction for its target paper, 1 = second, ...
+  assessment?: Pick<Assessment, "grade" | "overall" | "scores" | "summary"> | null;
 }
 
 export interface CorpusRecord {

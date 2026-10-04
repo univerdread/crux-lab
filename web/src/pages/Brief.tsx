@@ -1,3 +1,4 @@
+import { QualityPanel } from "../components/Quality";
 import { useState } from "react";
 import { Link, useParams } from "react-router";
 import { VerdictTag } from "../components/NoveltyPanel";
@@ -146,6 +147,12 @@ function BriefView({ b, runId }: { b: Brief; runId: string | null }) {
           </span>
         </p>
       </header>
+
+      {b.assessment ? (
+        <div className="mt-6">
+          <QualityPanel a={b.assessment} />
+        </div>
+      ) : null}
 
       <Marginal label="paper direction">
         {b.paper_direction ? <p className="measure text-[1.2rem] leading-relaxed">{b.paper_direction}</p> : <p className="text-ink-soft">No paper direction was written.</p>}

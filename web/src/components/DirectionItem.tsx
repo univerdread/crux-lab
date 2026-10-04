@@ -1,3 +1,4 @@
+import { GradeChip } from "./Quality";
 import { Link } from "react-router";
 import type { BriefSummary } from "../types";
 import { displayTitle, excerpt, num, shortId } from "../lib/format";
@@ -23,6 +24,11 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
         {brief.paper_direction ? (
           <p className="measure text-[1.02rem] leading-relaxed text-ink">{long ? brief.paper_direction : excerpt(brief.paper_direction, 340)}</p>
         ) : null}
+        {brief.assessment?.summary ? (
+          <p className="measure mt-2 border-l-2 border-ink pl-3 text-[0.92rem] italic text-ink-soft">
+            Assessor: {brief.assessment.summary}
+          </p>
+        ) : null}
         <p className="measure text-[0.92rem] text-ink-soft">
           Challenges <span className="font-mono text-[0.8rem]">{shortId(brief.challenged_premise?.id ?? "")}</span>
           {brief.challenged_premise?.text ? <> — “{excerpt(brief.challenged_premise.text, 200)}”</> : null}
@@ -42,6 +48,14 @@ export function DirectionItem({ brief, rank, long = false }: { brief: BriefSumma
         <dd>
           <OutcomeChip outcome={brief.outcome} />
         </dd>
+        {brief.assessment ? (
+          <>
+            <dt className="smallcaps text-ink-soft">quality</dt>
+            <dd>
+              <GradeChip grade={brief.assessment.grade} overall={brief.assessment.overall} />
+            </dd>
+          </>
+        ) : null}
         <dt className="smallcaps text-ink-soft">novelty</dt>
         <dd>
           <Meter value={brief.novelty} label="novelty score" />

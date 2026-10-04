@@ -33,13 +33,15 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 | DOES GOD EXIST? CAN WE TELL IF WE BASED THIS QUESTION ONLY UPON THE AP (fresh) | 10 | 6 | misreading 4, revision_required 2 | 2 |
 | Divine simplicity as symmetric parthood (fresh) | 11 | 6 | misreading 2, revision_required 4 | 3 |
 
+**Academic quality check** (Assessor agent, a journal-referee read of each direction; grade computed from coherence, robustness, significance and specificity): not yet defensible 14 of 14. Each brief shows the strongest objection to it and what the paper would need.
+
 **Top research directions** (survival × novelty, best per target first):
 
-- *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched. Further human review required.
-- *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched. Further human review required.
-- *Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?* — revision_required, novelty 0.66, 4139 records searched. Further human review required.
-- *Can a many-goods response to divine hiddenness count several goods arising from one person’s nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil?* — revision_required, novelty 0.47, 4140 records searched. Further human review required.
-- *Can an analogy from vulnerable human love support a context-sensitive divine obligation to make relationship accessible to nonresistant persons without first establishing a general obligation of vulnerable love?* — revision_required, novelty 0.42, 4130 records searched. Further human review required.
+- *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched; assessor: not yet defensible (2.75/5). Further human review required.
+- *Does robust contrastive responsibility require an irreducibly agent-relative mode of representation, or can a rigid third-personal representation of an agent's intention and act suffice?* — revision_required, novelty 0.88, 4140 records searched; assessor: not yet defensible (3.0/5). Further human review required.
+- *Can an argument from the apparent randomness of history establish that visible moral patterns are not systematically dominant, and what standard would justify that aggregate judgment?* — revision_required, novelty 0.66, 4139 records searched; assessor: not yet defensible (2.25/5). Further human review required.
+- *Can a many-goods response to divine hiddenness count several goods arising from one person’s nonresistant nonbelief without treating their joint realization as an increase in nonbelief-related evil?* — revision_required, novelty 0.47, 4140 records searched; assessor: not yet defensible (2.75/5). Further human review required.
+- *Can an analogy from vulnerable human love support a context-sensitive divine obligation to make relationship accessible to nonresistant persons without first establishing a general obligation of vulnerable love?* — revision_required, novelty 0.42, 4130 records searched; assessor: not yet defensible (2.25/5). Further human review required.
 
 ### Evaluation (automatic, no human labels)
 

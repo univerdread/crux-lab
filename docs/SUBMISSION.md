@@ -19,7 +19,7 @@ In philosophy the debate is the experiment. Crux Lab runs it: it reads recent pa
 Top research direction: *Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?* — revision_required, novelty 0.92, 4139 records searched.
 
 ## Databricks
-Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1409 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
+Model Serving / Foundation Model APIs are first in the provider chain; MLflow traces every LLM call (1423 traced in this build, locally because no workspace token was available); a claims Delta table + AI Search (Vector Search) Delta Sync index and a Databricks App config are wired (`make databricks`, `app.yaml`).
 
 ## Honest limits
 Model diversity degraded: 2 families; PhilArchive's OAI API was unavailable; evals are small and have no human labels; outcome labels are model judgements about the state of a debate, never verdicts on truth.

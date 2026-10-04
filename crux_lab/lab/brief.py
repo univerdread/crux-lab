@@ -110,7 +110,16 @@ def to_markdown(b: Brief, objection: Objection | None = None) -> str:
         if c.get("quote"):
             L.append(f"  > {c['quote']}")
     L += ["", "## Open questions"] + [f"- {q}" for q in b.open_questions]
-    L += ["", "## Paper direction", b.paper_direction, "", f"**{b.disclaimer}**", ""]
+    L += ["", "## Paper direction", b.paper_direction, ""]
+    if b.assessment:
+        s = b.assessment
+        L += ["## Academic quality check (AI assessor, not peer review)",
+              f"**{s['grade']}** · overall {s['overall']}/5 · " + " · ".join(f"{k} {v}/5" for k, v in s["scores"].items()),
+              "", f"*{s['summary']}*", "",
+              f"- Strongest objection to this direction: {s['strongest_objection']}",
+              f"- A viable answer is {'available' if s['reply_available'] else 'not yet available'} in the brief or the debate.",
+              f"- What the paper needs: {s['what_it_needs']}", f"- Assessor: {s['model']}", ""]
+    L += [f"**{b.disclaimer}**", ""]
     return "\n".join(L)
 
 

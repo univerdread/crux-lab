@@ -39,6 +39,11 @@ def _runs(a):
     asyncio.run(main_all(only=[x for x in a.only.split(",") if x], skip=[x for x in a.skip.split(",") if x]))
 
 
+def _assess(a):
+    from crux_lab.lab.assess import main
+    asyncio.run(main())
+
+
 def _export(a):
     from crux_lab.export import main
     main()
@@ -102,6 +107,7 @@ def main(argv=None):
     rs.add_argument("--skip", default="")
     rs.set_defaults(f=_runs)
     sub.add_parser("export").set_defaults(f=_export)
+    sub.add_parser("assess").set_defaults(f=_assess)
     e = sub.add_parser("eval")
     e.add_argument("--only", default="")
     e.set_defaults(f=_eval)

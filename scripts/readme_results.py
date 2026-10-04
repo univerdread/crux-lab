@@ -54,11 +54,23 @@ def main() -> None:
     for r in idx["runs"]:
         oc = ", ".join(f"{k} {v}" for k, v in sorted(r["outcomes"].items()))
         out.append(f"| {r['title'][:70]} ({r['kind']}) | {r['objections']} | {r['trials']} | {oc} | {len(r['briefs'])} |")
+    graded = [b for b in briefs if b.get("assessment")]
+    if graded:
+        tally = {}
+        for b in graded:
+            tally[b["assessment"]["grade"]] = tally.get(b["assessment"]["grade"], 0) + 1
+        out += ["", f"**Academic quality check** (Assessor agent, a journal-referee read of each direction; grade "
+                f"computed from coherence, robustness, significance and specificity): "
+                + ", ".join(f"{k} {v}" for k, v in sorted(tally.items(), key=lambda kv: -kv[1]))
+                + f" of {len(graded)}. Each brief shows the strongest objection to it and what the paper would need."]
     if briefs:
         out += ["", "**Top research directions** (survival × novelty, best per target first):", ""]
         for b in briefs[:5]:
+            q = b.get("assessment") or {}
             out.append(f"- *{b['research_question']}* — {b['outcome']}, novelty {b['novelty']:.2f}, "
-                       f"{b['records_searched']} records searched. Further human review required.")
+                       f"{b['records_searched']} records searched"
+                       + (f"; assessor: {q['grade']} ({q['overall']}/5)" if q else "")
+                       + ". Further human review required.")
     e1, e2, e3 = res.get("e1"), res.get("e2"), res.get("e3")
     out += ["", "### Evaluation (automatic, no human labels)", ""]
     if e1:
