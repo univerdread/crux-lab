@@ -1,0 +1,236 @@
+{
+  "id": "brief-W7212186029.arg1.o10f4f4",
+  "objection_id": "W7212186029.arg1.o10f4f4",
+  "research_question": "Can a similarity-relative parthood relation adequately track the metaphysical constituency denied by the traditional doctrine of divine simplicity?",
+  "argument": {
+    "id": "W7212186029.arg1",
+    "title": "Divine simplicity as symmetric parthood",
+    "paper_id": "oa:W7212186029",
+    "paper_title": "Divine simplicity as symmetric parthood",
+    "premises": [
+      {
+        "id": "W7212186029.c006",
+        "text": "Divine simplicity is most plausibly understood as the claim that God lacks proper parts.",
+        "quote": "Instead, DDS is more plausibly understood as saying that God lacks proper parts – call this the mereological formulation of DDS."
+      },
+      {
+        "id": "W7212186029.c008",
+        "text": "If proper parthood is non-symmetric parthood, the claim that God has no proper parts yields the symmetry formulation of divine simplicity.",
+        "quote": "But if proper parthood is defined as non-symmetric parthood, then explicating proper parthood in the mereological formulation yields the symmetry formulation of DDS."
+      },
+      {
+        "id": "W7212186029.c013",
+        "text": "Instantiation can be modelled as parthood because objects may be understood as mereological fusions of their properties.",
+        "quote": "On the mereological bundle theory suggested by Laurie Paul (2002, 2006, 2012, 2017), for instance, objects are mereological fusions of the properties they bear."
+      },
+      {
+        "id": "W7212186029.c016",
+        "text": "God and omniscience can be mutual parts with respect to similarity while remaining numerically distinct.",
+        "quote": "it is also possible, at least in principle, for this symmetric parthood relation to hold while God remains numerically distinct from his omniscience."
+      },
+      {
+        "id": "W7212186029.c018",
+        "text": "Defining proper parthood as non-symmetric similarity-based parthood makes proper parthood irreflexive, asymmetric, and transitive.",
+        "quote": "If proper parthood is defined as non-symmetric parthood with respect to similarity, it would immediately be irreflexive, asymmetric, and transitive."
+      }
+    ],
+    "missing_premise": {
+      "id": "W7212186029.arg1.mp",
+      "text": "Proper parthood is non-symmetric parthood, and the symmetry formulation of divine simplicity is the thesis that God is part of all God's parts."
+    },
+    "conclusion": {
+      "id": "W7212186029.c044",
+      "text": "Divine simplicity can viably be formulated as the thesis that God is part of all God’s parts."
+    },
+    "skeleton": "A; B -> (A -> C); D; E; F -> H |- G",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W7212186029.c013",
+    "text": "Instantiation can be modelled as parthood because objects may be understood as mereological fusions of their properties."
+  },
+  "objection": "Consider a chemist, Mara, studying a copper wire. She believes physical objects are composed of their physical constituents: atoms, fields, and their arrangements. She heats the wire, and it loses its coiled shape while every atom stays put. If the wire were a fusion of its properties, losing the property 'coiled' would mean losing a part. But nothing material left the wire. The wire also gains the property 'being thought of by Mara' when she reflects on it, yet no part arrives. The wire's real composition, the things that would show up in any physical inventory, is constant through both changes. Its properties track how its parts are arranged and related. They are not further ingredients. Treating instantiation as parthood confuses what an object is made of with what is true of it. The God case depends on this confusion: omniscience can be a 'part' of God only if parthood has been redefined until it no longer tracks composition. At that point, 'having no proper parts' says nothing about what God is made of.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "The wire objection concerns physical composition, whereas c013 supplies a formal, similarity-relative model of property fusion. On this reading, the conclusion concerns the structure of a relation over God and divine attributes rather than a physical inventory.",
+      "why_it_failed": "The defender concedes that the traditional premise concerns metaphysical composition, while the conclusion concerns similarity-relative parthood. Without a bridging premise, the model reconstructs a different thesis and equivocates on “part.”"
+    },
+    {
+      "defender": "Defender A",
+      "response": "Relational properties need not automatically count as relevant similarity-parts of God: whether God is similar to a relational property must be assessed, and the formal constraints on proper parthood prevent trivial symmetry.",
+      "why_it_failed": "This restricts the model but does not state a principled criterion for which properties are relevant or explain why that criterion tracks divine constituency. The contingency and permissiveness worries therefore remain open."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The property-fusion account can be restricted to divine attributes and explicitly treated as non-compositional; loss or acquisition of ordinary properties need not involve material change.",
+      "why_it_failed": "Restriction avoids the wire case as an objection to material composition, but it leaves the central issue unchanged: a non-compositional relation must still be shown to express the denial of metaphysical composition."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "W7213496574.a3",
+      "paper_id": "oa:W7213496574",
+      "title": "Life in Himself Through Eternal Generation: St. Augustine of Hippo's Metaphysical Analysis of John 5:26 and Its Relevance",
+      "authors": [
+        "Hendi Hendi"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.18566/cueteo.v53n120.a02",
+      "verdict": "different",
+      "similarity": 0.08,
+      "quote": ""
+    },
+    {
+      "record_id": "W7213609609.a3",
+      "paper_id": "oa:W7213609609",
+      "title": "Does the Law Explain Itself? On Physical Order, the Two Stops, and the Ground the Figure Cannot Supply",
+      "authors": [
+        "Oscar Gaitan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22834812",
+      "verdict": "different",
+      "similarity": 0.08,
+      "quote": ""
+    },
+    {
+      "record_id": "W7216005646.a1",
+      "paper_id": "oa:W7216005646",
+      "title": "The Inversion of Greatness: From the Nature of Necessity to Maximum Possibility",
+      "authors": [
+        "Procyon"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.23094354",
+      "verdict": "different",
+      "similarity": 0.06,
+      "quote": ""
+    },
+    {
+      "record_id": "W7212186029.c013",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c015",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c016",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c018",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c006",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c044",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c014",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7212186029.c002",
+      "paper_id": "oa:W7212186029",
+      "title": "Divine simplicity as symmetric parthood",
+      "authors": [
+        "Nathaniel Gan"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1017/s0034412526101784",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.92,
+  "records_searched": 4139,
+  "nearest": [
+    {
+      "record_id": "W7213496574.a3",
+      "paper_id": "oa:W7213496574",
+      "verdict": "different",
+      "similarity": 0.08,
+      "quote": "",
+      "title": "Life in Himself Through Eternal Generation: St. Augustine of Hippo's Metaphysical Analysis of John 5:26 and Its Relevance"
+    },
+    {
+      "record_id": "W7213609609.a3",
+      "paper_id": "oa:W7213609609",
+      "verdict": "different",
+      "similarity": 0.08,
+      "quote": "",
+      "title": "Does the Law Explain Itself? On Physical Order, the Two Stops, and the Ground the Figure Cannot Supply"
+    },
+    {
+      "record_id": "W7216005646.a1",
+      "paper_id": "oa:W7216005646",
+      "verdict": "different",
+      "similarity": 0.06,
+      "quote": "",
+      "title": "The Inversion of Greatness: From the Nature of Necessity to Maximum Possibility"
+    }
+  ],
+  "open_questions": [
+    "What conditions would make similarity-relative parthood track metaphysical constituency rather than merely resemblance or structural association?",
+    "Which divine attributes, including relational and extrinsic properties, count as relevant similarity-parts, and on what non-ad hoc basis?",
+    "Can the formal properties specified for similarity-based proper parthood rule out trivial or overly permissive symmetry for God and attributes?",
+    "Is a formal reconstruction of divine simplicity acceptable if it does not preserve the doctrine’s claim about metaphysical composition?"
+  ],
+  "paper_direction": "A paper here would argue that the symmetric-parthood formulation is viable only if its similarity-relative relation is shown to preserve the constituent sense of parthood at issue in the traditional denial of divine composition. It would develop the equivocation exposed by the wire case, distinguish material, metaphysical, and similarity-relative notions of parthood, and anticipate the reply that the proposal is merely a formal reconstruction. To succeed, it would need either to supply defensible conditions under which similarity tracks metaphysical constituency for divine attributes, including relational attributes, or to show that the reconstruction should be treated as a distinct doctrine rather than a formulation of traditional divine simplicity.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}

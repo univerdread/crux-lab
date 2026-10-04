@@ -12,6 +12,7 @@ Rules:
 - paper_direction: one paragraph starting "A paper here would argue" that sketches the thesis,
   the case, the strongest reply to anticipate, and what the paper would need to show.
 - Do not cite anything; references are attached by the system from corpus records.
+- Refer to the agents only as "Defender A", "Defender B" and "the objector" (never he/she).
 ---USER---
 ARGUMENT ({paper_title})
 {argument}

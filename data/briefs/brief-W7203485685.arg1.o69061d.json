@@ -1,0 +1,193 @@
+{
+  "id": "brief-W7203485685.arg1.o69061d",
+  "objection_id": "W7203485685.arg1.o69061d",
+  "research_question": "Does robust contrastive responsibility require an agent to represent the selected outcome as attributable to her own intentional exercise of control, and if so, does that requirement involve irreducible de se content?",
+  "argument": {
+    "id": "W7203485685.arg1",
+    "title": "Self-Location Constraint",
+    "paper_id": "oa:W7203485685",
+    "paper_title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+    "premises": [
+      {
+        "id": "W7203485685.c005",
+        "text": "If an agent is robustly responsible for bringing about one outcome rather than another, its cognition must represent the first outcome as its own action.",
+        "quote": "If an agent is robustly responsible for bringing about φ rather than ψ, then the agent’s cognitive state must represent φ as the outcome of its own action rather than ψ."
+      },
+      {
+        "id": "W7203485685.c006",
+        "text": "Robust contrastive responsibility requires cognition that represents an outcome as issuing from the agent's own activity rather than relevant alternatives.",
+        "quote": "where responsibility is understood contrastively, the cognitive state constitutive of responsible agency must itself represent the relevant outcome as issuing from the agent’s own activity rather than the relevant alternatives."
+      },
+      {
+        "id": "W7203485685.c008",
+        "text": "A third-personal proposition identifying God as actualising a world does not itself represent that actualisation under the first-personal aspect required for source attribution.",
+        "quote": "A third-personal proposition such as “God actualises W1” may identify the correct agent extensionally, yet it does not by itself represent the actualisation under the first-personal aspect required for source attribution."
+      },
+      {
+        "id": "W7203485685.c031",
+        "text": "Robust contrastive responsibility requires divine cognition to represent God as the source of actualising W1 rather than W0.",
+        "quote": "The relevant question is not merely which world becomes actual, but whether divine cognition represents God as the source of actualising W1 rather than W0."
+      }
+    ],
+    "missing_premise": {
+      "id": "W7203485685.arg1.mp",
+      "text": "God's contrastive responsibility for actualising one world rather than another is robust responsibility, and representing God as the source of that actualisation requires irreducible de se content."
+    },
+    "conclusion": {
+      "id": "W7203485685.c052",
+      "text": "If God is contrastively responsible for actualising one world rather than another, divine cognition must include irreducible de se content."
+    },
+    "skeleton": "A -> B; A -> B; D -> ~E; F -> C |- G -> H",
+    "valid": false
+  },
+  "challenged_premise": {
+    "id": "W7203485685.c006",
+    "text": "Robust contrastive responsibility requires cognition that represents an outcome as issuing from the agent's own activity rather than relevant alternatives."
+  },
+  "objection": "A control-room operator, Mira, selects lever A after reviewing two labeled simulations: A will divert a flood into an empty quarry; B will divert it into a village. She intends to save the village and pulls A. Her display represents only impersonal propositions: “A opens gate 1,” “gate 1 sends water to quarry,” and “B sends water to village.” It never represents the flood outcome as issuing from Mira’s own activity; it tracks lever states and consequences. The gate opens, the flood reaches the quarry, and the village is saved. Mira is robustly contrastively responsible for the quarry outcome rather than the village outcome: she knew the alternatives, deliberately selected the difference-making option, and would have pulled B had she intended the village outcome. Yet her cognition need not represent the outcome as issuing from her own activity rather than the alternative.",
+  "strongest_responses": [
+    {
+      "defender": "Defender A",
+      "response": "Mira's impersonal display does not exhaust her cognition: she represents a lever as the one she intends to pull and represents saving the village as her aim. The proposed revision requires cognition that represents the selected outcome, contrasted with its alternative, as resulting from an act the cognizing agent performs and intends.",
+      "why_it_failed": "The defender concedes that this establishes at most practical self-involvement in representing the act, not an outcome-representation indexed to the agent. Mira may act on impersonal propositions plus a separate ownership tag, so c006 as stated remains vulnerable."
+    },
+    {
+      "defender": "Defender B",
+      "response": "The relevant requirement is not an explicit thought such as “I am causing the quarry outcome,” but an integrated agential representation of available options, intentional control, and the outcome's attribution to the agent. On this reading, Mira's deliberation locates A and B within her agential alternative-set.",
+      "why_it_failed": "This reply narrows or revises c006 rather than defending its original claim that the outcome must be represented as issuing from the agent's activity. It also leaves unresolved whether integrated agential representation entails irreducible de se content."
+    }
+  ],
+  "closest_literature": [
+    {
+      "record_id": "abs:oa:W7204221334",
+      "paper_id": "oa:W7204221334",
+      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle",
+      "authors": [
+        "CAN Deyer Baysüngur"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22110177",
+      "verdict": "different",
+      "similarity": 0.14,
+      "quote": ""
+    },
+    {
+      "record_id": "abs:oa:W7204237595",
+      "paper_id": "oa:W7204237595",
+      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle",
+      "authors": [
+        "CAN Deyer Baysüngur"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.22110178",
+      "verdict": "different",
+      "similarity": 0.14,
+      "quote": ""
+    },
+    {
+      "record_id": "abs:oa:W7203578844",
+      "paper_id": "oa:W7203578844",
+      "title": "Personal Ultimate Ground: An Independently Developed Philosophical-Formal Framework",
+      "authors": [
+        "Luca Colucci"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.5281/zenodo.21969944",
+      "verdict": "different",
+      "similarity": 0.12,
+      "quote": ""
+    },
+    {
+      "record_id": "W7203485685.c006",
+      "paper_id": "oa:W7203485685",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+      "authors": [
+        "Wandile Ganya"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s11841-026-01169-y",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7203485685.c007",
+      "paper_id": "oa:W7203485685",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+      "authors": [
+        "Wandile Ganya"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s11841-026-01169-y",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7203485685.c043",
+      "paper_id": "oa:W7203485685",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+      "authors": [
+        "Wandile Ganya"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s11841-026-01169-y",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7203485685.c044",
+      "paper_id": "oa:W7203485685",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+      "authors": [
+        "Wandile Ganya"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s11841-026-01169-y",
+      "verdict": "cited_in_trial"
+    },
+    {
+      "record_id": "W7203485685.c035",
+      "paper_id": "oa:W7203485685",
+      "title": "God and the View From Nowhere: De Se Knowledge and Divine Omniscience",
+      "authors": [
+        "Wandile Ganya"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.1007/s11841-026-01169-y",
+      "verdict": "cited_in_trial"
+    }
+  ],
+  "novelty": 0.86,
+  "records_searched": 4140,
+  "nearest": [
+    {
+      "record_id": "abs:oa:W7204221334",
+      "paper_id": "oa:W7204221334",
+      "verdict": "different",
+      "similarity": 0.14,
+      "quote": "",
+      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle"
+    },
+    {
+      "record_id": "abs:oa:W7204237595",
+      "paper_id": "oa:W7204237595",
+      "verdict": "different",
+      "similarity": 0.14,
+      "quote": "",
+      "title": "Baysüngür Philosophical Views: Timeless Divine Knowledge, Human Freedom, and the Experience–Choice Cycle"
+    },
+    {
+      "record_id": "abs:oa:W7203578844",
+      "paper_id": "oa:W7203578844",
+      "verdict": "different",
+      "similarity": 0.12,
+      "quote": "",
+      "title": "Personal Ultimate Ground: An Independently Developed Philosophical-Formal Framework"
+    }
+  ],
+  "open_questions": [
+    "Can impersonal representations of actions, alternatives, and consequences, together with an intention, fully ground robust contrastive responsibility?",
+    "What distinguishes a representation of an act as available to an agent from irreducibly de se self-ascription?",
+    "Must source attribution attach to the outcome itself, or is representation of the agent's intended difference-making act sufficient?",
+    "Would the revised agential-control requirement establish the irreducible de se content needed for the argument about divine cognition?"
+  ],
+  "paper_direction": "A paper here would argue that the original source-attribution premise overstates the cognitive conditions of robust contrastive responsibility: an agent may be responsible through intentional control among alternatives without representing the outcome itself as issuing from her own activity. The case would distinguish impersonal outcome-tracking, representation of an intended act, and irreducibly de se source attribution; it would then assess whether the defenders' revised requirement of integrated agential control avoids the objection. The strongest reply to anticipate is that practical deliberation already represents options as the agent's and thereby supplies the relevant source attribution. The paper would need to show either that this representation can be wholly impersonal or that, even if it is agent-involving, it does not yield the irreducible de se content required by the divine-omniscience conclusion.",
+  "outcome": "revision_required",
+  "disclaimer": "Further human review required."
+}
