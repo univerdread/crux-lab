@@ -31,6 +31,11 @@ TRIALS_PER_STEP = 2
 MAX_BRIEFS = 3
 
 
+def _is_revised_id(cid: str) -> bool:
+    tail = cid.rsplit(".", 1)[-1]
+    return tail.startswith("r") and tail[1:].isdigit()
+
+
 def argument_text(arg: Argument, own: dict[str, Claim], revised: dict[str, str]) -> str:
     lines = [f"{p}: {own[p].text}" for p in arg.premise_ids]
     if arg.missing_premise_id and arg.missing_premise_id in own:
@@ -84,7 +89,10 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
     if not args:
         raise RuntimeError(f"target {target['id']} has no mapped argument; run `make map` first")
     arg = args[0]
-    own = {c.id: c for c in store.all(Claim, parent=target["paper_id"])}
+    # The paper's claims + the Formalizer's missing premise. Revised premises (".rN") from an earlier
+    # attempt are dropped; this run re-creates its own and adds them as they appear.
+    own = {c.id: c for c in store.all(Claim, parent=target["paper_id"])
+           if not (c.level == "generated" and _is_revised_id(c.id))}
     paper = papers.get(target["paper_id"], {"title": target["title"], "id": target["paper_id"]})
     run_id = f"run-{target['id']}"
     started = datetime.now(timezone.utc).isoformat()
@@ -181,6 +189,7 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
                     revised[rid] = t.revised_premise
                     rc = Claim(id=rid, paper_id=arg.paper_id, kind="premise", text=t.revised_premise, level="generated")
                     store.put(rc)
+                    own[rid] = rc
                     store.put(Edge(src=rid, dst=arg.conclusion_id, relation="supports"))
                     store.put(Edge(src=o.id, dst=o.target_premise_id, relation="attacks"))
                     await emit({"type": "revised_premise", "id": rid, "text": t.revised_premise, "from_trial": t.id})
