@@ -242,7 +242,8 @@ def main() -> dict:
         "corpus": {"records": len(corpus), "distinct_works": len(set(work_ids(corpus).values())),
                    "with_abstract": sum(1 for p in corpus if p.get("abstract")),
                    "full_texts": sum(1 for p in corpus if p.get("pdf_path")),
-                   "fresh": sum(1 for p in corpus if p.get("fresh"))},
+                   "fresh": sum(1 for p in corpus if p.get("fresh")),
+                   "searches": list(TOPIC.get("queries", {})), "fresh_from": str(TOPIC.get("fresh_from", ""))},
     }
     tot: dict[str, int] = {}
     for r in runs_summary:

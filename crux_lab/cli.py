@@ -20,8 +20,8 @@ def _targets(a):
 
 
 def _corpus(a):
-    from crux_lab.corpus.build import main
-    main(skip_fulltext=a.skip_fulltext)
+    from crux_lab.corpus.build import main, refine
+    refine() if a.refine else main(skip_fulltext=a.skip_fulltext)
 
 
 def _map(a):
@@ -100,6 +100,7 @@ def main(argv=None):
     sub.add_parser("targets").set_defaults(f=_targets)
     c = sub.add_parser("corpus")
     c.add_argument("--skip-fulltext", action="store_true")
+    c.add_argument("--refine", action="store_true", help="re-filter the existing corpus and top up full texts")
     c.set_defaults(f=_corpus)
     m = sub.add_parser("map")
     m.add_argument("--targets-only", action="store_true")

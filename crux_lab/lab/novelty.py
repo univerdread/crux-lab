@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import logging
 from dataclasses import dataclass, field
 
@@ -22,7 +23,7 @@ from crux_lab.llm.client import LLMClient
 
 log = logging.getLogger(__name__)
 LIVE_CACHE = RAW / "openalex_live"
-LIVE_DAILY_CAP = 45      # OpenAlex without a key allows ~100 requests/day; the corpus build uses ~30
+LIVE_DAILY_CAP = int(os.environ.get("OPENALEX_LIVE_CAP", "45"))      # OpenAlex without a key allows ~100 requests/day; the corpus build uses ~30
 RANGES = {"same_move": (0.7, 1.0), "related": (0.3, 0.69), "different": (0.0, 0.29)}
 
 

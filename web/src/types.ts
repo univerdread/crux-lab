@@ -385,7 +385,15 @@ export interface About {
   models: { provider: string; model: string; family: string; ok: boolean }[];
   targets_meta: Record<string, unknown>;
   map_stats: Record<string, unknown>;
-  corpus: { records: number; distinct_works?: number; with_abstract: number; full_texts: number; fresh: number };
+  corpus: {
+    records: number;
+    distinct_works?: number;
+    with_abstract: number;
+    full_texts: number;
+    fresh: number;
+    searches?: string[];
+    fresh_from?: string;
+  };
   method_notes?: string[];
   tracing?: { backend: string; traces: number | null };
 }

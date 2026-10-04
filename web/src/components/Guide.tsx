@@ -97,6 +97,10 @@ const STEPS: { name: string; text: string }[] = [
   },
 ];
 
+function lowerFirst(s: string): string {
+  return s && s[1] !== s[1]?.toUpperCase() ? s[0].toLowerCase() + s.slice(1) : s;
+}
+
 export function HowItWorks({
   index,
   about,
@@ -107,6 +111,7 @@ export function HowItWorks({
   onPickPaper: (runId: string) => void;
 }) {
   const corpus = about?.corpus;
+  const topic = lowerFirst(about?.topic?.name ?? "divine hiddenness");
   const claims = (about?.map_stats?.claims_indexed as number | undefined) ?? null;
   const targets = new Map(index.targets.map((t) => [t.id, t]));
   return (
@@ -142,7 +147,7 @@ export function HowItWorks({
           <h3 className="font-serif text-[1.35rem] font-medium">The papers in this build</h3>
           <p className="measure mt-1 text-[0.98rem] text-ink-soft">
             {index.runs.length} papers, one run each. “Fresh” papers were published after 1 August 2026, so the models
-            cannot have read replies to them; “classic” papers are older work on divine hiddenness.
+            cannot have read replies to them; “classic” papers are older work on {topic}.
           </p>
           <ul className="mt-3">
             {index.runs.map((r) => {
@@ -179,8 +184,8 @@ export function HowItWorks({
               directions, or replay that paper’s run.
             </li>
             <li>
-              <span className="font-medium">A different topic</span> (say, the fine-tuning argument rather than
-              divine hiddenness). The lab runs one topic at a time. See{" "}
+              <span className="font-medium">A different topic</span> (say, the problem of evil rather than{" "}
+              {topic}). The lab runs one topic at a time. See{" "}
               <Link to="/topics" className="link">
                 Topics
               </Link>{" "}
@@ -197,8 +202,8 @@ export function HowItWorks({
               </Link>{" "}
               has a “Has this move been made?” box: describe an objection or reply in a sentence and it searches
               {claims ? ` all ${claims.toLocaleString()} claims` : " every claim"} the lab extracted
-              {corpus ? ` from ${corpus.distinct_works ?? corpus.records} works` : ""} on hiddenness and recent philosophy
-              of religion, with the papers they come from.
+              {corpus ? ` from ${corpus.distinct_works ?? corpus.records} works` : ""} gathered for this topic, with the
+              papers they come from.
             </li>
             <li>
               <span className="font-medium">A paper the lab has not read.</span> This public site is a replay of
@@ -221,8 +226,10 @@ export function HowItWorks({
             {corpus
               ? `: ${corpus.records.toLocaleString()} records (${(corpus.distinct_works ?? corpus.records).toLocaleString()} distinct works, since OpenAlex lists some papers more than once), ${corpus.full_texts} of them with open-access full text`
               : ""}
-            . Searches covered divine hiddenness, nonresistant nonbelief, divine silence and related topics, plus
-            philosophy of religion published since August 2026.
+            .{" "}
+            {corpus?.searches?.length
+              ? `Searches covered ${corpus.searches.join(", ")}, plus recent work in the area published since August 2026.`
+              : "Searches covered divine hiddenness, nonresistant nonbelief, divine silence and related topics, plus philosophy of religion published since August 2026."}
           </p>
           <p className="measure mt-3 text-[0.97rem]">
             <span className="font-medium">Why not PhilArchive?</span> The plan was to take fresh papers from

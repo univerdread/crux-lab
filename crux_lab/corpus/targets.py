@@ -1,4 +1,6 @@
-"""Target selection -> data/targets.json: 3 fresh targets + 2 classic fallbacks (+ manual targets)."""
+"""Target selection -> data/targets.json: 3 fresh targets + 2 classic fallbacks (+ manual targets).
+
+A topic may change the split with `targets: {fresh, classic, fresh_min_relevance}`."""
 from __future__ import annotations
 
 import asyncio
@@ -62,10 +64,33 @@ def tiebreak(p: dict) -> tuple:
     return (not any(v == venue or v in venue for v in PEER_REVIEWED_POR), p.get("fulltext_chars") or 10**9)
 
 
+def journal_article(p: dict) -> bool:
+    """Ties among classics: a journal article before a preprint, dissertation or dataset."""
+    venue = (p.get("venue") or "").lower()
+    return p.get("type") == "article" and not any(r in venue for r in ("arxiv", "repec", "hal ", "ssrn", "zenodo"))
+
+
 def score(s: Screen) -> float:
     if not (s.in_area and s.argues_for_thesis and s.english):
         return -1
     return s.topic_relevance * 2 + s.argument_clarity
+
+
+def spread(ranked: list[dict], screens: dict[str, Screen], min_score: int) -> list[dict]:
+    """Round-robin over the topic's searches, in the order the topic file lists them, so the targets cover
+    the topic's sub-debates instead of the one the screen rates highest. Within a search: the existing rank."""
+    by_query: dict[str, list[dict]] = {}
+    for p in ranked:
+        if score(screens[p["id"]]) >= min_score:
+            by_query.setdefault(p.get("query") or "", []).append(p)
+    order = [q for q in TOPIC.get("queries", {}) if q in by_query] + [q for q in by_query
+                                                                      if q not in TOPIC.get("queries", {})]
+    out: list[dict] = []
+    while any(by_query.values()):
+        for q in order:
+            if by_query[q]:
+                out.append(by_query[q].pop(0))
+    return out
 
 
 def manual_targets() -> list[dict]:
@@ -88,14 +113,25 @@ async def select(client: LLMClient | None = None) -> list[dict]:
     ranked_classic = sorted([p for p in classic if p["id"] in screens and score(screens[p["id"]]) >= 0],
                             key=lambda p: (-screens[p["id"]].topic_relevance,
                                            -screens[p["id"]].argument_clarity,
+                                           not journal_article(p),
                                            -(p.get("cited_by_count") or 0)))
+    plan = TOPIC.get("targets") or {}
+    n_fresh, n_classic = int(plan.get("fresh", 3)), int(plan.get("classic", 2))
+    min_rel = int(plan.get("fresh_min_relevance", 0))
+    ranked_fresh = [p for p in ranked_fresh if screens[p["id"]].topic_relevance >= min_rel]
+    n_classic += max(0, n_fresh - len(ranked_fresh))   # too few on-topic fresh papers: fill with classics
+    if plan.get("spread"):
+        ranked_classic = spread(ranked_classic, screens, int(plan.get("min_score", 4)))
     targets = []
-    for kind, pool, n in (("fresh", ranked_fresh, 3), ("classic", ranked_classic, 2)):
+    for kind, pool, n in (("fresh", ranked_fresh, n_fresh), ("classic", ranked_classic, n_classic)):
         for p in pool[:n]:
             s = screens[p["id"]]
             levels = TOPIC.get("relevance_levels") or ["none", "related", "closely related", "on topic"]
             rel = levels[min(s.topic_relevance, len(levels) - 1)]
+            found = (f"found by the search “{p['query']}”; " if kind == "classic" and plan.get("spread") and p.get("query")
+                     else "")
             why = (f"{'Published ' + (p.get('publication_date') or '') + ' (after 2026-08-01), ' if kind == 'fresh' else 'Classic fallback, '}"
+                   f"{found}"
                    f"open-access full text ({p.get('fulltext_chars', 0):,} chars); argues for a thesis; "
                    f"topic relevance {s.topic_relevance}/3 ({rel}); argument clarity {s.argument_clarity}/3.")
             targets.append({"id": p["id"].replace(":", "-"), "paper_id": p["id"], "kind": kind,

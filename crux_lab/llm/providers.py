@@ -135,6 +135,7 @@ class EvrocProvider(_OpenAICompatible):
     OpenAI-compatible API. Model ids are Hugging Face handles, e.g. meta-llama/Llama-3.3-70B-Instruct."""
 
     name = "evroc"
+    concurrency = int(os.environ.get("EVROC_CONCURRENCY", "12"))
     BASE = "https://models.think.evroc.com/v1"
     MIN_MAX_TOKENS = 8192   # reasoning models (Kimi, GLM, Qwen3, gpt-oss) spend output tokens before answering
 
