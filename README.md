@@ -45,8 +45,8 @@ survival × novelty, each traceable to verbatim quotes and corpus records.
 | Method | recall@5 |
 | --- | --- |
 | BM25 over abstracts | 12% (6/50) |
-| embeddings over abstracts | 18% (9/50) |
-| embeddings over claims | 54% (27/50) |
+| embeddings over abstracts | 20% (10/50) |
+| embeddings over claims | 58% (29/50) |
 | claims + 3-way restatement + rerank | 86% (43/50) |
 
 **E2 gauntlet calibration**: 1/10 published objections labelled known_answer, 1/10 with the correct reply cited and verified; a defender cited (verified) a gold reply in 7/10 items; 10/10 deliberate misreadings labelled misreading.
@@ -214,7 +214,7 @@ Everything else was written for Crux Lab.
 - Grounding is audited mechanically: [`docs/AUDIT.md`](docs/AUDIT.md) re-checks every quote, cited id, deciding sentence and brief reference against its source.
 - Reconstructions are the Extractor's; every premise has a verbatim quote, but an author might reconstruct their argument differently. Read the paper.
 
-- E1: The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels.
+- E1: The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels. Embedding-based retrieval is not bit-reproducible across runs (local model on Apple MPS): previous_runs holds the scores of earlier runs over the same 50 items and the same cached rewordings, which shows the run-to-run variance.
 - E2: correct_reply_cited counts items labelled known_answer whose verified citations include a gold reply paper; gold_reply_cited_by_a_defender counts items where a defender cited (verified) a claim from a gold reply paper, whatever the label. Small n (10 + 10). Objections are LLM restatements of published claims, and the 'published reply' is chosen by retrieval + an LLM judge from abstract-level claims, so both the pairing and the gold reply are model-made. A first version of this eval paired each objection with its own source paper as the 'reply' (0/10 correct by construction) and was discarded. Misreadings are written by a model from the same pool as the defenders. The argument is a paraphrased fixture, not a corpus record. No human labels.
 - E3: Only 2 model families were available (anthropic, openai), so 'mixed families' means 2 families. share_surviving = share of objections whose full gauntlet trial (pre-screen, two defenders, Referee) ended in revision_required or standing (S >= 0.8); trials use the lab's gauntlet without updating the argument between trials. CLI providers ignore temperature, so 'plain' variation comes from the 'objection k of n' prompt. 5 arguments x 4 objections per condition. Full trials were attempted for every objection, but fewer than 80% completed in 3 condition(s) (plain prompt, one model: 4/20; constrained roles, one model: 3/20; constrained roles, mixed families: 4/20 trials completed) because the OpenAI/Codex provider hit its ChatGPT workspace spend cap during the run; share_surviving is therefore reported as not available for those conditions rather than computed on a biased remainder.
 <!-- /LIMITS -->

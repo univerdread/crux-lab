@@ -9,13 +9,13 @@
     },
     {
       "name": "embeddings over abstracts",
-      "recall_at_5": 0.18,
-      "hits": 9
+      "recall_at_5": 0.2,
+      "hits": 10
     },
     {
       "name": "embeddings over claims",
-      "recall_at_5": 0.54,
-      "hits": 27
+      "recall_at_5": 0.58,
+      "hits": 29
     },
     {
       "name": "claims + 3-way restatement + rerank",
@@ -34,7 +34,7 @@
   "models": {
     "reranker": "openai:gpt-5.6-terra"
   },
-  "timestamp": "2026-10-04T01:21:57.011712+00:00",
+  "timestamp": "2026-10-04T03:38:49.517031+00:00",
   "items": [
     {
       "claim_id": "W7213626189.a1",
@@ -160,7 +160,7 @@
       "claim_id": "W7212356896.a2",
       "paper_id": "oa:W7212356896",
       "original": "Faith should not be treated as an independent solution to poverty.",
-      "reworded": "Religious belief should not be regarded as a separate remedy for people lacking basic means to live.",
+      "reworded": "Religious belief should not be regarded as a separate way to overcome material deprivation.",
       "hit": {
         "BM25 over abstracts": false,
         "embeddings over abstracts": false,
@@ -292,7 +292,7 @@
       "claim_id": "W7212357645.a2",
       "paper_id": "oa:W7212357645",
       "original": "Faith should not be treated as an independent solution to poverty.",
-      "reworded": "Religious belief should not be regarded as a separate remedy for material deprivation.",
+      "reworded": "Religious belief should not be regarded as a separate way to overcome material deprivation.",
       "hit": {
         "BM25 over abstracts": false,
         "embeddings over abstracts": false,
@@ -424,11 +424,11 @@
       "claim_id": "W7210264302.a2",
       "paper_id": "oa:W7210264302",
       "original": "Evidence based on traditional metaphysics of being and existence is limited.",
-      "reworded": "Support drawn from old ideas about what it means for something to be real has limited force.",
+      "reworded": "Support drawn from old theories about what it means for something to be real has only a restricted reach.",
       "hit": {
         "BM25 over abstracts": false,
         "embeddings over abstracts": false,
-        "embeddings over claims": false,
+        "embeddings over claims": true,
         "claims + 3-way restatement + rerank": true
       }
     },
@@ -436,11 +436,11 @@
       "claim_id": "W7214958676.a1",
       "paper_id": "oa:W7214958676",
       "original": "Biblical passages about grace, election, and will do not address one identical question under identical conditions.",
-      "reworded": "The relevant religious texts discuss favor, divine choosing, and human choice in differing contexts rather than answering one and the same question under the same circumstances.",
+      "reworded": "The relevant passages do not all answer the very same question in the very same setting.",
       "hit": {
         "BM25 over abstracts": false,
-        "embeddings over abstracts": false,
-        "embeddings over claims": false,
+        "embeddings over abstracts": true,
+        "embeddings over claims": true,
         "claims + 3-way restatement + rerank": true
       }
     },
@@ -637,5 +637,32 @@
       }
     }
   ],
-  "limits": "The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels."
+  "limits": "The query is a reworded version of a claim the Extractor took from the source paper's abstract, and that claim is itself in the claims index, so this measures recovery of a known move under paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). One rewording per item; no human labels. Embedding-based retrieval is not bit-reproducible across runs (local model on Apple MPS): previous_runs holds the scores of earlier runs over the same 50 items and the same cached rewordings, which shows the run-to-run variance.",
+  "previous_runs": [
+    {
+      "timestamp": "2026-10-04T01:21:57.011712+00:00",
+      "methods": [
+        {
+          "name": "BM25 over abstracts",
+          "recall_at_5": 0.12,
+          "hits": 6
+        },
+        {
+          "name": "embeddings over abstracts",
+          "recall_at_5": 0.18,
+          "hits": 9
+        },
+        {
+          "name": "embeddings over claims",
+          "recall_at_5": 0.54,
+          "hits": 27
+        },
+        {
+          "name": "claims + 3-way restatement + rerank",
+          "recall_at_5": 0.86,
+          "hits": 43
+        }
+      ]
+    }
+  ]
 }

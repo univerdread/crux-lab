@@ -1,5 +1,14 @@
 # NOTES — newest entry first
 
+## 2026-10-04 05:40 — E1 run-to-run variance found and recorded (Claude)
+- Regenerating E1 from cache (to clarify its limits) changed the two embedding-only methods:
+  embeddings-over-abstracts 18% → 20%, embeddings-over-claims 54% → 58%; BM25 (12%) and the full
+  pipeline (86%) identical. Same 50 items, same cached rewordings, index files unchanged since 03:15 →
+  the local embedding model on Apple MPS is not bit-reproducible and near-ties flip in the top 5.
+- Decision: report the latest run and keep earlier runs in `results/e1.json → previous_runs`; the E1
+  limits say so. The headline (86%) is unaffected. I did not switch embeddings to CPU now, because that
+  would change cached retrieval candidates and force new model calls (Codex is disabled).
+
 ## 2026-10-04 05:20 — polish log since 04:12 (Claude)
 - Fix (real bug): in a fresh clone `make demo` ran `export`, which overwrote the committed site data with
   an empty claim set (the claim store is gitignored). Export now refuses on an empty store; `make demo`

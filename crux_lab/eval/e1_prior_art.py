@@ -113,8 +113,23 @@ async def run(client: LLMClient | None = None, n: int = N) -> dict:
         "models": model_ids(client, ["reranker"]), "timestamp": stamp(), "items": rows,
         "limits": ("The query is a reworded version of a claim the Extractor took from the source paper's abstract, "
                    "and that claim is itself in the claims index, so this measures recovery of a known move under "
-                   "paraphrase, not discovery of unknown prior art. Corpus: OpenAlex abstracts only (no PhilArchive). "
+                   "paraphrase, not discovery of unknown prior art. Items come from the whole corpus (hiddenness papers "
+                   "and recent philosophy of religion), not only from hiddenness. Corpus: OpenAlex abstracts only (no PhilArchive). "
                    "One rewording per item; no human labels."),
     }
+    # Run-to-run variance: dense retrieval (local embeddings on Apple MPS) is not bit-reproducible, so a re-run
+    # over the same items can flip near-ties in the top 5. Keep earlier runs' scores instead of overwriting them.
+    from crux_lab.config import RESULTS
+    import json as _json
+    prev_path = RESULTS / "e1.json"
+    if prev_path.exists():
+        prev = _json.loads(prev_path.read_text())
+        if sorted(r["claim_id"] for r in prev.get("items", [])) == sorted(r["claim_id"] for r in rows):
+            data["previous_runs"] = prev.get("previous_runs", []) + [
+                {"timestamp": prev.get("timestamp"), "methods": prev.get("methods")}]
+    if data.get("previous_runs"):
+        data["limits"] += (" Embedding-based retrieval is not bit-reproducible across runs (local model on Apple MPS): "
+                           "previous_runs holds the scores of earlier runs over the same 50 items and the same cached "
+                           "rewordings, which shows the run-to-run variance.")
     write("e1", data)
     return data

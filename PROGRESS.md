@@ -128,7 +128,7 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 ## P6 Evaluation — target 08:30 · GATE C (feature freeze)
 
 - [x] P6.1 E1 prior-art recall → `results/e1.json`.
-  → n=50 recall@5: BM25 abstracts 12%, embeddings abstracts 18%, embeddings claims 54%, claims+3-way restatement+rerank 86%.
+  → n=50 recall@5: BM25 abstracts 12%, embeddings abstracts 20% (18% in an earlier run), embeddings claims 58% (54%), claims+3-way restatement+rerank 86%; run-to-run variance kept in previous_runs.
 - [x] P6.2 E2 gauntlet calibration → `results/e2.json`.
   → misreadings caught 10/10; known_answer with correct reply 1/10, but a defender cited a verified gold reply in 7/10 (Referee labels revision_required when defenders also narrow the premise). v1 discarded (construction bug), kept as e2_v1_discarded.json.
 - [x] P6.3 E3 diversity ablation → `results/e3.json`. (First to cut if behind.)
