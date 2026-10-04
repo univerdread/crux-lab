@@ -450,6 +450,7 @@ export interface TopicInfo {
   counts: { papers: number; objections: number; trials: number; briefs: number; records?: number; works?: number } | null;
   searches: string[];
   schools: string[];
+  families?: string[] | null; // model families its runs used (from its about.json)
   config_path: string;
   commands: string[];
   config: TopicConfig;

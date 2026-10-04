@@ -58,6 +58,7 @@ function TopicCard({ t, current }: { t: TopicInfo; current: boolean }) {
           {t.counts.papers} papers · {t.counts.objections} objections · {t.counts.trials} trials · {t.counts.briefs}{" "}
           research directions
           {t.counts.works ? ` · literature: ${t.counts.works.toLocaleString()} works` : ""}
+          {t.families?.length ? ` · ${t.families.length} model families (${t.families.join(", ")})` : ""}
         </p>
       ) : null}
 

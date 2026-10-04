@@ -46,8 +46,8 @@ METHOD_NOTES = [
 
 def topic_commands(slug: str) -> list[str]:
     t = "" if slug == DEFAULT_TOPIC else f" TOPIC={slug}"
-    return [f"make corpus{t}", f"make targets{t}", f"make map{t}", f"make runs{t}", f"make eval{t}",
-            f"make export{t}"]
+    return [f"make corpus{t}", f"make targets{t}", f"make map{t}", f"make runs{t}", f"make assess{t}",
+            f"make revise{t}", f"make eval{t}", f"make export{t}"]
 
 
 def write_topics_index() -> dict:
@@ -68,6 +68,7 @@ def write_topics_index() -> dict:
                         "briefs": idx.get("briefs"),
                         "records": (ab or {}).get("corpus", {}).get("records"),
                         "works": (ab or {}).get("corpus", {}).get("distinct_works")} if ready else None),
+            "families": (ab or {}).get("families") if ready else None,   # model families its runs used
             "searches": list((t.get("queries") or {}).keys()),
             # the full topic definition, so the site's "Start a topic" page can use any topic as a template
             "config": {k: t.get(k) for k in ("slug", "name", "description", "area", "queries", "fresh_from",
