@@ -87,8 +87,10 @@ def main() -> None:
            f"{about.get('map_stats', {}).get('claims_indexed', '?')} indexed claims, "
            f"{about.get('map_stats', {}).get('abstracts_indexed', '?')} abstracts and a live OpenAlex query. "
            "Books, paywalled papers and anything OpenAlex lacks are invisible to it.",
-           "- **PhilArchive was unavailable**: its OAI-PMH API now needs a key (api.philpapers.org) or blocks our client "
-           "(philarchive.org, Cloudflare). Fresh targets come from OpenAlex instead, and none of the fresh open-access "
+           "- **PhilArchive was unavailable**: api.philpapers.org asks for an API key and, with one, no longer serves "
+           "OAI-PMH; philarchive.org/oai.pl (the channel PhilPapers' terms name) blocks automated clients, and the terms "
+           "forbid mass-querying by scripts, so bulk access needs PhilPapers' agreement. Fresh targets come from OpenAlex "
+           "instead, and none of the fresh open-access "
            "full texts was about divine hiddenness itself, so fresh targets are philosophy of religion more broadly.",
            f"- **Model diversity is {about.get('diversity')}.** The design wants Defender A, Defender B and the "
            "Referee from three different families; without Databricks/OpenRouter keys only Anthropic (Claude) and "

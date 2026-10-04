@@ -25,11 +25,10 @@ RAW_OAI = RAW / "oai"
 
 
 def _call(params: dict, base: str | None = None) -> str:
-    from crux_lab.config import settings
-
-    if settings.philpapers_api_id and settings.philpapers_api_key:
-        # PhilPapers API credentials (apiId/apiKey). Untested in this build: no key was available.
-        params = {**params, "apiId": settings.philpapers_api_id, "apiKey": settings.philpapers_api_key}
+    # Tried 2026-10-04 with a PhilPapers API key (apiId/apiKey, the documented parameter names): the key is
+    # accepted by api.philpapers.org but that host answers "Not found" for OAI verbs; PhilPapers' terms (§9)
+    # name philarchive.org/oai.pl as the OAI channel, and it blocks automated clients (Cloudflare 403). The key
+    # is therefore not sent here. Access needs PhilPapers to allow the harvester (they ask to be contacted).
     errors = []
     for b in ([base] if base else BASE_URLS):
         try:

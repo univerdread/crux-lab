@@ -215,7 +215,10 @@ export function HowItWorks({
             PhilArchive’s bulk-metadata interface (OAI-PMH). During this build its address on api.philpapers.org refused
             data queries without an API key, and its address on philarchive.org sat behind bot protection that blocks
             automated clients. The lab does not work around bot protection, so it used OpenAlex, which indexes much of
-            the same literature. The harvester now accepts a PhilPapers API key from the configuration (untested here, since no key was available).
+            the same literature. A PhilPapers API key does not open it either: the key is
+            accepted, but that address no longer serves OAI-PMH, and PhilPapers’ terms point to the philarchive.org
+            address, forbid mass-querying by scripts, and ask third parties to get in touch for bulk access. Asking
+            PhilPapers to allow this harvester is the way to bring PhilArchive back in.
           </p>
         </div>
       </div>

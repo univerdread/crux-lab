@@ -40,6 +40,7 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
   resumptionToken), GetRecord; 1 req/s; raw XML to `data/raw/oai/`.
   **Check:** records from 2026-08-01 onward fetched and parsed.
   → BLOCKED: api.philpapers.org needs an API key; philarchive.org/oai.pl is behind Cloudflare bot checks for our client (403); not circumvented. Client + parser built; the one page fetched while testing (999 records since 2026-08-01) parsed fine but was all deletion stubs. Fresh targets come from OpenAlex (from_publication_date ≥ 2026-08-01) instead.
+  → 11:25 retried with a PhilPapers API key: api host answers Not found for OAI, philarchive.org/oai.pl still 403; bulk access needs PhilPapers' written agreement. Still [!].
 - [x] P1.3 Full texts: up to 50 open-access PDFs relevant to hiddenness / philosophy of religion,
   text via PyMuPDF.
   **Check:** ≥ 20 full texts extracted, or the true count noted.

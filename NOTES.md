@@ -1,5 +1,16 @@
 # NOTES — newest entry first
 
+## 2026-10-04 11:25 — PhilPapers API key tried: does not unlock PhilArchive OAI (Claude)
+- The human supplied a PhilPapers API key (stored in .env only; not printed, not committed — consider
+  regenerating it after the hackathon since it was pasted in chat).
+- Result: with apiId/apiKey (the documented names) api.philpapers.org accepts the key but returns "Not
+  found" for OAI-PMH verbs; without a key it says a key is required. philarchive.org/oai.pl — which
+  PhilPapers' terms §9 name as the OAI channel — still returns a Cloudflare 403 to our client.
+- PhilPapers docs: the key serves the JSON category feed; article feeds need written agreement ("Contact
+  us"). Terms §8: "Mass-querying of the site using scripts is considered a form of abuse." So no browser
+  workaround. Next step if wanted: email PhilPapers to allow the harvester. P1.2 stays [!].
+- The key is no longer added to OAI requests (code comment explains); home page text updated.
+
 ## 2026-10-04 10:55 — home page explains itself (Claude, at the human's request)
 - Landing now has: a "How it works ↓" hero button; the outcome legend replaced by plain-language
   definitions (what each label means + what it means for a researcher, with survival S); a paper filter
