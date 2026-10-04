@@ -317,7 +317,7 @@ function E3Section({ e }: { e: E3 | null }) {
                     <td className="num">{c.distinct_premises}</td>
                     <td className="num">{num(c.mean_pairwise_distance, 3)}</td>
                     <td className="num">{c.share_passing_prescreen === undefined ? "—" : pct(c.share_passing_prescreen)}</td>
-                    <td className="num">{c.share_surviving === null ? <span title="Not run: see the limits below">not run*</span> : pct(c.share_surviving)}</td>
+                    <td className="num">{c.share_surviving === null ? <span title="Not available: see the limits below">n/a*</span> : pct(c.share_surviving)}</td>
                     <td className="num">{pct(c.share_novelty_gt_05)}</td>
                   </tr>
                 ))}
@@ -325,7 +325,7 @@ function E3Section({ e }: { e: E3 | null }) {
             </table>
           </div>
           {e.conditions.some((c) => c.share_surviving === null) ? (
-            <p className="mt-2 text-[0.85rem] text-ink-soft">* Not run in this evaluation; the limits below say why.</p>
+            <p className="mt-2 text-[0.85rem] text-ink-soft">* Not available for this evaluation; the limits below say why.</p>
           ) : null}
           <Meta timestamp={e.timestamp} models={e.models} settings={e.settings} limits={e.limits} />
         </>

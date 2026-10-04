@@ -45,6 +45,7 @@ class Settings:
     codex_bin: str
     claude_bin: str
     enable_cli: bool
+    disabled: tuple[str, ...] = ()
 
     @property
     def user_agent(self) -> str:
@@ -52,6 +53,8 @@ class Settings:
         return f"crux-lab-hackathon (mailto:{mail})"
 
     def has(self, provider: str) -> bool:
+        if provider in self.disabled:
+            return False
         return {
             "databricks": bool(self.databricks_host and self.databricks_token),
             "openrouter": bool(self.openrouter_key),
@@ -84,6 +87,8 @@ def load_settings() -> Settings:
         codex_bin=_env("CODEX_BIN") or _codex_default(),
         claude_bin=_env("CLAUDE_BIN", "claude"),
         enable_cli=_env("ENABLE_CLI_PROVIDERS", "1") not in ("0", "false", "no"),
+        # e.g. DISABLE_PROVIDERS=codex_cli after a provider hits a spend cap
+        disabled=tuple(x.strip() for x in _env("DISABLE_PROVIDERS").split(",") if x.strip()),
     )
 
 

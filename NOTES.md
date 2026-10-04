@@ -1,5 +1,19 @@
 # NOTES — newest entry first
 
+## 2026-10-04 04:05 — ⚠️ Codex hit the ChatGPT workspace spend cap; Codex disabled (Claude)
+- At ~03:58, while adding full trials to E3 (share_surviving), every `codex exec` call started failing:
+  "You hit your spend cap set by the owner of your workspace." **Human: check the ChatGPT workspace
+  billing/spend cap** — usage past the plan allowance may have drawn on paid credits up to the cap.
+  Ledger: ~1,600 Codex calls tonight (cache/spend.jsonl).
+- I set `DISABLE_PROVIDERS=codex_cli` in `.env` (new switch; documented in .env.example). Cached calls still
+  replay, so every run, brief, export and eval regenerates without calling Codex. Any *new* LLM work would
+  need `make providers` (Claude only) or the cap raised. Remove the line from .env to re-enable Codex.
+- E3: all earlier metrics unchanged; share_surviving reported n/a because only 3–4/20 trials per condition
+  completed; the limits text says exactly that. No other results were affected (runs, E1, E2 finished
+  before the cap).
+- Polish since 03:47: axe accessibility pass clean on 8 pages, grounding audit 0 problems (docs/AUDIT.md),
+  45 tests, docs/SUBMISSION.md draft, lab screenshot at viewport size; `make docs` regenerates all docs.
+
 ## 2026-10-04 03:47 — GATES B and C met; everything in PROGRESS ticked except P1.2 (Claude)
 - Website built by a subagent against `web/src/types.ts`, verified on the real export: typecheck +
   build pass, 10/10 Playwright smoke tests, screenshots in docs/screens/, 53 s walkthrough in

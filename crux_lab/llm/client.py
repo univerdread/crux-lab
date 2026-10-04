@@ -11,7 +11,7 @@ from typing import Callable, TypeVar
 
 from pydantic import BaseModel, ValidationError
 
-from crux_lab.config import LOGS, RESOLVED_MODELS
+from crux_lab.config import LOGS, RESOLVED_MODELS, settings
 from crux_lab.llm.budget import Budget, BudgetExceeded
 from crux_lab.llm.cache import DiskCache, cache_key
 from crux_lab.llm.providers import (Completion, FakeProvider, Provider, ProviderError,
@@ -108,6 +108,8 @@ class LLMClient:
             return Completion(hit["text"], hit["input_tokens"], hit["output_tokens"], 0.0,
                               spec.provider, spec.model, 0.0, cached=True)
         self.budget.check(spec.provider)
+        if spec.provider in settings.disabled:
+            raise ProviderError(f"provider {spec.provider} is disabled (DISABLE_PROVIDERS); cache miss for {spec.label}")
         prov = self.provider(spec.provider)
         last_err: Exception | None = None
         for attempt in range(3):

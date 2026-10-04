@@ -22,6 +22,7 @@ from crux_lab.llm.client import LLMClient, ModelSpec
 
 PER_ARG = 4
 SURVIVING = ("revision_required", "standing")   # survival S >= 0.8
+MIN_TRIALS_OK = 0.8                              # report survival only if >= 80% of a condition's trials completed
 
 
 class Plain(BaseModel):
@@ -89,7 +90,7 @@ async def run(client: LLMClient | None = None) -> dict:
         for a in args:
             own = {c.id: c for c in store.all(Claim, parent=a.paper_id)}
             objs_by_arg[a.id] = (await fn(a, own), own, a)
-        distinct, dists, pass_pre, novel, n, surv, outcomes = [], [], 0, 0, 0, 0, {}
+        distinct, dists, pass_pre, novel, n, surv, outcomes, n_ok = [], [], 0, 0, 0, 0, {}, 0
         for aid, (objs, own, a) in objs_by_arg.items():
             if not objs:
                 continue
@@ -114,6 +115,7 @@ async def run(client: LLMClient | None = None) -> dict:
                 pass_pre += ok_pre
                 novel += nv.novelty > 0.5
                 surv += t.outcome in SURVIVING
+                n_ok += t.status == "ok"
                 outcomes[t.outcome or "failed"] = outcomes.get(t.outcome or "failed", 0) + 1
                 per_obj.append({"condition": name, "objection_id": o.id, "argument_id": aid, "target": o.target_premise_id,
                                 "family": o.family, "model": o.model, "passes_prescreen": ok_pre,
@@ -122,9 +124,18 @@ async def run(client: LLMClient | None = None) -> dict:
         out_rows.append({"name": name, "n": n,
                          "distinct_premises": round(float(np.mean(distinct)), 2) if distinct else 0,
                          "mean_pairwise_distance": round(float(np.mean(dists)), 3) if dists else 0,
-                         "share_surviving": round(surv / max(1, n), 3), "outcomes": outcomes,
+                         "share_surviving": (round(surv / max(1, n_ok), 3)
+                                             if n and n_ok / n >= MIN_TRIALS_OK else None),
+                         "trials_completed": n_ok, "outcomes": outcomes,
                          "share_passing_prescreen": round(pass_pre / max(1, n), 3),
                          "share_novelty_gt_05": round(novel / max(1, n), 3)})
+    incomplete = [r["name"] for r in out_rows if r["share_surviving"] is None]
+    counts = "; ".join("%s: %d/%d" % (r["name"], r["trials_completed"], r["n"]) for r in out_rows)
+    trial_note = ("" if not incomplete else
+                  f" Full trials were attempted for every objection, but fewer than {MIN_TRIALS_OK:.0%} completed in "
+                  f"{len(incomplete)} condition(s) ({counts} trials completed) because the OpenAI/Codex provider hit its ChatGPT workspace spend cap during the run; "
+                  "share_surviving is therefore reported as not available for those conditions rather than computed on a "
+                  "biased remainder.")
     data = {
         "experiment": "E3 diversity ablation", "conditions": out_rows, "objections": per_obj,
         "settings": {"arguments": [a.id for a in args], "objections_per_argument": PER_ARG,
@@ -138,7 +149,7 @@ async def run(client: LLMClient | None = None) -> dict:
                    "ended in revision_required or standing (S >= 0.8); trials use the lab's gauntlet without updating "
                    "the argument between trials. "
                    "CLI providers ignore temperature, so 'plain' variation comes from the 'objection k of n' prompt. "
-                   "5 arguments x 4 objections per condition."),
+                   "5 arguments x 4 objections per condition." + trial_note),
     }
     write("e3", data)
     return data

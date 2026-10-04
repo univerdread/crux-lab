@@ -132,7 +132,7 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 - [x] P6.2 E2 gauntlet calibration → `results/e2.json`.
   → misreadings caught 10/10; known_answer with correct reply 1/10, but a defender cited a verified gold reply in 7/10 (Referee labels revision_required when defenders also narrow the premise). v1 discarded (construction bug), kept as e2_v1_discarded.json.
 - [x] P6.3 E3 diversity ablation → `results/e3.json`. (First to cut if behind.)
-  → n=20/condition: distinct premises per argument 1.8 / 2.4 / 2.6; mean pairwise distance 0.114 / 0.224 / 0.213; pass pre-screen 100% / 85% / 80%; novelty>0.5 50% / 55% / 45% (plain / constrained one model / constrained mixed). share_surviving not run (cost).
+  → n=20/condition: distinct premises per argument 1.8 / 2.4 / 2.6; mean pairwise distance 0.114 / 0.224 / 0.213; pass pre-screen 100% / 85% / 80%; novelty>0.5 50% / 55% / 45% (plain / constrained one model / constrained mixed). share_surviving attempted 04:00 but only 3–4/20 trials per condition completed (Codex hit the ChatGPT workspace spend cap) → reported n/a, limits say why.
 - [x] P6.4 `/results` page: E1 grouped bars, E2 and E3 compact tables, limits text, all read from
   `results/*.json` via export.
   **Check:** build + smoke screenshot. **GATE C — after this, no new features.**
