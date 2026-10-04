@@ -118,9 +118,11 @@ async def run(client: LLMClient | None = None) -> dict:
     res_m = await asyncio.gather(*[guarded(i, it, "misread") for i, it in enumerate(mis)])
     items = []
     k_label = k_correct = k_gold_cited = 0
+    from crux_lab.corpus.dedup import work_of
     for it, t in res_k:
-        shorts = [p.split(":", 1)[-1] + "." for p in it["reply_papers"]]
-        cited_right = any(c.startswith(sh) for c in t.cited_claim_ids for sh in shorts)
+        gold_works = {work_of(p) for p in it["reply_papers"]}       # any record of a gold reply paper counts
+        cited_works = {work_of(c.paper_id) for cid in t.cited_claim_ids if (c := store.get(Claim, cid))}
+        cited_right = bool(gold_works & cited_works)
         k_gold_cited += cited_right
         k_label += t.outcome == "known_answer"
         k_correct += t.outcome == "known_answer" and cited_right

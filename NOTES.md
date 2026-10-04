@@ -1,5 +1,11 @@
 # NOTES — newest entry first
 
+## 2026-10-04 07:00 — duplicate-records follow-ups closed (Claude)
+- Novelty now excludes every record of the target work; the gauntlet treats claims from another record
+  of the target work as the argument's own (never literature for known_answer); E2 scores gold replies
+  per work. None of the 5 targets has a duplicate record and a post-hoc check shows no E2 item changes,
+  so no published number moved; these protect future runs. Tests: 50 Python, 9 web.
+
 ## 2026-10-04 06:35 — "Has this move been made?" returns distinct works (Claude)
 - 563 of 2940 exported claims come from duplicate records of a paper. claims.json now carries `work`
   (canonical id); /atlas local BM25, the live API (/api/prior-art) and its UI show at most one hit per
