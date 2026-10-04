@@ -225,6 +225,8 @@ async def run_target(target: dict, client: LLMClient | None = None, on_event=Non
         try:
             b = await brief_mod.write_brief(client, arg, own, by_id[t.objection_id], t, nov.get(t.objection_id, {}),
                                             paper, papers, revised)
+            if b is None:
+                continue
             store.put(b)
             brief_mod.save(b, by_id[t.objection_id])
             briefs.append(b.id)

@@ -84,7 +84,8 @@ async def resolve(write: bool = True) -> dict:
         models.append({**c, "ok": ok, "latency_s": round(lat, 2), "error": err})
     working = [m for m in models if m["ok"]]
 
-    roles, families = assign_roles(working, cfg.get("effort", {}), cfg.get("bulk_family"))
+    roles, families = assign_roles(working, cfg.get("effort", {}), cfg.get("bulk_family"),
+                                   cfg.get("role_preference"))
     n = len(families)
     resolved = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -100,7 +101,8 @@ async def resolve(write: bool = True) -> dict:
     return resolved
 
 
-def assign_roles(working: list[dict], effort: dict, bulk_family: str | list | None = None) -> tuple[dict, list[str]]:
+def assign_roles(working: list[dict], effort: dict, bulk_family: str | list | None = None,
+                 role_preference: dict[str, list[str]] | None = None) -> tuple[dict, list[str]]:
     if not working:
         return {}, []
     by_fam: dict[str, list[dict]] = {}
@@ -135,6 +137,11 @@ def assign_roles(working: list[dict], effort: dict, bulk_family: str | list | No
     roles["generators"] = gens
     small = [m for m in working if m["small"]]
     roles["naive_questioner"] = spec(small[0] if small else pick(f1), "naive_questioner")
+    # Judgement roles (novelty check, brief writer): the first preferred family that is available.
+    for r, prefs_r in (role_preference or {}).items():
+        f = next((x for x in prefs_r if x in strong), None)
+        if f:
+            roles[r] = spec(pick(f), r)
     return roles, fams
 
 

@@ -1,6 +1,8 @@
 """Research brief: JSON + Markdown. References are rendered from corpus records, never model text."""
 from __future__ import annotations
 
+import logging
+
 from pydantic import BaseModel, Field
 
 from crux_lab.agents.roles import render
@@ -8,6 +10,8 @@ from crux_lab.config import BRIEFS
 from crux_lab.graph.schema import Argument, Brief, Claim, NearestMatch, Objection, Trial
 from crux_lab.lab.debate import render_transcript
 from crux_lab.llm.client import LLMClient
+
+log = logging.getLogger(__name__)
 
 
 class Response(BaseModel):
@@ -32,7 +36,7 @@ def record_ref(paper: dict | None, record_id: str) -> dict:
 
 async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], objection: Objection,
                       trial: Trial, novelty: dict, paper: dict, papers: dict[str, dict],
-                      revised: dict[str, str]) -> Brief:
+                      revised: dict[str, str]) -> Brief | None:
     target_text = own[objection.target_premise_id].text if objection.target_premise_id in own \
         else revised.get(objection.target_premise_id, "")
     premises = "\n".join(f"{p}: {own[p].text}" for p in arg.premise_ids)
@@ -48,9 +52,11 @@ async def write_brief(client: LLMClient, arg: Argument, own: dict[str, Claim], o
                           outcome=trial.outcome or "failed", rationale=trial.rationale,
                           transcripts=transcripts[:12000], nearest=nearest_txt)
     out, _ = await client.json("brief", user, BriefOut, system, max_tokens=3000)
+    if not out:     # one fallback writer outside the Assessor's family, then no brief rather than a placeholder
+        out, _ = await client.json("brief", user, BriefOut, system, spec=client.spec_for("referee"), max_tokens=3000)
     if not out:
-        out = BriefOut(research_question=f"Does the objection to {objection.target_premise_id} hold?",
-                       open_questions=[], paper_direction="(brief generation failed validation; see the trial)")
+        log.warning("brief for %s not written: both writers failed validation", objection.id)
+        return None
     nearest = [NearestMatch(**m) for m in novelty.get("nearest", [])]
     closest = []
     for m in nearest:

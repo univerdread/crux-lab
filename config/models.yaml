@@ -30,13 +30,22 @@ roles:
   naive_questioner: small
 # Family for high-volume roles (extractor, reranker) when available.
 bulk_family: [openai, gpt-oss, llama, qwen]
+# Judgement roles: the novelty check (restate + rerank) and the brief writer decide what reaches a researcher, so
+# they go to the strongest family available rather than the bulk one. Measured 2026-10-04 on 12 decision-theory
+# objections, same candidates: gpt-oss-120b scored 68/102 'different' passages at exactly 0 and was unstable
+# across reruns; Kimi-K2.6 was more lenient (5 checks at 1.0, 2 failed); Claude Sonnet was strictest (0 at 1.0,
+# 4/92 at 0). The brief writer avoids anthropic so the Assessor (Claude Opus) reads another family's work.
+role_preference:
+  reranker: [openai, anthropic, kimi, glm]
+  brief: [openai, kimi, glm, anthropic]
 # If evroc's /v1/models is unavailable, list exact ids here (from `evroc think model list`).
 evroc_ids: []
 # Reasoning effort for CLI providers (ignored by APIs).
 effort:
   extractor: low
   formalizer: medium
-  reranker: low
+  reranker: medium
+  brief: medium
   defender_a: medium
   defender_b: medium
   referee: medium
