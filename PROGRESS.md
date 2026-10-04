@@ -122,7 +122,8 @@ Times are Europe/Stockholm targets. Gates are hard: if one is missed, cut scope 
 
 ## P6 Evaluation — target 08:30 · GATE C (feature freeze)
 
-- [ ] P6.1 E1 prior-art recall → `results/e1.json`.
+- [x] P6.1 E1 prior-art recall → `results/e1.json`.
+  → n=50 recall@5: BM25 abstracts 12%, embeddings abstracts 18%, embeddings claims 54%, claims+3-way restatement+rerank 86%.
 - [ ] P6.2 E2 gauntlet calibration → `results/e2.json`.
 - [ ] P6.3 E3 diversity ablation → `results/e3.json`. (First to cut if behind.)
 - [ ] P6.4 `/results` page: E1 grouped bars, E2 and E3 compact tables, limits text, all read from
