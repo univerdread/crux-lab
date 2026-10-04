@@ -3,6 +3,7 @@ import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, 
 import { useDrawer } from "../components/drawer";
 import { ClaimRef } from "../components/text";
 import { Code, DataState, Empty, KV, Label, Marginal, OutcomeChip } from "../components/ui";
+import { currentTopic } from "../lib/topics";
 import { useJSON } from "../lib/data";
 import { num, pct, when } from "../lib/format";
 import type { E1, E2, E3, ResultsFile } from "../types";
@@ -32,7 +33,15 @@ export default function Results() {
   );
 }
 
+/** Why an evaluation is missing for the topic being viewed (E2 and E3 were designed around the first topic). */
+const NOT_RUN_WHY: Record<string, string> = {
+  E2: "E2 needs a canonical argument whose published objections and replies are in the corpus (an e2_fixture in the topic file); this topic has none, so it was not run.",
+  E3: "E3 compares model conditions on the same arguments and was run for divine hiddenness only; it was not repeated for this topic.",
+};
+
 function NotRun({ name }: { name: string }) {
+  const t = currentTopic();
+  if (t && !t.default && NOT_RUN_WHY[name]) return <Empty>{NOT_RUN_WHY[name]}</Empty>;
   return (
     <Empty>
       No result for {name} yet: <Code>results/{name.toLowerCase()}.json</Code> is empty or missing. Run{" "}
