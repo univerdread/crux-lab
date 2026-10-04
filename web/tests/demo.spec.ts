@@ -2,7 +2,8 @@ import { expect, test } from "@playwright/test";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 
-// Walkthrough recorded as video: landing -> first research direction -> its run, autoplaying -> a trial -> results.
+// Walkthrough recorded as video: landing -> first research direction (+ its referee assessment and revision) ->
+// its run, autoplaying -> a trial -> results -> topics -> start a topic.
 // The finished recording is copied to <repo>/docs/demo.webm.
 const OUT = fileURLToPath(new URL("../../docs/demo.webm", import.meta.url));
 
@@ -26,8 +27,16 @@ test("demo walkthrough", async ({ page, request }) => {
     await page.waitForTimeout(3000);
     await page.mouse.wheel(0, 700);
     await page.waitForTimeout(2500);
-    await page.mouse.wheel(0, 900);
-    await page.waitForTimeout(2000);
+    // the referee's assessment and the revision round, at the bottom of the brief
+    const toQuality = page.getByRole("link", { name: /Referee.s assessment/ });
+    if (await toQuality.count()) {
+      await toQuality.first().click();
+      await page.waitForTimeout(3500);
+      await page.mouse.wheel(0, 800);
+      await page.waitForTimeout(3000);
+      await page.mouse.wheel(0, 800);
+      await page.waitForTimeout(2500);
+    }
     runId = briefs[0].run_id ?? runId;
   }
   test.skip(!runId, "no run exported");
@@ -57,6 +66,16 @@ test("demo walkthrough", async ({ page, request }) => {
   await page.waitForTimeout(3500);
   await page.mouse.wheel(0, 700);
   await page.waitForTimeout(2500);
+
+  // other topics: what has been run, what is set up, and how a student starts their own
+  await page.goto("/topics");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await page.waitForTimeout(3000);
+  await page.mouse.wheel(0, 600);
+  await page.waitForTimeout(2500);
+  await page.goto("/start?from=fine-tuning");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await page.waitForTimeout(3500);
 
   const video = page.video();
   await page.close();

@@ -14,7 +14,8 @@ Start: `make demo` → http://localhost:4680
 - Research question: *Under what conditions can temporally bounded nonresistant nonbelief generate a non-duplicative package of goods whose net value exceeds the intrinsic value of the lost relationship with God?*
 - Outcome **revision_required**, novelty 0.45 over 4139 records searched. Point at the three nearest matches and the line *Further human review required.*
 - Challenged premise `W2575351351.c017`: Goods individually less valuable than a relationship with God can collectively make a world containing nonresistant nonbelief more valuable.
-- Scroll to the **academic quality check**: the Assessor grades it *not yet defensible* (2.5/5) — read its one-line verdict aloud: "The objection mostly shows that one example double-counts, which a defender can easily absorb; the paper is worth writing only if it moves to the real commensurability and counterfactual questions and"
+- Click **Referee's assessment** (bottom of the brief): the Assessor first graded it *not yet defensible* (2.5/5): "The objection mostly shows that one example double-counts, which a defender can easily absorb; the paper is worth writing only if it moves to the real commensurability and counterf"
+- Then the **revision round**: rewritten to answer that objection, it was re-graded in a fresh read as *needs work* (3.5/5). Say: *the lab argues with its own leads before it hands them to you.*
 
 ## 0:45 — How it got there (`/lab/run-oa-W2575351351`)
 - Target: *Divine Hiddenness, Greater Goods, and Accommodation* (classic, 2017-01-18).
@@ -32,6 +33,9 @@ Start: `make demo` → http://localhost:4680
 - E3 diversity: plain prompt, one model: 1.8 distinct premises, novelty>0.5 share 50%; constrained roles, one model: 2.4 distinct premises, novelty>0.5 share 55%; constrained roles, mixed families: 2.6 distinct premises, novelty>0.5 share 45%.
 - Read the limits line aloud: the numbers are small and the lab says so.
 
-## 1:50 — Close (`/about`)
+## 1:45 — Any topic (`/topics`, `/start`)
+- Topics lists what has been run (divine hiddenness) and what is set up (the fine-tuning argument); Start a topic writes a student's own topic file and the exact commands to run the lab on it.
+
+## 1:55 — Close (`/about`)
 - Model families: degraded: 2 families. Databricks: MLflow tracing, Model Serving provider, claims Delta table + AI Search Delta Sync index (wired; runs when workspace credentials are set).
 - Say: *The lab never claims novelty. It tells a philosopher where to look, and shows its work.*

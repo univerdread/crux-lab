@@ -46,8 +46,13 @@ def main() -> None:
               f"- Challenged premise `{top['challenged_premise']['id']}`: {top['challenged_premise']['text']}"]
         if top.get("assessment"):
             q = top["assessment"]
-            L += [f"- Scroll to the **academic quality check**: the Assessor grades it *{q['grade']}* "
-                  f"({q['overall']}/5) — read its one-line verdict aloud: \"{q['summary'][:200]}\""]
+            L += [f"- Click **Referee's assessment** (bottom of the brief): the Assessor first graded it *{q['grade']}* "
+                  f"({q['overall']}/5): \"{q['summary'][:180]}\""]
+            r = (top.get("revision") or {}).get("assessment")
+            if r:
+                L += [f"- Then the **revision round**: rewritten to answer that objection, it was re-graded in a fresh read "
+                      f"as *{r['grade']}* ({r['overall']}/5). Say: *the lab argues with its own leads before it hands "
+                      f"them to you.*"]
         L += [""]
     L += [f"## 0:45 — How it got there (`/lab/{run_id}`)",
           f"- Target: *{run['target']['title']}* ({run['target'].get('kind')}, {run['target'].get('published') or run['target'].get('year')}).",
@@ -73,7 +78,10 @@ def main() -> None:
     if e3:
         L.append("- E3 diversity: " + "; ".join(f"{c['name']}: {c['distinct_premises']} distinct premises, novelty>0.5 share {c['share_novelty_gt_05']:.0%}" for c in e3["conditions"]) + ".")
     L += ["- Read the limits line aloud: the numbers are small and the lab says so.", "",
-          "## 1:50 — Close (`/about`)",
+          "## 1:45 — Any topic (`/topics`, `/start`)",
+          "- Topics lists what has been run (divine hiddenness) and what is set up (the fine-tuning argument); "
+          "Start a topic writes a student's own topic file and the exact commands to run the lab on it.", "",
+          "## 1:55 — Close (`/about`)",
           f"- Model families: {about.get('diversity', '?')}. Databricks: MLflow tracing, Model Serving provider, "
           "claims Delta table + AI Search Delta Sync index (wired; runs when workspace credentials are set).",
           "- Say: *The lab never claims novelty. It tells a philosopher where to look, and shows its work.*", ""]
