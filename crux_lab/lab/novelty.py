@@ -165,7 +165,7 @@ def live_openalex(query: str, n: int = 10) -> tuple[list[Passage], str]:
 async def check(client: LLMClient, objection_id: str, objection: str, argument_text: str,
                 target_id: str, target_text: str, claims_ix: HybridIndex, abstracts_ix: HybridIndex,
                 use_live: bool = True, exclude_paper: str | None = None, k: int = 20,
-                rerank_n: int = 14, restate: bool = True) -> NoveltyResult:
+                rerank_n: int = 14, restate: bool = True, contribution: bool = False) -> NoveltyResult:
     rs = None
     if restate:
         system, user = render("restate", argument=argument_text, target=f"{target_id}: {target_text}",
@@ -197,6 +197,8 @@ async def check(client: LLMClient, objection_id: str, objection: str, argument_t
     if use_live:
         import asyncio
         live, live_status = await asyncio.to_thread(live_openalex, rs.plain_english if rs else objection)
+        from crux_lab.corpus import dedup
+        dedup._CACHE.clear()  # include versions discovered by this live lookup
         live_n = len(live)
         for rank, p in enumerate(live):
             add(p, 0.8 / (60 + rank))
@@ -208,6 +210,13 @@ async def check(client: LLMClient, objection_id: str, objection: str, argument_t
     listing = "\n\n".join(f"[{i + 1}] ({p.title[:90]})\n{p.text}" for i, p in enumerate(cands))
     system, user = render("rerank", target_id=target_id, target_text=target_text, objection=objection,
                           passages=listing)
+    if contribution:
+        system = ("You assess prior art for a proposed philosophy paper contribution. same_move means the "
+                  "passage already develops substantially the same thesis or argumentative contribution; "
+                  "related means a partial contribution or neighboring argument; different means neither. "
+                  "Judge substance, not shared topic vocabulary. Similarity bands: same_move 0.7-1, "
+                  "related 0.3-0.69, different 0-0.29. For same_move/related copy decisive words VERBATIM "
+                  "into quote. Judge every numbered passage. Never declare originality established.")
 
     def validate(o: RerankOut) -> str | None:
         seen = {j.n for j in o.judgments}

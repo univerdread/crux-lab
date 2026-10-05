@@ -8,6 +8,8 @@ Revise the direction so that it answers that objection head on.
 - Stay faithful to the argument and the premise under discussion.
 - Do not cite anything, and do not name works or philosophers that do not appear in the material
   below. Never claim novelty. Plain, precise academic English.
+- The student reads this, not the lab: refer to premises by what they say, never by their IDs
+  (such as c056 or arg1.mp), and do not mention the referee, the objection's history or this revision.
 ---USER---
 ARGUMENT ({paper_title})
 {argument}
@@ -33,3 +35,4 @@ WHAT THE REFEREE SAID THE PAPER NEEDS
 {needs}
 
 Write the revised direction. paper_direction must start with "A paper here would argue".
+

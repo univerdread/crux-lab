@@ -13,6 +13,8 @@ Rules:
   the case, the strongest reply to anticipate, and what the paper would need to show.
 - Do not cite anything; references are attached by the system from corpus records.
 - Refer to the agents only as "Defender A", "Defender B" and "the objector" (never he/she).
+- In research_question, paper_direction and open_questions, refer to premises by what they say, never
+  by their IDs (such as c056 or arg1.mp).
 ---USER---
 ARGUMENT ({paper_title})
 {argument}
@@ -29,3 +31,4 @@ TRANSCRIPTS
 
 NEAREST PRIOR ART (for your information only)
 {nearest}
+

@@ -59,8 +59,7 @@ async def defender_turn(client: LLMClient, speaker: str, spec: ModelSpec, phase:
                           transcript=render_transcript(turns), instruction=INSTRUCTIONS[phase])
     out, c = await client.json(speaker, user, DefenderOut, system, spec=spec, max_tokens=2000)
     if not out:
-        return Turn(exchange=exchange, speaker=speaker, phase=phase, model=spec.model, family=spec.family,
-                    content="(no valid reply: the model output failed validation three times)")
+        raise ValueError(f"{speaker} {phase}: no valid reply after three attempts; trial cannot count")
     content = out.reply.strip()
     if out.concedes and out.revised_premise:
         content += f"\n\nRevised premise: {out.revised_premise.strip()}"

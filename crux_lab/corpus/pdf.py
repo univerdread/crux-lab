@@ -30,7 +30,7 @@ def fetch_pdf(pid: str, url: str) -> Path | None:
     if out.exists() and out.stat().st_size > 1000:
         return out
     try:
-        r = http.get(url, timeout=90, retries=2, accept="application/pdf")
+        r = http.get(url, timeout=30, retries=2, accept="application/pdf", total=90, max_bytes=MAX_BYTES)
     except Exception as e:  # noqa: BLE001
         log.info("pdf fail %s %s: %s", pid, url, str(e)[:120])
         return None
@@ -68,3 +68,4 @@ def get_fulltext(pid: str, url: str, min_chars: int = 8000) -> str | None:
     TEXT_DIR.mkdir(parents=True, exist_ok=True)
     tp.write_text(t, "utf-8")
     return t if len(t) >= min_chars else None
+

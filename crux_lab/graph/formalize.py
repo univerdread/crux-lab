@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import logging
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, create_model
 
 from crux_lab.agents.roles import render
 from crux_lab.graph import logic
@@ -14,15 +14,18 @@ from crux_lab.llm.client import LLMClient
 log = logging.getLogger(__name__)
 
 
+FORMULA_PATTERN = r"^[A-H~!&|()\s><-]+$"
+
+
 class MissingPremise(BaseModel):
     text: str
-    formula: str
+    formula: str = Field(pattern=FORMULA_PATTERN, max_length=200)
 
 
 class FormalOut(BaseModel):
-    atoms: dict[str, str]
+    atoms: dict[str, str] = Field(json_schema_extra={"properties": {a: {"type": "string"} for a in "ABCDEFGH"}, "additionalProperties": False})
     premise_formulas: dict[str, str]
-    conclusion_formula: str
+    conclusion_formula: str = Field(pattern=FORMULA_PATTERN, max_length=200)
     missing_premise: MissingPremise | None = None
 
 
@@ -68,7 +71,11 @@ async def formalize(client: LLMClient, arg: Argument, claims: dict[str, Claim]) 
     premises = "\n".join(f"{pid}: {claims[pid].text}" for pid in arg.premise_ids)
     system, user = render("formalizer", title=arg.title, premises=premises,
                           conclusion_id=arg.conclusion_id, conclusion=claims[arg.conclusion_id].text)
-    out, _ = await client.json("formalizer", user, FormalOut, system, validate=validator(arg.premise_ids),
+    SourceFormalOut = create_model("FormalOut", __base__=FormalOut,
+        premise_formulas=(dict[str, str], Field(json_schema_extra={
+            "properties": {pid: {"type": "string", "pattern": FORMULA_PATTERN, "maxLength": 200} for pid in arg.premise_ids},
+            "required": arg.premise_ids, "additionalProperties": False})))
+    out, _ = await client.json("formalizer", user, SourceFormalOut, system, validate=validator(arg.premise_ids),
                                max_tokens=2500)
     if not out:
         log.warning("formalizer failed for %s", arg.id)

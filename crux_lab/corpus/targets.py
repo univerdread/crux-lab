@@ -130,7 +130,7 @@ async def select(client: LLMClient | None = None) -> list[dict]:
             rel = levels[min(s.topic_relevance, len(levels) - 1)]
             found = (f"found by the search “{p['query']}”; " if kind == "classic" and plan.get("spread") and p.get("query")
                      else "")
-            why = (f"{'Published ' + (p.get('publication_date') or '') + ' (after 2026-08-01), ' if kind == 'fresh' else 'Classic fallback, '}"
+            why = (f"{'Published ' + (p.get('publication_date') or '') + ' (after ' + str(TOPIC.get('fresh_from', '2026-08-01')) + '), ' if kind == 'fresh' else 'Classic fallback, '}"
                    f"{found}"
                    f"open-access full text ({p.get('fulltext_chars', 0):,} chars); argues for a thesis; "
                    f"topic relevance {s.topic_relevance}/3 ({rel}); argument clarity {s.argument_clarity}/3.")

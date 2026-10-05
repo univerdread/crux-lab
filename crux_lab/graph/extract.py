@@ -7,7 +7,8 @@ import logging
 import re
 from dataclasses import dataclass, field
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, create_model
+from typing import Literal
 from rapidfuzz import fuzz
 
 from crux_lab.agents.roles import render
@@ -42,13 +43,13 @@ class AbstractBatch(BaseModel):
 
 class XArgument(BaseModel):
     title: str
-    premise_ids: list[str]
+    premise_ids: list[str] = Field(min_length=2, max_length=6)
     conclusion_id: str
     summary: str = ""
 
 
 class ArgumentsOut(BaseModel):
-    arguments: list[XArgument]
+    arguments: list[XArgument] = Field(min_length=1, max_length=2)
 
 
 @dataclass
@@ -151,7 +152,7 @@ def _validate_args(claim_ids: set[str]):
             bad = [x for x in a.premise_ids + [a.conclusion_id] if x not in claim_ids]
             if bad:
                 return f"unknown claim ids {bad}; use only ids from the list"
-            if not 2 <= len(a.premise_ids) <= 6:
+            if not 2 <= len(set(a.premise_ids)) <= 6:
                 return f"argument '{a.title}' needs 2 to 6 premises, has {len(a.premise_ids)}"
             if a.conclusion_id in a.premise_ids:
                 return "the conclusion cannot also be a premise"
@@ -163,7 +164,20 @@ async def reconstruct_arguments(client: LLMClient, paper_id: str, title: str, ab
                                 claims: list[Claim]) -> list[Argument]:
     listing = "\n".join(f"{c.id}: [{c.kind}] {c.text}" for c in claims)
     system, user = render("argument", title=title, abstract=abstract[:2500], claims=listing)
-    out, _ = await client.json("extractor", user, ArgumentsOut, system,
+    # Put evidence IDs and cardinality in the generation grammar, rather than only
+    # rejecting prose instructions after a small local model has copied the whole list.
+    conclusions = [c.id for c in claims if c.kind == "conclusion"]
+    premises = [c.id for c in claims if c.kind in ("premise", "assumption", "reply")]
+    if not claims:
+        return []
+    if not conclusions or len(premises) < 2:
+        conclusions = premises = [c.id for c in claims]
+    SourceArgument = create_model("SourceArgument", __base__=XArgument,
+        premise_ids=(list[Literal[tuple(premises)]], Field(min_length=2, max_length=6)),
+        conclusion_id=(Literal[tuple(conclusions)], ...))
+    SourceArguments = create_model("ArgumentsOut", __base__=ArgumentsOut,
+        arguments=(list[SourceArgument], Field(min_length=1, max_length=2)))
+    out, _ = await client.json("extractor", user, SourceArguments, system,
                                validate=_validate_args({c.id for c in claims}), max_tokens=3000)
     if not out:
         return []

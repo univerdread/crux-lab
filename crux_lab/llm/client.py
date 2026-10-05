@@ -178,9 +178,11 @@ class LLMClient:
 def _compact_schema(schema: type[BaseModel]) -> dict:
     s = schema.model_json_schema()
 
-    def strip(node):
+    def strip(node, properties=False):
         if isinstance(node, dict):
-            return {k: strip(v) for k, v in node.items() if k not in ("title",)}
+            # JSON Schema titles are metadata; a property *named* title is real data.
+            return {k: strip(v, properties=(k == "properties")) for k, v in node.items()
+                    if properties or k != "title"}
         if isinstance(node, list):
             return [strip(v) for v in node]
         return node
